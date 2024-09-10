@@ -211,7 +211,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 3.75
+  orthographic size: 7.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -255,9 +255,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
-  m_AssetsPPU: 32
-  m_RefResolutionX: 400
-  m_RefResolutionY: 240
+  m_AssetsPPU: 16
+  m_RefResolutionX: 240
+  m_RefResolutionY: 208
   m_CropFrame: 0
   m_GridSnapping: 1
   m_UpscaleRT: 0
@@ -390,6 +390,7 @@ GameObject:
   - component: {fileID: 1333192901}
   - component: {fileID: 1333192900}
   - component: {fileID: 1333192902}
+  - component: {fileID: 1333192903}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -543,7 +544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: 0}
+  m_Actions: {fileID: -944628639613478452, guid: c950dc6ac45a77d4a9d65e00fcf3b1a0, type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -558,6 +559,24 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 
+  m_DefaultActionMap: Walk
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1333192903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333192896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a08d24344b1862846a6f2f8bcd9b72b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _walkSpeed: 150
+  _maxBikeSpeed: 0
+  _accelRate: 0
+  _decelRate: 0
+  _isWalking: 1
+  _playerInputs: {fileID: -944628639613478452, guid: c950dc6ac45a77d4a9d65e00fcf3b1a0, type: 3}

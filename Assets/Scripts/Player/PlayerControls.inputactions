@@ -1,5 +1,5 @@
 {
-    "name": "MovementControls",
+    "name": "PlayerControls",
     "maps": [
         {
             "name": "Walk",
@@ -231,7 +231,7 @@
             "id": "6ef4e4a5-1b82-4c8e-b12a-a637bafbe7ac",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "DebugSwitchState",
                     "type": "Button",
                     "id": "28535b1a-d299-4910-990b-434b456bf612",
                     "expectedControlType": "Button",
@@ -244,11 +244,11 @@
                 {
                     "name": "",
                     "id": "e583fbfd-16e9-4879-9895-810870998426",
-                    "path": "",
+                    "path": "<Keyboard>/z",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "DebugSwitchState",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
