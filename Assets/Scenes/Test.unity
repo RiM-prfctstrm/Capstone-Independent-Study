@@ -391,6 +391,7 @@ GameObject:
   - component: {fileID: 1333192900}
   - component: {fileID: 1333192902}
   - component: {fileID: 1333192903}
+  - component: {fileID: 1333192904}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -580,3 +581,17 @@ MonoBehaviour:
   _decelRate: 0
   _isWalking: 1
   _playerInputs: {fileID: -944628639613478452, guid: c950dc6ac45a77d4a9d65e00fcf3b1a0, type: 3}
+--- !u!114 &1333192904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333192896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa6c52a45f31d354aa1b818715e8f2d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingDirection: 0
+  anim: []

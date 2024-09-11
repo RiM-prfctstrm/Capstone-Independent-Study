@@ -17,15 +17,15 @@ public class PlayerController : MonoBehaviour
 
     //Components
     SpriteRenderer _playerRenderer;
-    Animator _playerAnimator;
-    Rigidbody2D _rb2D;
+    PlayerAnimator _playerAnimator;
+    Rigidbody2D _rb2d;
 
     //Parameters
     [SerializeField] float _walkSpeed;
     [SerializeField] float _maxBikeSpeed;
     [SerializeField] float _accelRate;
     [SerializeField] float _decelRate;
-    [SerializeField] bool _isWalking;
+    public bool _isWalking;
 
     //Movement Vars
     float _velocityX;
@@ -42,9 +42,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         // Sets components
-        _playerAnimator = GetComponent<Animator>();
+        _playerAnimator = GetComponent<PlayerAnimator>();
         _playerRenderer = GetComponent<SpriteRenderer>();
-        _rb2D = GetComponent<Rigidbody2D>();
+        _rb2d = GetComponent<Rigidbody2D>();
 
         // Sets inputs
         _moveX = _playerInputs.FindAction("MoveX");
@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
         _velocityY = _walkSpeed * (int)_moveY.ReadValue<float>() * Time.deltaTime;
 
         // Sets Player's velocity
-        _rb2D.velocity = new Vector2(_velocityX, _velocityY);
+        _rb2d.velocity = new Vector2(_velocityX, _velocityY);
     }
 
     /// <summary>
