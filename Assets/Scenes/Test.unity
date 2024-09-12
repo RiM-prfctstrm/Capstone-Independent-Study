@@ -523,7 +523,7 @@ Animator:
   m_GameObject: {fileID: 1333192896}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9f300c37f539b934daec1cca68308e91, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -594,4 +594,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   facingDirection: 0
-  anim: []
+  anim: {fileID: 0}

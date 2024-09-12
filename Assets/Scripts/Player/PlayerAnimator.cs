@@ -15,17 +15,17 @@ public class PlayerAnimator : CharacterAnimator
     /// <summary>
     /// Start is called before the first frame update
     /// </summary>
-    void Start()
+    protected override void Start()
     {
-        
+        base.Start();
     }
 
     /// <summary>
     /// Update is called once per frame
     /// </summary>
-    void Update()
+    protected override void Update()
     {
-        
+        base.Update();
     }
 
     /// <summary>

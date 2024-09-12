@@ -19,12 +19,12 @@ public class CharacterAnimator : MonoBehaviour
     //Animation
     public int facingDirection; // 0=D, 1=L, 2=R, 3=U
     protected string animState;
-    [SerializeField] protected Animation[] anim;
+    [SerializeField] protected Animation anim;
 
     /// <summary>
     /// Start is called before the first frame update
     /// </summary>
-    void Start()
+    protected virtual void Start()
     {
         _rb2d = GetComponent<Rigidbody2D>();
     }
@@ -32,7 +32,7 @@ public class CharacterAnimator : MonoBehaviour
     /// <summary>
     /// Update is called once per frame
     /// </summary>
-    void Update()
+    protected virtual void Update()
     {
         //Debug.Log(SetAnimState());
     }

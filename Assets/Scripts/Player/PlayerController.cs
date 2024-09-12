@@ -65,6 +65,12 @@ public class PlayerController : MonoBehaviour
         {
             BikeMovement();
         }
+
+        // Updates animations
+        if (_rb2d.velocity != Vector2.zero)
+        {
+            _playerAnimator.facingDirection = GetDirection();
+        }
     }
 
     /// <summary>
@@ -86,5 +92,29 @@ public class PlayerController : MonoBehaviour
     void BikeMovement()
     {
 
+    }
+
+    /// <summary>
+    /// Tells which direction the character is facing
+    /// </summary>
+    /// <returns>Integer shorthand for direction
+    /// 0=D, 1=L, 2=R, 3=U</returns>
+    int GetDirection()
+    {
+        // Bases direction on velocity, prioritizing X axis and positive values
+        if (Mathf.Abs(_rb2d.velocity.x) >= Mathf.Abs(_rb2d.velocity.y))
+        {
+            if (_rb2d.velocity.x >= 0)
+                return 2;
+            else
+                return 1;
+        }
+        else
+        {
+            if (_rb2d.velocity.y >= 0)
+                return 3;
+            else
+                return 0;
+        }           
     }
 }
