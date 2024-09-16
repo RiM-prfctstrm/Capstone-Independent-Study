@@ -26,6 +26,9 @@ public class PlayerAnimator : CharacterAnimator
     protected override void Update()
     {
         base.Update();
+
+        //Plays animation
+        anim.Play(SetAnimState());
     }
 
     /// <summary>
