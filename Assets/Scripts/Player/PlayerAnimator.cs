@@ -28,7 +28,7 @@ public class PlayerAnimator : CharacterAnimator
         base.Update();
 
         //Plays animation
-        anim.Play(SetAnimState());
+        anim.Play("Base Layer." + SetAnimState());
     }
 
     /// <summary>

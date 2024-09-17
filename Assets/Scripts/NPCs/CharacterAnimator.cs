@@ -19,7 +19,7 @@ public class CharacterAnimator : MonoBehaviour
     //Animation
     public int facingDirection; // 0=D, 1=L, 2=R, 3=U
     protected string animState;
-    [SerializeField] protected Animation anim;
+    [SerializeField] protected Animator anim;
 
     /// <summary>
     /// Start is called before the first frame update
