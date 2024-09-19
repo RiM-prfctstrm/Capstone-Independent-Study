@@ -101,7 +101,10 @@ public class PlayerController : MonoBehaviour
         if ((int)_moveX.ReadValue<float>() != 0)
         {
             _velocityX += _accelRate * (int)_moveX.ReadValue<float>() * Time.fixedDeltaTime;
-            Mathf.Clamp(_velocityX, 0, _maxBikeSpeed);
+            _velocityX = Mathf.Clamp(_velocityX, -_maxBikeSpeed, _maxBikeSpeed);
+            Debug.Log(_velocityX);
+            if (Mathf.Abs(_velocityX) >= _maxBikeSpeed)
+                Debug.Log("Maxed X!");
         }
         /*else if (_rb2d.velocity.x != 0)
         {
@@ -113,7 +116,9 @@ public class PlayerController : MonoBehaviour
         if ((int)_moveY.ReadValue<float>() != 0)
         {
             _velocityY += _accelRate * (int)_moveY.ReadValue<float>() * Time.fixedDeltaTime;
-            Mathf.Clamp(_velocityY, 0, _maxBikeSpeed);
+            _velocityY = Mathf.Clamp(_velocityY, -_maxBikeSpeed, _maxBikeSpeed);
+            if (Mathf.Abs(_velocityY) >= _maxBikeSpeed)
+                Debug.Log("Maxed Y!");
         }
         /*else if (_rb2d.velocity.y != 0)
         {
@@ -163,8 +168,8 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void SetAccelDecel()
     {
-        _accelRate = (_maxBikeSpeed / _accelTime) * Time.fixedDeltaTime;
-        _decelRate = (_maxBikeSpeed / _decelTime) * Time.fixedDeltaTime;
-        Debug.Log(_accelRate + ", " + _decelRate);
+        _accelRate = 1 / ((_maxBikeSpeed / _accelTime) * Time.fixedDeltaTime);
+        _decelRate = 1 / ((_maxBikeSpeed / _decelTime) * Time.fixedDeltaTime);
+        //Debug.Log(_accelRate + ", " + _decelRate);
     }
 }
