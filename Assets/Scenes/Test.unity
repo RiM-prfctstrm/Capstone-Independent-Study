@@ -576,10 +576,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _walkSpeed: 175
-  _maxBikeSpeed: 0
-  _accelRate: 0
-  _decelRate: 0
-  _isWalking: 1
+  _maxBikeSpeed: 500
+  _accelTime: 2
+  _decelTime: 10
+  _isWalking: 0
   _playerInputs: {fileID: -944628639613478452, guid: c950dc6ac45a77d4a9d65e00fcf3b1a0, type: 3}
 --- !u!114 &1333192904
 MonoBehaviour:
