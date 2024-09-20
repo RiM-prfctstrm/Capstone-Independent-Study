@@ -100,8 +100,37 @@ public class PlayerController : MonoBehaviour
         // Set Vars
         _decelComponent = _decelRate * Time.deltaTime;
 
+        // Compute velocity
+        BikeAcceleration();
+        if (_velocityX + _velocityY > _maxBikeSpeed)
+        {
+            //BikeSteering();
+        }
+
+        /*// Determines velocity sign
+        if ((int)_moveX.ReadValue<float>() == -1 || _rb2d.velocity.x < 0)
+            _velocityX *= -1;
+        if ((int)_moveY.ReadValue<float>() == -1 || _rb2d.velocity.y < 0)
+            _velocityY *= -1;*/
+
+        // Ensures velocity zeroes out
+        if (Mathf.Abs(_velocityX) <= .015f)
+            _velocityX = 0;
+        if (Mathf.Abs(_velocityY) <= .015f)
+            _velocityY = 0;
+
+        // Sets Player's velocity
+        _rb2d.velocity = new Vector2(_velocityX, _velocityY);
+    }
+
+    /// <summary>
+    /// Performs initial acceleration/deceleration of X and Y velocity components.
+    /// </summary>
+    void BikeAcceleration()
+    {
         /* DETERMINES INITIAL VELOCITY COMPONENTS */
         // X component
+        // Acceleration from player input
         if ((int)_moveX.ReadValue<float>() != 0)
         {
             _velocityX += _accelRate * (int)_moveX.ReadValue<float>() * Time.fixedDeltaTime;
@@ -109,6 +138,7 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Abs(_velocityX) >= _maxBikeSpeed)
                 Debug.Log("Maxed X!");
         }
+        // Deceleration
         else if (_rb2d.velocity.x != 0)
         {
             // Braking logic might go here
@@ -118,13 +148,10 @@ public class PlayerController : MonoBehaviour
                 _velocityX -= _decelComponent;
             else
                 _velocityX += _decelComponent;
-
-            // Enforces 0-ing out
-            if (Mathf.Abs(_velocityX) <= .01f)
-                _velocityX = 0;
         }
 
         // Y component
+        // Acceleration from player input
         if ((int)_moveY.ReadValue<float>() != 0)
         {
             _velocityY += _accelRate * (int)_moveY.ReadValue<float>() * Time.fixedDeltaTime;
@@ -132,6 +159,7 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Abs(_velocityY) >= _maxBikeSpeed)
                 Debug.Log("Maxed Y!");
         }
+        // Deceleration
         else if (_rb2d.velocity.y != 0)
         {
             // Braking logic might go here
@@ -141,23 +169,62 @@ public class PlayerController : MonoBehaviour
                 _velocityY -= _decelComponent;
             else
                 _velocityY += _decelComponent;
-
-            // Enforces 0-ing out
-            if (Mathf.Abs(_velocityY) <= .01f)
-                _velocityY = 0;
         }
+    }
 
-        // Multidirectional logic
+    /// <summary>
+    /// Controls turning with the bike.
+    /// </summary>
+    void BikeSteering()
+    {
+        // Balances Components for diagonal movement
+        if ((int)_moveX.ReadValue<float>() != 0 && (int)_moveY.ReadValue<float>() != 0)
+        {
+            if (_velocityX != _velocityY)
+            {
+                // Checks which velocity components to raise and lower
+                if (Mathf.Abs(_velocityX) > Mathf.Abs(_velocityY))
+                {
+                    // Determines which way to balance and performs calculation
+                    if (_velocityX > 0)
+                    {
+                        _velocityX = _maxBikeSpeed - Mathf.Abs(_velocityY);
+                    }
+                    else
+                    {
+                        _velocityX = -_maxBikeSpeed + Mathf.Abs(_velocityY);
+                    }
+                }
+                else
+                {
+                    // Determines which way to balance and performs calculation
+                    if (_velocityY > 0)
+                    {
+                        _velocityY = _maxBikeSpeed - Mathf.Abs(_velocityX);
+                    }
+                    else
+                    {
+                        _velocityY = -_maxBikeSpeed + Mathf.Abs(_velocityX);
+                    }
+                }
+            }
 
+            // Ensures components are perfectly balanced, as all things should be
+            if (Mathf.Abs(Mathf.Abs(_velocityX) - Mathf.Abs(_velocityY)) <= .015f)
+            {
+                _velocityX = Mathf.Sqrt((_maxBikeSpeed * _maxBikeSpeed) / 2);
+                _velocityY = Mathf.Sqrt((_maxBikeSpeed * _maxBikeSpeed) / 2);
+            }
+        }
+        // Prioritizes one direction over the other
+        else if ((int)_moveX.ReadValue<float>() != 0)
+        {
 
-        /*// Determines velocity sign
-        if ((int)_moveX.ReadValue<float>() == -1 || _rb2d.velocity.x < 0)
-            _velocityX *= -1;
-        if ((int)_moveY.ReadValue<float>() == -1 || _rb2d.velocity.y < 0)
-            _velocityY *= -1;*/
+        }
+        else if ((int)_moveY.ReadValue<float>() != 0)
+        {
 
-        // Sets Player's velocity
-        _rb2d.velocity = new Vector2(_velocityX, _velocityY);
+        }
     }
 
     /// <summary>
