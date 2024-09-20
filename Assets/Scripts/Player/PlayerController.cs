@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     float _velocityY;
     float _accelRate;
     float _decelRate;
+    float _decelComponent;
 
     //Inputs
     [SerializeField] InputActionAsset _playerInputs;
@@ -96,6 +97,9 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void BikeMovement()
     {
+        // Set Vars
+        _decelComponent = _decelRate * Time.deltaTime;
+
         /* DETERMINES INITIAL VELOCITY COMPONENTS */
         // X component
         if ((int)_moveX.ReadValue<float>() != 0)
@@ -105,11 +109,20 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Abs(_velocityX) >= _maxBikeSpeed)
                 Debug.Log("Maxed X!");
         }
-        /*else if (_rb2d.velocity.x != 0)
+        else if (_rb2d.velocity.x != 0)
         {
             // Braking logic might go here
-            _velocityX -= _decelRate * Time.deltaTime;
-        }*/
+
+            //Natural Deceleration
+            if (_velocityX > 0)
+                _velocityX -= _decelComponent;
+            else
+                _velocityX += _decelComponent;
+
+            // Enforces 0-ing out
+            if (Mathf.Abs(_velocityX) <= .01f)
+                _velocityX = 0;
+        }
 
         // Y component
         if ((int)_moveY.ReadValue<float>() != 0)
@@ -119,11 +132,20 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Abs(_velocityY) >= _maxBikeSpeed)
                 Debug.Log("Maxed Y!");
         }
-        /*else if (_rb2d.velocity.y != 0)
+        else if (_rb2d.velocity.y != 0)
         {
             // Braking logic might go here
-            _velocityY -= _decelRate * Time.deltaTime;
-        } */
+
+            //Natural Deceleration
+            if (_velocityY > 0)
+                _velocityY -= _decelComponent;
+            else
+                _velocityY += _decelComponent;
+
+            // Enforces 0-ing out
+            if (Mathf.Abs(_velocityY) <= .01f)
+                _velocityY = 0;
+        }
 
         // Multidirectional logic
 
