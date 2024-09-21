@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 9/10/24
+ * UPDATED  : 9/21/24
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     float _accelRate;
     float _decelRate;
     float _decelComponent;
+    Vector2 _newVel;
 
     //Inputs
     [SerializeField] InputActionAsset _playerInputs;
@@ -102,7 +103,7 @@ public class PlayerController : MonoBehaviour
 
         // Compute velocity
         BikeAcceleration();
-        if (_velocityX + _velocityY > _maxBikeSpeed)
+        if (UtilityFormulas.FindHypotenuse(_velocityX, _velocityY) > _maxBikeSpeed)
         {
             //BikeSteering();
         }
@@ -120,7 +121,10 @@ public class PlayerController : MonoBehaviour
             _velocityY = 0;
 
         // Sets Player's velocity
-        _rb2d.velocity = new Vector2(_velocityX, _velocityY);
+        _newVel.x = _velocityX;
+        _newVel.y = _velocityY;
+        _rb2d.velocity = Vector2.ClampMagnitude(_newVel, _maxBikeSpeed);
+        
     }
 
     /// <summary>
@@ -177,53 +181,26 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void BikeSteering()
     {
-        // Balances Components for diagonal movement
-        if ((int)_moveX.ReadValue<float>() != 0 && (int)_moveY.ReadValue<float>() != 0)
+        // Since diagonals are covered by the clamp later, this logic only controls when one button
+        // is pressed.
+        if ((int)_moveX.ReadValue<float>() !=  (int)_moveY.ReadValue<float>())
         {
-            if (_velocityX != _velocityY)
+            // Determines which direction the player is trying to go and subtracts velocity from
+            // the other axis
+            if ((int)_moveX.ReadValue<float>() != 0)
             {
-                // Checks which velocity components to raise and lower
-                if (Mathf.Abs(_velocityX) > Mathf.Abs(_velocityY))
-                {
-                    // Determines which way to balance and performs calculation
-                    if (_velocityX > 0)
-                    {
-                        _velocityX = _maxBikeSpeed - Mathf.Abs(_velocityY);
-                    }
-                    else
-                    {
-                        _velocityX = -_maxBikeSpeed + Mathf.Abs(_velocityY);
-                    }
-                }
-                else
-                {
-                    // Determines which way to balance and performs calculation
-                    if (_velocityY > 0)
-                    {
-                        _velocityY = _maxBikeSpeed - Mathf.Abs(_velocityX);
-                    }
-                    else
-                    {
-                        _velocityY = -_maxBikeSpeed + Mathf.Abs(_velocityX);
-                    }
-                }
+                _velocityY = UtilityFormulas.FindTriangleLeg(_maxBikeSpeed, _velocityX)
+                    * Time.fixedDeltaTime;
+                if (_rb2d.velocity.y < 0)
+                    _velocityY *= -1;
             }
-
-            // Ensures components are perfectly balanced, as all things should be
-            if (Mathf.Abs(Mathf.Abs(_velocityX) - Mathf.Abs(_velocityY)) <= .015f)
+            else if ((int)_moveY.ReadValue<float>() != 0)
             {
-                _velocityX = Mathf.Sqrt((_maxBikeSpeed * _maxBikeSpeed) / 2);
-                _velocityY = Mathf.Sqrt((_maxBikeSpeed * _maxBikeSpeed) / 2);
+                _velocityX = UtilityFormulas.FindTriangleLeg(_maxBikeSpeed, _velocityY)
+                    * Time.fixedDeltaTime;
+                if (_rb2d.velocity.x < 0)
+                    _velocityX *= -1;
             }
-        }
-        // Prioritizes one direction over the other
-        else if ((int)_moveX.ReadValue<float>() != 0)
-        {
-
-        }
-        else if ((int)_moveY.ReadValue<float>() != 0)
-        {
-
         }
     }
 
