@@ -90,7 +90,11 @@ public class PlayerController : MonoBehaviour
         _velocityY = _walkSpeed * (int)_moveY.ReadValue<float>() * Time.fixedDeltaTime;
 
         // Sets Player's velocity
-        _rb2d.velocity = new Vector2(_velocityX, _velocityY);
+        _newVel.x =+ _velocityX;
+        _newVel.y = _velocityY;
+        _newVel = Vector2.ClampMagnitude(_newVel,
+            UtilityFormulas.FindHypotenuse(_velocityX, _velocityY));
+        _rb2d.velocity = _newVel;
     }
 
     /// <summary>
@@ -123,12 +127,14 @@ public class PlayerController : MonoBehaviour
         // Sets Player's velocity
         _newVel.x = _velocityX;
         _newVel.y = _velocityY;
-        _rb2d.velocity = Vector2.ClampMagnitude(_newVel, _maxBikeSpeed);
+        _newVel = Vector2.ClampMagnitude(_newVel, _maxBikeSpeed);
+        _rb2d.velocity = _newVel;
         
     }
 
     /// <summary>
-    /// Performs initial acceleration/deceleration of X and Y velocity components.
+    /// Performs initial acceleration of X and Y velocity components.
+    /// MOVE DECELERATION AFTER CLAMPING FOR SMOOTHER STOPPING
     /// </summary>
     void BikeAcceleration()
     {
@@ -183,9 +189,12 @@ public class PlayerController : MonoBehaviour
     {
         // Since diagonals are covered by the clamp later, this logic only controls when one button
         // is pressed.
-        if ((int)_moveX.ReadValue<float>() !=  (int)_moveY.ReadValue<float>())
+        // Lowers X magnitude as Y increases
+        if ((int)_moveX.ReadValue<float>() == 0 /*|| (int)_moveY.ReadValue<float>() == 0*/)
         {
-            // Determines which direction the player is trying to go and subtracts velocity from
+            _velocityX = UtilityFormulas.FindTriangleLeg(_maxBikeSpeed, _velocityY);
+
+           /*// Determines which direction the player is trying to go and subtracts velocity from
             // the other axis
             if ((int)_moveX.ReadValue<float>() != 0)
             {
@@ -200,7 +209,7 @@ public class PlayerController : MonoBehaviour
                     * Time.fixedDeltaTime;
                 if (_rb2d.velocity.x < 0)
                     _velocityX *= -1;
-            }
+            }*/
         }
     }
 
