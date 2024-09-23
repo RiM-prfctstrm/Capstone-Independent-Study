@@ -24,7 +24,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float _walkSpeed;
     [SerializeField] float _maxBikeSpeed;
     [SerializeField] float _accelTime;
-    [SerializeField] float _decelTime;    
+    [SerializeField] float _decelTime;
+    [SerializeField] float _decelBuffer;
     public bool _isWalking;
 
     //Movement Vars
@@ -103,13 +104,13 @@ public class PlayerController : MonoBehaviour
     void BikeMovement()
     {
         // Set Vars
-        _decelComponent = _decelRate * Time.deltaTime;
+        _decelComponent = _decelRate * Time.fixedDeltaTime;
 
         // Compute velocity
         BikeAcceleration();
         if (UtilityFormulas.FindHypotenuse(_velocityX, _velocityY) > _maxBikeSpeed)
         {
-            //BikeSteering();
+            BikeSteering();
         }
 
         /*// Determines velocity sign
@@ -189,12 +190,10 @@ public class PlayerController : MonoBehaviour
     {
         // Since diagonals are covered by the clamp later, this logic only controls when one button
         // is pressed.
-        // Lowers X magnitude as Y increases
-        if ((int)_moveX.ReadValue<float>() == 0 /*|| (int)_moveY.ReadValue<float>() == 0*/)
+        if ((int)_moveX.ReadValue<float>() == 0 || (int)_moveY.ReadValue<float>() == 0)
         {
-            _velocityX = UtilityFormulas.FindTriangleLeg(_maxBikeSpeed, _velocityY);
 
-           /*// Determines which direction the player is trying to go and subtracts velocity from
+           // Determines which direction the player is trying to go and subtracts velocity from
             // the other axis
             if ((int)_moveX.ReadValue<float>() != 0)
             {
@@ -209,7 +208,7 @@ public class PlayerController : MonoBehaviour
                     * Time.fixedDeltaTime;
                 if (_rb2d.velocity.x < 0)
                     _velocityX *= -1;
-            }*/
+            }
         }
     }
 
