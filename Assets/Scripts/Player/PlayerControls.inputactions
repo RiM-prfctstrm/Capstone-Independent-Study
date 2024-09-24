@@ -22,6 +22,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Brake",
+                    "type": "Button",
+                    "id": "9a7c8a28-1c01-4cb5-97d2-11baab7cf430",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "787b5a7d-0869-4039-ba16-e39f1c3c0c0e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DebugSwitchState",
+                    "type": "Button",
+                    "id": "befff601-28c7-42ef-bb4e-024f25625a93",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -156,27 +183,10 @@
                     "action": "MoveY",
                     "isComposite": false,
                     "isPartOfComposite": true
-                }
-            ]
-        },
-        {
-            "name": "Bike",
-            "id": "908548f8-3718-4f3e-b89d-14c2c68558fe",
-            "actions": [
-                {
-                    "name": "Brake",
-                    "type": "Button",
-                    "id": "3f9d1248-fa8b-4fe5-bcb0-960e1765974f",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
+                },
                 {
                     "name": "",
-                    "id": "dc44b335-b8b4-4d69-91a0-3ed2c4f30297",
+                    "id": "f6c34260-7443-4fb7-8ef9-938a69caf396",
                     "path": "<Keyboard>/leftCtrl",
                     "interactions": "",
                     "processors": "",
@@ -187,7 +197,7 @@
                 },
                 {
                     "name": "",
-                    "id": "1a893ef5-af87-43e8-81cf-71db1898bb35",
+                    "id": "9ce50186-e7fd-479d-95a1-15b5c98651b4",
                     "path": "<Keyboard>/numpadPeriod",
                     "interactions": "",
                     "processors": "",
@@ -195,27 +205,10 @@
                     "action": "Brake",
                     "isComposite": false,
                     "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Universal",
-            "id": "c74a6537-1226-4db2-a8f3-223ee735d904",
-            "actions": [
-                {
-                    "name": "Interact",
-                    "type": "Button",
-                    "id": "102e944e-ef04-485a-9aee-cb4878ef76cc",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
+                },
                 {
                     "name": "",
-                    "id": "47329e27-8336-46ec-8204-da5f6b28f595",
+                    "id": "b41b88c6-70d3-4bc8-bd3d-48be6e5b5c95",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
@@ -223,27 +216,10 @@
                     "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Debug",
-            "id": "6ef4e4a5-1b82-4c8e-b12a-a637bafbe7ac",
-            "actions": [
-                {
-                    "name": "DebugSwitchState",
-                    "type": "Button",
-                    "id": "28535b1a-d299-4910-990b-434b456bf612",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
+                },
                 {
                     "name": "",
-                    "id": "e583fbfd-16e9-4879-9895-810870998426",
+                    "id": "d3793728-68e1-4e20-b350-65916f6487b3",
                     "path": "<Keyboard>/z",
                     "interactions": "",
                     "processors": "",
@@ -253,6 +229,24 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Bike",
+            "id": "908548f8-3718-4f3e-b89d-14c2c68558fe",
+            "actions": [],
+            "bindings": []
+        },
+        {
+            "name": "Universal",
+            "id": "c74a6537-1226-4db2-a8f3-223ee735d904",
+            "actions": [],
+            "bindings": []
+        },
+        {
+            "name": "Debug",
+            "id": "6ef4e4a5-1b82-4c8e-b12a-a637bafbe7ac",
+            "actions": [],
+            "bindings": []
         }
     ],
     "controlSchemes": []
