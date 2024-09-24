@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 9/21/24
+ * UPDATED  : 9/24/24
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -248,10 +248,7 @@ public class PlayerController : MonoBehaviour
             // Decreases Y velocity if X is increasing
             if (_moveX != 0)
             {
-                _velocityY = UtilityFormulas.FindTriangleLeg(_maxBikeSpeed, _velocityX)
-                    * Time.fixedDeltaTime;
-                if (_rb2d.velocity.y < 0)
-                    _velocityY *= -1;
+                
             }
             
             // Decreases X velocity if Y is increasing
