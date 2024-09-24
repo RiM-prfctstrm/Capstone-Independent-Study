@@ -664,7 +664,10 @@ MonoBehaviour:
   _maxBikeSpeed: 14
   _accelTime: 1.4
   _decelTime: 10
-  _isWalking: 0
+  _decelBuffer: 0
+  _steeringAngleThreshold: 135
+  _steeringVelThreshold: 0.25
+  isWalking: 0
   _playerInputs: {fileID: -944628639613478452, guid: c950dc6ac45a77d4a9d65e00fcf3b1a0, type: 3}
 --- !u!114 &1333192904
 MonoBehaviour:

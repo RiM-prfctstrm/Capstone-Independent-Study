@@ -26,7 +26,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float _accelTime;
     [SerializeField] float _decelTime;
     [SerializeField] float _decelBuffer;
-    public bool _isWalking;
+    [SerializeField] int _steeringAngleThreshold;
+    [SerializeField] float _steeringVelThreshold;
+    public bool isWalking;
 
     //Movement Vars
     float _velocityX;
@@ -38,8 +40,10 @@ public class PlayerController : MonoBehaviour
 
     //Inputs
     [SerializeField] InputActionAsset _playerInputs;
-    InputAction _moveX;
-    InputAction _moveY;
+    InputAction _xInput;
+    InputAction _yInput;
+    int _moveX;
+    int _moveY;
 
     /// <summary>
     /// Start is called before the first frame update
@@ -52,8 +56,8 @@ public class PlayerController : MonoBehaviour
         _rb2d = GetComponent<Rigidbody2D>();
 
         // Sets inputs
-        _moveX = _playerInputs.FindAction("MoveX");
-        _moveY = _playerInputs.FindAction("MoveY");
+        _xInput = _playerInputs.FindAction("MoveX");
+        _yInput = _playerInputs.FindAction("MoveY");
 
         // Initializes Accel/Decel Rates
         SetAccelDecel();
@@ -64,8 +68,11 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
+        // Gets inputs for frame
+        ValidateInputs();
+
         // Controls which kind of movement to perform.
-        if (_isWalking)
+        if (isWalking)
         {
             WalkMovement();
         }
@@ -82,13 +89,58 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
+    /// Disables certain inputs while biking based on the rigidbody's velocity angle to prevent the
+    /// player from directly reverse.
+    /// </summary>
+    void ValidateInputs()
+    {
+        // Converts input into variables used for calculating movement
+        _moveX = (int)_xInput.ReadValue<float>();
+        _moveY = (int)_yInput.ReadValue<float>();
+
+        // Alters movement vars if they would lead the player in a direction that is invalid for
+        // their current direction. Inputs are valid when the player's direction is <= 135 degrees
+        // from the input direction.
+        if(!isWalking && _rb2d.velocity.magnitude > _steeringVelThreshold)
+        {
+            // Prevents leftward movement while moving right
+            if (_moveX == -1 && Vector2.Angle(Vector2.left, _rb2d.velocity)
+                > _steeringAngleThreshold)
+            {
+                _moveX = 0;
+            }
+
+            // Prevents rightward moving while moving left
+            if (_moveX == 1 && Vector2.Angle(Vector2.right, _rb2d.velocity)
+                > _steeringAngleThreshold)
+            {
+                _moveX = 0;
+            }
+
+            // Prevents downward movement while moving up
+            if (_moveY == -1 && Vector2.Angle(Vector2.down, _rb2d.velocity)
+                > _steeringAngleThreshold)
+            {
+                _moveY = 0;
+            }
+
+            // Prevents upward moving while moving down
+            if (_moveY == 1 && Vector2.Angle(Vector2.up, _rb2d.velocity)
+                > _steeringAngleThreshold)
+            {
+                _moveY = 0;
+            }
+        }
+    }
+
+    /// <summary>
     /// Controls the player's movement while walking
     /// </summary>
     void WalkMovement()
     {
         // Sets velocity components
-        _velocityX = _walkSpeed * (int)_moveX.ReadValue<float>() * Time.fixedDeltaTime;
-        _velocityY = _walkSpeed * (int)_moveY.ReadValue<float>() * Time.fixedDeltaTime;
+        _velocityX = _walkSpeed * _moveX * Time.fixedDeltaTime;
+        _velocityY = _walkSpeed * _moveY * Time.fixedDeltaTime;
 
         // Sets Player's velocity
         _newVel.x =+ _velocityX;
@@ -142,9 +194,9 @@ public class PlayerController : MonoBehaviour
         /* DETERMINES INITIAL VELOCITY COMPONENTS */
         // X component
         // Acceleration from player input
-        if ((int)_moveX.ReadValue<float>() != 0)
+        if (_moveX != 0)
         {
-            _velocityX += _accelRate * (int)_moveX.ReadValue<float>() * Time.fixedDeltaTime;
+            _velocityX += _accelRate * _moveX * Time.fixedDeltaTime;
             _velocityX = Mathf.Clamp(_velocityX, -_maxBikeSpeed, _maxBikeSpeed);
             if (Mathf.Abs(_velocityX) >= _maxBikeSpeed)
                 Debug.Log("Maxed X!");
@@ -163,9 +215,9 @@ public class PlayerController : MonoBehaviour
 
         // Y component
         // Acceleration from player input
-        if ((int)_moveY.ReadValue<float>() != 0)
+        if (_moveY!= 0)
         {
-            _velocityY += _accelRate * (int)_moveY.ReadValue<float>() * Time.fixedDeltaTime;
+            _velocityY += _accelRate * _moveY * Time.fixedDeltaTime;
             _velocityY = Mathf.Clamp(_velocityY, -_maxBikeSpeed, _maxBikeSpeed);
             if (Mathf.Abs(_velocityY) >= _maxBikeSpeed)
                 Debug.Log("Maxed Y!");
@@ -190,24 +242,22 @@ public class PlayerController : MonoBehaviour
     {
         // Since diagonals are covered by the clamp later, this logic only controls when one button
         // is pressed.
-        if ((int)_moveX.ReadValue<float>() == 0 || (int)_moveY.ReadValue<float>() == 0)
+        if (_moveX == 0 || _moveY == 0)
         {
 
-           // Determines which direction the player is trying to go and subtracts velocity from
-            // the other axis
-            if ((int)_moveX.ReadValue<float>() != 0)
+            // Decreases Y velocity if X is increasing
+            if (_moveX != 0)
             {
                 _velocityY = UtilityFormulas.FindTriangleLeg(_maxBikeSpeed, _velocityX)
                     * Time.fixedDeltaTime;
                 if (_rb2d.velocity.y < 0)
                     _velocityY *= -1;
             }
-            else if ((int)_moveY.ReadValue<float>() != 0)
+            
+            // Decreases X velocity if Y is increasing
+            if (_moveY != 0)
             {
-                _velocityX = UtilityFormulas.FindTriangleLeg(_maxBikeSpeed, _velocityY)
-                    * Time.fixedDeltaTime;
-                if (_rb2d.velocity.x < 0)
-                    _velocityX *= -1;
+
             }
         }
     }
