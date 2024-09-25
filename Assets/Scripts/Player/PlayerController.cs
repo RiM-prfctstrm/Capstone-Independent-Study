@@ -264,18 +264,18 @@ public class PlayerController : MonoBehaviour
         else if (_rb2d.velocity.x != 0)
         {
             // Subtracts from buffer before decelerating
-            if (_buffer > 0)
+            /*if (_buffer > 0 &&  _moveY != 0)
             {
                 _buffer -= _decelComponent;
             }
-            else
-            {
+            else*/
+            //{
                 //Natural Deceleration
                 if (_velocityX > 0)
                     _velocityX -= _decelComponent;
                 else
                     _velocityX += _decelComponent;
-            }
+           // }
         }
     }
 
@@ -301,18 +301,18 @@ public class PlayerController : MonoBehaviour
         else if (_rb2d.velocity.y != 0)
         {
             // Subtracts from buffer before decelerating
-            if (_buffer > 0)
+            /*if (_buffer > 0 && _moveX != 0)
             {
                 _buffer -= _decelComponent;
             }
-            else
-            {
+            else*/
+            //{
                 //Natural Deceleration
                 if (_velocityY > 0)
                     _velocityY -= _decelComponent;
                 else
                     _velocityY += _decelComponent;
-            }
+            //}
         }
     }
 
