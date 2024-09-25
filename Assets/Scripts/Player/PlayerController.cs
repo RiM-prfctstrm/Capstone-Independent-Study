@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 9/24/24
+ * UPDATED  : 9/25/24
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
     float _decelRate;
     float _brakeRate;
     float _decelComponent;
+    float _decelClamp;
+    float _buffer;
     Vector2 _newVel;
     Vector2 _steeringVector;
     bool _isBraking;
@@ -190,7 +192,26 @@ public class PlayerController : MonoBehaviour
         if ((int)_moveX.ReadValue<float>() == -1 || _rb2d.velocity.x < 0)
             _velocityX *= -1;
         if ((int)_moveY.ReadValue<float>() == -1 || _rb2d.velocity.y < 0)
-            _velocityY *= -1;*/
+            _velocityY *= -1;*/    
+
+        // Decelerates the bike
+        if (_newVel.magnitude >= 0)
+        {
+            // Removes buffer while breaking
+            if (_isBraking)
+            {
+                /*if (_decelClamp > _maxBikeSpeed)
+                {
+                    _decelClamp = _maxBikeSpeed;
+                }*/
+
+                DecelerateBike(_brakeRate);
+            }
+            /*else if (_moveX == 0 || _moveY == 0)
+            {
+                DecelerateBike(_decelRate);
+            }*/
+        }
 
         // Ensures velocity zeroes out
         if (Mathf.Abs(_velocityX) <= .015f)
@@ -198,7 +219,7 @@ public class PlayerController : MonoBehaviour
         if (Mathf.Abs(_velocityY) <= .015f)
             _velocityY = 0;
 
-        // Sets Player's velocity
+        // Sets player's velocity
         _newVel.x = _velocityX;
         _newVel.y = _velocityY;
         _newVel = Vector2.ClampMagnitude(_newVel, _maxBikeSpeed);
@@ -229,21 +250,32 @@ public class PlayerController : MonoBehaviour
         // Acceleration from player input
         if (_moveX != 0)
         {
+            // Accelerates on axis
             _velocityX += _accelRate * _moveX * Time.fixedDeltaTime;
             _velocityX = Mathf.Clamp(_velocityX, -_maxBikeSpeed, _maxBikeSpeed);
             if (Mathf.Abs(_velocityX) >= _maxBikeSpeed)
                 Debug.Log("Maxed X!");
+
+            // Resets deceleration buffer
+            _decelClamp = _decelTime; //+ _decelBuffer;
+            _buffer = _decelBuffer;
         }
         // Deceleration
         else if (_rb2d.velocity.x != 0)
         {
-            // Braking logic might go here
-
-            //Natural Deceleration
-            if (_velocityX > 0)
-                _velocityX -= _decelComponent;
+            // Subtracts from buffer before decelerating
+            if (_buffer > 0)
+            {
+                _buffer -= _decelComponent;
+            }
             else
-                _velocityX += _decelComponent;
+            {
+                //Natural Deceleration
+                if (_velocityX > 0)
+                    _velocityX -= _decelComponent;
+                else
+                    _velocityX += _decelComponent;
+            }
         }
     }
 
@@ -255,21 +287,32 @@ public class PlayerController : MonoBehaviour
         // Acceleration from player input
         if (_moveY != 0)
         {
+            // Accelerates on axis
             _velocityY += _accelRate * _moveY * Time.fixedDeltaTime;
             _velocityY = Mathf.Clamp(_velocityY, -_maxBikeSpeed, _maxBikeSpeed);
             if (Mathf.Abs(_velocityY) >= _maxBikeSpeed)
                 Debug.Log("Maxed Y!");
+
+            // Resets deceleration buffer
+            _decelClamp = _decelTime; //+ _decelBuffer;
+            _buffer = _decelBuffer;
         }
         // Deceleration
         else if (_rb2d.velocity.y != 0)
         {
-            // Braking logic might go here
-
-            //Natural Deceleration
-            if (_velocityY > 0)
-                _velocityY -= _decelComponent;
+            // Subtracts from buffer before decelerating
+            if (_buffer > 0)
+            {
+                _buffer -= _decelComponent;
+            }
             else
-                _velocityY += _decelComponent;
+            {
+                //Natural Deceleration
+                if (_velocityY > 0)
+                    _velocityY -= _decelComponent;
+                else
+                    _velocityY += _decelComponent;
+            }
         }
     }
 
@@ -321,7 +364,17 @@ public class PlayerController : MonoBehaviour
     /// <param name="rate">Rate at which bike decelerates</param>
     void DecelerateBike(float rate)
     {
+        // Performs decelration
+        _decelClamp -= rate * Time.fixedDeltaTime;
+        if (_decelClamp < 0)
+        {
+            _decelClamp = 0;
+        }
+        _newVel = Vector2.ClampMagnitude(_newVel, _decelClamp);
 
+        // Adjusts velocity vars
+        _velocityX = _newVel.x;
+        _velocityY = _newVel.y;
     }
 
     /// <summary>
@@ -356,6 +409,8 @@ public class PlayerController : MonoBehaviour
         _accelRate = _maxBikeSpeed / _accelTime;
         _decelRate = _maxBikeSpeed / _decelTime;
         _brakeRate = _maxBikeSpeed / _brakeTime;
+        _decelClamp = _decelTime; //+ _decelBuffer;
+        _buffer = _decelBuffer;
         //Debug.Log(_accelRate + ", " + _decelRate);
     }
 }

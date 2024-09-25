@@ -664,7 +664,8 @@ MonoBehaviour:
   _maxBikeSpeed: 14
   _accelTime: 1.4
   _decelTime: 10
-  _decelBuffer: 0
+  _brakeTime: 0.7
+  _decelBuffer: 0.25
   _steeringAngleThreshold: 135
   _steeringVelThreshold: 0.25
   isWalking: 0
