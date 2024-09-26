@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 9/25/24
+ * UPDATED  : 9/26/24
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -37,11 +37,12 @@ public class PlayerController : MonoBehaviour
     float _accelRate;
     float _decelRate;
     float _brakeRate;
-    float _decelComponent;
+    //float _decelComponent;
     float _decelClamp;
     float _buffer;
+    float _bufferRate;
     Vector2 _newVel;
-    Vector2 _steeringVector;
+    //Vector2 _steeringVector;
     bool _isBraking;
 
     //Inputs
@@ -174,7 +175,7 @@ public class PlayerController : MonoBehaviour
     void BikeMovement()
     {
         // Set Vars
-        _decelComponent = _decelRate * Time.fixedDeltaTime;
+        //_decelComponent = _decelRate * Time.fixedDeltaTime;
 
         // Compute velocity
         //BikeAcceleration();
@@ -209,8 +210,15 @@ public class PlayerController : MonoBehaviour
             }
             else if (_moveX == 0 && _moveY == 0)
             {
-                _decelClamp = _rb2d.velocity.magnitude;
-                DecelerateBike(_decelRate);
+                if (_buffer > 0)
+                {
+                    _buffer -= _bufferRate;
+                }
+                else
+                {
+                    _decelClamp = _rb2d.velocity.magnitude;
+                    DecelerateBike(_decelRate);
+                }
             }
         }
 
@@ -259,7 +267,7 @@ public class PlayerController : MonoBehaviour
 
             // Resets deceleration buffer
             _decelClamp = _decelTime; //+ _decelBuffer;
-            _buffer = _decelBuffer;
+            _buffer = _decelBuffer * (_rb2d.velocity.magnitude / _maxBikeSpeed);
         }
         // Deceleration
         /*else if (_rb2d.velocity.x != 0)
@@ -296,7 +304,7 @@ public class PlayerController : MonoBehaviour
 
             // Resets deceleration buffer
             _decelClamp = _decelTime; //+ _decelBuffer;
-            _buffer = _decelBuffer;
+            _buffer = _decelBuffer * (_rb2d.velocity.magnitude / _maxBikeSpeed);
         }
         // Deceleration
         /*else if (_rb2d.velocity.y != 0)
@@ -431,6 +439,7 @@ public class PlayerController : MonoBehaviour
         _brakeRate = _maxBikeSpeed / _brakeTime;
         _decelClamp = _decelTime; //+ _decelBuffer;
         _buffer = _decelBuffer;
+        _bufferRate = _decelBuffer * Time.fixedDeltaTime;
         //Debug.Log(_accelRate + ", " + _decelRate);
     }
 }
