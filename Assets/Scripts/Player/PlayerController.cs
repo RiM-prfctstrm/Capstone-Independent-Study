@@ -207,10 +207,11 @@ public class PlayerController : MonoBehaviour
 
                 DecelerateBike(_brakeRate);
             }
-            /*else if (_moveX == 0 || _moveY == 0)
+            else if (_moveX == 0 && _moveY == 0)
             {
+                _decelClamp = _rb2d.velocity.magnitude;
                 DecelerateBike(_decelRate);
-            }*/
+            }
         }
 
         // Ensures velocity zeroes out
@@ -261,14 +262,14 @@ public class PlayerController : MonoBehaviour
             _buffer = _decelBuffer;
         }
         // Deceleration
-        else if (_rb2d.velocity.x != 0)
+        /*else if (_rb2d.velocity.x != 0)
         {
             // Subtracts from buffer before decelerating
             /*if (_buffer > 0 &&  _moveY != 0)
             {
                 _buffer -= _decelComponent;
             }
-            else*/
+            else
             //{
                 //Natural Deceleration
                 if (_velocityX > 0)
@@ -276,7 +277,7 @@ public class PlayerController : MonoBehaviour
                 else
                     _velocityX += _decelComponent;
            // }
-        }
+        }*/
     }
 
     /// <summary>
@@ -298,14 +299,14 @@ public class PlayerController : MonoBehaviour
             _buffer = _decelBuffer;
         }
         // Deceleration
-        else if (_rb2d.velocity.y != 0)
+        /*else if (_rb2d.velocity.y != 0)
         {
             // Subtracts from buffer before decelerating
             /*if (_buffer > 0 && _moveX != 0)
             {
                 _buffer -= _decelComponent;
             }
-            else*/
+            else
             //{
                 //Natural Deceleration
                 if (_velocityY > 0)
@@ -313,7 +314,7 @@ public class PlayerController : MonoBehaviour
                 else
                     _velocityY += _decelComponent;
             //}
-        }
+        }*/
     }
 
     /// <summary>
@@ -322,9 +323,9 @@ public class PlayerController : MonoBehaviour
     void BikeSteering()
     {
         // Sets vector used to aid in steering calculation
-        _steeringVector.x = _velocityX;
+        /*_steeringVector.x = _velocityX;
         _steeringVector.y = _velocityY;
-        _steeringVector = Vector2.ClampMagnitude(_steeringVector, _maxBikeSpeed);
+        _steeringVector = Vector2.ClampMagnitude(_steeringVector, _maxBikeSpeed);*/
 
         // Since diagonals are covered by the clamp later, this logic only controls when one button
         // is pressed.
@@ -333,27 +334,46 @@ public class PlayerController : MonoBehaviour
             // Decreases Y velocity if X is increasing
             if (_moveX != 0)
             {
-                // Brings X down to perform calculation accurately calculate needed Y velocity
-                _velocityX = _steeringVector.x;
+                /*// Brings X down to perform calculation accurately calculate needed Y velocity
+                //_velocityX = _steeringVector.x;
                 //AccelerateX();
 
                 // Calculates Y value needed to maintain max speed
-                _velocityY = UtilityFormulas.FindTriangleLeg(_maxBikeSpeed, _velocityX);
+                _velocityY = UtilityFormulas.FindTriangleLeg(_maxBikeSpeed, _steeringVector.x);
                 if (_rb2d.velocity.y < 0)
-                    _velocityY *= -1;
+                    _velocityY *= -1;*/
+
+                // Clamps Y
+                /*if (Mathf.Abs(_velocityY) > _rb2d.velocity.y)
+                {
+                    _velocityY = _rb2d.velocity.y;
+                }*/
+
+                // Subtracts to keep X
+                _velocityY -= _accelRate * Mathf.Sign(_rb2d.velocity.y) * Time.fixedDeltaTime;
             }
             
             // Decreases X velocity if Y is increasing
             if (_moveY != 0)
             {
-                // Brings Y down to perform calculation accurately calculate needed X velocity
-                _velocityY = _steeringVector.y;
+                /*// Brings Y down to perform calculation accurately calculate needed X velocity
+                //_velocityY = _steeringVector.y;
                 //AccelerateY();
 
                 // Calculates Y value needed to maintain max speed
-                _velocityX = UtilityFormulas.FindTriangleLeg(_maxBikeSpeed, _velocityY);
+                _velocityX = UtilityFormulas.FindTriangleLeg(_maxBikeSpeed, _steeringVector.y);
                 if (_rb2d.velocity.x < 0)
-                    _velocityX *= -1;
+                    _velocityX *= -1; */
+
+                // Clamps Y
+                /*if (Mathf.Abs(_velocityX) > _rb2d.velocity.x)
+                {
+                    _velocityX = _rb2d.velocity.x;
+                }*/
+
+                // Subtracts to keep Y
+                _velocityX -= _accelRate * Mathf.Sign(_rb2d.velocity.x) * Time.fixedDeltaTime;
+
             }
         }
     }
