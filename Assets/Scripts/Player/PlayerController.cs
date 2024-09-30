@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 9/26/24
+ * UPDATED  : 9/30/24
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -10,6 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -80,6 +81,17 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
+        //Debug commands
+        if (Input.GetKey(KeyCode.Escape)) 
+        { 
+            Application.Quit(); 
+        } 
+        else if (Input.GetKey(KeyCode.R)) 
+        { 
+            SceneManager.LoadScene(0); 
+            Time.timeScale = 1; 
+        }
+
         // Gets inputs for frame
         ValidateInputs();
 
