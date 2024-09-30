@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
     InputAction _xInput;
     InputAction _yInput;
     InputAction _brake;
+    InputAction _debugSwitch;
     int _moveX;
     int _moveY;
 
@@ -68,9 +69,11 @@ public class PlayerController : MonoBehaviour
         _xInput = _playerInputs.FindAction("MoveX");
         _yInput = _playerInputs.FindAction("MoveY");
         _brake = _playerInputs.FindAction("Brake");
+        _debugSwitch = _playerInputs.FindAction("DebugSwitchState");
 
         _brake.performed += ctx => _isBraking = true;
         _brake.canceled += ctx => _isBraking = false;
+        _debugSwitch.performed += ctx => isWalking = !isWalking;
 
         // Initializes Accel/Decel Rates
         SetAccelDecel();
@@ -82,11 +85,13 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         //Debug commands
+        // Exit Game
         if (Input.GetKey(KeyCode.Escape)) 
         { 
             Application.Quit(); 
-        } 
-        else if (Input.GetKey(KeyCode.R)) 
+        }
+        // Restart
+        if (Input.GetKey(KeyCode.R)) 
         { 
             SceneManager.LoadScene(0); 
             Time.timeScale = 1; 
