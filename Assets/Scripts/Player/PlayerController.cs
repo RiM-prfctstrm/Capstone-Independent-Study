@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer _playerRenderer;
     PlayerAnimator _playerAnimator;
     Rigidbody2D _rb2d;
+    //Child Components
+    [SerializeField] DetectObjects _detector;
 
     //Parameters
     [SerializeField] float _walkSpeed;
@@ -121,6 +123,8 @@ public class PlayerController : MonoBehaviour
         if (_rb2d.velocity != Vector2.zero)
         {
             _playerAnimator.facingDirection = GetDirection();
+            // Changes direction where the player can interact
+            _detector.SetInteractionDirection(_playerAnimator.facingDirection);
         }
     }
 
@@ -252,21 +256,6 @@ public class PlayerController : MonoBehaviour
         _rb2d.velocity = _newVel;
         
     }
-
-    /*/// <summary>
-    /// Performs initial acceleration of X and Y velocity components.
-    /// MOVE DECELERATION AFTER CLAMPING FOR SMOOTHER STOPPING
-    /// </summary>
-    void BikeAcceleration()
-    {
-        /* DETERMINES INITIAL VELOCITY COMPONENTS
-        // X component
-        // Acceleration from player input
-        
-
-        // Y component
-        
-    }*/
 
     /// <summary>
     /// Accelerates X component of player velocity
