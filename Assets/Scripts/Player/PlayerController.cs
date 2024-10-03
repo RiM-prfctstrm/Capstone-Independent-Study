@@ -57,6 +57,9 @@ public class PlayerController : MonoBehaviour
     int _moveX;
     int _moveY;
 
+    //Debug
+    bool _maxed = false;
+
     /// <summary>
     /// Start is called before the first frame update
     /// </summary>
@@ -129,6 +132,15 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
+    /// Sent when an incoming collider makes contact with this object's collider (2D physics only).
+    /// </summary>
+    /// <param name="collision">The Collision2D data associated with this collision.</param>
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Collided");
+    }
+
+    /// <summary>
     /// Disables certain inputs while biking based on the rigidbody's velocity angle to prevent the
     /// player from directly reverse.
     /// </summary>
@@ -195,6 +207,10 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void BikeMovement()
     {
+        // DEBUG stops further movement after maxing
+        /*if (_maxed)
+            _moveX = 0;*/
+
         // Set Vars
         //_decelComponent = _decelRate * Time.fixedDeltaTime;
 
@@ -268,8 +284,17 @@ public class PlayerController : MonoBehaviour
             // Accelerates on axis
             _velocityX += _accelRate * _moveX * Time.fixedDeltaTime;
             _velocityX = Mathf.Clamp(_velocityX, -_maxBikeSpeed, _maxBikeSpeed);
+
+            // Debug feedback
             if (Mathf.Abs(_velocityX) >= _maxBikeSpeed)
+            {
                 Debug.Log("Maxed X!");
+                /*if (!_maxed)
+                {
+                    Debug.Log(transform.position.x);
+                    _maxed = true;
+                }*/
+            }
 
             // Resets deceleration buffer
             _decelClamp = _decelTime; //+ _decelBuffer;
