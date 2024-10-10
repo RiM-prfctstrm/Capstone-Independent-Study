@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 9/30/24
+ * UPDATED  : 10/10/24
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -82,6 +82,9 @@ public class PlayerController : MonoBehaviour
 
         // Initializes Accel/Decel Rates
         SetAccelDecel();
+
+        // DEBUG
+        //StartCoroutine(LabTurn2Part());
     }
 
     /// <summary>
@@ -137,7 +140,29 @@ public class PlayerController : MonoBehaviour
     /// <param name="collision">The Collision2D data associated with this collision.</param>
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collided");
+        //Debug.Log("Collided");
+
+        // Reset velocity modifiers to compensate for collision
+        if (!isWalking)
+        {
+            _velocityX = _rb2d.velocity.x;
+            _velocityY = _rb2d.velocity.y;
+        }
+    }
+
+    /// <summary>
+    /// Sent when an incoming collider stops making contact with this object's collider (2D physics
+    /// only).
+    /// </summary>
+    /// <param name="collision">The Collision2D data associated with this collision.</param>
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        // Reset velocity modifiers to compensate for collision
+        /* (!isWalking)
+        {
+            _velocityX = _rb2d.velocity.x;
+            _velocityY = _rb2d.velocity.y;
+        }*/
     }
 
     /// <summary>
@@ -184,6 +209,8 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    /* MOVEMENT FUNCTIONS */
 
     /// <summary>
     /// Controls the player's movement while walking
@@ -436,6 +463,8 @@ public class PlayerController : MonoBehaviour
         _velocityY = _newVel.y;
     }
 
+    /* VAR MODIFIERS */
+
     /// <summary>
     /// Tells which direction the character is facing
     /// </summary>
@@ -472,5 +501,31 @@ public class PlayerController : MonoBehaviour
         _buffer = _decelBuffer;
         _bufferRate = _decelBuffer * Time.fixedDeltaTime;
         //Debug.Log(_accelRate + ", " + _decelRate);
+    }
+
+    /* LAB FUNCTIONS */
+
+    /// <summary>
+    /// Used to determine the space needed to turn 90 degrees, with the turn performed in 45deg
+    /// intervals
+    /// </summary>
+    IEnumerator LabTurn2Part()
+    {
+        // Sets initial movement
+        _moveX = 0;
+        _moveY = 1;
+        _rb2d.velocity = new Vector2(_maxBikeSpeed, 0);
+        _velocityX = _maxBikeSpeed;
+
+        // Gets location at first part of the turn once complete
+        /*yield return new WaitUntil(() => _velocityY == _maxBikeSpeed);
+        Debug.Log("Midpoint X: " + transform.position.x);
+        Debug.Log("Midpoint Y: " + transform.position.y);
+        _moveX = 0;*/
+
+        // Finishes turn and gets location
+        yield return new WaitUntil(() => _velocityX == 0);
+        Debug.Log("Endpoint X: " + transform.position.x);
+        Debug.Log("Endpoint Y: " + transform.position.y);
     }
 }
