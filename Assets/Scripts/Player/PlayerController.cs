@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] InputActionAsset _playerInputs;
     InputAction _brake;
     InputAction _debugSwitch;
+    InputAction _interact;
     InputAction _xInput;
     InputAction _yInput;
     int _moveX;
@@ -73,14 +74,17 @@ public class PlayerController : MonoBehaviour
         _rb2d = GetComponent<Rigidbody2D>();
 
         // Sets inputs
-        _xInput = _playerInputs.FindAction("MoveX");
-        _yInput = _playerInputs.FindAction("MoveY");
         _brake = _playerInputs.FindAction("Brake");
         _debugSwitch = _playerInputs.FindAction("DebugSwitchState");
+        _interact = _playerInputs.FindAction("Interact");
+        _xInput = _playerInputs.FindAction("MoveX");
+        _yInput = _playerInputs.FindAction("MoveY");
 
+        // Assigns actions to inputs
         _brake.performed += ctx => _isBraking = true;
         _brake.canceled += ctx => _isBraking = false;
         _debugSwitch.performed += ctx => isWalking = !isWalking;
+        _interact.performed += ctx => PerformInteraction();
 
         // Initializes Accel/Decel Rates
         SetAccelDecel();
@@ -94,7 +98,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
-        //Debug commands
+        // Debug commands
         // Exit Game
         if (Input.GetKey(KeyCode.Escape)) 
         { 
@@ -142,12 +146,12 @@ public class PlayerController : MonoBehaviour
     {
         //Debug.Log("Collided");
 
-        // Reset velocity modifiers to compensate for collision
-        /*if (!isWalking)
+        // Reset velocity modifiers to compensate for collision DEBUG FIX
+        if (!isWalking)
         {
             _velocityX = _rb2d.velocity.x;
             _velocityY = _rb2d.velocity.y;
-        }*/
+        }
     }
 
     /// <summary>
@@ -211,6 +215,25 @@ public class PlayerController : MonoBehaviour
             {
                 _moveY = 0;
             }
+        }
+    }
+
+    #endregion
+
+    #region INTERACTIONS
+
+    /// <summary>
+    /// Performs interactions triggered by the interact button with objects in the game world.\
+    /// </summary>
+    void PerformInteraction()
+    {
+        if (_detector.TargetProp != null)
+        {
+            Debug.Log(_detector.TargetProp.name);
+        }
+        else
+        {
+            Debug.Log("nada");
         }
     }
 

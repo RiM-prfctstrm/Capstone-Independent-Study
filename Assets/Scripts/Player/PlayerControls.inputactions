@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Cancel",
+                    "type": "Button",
+                    "id": "a356729e-9acb-443c-bc73-70e9cf569923",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -227,26 +236,19 @@
                     "action": "DebugSwitchState",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dde1f63f-ef4e-42fa-9e26-c6e379fe3e74",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
-        },
-        {
-            "name": "Bike",
-            "id": "908548f8-3718-4f3e-b89d-14c2c68558fe",
-            "actions": [],
-            "bindings": []
-        },
-        {
-            "name": "Universal",
-            "id": "c74a6537-1226-4db2-a8f3-223ee735d904",
-            "actions": [],
-            "bindings": []
-        },
-        {
-            "name": "Debug",
-            "id": "6ef4e4a5-1b82-4c8e-b12a-a637bafbe7ac",
-            "actions": [],
-            "bindings": []
         }
     ],
     "controlSchemes": []
