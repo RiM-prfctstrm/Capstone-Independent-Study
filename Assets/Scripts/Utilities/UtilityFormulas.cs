@@ -2,7 +2,7 @@
  * FILE     : UtilityFormulas.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/21/24
- * UPDATED  : 9/21/24
+ * UPDATED  : 10/11/24
  * 
  * DESC     : Contains commonly used complex formulas to make code more efficient.
 =================================================================================================*/
@@ -12,6 +12,8 @@ using UnityEngine;
 
 public static class UtilityFormulas 
 {
+    #region TRIANGLE GEOMETRY
+
     /// <summary>
     /// Finds the hypotenuse of a triangle using the Pythagorean theorem
     /// </summary>
@@ -33,4 +35,6 @@ public static class UtilityFormulas
     {
         return Mathf.Sqrt((hypotenuse * hypotenuse) - (side * side));
     }
+
+    #endregion
 }

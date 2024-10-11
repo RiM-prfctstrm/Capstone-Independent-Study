@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 10/10/24
+ * UPDATED  : 10/11/24
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -14,51 +14,53 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    /* VARS */
+    #region VARIABLES
 
     //Components
-    SpriteRenderer _playerRenderer;
     PlayerAnimator _playerAnimator;
+    SpriteRenderer _playerRenderer;
     Rigidbody2D _rb2d;
     //Child Components
     [SerializeField] DetectObjects _detector;
 
     //Parameters
-    [SerializeField] float _walkSpeed;
-    [SerializeField] float _maxBikeSpeed;
     [SerializeField] float _accelTime;
-    [SerializeField] float _decelTime;
     [SerializeField] float _brakeTime;
+    [SerializeField] float _decelTime;
     [SerializeField] float _decelBuffer;
+    [SerializeField] float _maxBikeSpeed;
+    [SerializeField] float _walkSpeed;
     [SerializeField] int _steeringAngleThreshold;
     [SerializeField] float _steeringVelThreshold;
-    public bool isWalking;
 
     //Movement Vars
-    float _velocityX;
-    float _velocityY;
     float _accelRate;
-    float _decelRate;
     float _brakeRate;
-    //float _decelComponent;
+    float _decelRate;
     float _decelClamp;
     float _buffer;
     float _bufferRate;
-    Vector2 _newVel;
-    //Vector2 _steeringVector;
     bool _isBraking;
+    public bool isWalking;
+    float _velocityX;
+    float _velocityY;
+    Vector2 _newVel;
 
     //Inputs
     [SerializeField] InputActionAsset _playerInputs;
-    InputAction _xInput;
-    InputAction _yInput;
     InputAction _brake;
     InputAction _debugSwitch;
+    InputAction _xInput;
+    InputAction _yInput;
     int _moveX;
     int _moveY;
 
     //Debug
     bool _maxed = false;
+
+    #endregion
+
+    #region UNIVERSAL EVENTS
 
     /// <summary>
     /// Start is called before the first frame update
@@ -108,12 +110,6 @@ public class PlayerController : MonoBehaviour
         // Gets inputs for frame
         ValidateInputs();
 
-        // Controls movement states
-        // Braking state
-        /*if (_brake.IsPressed())
-            _isBraking = true;
-        else
-            _isBraking = false;*/
 
         // Controls which kind of movement to perform.
         if (isWalking)
@@ -134,6 +130,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    #endregion
+
+    #region COLLISION CONTROLS
+
     /// <summary>
     /// Sent when an incoming collider makes contact with this object's collider (2D physics only).
     /// </summary>
@@ -143,11 +143,11 @@ public class PlayerController : MonoBehaviour
         //Debug.Log("Collided");
 
         // Reset velocity modifiers to compensate for collision
-        if (!isWalking)
+        /*if (!isWalking)
         {
             _velocityX = _rb2d.velocity.x;
             _velocityY = _rb2d.velocity.y;
-        }
+        }*/
     }
 
     /// <summary>
@@ -164,6 +164,10 @@ public class PlayerController : MonoBehaviour
             _velocityY = _rb2d.velocity.y;
         }*/
     }
+
+    #endregion
+
+    #region INPUT MANAGEMENT
 
     /// <summary>
     /// Disables certain inputs while biking based on the rigidbody's velocity angle to prevent the
@@ -210,7 +214,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    /* MOVEMENT FUNCTIONS */
+    #endregion
+
+    #region MOVEMENT FUNCTIONS
 
     /// <summary>
     /// Controls the player's movement while walking
@@ -234,15 +240,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void BikeMovement()
     {
-        // DEBUG stops further movement after maxing
-        /*if (_maxed)
-            _moveX = 0;*/
-
-        // Set Vars
-        //_decelComponent = _decelRate * Time.fixedDeltaTime;
-
         // Compute velocity
-        //BikeAcceleration();
         if (!_isBraking)
         {
             AccelerateX();
@@ -253,23 +251,12 @@ public class PlayerController : MonoBehaviour
             BikeSteering();
         }
 
-        /*// Determines velocity sign
-        if ((int)_moveX.ReadValue<float>() == -1 || _rb2d.velocity.x < 0)
-            _velocityX *= -1;
-        if ((int)_moveY.ReadValue<float>() == -1 || _rb2d.velocity.y < 0)
-            _velocityY *= -1;*/    
-
         // Decelerates the bike
         if (_newVel.magnitude >= 0)
         {
             // Removes buffer while breaking
             if (_isBraking)
             {
-                /*if (_decelClamp > _maxBikeSpeed)
-                {
-                    _decelClamp = _maxBikeSpeed;
-                }*/
-
                 DecelerateBike(_brakeRate);
             }
             else if (_moveX == 0 && _moveY == 0)
@@ -316,34 +303,12 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Abs(_velocityX) >= _maxBikeSpeed)
             {
                 Debug.Log("Maxed X!");
-                /*if (!_maxed)
-                {
-                    Debug.Log(transform.position.x);
-                    _maxed = true;
-                }*/
             }
 
             // Resets deceleration buffer
-            _decelClamp = _decelTime; //+ _decelBuffer;
+            _decelClamp = _decelTime; 
             _buffer = _decelBuffer * (_rb2d.velocity.magnitude / _maxBikeSpeed);
         }
-        // Deceleration
-        /*else if (_rb2d.velocity.x != 0)
-        {
-            // Subtracts from buffer before decelerating
-            /*if (_buffer > 0 &&  _moveY != 0)
-            {
-                _buffer -= _decelComponent;
-            }
-            else
-            //{
-                //Natural Deceleration
-                if (_velocityX > 0)
-                    _velocityX -= _decelComponent;
-                else
-                    _velocityX += _decelComponent;
-           // }
-        }*/
     }
 
     /// <summary>
@@ -357,30 +322,17 @@ public class PlayerController : MonoBehaviour
             // Accelerates on axis
             _velocityY += _accelRate * _moveY * Time.fixedDeltaTime;
             _velocityY = Mathf.Clamp(_velocityY, -_maxBikeSpeed, _maxBikeSpeed);
+
+            // Debug feedback
             if (Mathf.Abs(_velocityY) >= _maxBikeSpeed)
+            {
                 Debug.Log("Maxed Y!");
+            }
 
             // Resets deceleration buffer
-            _decelClamp = _decelTime; //+ _decelBuffer;
+            _decelClamp = _decelTime;
             _buffer = _decelBuffer * (_rb2d.velocity.magnitude / _maxBikeSpeed);
         }
-        // Deceleration
-        /*else if (_rb2d.velocity.y != 0)
-        {
-            // Subtracts from buffer before decelerating
-            /*if (_buffer > 0 && _moveX != 0)
-            {
-                _buffer -= _decelComponent;
-            }
-            else
-            //{
-                //Natural Deceleration
-                if (_velocityY > 0)
-                    _velocityY -= _decelComponent;
-                else
-                    _velocityY += _decelComponent;
-            //}
-        }*/
     }
 
     /// <summary>
@@ -388,11 +340,6 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void BikeSteering()
     {
-        // Sets vector used to aid in steering calculation
-        /*_steeringVector.x = _velocityX;
-        _steeringVector.y = _velocityY;
-        _steeringVector = Vector2.ClampMagnitude(_steeringVector, _maxBikeSpeed);*/
-
         // Since diagonals are covered by the clamp later, this logic only controls when one button
         // is pressed.
         if (_moveX == 0 || _moveY == 0)
@@ -400,21 +347,6 @@ public class PlayerController : MonoBehaviour
             // Decreases Y velocity if X is increasing
             if (_moveX != 0)
             {
-                /*// Brings X down to perform calculation accurately calculate needed Y velocity
-                //_velocityX = _steeringVector.x;
-                //AccelerateX();
-
-                // Calculates Y value needed to maintain max speed
-                _velocityY = UtilityFormulas.FindTriangleLeg(_maxBikeSpeed, _steeringVector.x);
-                if (_rb2d.velocity.y < 0)
-                    _velocityY *= -1;*/
-
-                // Clamps Y
-                /*if (Mathf.Abs(_velocityY) > _rb2d.velocity.y)
-                {
-                    _velocityY = _rb2d.velocity.y;
-                }*/
-
                 // Subtracts to keep X
                 _velocityY -= _accelRate * Mathf.Sign(_rb2d.velocity.y) * Time.fixedDeltaTime;
             }
@@ -422,21 +354,6 @@ public class PlayerController : MonoBehaviour
             // Decreases X velocity if Y is increasing
             if (_moveY != 0)
             {
-                /*// Brings Y down to perform calculation accurately calculate needed X velocity
-                //_velocityY = _steeringVector.y;
-                //AccelerateY();
-
-                // Calculates Y value needed to maintain max speed
-                _velocityX = UtilityFormulas.FindTriangleLeg(_maxBikeSpeed, _steeringVector.y);
-                if (_rb2d.velocity.x < 0)
-                    _velocityX *= -1; */
-
-                // Clamps Y
-                /*if (Mathf.Abs(_velocityX) > _rb2d.velocity.x)
-                {
-                    _velocityX = _rb2d.velocity.x;
-                }*/
-
                 // Subtracts to keep Y
                 _velocityX -= _accelRate * Mathf.Sign(_rb2d.velocity.x) * Time.fixedDeltaTime;
 
@@ -463,7 +380,9 @@ public class PlayerController : MonoBehaviour
         _velocityY = _newVel.y;
     }
 
-    /* VAR MODIFIERS */
+    #endregion
+
+    #region VAR MODIFIERS
 
     /// <summary>
     /// Tells which direction the character is facing
@@ -475,17 +394,13 @@ public class PlayerController : MonoBehaviour
         // Bases direction on velocity, prioritizing X axis and positive values
         if (Mathf.Abs(_rb2d.velocity.x) >= Mathf.Abs(_rb2d.velocity.y))
         {
-            if (_rb2d.velocity.x >= 0)
-                return 2;
-            else
-                return 1;
+            if (_rb2d.velocity.x >= 0) { return 2; }
+            else { return 1; }
         }
         else
         {
-            if (_rb2d.velocity.y >= 0)
-                return 3;
-            else
-                return 0;
+            if (_rb2d.velocity.y >= 0) { return 3; }
+            else { return 0; }
         }
     }
 
@@ -495,15 +410,16 @@ public class PlayerController : MonoBehaviour
     void SetAccelDecel()
     {
         _accelRate = _maxBikeSpeed / _accelTime;
-        _decelRate = _maxBikeSpeed / _decelTime;
         _brakeRate = _maxBikeSpeed / _brakeTime;
-        _decelClamp = _decelTime; //+ _decelBuffer;
+        _decelRate = _maxBikeSpeed / _decelTime;
+        _decelClamp = _decelTime;
         _buffer = _decelBuffer;
         _bufferRate = _decelBuffer * Time.fixedDeltaTime;
-        //Debug.Log(_accelRate + ", " + _decelRate);
     }
 
-    /* LAB FUNCTIONS */
+    #endregion
+
+    #region DEBUG
 
     /// <summary>
     /// Used to determine the space needed to turn 90 degrees, with the turn performed in 45deg
@@ -528,4 +444,6 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Endpoint X: " + transform.position.x);
         Debug.Log("Endpoint Y: " + transform.position.y);
     }
+
+    #endregion
 }

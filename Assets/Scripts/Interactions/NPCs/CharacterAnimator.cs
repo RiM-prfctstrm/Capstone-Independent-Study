@@ -2,7 +2,7 @@
  * FILE     : CharacterAnimator.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/10/24
- * UPDATED  : 9/11/24
+ * UPDATED  : 10/11/24
  * 
  * DESC     : Base code to automate NPC animations.
 =================================================================================================*/
@@ -12,14 +12,19 @@ using UnityEngine;
 
 public class CharacterAnimator : MonoBehaviour
 {
-    /* Vars */
+    #region VARIABLES
+
     //Components
     Rigidbody2D _rb2d;
 
     //Animation
-    public int facingDirection; // 0=D, 1=L, 2=R, 3=U
-    protected string animState;
     [SerializeField] protected Animator anim;
+    protected string animState;
+    public int facingDirection; // 0=D, 1=L, 2=R, 3=U
+
+    #endregion
+
+    #region UNIVERSAL EVENTS
 
     /// <summary>
     /// Start is called before the first frame update
@@ -37,6 +42,10 @@ public class CharacterAnimator : MonoBehaviour
         //Debug.Log(SetAnimState());
     }
 
+    #endregion
+
+    #region ANIMATION
+
     /// <summary>
     /// Determines which animation to play
     /// </summary>
@@ -50,15 +59,19 @@ public class CharacterAnimator : MonoBehaviour
             case 0:
                 animState += "Down";
                 break;
+
             case 1:
                 animState += "Left";
                 break;
+
             case 2:
                 animState += "Right";
                 break;
+
             case 3:
                 animState += "Up";
                 break;
+
         }
 
         if (_rb2d.velocity == Vector2.zero)
@@ -68,4 +81,6 @@ public class CharacterAnimator : MonoBehaviour
 
         return animState;
     }
+
+    #endregion
 }
