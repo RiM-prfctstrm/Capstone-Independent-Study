@@ -41,6 +41,7 @@ public class NPCInteraction : InteractableObject
     {
         // Initialize Vars
         _dialogueManager = FindObjectOfType<DialogueManager>();
+        _player = FindObjectOfType<PlayerController>().gameObject;
     }
 
     /// <summary>
@@ -50,7 +51,7 @@ public class NPCInteraction : InteractableObject
     {
         // Determines whether player is close enough for dialogue
         if (Vector2.Distance(transform.position, _player.transform.position) > _dialogueRange
-            && _dialogueManager.inDialogue)
+            && _player.GetComponent<PlayerController>().inDialogue)
         {
             _dialogueManager.CancelDialogue();
         }
@@ -82,11 +83,11 @@ public class NPCInteraction : InteractableObject
     void NPCDialogue()
     {
         // Plays Dialogue
-        _dialogueManager.PlayDialogue(_NPCLines[_dialogueCycle]);
+        _dialogueManager.PlayDialogue(_NPCLines[_dialogueCycle].dialogueBoxes);
 
         // Updates currently playing event
         _dialogueCycle++;
-        if (_dialogueCycle > _NPCLines.Capacity)
+        if (_dialogueCycle >= _NPCLines.Count)
         {
             _dialogueCycle = 0;
         }

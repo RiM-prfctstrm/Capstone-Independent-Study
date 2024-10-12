@@ -24,9 +24,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] Image _portraitImage;
     [SerializeField] GameObject _portraitOutline;
 
-    // External reference outputs
-    bool _inDialogue;
-    public bool inDialogue => _inDialogue;
+    // Other Objects
+    PlayerController _player;
+
 
     #endregion
 
@@ -37,7 +37,7 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     void Start()
     {
-
+        _player = FindObjectOfType<PlayerController>();
     }
 
     /// <summary>
@@ -56,9 +56,23 @@ public class DialogueManager : MonoBehaviour
     /// Controls the playback of dialogue
     /// </summary>
     /// <param name="sequence">Sequence of dialogues to play</param>
-    public void PlayDialogue(DialogueEvent sequence)
+    public IEnumerator PlayDialogue(List<Dialogue> sequence)
     {
-        _inDialogue = true;
+        // Sets player's state
+        _player.inDialogue = true;
+
+        // Plays each line of dialogue at correct time
+        foreach (Dialogue line in sequence)
+        {
+            DisplayDialogue(line);
+            yield return new WaitUntil(() => _player.selectSwitch == true);
+            _player.selectSwitch = false;
+        }
+
+        // Ends Dialogue
+        yield return new WaitUntil(() => _player.selectSwitch == true);
+        _player.selectSwitch = false;
+        CancelDialogue();
     }
 
     /// <summary>
@@ -99,7 +113,10 @@ public class DialogueManager : MonoBehaviour
     public void CancelDialogue()
     {
         // Lets other scripts know player is out of dialogue
-        _inDialogue = false;
+        _player.inDialogue = false;
+
+        // Ends Active Dialogue sequence
+        StopAllCoroutines();
 
         // Deactivates UI
         _dialogueOutline.SetActive(false);

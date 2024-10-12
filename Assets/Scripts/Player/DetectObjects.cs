@@ -58,10 +58,14 @@ public class DetectObjects : MonoBehaviour
         else
         {
             _targetProp = null;
+            _target = null;
         }
 
         // Sets output variable
-        _target = _targetProp.GetComponent<InteractableObject>();
+        if (_targetProp != null)
+        {
+            _target = _targetProp.GetComponent<InteractableObject>();
+        }
     }
 
     #endregion
