@@ -2,7 +2,7 @@
  * FILE     : DetectObjects.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 6/5/23
- * UPDATED  : 10/11/24
+ * UPDATED  : 10/12/24
  * 
  * DESC     : Gets props with in the player's interaction space and returns the nearest one
 =================================================================================================*/
@@ -18,7 +18,8 @@ public class DetectObjects : MonoBehaviour
     List<GameObject> _interactables = new List<GameObject>();
     GameObject _player;
     GameObject _targetProp;
-    public GameObject TargetProp => _targetProp;
+    InteractableObject _target;
+    public InteractableObject target => _target;
 
     // Position vectors
     Vector2 _playerPos;
@@ -58,6 +59,9 @@ public class DetectObjects : MonoBehaviour
         {
             _targetProp = null;
         }
+
+        // Sets output variable
+        _target = _targetProp.GetComponent<InteractableObject>();
     }
 
     #endregion

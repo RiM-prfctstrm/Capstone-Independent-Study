@@ -2,7 +2,7 @@
  * FILE     : NPCInteraction.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/11/24
- * UPDATED  : 10/11/24
+ * UPDATED  : 10/12/24
  * 
  * DESC     : Performs unique events depending
 =================================================================================================*/
@@ -16,10 +16,19 @@ public class NPCInteraction : InteractableObject
 
     // Controls
     [SerializeField] int _type; // 0=dialogue, 1=event trigger
+    [SerializeField] bool _hasDailyUpdates = false;
+    [SerializeField] bool _isMobile = false;
+    [SerializeField] float _dialogueRange = 5;
 
     // Dialogue
-    [SerializeField] [TextArea] string[] _dialogue;
-    public string[] dialogue => _dialogue;
+    [SerializeField] List<DialogueEvent> _NPCLines = new List<DialogueEvent>();
+
+    // External components
+    [SerializeField] GameObject _player;
+    DialogueManager _dialogueManager;
+
+    // Misc
+    int _dialogueCycle = 0;
 
     #endregion
 
@@ -30,15 +39,21 @@ public class NPCInteraction : InteractableObject
     /// </summary>
     void Start()
     {
-
+        // Initialize Vars
+        _dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
     /// <summary>
     /// Update is called once per frame
     /// </summary>
-     void Update()
+    void Update()
     {
-
+        // Determines whether player is close enough for dialogue
+        if (Vector2.Distance(transform.position, _player.transform.position) > _dialogueRange
+            && _dialogueManager.inDialogue)
+        {
+            _dialogueManager.CancelDialogue();
+        }
     }
 
     #endregion
@@ -53,6 +68,7 @@ public class NPCInteraction : InteractableObject
         switch (_type)
         {
             case 0:
+                NPCDialogue();
                 break;
 
             case 1:
@@ -61,11 +77,19 @@ public class NPCInteraction : InteractableObject
     }
 
     /// <summary>
-    /// Display's the NPC's dialogue
+    /// Controls which Dialogue Event to play
     /// </summary>
     void NPCDialogue()
     {
+        // Plays Dialogue
+        _dialogueManager.PlayDialogue(_NPCLines[_dialogueCycle]);
 
+        // Updates currently playing event
+        _dialogueCycle++;
+        if (_dialogueCycle > _NPCLines.Capacity)
+        {
+            _dialogueCycle = 0;
+        }
     }
 
     #endregion

@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 10/11/24
+ * UPDATED  : 10/12/24
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -16,14 +16,16 @@ public class PlayerController : MonoBehaviour
 {
     #region VARIABLES
 
-    //Components
+    // Components
     PlayerAnimator _playerAnimator;
     SpriteRenderer _playerRenderer;
     Rigidbody2D _rb2d;
-    //Child Components
-    [SerializeField] DetectObjects _detector;
 
-    //Parameters
+    // External Components
+    [SerializeField] DetectObjects _detector;
+    DialogueManager _dialogueManager;
+
+    // Parameters
     [SerializeField] float _accelTime;
     [SerializeField] float _brakeTime;
     [SerializeField] float _decelTime;
@@ -33,7 +35,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] int _steeringAngleThreshold;
     [SerializeField] float _steeringVelThreshold;
 
-    //Movement Vars
+    // Movement Vars
     float _accelRate;
     float _brakeRate;
     float _decelRate;
@@ -46,7 +48,7 @@ public class PlayerController : MonoBehaviour
     float _velocityY;
     Vector2 _newVel;
 
-    //Inputs
+    // Inputs
     [SerializeField] InputActionAsset _playerInputs;
     InputAction _brake;
     InputAction _debugSwitch;
@@ -56,7 +58,7 @@ public class PlayerController : MonoBehaviour
     int _moveX;
     int _moveY;
 
-    //Debug
+    // Debug
     bool _maxed = false;
 
     #endregion
@@ -72,6 +74,9 @@ public class PlayerController : MonoBehaviour
         _playerAnimator = GetComponent<PlayerAnimator>();
         _playerRenderer = GetComponent<SpriteRenderer>();
         _rb2d = GetComponent<Rigidbody2D>();
+
+        // Sets external objects
+        _dialogueManager = FindObjectOfType<DialogueManager>();
 
         // Sets inputs
         _brake = _playerInputs.FindAction("Brake");
@@ -227,13 +232,13 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void PerformInteraction()
     {
-        if (_detector.TargetProp != null)
+        if (_detector.target != null)
         {
-            Debug.Log(_detector.TargetProp.name);
+            _detector.target.OnInteractedWith();
         }
         else
         {
-            Debug.Log("nada");
+            Debug.Log("No interaction");
         }
     }
 
