@@ -61,7 +61,6 @@ public class PlayerController : MonoBehaviour
     // Event and dialogue controls
     public bool selectSwitch = false;
     public bool inDialogue = false;
-    bool _inDialogueStateChange;
 
     // Debug
     bool _maxed = false;
@@ -98,9 +97,6 @@ public class PlayerController : MonoBehaviour
 
         // Initializes Accel/Decel Rates
         SetAccelDecel();
-
-        // Sets Dialogue Vars
-        _inDialogueStateChange = inDialogue;
 
         // DEBUG
         //StartCoroutine(LabTurn2Part());
@@ -144,12 +140,6 @@ public class PlayerController : MonoBehaviour
             _playerAnimator.facingDirection = GetDirection();
             // Changes direction where the player can interact
             _detector.SetInteractionDirection(_playerAnimator.facingDirection);
-        }
-
-        if (inDialogue != _inDialogueStateChange)
-        {
-            ToggleDialogueInputs();
-            _inDialogueStateChange = inDialogue;
         }
     }
 
@@ -240,7 +230,7 @@ public class PlayerController : MonoBehaviour
     /// <summary>
     /// Controls whether the interact button is used to advance dialogue or start new interactions
     /// </summary>
-    void ToggleDialogueInputs()
+    /*public void ToggleDialogueInputs()
     {
         if (inDialogue)
         {
@@ -252,24 +242,33 @@ public class PlayerController : MonoBehaviour
             _interact.performed -= ctx => selectSwitch = true;
             _interact.performed += ctx => PerformInteraction();
         }
-    }
+    }*/
 
     #endregion
 
     #region INTERACTIONS
 
     /// <summary>
-    /// Performs interactions triggered by the interact button with objects in the game world.\
+    /// Controls what the interact button does
     /// </summary>
     void PerformInteraction()
     {
-        if (_detector.target != null)
+        if (!inDialogue)
         {
-            _detector.target.OnInteractedWith();
+            // Initiates interactions with objects in game world
+            if (_detector.target != null)
+            {
+                _detector.target.OnInteractedWith();
+            }
+            else
+            {
+                Debug.Log("No interaction");
+            }
         }
         else
         {
-            Debug.Log("No interaction");
+            // advances dialogue
+            selectSwitch = true;
         }
     }
 

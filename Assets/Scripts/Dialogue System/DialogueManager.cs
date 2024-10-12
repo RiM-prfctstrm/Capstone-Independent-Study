@@ -58,8 +58,10 @@ public class DialogueManager : MonoBehaviour
     /// <param name="sequence">Sequence of dialogues to play</param>
     public IEnumerator PlayDialogue(List<Dialogue> sequence)
     {
-        // Sets player's state
+        // Sets up dialogue mode
         _player.inDialogue = true;
+        //_player.ToggleDialogueInputs();
+        _dialogueOutline.SetActive(true);
 
         // Plays each line of dialogue at correct time
         foreach (Dialogue line in sequence)
@@ -70,8 +72,6 @@ public class DialogueManager : MonoBehaviour
         }
 
         // Ends Dialogue
-        yield return new WaitUntil(() => _player.selectSwitch == true);
-        _player.selectSwitch = false;
         CancelDialogue();
     }
 
@@ -93,7 +93,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         // Controls whether and what name tag displays
-        if (dialogue.nameTag != null)
+        if (dialogue.nameTag != null && dialogue.nameTag != "")
         {
             _nametagOutline.SetActive(true);
             _nametagText.text = dialogue.nameTag;
@@ -114,6 +114,7 @@ public class DialogueManager : MonoBehaviour
     {
         // Lets other scripts know player is out of dialogue
         _player.inDialogue = false;
+        //_player.ToggleDialogueInputs();
 
         // Ends Active Dialogue sequence
         StopAllCoroutines();

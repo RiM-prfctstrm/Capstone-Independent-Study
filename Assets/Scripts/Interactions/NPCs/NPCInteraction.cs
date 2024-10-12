@@ -16,8 +16,8 @@ public class NPCInteraction : InteractableObject
 
     // Controls
     [SerializeField] int _type; // 0=dialogue, 1=event trigger
-    [SerializeField] bool _hasDailyUpdates = false;
-    [SerializeField] bool _isMobile = false;
+    //[SerializeField] bool _hasDailyUpdates = false;
+    //[SerializeField] bool _isMobile = false;
     [SerializeField] float _dialogueRange = 5;
 
     // Dialogue
@@ -54,6 +54,7 @@ public class NPCInteraction : InteractableObject
             && _player.GetComponent<PlayerController>().inDialogue)
         {
             _dialogueManager.CancelDialogue();
+            _dialogueCycle--;
         }
     }
 
@@ -83,7 +84,7 @@ public class NPCInteraction : InteractableObject
     void NPCDialogue()
     {
         // Plays Dialogue
-        _dialogueManager.PlayDialogue(_NPCLines[_dialogueCycle].dialogueBoxes);
+        StartCoroutine(_dialogueManager.PlayDialogue(_NPCLines[_dialogueCycle].dialogueBoxes));
 
         // Updates currently playing event
         _dialogueCycle++;
