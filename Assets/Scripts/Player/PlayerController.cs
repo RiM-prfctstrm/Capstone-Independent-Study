@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
     public bool inDialogue = false;
 
     // Debug
-    bool _maxed = false;
+    //bool _maxed = false;
 
     #endregion
 
@@ -267,7 +267,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            // advances dialogue
+            // Advances dialogue
             selectSwitch = true;
         }
     }

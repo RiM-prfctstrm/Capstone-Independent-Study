@@ -71,7 +71,6 @@ public class CharacterAnimator : MonoBehaviour
             case 3:
                 animState += "Up";
                 break;
-
         }
 
         if (_rb2d.velocity == Vector2.zero)

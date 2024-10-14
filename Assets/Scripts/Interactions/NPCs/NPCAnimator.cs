@@ -2,7 +2,7 @@
  * FILE     : NPCAnimator.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/11/24
- * UPDATED  : 10/11/24
+ * UPDATED  : 10/14/24
  * 
  * DESC     : Controls NPCs' animations
 =================================================================================================*/
@@ -12,6 +12,14 @@ using UnityEngine;
 
 public class NPCAnimator : CharacterAnimator
 {
+    #region VARIABLES
+
+    // Objects
+    GameObject _player;
+    PlayerAnimator _playerAnim;
+
+    #endregion
+
     #region UNIVERSAL EVENTS
 
     /// <summary>
@@ -20,6 +28,10 @@ public class NPCAnimator : CharacterAnimator
     protected override void Start()
     {
         base.Start();
+
+        // Init Vars
+        _player = FindObjectOfType<PlayerController>().gameObject;
+        _playerAnim = _player.GetComponent<PlayerAnimator>();
     }
 
     /// <summary>
@@ -28,6 +40,39 @@ public class NPCAnimator : CharacterAnimator
     protected override void Update()
     {
         base.Update();
+    }
+
+    #endregion
+
+    #region BASIC FUNCTIONS
+
+    /// <summary>
+    /// Sets the NPC's Facing Direction to be the opposite of the player's
+    /// </summary>
+    public void FacePlayer()
+    {
+        // Determines direction based on player's
+        switch (_playerAnim.facingDirection)
+        {
+            case 0:
+                facingDirection = 3;
+                break;
+
+            case 1:
+                facingDirection = 2;
+                break;
+
+            case 2:
+                facingDirection = 1;
+                break;
+
+            case 3:
+                facingDirection = 0;
+                break;
+        }
+
+        // Sets animation
+        anim.Play(SetAnimState());
     }
 
     #endregion

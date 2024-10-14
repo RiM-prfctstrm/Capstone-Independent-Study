@@ -2,7 +2,7 @@
  * FILE     : NPCInteraction.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/11/24
- * UPDATED  : 10/12/24
+ * UPDATED  : 10/14/24
  * 
  * DESC     : Performs unique events depending
 =================================================================================================*/
@@ -14,11 +14,15 @@ public class NPCInteraction : InteractableObject
 {
     #region VARIABLES
 
+    // Components
+    NPCAnimator _animator;
+
     // Controls
     [SerializeField] int _type; // 0=dialogue, 1=event trigger
     //[SerializeField] bool _hasDailyUpdates = false;
     //[SerializeField] bool _isMobile = false;
     [SerializeField] float _dialogueRange = 5;
+    [SerializeField] bool _staticImage = false;
 
     // Dialogue
     [SerializeField] List<DialogueEvent> _NPCLines = new List<DialogueEvent>();
@@ -42,6 +46,10 @@ public class NPCInteraction : InteractableObject
         // Initialize Vars
         _dialogueManager = FindObjectOfType<DialogueManager>();
         _player = FindObjectOfType<PlayerController>().gameObject;
+        if (!_staticImage)
+        {
+            _animator = GetComponent<NPCAnimator>();
+        }
     }
 
     /// <summary>
@@ -83,6 +91,12 @@ public class NPCInteraction : InteractableObject
     /// </summary>
     void NPCDialogue()
     {
+        // Faces Player
+        if (!_staticImage)
+        {
+            _animator.FacePlayer();
+        }
+
         // Plays Dialogue
         StartCoroutine(_dialogueManager.PlayDialogue(_NPCLines[_dialogueCycle].dialogueBoxes));
 
