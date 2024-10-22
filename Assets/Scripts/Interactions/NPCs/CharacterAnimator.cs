@@ -14,10 +14,10 @@ public class CharacterAnimator : MonoBehaviour
 {
     #region VARIABLES
 
-    //Components
+    // Components
     Rigidbody2D _rb2d;
 
-    //Animation
+    // Animation
     [SerializeField] protected Animator anim;
     protected string animState;
     public int facingDirection; // 0=D, 1=L, 2=R, 3=U

@@ -12,6 +12,13 @@ using UnityEngine;
 
 public class PlayerAnimator : CharacterAnimator
 {
+    #region VARIABLES
+
+    // Components
+    PlayerController _playerController;
+
+    #endregion
+
     #region UNIVERSAL EVENTS
 
     /// <summary>
@@ -20,6 +27,9 @@ public class PlayerAnimator : CharacterAnimator
     protected override void Start()
     {
         base.Start();
+
+        // Sets components
+        _playerController = GetComponentInParent<PlayerController>();
     }
 
     /// <summary>
@@ -29,7 +39,7 @@ public class PlayerAnimator : CharacterAnimator
     {
         base.Update();
 
-        //Plays animation
+        // Plays animation
         anim.Play("Base Layer." + SetAnimState());
     }
 
@@ -47,6 +57,11 @@ public class PlayerAnimator : CharacterAnimator
         animState = base.SetAnimState();
 
         // Adds bike animations
+        if (!_playerController.isWalking)
+        {
+            animState = "Bike" + animState;
+        }
+
 
         // Returns animation to play
         return animState;

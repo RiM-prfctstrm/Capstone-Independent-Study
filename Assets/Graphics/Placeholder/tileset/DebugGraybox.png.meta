@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
@@ -129,190 +129,211 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: st2u_x0y16-w16h16
+      name: DebugGraybox_0
       rect:
         serializedVersion: 2
         x: 0
         y: 16
         width: 16
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7de5424d59ebcf34e981d3a1de067a2b
-      internalID: 376544501
+      spriteID: 24ebba3bbee900f46991efcc581c1de2
+      internalID: 369151210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: st2u_x16y16-w16h16
+      name: DebugGraybox_1
       rect:
         serializedVersion: 2
         x: 16
         y: 16
         width: 16
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a722439c53fe13b4a9d5c25f236faec7
-      internalID: 1516438015
+      spriteID: dad2abae33015c343a85229ef61b06e3
+      internalID: -615202894
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: st2u_x32y16-w16h16
+      name: DebugGraybox_2
       rect:
         serializedVersion: 2
         x: 32
         y: 16
         width: 16
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6772d70ee9ef1a48a5da92e90666180
-      internalID: 1004050024
+      spriteID: c26134b42191a5a4aa8949af7b3bd367
+      internalID: -1991426181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: st2u_x48y16-w16h16
+      name: DebugGraybox_3
       rect:
         serializedVersion: 2
         x: 48
         y: 16
         width: 16
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0169d0b06e46c1843ab7643cc55f124e
-      internalID: -1930031195
+      spriteID: a818d46789d66874dab0795570304c7f
+      internalID: -902257420
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: st2u_x64y16-w16h16
+      name: DebugGraybox_4
       rect:
         serializedVersion: 2
         x: 64
         y: 16
         width: 16
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e793cc471cc55574193e130ef9fff5ee
-      internalID: -1439261955
+      spriteID: 66bdf5eabc0744d4aacf5c06a520fe82
+      internalID: 928138709
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: st2u_x0y0-w16h16
+      name: DebugGraybox_5
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fc1ad377f4f6ee43a9be001e5240495
-      internalID: 1114251691
+      spriteID: d3dc61f7adf63da4a816015994d3b631
+      internalID: 1041785408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: st2u_x16y0-w16h16
+      name: DebugGraybox_6
       rect:
         serializedVersion: 2
         x: 16
         y: 0
         width: 16
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b4c154b840c9a148b1cb625ca8c3850
-      internalID: -535416232
+      spriteID: 11ccb00de35ff2b4aa896f5f7770163d
+      internalID: -763577666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: st2u_x32y0-w16h16
+      name: DebugGraybox_7
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 16
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9004c0ab07ce1b34280036c8765427f2
-      internalID: -1278957568
+      spriteID: 194002d7ad2bb1241a8a45b2dc00cc73
+      internalID: -1157345793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: st2u_x48y0-w16h16
+      name: DebugGraybox_8
       rect:
         serializedVersion: 2
         x: 48
         y: 0
         width: 16
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f14ea38d8036487469e60d2afd3fb793
-      internalID: 1851965674
+      spriteID: fe5d97d0a753c2448898797bc837e56d
+      internalID: 1431919781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebugGraybox_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7f75e1745bcfa4a90d5eebd6c96ca3
+      internalID: -1154920666
       vertices: []
       indices: 
       edges: []
@@ -332,8 +353,197 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc4ce6e607c47024f95ddd2575bbc700
-      internalID: -1210562928
+      spriteID: 672d04c3e7c192e439dc1730a17db437
+      internalID: -983488659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: st2u_x48y0-w16h16
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29eb354b741be85468431c72dc5b8458
+      internalID: -1019071154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: st2u_x32y0-w16h16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee858c09f5f380140a35cbf5ac507da7
+      internalID: 335697627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: st2u_x16y0-w16h16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794f372ee09f1f546a23bfee8af7ba5d
+      internalID: 480742707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: st2u_x0y0-w16h16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93f981a0817033142a2b5877692872c5
+      internalID: -1632271575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: st2u_x64y16-w16h16
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44df1ff442032ff4b890f1c2e018fe01
+      internalID: 462778961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: st2u_x48y16-w16h16
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea72e472e09d434429438be782f3fec9
+      internalID: 61360202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: st2u_x32y16-w16h16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c493a2b8a040241be4f3174f1917ba
+      internalID: -469034023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: st2u_x16y16-w16h16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13810d20e349b724a882b338c27fac3c
+      internalID: 1257167781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: st2u_x0y16-w16h16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee761c2e9636634da1b5e1777c2bfde
+      internalID: -740803727
       vertices: []
       indices: 
       edges: []
@@ -349,16 +559,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      st2u_x32y0-w16h16: -1278957568
-      st2u_x48y16-w16h16: -1930031195
-      st2u_x32y16-w16h16: 1004050024
-      st2u_x0y0-w16h16: 1114251691
-      st2u_x64y0-w16h16: -1210562928
-      st2u_x0y16-w16h16: 376544501
-      st2u_x48y0-w16h16: 1851965674
-      st2u_x64y16-w16h16: -1439261955
-      st2u_x16y16-w16h16: 1516438015
-      st2u_x16y0-w16h16: -535416232
+      st2u_x32y0-w16h16: 335697627
+      st2u_x48y16-w16h16: 61360202
+      DebugGraybox_4: 928138709
+      st2u_x32y16-w16h16: -469034023
+      st2u_x0y0-w16h16: -1632271575
+      DebugGraybox_7: -1157345793
+      DebugGraybox_2: -1991426181
+      DebugGraybox_5: 1041785408
+      st2u_x64y0-w16h16: -983488659
+      st2u_x0y16-w16h16: -740803727
+      DebugGraybox_3: -902257420
+      DebugGraybox_9: -1154920666
+      DebugGraybox_0: 369151210
+      st2u_x48y0-w16h16: -1019071154
+      st2u_x64y16-w16h16: 462778961
+      DebugGraybox_8: 1431919781
+      st2u_x16y16-w16h16: 1257167781
+      st2u_x16y0-w16h16: 480742707
+      DebugGraybox_1: -615202894
+      DebugGraybox_6: -763577666
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
