@@ -2,7 +2,7 @@
  * FILE     : DetectObjects.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 6/5/23
- * UPDATED  : 10/12/24
+ * UPDATED  : 10/22/24
  * 
  * DESC     : Gets props with in the player's interaction space and returns the nearest one
 =================================================================================================*/
@@ -106,21 +106,21 @@ public class DetectObjects : MonoBehaviour
         switch (direction)
         {
             case 0:
-                transform.position = (Vector2)_player.transform.position + (Vector2.down * 1.75f);
+                transform.position = (Vector2)_player.transform.position + (Vector2.down * 1.25f);
                 break;
 
             case 1:
-                transform.position = (Vector2)_player.transform.position + (Vector2.left * 1.5f)
+                transform.position = (Vector2)_player.transform.position + (Vector2.left * 1f)
                     + (Vector2.down / 4);
                 break;
 
             case 2:
-                transform.position = (Vector2)_player.transform.position + (Vector2.right * 1.5f)
+                transform.position = (Vector2)_player.transform.position + (Vector2.right * 1f)
                     + (Vector2.down / 4);
                 break;
 
             case 3:
-                transform.position = (Vector2)_player.transform.position + (Vector2.up * 1.25f);
+                transform.position = (Vector2)_player.transform.position + (Vector2.up * .75f);
                 break;
         }
     }
