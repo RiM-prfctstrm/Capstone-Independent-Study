@@ -182,12 +182,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _detector: {fileID: 6512634947276868993}
-  _accelTime: 1.4
-  _brakeTime: 0.7
-  _decelTime: 9.8
+  _accelTime: 2.1
+  _brakeTime: 1.05
+  _decelTime: 10
   _decelBuffer: 0.25
-  _maxBikeSpeed: 14
-  _walkSpeed: 250
+  _maxBikeSpeed: 21
+  _walkSpeed: 275
   _steeringAngleThreshold: 135
   _steeringVelThreshold: 0.25
   isWalking: 1
