@@ -2,7 +2,7 @@
  * FILE     : NPCInteraction.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/11/24
- * UPDATED  : 10/14/24
+ * UPDATED  : 10/27/24
  * 
  * DESC     : Performs unique events depending
 =================================================================================================*/
@@ -28,7 +28,7 @@ public class NPCInteraction : InteractableObject
     [SerializeField] List<DialogueEvent> _NPCLines = new List<DialogueEvent>();
 
     // External components
-    [SerializeField] GameObject _player;
+    GameObject _player;
     DialogueManager _dialogueManager;
 
     // Misc
@@ -63,6 +63,12 @@ public class NPCInteraction : InteractableObject
         {
             _dialogueManager.CancelDialogue();
             _dialogueCycle--;
+
+            // Stops Negative Overflow
+            if (_dialogueCycle < 0)
+            {
+                _dialogueCycle = 0;
+            }
         }
     }
 

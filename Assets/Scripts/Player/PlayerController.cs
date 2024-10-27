@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 10/12/24
+ * UPDATED  : 10/27/24
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -306,6 +306,10 @@ public class PlayerController : MonoBehaviour
         }
         if (/*UtilityFormulas.FindHypotenuse(_velocityX, _velocityY) > _maxBikeSpeed*/
             (_moveX != 0 && _moveY == 0) || (_moveY != 0 && _moveX == 0))
+        {
+            BikeSteering();
+        }
+        if (UtilityFormulas.FindHypotenuse(_velocityX, _velocityY) > _maxBikeSpeed)
         {
             BikeSteering();
         }
