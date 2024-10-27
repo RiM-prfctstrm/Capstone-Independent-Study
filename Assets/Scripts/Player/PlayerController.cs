@@ -304,7 +304,8 @@ public class PlayerController : MonoBehaviour
             AccelerateX();
             AccelerateY();
         }
-        if (UtilityFormulas.FindHypotenuse(_velocityX, _velocityY) > _maxBikeSpeed)
+        if (/*UtilityFormulas.FindHypotenuse(_velocityX, _velocityY) > _maxBikeSpeed*/
+            (_moveX != 0 && _moveY == 0) || (_moveY != 0 && _moveX == 0))
         {
             BikeSteering();
         }
@@ -407,6 +408,12 @@ public class PlayerController : MonoBehaviour
             {
                 // Subtracts to keep X
                 _velocityY -= _accelRate * Mathf.Sign(_rb2d.velocity.y) * Time.fixedDeltaTime;
+
+                // Stabilizes at 0
+                if (_velocityY >= -.2f && _velocityY <= .2f)
+                {
+                    _velocityY = 0;
+                }
             }
             
             // Decreases X velocity if Y is increasing
@@ -415,6 +422,11 @@ public class PlayerController : MonoBehaviour
                 // Subtracts to keep Y
                 _velocityX -= _accelRate * Mathf.Sign(_rb2d.velocity.x) * Time.fixedDeltaTime;
 
+                // Stabilizes at 0
+                if (_velocityX >= -.2f && _velocityX <= .2f)
+                {
+                    _velocityX = 0;
+                }
             }
         }
     }
