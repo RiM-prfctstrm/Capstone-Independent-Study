@@ -62,6 +62,10 @@ public class PlayerController : MonoBehaviour
     public bool selectSwitch = false;
     public bool inDialogue = false;
 
+    // External reference
+    GameObject _lastTarget;
+    public GameObject lastTarget => _lastTarget;
+
     // Debug
     //bool _maxed = false;
 
@@ -259,6 +263,7 @@ public class PlayerController : MonoBehaviour
             if (_detector.target != null)
             {
                 _detector.target.OnInteractedWith();
+                _lastTarget = _detector.target.gameObject;
             }
             else
             {

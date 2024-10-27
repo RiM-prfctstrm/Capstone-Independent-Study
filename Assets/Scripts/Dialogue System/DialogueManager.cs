@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 10/12/24
+ * UPDATED  : 10/27/24
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -56,7 +56,7 @@ public class DialogueManager : MonoBehaviour
     /// Controls the playback of dialogue
     /// </summary>
     /// <param name="sequence">Sequence of dialogues to play</param>
-    public IEnumerator PlayDialogue(List<Dialogue> sequence)
+    public IEnumerator PlayDialogue(DialogueEvent sequence)
     {
         // Sets up dialogue mode
         _player.inDialogue = true;
@@ -64,7 +64,7 @@ public class DialogueManager : MonoBehaviour
         _dialogueOutline.SetActive(true);
 
         // Plays each line of dialogue at correct time
-        foreach (Dialogue line in sequence)
+        foreach (Dialogue line in sequence.dialogueBoxes)
         {
             DisplayDialogue(line);
             yield return new WaitUntil(() => _player.selectSwitch == true);

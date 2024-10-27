@@ -59,7 +59,8 @@ public class NPCInteraction : InteractableObject
     {
         // Determines whether player is close enough for dialogue
         if (Vector2.Distance(transform.position, _player.transform.position) > _dialogueRange
-            && _player.GetComponent<PlayerController>().inDialogue)
+            && _player.GetComponent<PlayerController>().inDialogue
+            && _player.GetComponent<PlayerController>().lastTarget == gameObject)
         {
             _dialogueManager.CancelDialogue();
             _dialogueCycle--;
@@ -104,7 +105,7 @@ public class NPCInteraction : InteractableObject
         }
 
         // Plays Dialogue
-        StartCoroutine(_dialogueManager.PlayDialogue(_NPCLines[_dialogueCycle].dialogueBoxes));
+        StartCoroutine(_dialogueManager.PlayDialogue(_NPCLines[_dialogueCycle]));
 
         // Updates currently playing event
         _dialogueCycle++;
