@@ -309,14 +309,17 @@ public class PlayerController : MonoBehaviour
             AccelerateX();
             AccelerateY();
         }
-        if (/*UtilityFormulas.FindHypotenuse(_velocityX, _velocityY) > _maxBikeSpeed*/
-            (_moveX != 0 && _moveY == 0) || (_moveY != 0 && _moveX == 0))
-        {
-            BikeSteering();
-        }
         if (UtilityFormulas.FindHypotenuse(_velocityX, _velocityY) > _maxBikeSpeed)
         {
             BikeSteering();
+        }
+        else if (_moveY != 0 && _moveX == 0)
+        {
+            DecelerateX(_decelRate);
+        }
+        else if (_moveX != 0 && _moveY == 0)
+        {
+            DecelerateY(_decelRate);
         }
 
         // Decelerates the bike
@@ -416,26 +419,14 @@ public class PlayerController : MonoBehaviour
             if (_moveX != 0)
             {
                 // Subtracts to keep X
-                _velocityY -= _accelRate * Mathf.Sign(_rb2d.velocity.y) * Time.fixedDeltaTime;
-
-                // Stabilizes at 0
-                if (_velocityY >= -.2f && _velocityY <= .2f)
-                {
-                    _velocityY = 0;
-                }
+                DecelerateY(_accelRate);
             }
             
             // Decreases X velocity if Y is increasing
             if (_moveY != 0)
             {
                 // Subtracts to keep Y
-                _velocityX -= _accelRate * Mathf.Sign(_rb2d.velocity.x) * Time.fixedDeltaTime;
-
-                // Stabilizes at 0
-                if (_velocityX >= -.2f && _velocityX <= .2f)
-                {
-                    _velocityX = 0;
-                }
+                DecelerateX(_accelRate);
             }
         }
     }
@@ -457,6 +448,34 @@ public class PlayerController : MonoBehaviour
         // Adjusts velocity vars
         _velocityX = _newVel.x;
         _velocityY = _newVel.y;
+    }
+
+    /// <summary>
+    /// Used to decelerate X while Y is increasing
+    /// </summary>
+    void DecelerateX(float rate)
+    {
+        _velocityX -= rate * Mathf.Sign(_rb2d.velocity.x) * Time.fixedDeltaTime;
+
+        // Stabilizes at 0
+        if (_velocityX >= -.2f && _velocityX <= .2f)
+        {
+            _velocityX = 0;
+        }
+    }
+
+    /// <summary>
+    /// Used to decelerate Y while X is increasing
+    /// </summary>
+    void DecelerateY(float rate)
+    {
+        _velocityY -= rate * Mathf.Sign(_rb2d.velocity.y) * Time.fixedDeltaTime;
+
+        // Stabilizes at 0
+        if (_velocityY >= -.2f && _velocityY <= .2f)
+        {
+            _velocityY = 0;
+        }
     }
 
     #endregion
