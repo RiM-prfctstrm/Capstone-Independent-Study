@@ -26,7 +26,11 @@ public class EssentialPreserver : MonoBehaviour
     /// </summary>
     void Awake()
     {
+        // Sets all commonly used singletons in this and in children
         instance = this;
+        DialogueManager.dialogueManager = gameObject.GetComponentInChildren<DialogueManager>();
+
+        // Keeps object and children around when new scenes are loaded
         DontDestroyOnLoad(gameObject);
     }
 
