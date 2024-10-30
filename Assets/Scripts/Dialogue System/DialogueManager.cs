@@ -15,7 +15,9 @@ public class DialogueManager : MonoBehaviour
 {
     #region VARIABLES
 
-    // Objects
+    // Manager Singleton
+    public static DialogueManager dialogueManager;
+
     // UI Elements
     [SerializeField] TextMeshProUGUI _dialogueText;
     [SerializeField] GameObject _dialogueOutline;
