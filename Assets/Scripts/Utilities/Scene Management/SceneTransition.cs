@@ -16,7 +16,7 @@ public class SceneTransition
     #region VARIABLES
 
     // External objects
-    static PlayerController _player;
+    static PlayerController _player = PlayerController.playerController;
     static string _currentScene;
 
     #endregion
@@ -32,7 +32,6 @@ public class SceneTransition
     public static void ChangeScene(string sceneName, bool isIndoors, Vector3 startPos)
     {
         // Gets objects for reference
-        _player =PlayerController.playerController;
         _currentScene = SceneManager.GetActiveScene().name;
 
         // Loads new scene and initializes variables

@@ -13,7 +13,6 @@ using UnityEngine;
 public class InteractableObject : MonoBehaviour
 {
 
-
     /// <summary>
     /// Shell function for behavior when the player interacts
     /// </summary>

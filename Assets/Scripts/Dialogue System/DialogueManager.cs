@@ -11,6 +11,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
+
 public class DialogueManager : MonoBehaviour
 {
     #region VARIABLES
@@ -19,15 +21,19 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager dialogueManager;
 
     // UI Elements
+    // Visible elements
     [SerializeField] TextMeshProUGUI _dialogueText;
     [SerializeField] GameObject _dialogueOutline;
     [SerializeField] TextMeshProUGUI _nametagText;
     [SerializeField] GameObject _nametagOutline;
     [SerializeField] Image _portraitImage;
     [SerializeField] GameObject _portraitOutline;
+    // Invisible Button to advance dialogue
+    [SerializeField] Button _advanceButton;
 
     // Other Objects
-    PlayerController _player;
+    PlayerController _player = PlayerController.playerController;
+    Button _previouslySelected;
 
     // Used to tell if Dialogue is happening
     public static bool dialogueInProgress = false;
@@ -42,7 +48,7 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     void Start()
     {
-        _player = PlayerController.playerController;
+
     }
 
     /// <summary>
@@ -67,6 +73,10 @@ public class DialogueManager : MonoBehaviour
         dialogueInProgress = true;
         //_player.ToggleDialogueInputs();
         _dialogueOutline.SetActive(true);
+
+        // Sets up buttons for dialogue
+        _advanceButton.interactable = true;
+        _advanceButton.Select();
 
         // Plays each line of dialogue at correct time
         foreach (Dialogue line in sequence.dialogueBoxes)
