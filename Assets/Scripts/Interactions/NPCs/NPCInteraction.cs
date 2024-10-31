@@ -2,7 +2,7 @@
  * FILE     : NPCInteraction.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/11/24
- * UPDATED  : 10/27/24
+ * UPDATED  : 10/31/24
  * 
  * DESC     : Performs unique events depending
 =================================================================================================*/
@@ -44,8 +44,8 @@ public class NPCInteraction : InteractableObject
     void Start()
     {
         // Initialize Vars
-        _dialogueManager = FindObjectOfType<DialogueManager>();
-        _player = FindObjectOfType<PlayerController>().gameObject;
+        _dialogueManager = DialogueManager.dialogueManager;
+        _player = PlayerController.playerController.gameObject;
         if (!_staticImage)
         {
             _animator = GetComponent<NPCAnimator>();
@@ -59,8 +59,8 @@ public class NPCInteraction : InteractableObject
     {
         // Determines whether player is close enough for dialogue
         if (Vector2.Distance(transform.position, _player.transform.position) > _dialogueRange
-            && _player.GetComponent<PlayerController>().inDialogue
-            && _player.GetComponent<PlayerController>().lastTarget == gameObject)
+            && _player.GetComponent<PlayerController>().lastTarget == gameObject
+            && DialogueManager.dialogueInProgress)
         {
             _dialogueManager.CancelDialogue();
             _dialogueCycle--;

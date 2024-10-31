@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 10/27/24
+ * UPDATED  : 10/31/24
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -15,6 +15,9 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     #region VARIABLES
+
+    // Player Singleton
+    public static PlayerController playerController;
 
     // Components
     PlayerAnimator _playerAnimator;
@@ -60,7 +63,7 @@ public class PlayerController : MonoBehaviour
 
     // Event and dialogue controls
     public bool selectSwitch = false;
-    public bool inDialogue = false;
+    //public bool inDialogue = false;
 
     // External reference
     GameObject _lastTarget;
@@ -84,7 +87,7 @@ public class PlayerController : MonoBehaviour
         _rb2d = GetComponent<Rigidbody2D>();
 
         // Sets external objects
-        _dialogueManager = FindObjectOfType<DialogueManager>();
+        _dialogueManager = DialogueManager.dialogueManager;
 
         // Sets inputs
         _brake = _playerInputs.FindAction("Brake");
@@ -257,7 +260,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void PerformInteraction()
     {
-        if (!inDialogue)
+        if (!DialogueManager.dialogueInProgress)
         {
             // Initiates interactions with objects in game world
             if (_detector.target != null)

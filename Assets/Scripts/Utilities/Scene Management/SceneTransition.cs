@@ -2,7 +2,7 @@
  * FILE     : SceneTransition
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/29/24
- * UPDATED  : 10/30/24
+ * UPDATED  : 10/31/24
  * 
  * DESC     : Switches scenes and sets variables to initialize that scene's state after transition.
 =================================================================================================*/
@@ -16,7 +16,7 @@ public class SceneTransition
     #region VARIABLES
 
     // External objects
-    static PlayerController _currentScenePlayer;
+    static PlayerController _player;
     static string _currentScene;
 
     #endregion
@@ -32,7 +32,7 @@ public class SceneTransition
     public static void ChangeScene(string sceneName, bool isIndoors, Vector3 startPos)
     {
         // Gets objects for reference
-        _currentScenePlayer = Object.FindObjectOfType<PlayerController>();
+        _player =PlayerController.playerController;
         _currentScene = SceneManager.GetActiveScene().name;
 
         // Loads new scene and initializes variables
@@ -41,12 +41,12 @@ public class SceneTransition
         // Determines whether the player should remain biking
         if (isIndoors)
         {
-            _currentScenePlayer.isWalking = true;
-            _currentScenePlayer.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            _player.isWalking = true;
+            _player.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
 
         // Sets player's position
-        _currentScenePlayer.transform.position = startPos;
+        _player.transform.position = startPos;
 
         // Unloads previous Scene
         SceneManager.UnloadSceneAsync(_currentScene);
@@ -65,7 +65,7 @@ public class SceneTransition
                                    int startDirection)
     {
         // Gets objects for reference
-        _currentScenePlayer = Object.FindObjectOfType<PlayerController>();
+        _player = PlayerController.playerController;
         _currentScene = SceneManager.GetActiveScene().name;
 
         // Loads new scene and initializes variables
@@ -74,13 +74,13 @@ public class SceneTransition
         // Determines whether the player should remain biking
         if (isIndoors)
         {
-            _currentScenePlayer.isWalking = true;
-            _currentScenePlayer.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            _player.isWalking = true;
+            _player.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
 
         // Sets player's position and direction
-        _currentScenePlayer.transform.position = startPos;
-        _currentScenePlayer.GetComponent<PlayerAnimator>().facingDirection = startDirection;
+        _player.transform.position = startPos;
+        _player.GetComponent<PlayerAnimator>().facingDirection = startDirection;
 
         // Unloads previous Scene
         SceneManager.UnloadSceneAsync(_currentScene);

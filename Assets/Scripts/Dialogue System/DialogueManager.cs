@@ -29,6 +29,9 @@ public class DialogueManager : MonoBehaviour
     // Other Objects
     PlayerController _player;
 
+    // Used to tell if Dialogue is happening
+    public static bool dialogueInProgress = false;
+
 
     #endregion
 
@@ -39,7 +42,7 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     void Start()
     {
-        _player = FindObjectOfType<PlayerController>();
+        _player = PlayerController.playerController;
     }
 
     /// <summary>
@@ -61,7 +64,7 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator PlayDialogue(DialogueEvent sequence)
     {
         // Sets up dialogue mode
-        _player.inDialogue = true;
+        dialogueInProgress = true;
         //_player.ToggleDialogueInputs();
         _dialogueOutline.SetActive(true);
 
@@ -115,7 +118,7 @@ public class DialogueManager : MonoBehaviour
     public void CancelDialogue()
     {
         // Lets other scripts know player is out of dialogue
-        _player.inDialogue = false;
+        dialogueInProgress = false;
         //_player.ToggleDialogueInputs();
 
         // Ends Active Dialogue sequence

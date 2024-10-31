@@ -2,7 +2,7 @@
  * FILE     : EssentialPreserver.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 10/30/24
+ * UPDATED  : 10/31/24
  * 
  * DESC     : Used to keep scene essentials when a new scene is loaded.
 =================================================================================================*/
@@ -26,9 +26,12 @@ public class EssentialPreserver : MonoBehaviour
     /// </summary>
     void Awake()
     {
-        // Sets all commonly used singletons in this and in children
+        // Sets all commonly used singletons in this and in children. It's probably more efficient
+        // to set children in their respective classes, but since this only happens once it's not
+        // as big a deal and helps keep the execution order clean.
         instance = this;
-        DialogueManager.dialogueManager = gameObject.GetComponentInChildren<DialogueManager>();
+        DialogueManager.dialogueManager = GetComponentInChildren<DialogueManager>();
+        PlayerController.playerController = GetComponentInChildren<PlayerController>();
 
         // Keeps object and children around when new scenes are loaded
         DontDestroyOnLoad(gameObject);

@@ -2,7 +2,7 @@
  * FILE     : SceneTrigger
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/29/24
- * UPDATED  : 10/29/24
+ * UPDATED  : 10/31/24
  * 
  * DESC     : Sends the player to a new scene when contacted.
 =================================================================================================*/
@@ -34,7 +34,7 @@ public class SceneTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Determines how to perform a scene transition
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject == PlayerController.playerController.gameObject)
         {
             if (!_setsDirection)
             {

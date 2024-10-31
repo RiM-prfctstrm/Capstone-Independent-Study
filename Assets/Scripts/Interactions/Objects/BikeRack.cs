@@ -27,7 +27,7 @@ public class BikeRack : InteractableObject
     void Start()
     {
         // Init Vars
-        _player = FindObjectOfType<PlayerController>();
+        _player = PlayerController.playerController;
     }
 
     #endregion
