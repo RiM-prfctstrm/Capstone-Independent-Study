@@ -221,6 +221,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b2aeb47875b254da32ab7c0c4188ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _menuDM: {fileID: 70280378}
+  _UnimplementedNotif:
+    dialogueBoxes:
+    - dialogueText: This feature has not been added yet.
+      nameTag: 
+      portrait: {fileID: 0}
 --- !u!114 &70280378
 MonoBehaviour:
   m_ObjectHideFlags: 0
