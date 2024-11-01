@@ -231,21 +231,20 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// Controls whether the interact button is used to advance dialogue or start new interactions
+    /// Deactivates input recognition, mostly used so the game can take over the player object
+    /// during cutscenes.
     /// </summary>
-    /*public void ToggleDialogueInputs()
+    public void TogglePlayerInput()
     {
-        if (inDialogue)
+        if (_playerInputs.enabled)
         {
-            _interact.performed -= ctx => PerformInteraction();
-            _interact.performed += ctx => selectSwitch = true;
+            _playerInputs.Disable();
         }
         else
         {
-            _interact.performed -= ctx => selectSwitch = true;
-            _interact.performed += ctx => PerformInteraction();
+            _playerInputs.Enable();
         }
-    }*/
+    }
 
     #endregion
 

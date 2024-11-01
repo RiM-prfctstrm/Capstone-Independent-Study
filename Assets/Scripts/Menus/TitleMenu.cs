@@ -10,6 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TitleMenu : MonoBehaviour
 {
@@ -24,11 +25,11 @@ public class TitleMenu : MonoBehaviour
     #region BUTTON ACTIONS
 
     /// <summary>
-    /// Begins a new game with a default save
+    /// Begins a new game on a blank save t save
     /// </summary>
     public void StartNewGame()
     {
-
+        SceneManager.LoadScene("Newscast");
     }
 
     /// <summary>

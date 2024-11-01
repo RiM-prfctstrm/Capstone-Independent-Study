@@ -32,6 +32,7 @@ public class EssentialPreserver : MonoBehaviour
         instance = this;
         DialogueManager.dialogueManager = GetComponentInChildren<DialogueManager>();
         PlayerController.playerController = GetComponentInChildren<PlayerController>();
+        CutsceneManager.cutsceneManager = GetComponentInChildren<CutsceneManager>();
 
         // Keeps object and children around when new scenes are loaded
         DontDestroyOnLoad(gameObject);
