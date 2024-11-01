@@ -245,6 +245,8 @@ MonoBehaviour:
   _nametagOutline: {fileID: 1162941492}
   _portraitImage: {fileID: 402869888}
   _portraitOutline: {fileID: 1306349081}
+  _advanceButton: {fileID: 1120873178}
+  previouslySelected: {fileID: 0}
 --- !u!1 &229879652
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,10 +334,10 @@ MonoBehaviour:
       - m_Target: {fileID: 70280377}
         m_TargetAssemblyTypeName: TitleMenu, Assembly-CSharp
         m_MethodName: UnimplementedMessage
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 229879654}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -748,6 +750,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4019001568286862656, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
   m_PrefabInstance: {fileID: 1886452914}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1120873178 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4571421190944861863, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+  m_PrefabInstance: {fileID: 1886452914}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1162941492 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4019001566823838490, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
@@ -991,10 +1004,10 @@ MonoBehaviour:
       - m_Target: {fileID: 70280377}
         m_TargetAssemblyTypeName: TitleMenu, Assembly-CSharp
         m_MethodName: UnimplementedMessage
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1318994933}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1193,10 +1206,10 @@ MonoBehaviour:
       - m_Target: {fileID: 70280377}
         m_TargetAssemblyTypeName: TitleMenu, Assembly-CSharp
         m_MethodName: UnimplementedMessage
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1389061805}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1992,10 +2005,10 @@ MonoBehaviour:
       - m_Target: {fileID: 70280377}
         m_TargetAssemblyTypeName: TitleMenu, Assembly-CSharp
         m_MethodName: UnimplementedMessage
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 2110246668}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

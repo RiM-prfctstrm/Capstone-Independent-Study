@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 10/27/24
+ * UPDATED  : 11/1/24
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -33,11 +33,11 @@ public class DialogueManager : MonoBehaviour
 
     // Other Objects
     PlayerController _player = PlayerController.playerController;
-    Button _previouslySelected;
+    public Button previouslySelected = null;
 
-    // Used to tell if Dialogue is happening
+    // Progress signals
     public static bool dialogueInProgress = false;
-
+    bool _advancing = false;
 
     #endregion
 
@@ -48,7 +48,7 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     void Start()
     {
-
+        _advanceButton.onClick.AddListener(() => _advancing = true);
     }
 
     /// <summary>
@@ -71,19 +71,25 @@ public class DialogueManager : MonoBehaviour
     {
         // Sets up dialogue mode
         dialogueInProgress = true;
-        //_player.ToggleDialogueInputs();
         _dialogueOutline.SetActive(true);
 
         // Sets up buttons for dialogue
-        _advanceButton.interactable = true;
         _advanceButton.Select();
+        _advanceButton.interactable = true;
+
+        // Delays loop so that first line isn't cut off by activating input
+        if (previouslySelected == null)
+        {
+            yield return new WaitUntil(() => _advancing == true);
+            _advancing = false;
+        }
 
         // Plays each line of dialogue at correct time
         foreach (Dialogue line in sequence.dialogueBoxes)
         {
             DisplayDialogue(line);
-            yield return new WaitUntil(() => _player.selectSwitch == true);
-            _player.selectSwitch = false;
+            yield return new WaitUntil(() => _advancing == true);
+            _advancing = false;
         }
 
         // Ends Dialogue
@@ -129,6 +135,7 @@ public class DialogueManager : MonoBehaviour
     {
         // Lets other scripts know player is out of dialogue
         dialogueInProgress = false;
+        _advanceButton.interactable = false;
         //_player.ToggleDialogueInputs();
 
         // Ends Active Dialogue sequence
@@ -138,6 +145,13 @@ public class DialogueManager : MonoBehaviour
         _dialogueOutline.SetActive(false);
         _nametagOutline.SetActive(false);
         _portraitOutline.SetActive(false);
+
+        // Reselects the previously selected button if applicable
+        if (previouslySelected != null)
+        {
+            previouslySelected.Select();
+            previouslySelected = null;
+        }
     }
 
     #endregion

@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 10/31/24
+ * UPDATED  : 11/1/24
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -60,10 +60,6 @@ public class PlayerController : MonoBehaviour
     InputAction _yInput;
     int _moveX;
     int _moveY;
-
-    // Event and dialogue controls
-    public bool selectSwitch = false;
-    //public bool inDialogue = false;
 
     // External reference
     GameObject _lastTarget;
@@ -272,11 +268,6 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("No interaction");
             }
-        }
-        else
-        {
-            // Advances dialogue
-            selectSwitch = true;
         }
     }
 
