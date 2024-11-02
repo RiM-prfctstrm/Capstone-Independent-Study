@@ -2,7 +2,7 @@
  * FILE     : DetectObjects.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 6/5/23
- * UPDATED  : 10/22/24
+ * UPDATED  : 11/2/24
  * 
  * DESC     : Gets props with in the player's interaction space and returns the nearest one
 =================================================================================================*/
@@ -65,6 +65,19 @@ public class DetectObjects : MonoBehaviour
         if (_targetProp != null)
         {
             _target = _targetProp.GetComponent<InteractableObject>();
+        }
+
+        // Removes objects that stop existing from list
+        if (_interactables.Count > 0)
+        {
+            foreach (GameObject i in _interactables)
+            {
+                if (i == null)
+                {
+                    _interactables.Remove(i);
+                    break;
+                }
+            }
         }
     }
 
