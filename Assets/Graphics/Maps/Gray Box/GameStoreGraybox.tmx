@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="13" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="8">
+ <tileset firstgid="1" source="../../Placeholder/tileset/Debug.tsx"/>
+ <layer id="1" name="GrayBox" width="20" height="13">
+  <data encoding="csv">
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,3,3,3,3,3,3,3,3,3,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,3,3,3,3,3,3,3,3,3,3,3,3,5,5,
+5,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,5,
+5,3,3,3,3,3,3,5,5,5,5,3,5,5,5,5,3,3,5,5,
+5,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,5,
+5,3,3,3,3,3,3,5,5,5,5,3,5,5,5,5,3,3,5,5,
+5,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,5,
+5,3,3,3,3,3,3,5,5,5,5,3,5,5,5,5,3,3,5,5,
+5,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,5,
+5,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,5,
+5,5,5,5,3,3,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+</data>
+ </layer>
+ <objectgroup id="2" name="Collisions">
+  <object id="1" x="64" y="192">
+   <polygon points="0,0 0,16 -64,16 -64,-192 256,-192 256,16 32,16 32,0 224,0 224,-144 96,-144 96,-160 -48,-160 -48,-144 32,-144 32,-128 -48,-128 -48,0"/>
+  </object>
+  <object id="2" x="112" y="80" width="64" height="16"/>
+  <object id="3" x="192" y="80" width="64" height="16"/>
+  <object id="4" x="112" y="112" width="64" height="16"/>
+  <object id="5" x="192" y="112" width="64" height="16"/>
+  <object id="6" x="112" y="144" width="64" height="16"/>
+  <object id="7" x="192" y="144" width="64" height="16"/>
+ </objectgroup>
+</map>

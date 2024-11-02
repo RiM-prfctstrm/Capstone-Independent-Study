@@ -2,7 +2,7 @@
  * FILE     : NPCAnimator.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/11/24
- * UPDATED  : 10/28/24
+ * UPDATED  : 11/2/24
  * 
  * DESC     : Controls NPCs' animations
 =================================================================================================*/
@@ -30,7 +30,7 @@ public class NPCAnimator : CharacterAnimator
         base.Start();
 
         // Init Vars
-        _player = FindObjectOfType<PlayerController>().gameObject;
+        _player = PlayerController.playerController.gameObject;
         _playerAnim = _player.GetComponent<PlayerAnimator>();
 
         // Init Direction

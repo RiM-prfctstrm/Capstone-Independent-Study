@@ -2,7 +2,7 @@
  * FILE     : EssentialPreserver.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 10/30/24
+ * UPDATED  : 11/2/24
  * 
  * DESC     : Performs functionality that only occurs when the game is first started.
 =================================================================================================*/
@@ -33,13 +33,13 @@ public class BootManager : MonoBehaviour
     /// </summary>
     void Start()
     {
-        // Init Vars
-        _player = _essentials.GetComponentInChildren<PlayerController>().gameObject;
-
         // Creates Scene Essentials if none exist
         if (EssentialPreserver.instance == null)
         {
             Instantiate(_essentials);
+
+            // Init Vars
+            _player = _essentials.GetComponentInChildren<PlayerController>().gameObject;
 
             // Initializes Player
             _player.transform.position = _startPos;
