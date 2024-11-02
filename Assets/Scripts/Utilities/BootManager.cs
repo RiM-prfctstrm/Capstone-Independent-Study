@@ -29,19 +29,17 @@ public class BootManager : MonoBehaviour
     #region UNIVERSAL EVENTS
 
     /// <summary>
-    /// Start is called before the first frame update
+    /// Awake is called when the script instance is first loaded
     /// </summary>
-    void Start()
+    void Awake()
     {
         // Creates Scene Essentials if none exist
         if (EssentialPreserver.instance == null)
         {
             Instantiate(_essentials);
 
-            // Init Vars
-            _player = _essentials.GetComponentInChildren<PlayerController>().gameObject;
-
             // Initializes Player
+            _player = PlayerController.playerController.gameObject;
             _player.transform.position = _startPos;
             _player.GetComponent<PlayerAnimator>().facingDirection = _startDirection;
         }

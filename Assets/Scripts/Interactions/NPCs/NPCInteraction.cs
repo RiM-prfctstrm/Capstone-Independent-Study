@@ -2,7 +2,7 @@
  * FILE     : NPCInteraction.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/11/24
- * UPDATED  : 10/31/24
+ * UPDATED  : 11/2/24
  * 
  * DESC     : Performs unique events depending
 =================================================================================================*/
@@ -59,7 +59,7 @@ public class NPCInteraction : InteractableObject
     {
         // Determines whether player is close enough for dialogue
         if (Vector2.Distance(transform.position, _player.transform.position) > _dialogueRange
-            && _player.GetComponent<PlayerController>().lastTarget == gameObject
+            && PlayerController.playerController.lastTarget == gameObject
             && DialogueManager.dialogueInProgress)
         {
             _dialogueManager.CancelDialogue();

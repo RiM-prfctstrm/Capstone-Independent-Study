@@ -82,7 +82,7 @@ public class SceneTransition
         _player.GetComponent<PlayerAnimator>().facingDirection = startDirection;
 
         // Unloads previous Scene
-        SceneManager.UnloadSceneAsync(_currentScene);
+        //SceneManager.UnloadSceneAsync(_currentScene);
         Resources.UnloadUnusedAssets();
     }
 
