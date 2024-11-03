@@ -32,7 +32,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] Button _advanceButton;
 
     // Other Objects
-    PlayerController _player = PlayerController.playerController;
     public Button previouslySelected = null;
 
     // Progress signals

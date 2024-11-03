@@ -160,4 +160,13 @@ public class DetectObjects : MonoBehaviour
     }
 
     #endregion
+
+    #region CLEANUP
+
+    public void CleanUpInteractionList()
+    {
+        _interactables.Clear();
+    }
+
+    #endregion
 }

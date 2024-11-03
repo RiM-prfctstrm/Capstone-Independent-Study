@@ -47,6 +47,9 @@ public class SceneTransition
         // Sets player's position
         _player.transform.position = startPos;
 
+        // Cleans player's interaction list so it works in new scene
+        _player.GetComponentInChildren<DetectObjects>().CleanUpInteractionList();
+
         // Unloads previous Scene
         SceneManager.UnloadSceneAsync(_currentScene);
         Resources.UnloadUnusedAssets();
@@ -80,6 +83,9 @@ public class SceneTransition
         // Sets player's position and direction
         _player.transform.position = startPos;
         _player.GetComponent<PlayerAnimator>().facingDirection = startDirection;
+
+        // Cleans player's interaction list so it works in new scene
+        _player.GetComponentInChildren<DetectObjects>().CleanUpInteractionList();
 
         // Unloads previous Scene
         //SceneManager.UnloadSceneAsync(_currentScene);
