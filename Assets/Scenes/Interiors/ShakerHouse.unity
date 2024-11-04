@@ -174,10 +174,113 @@ MonoBehaviour:
   _staticImage: 1
   _NPCLines:
   - dialogueBoxes:
-    - dialogueText: Fellow people of this fine nation,
+    - dialogueText: Fellow citizens of this fine nation,
       nameTag: President
       portrait: {fileID: 0}
-    - dialogueText: 
+    - dialogueText: like most of you, I have spent my entire life anticipating our
+        species's maiden voyage to the stars.
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: It was 100 years ago when the International Coalition of Astronomers
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: announced that the Sun would become a red giant sometime during
+        the latter half of this present century,
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: either destroying Cradle or leaving it unfit to support life.
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: In response, the nations of the world banded together and created
+        Project Giant Leap,
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: a mission to evacuate our entire species, as well as many of
+        the other lifeforms native to Cradle.
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: It is true that almost none of us have ever known a world without
+        Project Giant Leap,
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: but it is even more true that none of has known a world beyond
+        our planet.
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: I understand that many of you are afraid.
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: Afraid of leaving the only home you and your parents and your
+        grandparents have ever known.
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: Afraid that something will go wrong on the journey, killing us
+        all.
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: But, what the Small Step Advance Team has shown us today by arriving
+        safely at Pearl
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: is that the journey can be made.
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: Please keep in mind, this is not only the first time our kind
+        has traveled to a planet outside the solar system,
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: this is the first time such a journey has even been attempted.
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: We made this journey on our first try, and we will make it again
+        on our second.
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: I remember a time when we didn't know Pearl even existed.
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: Back then, the goal of Giant Leap was to create spaceships that
+        could carry us for tens, even hundreds,
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: ' of years.'
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: Nobody thought it was possible.
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: But when the discovery of a habitable planet five lightyears
+        away was announced,
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: I, and everyone around me, was filled with joy.
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: I ask those of you who were there that day to remember that hope
+        you felt,
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: and to share it with those of us who were not alive then.
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: For it is true that we may not survive the journey to Pearl,
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: But if we remain on Cradle, then surely, all of us will die.
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: The brave men and women of Small Step have set up a path for
+        us,
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: and are now preparing a new home for us at our journey's end.
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: Let us follow in their footsteps, and bravely move on to the
+        future.
+      nameTag: President
+      portrait: {fileID: 0}
+    - dialogueText: Thank you.
       nameTag: President
       portrait: {fileID: 0}
 --- !u!61 &398912352
@@ -258,6 +361,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &512647458 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4615596217485030563, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+  m_PrefabInstance: {fileID: 1067612554}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &878422881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -461,7 +569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_LocalPosition.x
@@ -509,6 +617,82 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+--- !u!1 &918134963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 918134964}
+  - component: {fileID: 918134966}
+  - component: {fileID: 918134965}
+  m_Layer: 0
+  m_Name: PepperExit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &918134964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918134963}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9, y: -42.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1193954562}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &918134965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918134963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30540939a8fba3249b9ec41858797ac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sceneName: ShakerHouse
+  _isIndoors: 1
+  _position: {x: 46.5, y: -8, z: 0}
+  _direction: 0
+  _setsDirection: 0
+--- !u!61 &918134966
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918134963}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1 &1064068153
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,11 +825,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1193954562}
     m_Modifications:
     - target: {fileID: 4615596217485030563, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030563, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -665,15 +849,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030563, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030563, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030563, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030563, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -689,7 +873,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030564, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: m_Name
-      value: Door
+      value: PepperEntrance
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: _position.x
@@ -736,8 +920,10 @@ Transform:
   - {fileID: 1433822567}
   - {fileID: 1314779904}
   - {fileID: 1064068154}
+  - {fileID: 512647458}
+  - {fileID: 918134964}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1314779903
 GameObject:
@@ -999,6 +1185,17 @@ MonoBehaviour:
         beyond the scope of this milestone.
       nameTag: DEBUG
       portrait: {fileID: 0}
+    - dialogueText: After this point, the game would fade out, and either go to a
+        news broadcast or the game store for the next level.
+      nameTag: DEBUG
+      portrait: {fileID: 0}
+    - dialogueText: After the final level, there would be a special ending cutscene
+        showing the journey to Pearl and the credits.
+      nameTag: DEBUG
+      portrait: {fileID: 0}
+    - dialogueText: Thanks for playing!
+      nameTag: DEBUG
+      portrait: {fileID: 0}
 --- !u!61 &1429343258
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1166,7 +1363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1168297928999406222, guid: 1e0b9e43a96396b4bbd667c218e7c20e, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1168297928999406222, guid: 1e0b9e43a96396b4bbd667c218e7c20e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1249,5 +1446,5 @@ Transform:
   - {fileID: 398912350}
   - {fileID: 1429343256}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
