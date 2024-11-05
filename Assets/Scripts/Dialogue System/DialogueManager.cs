@@ -81,7 +81,8 @@ public class DialogueManager : MonoBehaviour
         _dialogueText.text = "";
 
         // Activates Dialogue loop
-        StartCoroutine(PlayDialogue(dialogue));
+        _dialogRoutine = PlayDialogue(dialogue);
+        StartCoroutine(_dialogRoutine);
     }
 
     /// <summary>
