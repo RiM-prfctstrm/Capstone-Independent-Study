@@ -2,7 +2,7 @@
  * FILE     : Door.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 10/30/24
+ * UPDATED  : 11/5/24
  * 
  * DESC     : Basically a fancier version of SceneTrigger that activates when the player interacts
  *            with it, plays different animations and sounds, and can be locked until the player
@@ -64,7 +64,7 @@ public class Door : InteractableObject
         else
         {
             // Infroms player the door is locked
-            StartCoroutine(DialogueManager.dialogueManager.PlayDialogue(_lockedMessage));
+            DialogueManager.dialogueManager.StartDialogue(_lockedMessage);
         }
     }
 

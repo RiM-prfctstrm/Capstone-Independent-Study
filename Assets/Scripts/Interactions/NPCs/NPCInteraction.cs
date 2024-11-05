@@ -2,7 +2,7 @@
  * FILE     : NPCInteraction.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/11/24
- * UPDATED  : 11/2/24
+ * UPDATED  : 11/5/24
  * 
  * DESC     : Performs unique events depending
 =================================================================================================*/
@@ -105,7 +105,7 @@ public class NPCInteraction : InteractableObject
         }
 
         // Plays Dialogue
-        StartCoroutine(_dialogueManager.PlayDialogue(_NPCLines[_dialogueCycle]));
+        _dialogueManager.StartDialogue(_NPCLines[_dialogueCycle]);
 
         // Updates currently playing event
         _dialogueCycle++;

@@ -68,16 +68,6 @@ public class DialogueManager : MonoBehaviour
     /// <param name="dialogue">The dialogue that will play</param>
     public void StartDialogue(DialogueEvent dialogue)
     {
-        StartCoroutine(PlayDialogue(dialogue));
-    }
-
-    /// <summary>
-    /// Controls the playback of dialogue
-    /// </summary>
-    /// <param name="sequence">Sequence of dialogues to play</param>
-    public IEnumerator PlayDialogue(DialogueEvent sequence)
-    {
-        Debug.Log("sus");
         // Sets up dialogue mode
         dialogueInProgress = true;
         _dialogueOutline.SetActive(true);
@@ -86,6 +76,16 @@ public class DialogueManager : MonoBehaviour
         _advanceButton.Select();
         _advanceButton.interactable = true;
 
+        // Activates Dialogue loop
+        StartCoroutine(PlayDialogue(dialogue));
+    }
+
+    /// <summary>
+    /// Controls the playback of dialogue
+    /// </summary>
+    /// <param name="sequence">Sequence of dialogues to play</param>
+    IEnumerator PlayDialogue(DialogueEvent sequence)
+    {
         // Delays loop so that first line isn't cut off by activating input
         if (previouslySelected == null)
         {

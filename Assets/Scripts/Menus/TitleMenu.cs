@@ -2,7 +2,7 @@
  * FILE     : TitleMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/31/24
- * UPDATED  : 11/4/24
+ * UPDATED  : 11/5/24
  * 
  * DESC     : Performs functions of the title screen menu.
 =================================================================================================*/
@@ -53,8 +53,7 @@ public class TitleMenu : MonoBehaviour
         {
             // Sends a message telling the player nothing happens yet
             _menuDM.previouslySelected = returnButton;
-            StartCoroutine(_menuDM.PlayDialogue(_UnimplementedNotif));
-            // Tells the manager to reselect this button when dialogue is done
+            _menuDM.StartDialogue(_UnimplementedNotif);
         }
     }
 
