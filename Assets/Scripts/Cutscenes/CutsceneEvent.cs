@@ -30,6 +30,15 @@ public abstract class CutsceneEvent : ScriptableObject
     {
 
     }
+    
+    /// <summary>
+    /// Used to delay the completion signal until the event is over when there is no convenient way
+    /// to do that in its regular functionality.
+    /// </summary>
+    protected virtual IEnumerator WaitForEventEnd()
+    {
+        yield return null;
+    }
 
     #endregion
 }

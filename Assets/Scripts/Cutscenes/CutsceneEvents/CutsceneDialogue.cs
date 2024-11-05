@@ -27,14 +27,19 @@ public class CutsceneDialogue : CutsceneEvent
     /// </summary>
     public override void PlayEventFunction()
     {
+        // Starts dialogue
         DialogueManager.dialogueManager.StartDialogue(cutsceneDialogue);
+
+        // Prepares the script to wait for its completion signal
+        // I have no idea why I can't just do this from here
+        CutsceneManager.cutsceneManager.StartCoroutine(WaitForEventEnd());
     }
 
     /// <summary>
     /// Signals that the event is over to the cutscene manager
     /// </summary>
-    /// <returns></returns>
-    IEnumerator WaitForDialogueEnd()
+    /// <returns>Waits until the cutscene is over</returns>
+    protected override IEnumerator WaitForEventEnd()
     {
         yield return new WaitUntil(() => !DialogueManager.dialogueInProgress);
 
