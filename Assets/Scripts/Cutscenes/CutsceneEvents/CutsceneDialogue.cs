@@ -25,7 +25,7 @@ public class CutsceneDialogue : CutsceneEvent
     /// <summary>
     /// Plays the dialogue and tells the cutscene manager when it is complete
     /// </summary>
-    public override void EventFunction()
+    public override void PlayEventFunction()
     {
         DialogueManager.dialogueManager.PlayDialogue(cutsceneDialogue);
     }

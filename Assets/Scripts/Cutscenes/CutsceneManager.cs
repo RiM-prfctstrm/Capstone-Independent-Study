@@ -2,7 +2,7 @@
  * FILE     : CutsceneManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1X/X/24
- * UPDATED  : 11/5124
+ * UPDATED  : 11/5/24
  * 
  * DESC     : Controls the progression of scripted events.
 =================================================================================================*/
@@ -57,7 +57,10 @@ public class CutsceneManager : MonoBehaviour
     {
         // Sets up cutscene mode
         _inCutscene = true;
-        _player.TogglePlayerInput();
+        if (_player != null)
+        {
+            _player.TogglePlayerInput();
+        }
 
         // Plays cutscene
         StartCoroutine(PlayCutscene(cutscene));
@@ -71,7 +74,16 @@ public class CutsceneManager : MonoBehaviour
     /// <returns>Delay Between</returns>
     IEnumerator PlayCutscene(Cutscene cutscene)
     {
-        yield return null;
+        
+        // Plays each event in sequence
+        foreach (CutsceneEvent i in cutscene.cutsceneScript)
+        {
+            i.PlayEventFunction();
+            yield return new WaitUntil(() => i.eventComplete == true);
+        }
+
+        // Ends cutscene
+        EndCutscene();
     }
 
     /// <summary>
@@ -79,9 +91,14 @@ public class CutsceneManager : MonoBehaviour
     /// </summary>
     void EndCutscene()
     {
+        Debug.Log("the cutscene is over.");
         // Deactivates cutscene mode
         _inCutscene = false;
-        _player.TogglePlayerInput();
+
+        if (_player != null)
+        {
+            _player.TogglePlayerInput();
+        }
     }
 
     #endregion

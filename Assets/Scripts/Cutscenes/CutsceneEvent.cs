@@ -16,7 +16,8 @@ public abstract class CutsceneEvent : ScriptableObject
 
     // Flag to tell the cutscene manager that an event is complete so it can proceed to the next
     // one. Stays false until the event says not to.
-    public bool eventComplete = false;
+    [SerializeField] protected bool _eventComplete;
+    public bool eventComplete => _eventComplete;
 
     #endregion
 
@@ -25,7 +26,7 @@ public abstract class CutsceneEvent : ScriptableObject
     /// <summary>
     /// The functionality of an individual event. Left empty here.
     /// </summary>
-    public virtual void EventFunction()
+    public virtual void PlayEventFunction()
     {
 
     }

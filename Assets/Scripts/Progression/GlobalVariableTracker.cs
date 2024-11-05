@@ -16,9 +16,13 @@ public static class GlobalVariableTracker
 {
     #region VARIABLES
 
+    #region GENERAL REFERENCE
+    // Information that is commonly used in a variety of circumstances
+
     // General mission information
     public static int currentMission = 0;
 
+    #endregion
 
     #endregion
 }

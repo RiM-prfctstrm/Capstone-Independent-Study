@@ -21,6 +21,7 @@ public class Cutscene : ScriptableObject
     public List<CutsceneEvent> cutsceneScript = new List<CutsceneEvent>();
 
     // Control flags
+    public bool hasPlayed = false;
 
     #endregion
 }
