@@ -1,26 +1,26 @@
 /*=================================================================================================
  * FILE     : Cutscene.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
- * CREATION : 10/11/24
- * UPDATED  : 10/11/24
+ * CREATION : 1X/X/24
+ * UPDATED  : 11/5/24
  * 
- * DESC     : Contains information to specify what happens in discreet parts of a cutscene.
+ * DESC     : A list of events that occur in a cutscene, with some functionality to direct those
+ *            events if they are meant to have more complex behaviour than going one after the
+ *            other.
 =================================================================================================*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "Script", menuName = "Cutscene/Cutscene Script", order = 1)]
 public class Cutscene : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    #region VARIABLES
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // Cutscene Events
+    public List<CutsceneEvent> cutsceneScript = new List<CutsceneEvent>();
+
+    // Control flags
+
+    #endregion
 }

@@ -1,8 +1,8 @@
 /*=================================================================================================
- * FILE     : Title Menu.cs
+ * FILE     : TitleMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/31/24
- * UPDATED  : 11/1/24
+ * UPDATED  : 11/4/24
  * 
  * DESC     : Performs functions of the title screen menu.
 =================================================================================================*/
