@@ -30,5 +30,16 @@ public class CutsceneDialogue : CutsceneEvent
         DialogueManager.dialogueManager.StartDialogue(cutsceneDialogue);
     }
 
+    /// <summary>
+    /// Signals that the event is over to the cutscene manager
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator WaitForDialogueEnd()
+    {
+        yield return new WaitUntil(() => !DialogueManager.dialogueInProgress);
+
+        _eventComplete = true;
+    }
+
     #endregion
 }

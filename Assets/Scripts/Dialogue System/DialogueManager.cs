@@ -37,6 +37,7 @@ public class DialogueManager : MonoBehaviour
     // Progress signals
     public static bool dialogueInProgress = false;
     bool _advancing = false;
+    IEnumerator _dialogRoutine;
 
     #endregion
 
@@ -76,6 +77,9 @@ public class DialogueManager : MonoBehaviour
         _advanceButton.Select();
         _advanceButton.interactable = true;
 
+        // Clears existing dialogue to help skip unwanted first lines
+        _dialogueText.text = "";
+
         // Activates Dialogue loop
         StartCoroutine(PlayDialogue(dialogue));
     }
@@ -86,8 +90,9 @@ public class DialogueManager : MonoBehaviour
     /// <param name="sequence">Sequence of dialogues to play</param>
     IEnumerator PlayDialogue(DialogueEvent sequence)
     {
-        // Delays loop so that first line isn't cut off by activating input
-        if (previouslySelected == null)
+        // Prevents the first line from being skipped or blank. Probably a more elegant way of
+        // doing this, but this is what works.
+        if (previouslySelected == null && !CutsceneManager.inCutscene)
         {
             yield return new WaitUntil(() => _advancing == true);
             _advancing = false;
@@ -96,7 +101,16 @@ public class DialogueManager : MonoBehaviour
         // Plays each line of dialogue at correct time
         foreach (Dialogue line in sequence.dialogueBoxes)
         {
+            // Displays the line
             DisplayDialogue(line);
+
+            // Skips a wait if there is an unintended line by default
+            if (_dialogueText.text == "")
+            {
+                continue;
+            }
+
+            // Waits for input to continue the loop
             yield return new WaitUntil(() => _advancing == true);
             _advancing = false;
         }
@@ -145,10 +159,9 @@ public class DialogueManager : MonoBehaviour
         // Lets other scripts know player is out of dialogue
         dialogueInProgress = false;
         _advanceButton.interactable = false;
-        //_player.ToggleDialogueInputs();
 
         // Ends Active Dialogue sequence
-        StopAllCoroutines();
+        StopCoroutine(_dialogRoutine);
 
         // Deactivates UI
         _dialogueOutline.SetActive(false);

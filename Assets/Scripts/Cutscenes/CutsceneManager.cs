@@ -17,10 +17,6 @@ public class CutsceneManager : MonoBehaviour
     // Manager Singleton
     public static CutsceneManager cutsceneManager;
 
-    // Objects
-    DialogueManager dialogueManager = DialogueManager.dialogueManager;
-    PlayerController _player = PlayerController.playerController;
-
     // Signals
     static bool _inCutscene = false;
     public static bool inCutscene => _inCutscene;
@@ -57,10 +53,7 @@ public class CutsceneManager : MonoBehaviour
     {
         // Sets up cutscene mode
         _inCutscene = true;
-        if (_player != null)
-        {
-            _player.TogglePlayerInput();
-        }
+        PlayerController.playerController.TogglePlayerInput();
 
         // Plays cutscene
         StartCoroutine(PlayCutscene(cutscene));
@@ -73,8 +66,7 @@ public class CutsceneManager : MonoBehaviour
     /// </summary>
     /// <returns>Delay Between</returns>
     IEnumerator PlayCutscene(Cutscene cutscene)
-    {
-        
+    {   
         // Plays each event in sequence
         foreach (CutsceneEvent i in cutscene.cutsceneScript)
         {
@@ -94,11 +86,7 @@ public class CutsceneManager : MonoBehaviour
         Debug.Log("the cutscene is over.");
         // Deactivates cutscene mode
         _inCutscene = false;
-
-        if (_player != null)
-        {
-            _player.TogglePlayerInput();
-        }
+        PlayerController.playerController.TogglePlayerInput();
     }
 
     #endregion
