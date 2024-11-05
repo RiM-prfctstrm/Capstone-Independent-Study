@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 11/1/24
+ * UPDATED  : 11/5/24
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -63,11 +63,21 @@ public class DialogueManager : MonoBehaviour
     #region DIALOGUE FUNCTIONS
 
     /// <summary>
+    /// Sets up dialogue mode
+    /// </summary>
+    /// <param name="dialogue">The dialogue that will play</param>
+    public void StartDialogue(DialogueEvent dialogue)
+    {
+        StartCoroutine(PlayDialogue(dialogue));
+    }
+
+    /// <summary>
     /// Controls the playback of dialogue
     /// </summary>
     /// <param name="sequence">Sequence of dialogues to play</param>
     public IEnumerator PlayDialogue(DialogueEvent sequence)
     {
+        Debug.Log("sus");
         // Sets up dialogue mode
         dialogueInProgress = true;
         _dialogueOutline.SetActive(true);

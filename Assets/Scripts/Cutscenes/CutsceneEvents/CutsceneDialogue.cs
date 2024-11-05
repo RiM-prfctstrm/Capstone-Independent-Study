@@ -1,8 +1,8 @@
 /*=================================================================================================
  * FILE     : CutsceneDialogue.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
- * CREATION : 11/4/24
- * UPDATED  : 11/4/24
+ * CREATION : 11/5/24
+ * UPDATED  : 11/5/24
  * 
  * DESC     : A modified version of DialogueEvent.cs for use in cutscenes
 =================================================================================================*/
@@ -27,7 +27,7 @@ public class CutsceneDialogue : CutsceneEvent
     /// </summary>
     public override void PlayEventFunction()
     {
-        DialogueManager.dialogueManager.PlayDialogue(cutsceneDialogue);
+        DialogueManager.dialogueManager.StartDialogue(cutsceneDialogue);
     }
 
     #endregion

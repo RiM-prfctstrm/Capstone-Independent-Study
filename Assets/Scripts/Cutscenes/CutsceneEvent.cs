@@ -1,8 +1,8 @@
 /*=================================================================================================
  * FILE     : CutsceneEvent.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
- * CREATION : 11/4/24
- * UPDATED  : 11/4/24
+ * CREATION : 11/5/24
+ * UPDATED  : 11/5/24
  * 
  * DESC     : Shell class for different kinds of events that can be performed in cutscenes.
 =================================================================================================*/
