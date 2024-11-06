@@ -2,7 +2,7 @@
  * FILE     : CutsceneManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1X/X/24
- * UPDATED  : 11/5/24
+ * UPDATED  : 11/6/24
  * 
  * DESC     : Controls the progression of scripted events.
 =================================================================================================*/
@@ -16,6 +16,10 @@ public class CutsceneManager : MonoBehaviour
 
     // Manager Singleton
     public static CutsceneManager cutsceneManager;
+
+    // Object References
+    [SerializeField] GameObject _UISpace;
+    public GameObject UISpace => _UISpace;
 
     // Signals
     static bool _inCutscene = false;
@@ -72,6 +76,7 @@ public class CutsceneManager : MonoBehaviour
         {
             i.PlayEventFunction();
             yield return new WaitUntil(() => i.eventComplete == true);
+            Debug.Log("sus");
         }
 
         // Ends cutscene
@@ -83,7 +88,6 @@ public class CutsceneManager : MonoBehaviour
     /// </summary>
     void EndCutscene()
     {
-        Debug.Log("the cutscene is over.");
         // Deactivates cutscene mode
         _inCutscene = false;
         PlayerController.playerController.TogglePlayerInput();

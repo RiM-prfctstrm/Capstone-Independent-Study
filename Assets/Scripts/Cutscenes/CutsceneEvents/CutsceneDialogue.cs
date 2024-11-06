@@ -27,6 +27,8 @@ public class CutsceneDialogue : CutsceneEvent
     /// </summary>
     public override void PlayEventFunction()
     {
+        base.PlayEventFunction();
+
         // Starts dialogue
         DialogueManager.dialogueManager.StartDialogue(cutsceneDialogue);
 
@@ -41,8 +43,8 @@ public class CutsceneDialogue : CutsceneEvent
     /// <returns>Waits until the cutscene is over</returns>
     protected override IEnumerator WaitForEventEnd()
     {
+        Debug.Log(_eventComplete);
         yield return new WaitUntil(() => !DialogueManager.dialogueInProgress);
-
         _eventComplete = true;
     }
 

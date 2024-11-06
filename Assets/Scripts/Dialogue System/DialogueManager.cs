@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 11/5/24
+ * UPDATED  : 11/6/24
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -35,7 +35,8 @@ public class DialogueManager : MonoBehaviour
     public Button previouslySelected = null;
 
     // Progress signals
-    public static bool dialogueInProgress = false;
+    static bool _dialogueInProgress = false;
+    public static bool dialogueInProgress => _dialogueInProgress;
     bool _advancing = false;
     IEnumerator _dialogRoutine;
 
@@ -70,7 +71,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(DialogueEvent dialogue)
     {
         // Sets up dialogue mode
-        dialogueInProgress = true;
+        _dialogueInProgress = true;
         _dialogueOutline.SetActive(true);
 
         // Sets up buttons for dialogue
@@ -158,7 +159,7 @@ public class DialogueManager : MonoBehaviour
     public void CancelDialogue()
     {
         // Lets other scripts know player is out of dialogue
-        dialogueInProgress = false;
+        _dialogueInProgress = false;
         _advanceButton.interactable = false;
 
         // Ends Active Dialogue sequence

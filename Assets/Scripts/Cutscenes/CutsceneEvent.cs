@@ -2,7 +2,7 @@
  * FILE     : CutsceneEvent.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/5/24
- * UPDATED  : 11/5/24
+ * UPDATED  : 11/6/24
  * 
  * DESC     : Shell class for different kinds of events that can be performed in cutscenes.
 =================================================================================================*/
@@ -16,7 +16,7 @@ public abstract class CutsceneEvent : ScriptableObject
 
     // Flag to tell the cutscene manager that an event is complete so it can proceed to the next
     // one. Stays false until the event says not to.
-    [SerializeField] protected bool _eventComplete;
+    [SerializeField] protected bool _eventComplete = false;
     public bool eventComplete => _eventComplete;
 
     #endregion
@@ -28,7 +28,8 @@ public abstract class CutsceneEvent : ScriptableObject
     /// </summary>
     public virtual void PlayEventFunction()
     {
-
+        // Resets completion signal because apparently it's shared across instances?
+        _eventComplete = false;
     }
     
     /// <summary>
