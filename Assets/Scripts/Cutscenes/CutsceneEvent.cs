@@ -2,7 +2,7 @@
  * FILE     : CutsceneEvent.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/5/24
- * UPDATED  : 11/6/24
+ * UPDATED  : 11/7/24
  * 
  * DESC     : Shell class for different kinds of events that can be performed in cutscenes.
 =================================================================================================*/
@@ -39,6 +39,19 @@ public abstract class CutsceneEvent : ScriptableObject
     protected virtual IEnumerator WaitForEventEnd()
     {
         yield return null;
+    }
+
+    #endregion
+
+    #region DATA AUTOMATION
+
+    /// <summary>
+    /// This function is called when the script is started.
+    /// </summary>
+    private void Awake()
+    {
+        // Automatically adds the event to a cutscene in the same folder
+
     }
 
     #endregion
