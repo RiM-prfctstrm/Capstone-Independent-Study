@@ -42,17 +42,4 @@ public abstract class CutsceneEvent : ScriptableObject
     }
 
     #endregion
-
-    #region DATA AUTOMATION
-
-    /// <summary>
-    /// This function is called when the script is started.
-    /// </summary>
-    private void Awake()
-    {
-        // Automatically adds the event to a cutscene in the same folder
-
-    }
-
-    #endregion
 }
