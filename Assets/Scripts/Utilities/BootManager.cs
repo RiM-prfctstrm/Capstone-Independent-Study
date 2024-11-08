@@ -25,7 +25,7 @@ public class BootManager : MonoBehaviour
     [SerializeField] int _startDirection;
 
     // List of NPCs in scene that can be used in cutscenes
-    [Tooltip("NPCs that can be used in a cutscene. When referring to one, its ID is its position" +
+    [Tooltip("Objects that can be used in a cutscene. When referring to one, its ID is its position" +
         " in the list + 1.")]
     [SerializeField] List<GameObject> _cutsceneObjs = new List<GameObject>();
 

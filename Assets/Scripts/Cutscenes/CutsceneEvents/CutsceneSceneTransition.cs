@@ -38,6 +38,10 @@ public class CutsceneSceneTransition : CutsceneEvent
         // Loads new scene
         SceneTransition.ChangeScene(_scene, _isIndoors, _playerPos, _playerDirection);
 
+        // Makes sure player faces the right direction on loading
+        PlayerController.playerController.GetComponent<PlayerAnimator>().PlayScriptedAnimation(
+            PlayerController.playerController.GetComponent<PlayerAnimator>().SetAnimState());
+
         // Prepares the script to wait for its completion signal
         CutsceneManager.cutsceneManager.StartCoroutine(WaitForEventEnd());
     }

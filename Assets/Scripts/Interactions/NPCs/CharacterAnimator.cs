@@ -19,7 +19,6 @@ public class CharacterAnimator : MonoBehaviour
 
     // Animation
     [SerializeField] protected Animator _anim;
-    public Animator anim => _anim;
     protected string animState;
     public int facingDirection; // 0=D, 1=L, 2=R, 3=U
 
@@ -80,6 +79,15 @@ public class CharacterAnimator : MonoBehaviour
         }
 
         return animState;
+    }
+
+    /// <summary>
+    /// Plays a scripted animation controlled outside normal context
+    /// </summary>
+    public void PlayScriptedAnimation(string name)
+    {
+        animState = name;
+        _anim.Play(animState);
     }
 
     #endregion

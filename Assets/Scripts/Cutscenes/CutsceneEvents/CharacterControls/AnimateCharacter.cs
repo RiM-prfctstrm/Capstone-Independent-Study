@@ -39,10 +39,11 @@ public class AnimateCharacter : CutsceneEvent
         // Sets the character the script acts on
         _targetCharacter = CutsceneManager.cutsceneManager.cutsceneObjects[_targetID];
         _targetAnimator = _targetCharacter.GetComponent<CharacterAnimator>();
+        
 
         // Sets direction and animation
         _targetAnimator.facingDirection = _facingDirection;
-        _targetAnimator.anim.Play(_animName);
+        _targetAnimator.PlayScriptedAnimation(_animName);
 
         // Signal completion
         _eventComplete = true;

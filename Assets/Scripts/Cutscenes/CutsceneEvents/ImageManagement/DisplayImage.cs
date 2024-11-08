@@ -44,7 +44,6 @@ public class DisplayImage : CutsceneEvent
             // Skips slots currently in use
             if (_ImageSpace.transform.GetChild(i).gameObject.activeInHierarchy)
             {
-                Debug.Log("searching");
                 continue;
             }
 
