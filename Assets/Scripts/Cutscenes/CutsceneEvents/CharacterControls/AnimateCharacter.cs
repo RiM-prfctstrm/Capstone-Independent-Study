@@ -2,7 +2,7 @@
  * FILE     : AnimateCharacter.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/7/24
- * UPDATED  : 11/7/24
+ * UPDATED  : 11/8/24
  * 
  * DESC     : Forces a character into a specified animation, overriding their default programming.
 =================================================================================================*/
