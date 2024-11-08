@@ -34,7 +34,7 @@ public class NPCAnimator : CharacterAnimator
         _playerAnim = _player.GetComponent<PlayerAnimator>();
 
         // Init Direction
-        anim.Play(SetAnimState());
+        _anim.Play(SetAnimState());
     }
 
     /// <summary>
@@ -75,7 +75,7 @@ public class NPCAnimator : CharacterAnimator
         }
 
         // Sets animation
-        anim.Play(SetAnimState());
+        _anim.Play(SetAnimState());
     }
 
     #endregion

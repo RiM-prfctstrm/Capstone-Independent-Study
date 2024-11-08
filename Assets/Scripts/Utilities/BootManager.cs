@@ -2,7 +2,7 @@
  * FILE     : EssentialPreserver.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 11/2/24
+ * UPDATED  : 11/8/24
  * 
  * DESC     : Performs functionality that only occurs when the game is first started.
 =================================================================================================*/
@@ -24,6 +24,11 @@ public class BootManager : MonoBehaviour
     [SerializeField] Vector3 _startPos;
     [SerializeField] int _startDirection;
 
+    // List of NPCs in scene that can be used in cutscenes
+    [Tooltip("NPCs that can be used in a cutscene. When referring to one, its ID is its position" +
+        " in the list + 1.")]
+    [SerializeField] List<GameObject> _cutsceneObjs = new List<GameObject>();
+
     #endregion
 
     #region UNIVERSAL EVENTS
@@ -43,6 +48,9 @@ public class BootManager : MonoBehaviour
             _player.transform.position = _startPos;
             _player.GetComponent<PlayerAnimator>().facingDirection = _startDirection;
         }
+
+        // Adds Cutscene-capable NPCs to the list of potential actors
+        CutsceneManager.cutsceneManager.cutsceneObjects.AddRange(_cutsceneObjs);
     }
 
     #endregion

@@ -2,7 +2,7 @@
  * FILE     : PlayerAnimator.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/11/24
- * UPDATED  : 10/11/24
+ * UPDATED  : 11/8/24
  * 
  * DESC     : Controls player character's animation
 =================================================================================================*/
@@ -40,7 +40,10 @@ public class PlayerAnimator : CharacterAnimator
         base.Update();
 
         // Plays animation
-        anim.Play("Base Layer." + SetAnimState());
+        if (!CutsceneManager.inCutscene)
+        {
+            _anim.Play("Base Layer." + SetAnimState());
+        }
     }
 
     #endregion

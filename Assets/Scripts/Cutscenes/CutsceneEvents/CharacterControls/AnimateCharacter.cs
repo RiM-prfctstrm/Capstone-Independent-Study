@@ -10,9 +10,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "Animation Command",
+    menuName = "Cutscene/Character Controls/Animation", order = 1)]
 public class AnimateCharacter : CutsceneEvent
 {
     #region VARIABLES
+
+    // Inputs
+    [SerializeField] int _targetID;
+    [SerializeField] string _animName;
+    [SerializeField] int _facingDirection;
+
+    // Object Refs
+    GameObject _targetCharacter;
+    CharacterAnimator _targetAnimator;
 
     #endregion
 
@@ -24,6 +35,17 @@ public class AnimateCharacter : CutsceneEvent
     public override void PlayEventFunction()
     {
         base.PlayEventFunction();
+
+        // Sets the character the script acts on
+        _targetCharacter = CutsceneManager.cutsceneManager.cutsceneObjects[_targetID];
+        _targetAnimator = _targetCharacter.GetComponent<CharacterAnimator>();
+
+        // Sets direction and animation
+        _targetAnimator.facingDirection = _facingDirection;
+        _targetAnimator.anim.Play(_animName);
+
+        // Signal completion
+        _eventComplete = true;
     }
 
     #endregion

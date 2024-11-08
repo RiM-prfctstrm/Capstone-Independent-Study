@@ -2,7 +2,7 @@
  * FILE     : CutsceneDialogue.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/5/24
- * UPDATED  : 11/5/24
+ * UPDATED  : 11/8/24
  * 
  * DESC     : A modified version of DialogueEvent.cs for use in cutscenes
 =================================================================================================*/
@@ -43,7 +43,6 @@ public class CutsceneDialogue : CutsceneEvent
     /// <returns>Waits until the cutscene is over</returns>
     protected override IEnumerator WaitForEventEnd()
     {
-        Debug.Log(_eventComplete);
         yield return new WaitUntil(() => !DialogueManager.dialogueInProgress);
         _eventComplete = true;
     }

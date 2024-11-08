@@ -2,7 +2,7 @@
  * FILE     : CharacterAnimator.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/10/24
- * UPDATED  : 10/11/24
+ * UPDATED  : 11/8/24
  * 
  * DESC     : Base code to automate NPC animations.
 =================================================================================================*/
@@ -18,7 +18,8 @@ public class CharacterAnimator : MonoBehaviour
     Rigidbody2D _rb2d;
 
     // Animation
-    [SerializeField] protected Animator anim;
+    [SerializeField] protected Animator _anim;
+    public Animator anim => _anim;
     protected string animState;
     public int facingDirection; // 0=D, 1=L, 2=R, 3=U
 
