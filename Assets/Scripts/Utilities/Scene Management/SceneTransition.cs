@@ -29,11 +29,21 @@ public class SceneTransition
     /// <param name="sceneName">The new scene to load</param>
     /// <param name="isIndoors">Determines how the method should determine whether the
     ///                         the player should start mounted in the new scene</param>
+    /// <param name="startPos">The player's starting position in the new scene</param>
     public static void ChangeScene(string sceneName, bool isIndoors, Vector3 startPos)
     {
         // Gets objects for reference
         _currentScene = SceneManager.GetActiveScene().name;
 
+        // Warps the player without performing loads if the target scene is the current scene
+        if (_currentScene == sceneName)
+        {
+            UtilityFunctions.WarpToPoint(startPos,
+                _player.GetComponent<PlayerAnimator>().facingDirection);
+            return;
+        }
+
+        Debug.Log("loading cringe");
         // Resets list of Cutscene-controllable objects
         CutsceneManager.cutsceneManager.ResetCharacterList();
 
@@ -71,6 +81,13 @@ public class SceneTransition
     {
         // Gets objects for reference
         _currentScene = SceneManager.GetActiveScene().name;
+
+        // Warps the player without performing loads if the target scene is the current scene
+        if (_currentScene == sceneName)
+        {
+            UtilityFunctions.WarpToPoint(startPos, startDirection);
+            return;
+        }
 
         // Resets list of Cutscene-controllable objects
         CutsceneManager.cutsceneManager.ResetCharacterList();
