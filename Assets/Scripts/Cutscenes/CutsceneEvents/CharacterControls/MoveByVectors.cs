@@ -18,7 +18,7 @@ public class MoveByVectors : CutsceneEvent
 
     // Inputs
     [SerializeField] int _targetID;
-    [SerializeField] float _speed;
+    [SerializeField] float _speed = 4; // Default speed set to feel good for walking.
     [SerializeField] List<Vector2> _movements = new List<Vector2>();
 
     [SerializeField] bool _overrideMovementAnimation = false;
