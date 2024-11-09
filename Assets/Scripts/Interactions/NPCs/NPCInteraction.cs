@@ -2,9 +2,9 @@
  * FILE     : NPCInteraction.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/11/24
- * UPDATED  : 11/5/24
+ * UPDATED  : 11/9/24
  * 
- * DESC     : Performs unique events depending
+ * DESC     : Controls how NPCs behave when the player interacts with them.
 =================================================================================================*/
 using System.Collections;
 using System.Collections.Generic;
@@ -18,14 +18,15 @@ public class NPCInteraction : InteractableObject
     NPCAnimator _animator;
 
     // Controls
-    [SerializeField] int _type; // 0=dialogue, 1=event trigger
     //[SerializeField] bool _hasDailyUpdates = false;
     //[SerializeField] bool _isMobile = false;
     [SerializeField] float _dialogueRange = 5;
+    [SerializeField] bool _isEventTrigger = false;
     [SerializeField] bool _staticImage = false;
 
-    // Dialogue
+    // Interaction results
     [SerializeField] List<DialogueEvent> _NPCLines = new List<DialogueEvent>();
+    [SerializeField] Cutscene _NPCCutscene;
 
     // External components
     GameObject _player;
@@ -33,6 +34,7 @@ public class NPCInteraction : InteractableObject
 
     // Misc
     int _dialogueCycle = 0;
+    public static bool inNPCInteraction = false;
 
     #endregion
 
@@ -82,14 +84,17 @@ public class NPCInteraction : InteractableObject
     /// </summary>
     public override void OnInteractedWith()
     {
-        switch (_type)
-        {
-            case 0:
-                NPCDialogue();
-                break;
+        // Tells game an interaction is happening
+        inNPCInteraction = true;
 
-            case 1:
-                break;
+        // Interaction type logic
+        if (!_isEventTrigger)
+        {
+             NPCDialogue();
+        }
+        else
+        {
+            NPCTriggeredEvent();
         }
     }
 
@@ -112,6 +117,24 @@ public class NPCInteraction : InteractableObject
         if (_dialogueCycle >= _NPCLines.Count)
         {
             _dialogueCycle = 0;
+        }
+    }
+
+    /// <summary>
+    /// Controls cutscenes triggered by talking to the NPC
+    /// </summary>
+    void NPCTriggeredEvent()
+    {
+        if (!_NPCCutscene.hasPlayed)
+        {
+            CutsceneManager.cutsceneManager.StartCutscene(_NPCCutscene);
+            // Temporary trigger to set to standard diaogue. Will be replaced when a system for
+            // saving and loading which cutscenes have been played has been built.
+            _isEventTrigger = false;
+        }
+        else
+        {
+            NPCDialogue();
         }
     }
 

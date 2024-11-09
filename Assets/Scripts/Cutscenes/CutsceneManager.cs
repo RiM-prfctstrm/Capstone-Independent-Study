@@ -83,6 +83,8 @@ public class CutsceneManager : MonoBehaviour
         }
 
         // Ends cutscene
+        //cutscene.hasPlayed = true; temporarily commented until a system to save and adjust this
+        // data is in place
         EndCutscene();
     }
 

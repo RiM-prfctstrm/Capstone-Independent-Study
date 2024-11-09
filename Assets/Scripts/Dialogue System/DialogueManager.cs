@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 11/6/24
+ * UPDATED  : 11/9/24
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -92,9 +92,8 @@ public class DialogueManager : MonoBehaviour
     /// <param name="sequence">Sequence of dialogues to play</param>
     IEnumerator PlayDialogue(DialogueEvent sequence)
     {
-        // Prevents the first line from being skipped or blank. Probably a more elegant way of
-        // doing this, but this is what works.
-        if (previouslySelected == null && !CutsceneManager.inCutscene)
+        // Prevents the first line from being skipped or blank because of initial input
+        if (NPCInteraction.inNPCInteraction)
         {
             yield return new WaitUntil(() => _advancing == true);
             _advancing = false;
@@ -161,6 +160,7 @@ public class DialogueManager : MonoBehaviour
         // Lets other scripts know player is out of dialogue
         _dialogueInProgress = false;
         _advanceButton.interactable = false;
+        NPCInteraction.inNPCInteraction = false;
 
         // Ends Active Dialogue sequence
         StopCoroutine(_dialogRoutine);
