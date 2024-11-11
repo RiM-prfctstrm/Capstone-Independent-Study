@@ -2,7 +2,7 @@
  * FILE     : SceneTransition
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/29/24
- * UPDATED  : 11/8/24
+ * UPDATED  : 11/11/24
  * 
  * DESC     : Switches scenes and sets variables to initialize that scene's state after transition.
 =================================================================================================*/
@@ -43,7 +43,6 @@ public class SceneTransition
             return;
         }
 
-        Debug.Log("loading cringe");
         // Resets list of Cutscene-controllable objects
         CutsceneManager.cutsceneManager.ResetCharacterList();
 
@@ -51,11 +50,11 @@ public class SceneTransition
         SceneManager.LoadScene(sceneName);
         
         // Determines whether the player should remain biking
-        if (isIndoors)
+        /*if (isIndoors)
         {
             _player.isWalking = true;
             _player.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        }
+        }*/
 
         // Sets player's position
         _player.transform.position = startPos;
@@ -83,11 +82,11 @@ public class SceneTransition
         _currentScene = SceneManager.GetActiveScene().name;
 
         // Warps the player without performing loads if the target scene is the current scene
-        if (_currentScene == sceneName)
+        /*if (_currentScene == sceneName)
         {
             UtilityFunctions.WarpToPoint(startPos, startDirection);
             return;
-        }
+        }*/
 
         // Resets list of Cutscene-controllable objects
         CutsceneManager.cutsceneManager.ResetCharacterList();

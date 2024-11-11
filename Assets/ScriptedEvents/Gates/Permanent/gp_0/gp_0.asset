@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a2e80aa6127fbc49811085b2cd988a2, type: 3}
-  m_Name: m0_1_003_visitWait
+  m_Script: {fileID: 11500000, guid: 8e7c1be8998881549bcc1fb9d908ed5b, type: 3}
+  m_Name: gp_0
   m_EditorClassIdentifier: 
-  _eventComplete: 1
-  _waitSeconds: 1
+  cutsceneScript:
+  - {fileID: 11400000, guid: 2caef021e081aaa48999ce85dea235ae, type: 2}
+  - {fileID: 11400000, guid: ad90a76396164d54fa2eeeeee9541103, type: 2}
+  hasPlayed: 0

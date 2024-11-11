@@ -24,7 +24,6 @@ public class UtilityFunctions : MonoBehaviour
     public static void WarpToPoint(Vector3 point, int direction)
     {
         // Teleports Player
-        Debug.Log("teleportation yeah!");
         PlayerController.playerController.transform.position = point;
         PlayerController.playerController.GetComponent<PlayerAnimator>().facingDirection
             = direction;

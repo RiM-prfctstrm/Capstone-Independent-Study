@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a2e80aa6127fbc49811085b2cd988a2, type: 3}
-  m_Name: m0_1_003_visitWait
+  m_Script: {fileID: 11500000, guid: 468ca57cc94a1a3459faf62eef8634af, type: 3}
+  m_Name: m0_1_011_dylanFaceNurse
   m_EditorClassIdentifier: 
-  _eventComplete: 1
-  _waitSeconds: 1
+  _eventComplete: 0
+  _targetID: 3
+  _animName: RightIdle
+  _facingDirection: 2

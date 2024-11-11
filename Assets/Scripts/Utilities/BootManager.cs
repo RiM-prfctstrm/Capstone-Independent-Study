@@ -2,7 +2,7 @@
  * FILE     : EssentialPreserver.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 11/8/24
+ * UPDATED  : 11/11/24
  * 
  * DESC     : Performs functionality that only occurs when the game is first started.
 =================================================================================================*/
@@ -47,6 +47,7 @@ public class BootManager : MonoBehaviour
             _player = PlayerController.playerController.gameObject;
             _player.transform.position = _startPos;
             _player.GetComponent<PlayerAnimator>().facingDirection = _startDirection;
+            CutsceneManager.cutsceneManager.cutsceneObjects.Add(_player);
         }
 
         // Adds Cutscene-capable NPCs to the list of potential actors

@@ -2,7 +2,7 @@
  * FILE     : MoveByVectors.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/8/24
- * UPDATED  : 11/8/24
+ * UPDATED  : 11/11/24
  * 
  * DESC     : Translates a character along a set of vectors.
 =================================================================================================*/
@@ -30,7 +30,7 @@ public class MoveByVectors : CutsceneEvent
 
     // Movement Parameters
     Vector2 _movementVector;
-    Vector3 _targetPos;
+    Vector2 _targetPos;
 
     #endregion
 
@@ -74,7 +74,8 @@ public class MoveByVectors : CutsceneEvent
             }
 
             // Moves along a vector
-            while (_targetCharacter.transform.position != _targetPos)
+            while (Mathf.Abs(Vector2.Distance(_targetCharacter.transform.position, _targetPos))
+                >= .05f)
             {
                 // Performs Movement
                 _targetCharacter.transform.Translate(
@@ -83,6 +84,9 @@ public class MoveByVectors : CutsceneEvent
                 // Prevents Avengers Infinity Loop
                 yield return new WaitForFixedUpdate();
             }
+
+            // adjusts character to target postiion
+            _targetCharacter.transform.position = _targetPos;
         }
 
         // Sets character to a finished animation and completes event
@@ -106,8 +110,8 @@ public class MoveByVectors : CutsceneEvent
         // Directional animation for upward movement
         else if (Vector2.Angle(Vector2.right, _movementVector) <= 135)
         {
-            _targetAnimator.facingDirection = 3;
-            _targetAnimator.PlayScriptedAnimation("Up");
+            _targetAnimator.facingDirection = 0;
+            _targetAnimator.PlayScriptedAnimation("Down");
         }
         // Directional animation for leftward movement
         else if (Vector2.Angle(Vector2.right, _movementVector) <= 225)
@@ -118,8 +122,8 @@ public class MoveByVectors : CutsceneEvent
         // Directional animation for downward movement
         else if (Vector2.Angle(Vector2.right, _movementVector) <= 315)
         {
-            _targetAnimator.facingDirection = 0;
-            _targetAnimator.PlayScriptedAnimation("Down");
+            _targetAnimator.facingDirection = 3;
+            _targetAnimator.PlayScriptedAnimation("Up");
         }
     }
 
