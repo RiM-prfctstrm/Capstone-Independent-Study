@@ -100,27 +100,28 @@ public class MoveByVectors : CutsceneEvent
     /// </summary>
     void UpdateMoveAnimation()
     {
+        // Horizontal movement
         // Directional animation for rightward movement
-        if (Vector2.Angle(Vector2.right, _movementVector) <= 45 ||
-            Vector2.Angle(Vector2.right, _movementVector) > 315)
+        if (Vector2.Angle(Vector2.right, _movementVector) <= 45)
         {
             _targetAnimator.facingDirection = 2;
             _targetAnimator.PlayScriptedAnimation("Right");
         }
         // Directional animation for upward movement
-        else if (Vector2.Angle(Vector2.right, _movementVector) <= 135)
-        {
-            _targetAnimator.facingDirection = 0;
-            _targetAnimator.PlayScriptedAnimation("Down");
-        }
-        // Directional animation for leftward movement
-        else if (Vector2.Angle(Vector2.right, _movementVector) <= 225)
+        else if (Vector2.Angle(Vector2.right, _movementVector) >= 135)
         {
             _targetAnimator.facingDirection = 1;
             _targetAnimator.PlayScriptedAnimation("Left");
         }
+        // Vertical movement
+        // Directional animation for leftward movement
+        else if (_movementVector.y < 0)
+        {
+            _targetAnimator.facingDirection = 0;
+            _targetAnimator.PlayScriptedAnimation("Down");
+        }
         // Directional animation for downward movement
-        else if (Vector2.Angle(Vector2.right, _movementVector) <= 315)
+        else
         {
             _targetAnimator.facingDirection = 3;
             _targetAnimator.PlayScriptedAnimation("Up");

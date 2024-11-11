@@ -87,6 +87,12 @@ public class NPCInteraction : InteractableObject
         // Tells game an interaction is happening
         inNPCInteraction = true;
 
+        // Faces Player
+        if (!_staticImage)
+        {
+            _animator.FacePlayer();
+        }
+
         // Interaction type logic
         if (!_isEventTrigger)
         {
@@ -103,12 +109,6 @@ public class NPCInteraction : InteractableObject
     /// </summary>
     void NPCDialogue()
     {
-        // Faces Player
-        if (!_staticImage)
-        {
-            _animator.FacePlayer();
-        }
-
         // Plays Dialogue
         _dialogueManager.StartDialogue(_NPCLines[_dialogueCycle]);
 

@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
+  m_Name: m0_2_025_finishConversation
+  m_EditorClassIdentifier: 
+  _eventComplete: 0
+  cutsceneDialogue:
+    dialogueBoxes:
+    - dialogueText: Did Salt say anything?
+      nameTag: Pepper
+      portrait: {fileID: 0}
+    - dialogueText: I haven't checked. You should be getting his BottleMails, though,
+        right?
+      nameTag: Dad
+      portrait: {fileID: 0}
+    - dialogueText: Yeah.
+      nameTag: Pepper
+      portrait: {fileID: 0}
+    - dialogueText: Then make sure you look before you go to bed, uh-huh?
+      nameTag: Dad
+      portrait: {fileID: 0}
+    - dialogueText: Mhm.
+      nameTag: Pepper
+      portrait: {fileID: 0}
+    - dialogueText: Mom said she's gonna be home late tonight, so we don't have to
+        wait for her for dinner.
+      nameTag: Dad
+      portrait: {fileID: 0}
+    - dialogueText: She's got a lot of paperwork because of the transmissions from
+        outer space.
+      nameTag: Dad
+      portrait: {fileID: 0}
+    - dialogueText: Oh, and I left the TV on in case you want to hear the president's
+        address.
+      nameTag: Dad
+      portrait: {fileID: 0}
+    - dialogueText: Thanks, Dad!
+      nameTag: Pepper
+      portrait: {fileID: 0}

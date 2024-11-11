@@ -12,12 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
   m_Name: m0_1_002_deliveryConfirmation
   m_EditorClassIdentifier: 
-  _eventComplete: 0
+  _eventComplete: 1
   cutsceneDialogue:
     dialogueBoxes:
-    - dialogueText: '* The nurse sends some messages on his computer.'
-      nameTag: 
-      portrait: {fileID: 0}
     - dialogueText: Ok, thank you. Please hand me the package and we will take it
         from here.
       nameTag: Nurse
@@ -28,4 +25,7 @@ MonoBehaviour:
     - dialogueText: I don't actually know Dylan Taylor, but I like meeting the people
         who order our games.
       nameTag: Pepper
+      portrait: {fileID: 0}
+    - dialogueText: '* The nurse sends some more messages.'
+      nameTag: 
       portrait: {fileID: 0}

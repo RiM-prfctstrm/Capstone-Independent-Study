@@ -9,13 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced189b58ef3d6a4a8635aaabf73c2c2, type: 3}
-  m_Name: m0_2_004_nurseBack
+  m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
+  m_Name: m0_2_019_pepperGreeting
   m_EditorClassIdentifier: 
-  _eventComplete: 1
-  _targetID: 2
-  _speed: 2
-  _movements:
-  - {x: -0.5, y: 0}
-  _overrideMovementAnimation: 0
-  _overrideAnimation: 
+  _eventComplete: 0
+  cutsceneDialogue:
+    dialogueBoxes:
+    - dialogueText: Dad! Did you see the news?
+      nameTag: Pepper
+      portrait: {fileID: 0}
