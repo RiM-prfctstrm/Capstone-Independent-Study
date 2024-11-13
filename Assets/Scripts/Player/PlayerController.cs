@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 11/1/24
+ * UPDATED  : 11/11/24
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -60,6 +60,8 @@ public class PlayerController : MonoBehaviour
     InputAction _yInput;
     int _moveX;
     int _moveY;
+    float _analogScaleX;
+    float _analogScaleY;
 
     // External reference
     GameObject _lastTarget;
@@ -194,11 +196,13 @@ public class PlayerController : MonoBehaviour
         // Converts input into variables used for calculating movement
         _moveX = (int)_xInput.ReadValue<float>();
         _moveY = (int)_yInput.ReadValue<float>();
+        _analogScaleX = _xInput.ReadValue<float>();
+        _analogScaleY = _yInput.ReadValue<float>();
 
         // Alters movement vars if they would lead the player in a direction that is invalid for
         // their current direction. Inputs are valid when the player's direction is <= 135 degrees
         // from the input direction.
-        if(!isWalking && _rb2d.velocity.magnitude > _steeringVelThreshold)
+        if (!isWalking && _rb2d.velocity.magnitude > _steeringVelThreshold)
         {
             // Prevents leftward movement while moving right
             if (_moveX == -1 && Vector2.Angle(Vector2.left, _rb2d.velocity)
@@ -356,8 +360,14 @@ public class PlayerController : MonoBehaviour
         // Acceleration from player input
         if (_moveX != 0)
         {
+            // Scales rate based on analog input
+            if (_analogScaleX == 0)
+            {
+                _analogScaleX = _moveX;
+            }
+
             // Accelerates on axis
-            _velocityX += _accelRate * _moveX * Time.fixedDeltaTime;
+            _velocityX += _accelRate * _analogScaleX * Time.fixedDeltaTime;
             _velocityX = Mathf.Clamp(_velocityX, -_maxBikeSpeed, _maxBikeSpeed);
 
             // Debug feedback
@@ -380,8 +390,14 @@ public class PlayerController : MonoBehaviour
         // Acceleration from player input
         if (_moveY != 0)
         {
+            // Scales rate based on analog input
+            if (_analogScaleY == 0)
+            {
+                _analogScaleY = _moveY;
+            }
+
             // Accelerates on axis
-            _velocityY += _accelRate * _moveY * Time.fixedDeltaTime;
+            _velocityY += _accelRate * _analogScaleY * Time.fixedDeltaTime;
             _velocityY = Mathf.Clamp(_velocityY, -_maxBikeSpeed, _maxBikeSpeed);
 
             // Debug feedback

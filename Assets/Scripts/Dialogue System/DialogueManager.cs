@@ -102,14 +102,14 @@ public class DialogueManager : MonoBehaviour
         // Plays each line of dialogue at correct time
         foreach (Dialogue line in sequence.dialogueBoxes)
         {
-            // Displays the line
-            DisplayDialogue(line);
-
             // Skips a wait if there is an unintended line by default
             if (_dialogueText.text == "")
             {
                 continue;
             }
+
+            // Displays the line
+            DisplayDialogue(line);
 
             // Waits for input to continue the loop
             yield return new WaitUntil(() => _advancing == true);
