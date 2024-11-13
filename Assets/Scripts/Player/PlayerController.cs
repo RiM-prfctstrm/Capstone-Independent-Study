@@ -309,12 +309,14 @@ public class PlayerController : MonoBehaviour
             _scaledMaxSpeed = _maxBikeSpeed * _analogScaleMax;
         }
 
-        // Compute velocity
+        // Computes velocity
         if (!_isBraking && _rb2d.velocity.magnitude < _scaledMaxSpeed)
         {
             AccelerateX();
             AccelerateY();
         }
+        
+        // Steers bike
         if ((_moveX != 0 && _moveY == 0) || (_moveY != 0 && _moveX == 0))
         {
             BikeSteering();
