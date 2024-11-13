@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
     float _bufferRate;
     bool _isBraking;
     public bool isWalking;
+    float _scaledMaxSpeed;
     float _velocityX;
     float _velocityY;
     Vector2 _newVel;
@@ -62,6 +63,7 @@ public class PlayerController : MonoBehaviour
     int _moveY;
     float _analogScaleX;
     float _analogScaleY;
+    float _analogScaleMax = 1;
 
     // External reference
     GameObject _lastTarget;
@@ -198,6 +200,7 @@ public class PlayerController : MonoBehaviour
         _moveY = (int)_yInput.ReadValue<float>();
         _analogScaleX = _xInput.ReadValue<float>();
         _analogScaleY = _yInput.ReadValue<float>();
+        _analogScaleMax = UtilityFormulas.FindHypotenuse(_analogScaleX, _analogScaleY);
 
         // Alters movement vars if they would lead the player in a direction that is invalid for
         // their current direction. Inputs are valid when the player's direction is <= 135 degrees
@@ -300,18 +303,23 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void BikeMovement()
     {
+        // Determine Maximum Speed for this frame
+        if (_analogScaleMax != 0)
+        {
+            _scaledMaxSpeed = _maxBikeSpeed * _analogScaleMax;
+        }
+
         // Compute velocity
-        if (!_isBraking)
+        if (!_isBraking && _rb2d.velocity.magnitude < _scaledMaxSpeed)
         {
             AccelerateX();
             AccelerateY();
         }
-        if (/*UtilityFormulas.FindHypotenuse(_velocityX, _velocityY) > _maxBikeSpeed*/
-            (_moveX != 0 && _moveY == 0) || (_moveY != 0 && _moveX == 0))
+        if ((_moveX != 0 && _moveY == 0) || (_moveY != 0 && _moveX == 0))
         {
             BikeSteering();
         }
-        if (UtilityFormulas.FindHypotenuse(_velocityX, _velocityY) > _maxBikeSpeed)
+        if (UtilityFormulas.FindHypotenuse(_velocityX, _velocityY) > _scaledMaxSpeed)
         {
             BikeSteering();
         }
@@ -368,17 +376,17 @@ public class PlayerController : MonoBehaviour
 
             // Accelerates on axis
             _velocityX += _accelRate * _analogScaleX * Time.fixedDeltaTime;
-            _velocityX = Mathf.Clamp(_velocityX, -_maxBikeSpeed, _maxBikeSpeed);
+            _velocityX = Mathf.Clamp(_velocityX, -_scaledMaxSpeed, _scaledMaxSpeed);
 
             // Debug feedback
-            if (Mathf.Abs(_velocityX) >= _maxBikeSpeed)
+            if (Mathf.Abs(_velocityX) >= _scaledMaxSpeed)
             {
                 Debug.Log("Maxed X!");
             }
 
             // Resets deceleration buffer
             _decelClamp = _decelTime; 
-            _buffer = _decelBuffer * (_rb2d.velocity.magnitude / _maxBikeSpeed);
+            _buffer = _decelBuffer * (_rb2d.velocity.magnitude / _scaledMaxSpeed);
         }
     }
 
@@ -398,17 +406,17 @@ public class PlayerController : MonoBehaviour
 
             // Accelerates on axis
             _velocityY += _accelRate * _analogScaleY * Time.fixedDeltaTime;
-            _velocityY = Mathf.Clamp(_velocityY, -_maxBikeSpeed, _maxBikeSpeed);
+            _velocityY = Mathf.Clamp(_velocityY, -_scaledMaxSpeed, _scaledMaxSpeed);
 
             // Debug feedback
-            if (Mathf.Abs(_velocityY) >= _maxBikeSpeed)
+            if (Mathf.Abs(_velocityY) >= _scaledMaxSpeed)
             {
                 Debug.Log("Maxed Y!");
             }
 
             // Resets deceleration buffer
             _decelClamp = _decelTime;
-            _buffer = _decelBuffer * (_rb2d.velocity.magnitude / _maxBikeSpeed);
+            _buffer = _decelBuffer * (_rb2d.velocity.magnitude / _scaledMaxSpeed);
         }
     }
 
