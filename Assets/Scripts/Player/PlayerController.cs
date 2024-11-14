@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 11/11/24
+ * UPDATED  : 11/14/24
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] InputActionAsset _playerInputs;
     InputAction _brake;
     InputAction _debugSwitch;
+    InputAction _openMenu;
     InputAction _interact;
     InputAction _xInput;
     InputAction _yInput;
@@ -66,6 +67,7 @@ public class PlayerController : MonoBehaviour
     float _analogScaleMax = 1;
 
     // External reference
+    [SerializeField] GameObject _menu;
     GameObject _lastTarget;
     public GameObject lastTarget => _lastTarget;
 
@@ -92,6 +94,7 @@ public class PlayerController : MonoBehaviour
         // Sets inputs
         _brake = _playerInputs.FindAction("Brake");
         _debugSwitch = _playerInputs.FindAction("DebugSwitchState");
+        _openMenu = _playerInputs.FindAction("OpenMenu");
         _interact = _playerInputs.FindAction("Interact");
         _xInput = _playerInputs.FindAction("MoveX");
         _yInput = _playerInputs.FindAction("MoveY");
@@ -100,6 +103,7 @@ public class PlayerController : MonoBehaviour
         _brake.performed += ctx => _isBraking = true;
         _brake.canceled += ctx => _isBraking = false;
         _debugSwitch.performed += ctx => isWalking = !isWalking;
+        _openMenu.performed += ctx => OpenMenu();
         _interact.performed += ctx => PerformInteraction();
 
         // Initializes Accel/Decel Rates
@@ -476,6 +480,19 @@ public class PlayerController : MonoBehaviour
         // Adjusts velocity vars
         _velocityX = _newVel.x;
         _velocityY = _newVel.y;
+    }
+
+    #endregion
+
+    #region MENU CONTROLS
+
+    /// <summary>
+    /// Opens the menu
+    /// </summary>
+    void OpenMenu()
+    {
+        _menu.SetActive(true);
+        TogglePlayerInput();
     }
 
     #endregion
