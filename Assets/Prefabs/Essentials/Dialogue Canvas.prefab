@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 1
-    m_SelectOnUp: {fileID: 8351330215346200409}
+    m_SelectOnUp: {fileID: 6190721481297304673}
     m_SelectOnDown: {fileID: 6829079274504898842}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
@@ -306,7 +306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4, y: -52}
+  m_AnchoredPosition: {x: -4, y: -28}
   m_SizeDelta: {x: 72, y: 24}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &5586789811664148848
@@ -840,6 +840,7 @@ GameObject:
   - component: {fileID: 2457048625093509489}
   - component: {fileID: 1044898800284620256}
   - component: {fileID: 5964277610319174082}
+  - component: {fileID: 201238597563085924}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -911,6 +912,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &201238597563085924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2827974899489065012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7aa5b93d616ebb4da2a32087b46495c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSelection: {fileID: 5718639212593574435}
 --- !u!1 &3154842881230830435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,7 +1764,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4, y: -28}
+  m_AnchoredPosition: {x: -4, y: -52}
   m_SizeDelta: {x: 72, y: 24}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &9059137265920649223
@@ -1969,13 +1983,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TitleMenu, Assembly-CSharp
-        m_MethodName: UnimplementedMessage
-        m_Mode: 2
+      - m_Target: {fileID: 201238597563085924}
+        m_TargetAssemblyTypeName: InGameMainMenu, Assembly-CSharp
+        m_MethodName: ExitMenu
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 6190721481297304673}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2103,13 +2117,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TitleMenu, Assembly-CSharp
-        m_MethodName: UnimplementedMessage
-        m_Mode: 2
+      - m_Target: {fileID: 201238597563085924}
+        m_TargetAssemblyTypeName: InGameMainMenu, Assembly-CSharp
+        m_MethodName: QuitToTitle
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8351330215346200409}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

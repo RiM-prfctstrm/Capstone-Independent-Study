@@ -9,6 +9,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -492,6 +493,7 @@ public class PlayerController : MonoBehaviour
     void OpenMenu()
     {
         _menu.SetActive(true);
+        _menu.GetComponent<InGameMainMenu>().defaultSelection.Select();
         TogglePlayerInput();
     }
 

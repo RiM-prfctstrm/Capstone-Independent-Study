@@ -2,7 +2,7 @@
  * FILE     : SceneTransition
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/29/24
- * UPDATED  : 11/11/24
+ * UPDATED  : 11/14/24
  * 
  * DESC     : Switches scenes and sets variables to initialize that scene's state after transition.
 =================================================================================================*/
@@ -16,7 +16,7 @@ public class SceneTransition
     #region VARIABLES
 
     // External objects
-    static PlayerController _player = PlayerController.playerController;
+    static PlayerController _player;
     static string _currentScene;
 
     #endregion
@@ -34,14 +34,15 @@ public class SceneTransition
     {
         // Gets objects for reference
         _currentScene = SceneManager.GetActiveScene().name;
+        _player = PlayerController.playerController;
 
         // Warps the player without performing loads if the target scene is the current scene
-        if (_currentScene == sceneName)
+        /*if (_currentScene == sceneName)
         {
             UtilityFunctions.WarpToPoint(startPos,
                 _player.GetComponent<PlayerAnimator>().facingDirection);
             return;
-        }
+        }*/
 
         // Resets list of Cutscene-controllable objects
         CutsceneManager.cutsceneManager.ResetCharacterList();
@@ -50,11 +51,11 @@ public class SceneTransition
         SceneManager.LoadScene(sceneName);
         
         // Determines whether the player should remain biking
-        /*if (isIndoors)
+        if (isIndoors)
         {
             _player.isWalking = true;
             _player.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        }*/
+        }
 
         // Sets player's position
         _player.transform.position = startPos;
@@ -80,6 +81,7 @@ public class SceneTransition
     {
         // Gets objects for reference
         _currentScene = SceneManager.GetActiveScene().name;
+        _player = PlayerController.playerController;
 
         // Warps the player without performing loads if the target scene is the current scene
         /*if (_currentScene == sceneName)
