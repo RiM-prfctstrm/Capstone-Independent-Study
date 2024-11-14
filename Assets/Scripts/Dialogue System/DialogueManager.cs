@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 11/9/24
+ * UPDATED  : 11/14/24
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/

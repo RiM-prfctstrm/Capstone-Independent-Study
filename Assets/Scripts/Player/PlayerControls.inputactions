@@ -194,39 +194,6 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "PS3",
-                    "id": "57a0c3fa-c705-4059-b664-07ee20b12fd1",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveY",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "208a753b-5997-4b49-b73c-a75f76ed8b8b",
-                    "path": "<Joystick>/stick/down",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveY",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "a0046ccd-7fea-497a-90c0-f9576dd3319e",
-                    "path": "<Joystick>/stick/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveY",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "",
                     "id": "f6c34260-7443-4fb7-8ef9-938a69caf396",
                     "path": "<Keyboard>/leftCtrl",
@@ -283,39 +250,6 @@
                 },
                 {
                     "name": "",
-                    "id": "0d9ef2fa-127d-45e1-a653-e396396720e5",
-                    "path": "<HID::ShanWan USB WirelessGamepad >/button2",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Brake",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "cf0dc149-7a71-4ff1-92f4-2810305360e2",
-                    "path": "<HID::ShanWan USB WirelessGamepad >/button7",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Brake",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "15953b7d-1509-407b-841e-7e4207f5a99b",
-                    "path": "<HID::ShanWan USB WirelessGamepad >/button8",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Brake",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "b41b88c6-70d3-4bc8-bd3d-48be6e5b5c95",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -329,17 +263,6 @@
                     "name": "",
                     "id": "3acd3d88-880f-4e57-bd57-746129df8550",
                     "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Interact",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "4643a151-9af2-4840-a060-3a785a5da9b2",
-                    "path": "<HID::ShanWan USB WirelessGamepad >/button3",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -371,17 +294,6 @@
                 },
                 {
                     "name": "",
-                    "id": "373b4c50-926b-48e5-945e-bc811d97d92b",
-                    "path": "<HID::ShanWan USB WirelessGamepad >/button4",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "DebugSwitchState",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "dde1f63f-ef4e-42fa-9e26-c6e379fe3e74",
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",
@@ -395,17 +307,6 @@
                     "name": "",
                     "id": "2ce1afe1-d731-473a-8076-af02133752fb",
                     "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Cancel",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "95cbb2ba-2618-484d-a9ba-13415a15dff3",
-                    "path": "<HID::ShanWan USB WirelessGamepad >/button2",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -538,39 +439,6 @@
                     "name": "positive",
                     "id": "d0b06710-e9f7-47d4-85d9-cff094955188",
                     "path": "<Gamepad>/leftStick/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveX",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "PS3",
-                    "id": "a19cf9ba-5f0f-4a8a-b796-83cf339affb1",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveX",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "26721a35-8a87-42c3-8e10-4b97aaeace45",
-                    "path": "<Joystick>/stick/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveX",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "40d13aee-d70c-4616-8fa8-ae4ded534fd1",
-                    "path": "<Joystick>/stick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
