@@ -2,7 +2,7 @@
  * FILE     : TitleMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/31/24
- * UPDATED  : 11/5/24
+ * UPDATED  : 11/15/24
  * 
  * DESC     : Performs functions of the title screen menu.
 =================================================================================================*/
@@ -15,6 +15,9 @@ using UnityEngine.SceneManagement;
 public class TitleMenu : MonoBehaviour
 {
     #region VARIABLES
+
+    // Object Refs
+    [SerializeField] GameObject _credits;
 
     // Debug
     [SerializeField] DialogueManager _menuDM;
@@ -30,6 +33,15 @@ public class TitleMenu : MonoBehaviour
     public void StartNewGame()
     {
         SceneManager.LoadScene("Newscast");
+    }
+
+    /// <summary>
+    /// Activates the credits and sets the sequence
+    /// </summary>
+    public void PlayCredits()
+    {
+        _credits.SetActive(true);
+        _credits.GetComponent<Button>().Select();
     }
 
     /// <summary>
