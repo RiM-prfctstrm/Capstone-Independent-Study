@@ -27,6 +27,7 @@ public class InGameMainMenu : MonoBehaviour
     [SerializeField] TextMeshProUGUI _mapText;
 
     // Data input
+    [TextArea] [SerializeField] string[] _deliveryInfo;
 
     #endregion
 
@@ -39,7 +40,9 @@ public class InGameMainMenu : MonoBehaviour
     /// </summary>
     public void OpenMap()
     {
-
+        _map.gameObject.SetActive(true);
+        _map.Select();
+        _mapText.text = _deliveryInfo[GlobalVariableTracker.currentMission];
     }
 
     /// <summary>
@@ -65,6 +68,15 @@ public class InGameMainMenu : MonoBehaviour
     #endregion
 
     #region SUBMENU BUTTONS
+
+    /// <summary>
+    /// Returns from the map to the main menu
+    /// </summary>
+    public void CloseMap()
+    {
+        _mapButton.Select();
+        _map.gameObject.SetActive(false);
+    }
 
     #endregion
 

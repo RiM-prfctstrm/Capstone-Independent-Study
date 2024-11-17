@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 68775337103078713}
   - component: {fileID: 5718639212593574435}
   m_Layer: 5
-  m_Name: Map
+  m_Name: MapSelector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1161,6 +1161,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultSelection: {fileID: 5718639212593574435}
+  _mapButton: {fileID: 5718639212593574435}
+  _map: {fileID: 3474525007156748123}
+  _mapText: {fileID: 517456820143738081}
 --- !u!1 &3154842881230830435
 GameObject:
   m_ObjectHideFlags: 0
