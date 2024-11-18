@@ -2,7 +2,7 @@
  * FILE     : InGameMainMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/14/24
- * UPDATED  : 11/17/24
+ * UPDATED  : 11/18/24
  * 
  * DESC     : Performs functions of the main in-game menu
 =================================================================================================*/
@@ -48,6 +48,15 @@ public class InGameMainMenu : MonoBehaviour
     }
 
     /// <summary>
+    /// Opens the Bike Manual menu
+    /// </summary>
+    public void OpenManual()
+    {
+        _manual.gameObject.SetActive(true);
+        _manual.Select();
+    }
+    
+    /// <summary>
     /// Returns the game to the title screen and deletes the scene essentials, which are not meant
     /// to exist there
     /// </summary>
@@ -78,6 +87,15 @@ public class InGameMainMenu : MonoBehaviour
     {
         _mapButton.Select();
         _map.gameObject.SetActive(false);
+    }
+
+    /// <summary>
+    /// Returns from manual to the main menu
+    /// </summary>
+    public void CloseManual()
+    {
+        _manualButton.Select();
+        _manual.gameObject.SetActive(false);
     }
 
     #endregion
