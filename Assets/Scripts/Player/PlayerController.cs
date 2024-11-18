@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 11/14/24
+ * UPDATED  : 11/18/24
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -128,7 +128,9 @@ public class PlayerController : MonoBehaviour
         // Restart
         if (Input.GetKey(KeyCode.R)) 
         { 
-            SceneManager.LoadScene(0); 
+            SceneManager.LoadScene(0);
+            Destroy(EssentialPreserver.instance.gameObject);
+            EssentialPreserver.instance = null;
             Time.timeScale = 1; 
         }
 

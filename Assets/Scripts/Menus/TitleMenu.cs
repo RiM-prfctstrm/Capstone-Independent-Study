@@ -2,7 +2,7 @@
  * FILE     : TitleMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/31/24
- * UPDATED  : 11/15/24
+ * UPDATED  : 11/18/24
  * 
  * DESC     : Performs functions of the title screen menu.
 =================================================================================================*/
@@ -22,6 +22,20 @@ public class TitleMenu : MonoBehaviour
     // Debug
     [SerializeField] DialogueManager _menuDM;
     [SerializeField] DialogueEvent _UnimplementedNotif;
+
+    #endregion
+
+    #region UNIVERSAL EVENTS
+
+    /// <summary>
+    /// Start is called before the first frame update
+    /// </summary>
+    private void Start()
+    {
+        // Disables mouse
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
 
     #endregion
 

@@ -2020,6 +2020,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4019001566557630226, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019001566557630226, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+      propertyPath: m_IgnoreReversedGraphics
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019001566557630227, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4019001566557630237, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
       propertyPath: m_Name
       value: Dialogue Canvas
@@ -2236,7 +2248,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
