@@ -21,8 +21,10 @@ public class InGameMainMenu : MonoBehaviour
     // Buttons
     public Button defaultSelection;
     [SerializeField] Button _mapButton;
+    [SerializeField] Button _manualButton;
     // Submenu Buttons
     [SerializeField] Button _map;
+    [SerializeField] Button _manual;
     // Other UI
     [SerializeField] TextMeshProUGUI _mapText;
 
