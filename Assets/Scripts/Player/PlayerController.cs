@@ -311,11 +311,15 @@ public class PlayerController : MonoBehaviour
         }
         
         // Steers bike
-        if ((_moveX != 0 && _moveY == 0) || (_moveY != 0 && _moveX == 0))
+        if (((_moveX != 0 && _moveY == 0) || (_moveY != 0 && _moveX == 0)) && (
+            _rb2d.velocity.x != 0 && _rb2d.velocity.y != 0))
         {
             BikeSteering();
+            AccelerateX();
+            AccelerateY();
+            BikeSteering();
         }
-        if (UtilityFormulas.FindHypotenuse(_velocityX, _velocityY) > _maxBikeSpeed)
+        else if (UtilityFormulas.FindHypotenuse(_velocityX, _velocityY) > _maxBikeSpeed)
         {
             BikeSteering();
         }

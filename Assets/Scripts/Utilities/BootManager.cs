@@ -2,7 +2,7 @@
  * FILE     : EssentialPreserver.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 11/11/24
+ * UPDATED  : 11/19/24
  * 
  * DESC     : Performs functionality that only occurs when the game is first started.
 =================================================================================================*/
@@ -25,8 +25,8 @@ public class BootManager : MonoBehaviour
     [SerializeField] int _startDirection;
 
     // List of NPCs in scene that can be used in cutscenes
-    [Tooltip("Objects that can be used in a cutscene. When referring to one, its ID is its position" +
-        " in the list + 1.")]
+    [Tooltip("Objects that can be used in a cutscene. " +
+        "When referring to one, its ID is its position in the list + 1.")]
     [SerializeField] List<GameObject> _cutsceneObjs = new List<GameObject>();
 
     #endregion
