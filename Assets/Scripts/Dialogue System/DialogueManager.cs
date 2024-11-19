@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 11/14/24
+ * UPDATED  : 11/19/24
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -50,14 +50,6 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         _advanceButton.onClick.AddListener(() => _advancing = true);
-    }
-
-    /// <summary>
-    /// Update is called once per frame
-    /// </summary>
-    void Update()
-    {
-
     }
 
     #endregion
