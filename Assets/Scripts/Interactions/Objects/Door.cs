@@ -2,7 +2,7 @@
  * FILE     : Door.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 11/5/24
+ * UPDATED  : 11/19/24
  * 
  * DESC     : Basically a fancier version of SceneTrigger that activates when the player interacts
  *            with it, plays different animations and sounds, and can be locked until the player
@@ -25,27 +25,6 @@ public class Door : InteractableObject
     // Locking info
     public bool isLocked = false;
     [SerializeField] DialogueEvent _lockedMessage;
-
-    #endregion
-
-    #region UNIVERSAL EVENTS
-
-    /// <summary>
-    /// Start is called before the first frame update
-    /// </summary>
-    void Start()
-    {
-
-    }
-
-
-    /// <summary>
-    ///  Update is called once per frame
-    /// </summary>
-    void Update()
-    {
-
-    }
 
     #endregion
 
