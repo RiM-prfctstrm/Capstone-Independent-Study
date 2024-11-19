@@ -173,21 +173,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Sent when an incoming collider stops making contact with this object's collider (2D physics
-    /// only).
-    /// </summary>
-    /// <param name="collision">The Collision2D data associated with this collision.</param>
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        // Reset velocity modifiers to compensate for collision
-        /* (!isWalking)
-        {
-            _velocityX = _rb2d.velocity.x;
-            _velocityY = _rb2d.velocity.y;
-        }*/
-    }
-
     #endregion
 
     #region INPUT MANAGEMENT
@@ -243,9 +228,10 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public void TogglePlayerInput()
     {
-        if (_playerInputs.enabled)
+        if (_xInput.enabled)
         {
             _playerInputs.Disable();
+            _interact.Enable();
         }
         else
         {
@@ -274,6 +260,10 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("No interaction");
             }
+        }
+        else
+        {
+            _dialogueManager.advancing = true;
         }
     }
 

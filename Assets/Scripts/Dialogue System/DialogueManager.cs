@@ -28,8 +28,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] GameObject _nametagOutline;
     [SerializeField] Image _portraitImage;
     [SerializeField] GameObject _portraitOutline;
-    // Invisible Button to advance dialogue
-    [SerializeField] Button _advanceButton;
 
     // Other Objects
     public Button previouslySelected = null;
@@ -37,7 +35,7 @@ public class DialogueManager : MonoBehaviour
     // Progress signals
     static bool _dialogueInProgress = false;
     public static bool dialogueInProgress => _dialogueInProgress;
-    bool _advancing = false;
+    public bool advancing = false;
     IEnumerator _dialogRoutine;
 
     #endregion
@@ -54,10 +52,6 @@ public class DialogueManager : MonoBehaviour
         _dialogueInProgress = true;
         _dialogueOutline.SetActive(true);
 
-        // Sets up buttons for dialogue
-        _advanceButton.Select();
-        _advanceButton.interactable = true;
-
         // Clears existing dialogue to help skip unwanted first lines
         _dialogueText.text = "";
 
@@ -72,15 +66,8 @@ public class DialogueManager : MonoBehaviour
     /// <param name="sequence">Sequence of dialogues to play</param>
     IEnumerator PlayDialogue(DialogueEvent sequence)
     {
-        // Prevents the first line from being skipped or blank because of initial input
-        if (NPCInteraction.inNPCInteraction)
-        {
-            yield return new WaitUntil(() => _advancing == true);
-            _advancing = false;
-        }
-
         // Plays each line of dialogue at correct time
-        foreach (Dialogue line in sequence.dialogueBoxes)
+         foreach (Dialogue line in sequence.dialogueBoxes)
         {
             // Displays the line
             DisplayDialogue(line);
@@ -92,8 +79,8 @@ public class DialogueManager : MonoBehaviour
             }
 
             // Waits for input to continue the loop
-            yield return new WaitUntil(() => _advancing == true);
-            _advancing = false;
+            yield return new WaitUntil(() => advancing == true);
+            advancing = false;
         }
 
         // Ends Dialogue
@@ -139,7 +126,6 @@ public class DialogueManager : MonoBehaviour
     {
         // Lets other scripts know player is out of dialogue
         _dialogueInProgress = false;
-        _advanceButton.interactable = false;
         NPCInteraction.inNPCInteraction = false;
 
         // Ends Active Dialogue sequence
@@ -156,20 +142,6 @@ public class DialogueManager : MonoBehaviour
             previouslySelected.Select();
             previouslySelected = null;
         }
-    }
-
-    #endregion
-
-    #region PROGRESS CONTROL
-
-    /// <summary>
-    /// Used to tell the coroutine to advance to the next dialogue
-    /// </summary>
-    /// <returns>Always returns true</returns>
-    public void AdvanceText()
-    {
-        _advancing = true;
-        _advanceButton.Select();
     }
 
     #endregion
