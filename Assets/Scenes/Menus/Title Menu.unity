@@ -2040,6 +2040,22 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4571421190944861863, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 70280378}
+    - target: {fileID: 4571421190944861863, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AdvanceText
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571421190944861863, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DialogueManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571421190944861863, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5784503817573627896, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
       propertyPath: m_RootOrder
       value: 4

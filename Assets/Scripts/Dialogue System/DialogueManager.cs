@@ -42,18 +42,6 @@ public class DialogueManager : MonoBehaviour
 
     #endregion
 
-    #region UNIVERSAL EVENTS
-
-    /// <summary>
-    /// Start is called before the first frame update
-    /// </summary>
-    void Start()
-    {
-        _advanceButton.onClick.AddListener(() => _advancing = true);
-    }
-
-    #endregion
-
     #region DIALOGUE FUNCTIONS
 
     /// <summary>
@@ -168,6 +156,20 @@ public class DialogueManager : MonoBehaviour
             previouslySelected.Select();
             previouslySelected = null;
         }
+    }
+
+    #endregion
+
+    #region PROGRESS CONTROL
+
+    /// <summary>
+    /// Used to tell the coroutine to advance to the next dialogue
+    /// </summary>
+    /// <returns>Always returns true</returns>
+    public void AdvanceText()
+    {
+        _advancing = true;
+        _advanceButton.Select();
     }
 
     #endregion
