@@ -48,7 +48,6 @@ public class PlayerController : MonoBehaviour
     float _bufferRate;
     bool _isBraking;
     public bool isWalking;
-    float _scaledMaxSpeed;
     float _velocityX;
     float _velocityY;
     Vector2 _newVel;
@@ -305,7 +304,7 @@ public class PlayerController : MonoBehaviour
     void BikeMovement()
     {
         // Computes velocity
-        if (!_isBraking && _rb2d.velocity.magnitude < _scaledMaxSpeed)
+        if (!_isBraking)
         {
             AccelerateX();
             AccelerateY();
@@ -316,7 +315,7 @@ public class PlayerController : MonoBehaviour
         {
             BikeSteering();
         }
-        if (UtilityFormulas.FindHypotenuse(_velocityX, _velocityY) > _scaledMaxSpeed)
+        if (UtilityFormulas.FindHypotenuse(_velocityX, _velocityY) > _maxBikeSpeed)
         {
             BikeSteering();
         }
@@ -367,17 +366,17 @@ public class PlayerController : MonoBehaviour
         {
             // Accelerates on axis
             _velocityX += _accelRate * _moveX * Time.fixedDeltaTime;
-            _velocityX = Mathf.Clamp(_velocityX, -_scaledMaxSpeed, _scaledMaxSpeed);
+            _velocityX = Mathf.Clamp(_velocityX, -_maxBikeSpeed, _maxBikeSpeed);
 
             // Debug feedback
-            if (Mathf.Abs(_velocityX) >= _scaledMaxSpeed)
+            if (Mathf.Abs(_velocityX) >= _maxBikeSpeed)
             {
                 Debug.Log("Maxed X!");
             }
 
             // Resets deceleration buffer
             _decelClamp = _decelTime; 
-            _buffer = _decelBuffer * (_rb2d.velocity.magnitude / _scaledMaxSpeed);
+            _buffer = _decelBuffer * (_rb2d.velocity.magnitude / _maxBikeSpeed);
         }
     }
 
@@ -391,17 +390,17 @@ public class PlayerController : MonoBehaviour
         {
             // Accelerates on axis
             _velocityY += _accelRate * _moveY * Time.fixedDeltaTime;
-            _velocityY = Mathf.Clamp(_velocityY, -_scaledMaxSpeed, _scaledMaxSpeed);
+            _velocityY = Mathf.Clamp(_velocityY, -_maxBikeSpeed, _maxBikeSpeed);
 
             // Debug feedback
-            if (Mathf.Abs(_velocityY) >= _scaledMaxSpeed)
+            if (Mathf.Abs(_velocityY) >= _maxBikeSpeed)
             {
                 Debug.Log("Maxed Y!");
             }
 
             // Resets deceleration buffer
             _decelClamp = _decelTime;
-            _buffer = _decelBuffer * (_rb2d.velocity.magnitude / _scaledMaxSpeed);
+            _buffer = _decelBuffer * (_rb2d.velocity.magnitude / _maxBikeSpeed);
         }
     }
 
