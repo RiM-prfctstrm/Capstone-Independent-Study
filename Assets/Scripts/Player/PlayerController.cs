@@ -24,10 +24,8 @@ public class PlayerController : MonoBehaviour
     PlayerAnimator _playerAnimator;
     SpriteRenderer _playerRenderer;
     Rigidbody2D _rb2d;
-
     // External Components
     [SerializeField] DetectObjects _detector;
-    DialogueManager _dialogueManager;
 
     // Parameters
     [SerializeField] float _accelTime;
@@ -38,6 +36,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float _walkSpeed;
     [SerializeField] int _steeringAngleThreshold;
     [SerializeField] float _steeringVelThreshold;
+    [SerializeField] PhysicsMaterial2D _bikeMaterial;
 
     // Movement Vars
     float _accelRate;
@@ -65,6 +64,7 @@ public class PlayerController : MonoBehaviour
 
     // External reference
     [SerializeField] GameObject _menu;
+    DialogueManager _dialogueManager;
     GameObject _lastTarget;
     public GameObject lastTarget => _lastTarget;
 
@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
         // Assigns actions to inputs
         _brake.performed += ctx => _isBraking = true;
         _brake.canceled += ctx => _isBraking = false;
-        _debugSwitch.performed += ctx => isWalking = !isWalking;
+        _debugSwitch.performed += ctx => ToggleBike();
         _openMenu.performed += ctx => OpenMenu();
         _interact.performed += ctx => PerformInteraction();
 
@@ -454,6 +454,25 @@ public class PlayerController : MonoBehaviour
         _velocityY = _newVel.y;
     }
 
+    /// <summary>
+    /// Switches from walking to biking, and changes physics materials
+    /// </summary>
+    public void ToggleBike()
+    {
+        // Switches mode
+        isWalking = !isWalking;
+
+        // Changes material
+        if (!isWalking)
+        {
+            _rb2d.sharedMaterial = _bikeMaterial;
+        }
+        else
+        {
+            _rb2d.sharedMaterial = null;
+        }
+    }
+
     #endregion
 
     #region MENU CONTROLS
@@ -463,7 +482,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void OpenMenu()
     {
-        // Opend menu
+        // Opens menu
         _menu.SetActive(true);
         _menu.GetComponent<InGameMainMenu>().defaultSelection.Select();
 

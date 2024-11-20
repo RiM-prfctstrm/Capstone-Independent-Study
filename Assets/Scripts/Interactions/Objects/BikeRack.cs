@@ -2,7 +2,7 @@
  * FILE     : BikeRack.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/14/23
- * UPDATED  : 10/14/24
+ * UPDATED  : 11/20/24
  * 
  * DESC     : An interactable object that switches the player's movement state.
 =================================================================================================*/
@@ -39,7 +39,7 @@ public class BikeRack : InteractableObject
     /// </summary>
     public override void OnInteractedWith()
     {
-        _player.isWalking = !_player.isWalking;
+        _player.ToggleBike();
     }
 
     #endregion

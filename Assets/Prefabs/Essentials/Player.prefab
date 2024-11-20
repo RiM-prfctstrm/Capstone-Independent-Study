@@ -190,8 +190,10 @@ MonoBehaviour:
   _walkSpeed: 275
   _steeringAngleThreshold: 135
   _steeringVelThreshold: 0.25
+  _bikeMaterial: {fileID: 6200000, guid: 7960f834bfda28d449d9cfc85d53dfd3, type: 2}
   isWalking: 1
   _playerInputs: {fileID: -944628639613478452, guid: c950dc6ac45a77d4a9d65e00fcf3b1a0, type: 3}
+  _menu: {fileID: 0}
 --- !u!114 &6512634947272463561
 MonoBehaviour:
   m_ObjectHideFlags: 0
