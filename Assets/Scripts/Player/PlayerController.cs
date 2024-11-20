@@ -115,21 +115,6 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
-        // Debug commands
-        // Exit Game
-        if (Input.GetKey(KeyCode.Escape)) 
-        { 
-            Application.Quit(); 
-        }
-        // Restart
-        if (Input.GetKey(KeyCode.R)) 
-        { 
-            SceneManager.LoadScene(0);
-            Destroy(EssentialPreserver.instance.gameObject);
-            EssentialPreserver.instance = null;
-            Time.timeScale = 1; 
-        }
-
         // Gets inputs for frame
         ValidateInputs();
 
