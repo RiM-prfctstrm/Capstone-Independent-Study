@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 11/19/24
+ * UPDATED  : 11/20/24
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -463,9 +463,13 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void OpenMenu()
     {
+        // Opend menu
         _menu.SetActive(true);
         _menu.GetComponent<InGameMainMenu>().defaultSelection.Select();
+
+        // Disables non-menu inputs
         TogglePlayerInput();
+        _interact.Disable();
     }
 
     #endregion
