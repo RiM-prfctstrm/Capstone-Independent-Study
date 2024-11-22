@@ -297,6 +297,9 @@ public class PlayerController : MonoBehaviour
         else if (UtilityFormulas.FindHypotenuse(_velocityX, _velocityY) > _maxBikeSpeed)
         {
             BikeSteering();
+            AccelerateX();
+            AccelerateY();
+            BikeSteering();
         }
 
         // Decelerates the bike
