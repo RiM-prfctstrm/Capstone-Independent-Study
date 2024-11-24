@@ -1348,11 +1348,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[3].dialogueBoxes.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].nameTag
@@ -1393,6 +1405,22 @@ PrefabInstance:
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[9].nameTag
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].nameTag
+      value: Nurse
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.data[0].nameTag
+      value: Nurse
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[3].dialogueBoxes.Array.data[0].nameTag
+      value: Nurse
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[3].dialogueBoxes.Array.data[1].nameTag
+      value: Nurse
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[10].nameTag
@@ -1446,6 +1474,22 @@ PrefabInstance:
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[9].dialogueText
       value: '* The nurse sends some more messages.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].dialogueText
+      value: Please don't do anything disruptive to the patient.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.data[0].dialogueText
+      value: Please don't do anything disruptive to the patient.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[3].dialogueBoxes.Array.data[0].dialogueText
+      value: In case you're thinking of doing anything funny...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[3].dialogueBoxes.Array.data[1].dialogueText
+      value: I have a black belt.
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[10].dialogueText
