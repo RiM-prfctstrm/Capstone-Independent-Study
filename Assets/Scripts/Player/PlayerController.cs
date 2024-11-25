@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 11/20/24
+ * UPDATED  : 11/25/24
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -76,9 +76,9 @@ public class PlayerController : MonoBehaviour
     #region UNIVERSAL EVENTS
 
     /// <summary>
-    /// Start is called before the first frame update
+    /// Awake is called when the script instance is first loaded
     /// </summary>
-    void Start()
+    void Awake()
     {
         // Sets components
         _playerAnimator = GetComponent<PlayerAnimator>();

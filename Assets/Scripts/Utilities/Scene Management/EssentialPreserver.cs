@@ -30,8 +30,8 @@ public class EssentialPreserver : MonoBehaviour
         // to set children in their respective classes, but since this only happens once it's not
         // as big a deal and helps keep the execution order clean.
         instance = this;
-        DialogueManager.dialogueManager = GetComponentInChildren<DialogueManager>();
         PlayerController.playerController = GetComponentInChildren<PlayerController>();
+        DialogueManager.dialogueManager = GetComponentInChildren<DialogueManager>();
         CutsceneManager.cutsceneManager = GetComponentInChildren<CutsceneManager>();
 
         // Keeps object and children around when new scenes are loaded
