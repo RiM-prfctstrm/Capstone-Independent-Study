@@ -233,7 +233,8 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void PerformInteraction()
     {
-        if (!DialogueManager.dialogueInProgress)
+        Debug.Log("e");
+        if (!NPCInteraction.inNPCInteraction && !DialogueManager.dialogueInProgress)
         {
             // Initiates interactions with objects in game world
             if (_detector.target != null)
