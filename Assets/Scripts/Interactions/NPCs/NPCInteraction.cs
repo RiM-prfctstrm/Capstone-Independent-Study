@@ -109,15 +109,17 @@ public class NPCInteraction : InteractableObject
     /// </summary>
     void NPCDialogue()
     {
+        // Stops Positive Overflow
+        if (_dialogueCycle >= _NPCLines.Count)
+        {
+            _dialogueCycle = 0;
+        }
+
         // Plays Dialogue
         _dialogueManager.StartDialogue(_NPCLines[_dialogueCycle]);
 
         // Updates currently playing event
         _dialogueCycle++;
-        if (_dialogueCycle >= _NPCLines.Count)
-        {
-            _dialogueCycle = 0;
-        }
     }
 
     /// <summary>
