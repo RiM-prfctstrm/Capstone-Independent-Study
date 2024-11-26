@@ -2,7 +2,7 @@
  * FILE     : DisplayImage.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/6/24
- * UPDATED  : 11/6/24
+ * UPDATED  : 11/25/24
  * 
  * DESC     : Displays an image at a specified point on the screen. Used in cutscenes.
 =================================================================================================*/
@@ -60,7 +60,7 @@ public class DisplayImage : CutsceneEvent
 
         // Activates image and finishes event
         _renderObject.SetActive(true);
-        _eventComplete = true;
+        eventComplete = true;
     }
 
     #endregion

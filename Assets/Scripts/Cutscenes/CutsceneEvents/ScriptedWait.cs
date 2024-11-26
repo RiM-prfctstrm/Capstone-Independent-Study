@@ -2,7 +2,7 @@
  * FILE     : ScriptedWait.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/8/24
- * UPDATED  : 11/8/24
+ * UPDATED  : 11/25/24
  * 
  * DESC     : Delays cutscene execution for an assigned span.
 =================================================================================================*/
@@ -42,7 +42,7 @@ public class ScriptedWait : CutsceneEvent
     {
         yield return new WaitForSeconds(_waitSeconds);
 
-        _eventComplete = true;
+        eventComplete = true;
     }
 
     #endregion

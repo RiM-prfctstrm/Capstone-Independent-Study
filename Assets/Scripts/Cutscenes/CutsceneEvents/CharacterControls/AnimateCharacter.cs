@@ -2,7 +2,7 @@
  * FILE     : AnimateCharacter.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/7/24
- * UPDATED  : 11/11/24
+ * UPDATED  : 11/25/24
  * 
  * DESC     : Forces a character into a specified animation, overriding their default programming.
 =================================================================================================*/
@@ -46,7 +46,7 @@ public class AnimateCharacter : CutsceneEvent
         _targetAnimator.PlayScriptedAnimation(_animName);
 
         // Signal completion
-        _eventComplete = true;
+        eventComplete = true;
     }
 
     #endregion

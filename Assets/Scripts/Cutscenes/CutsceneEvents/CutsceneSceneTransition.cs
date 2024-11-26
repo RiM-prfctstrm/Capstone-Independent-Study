@@ -2,7 +2,7 @@
  * FILE     : CutsceneSceneTransition.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/7/24
- * UPDATED  : 11/7/24
+ * UPDATED  : 11/25/24
  * 
  * DESC     : Controls scene transitions in the middle of a cutscene, allowing a single script to
  *            continue across multiple scenes.
@@ -54,7 +54,7 @@ public class CutsceneSceneTransition : CutsceneEvent
     {
         yield return new WaitUntil(() => SceneManager.GetSceneByName(_scene).isLoaded == true);
 
-        _eventComplete = true;
+        eventComplete = true;
     }
 
     #endregion

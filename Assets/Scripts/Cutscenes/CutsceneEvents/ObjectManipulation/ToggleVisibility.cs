@@ -2,7 +2,7 @@
  * FILE     : ToggleVisibilty.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/11/24 (Veteran's Day [USA] / Singles' Day [China])
- * UPDATED  : 11/11/24
+ * UPDATED  : 11/25/24
  * 
  * DESC     : Sets whether a GameObject's sprite is visible.
 =================================================================================================*/
@@ -48,7 +48,7 @@ public class ToggleVisibility : CutsceneEvent
         }
 
         // Signals completion
-        _eventComplete = true;
+        eventComplete = true;
     }
 
 

@@ -2,7 +2,7 @@
  * FILE     : MoveByVectors.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/8/24
- * UPDATED  : 11/11/24
+ * UPDATED  : 11/25/24
  * 
  * DESC     : Translates a character along a set of vectors.
 =================================================================================================*/
@@ -19,7 +19,7 @@ public class MoveByVectors : CutsceneEvent
     // Inputs
     [SerializeField] int _targetID;
     [SerializeField] float _speed = 4; // Default speed set to feel good for walking.
-    [SerializeField] List<Vector2> _movements = new List<Vector2>();
+    public List<Vector2> _movements = new List<Vector2>();
 
     [SerializeField] bool _overrideMovementAnimation = false;
     [SerializeField] string _overrideAnimation;
@@ -44,8 +44,7 @@ public class MoveByVectors : CutsceneEvent
         base.PlayEventFunction();
 
         // Sets the character the script acts on
-        _targetCharacter = CutsceneManager.cutsceneManager.cutsceneObjects[_targetID];
-        _targetAnimator = _targetCharacter.GetComponent<CharacterAnimator>();
+        SetTarget();
 
         // Starts movement loop
         CutsceneManager.cutsceneManager.StartCoroutine(WaitForEventEnd());
@@ -91,12 +90,38 @@ public class MoveByVectors : CutsceneEvent
 
         // Sets character to a finished animation and completes event
         _targetAnimator.PlayScriptedAnimation(_targetAnimator.SetAnimState());
-        _eventComplete = true;
+        eventComplete = true;
+    }
+
+    /// <summary>
+    /// Instantly performs the movement operation when the event is being skipped.
+    /// </summary>
+    public void MoveInstantly()
+    {
+        // Sets the character the script acts on
+        SetTarget();
+
+        // Gets starting position and final direction
+        _targetPos = _targetCharacter.transform.position;
+        _movementVector = _movements[_movements.Count - 1];
+
+        // Sets final destination
+        foreach (Vector2 step in _movements)
+        {
+            _targetPos += step;
+        }
+
+        // Sets position and rotation
+        _targetCharacter.transform.position = _targetPos;
+        UpdateMoveAnimation();
+
+        // Ends event
+        eventComplete = true;
     }
 
     /// <summary>
     /// Automatically sets a movement animation when no override is specified. Logic order follows
-    /// a circle starting on the positive side of the X axis
+    /// a circle starting on the positive side of the X axis.
     /// </summary>
     void UpdateMoveAnimation()
     {
@@ -126,6 +151,19 @@ public class MoveByVectors : CutsceneEvent
             _targetAnimator.facingDirection = 3;
             _targetAnimator.PlayScriptedAnimation("Up");
         }
+    }
+
+    #endregion
+
+    #region DATA MANAGEMENT
+
+    /// <summary>
+    /// Sets the object the script acts on.
+    /// </summary>
+    void SetTarget()
+    {
+        _targetCharacter = CutsceneManager.cutsceneManager.cutsceneObjects[_targetID];
+        _targetAnimator = _targetCharacter.GetComponent<CharacterAnimator>();
     }
 
     #endregion

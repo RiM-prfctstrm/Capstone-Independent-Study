@@ -118,7 +118,6 @@ public class PlayerController : MonoBehaviour
         // Gets inputs for frame
         ValidateInputs();
 
-
         // Controls which kind of movement to perform.
         if (isWalking)
         {
@@ -233,8 +232,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void PerformInteraction()
     {
-        Debug.Log("e");
-        if (!NPCInteraction.inNPCInteraction && !DialogueManager.dialogueInProgress)
+        if (!CutsceneManager.inCutscene && !DialogueManager.dialogueInProgress)
         {
             // Initiates interactions with objects in game world
             if (_detector.target != null)
