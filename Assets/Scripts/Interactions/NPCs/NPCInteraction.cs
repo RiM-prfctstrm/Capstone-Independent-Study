@@ -2,7 +2,7 @@
  * FILE     : NPCInteraction.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/11/24
- * UPDATED  : 11/9/24
+ * UPDATED  : 11/25/24
  * 
  * DESC     : Controls how NPCs behave when the player interacts with them.
 =================================================================================================*/
@@ -109,6 +109,13 @@ public class NPCInteraction : InteractableObject
     /// </summary>
     void NPCDialogue()
     {
+        // Last line of defence to stop regular dialogue from playing in cutscenes. Ideally, this
+        // will never be true
+        if (CutsceneManager.inCutscene)
+        {
+            return;
+        }
+
         // Stops Positive Overflow
         if (_dialogueCycle >= _NPCLines.Count)
         {
