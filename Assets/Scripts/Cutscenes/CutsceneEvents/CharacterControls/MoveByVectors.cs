@@ -2,7 +2,7 @@
  * FILE     : MoveByVectors.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/8/24
- * UPDATED  : 11/25/24
+ * UPDATED  : 12/2/24
  * 
  * DESC     : Translates a character along a set of vectors.
 =================================================================================================*/
@@ -31,6 +31,7 @@ public class MoveByVectors : CutsceneEvent
     // Movement Parameters
     Vector2 _movementVector;
     Vector2 _targetPos;
+    Vector2 _referencePos = new Vector2 (9999, 9999);
 
     #endregion
 
@@ -55,6 +56,9 @@ public class MoveByVectors : CutsceneEvent
     /// </summary>
     protected override IEnumerator WaitForEventEnd()
     {
+        // Sets a reference to where the movement begins
+        _referencePos = _targetCharacter.transform.position;
+
         // Loops through all movement vectors
         foreach (Vector2 step in _movements)
         {
@@ -88,6 +92,9 @@ public class MoveByVectors : CutsceneEvent
             _targetCharacter.transform.position = _targetPos;
         }
 
+        // Sets a reference to where the movement ends
+        _referencePos = _targetCharacter.transform.position;
+
         // Sets character to a finished animation and completes event
         _targetAnimator.PlayScriptedAnimation(_targetAnimator.SetAnimState());
         eventComplete = true;
@@ -100,9 +107,14 @@ public class MoveByVectors : CutsceneEvent
     {
         // Sets the character the script acts on
         SetTarget();
+        if (_referencePos.Equals((9999, 9999)))
+        {
+            // Sets a reference position to where it begins
+            _referencePos = _targetCharacter.transform.position;
+        }
 
         // Gets starting position and final direction
-        _targetPos = _targetCharacter.transform.position;
+        _targetPos = _referencePos;
         _movementVector = _movements[_movements.Count - 1];
 
         // Sets final destination
@@ -162,6 +174,7 @@ public class MoveByVectors : CutsceneEvent
     /// </summary>
     void SetTarget()
     {
+        // Gets objects and components
         _targetCharacter = CutsceneManager.cutsceneManager.cutsceneObjects[_targetID];
         _targetAnimator = _targetCharacter.GetComponent<CharacterAnimator>();
     }
