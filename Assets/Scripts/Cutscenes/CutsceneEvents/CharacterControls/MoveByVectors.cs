@@ -2,7 +2,7 @@
  * FILE     : MoveByVectors.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/8/24
- * UPDATED  : 12/2/24
+ * UPDATED  : 12/3/24
  * 
  * DESC     : Translates a character along a set of vectors.
 =================================================================================================*/
@@ -31,7 +31,7 @@ public class MoveByVectors : CutsceneEvent
     // Movement Parameters
     Vector2 _movementVector;
     Vector2 _targetPos;
-    Vector2 _referencePos = new Vector2 (9999, 9999);
+    Vector3 _referencePos = new Vector3 (0, 0, 1);
 
     #endregion
 
@@ -107,7 +107,7 @@ public class MoveByVectors : CutsceneEvent
     {
         // Sets the character the script acts on
         SetTarget();
-        if (_referencePos.Equals((9999, 9999)))
+        if (_referencePos.z != 0)
         {
             // Sets a reference position to where it begins
             _referencePos = _targetCharacter.transform.position;

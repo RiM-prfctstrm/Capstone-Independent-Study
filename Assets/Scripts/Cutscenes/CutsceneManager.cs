@@ -132,8 +132,7 @@ public class CutsceneManager : MonoBehaviour
             i = _skipEvent.cutsceneScript[j];
 
             // Skips events that do not alter game state beyond cosmetics within cutscene
-            if (i.GetType() == typeof(CutsceneDialogue) || i.GetType() == typeof(ScriptedWait) ||
-                i.GetType() == typeof(DisplayImage) || i.GetType() == typeof(ClearImage))
+            if (i.GetType() == typeof(CutsceneDialogue) || i.GetType() == typeof(ScriptedWait))
             {
                 i.eventComplete = true;
                 continue;
@@ -141,7 +140,8 @@ public class CutsceneManager : MonoBehaviour
             // Performs state-changing events that happen instantaneously by default
             else if (i.GetType() == typeof(AnimateCharacter) ||
                 i.GetType() == typeof(ToggleVisibility) ||
-                i.GetType() == typeof(CutsceneSceneTransition))
+                i.GetType() == typeof(CutsceneSceneTransition) ||
+                i.GetType() == typeof(DisplayImage) || i.GetType() == typeof(ClearImage))
             {
                 i.PlayEventFunction();
             }
