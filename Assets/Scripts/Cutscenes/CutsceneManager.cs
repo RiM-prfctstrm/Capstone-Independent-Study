@@ -2,7 +2,7 @@
  * FILE     : CutsceneManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1X/X/24
- * UPDATED  : 11/25/24
+ * UPDATED  : 12/6/24
  * 
  * DESC     : Controls the progression of scripted events.
 =================================================================================================*/
@@ -132,7 +132,8 @@ public class CutsceneManager : MonoBehaviour
             i = _skipEvent.cutsceneScript[j];
 
             // Skips events that do not alter game state beyond cosmetics within cutscene
-            if (i.GetType() == typeof(CutsceneDialogue) || i.GetType() == typeof(ScriptedWait))
+            if (i.GetType() == typeof(CutsceneDialogue) || i.GetType() == typeof(ScriptedWait) ||
+                i.GetType() == typeof(SetEventMusic))
             {
                 i.eventComplete = true;
                 continue;

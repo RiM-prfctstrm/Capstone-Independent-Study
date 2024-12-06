@@ -2,7 +2,7 @@
  * FILE     : EssentialPreserver.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 10/31/24
+ * UPDATED  : 12/6/24
  * 
  * DESC     : Used to keep scene essentials when a new scene is loaded.
 =================================================================================================*/
@@ -33,6 +33,7 @@ public class EssentialPreserver : MonoBehaviour
         PlayerController.playerController = GetComponentInChildren<PlayerController>();
         DialogueManager.dialogueManager = GetComponentInChildren<DialogueManager>();
         CutsceneManager.cutsceneManager = GetComponentInChildren<CutsceneManager>();
+        MusicManager.musicManager = GetComponentInChildren<MusicManager>();
 
         // Keeps object and children around when new scenes are loaded
         DontDestroyOnLoad(gameObject);

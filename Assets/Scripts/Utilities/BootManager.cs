@@ -1,8 +1,8 @@
 /*=================================================================================================
- * FILE     : EssentialPreserver.cs
+ * FILE     : BootManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 11/19/24
+ * UPDATED  : 12/6/24
  * 
  * DESC     : Performs functionality that only occurs when the game is first started.
 =================================================================================================*/
@@ -29,6 +29,10 @@ public class BootManager : MonoBehaviour
         "When referring to one, its ID is its position in the list + 1.")]
     [SerializeField] List<GameObject> _cutsceneObjs = new List<GameObject>();
 
+    // Level-specific music
+    //SerializeField] bool _hasLocalMusic = false;
+    [SerializeField] AudioClip _localMusic;
+
     #endregion
 
     #region UNIVERSAL EVENTS
@@ -52,6 +56,15 @@ public class BootManager : MonoBehaviour
 
         // Adds Cutscene-capable NPCs to the list of potential actors
         CutsceneManager.cutsceneManager.cutsceneObjects.AddRange(_cutsceneObjs);
+    }
+
+    /// <summary>
+    /// Start is called before the first frame update
+    /// </summary>
+    void Start()
+    {
+        // Plays the local music
+        MusicManager.musicManager.BeginSong(_localMusic, true);
     }
 
     #endregion
