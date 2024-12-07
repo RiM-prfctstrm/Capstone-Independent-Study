@@ -2,7 +2,7 @@
  * FILE     : MusicManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 12/6/24
- * UPDATED  : 12/6/24
+ * UPDATED  : 12/7/24
  * 
  * DESC     : Keeps track of which songs are in circulation using a tiered system to determine
  *            which music is most important to play.
@@ -55,7 +55,7 @@ public class MusicManager : MonoBehaviour
         {
             while (_musicSource.volume > 0)
             {
-                _musicSource.volume -= .01f * Time.fixedDeltaTime;
+                _musicSource.volume -= .008f * Time.fixedDeltaTime;
             }
         }
 
@@ -69,7 +69,7 @@ public class MusicManager : MonoBehaviour
 
         // Plays new song and sets it as active
         _activeSong = song;
-        _musicSource.volume = 1;
+        _musicSource.volume = .8f;
         _musicSource.clip = song;
         _musicSource.Play();
     }

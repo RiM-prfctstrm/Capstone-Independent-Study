@@ -2,7 +2,7 @@
  * FILE     : CutsceneManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1X/X/24
- * UPDATED  : 12/6/24
+ * UPDATED  : 12/7/24
  * 
  * DESC     : Controls the progression of scripted events.
 =================================================================================================*/
@@ -61,8 +61,9 @@ public class CutsceneManager : MonoBehaviour
     public void StartCutscene(Cutscene cutscene)
     {
         // Sets up cutscene mode
-        _inCutscene = true;
+        PlayerController.playerController.rb2d.velocity = Vector2.zero;
         PlayerController.playerController.TogglePlayerInput();
+        _inCutscene = true;
         _skipEvent = cutscene;
         _skipPos = 0;
 
@@ -132,17 +133,17 @@ public class CutsceneManager : MonoBehaviour
             i = _skipEvent.cutsceneScript[j];
 
             // Skips events that do not alter game state beyond cosmetics within cutscene
-            if (i.GetType() == typeof(CutsceneDialogue) || i.GetType() == typeof(ScriptedWait) ||
-                i.GetType() == typeof(SetEventMusic))
+            if (i.GetType() == typeof(CutsceneDialogue) || i.GetType() == typeof(ScriptedWait))
             {
                 i.eventComplete = true;
                 continue;
             }
             // Performs state-changing events that happen instantaneously by default
             else if (i.GetType() == typeof(AnimateCharacter) ||
-                i.GetType() == typeof(ToggleVisibility) ||
-                i.GetType() == typeof(CutsceneSceneTransition) ||
-                i.GetType() == typeof(DisplayImage) || i.GetType() == typeof(ClearImage))
+                     i.GetType() == typeof(CutsceneSceneTransition) ||
+                     i.GetType() == typeof(SetEventMusic) || 
+                     i.GetType() == typeof(ToggleVisibility) ||
+                     i.GetType() == typeof(DisplayImage) || i.GetType() == typeof(ClearImage))
             {
                 i.PlayEventFunction();
             }

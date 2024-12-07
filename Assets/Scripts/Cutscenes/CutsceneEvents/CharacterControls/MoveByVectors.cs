@@ -2,7 +2,7 @@
  * FILE     : MoveByVectors.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/8/24
- * UPDATED  : 12/3/24
+ * UPDATED  : 12/7/24
  * 
  * DESC     : Translates a character along a set of vectors.
 =================================================================================================*/
@@ -36,7 +36,7 @@ public class MoveByVectors : CutsceneEvent
     #endregion
 
     #region EVENT FUNCTIONALITY
-    
+
     /// <summary>
     /// Sets up movement
     /// </summary>

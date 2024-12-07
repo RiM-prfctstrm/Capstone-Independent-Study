@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 12/2/24
+ * UPDATED  : 12/7/24
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     // Components
     PlayerAnimator _playerAnimator;
     SpriteRenderer _playerRenderer;
-    Rigidbody2D _rb2d;
+    public Rigidbody2D rb2d;
     // External Components
     [SerializeField] DetectObjects _detector;
 
@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
         // Sets components
         _playerAnimator = GetComponent<PlayerAnimator>();
         _playerRenderer = GetComponent<SpriteRenderer>();
-        _rb2d = GetComponent<Rigidbody2D>();
+        rb2d = GetComponent<Rigidbody2D>();
 
         // Sets external objects
         _dialogueManager = DialogueManager.dialogueManager;
@@ -129,7 +129,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Updates animations
-        if (_rb2d.velocity != Vector2.zero)
+        if (rb2d.velocity != Vector2.zero)
         {
             _playerAnimator.facingDirection = GetDirection();
             // Changes direction where the player can interact
@@ -152,8 +152,8 @@ public class PlayerController : MonoBehaviour
         // Reset velocity modifiers to compensate for collision DEBUG FIX
         if (!isWalking)
         {
-            _velocityX = _rb2d.velocity.x;
-            _velocityY = _rb2d.velocity.y;
+            _velocityX = rb2d.velocity.x;
+            _velocityY = rb2d.velocity.y;
         }
     }
 
@@ -174,31 +174,31 @@ public class PlayerController : MonoBehaviour
         // Alters movement vars if they would lead the player in a direction that is invalid for
         // their current direction. Inputs are valid when the player's direction is <= 135 degrees
         // from the input direction.
-        if (!isWalking && _rb2d.velocity.magnitude > _steeringVelThreshold)
+        if (!isWalking && rb2d.velocity.magnitude > _steeringVelThreshold)
         {
             // Prevents leftward movement while moving right
-            if (_moveX == -1 && Vector2.Angle(Vector2.left, _rb2d.velocity)
+            if (_moveX == -1 && Vector2.Angle(Vector2.left, rb2d.velocity)
                 > _steeringAngleThreshold)
             {
                 _moveX = 0;
             }
 
             // Prevents rightward moving while moving left
-            if (_moveX == 1 && Vector2.Angle(Vector2.right, _rb2d.velocity)
+            if (_moveX == 1 && Vector2.Angle(Vector2.right, rb2d.velocity)
                 > _steeringAngleThreshold)
             {
                 _moveX = 0;
             }
 
             // Prevents downward movement while moving up
-            if (_moveY == -1 && Vector2.Angle(Vector2.down, _rb2d.velocity)
+            if (_moveY == -1 && Vector2.Angle(Vector2.down, rb2d.velocity)
                 > _steeringAngleThreshold)
             {
                 _moveY = 0;
             }
 
             // Prevents upward moving while moving down
-            if (_moveY == 1 && Vector2.Angle(Vector2.up, _rb2d.velocity)
+            if (_moveY == 1 && Vector2.Angle(Vector2.up, rb2d.velocity)
                 > _steeringAngleThreshold)
             {
                 _moveY = 0;
@@ -212,11 +212,16 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public void TogglePlayerInput()
     {
+        // Disables Input
         if (_xInput.enabled)
         {
             _playerInputs.Disable();
             _interact.Enable();
+
+            // Resets animation
+            _playerAnimator.SetAnimState();
         }
+        // Enables Input
         else
         {
             _playerInputs.Enable();
@@ -269,7 +274,7 @@ public class PlayerController : MonoBehaviour
         _newVel.y = _velocityY;
         _newVel = Vector2.ClampMagnitude(_newVel,
             UtilityFormulas.FindHypotenuse(_velocityX, _velocityY));
-        _rb2d.velocity = _newVel;
+        rb2d.velocity = _newVel;
     }
 
     /// <summary>
@@ -285,7 +290,7 @@ public class PlayerController : MonoBehaviour
 
             // Steers bike
             if (((_moveX != 0 && _moveY == 0) || (_moveY != 0 && _moveX == 0)) && (
-                _rb2d.velocity.x != 0 && _rb2d.velocity.y != 0))
+                rb2d.velocity.x != 0 && rb2d.velocity.y != 0))
             {
                 BikeSteering();
                 AccelerateX();
@@ -317,7 +322,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-                    _decelClamp = _rb2d.velocity.magnitude;
+                    _decelClamp = rb2d.velocity.magnitude;
                     DecelerateBike(_decelRate);
                 }
             }
@@ -333,7 +338,7 @@ public class PlayerController : MonoBehaviour
         _newVel.x = _velocityX;
         _newVel.y = _velocityY;
         _newVel = Vector2.ClampMagnitude(_newVel, _maxBikeSpeed);
-        _rb2d.velocity = _newVel;
+        rb2d.velocity = _newVel;
         
     }
 
@@ -357,7 +362,7 @@ public class PlayerController : MonoBehaviour
 
             // Resets deceleration buffer
             _decelClamp = _decelTime; 
-            _buffer = _decelBuffer * (_rb2d.velocity.magnitude / _maxBikeSpeed);
+            _buffer = _decelBuffer * (rb2d.velocity.magnitude / _maxBikeSpeed);
         }
     }
 
@@ -381,7 +386,7 @@ public class PlayerController : MonoBehaviour
 
             // Resets deceleration buffer
             _decelClamp = _decelTime;
-            _buffer = _decelBuffer * (_rb2d.velocity.magnitude / _maxBikeSpeed);
+            _buffer = _decelBuffer * (rb2d.velocity.magnitude / _maxBikeSpeed);
         }
     }
 
@@ -398,7 +403,7 @@ public class PlayerController : MonoBehaviour
             if (_moveX != 0)
             {
                 // Subtracts to keep X
-                _velocityY -= _accelRate * Mathf.Sign(_rb2d.velocity.y) * Time.fixedDeltaTime;
+                _velocityY -= _accelRate * Mathf.Sign(rb2d.velocity.y) * Time.fixedDeltaTime;
 
                 // Stabilizes at 0
                 if (_velocityY >= -.2f && _velocityY <= .2f)
@@ -411,7 +416,7 @@ public class PlayerController : MonoBehaviour
             if (_moveY != 0)
             {
                 // Subtracts to keep Y
-                _velocityX -= _accelRate * Mathf.Sign(_rb2d.velocity.x) * Time.fixedDeltaTime;
+                _velocityX -= _accelRate * Mathf.Sign(rb2d.velocity.x) * Time.fixedDeltaTime;
 
                 // Stabilizes at 0
                 if (_velocityX >= -.2f && _velocityX <= .2f)
@@ -452,11 +457,11 @@ public class PlayerController : MonoBehaviour
         // Changes material
         if (!isWalking)
         {
-            _rb2d.sharedMaterial = _bikeMaterial;
+            rb2d.sharedMaterial = _bikeMaterial;
         }
         else
         {
-            _rb2d.sharedMaterial = null;
+            rb2d.sharedMaterial = null;
         }
     }
 
@@ -469,6 +474,12 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void OpenMenu()
     {
+        // Prevents menu from opening in dialogue
+        if (DialogueManager.dialogueInProgress)
+        {
+            return;
+        }
+
         // Opens menu
         _menu.SetActive(true);
         _menu.GetComponent<InGameMainMenu>().defaultSelection.Select();
@@ -490,14 +501,14 @@ public class PlayerController : MonoBehaviour
     int GetDirection()
     {
         // Bases direction on velocity, prioritizing X axis and positive values
-        if (Mathf.Abs(_rb2d.velocity.x) >= Mathf.Abs(_rb2d.velocity.y))
+        if (Mathf.Abs(rb2d.velocity.x) >= Mathf.Abs(rb2d.velocity.y))
         {
-            if (_rb2d.velocity.x >= 0) { return 2; }
+            if (rb2d.velocity.x >= 0) { return 2; }
             else { return 1; }
         }
         else
         {
-            if (_rb2d.velocity.y >= 0) { return 3; }
+            if (rb2d.velocity.y >= 0) { return 3; }
             else { return 0; }
         }
     }
@@ -528,7 +539,7 @@ public class PlayerController : MonoBehaviour
         // Sets initial movement
         _moveX = 0;
         _moveY = 1;
-        _rb2d.velocity = new Vector2(_maxBikeSpeed, 0);
+        rb2d.velocity = new Vector2(_maxBikeSpeed, 0);
         _velocityX = _maxBikeSpeed;
 
         // Gets location at first part of the turn once complete
