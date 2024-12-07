@@ -219,7 +219,7 @@ public class PlayerController : MonoBehaviour
             _interact.Enable();
 
             // Resets animation
-            _playerAnimator.SetAnimState();
+            _playerAnimator.PlayScriptedAnimation(_playerAnimator.SetAnimState());
         }
         // Enables Input
         else
