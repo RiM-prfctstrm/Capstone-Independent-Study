@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 12/7/24
+ * UPDATED  : 12/8/24
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     public static PlayerController playerController;
 
     // Components
+    AudioSource _playerAudioSource;
+    public AudioSource playerAudioSource => _playerAudioSource;
     PlayerAnimator _playerAnimator;
     SpriteRenderer _playerRenderer;
     public Rigidbody2D rb2d;
@@ -68,6 +70,11 @@ public class PlayerController : MonoBehaviour
     GameObject _lastTarget;
     public GameObject lastTarget => _lastTarget;
 
+    // Sound effects
+    [SerializeField] AudioClip _bikeBell;
+    [SerializeField] AudioClip _bumpSound;
+    public AudioClip sceneShift;
+
     // Debug
     //bool _maxed = false;
 
@@ -81,6 +88,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         // Sets components
+        _playerAudioSource = GetComponent<AudioSource>();
         _playerAnimator = GetComponent<PlayerAnimator>();
         _playerRenderer = GetComponent<SpriteRenderer>();
         rb2d = GetComponent<Rigidbody2D>();
@@ -457,6 +465,7 @@ public class PlayerController : MonoBehaviour
         // Changes material
         if (!isWalking)
         {
+            _playerAudioSource.PlayOneShot(_bikeBell);
             rb2d.sharedMaterial = _bikeMaterial;
         }
         else

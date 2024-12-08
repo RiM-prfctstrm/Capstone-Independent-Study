@@ -182,6 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a08d24344b1862846a6f2f8bcd9b72b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb2d: {fileID: 0}
   _detector: {fileID: 6512634947276868993}
   _accelTime: 2.1
   _brakeTime: 1.05
@@ -195,6 +196,8 @@ MonoBehaviour:
   isWalking: 1
   _playerInputs: {fileID: -944628639613478452, guid: c950dc6ac45a77d4a9d65e00fcf3b1a0, type: 3}
   _menu: {fileID: 0}
+  _bikeBell: {fileID: 8300000, guid: 66466aa8b1de84e4a9f403df40b8be20, type: 3}
+  sceneShift: {fileID: 8300000, guid: 1d22f09368de40a409fda453d179221d, type: 3}
 --- !u!114 &6512634947272463561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,7 +246,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

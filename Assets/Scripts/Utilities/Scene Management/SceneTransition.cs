@@ -2,7 +2,7 @@
  * FILE     : SceneTransition
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/29/24
- * UPDATED  : 11/14/24
+ * UPDATED  : 12/8/24
  * 
  * DESC     : Switches scenes and sets variables to initialize that scene's state after transition.
 =================================================================================================*/
@@ -35,6 +35,9 @@ public class SceneTransition
         // Gets objects for reference
         _currentScene = SceneManager.GetActiveScene().name;
         _player = PlayerController.playerController;
+
+        // Plays scene transition sound
+        _player.playerAudioSource.PlayOneShot(_player.sceneShift);
 
         // Warps the player without performing loads if the target scene is the current scene
         /*if (_currentScene == sceneName)
@@ -82,6 +85,9 @@ public class SceneTransition
         // Gets objects for reference
         _currentScene = SceneManager.GetActiveScene().name;
         _player = PlayerController.playerController;
+
+        // Plays scene transition sound
+        _player.playerAudioSource.PlayOneShot(_player.sceneShift);
 
         // Warps the player without performing loads if the target scene is the current scene
         /*if (_currentScene == sceneName)
