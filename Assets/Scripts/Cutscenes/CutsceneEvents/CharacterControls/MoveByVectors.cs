@@ -2,7 +2,7 @@
  * FILE     : MoveByVectors.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/8/24
- * UPDATED  : 12/7/24
+ * UPDATED  : 12/8/24
  * 
  * DESC     : Translates a character along a set of vectors.
 =================================================================================================*/
@@ -31,7 +31,8 @@ public class MoveByVectors : CutsceneEvent
     // Movement Parameters
     Vector2 _movementVector;
     Vector2 _targetPos;
-    Vector3 _referencePos = new Vector3 (0, 0, 1);
+    [SerializeField] Vector2 _referencePos; // Hardcoding is an inelegant solution to the
+    // displacement bug, but at this point, implementation speed trumps everything.
 
     #endregion
 
@@ -56,9 +57,6 @@ public class MoveByVectors : CutsceneEvent
     /// </summary>
     protected override IEnumerator WaitForEventEnd()
     {
-        // Sets a reference to where the movement begins
-        _referencePos = _targetCharacter.transform.position;
-
         // Loops through all movement vectors
         foreach (Vector2 step in _movements)
         {
@@ -92,9 +90,6 @@ public class MoveByVectors : CutsceneEvent
             _targetCharacter.transform.position = _targetPos;
         }
 
-        // Sets a reference to where the movement ends
-        _referencePos = _targetCharacter.transform.position;
-
         // Sets character to a finished animation and completes event
         _targetAnimator.PlayScriptedAnimation(_targetAnimator.SetAnimState());
         eventComplete = true;
@@ -107,11 +102,6 @@ public class MoveByVectors : CutsceneEvent
     {
         // Sets the character the script acts on
         SetTarget();
-        if (_referencePos.z != 0)
-        {
-            // Sets a reference position to where it begins
-            _referencePos = _targetCharacter.transform.position;
-        }
 
         // Gets starting position and final direction
         _targetPos = _referencePos;

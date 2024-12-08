@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ced189b58ef3d6a4a8635aaabf73c2c2, type: 3}
   m_Name: m0_1_006_walkOut
   m_EditorClassIdentifier: 
-  _eventComplete: 0
+  eventComplete: 0
   _targetID: 1
   _speed: 4
   _movements:
   - {x: 1.5, y: 0}
   _overrideMovementAnimation: 0
   _overrideAnimation: 
+  _referencePos: {x: 5.75, y: -5}
