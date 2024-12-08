@@ -17,19 +17,20 @@ public class MoveByVectors : CutsceneEvent
     #region VARIABLES
 
     // Inputs
-    [SerializeField] int _targetID;
-    [SerializeField] float _speed = 4; // Default speed set to feel good for walking.
+    [SerializeField] protected int _targetID;
+    [SerializeField] protected float _speed = 4; // Default speed set to feel good for walking.
     public List<Vector2> _movements = new List<Vector2>();
 
-    [SerializeField] bool _overrideMovementAnimation = false;
-    [SerializeField] string _overrideAnimation;
+    // Extra animation controls
+    [SerializeField] protected bool _overrideMovementAnimation = false;
+    [SerializeField] protected string _overrideAnimation;
 
     // Object Refs
-    GameObject _targetCharacter;
-    CharacterAnimator _targetAnimator;
+    protected GameObject _targetCharacter;
+    protected CharacterAnimator _targetAnimator;
 
     // Movement Parameters
-    Vector2 _movementVector;
+    protected Vector2 _movementVector;
     Vector2 _targetPos;
     [SerializeField] Vector2 _referencePos; // Hardcoding is an inelegant solution to the
     // displacement bug, but at this point, implementation speed trumps everything.
@@ -98,7 +99,7 @@ public class MoveByVectors : CutsceneEvent
     /// <summary>
     /// Instantly performs the movement operation when the event is being skipped.
     /// </summary>
-    public void MoveInstantly()
+    public virtual void MoveInstantly()
     {
         // Sets the character the script acts on
         SetTarget();
@@ -125,7 +126,7 @@ public class MoveByVectors : CutsceneEvent
     /// Automatically sets a movement animation when no override is specified. Logic order follows
     /// a circle starting on the positive side of the X axis.
     /// </summary>
-    void UpdateMoveAnimation()
+    protected void UpdateMoveAnimation()
     {
         // Horizontal movement
         // Directional animation for rightward movement
@@ -162,7 +163,7 @@ public class MoveByVectors : CutsceneEvent
     /// <summary>
     /// Sets the object the script acts on.
     /// </summary>
-    void SetTarget()
+    protected void SetTarget()
     {
         // Gets objects and components
         _targetCharacter = CutsceneManager.cutsceneManager.cutsceneObjects[_targetID];
