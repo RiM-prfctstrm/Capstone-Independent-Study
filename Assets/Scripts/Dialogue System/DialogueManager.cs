@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 11/19/24
+ * UPDATED  : 12/8/24
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -30,6 +30,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] GameObject _portraitOutline;
 
     // Other Objects
+    [SerializeField] AudioSource _systemSounds;
     public Button previouslySelected = null;
 
     // Progress signals
@@ -67,8 +68,11 @@ public class DialogueManager : MonoBehaviour
     IEnumerator PlayDialogue(DialogueEvent sequence)
     {
         // Plays each line of dialogue at correct time
-         foreach (Dialogue line in sequence.dialogueBoxes)
+        foreach (Dialogue line in sequence.dialogueBoxes)
         {
+            // Plays selection sound
+            _systemSounds.Play();
+
             // Displays the line
             DisplayDialogue(line);
 
