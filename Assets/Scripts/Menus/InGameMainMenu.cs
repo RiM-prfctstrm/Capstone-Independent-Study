@@ -22,6 +22,7 @@ public class InGameMainMenu : MonoBehaviour
     public Button defaultSelection;
     [SerializeField] Button _mapButton;
     [SerializeField] Button _manualButton;
+    [SerializeField] Button _optionsButton;
     // Submenu Buttons
     [SerializeField] Button _map;
     [SerializeField] Button _manual;
@@ -30,6 +31,9 @@ public class InGameMainMenu : MonoBehaviour
 
     // Data input
     [TextArea] [SerializeField] string[] _deliveryInfo;
+
+    // Debug
+    [SerializeField] DialogueEvent _unimplementedNotif;
 
     #endregion
 
@@ -99,6 +103,23 @@ public class InGameMainMenu : MonoBehaviour
     }
 
     #endregion
+
+    #endregion
+
+    #region DEBUG
+
+    /// <summary>
+    /// Placeholder functionality for when a button's feature is not yet implemented.
+    /// </summary>
+    public void UnimplementedMessage(Button returnButton)
+    {
+        if (!DialogueManager.dialogueInProgress)
+        {
+            // Sends a message telling the player nothing happens yet
+            returnButton.Select();
+            DialogueManager.dialogueManager.StartDialogue(_unimplementedNotif);
+        }
+    }
 
     #endregion
 }
