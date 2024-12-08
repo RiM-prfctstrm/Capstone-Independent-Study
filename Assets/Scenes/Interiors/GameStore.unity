@@ -225,9 +225,246 @@ Transform:
   m_Children:
   - {fileID: 610435486}
   - {fileID: 1843718884}
+  - {fileID: 891968318}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &123456744
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1843718884}
+    m_Modifications:
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: Father 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: It was the first game in its series to get a simultaneous worldwide
+        release.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: Maybe if you played it when it first came out it would have been better.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Name
+      value: GameRack (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 06517478582634849b094281ededda19, type: 3}
+--- !u!4 &123456745 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+  m_PrefabInstance: {fileID: 123456744}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &169058119
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1843718884}
+    m_Modifications:
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: 'Black Ops: The Ray'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: The store was lucky to stockpile it shortly before it got delisted from
+        Smoke.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: Maybe if you played it when it first came out it would have been better.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Name
+      value: GameRack (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 06517478582634849b094281ededda19, type: 3}
+--- !u!4 &169058120 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+  m_PrefabInstance: {fileID: 169058119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &202844937
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 891968318}
+    m_Modifications:
+    - target: {fileID: 671555198621561580, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_Name
+      value: GameRackSide (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: Model kits of giant robots.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: You found out about this store when Salt went here to get them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: You'd kinda like to try one someday.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+--- !u!4 &202844938 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+  m_PrefabInstance: {fileID: 202844937}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &223513403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -435,7 +672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.55
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_LocalPosition.y
@@ -518,6 +755,84 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 0.5}
   m_EdgeRadius: 0
+--- !u!1001 &364000808
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 891968318}
+    m_Modifications:
+    - target: {fileID: 671555198621561580, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_Name
+      value: GameRackSide (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: Model kits of giant robots.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: You found out about this store when Salt went here to get them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: You'd kinda like to try one someday.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+--- !u!4 &364000809 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+  m_PrefabInstance: {fileID: 364000808}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &554465321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -595,6 +910,84 @@ PrefabInstance:
       objectReference: {fileID: 260874856}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e735ec56fc8e5f1478e58431f136038a, type: 3}
+--- !u!1001 &562733082
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1843718884}
+    m_Modifications:
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: First Fantasy X-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: The series title gets less and less accurate with every new game.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: Maybe if you played it when it first came out it would have been better.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Name
+      value: GameRack (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 06517478582634849b094281ededda19, type: 3}
+--- !u!4 &562733083 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+  m_PrefabInstance: {fileID: 562733082}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &610435485
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,6 +1306,123 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
   m_PrefabInstance: {fileID: 875841259}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &891968317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 891968318}
+  m_Layer: 0
+  m_Name: Right Wall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &891968318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891968317}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5003143206591383525}
+  - {fileID: 2079931868}
+  - {fileID: 2147370875}
+  - {fileID: 1250189889}
+  - {fileID: 1271560421}
+  - {fileID: 364000809}
+  - {fileID: 202844938}
+  m_Father: {fileID: 114476868}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &905850429
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1843718884}
+    m_Modifications:
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: Various prepaid cards for defunct live service games.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: For some reason, the unused ones are still more valuable than the used,
+        even if none of them work.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: Maybe if you played it when it first came out it would have been better.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Name
+      value: GameRack (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 06517478582634849b094281ededda19, type: 3}
+--- !u!4 &905850430 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+  m_PrefabInstance: {fileID: 905850429}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &971068343
 PrefabInstance:
@@ -1512,6 +2022,163 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+--- !u!1001 &1250189888
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 891968318}
+    m_Modifications:
+    - target: {fileID: 671555198621561580, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_Name
+      value: GameRackSide (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: Some of them don't work anymore, but they still have collector value.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: They're almost as cool as they are expensive!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: You'd kinda like to try one someday.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+--- !u!4 &1250189889 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+  m_PrefabInstance: {fileID: 1250189888}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1271560420
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 891968318}
+    m_Modifications:
+    - target: {fileID: 671555198621561580, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_Name
+      value: GameRackSide (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: A complete, unopened collection of the eXosaga trilogy!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: You've always wanted to play these, but you'll never be able to afford
+        them...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: You'd kinda like to try one someday.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+--- !u!4 &1271560421 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+  m_PrefabInstance: {fileID: 1271560420}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1331017706
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1806,6 +2473,162 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1676437272
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1843718884}
+    m_Modifications:
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: The only rack of DVDs in the store.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: There's a lot more in the back, but they don't sell well here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: Maybe if you played it when it first came out it would have been better.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Name
+      value: GameRack (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 06517478582634849b094281ededda19, type: 3}
+--- !u!4 &1676437273 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+  m_PrefabInstance: {fileID: 1676437272}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1762271850
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1843718884}
+    m_Modifications:
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: OVERTALE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: It's funny, but it's a little overrated.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: Maybe if you played it when it first came out it would have been better.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Name
+      value: GameRack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 06517478582634849b094281ededda19, type: 3}
+--- !u!4 &1762271851 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+  m_PrefabInstance: {fileID: 1762271850}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1780056675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1886,7 +2709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1843718884}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Back Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1903,10 +2726,244 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1762271851}
+  - {fileID: 1995853223}
+  - {fileID: 562733083}
+  - {fileID: 905850430}
+  - {fileID: 123456745}
+  - {fileID: 169058120}
+  - {fileID: 1676437273}
   m_Father: {fileID: 114476868}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1995853222
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1843718884}
+    m_Modifications:
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: Amaterasu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: You were scared to death of Dogwhistle Tower, but the vibe was so good
+        you couldn't put it down.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: Maybe if you played it when it first came out it would have been better.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Name
+      value: GameRack (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 06517478582634849b094281ededda19, type: 3}
+--- !u!4 &1995853223 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
+  m_PrefabInstance: {fileID: 1995853222}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2079931867
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 891968318}
+    m_Modifications:
+    - target: {fileID: 671555198621561580, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_Name
+      value: GameRackSide (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: Games for really old systems you've never seen before.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: Standing here is like being with the founding fathers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+--- !u!4 &2079931868 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+  m_PrefabInstance: {fileID: 2079931867}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2147370874
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 891968318}
+    m_Modifications:
+    - target: {fileID: 671555198621561580, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_Name
+      value: GameRackSide (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: These games have built-in batteries to keep track of saves.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: Some of them don't work anymore, but they still have collector value.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: You'd kinda like to try one someday.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+--- !u!4 &2147370875 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+  m_PrefabInstance: {fileID: 2147370874}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &244035892222470192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1968,4 +3025,74 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
   m_PrefabInstance: {fileID: 244035892222470192}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5003143206591383524
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 891968318}
+    m_Modifications:
+    - target: {fileID: 671555198621561580, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_Name
+      value: GameRackSide
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: The store's CD shelf.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: You can tell someone's age from how many of these they recognize.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+--- !u!4 &5003143206591383525 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+  m_PrefabInstance: {fileID: 5003143206591383524}
   m_PrefabAsset: {fileID: 0}
