@@ -242,12 +242,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
-      value: Father 3
+      value: Squidallion
       objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
-      value: It was the first game in its series to get a simultaneous worldwide
-        release.
+      value: You're sad the multiplayer's offline, because all the maps had so much
+        love put in them.
       objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
@@ -400,19 +400,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
-      value: Model kits of giant robots.
+      value: OVERTALE
       objectReference: {fileID: 0}
     - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
-      value: You found out about this store when Salt went here to get them.
+      value: It's funny, but it's a little overrated.
       objectReference: {fileID: 0}
     - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
-      value: You'd kinda like to try one someday.
+      value: Maybe if you played it when it first came out it would have been better.
       objectReference: {fileID: 0}
     - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
       propertyPath: m_RootOrder
@@ -2551,84 +2551,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
   m_PrefabInstance: {fileID: 1676437272}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1762271850
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1843718884}
-    m_Modifications:
-    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
-      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
-      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
-      value: OVERTALE
-      objectReference: {fileID: 0}
-    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
-      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
-      value: It's funny, but it's a little overrated.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
-      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
-      value: Maybe if you played it when it first came out it would have been better.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
-      propertyPath: m_Name
-      value: GameRack
-      objectReference: {fileID: 0}
-    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 06517478582634849b094281ededda19, type: 3}
---- !u!4 &1762271851 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
-  m_PrefabInstance: {fileID: 1762271850}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1780056675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2727,7 +2649,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1762271851}
   - {fileID: 1995853223}
   - {fileID: 562733083}
   - {fileID: 905850430}
@@ -2816,6 +2737,152 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
   m_PrefabInstance: {fileID: 1995853222}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2057465945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2057465949}
+  - component: {fileID: 2057465948}
+  - component: {fileID: 2057465947}
+  - component: {fileID: 2057465946}
+  m_Layer: 0
+  m_Name: Monitor01
+  m_TagString: Interactable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2057465946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057465945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f5cdfc18804e04ca0bc3f9b2665cce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogueRange: 5
+  _isEventTrigger: 0
+  _staticImage: 1
+  _NPCLines:
+  - dialogueBoxes:
+    - dialogueText: And now back to your regularly scheduled programming!
+      nameTag: PSA
+      portrait: {fileID: 0}
+    - dialogueText: Welcome back to Fishing for Bigfoot!
+      nameTag: Bigfoot Hunter Jim
+      portrait: {fileID: 0}
+    - dialogueText: This week, we trespass in the West Ouropean Spaceport
+      nameTag: Bigfoot Hunter Jim
+      portrait: {fileID: 0}
+    - dialogueText: to see if he's hiding in one of the space elevator's ballast
+        buttresses.
+      nameTag: Bigfoot Hunter Jim
+      portrait: {fileID: 0}
+    - dialogueText: Man, I gotta get a better show to put my ad in next time.
+      nameTag: Alexandria
+      portrait: {fileID: 0}
+  _NPCCutscene: {fileID: 0}
+--- !u!61 &2057465947
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057465945}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.125, y: 1.25}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.125, y: 1.25}
+  m_EdgeRadius: 0
+--- !u!212 &2057465948
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057465945}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 92da1eab3b0ccf04996a3b3275f388cf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &2057465949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057465945}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.75, y: -0.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2079931867
 PrefabInstance:
   m_ObjectHideFlags: 0
