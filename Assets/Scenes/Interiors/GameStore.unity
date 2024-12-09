@@ -3038,6 +3038,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 610435486}
     m_Modifications:
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: eXosword Chronicles X
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: This was Salt's favorite game growing up.
+      objectReference: {fileID: 0}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: GameRack
