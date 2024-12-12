@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
   m_Name: m0_2_016_confessionPt5
   m_EditorClassIdentifier: 
-  _eventComplete: 1
+  eventComplete: 0
   cutsceneDialogue:
     dialogueBoxes:
     - dialogueText: ...
@@ -36,9 +36,6 @@ MonoBehaviour:
       nameTag: Dylan
       portrait: {fileID: 0}
     - dialogueText: and I really appreciate that. It's amazing.
-      nameTag: Dylan
-      portrait: {fileID: 0}
-    - dialogueText: You're amazing.
       nameTag: Dylan
       portrait: {fileID: 0}
     - dialogueText: Thank you, Pepper.

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
   m_Name: m0_2_025_finishConversation
   m_EditorClassIdentifier: 
-  _eventComplete: 0
+  eventComplete: 0
   cutsceneDialogue:
     dialogueBoxes:
     - dialogueText: Did Salt say anything?
@@ -25,7 +25,8 @@ MonoBehaviour:
     - dialogueText: Yeah.
       nameTag: Pepper
       portrait: {fileID: 0}
-    - dialogueText: Then make sure you look before you go to bed, uh-huh?
+    - dialogueText: Then make sure you look at you computer before you go to bed,
+        uh-huh?
       nameTag: Dad
       portrait: {fileID: 0}
     - dialogueText: Mhm.

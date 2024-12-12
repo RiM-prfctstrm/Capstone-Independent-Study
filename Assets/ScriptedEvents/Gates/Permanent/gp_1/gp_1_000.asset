@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
   m_Name: gp_1_000
   m_EditorClassIdentifier: 
-  _eventComplete: 0
+  eventComplete: 0
   cutsceneDialogue:
     dialogueBoxes:
-    - dialogueText: You're exhausted from a hard day of work. You don't have the
-        energy to go out.
+    - dialogueText: It's getting dark, and you're getting tired.
+      nameTag: 
+      portrait: {fileID: 0}
+    - dialogueText: Better spend the rest of the evening at home.
       nameTag: 
       portrait: {fileID: 0}
