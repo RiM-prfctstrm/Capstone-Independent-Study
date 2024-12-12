@@ -2717,11 +2717,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 178090867737362805, guid: ff197ec3a370c874fb0e87aa37d5d0f3, type: 3}
       propertyPath: _NPCLines.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 178090867737362805, guid: ff197ec3a370c874fb0e87aa37d5d0f3, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 178090867737362805, guid: ff197ec3a370c874fb0e87aa37d5d0f3, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 178090867737362805, guid: ff197ec3a370c874fb0e87aa37d5d0f3, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
@@ -2730,6 +2734,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 178090867737362805, guid: ff197ec3a370c874fb0e87aa37d5d0f3, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: A lot of them are worn from lots of love.
+      objectReference: {fileID: 0}
+    - target: {fileID: 178090867737362805, guid: ff197ec3a370c874fb0e87aa37d5d0f3, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].dialogueText
+      value: The bottom shelf is full of boring textbooks about interestng topics.
+      objectReference: {fileID: 0}
+    - target: {fileID: 178090867737362805, guid: ff197ec3a370c874fb0e87aa37d5d0f3, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].dialogueText
       value: A lot of them are worn from lots of love.
       objectReference: {fileID: 0}
     - target: {fileID: 178090867737362807, guid: ff197ec3a370c874fb0e87aa37d5d0f3, type: 3}
