@@ -2,7 +2,7 @@
  * FILE     : ScreenEffects
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/8/25
- * UPDATED  : 1/8/28
+ * UPDATED  : 1/8/25
  * 
  * DESC     : Performs visual effects that take up the whole screen.
 =================================================================================================*/
@@ -45,6 +45,10 @@ public class ScreenEffects : MonoBehaviour
     void Update()
     {
         // Controls fading effects
+        if (fadingOut)
+        {
+            FadeToBlack();
+        }
     }
 
     #endregion
@@ -56,10 +60,15 @@ public class ScreenEffects : MonoBehaviour
     /// </summary>
     public void FadeToBlack()
     {
-        if (fadingOut)
+        if (_fadeAlpha < 1)
         {
             _fadeAlpha += _fadeSpeed * Time.deltaTime;
-            _blackFader.color.a = _fadeAlpha;
+            //_blackFader.color = 
+        }
+        // Ends fade
+        else
+        {
+            fadingOut = false;
         }
     }
 

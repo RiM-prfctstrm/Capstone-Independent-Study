@@ -2,7 +2,7 @@
  * FILE     : SceneTrigger
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/29/24
- * UPDATED  : 10/31/24
+ * UPDATED  : 1/8/24
  * 
  * DESC     : Sends the player to a new scene when contacted.
 =================================================================================================*/
@@ -38,13 +38,15 @@ public class SceneTrigger : MonoBehaviour
         {
             if (!_setsDirection)
             {
-                // Changes scene with automated player placement
-                SceneTransition.ChangeScene(_sceneName, _isIndoors, _position);
+                // Changes scene with automated player direction
+                StartCoroutine(
+                    SceneTransition.TransitionScene(_sceneName, _isIndoors, _position, 4));
             }
             else
             {
-                // Changes scene with manual player placement
-                SceneTransition.ChangeScene(_sceneName, _isIndoors, _position, _direction);
+                // Changes scene with manual player direction
+                StartCoroutine(SceneTransition.TransitionScene(
+                        _sceneName, _isIndoors, _position, _direction));
             }
         }
     }

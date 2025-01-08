@@ -2,7 +2,7 @@
  * FILE     : SceneTransition
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/29/24
- * UPDATED  : 12/8/24
+ * UPDATED  : 1/8/25
  * 
  * DESC     : Switches scenes and sets variables to initialize that scene's state after transition.
 =================================================================================================*/
@@ -19,57 +19,49 @@ public class SceneTransition
     static PlayerController _player;
     static string _currentScene;
 
+    // Signals
+    static bool _inTransition = false;
+    public static bool inTransition => _inTransition;
+
+    #endregion
+
+    #region TRANSITION TIMELINE
+
+    /// <summary>
+    /// Controls the order of methods used in scene transitions, performin each step at a time
+    /// </summary>
+    /// <returns>Delays until each function is done</returns>
+    public static IEnumerator TransitionScene(string sceneName, bool isIndoors, Vector3 startPos,
+                                              int startDirection)
+    {
+        // Signals that a scene transition is in effect
+        _inTransition = true;
+
+        // Used when the player is meant to keep current direction
+        if (startDirection >= 4)
+        {
+            startDirection = _player.GetComponent<PlayerAnimator>().facingDirection;
+        }
+
+        // Fades out
+        /*ScreenEffects.fadingOut = true;
+        yield return new WaitUntil(() => ScreenEffects.fadingOut == false);*/
+
+        // Changes Scene
+        ChangeScene(sceneName, isIndoors, startPos, startDirection);
+        yield return new WaitUntil(() => SceneManager.GetSceneByName(sceneName).isLoaded == true);
+
+        // Fades back in
+        /*ScreenEffects.fadingIn = true;
+        yield return new WaitUntil(() => ScreenEffects.fadingIn == false);*/
+
+        // Signals that transition is complete
+        _inTransition = false;
+    }
+
     #endregion
 
     #region SCENE TRANSITION METHODS
-
-    /// <summary>
-    /// Loads a new scene with the minimum information specified
-    /// </summary>
-    /// <param name="sceneName">The new scene to load</param>
-    /// <param name="isIndoors">Determines how the method should determine whether the
-    ///                         the player should start mounted in the new scene</param>
-    /// <param name="startPos">The player's starting position in the new scene</param>
-    public static void ChangeScene(string sceneName, bool isIndoors, Vector3 startPos)
-    {
-        // Gets objects for reference
-        _currentScene = SceneManager.GetActiveScene().name;
-        _player = PlayerController.playerController;
-
-        // Plays scene transition sound
-        _player.playerAudioSource.PlayOneShot(_player.sceneShift);
-
-        // Warps the player without performing loads if the target scene is the current scene
-        /*if (_currentScene == sceneName)
-        {
-            UtilityFunctions.WarpToPoint(startPos,
-                _player.GetComponent<PlayerAnimator>().facingDirection);
-            return;
-        }*/
-
-        // Resets list of Cutscene-controllable objects
-        CutsceneManager.cutsceneManager.ResetCharacterList();
-
-        // Loads new scene and initializes variables
-        SceneManager.LoadScene(sceneName);
-        
-        // Determines whether the player should remain biking
-        if (isIndoors)
-        {
-            _player.isWalking = true;
-            _player.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        }
-
-        // Sets player's position
-        _player.transform.position = startPos;
-
-        // Cleans player's interaction list so it works in new scene
-        _player.GetComponentInChildren<DetectObjects>().CleanUpInteractionList();
-
-        // Unloads previous Scene
-        SceneManager.UnloadSceneAsync(_currentScene);
-        Resources.UnloadUnusedAssets();
-    }
 
     /// <summary>
     /// Loads a new scene and sets the player's position and direction within it.
@@ -88,13 +80,6 @@ public class SceneTransition
 
         // Plays scene transition sound
         _player.playerAudioSource.PlayOneShot(_player.sceneShift);
-
-        // Warps the player without performing loads if the target scene is the current scene
-        /*if (_currentScene == sceneName)
-        {
-            UtilityFunctions.WarpToPoint(startPos, startDirection);
-            return;
-        }*/
 
         // Resets list of Cutscene-controllable objects
         CutsceneManager.cutsceneManager.ResetCharacterList();
