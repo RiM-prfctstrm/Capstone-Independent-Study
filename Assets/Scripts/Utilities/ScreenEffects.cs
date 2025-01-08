@@ -32,22 +32,18 @@ public class ScreenEffects : MonoBehaviour
     #region UNIVERSAL EVENTS
 
     /// <summary>
-    /// Start is called before the first frame update
+    /// FixedUpdate is called every fixed framerate frame
     /// </summary>
-    void Start()
-    {
-        
-    }
-
-    /// <summary>
-    /// Update is called once per frame
-    /// </summary>
-    void Update()
+    void FixedUpdate()
     {
         // Controls fading effects
         if (fadingOut)
         {
             FadeToBlack();
+        }
+        if (fadingIn)
+        {
+            FadeIn();
         }
     }
 
@@ -58,17 +54,38 @@ public class ScreenEffects : MonoBehaviour
     /// <summary>
     /// Fades the screen to black. In the future may be modified to enable multiple colors
     /// </summary>
-    public void FadeToBlack()
+    void FadeToBlack()
     {
+        // Performs fade by increasing object opacity
         if (_fadeAlpha < 1)
         {
-            _fadeAlpha += _fadeSpeed * Time.deltaTime;
-            //_blackFader.color = 
+            _fadeAlpha += _fadeSpeed * Time.fixedDeltaTime;
+            _blackFader.color = new Color(0, 0, 0, _fadeAlpha);
         }
         // Ends fade
         else
         {
+            _fadeAlpha = 1;
             fadingOut = false;
+        }
+    }
+
+    /// <summary>
+    /// Fades in from a color by lowering its alpha
+    /// </summary>
+    void FadeIn()
+    {
+        // Performs fade by decreasing object opacity
+        if (_fadeAlpha > 0)
+        {
+            _fadeAlpha -= _fadeSpeed * Time.fixedDeltaTime;
+            _blackFader.color = new Color(0, 0, 0, _fadeAlpha);
+        }
+        // Ends fade
+        else
+        {
+            _fadeAlpha = 0;
+            fadingIn = false;
         }
     }
 

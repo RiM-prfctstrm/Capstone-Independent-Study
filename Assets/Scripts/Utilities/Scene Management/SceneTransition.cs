@@ -30,12 +30,24 @@ public class SceneTransition
     /// <summary>
     /// Controls the order of methods used in scene transitions, performin each step at a time
     /// </summary>
+    /// <param name="sceneName">The new scene to load</param>
+    /// <param name="isIndoors">Determines how the method should determine whether the
+    ///                         the player should start mounted in the new scene</param>
+    /// <param name="startPos">The player's starting position in the new scene</param>
+    /// <param name="startDirection">The player's starting direction</param>
     /// <returns>Delays until each function is done</returns>
     public static IEnumerator TransitionScene(string sceneName, bool isIndoors, Vector3 startPos,
                                               int startDirection)
     {
-        // Signals that a scene transition is in effect
-        _inTransition = true;
+        // Prepares transition
+        PrepareForTransition();
+
+        // Plays scene transition sound
+        _player.playerAudioSource.PlayOneShot(_player.sceneShift);
+
+        // Fades out
+        ScreenEffects.fadingOut = true;
+        yield return new WaitUntil(() => ScreenEffects.fadingOut == false);
 
         // Used when the player is meant to keep current direction
         if (startDirection >= 4)
@@ -43,17 +55,19 @@ public class SceneTransition
             startDirection = _player.GetComponent<PlayerAnimator>().facingDirection;
         }
 
-        // Fades out
-        /*ScreenEffects.fadingOut = true;
-        yield return new WaitUntil(() => ScreenEffects.fadingOut == false);*/
-
         // Changes Scene
         ChangeScene(sceneName, isIndoors, startPos, startDirection);
         yield return new WaitUntil(() => SceneManager.GetSceneByName(sceneName).isLoaded == true);
 
         // Fades back in
-        /*ScreenEffects.fadingIn = true;
-        yield return new WaitUntil(() => ScreenEffects.fadingIn == false);*/
+        ScreenEffects.fadingIn = true;
+        yield return new WaitUntil(() => ScreenEffects.fadingIn == false);
+
+        // Reenables Movement
+        if (!CutsceneManager.inCutscene)
+        {
+            PlayerController.playerController.TogglePlayerInput();
+        }
 
         // Signals that transition is complete
         _inTransition = false;
@@ -62,6 +76,28 @@ public class SceneTransition
     #endregion
 
     #region SCENE TRANSITION METHODS
+
+    /// <summary>
+    /// Sets up game state for scene transitioning
+    /// </summary>
+    static void PrepareForTransition()
+    {
+        // Gets objects for reference
+        _currentScene = SceneManager.GetActiveScene().name;
+        _player = PlayerController.playerController;
+
+        // Resets list of Cutscene-controllable objects
+        CutsceneManager.cutsceneManager.ResetCharacterList();
+
+        // Signals that a scene transition is in effect
+        _inTransition = true;
+
+        // Stops player from moving
+        if (!CutsceneManager.inCutscene)
+        {
+            PlayerController.playerController.TogglePlayerInput();
+        }
+    }
 
     /// <summary>
     /// Loads a new scene and sets the player's position and direction within it.
@@ -74,16 +110,6 @@ public class SceneTransition
     public static void ChangeScene(string sceneName, bool isIndoors, Vector3 startPos, 
                                    int startDirection)
     {
-        // Gets objects for reference
-        _currentScene = SceneManager.GetActiveScene().name;
-        _player = PlayerController.playerController;
-
-        // Plays scene transition sound
-        _player.playerAudioSource.PlayOneShot(_player.sceneShift);
-
-        // Resets list of Cutscene-controllable objects
-        CutsceneManager.cutsceneManager.ResetCharacterList();
-
         // Loads new scene and initializes variables
         SceneManager.LoadScene(sceneName);
 
