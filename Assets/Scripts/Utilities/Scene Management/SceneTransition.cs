@@ -57,20 +57,12 @@ public class SceneTransition
 
         // Changes Scene
         ChangeScene(sceneName, isIndoors, startPos, startDirection);
-        yield return new WaitUntil(() => SceneManager.GetSceneByName(sceneName).isLoaded == true);
 
         // Fades back in
         ScreenEffects.fadingIn = true;
-        yield return new WaitUntil(() => ScreenEffects.fadingIn == false);
 
-        // Reenables Movement
-        if (!CutsceneManager.inCutscene)
-        {
-            PlayerController.playerController.TogglePlayerInput();
-        }
-
-        // Signals that transition is complete
-        _inTransition = false;
+        // Finishes Transition
+        CompleteTransition();
     }
 
     #endregion
@@ -107,7 +99,7 @@ public class SceneTransition
     ///                         the player should start mounted in the new scene</param>
     /// <param name="startPos">The player's starting position in the new scene</param>
     /// <param name="startDirection">The player's starting direction</param>
-    public static void ChangeScene(string sceneName, bool isIndoors, Vector3 startPos, 
+    static void ChangeScene(string sceneName, bool isIndoors, Vector3 startPos, 
                                    int startDirection)
     {
         // Loads new scene and initializes variables
@@ -130,6 +122,21 @@ public class SceneTransition
         // Unloads previous Scene
         //SceneManager.UnloadSceneAsync(_currentScene);
         Resources.UnloadUnusedAssets();
+    }
+
+    /// <summary>
+    /// Exits transition state and signals completion
+    /// </summary>
+    static void CompleteTransition()
+    {
+        // Reenables Movement
+        if (!CutsceneManager.inCutscene)
+        {
+            PlayerController.playerController.TogglePlayerInput();
+        }
+
+        // Signals that transition is complete
+        _inTransition = false;
     }
 
     #endregion
