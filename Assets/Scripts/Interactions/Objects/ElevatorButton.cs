@@ -15,31 +15,56 @@ public class ElevatorButton : InteractableObject
     #region VARIABLES
 
     // Parameters
+    [SerializeField] float[] _bgSpeeds;
     [SerializeField] int _polarity = 1; // 1 upward, -1 downward
+
+    // References
+    Transform _player;
+
+    #endregion
+
+    #region UNIVERSAL EVENTS
+
+    /// <summary>
+    ///  Start is called before the first frame update
+    /// </summary>
+    void Start()
+    {
+        _player = PlayerController.playerController.transform;
+    }
 
     #endregion
 
     #region INTERACTION FUNCTIONALITY
 
     /// <summary>
-    /// Handles Player interaction
+    /// Begins functionality
     /// </summary>
     public override void OnInteractedWith()
     {
-        // Tells which direction for elevator to go
+        // Sets elevator Vars
         ElevatorProgression.polarity = _polarity;
-
+        foreach (float i in _bgSpeeds)
+        {
+            _bgSpeeds[i] = Mathf.Abs(_bgSpeeds[i]) * _polarity;
+        }
         
 
     }
 
     /// <summary>
-    /// 
+    /// Moves player to elevator and shaft and begins shaft motion
     /// </summary>
-    /// <returns></returns>
+    /// <returns>Delay for fade</returns>
     IEnumerator StartElevator()
     {
+        // Fades out and delays
+        // Fades out
+        ScreenEffects.fadingOut = true;
+        yield return new WaitUntil(() => ScreenEffects.fadingOut == false);
 
+        // Moves Player
+        _player.position = new Vector2(_player.position.x + (30 * _polarity), _player.position.y);
     }
 
     #endregion

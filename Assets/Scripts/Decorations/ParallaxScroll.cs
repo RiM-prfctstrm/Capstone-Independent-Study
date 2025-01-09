@@ -61,7 +61,7 @@ public class ParallaxScroll : MonoBehaviour
     /// <param name="speed">Speed at which object moves. Negative speed to move down/left</param>
     /// <param name="direction">Direction to move object, true=up, false=down</param>
     /// <param name="tpDest">Point to teleport object after reaching max</param>
-    public void StartParallax(int max, float speed, bool direction)
+    public void StartParallax(int max, float speed, bool direction, Vector2 tpDest)
     {
         // Sets parameters
         _maximum = max;

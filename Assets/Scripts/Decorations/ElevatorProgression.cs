@@ -27,23 +27,7 @@ public class ElevatorProgression : MonoBehaviour
 
     #endregion
 
-    #region UNIVERSAL EVENTS
-
-    /// <summary>
-    ///  Start is called before the first frame update
-    /// </summary>
-    void Start()
-    {
-        // Ignores collisions with player
-        /*Physics2D.IgnoreCollision(GetComponent<Collider2D>(),
-            PlayerController.playerController.GetComponent<Collider2D>());*/
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    #region COLLISION LOGIC
 
     /// <summary>
     /// OnTriggerEnter2D is called when the Collider2d other enters the trigger
