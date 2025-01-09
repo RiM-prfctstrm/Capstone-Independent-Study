@@ -15,7 +15,10 @@ public class ElevatorButton : InteractableObject
     #region VARIABLES
 
     // Parameters
+    [SerializeField] ParallaxScroll[] _bgScrollers;
     [SerializeField] float[] _bgSpeeds;
+    [SerializeField] Vector2[] _bgStarts;
+    [SerializeField] int[] _bgStops;
     [SerializeField] int _polarity = 1; // 1 upward, -1 downward
 
     // References
@@ -42,14 +45,7 @@ public class ElevatorButton : InteractableObject
     /// </summary>
     public override void OnInteractedWith()
     {
-        // Sets elevator Vars
-        ElevatorProgression.polarity = _polarity;
-        foreach (float i in _bgSpeeds)
-        {
-            _bgSpeeds[i] = Mathf.Abs(_bgSpeeds[i]) * _polarity;
-        }
-        
-
+        StartCoroutine(StartElevator());
     }
 
     /// <summary>
@@ -58,13 +54,34 @@ public class ElevatorButton : InteractableObject
     /// <returns>Delay for fade</returns>
     IEnumerator StartElevator()
     {
+        // Sets direction
+        ElevatorProgression.polarity = _polarity;
+
         // Fades out and delays
-        // Fades out
         ScreenEffects.fadingOut = true;
         yield return new WaitUntil(() => ScreenEffects.fadingOut == false);
 
         // Moves Player
-        _player.position = new Vector2(_player.position.x + (30 * _polarity), _player.position.y);
+        _player.position = new Vector2(_player.position.x + (50 * _polarity), _player.position.y);
+
+        // Sets backgorund objects in motion
+        int j = 0;
+        foreach (ParallaxScroll i in _bgScrollers)
+        {
+            // Sets motion params
+            i.rate = _bgSpeeds[j] * -_polarity;
+            i.tpDest = _bgStarts[j];
+            i.maximum = _bgStops[j];
+
+            // Starts movement
+            i.inMotion = true;
+
+            // Iterates loop
+            j++;
+        }
+
+        // Fades back in
+        ScreenEffects.fadingIn = true;
     }
 
     #endregion

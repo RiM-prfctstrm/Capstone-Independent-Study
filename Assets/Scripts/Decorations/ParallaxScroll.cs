@@ -16,13 +16,13 @@ public class ParallaxScroll : MonoBehaviour
     #region VARIABLES
 
     // Parameters
-    [SerializeField] int _maximum;
-    [SerializeField] bool _movingVertically;
-    [SerializeField] float _rate; // Negativew for downwars or leftwards movement
-    [SerializeField] Vector2 _tpDest;
+    public int maximum;
+    public bool movingVertically;
+    public float rate; // Negative for downwards or leftwards movement
+    public Vector2 tpDest;
 
     // Control conditions
-    [SerializeField] bool _inMotion;
+    public bool inMotion;
 
     // Movement Vars
     Vector2 _newPos;
@@ -37,9 +37,9 @@ public class ParallaxScroll : MonoBehaviour
     void FixedUpdate()
     {
         // Determines which direction to move the object and begins specified movement
-        if (_inMotion)
+        if (inMotion)
         {
-            if (_movingVertically)
+            if (movingVertically)
             {
                 ParallaxVertical();
             }
@@ -53,26 +53,6 @@ public class ParallaxScroll : MonoBehaviour
     #endregion
 
     #region MOVEMENT CONTROLS
-
-    /// <summary>
-    /// Begins movement according to input parameters
-    /// </summary>
-    /// <param name="max">Maximum point for movement</param>
-    /// <param name="speed">Speed at which object moves. Negative speed to move down/left</param>
-    /// <param name="direction">Direction to move object, true=up, false=down</param>
-    /// <param name="tpDest">Point to teleport object after reaching max</param>
-    public void StartParallax(int max, float speed, bool direction, Vector2 tpDest)
-    {
-        // Sets parameters
-        _maximum = max;
-        _rate = speed;
-        _tpDest = tpDest;
-        _movingVertically = direction;
-        _newPos = transform.position;
-
-        // Begins motion
-        _inMotion = true;
-    }
     
     /// <summary>
     /// Moves the object along X axis to maximum, then teleports to tpDest
@@ -80,15 +60,15 @@ public class ParallaxScroll : MonoBehaviour
     void ParallaxHorizontal()
     {
         // Resets Position
-        if ((_rate >= 0 && transform.position.x >= _maximum) ||
-            (_rate < 0 && transform.position.x <= _maximum))
+        if ((rate >= 0 && transform.position.x >= maximum) ||
+            (rate < 0 && transform.position.x <= maximum))
         {
-            transform.position = _tpDest;
+            transform.position = tpDest;
         }
         // Moves object
         else
         {
-            _newPos.x = transform.position.x + (_rate * Time.fixedDeltaTime);
+            _newPos.x = transform.position.x + (rate * Time.fixedDeltaTime);
             transform.position = _newPos;
         }
     }
@@ -99,15 +79,15 @@ public class ParallaxScroll : MonoBehaviour
     void ParallaxVertical()
     {
         // Resets Position
-        if (( _rate >= 0 && transform.position.y >= _maximum) ||
-            (_rate < 0 && transform.position.y <= _maximum))
+        if (( rate >= 0 && transform.position.y >= maximum) ||
+            (rate < 0 && transform.position.y <= maximum))
         {
-            transform.position = _tpDest;
+            transform.position = tpDest;
         }
         // Moves object
         else
         {
-            _newPos.y = transform.position.y + (_rate * Time.fixedDeltaTime);
+            _newPos.y = transform.position.y + (rate * Time.fixedDeltaTime);
             transform.position = _newPos;
         }
     }
