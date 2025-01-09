@@ -18,8 +18,8 @@ public class ElevatorProgression : MonoBehaviour
     #region VARIABLES
 
     // Tracking variables
-    public int polarity = 1; // 1 upward, -1 downward
-    int _level = -1; //Tracks execution order
+    public static int polarity = 1; // 1 upward, -1 downward
+    public static int level = -1; //Tracks execution order
 
     // External References
     [SerializeField] Sprite[] _backGrounds;
@@ -52,10 +52,10 @@ public class ElevatorProgression : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Sets Current Elevator level
-        _level += polarity;
+        level += polarity;
 
         // Changes elevator state when the trigger object reaches this point
-        switch (_level)
+        switch (level)
         {
             // Sends player to Ground Floor
             case -1:
@@ -64,7 +64,7 @@ public class ElevatorProgression : MonoBehaviour
 
             // Changes background, nothing else
             case <= 2:
-                _bgObject.sprite = _backGrounds[_level];
+                _bgObject.sprite = _backGrounds[level];
                 break;
 
             // Sends Player to Top Floor
