@@ -2235,6 +2235,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7094699254246684463, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
 --- !u!224 &1886452915 stripped
@@ -2283,7 +2287,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 16, y: 16}
-  m_SizeDelta: {x: 138, y: 54}
+  m_SizeDelta: {x: 190, y: 72}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1886838794
 MonoBehaviour:
