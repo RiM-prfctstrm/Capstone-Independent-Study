@@ -23,7 +23,34 @@ public class ElevatorProgression : MonoBehaviour
 
     // External References
     [SerializeField] Sprite[] _backGrounds;
-    [SerializeField] SpriteRenderer _bgObject;
+    [SerializeField] GameObject[] _bgObjects;
+    [SerializeField] SpriteRenderer _bgSprite;
+    Vector2[] _startPositions = new Vector2[3];
+
+    // References
+    Transform _player;
+
+    #endregion
+
+    #region UNIVERSAL EVENTS
+
+    /// <summary>
+    ///  Start is called before the first frame update
+    /// </summary>
+    void Start()
+    {
+        // Inits vars
+        _player = PlayerController.playerController.transform;
+
+        // Gets initial object positions
+        int j = 0;
+        foreach(GameObject i in _bgObjects)
+        {
+            _startPositions[j] = i.transform.position;
+
+            j++;
+        }
+    }
 
     #endregion
 
@@ -37,30 +64,63 @@ public class ElevatorProgression : MonoBehaviour
     {
         // Sets Current Elevator level
         level += polarity;
+        Debug.Log(level);
 
         // Changes elevator state when the trigger object reaches this point
         switch (level)
         {
             // Sends player to Ground Floor
             case -1:
-
+                StartCoroutine(ExitElevator());
                 break;
 
-            // Changes background, nothing else
-            case <= 2:
-                _bgObject.sprite = _backGrounds[level];
+            // Changes background, nothing else. Would love to know how to write this with fewer
+            // Cases
+            case 0:
+            case 1:
+            case 2:
+                _bgSprite.sprite = _backGrounds[level];
                 break;
 
             // Sends Player to Top Floor
             case 3:
-                Debug.Log("Made it!");
+                level--;
+                StartCoroutine(ExitElevator());
                 break;
         }
+    }
 
-        /*if (collision.CompareTag(gameObject.tag))
+    #endregion
+
+    #region EXIT FUNCTIONALITY
+
+    /// <summary>
+    /// Sends player to the elevator endpoint and resets the shaft
+    /// </summary>
+    /// <returns>Delay for fade</returns>
+    IEnumerator ExitElevator()
+    {
+        // Fades out and delays
+        ScreenEffects.fadingOut = true;
+        yield return new WaitUntil(() => ScreenEffects.fadingOut == false);
+
+        // Moves Player
+        _player.position = new Vector2(_player.position.x + (50 * polarity), _player.position.y);
+
+        // Resets set objects
+        int j = 0;
+        foreach (GameObject i in _bgObjects)
         {
+            // Resets object
+            i.GetComponent<ParallaxScroll>().rate = 0;
+            i.transform.position = _startPositions[j];
 
-        }*/
+            // Iterates loop
+            j++;
+        }
+
+        // Fades back in
+        ScreenEffects.fadingIn = true;
     }
 
     #endregion

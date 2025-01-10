@@ -18,7 +18,7 @@ public class ElevatorButton : InteractableObject
     [SerializeField] ParallaxScroll[] _bgScrollers;
     [SerializeField] float[] _bgSpeeds;
     [SerializeField] Vector2[] _bgStarts;
-    [SerializeField] int[] _bgStops;
+    [SerializeField] float[] _bgStops;
     [SerializeField] int _polarity = 1; // 1 upward, -1 downward
 
     // References
@@ -33,6 +33,7 @@ public class ElevatorButton : InteractableObject
     /// </summary>
     void Start()
     {
+        // Inits vars
         _player = PlayerController.playerController.transform;
     }
 

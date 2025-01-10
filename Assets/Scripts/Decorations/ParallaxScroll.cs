@@ -16,7 +16,7 @@ public class ParallaxScroll : MonoBehaviour
     #region VARIABLES
 
     // Parameters
-    public int maximum;
+    public float maximum;
     public bool movingVertically;
     public float rate; // Negative for downwards or leftwards movement
     public Vector2 tpDest;
