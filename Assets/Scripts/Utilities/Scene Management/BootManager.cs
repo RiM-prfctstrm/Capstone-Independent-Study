@@ -2,7 +2,7 @@
  * FILE     : BootManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 12/6/24
+ * UPDATED  : 1/13/25
  * 
  * DESC     : Performs functionality that only occurs when the game is first started.
 =================================================================================================*/
@@ -64,7 +64,7 @@ public class BootManager : MonoBehaviour
     void Start()
     {
         // Plays the local music
-        MusicManager.musicManager.BeginSong(_localMusic, true);
+        MusicManager.musicManager.SwapSong(_localMusic, true);
     }
 
     #endregion
