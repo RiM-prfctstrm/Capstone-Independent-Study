@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 12/8/24
+ * UPDATED  : 1/14/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -49,6 +49,8 @@ public class PlayerController : MonoBehaviour
     float _bufferRate;
     bool _isBraking;
     public bool isWalking;
+    int _moveX;
+    int _moveY;
     float _velocityX;
     float _velocityY;
     Vector2 _newVel;
@@ -61,8 +63,6 @@ public class PlayerController : MonoBehaviour
     InputAction _interact;
     InputAction _xInput;
     InputAction _yInput;
-    int _moveX;
-    int _moveY;
 
     // External reference
     [SerializeField] GameObject _menu;
@@ -233,6 +233,12 @@ public class PlayerController : MonoBehaviour
         else
         {
             _playerInputs.Enable();
+
+            // Continues movement inputs pressed before enabling
+            if(_xInput.IsPressed())
+            {
+                
+            }
         }
     }
 

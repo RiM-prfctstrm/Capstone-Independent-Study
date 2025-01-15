@@ -2,7 +2,7 @@
  * FILE     : MusicManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 12/6/24
- * UPDATED  : 1/13/25
+ * UPDATED  : 1/14/25
  * 
  * DESC     : Controls which music is currently playing.
 =================================================================================================*/
@@ -85,7 +85,6 @@ public class MusicManager : MonoBehaviour
     /// <returns>Framerate delay for fading</returns>
     IEnumerator FadeOutSong(AudioClip song)
     {
-        Debug.Log("fading");
         // Incrementally lowers volume
         while (_musicSource.volume > 0)
         {
