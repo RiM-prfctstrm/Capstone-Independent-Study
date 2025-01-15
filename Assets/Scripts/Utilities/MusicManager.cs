@@ -2,7 +2,7 @@
  * FILE     : MusicManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 12/6/24
- * UPDATED  : 1/14/25
+ * UPDATED  : 1/15/25
  * 
  * DESC     : Controls which music is currently playing.
 =================================================================================================*/
@@ -68,12 +68,12 @@ public class MusicManager : MonoBehaviour
     /// Fades out song by gradually incrementally lowering volume
     /// </summary>
     /// <returns>Framerate delay for fading</returns>
-    IEnumerator FadeOutSong()
+    public IEnumerator FadeOutSong()
     {
         // Incrementally lowers volume
         while (_musicSource.volume > 0)
         {
-            _musicSource.volume -= .008f * Time.fixedDeltaTime;
+            _musicSource.volume -= 2 * Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
         }
     }

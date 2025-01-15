@@ -87,7 +87,7 @@ public class SceneTransition
         // Stops player from moving
         if (!CutsceneManager.inCutscene)
         {
-            PlayerController.playerController.TogglePlayerInput();
+            _player.TogglePlayerInput();
         }
     }
 
@@ -132,7 +132,7 @@ public class SceneTransition
         // Reenables Movement
         if (!CutsceneManager.inCutscene)
         {
-            PlayerController.playerController.TogglePlayerInput();
+            _player.TogglePlayerInput();
         }
 
         // Signals that transition is complete

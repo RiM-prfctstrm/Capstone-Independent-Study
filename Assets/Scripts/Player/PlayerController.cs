@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 1/14/25
+ * UPDATED  : 1/15/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
     float _bufferRate;
     bool _isBraking;
     public bool isWalking;
+    bool _movementDisabled = false;
     int _moveX;
     int _moveY;
     float _velocityX;
@@ -124,7 +125,15 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         // Gets inputs for frame
-        ValidateInputs();
+        if (!_movementDisabled)
+        {
+            ValidateInputs();
+        }
+        else
+        {
+            _moveX = 0;
+            _moveY = 0;
+        }
 
         // Controls which kind of movement to perform.
         if (isWalking)
@@ -221,9 +230,15 @@ public class PlayerController : MonoBehaviour
     public void TogglePlayerInput()
     {
         // Disables Input
-        if (_xInput.enabled)
+        if (_brake.enabled)
         {
-            _playerInputs.Disable();
+            _brake.Disable();
+            _debugSwitch.Disable();
+            _openMenu.Disable();
+            _movementDisabled = true;
+
+            // Keeps interaction enabled. Don't know why I have to explicitly spell this out, but
+            // it doesn't work if I don't.
             _interact.Enable();
 
             // Resets animation
@@ -232,13 +247,10 @@ public class PlayerController : MonoBehaviour
         // Enables Input
         else
         {
-            _playerInputs.Enable();
-
-            // Continues movement inputs pressed before enabling
-            if(_xInput.IsPressed())
-            {
-                
-            }
+            _brake.Enable();
+            _debugSwitch.Enable();
+            _openMenu.Enable();
+            _movementDisabled = false;
         }
     }
 
