@@ -76,6 +76,9 @@ public class MusicManager : MonoBehaviour
             _musicSource.volume -= 2 * Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
         }
+
+        // Tells game that no song is playing
+        _activeSong = null;
     }
 
     /// <summary>
