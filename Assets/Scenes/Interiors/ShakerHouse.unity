@@ -3799,6 +3799,7 @@ GameObject:
   - component: {fileID: 1429343259}
   - component: {fileID: 1429343258}
   - component: {fileID: 1429343257}
+  - component: {fileID: 1429343260}
   m_Layer: 0
   m_Name: Computer
   m_TagString: Interactable
@@ -3828,7 +3829,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1429343255}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99f5cdfc18804e04ca0bc3f9b2665cce, type: 3}
   m_Name: 
@@ -4068,6 +4069,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1429343260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429343255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71403433022f6a040aaf643df41e03c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetScene: BottleMail Menu
+  _leadsIndoors: 1
+  _position: {x: 0, y: 0, z: 0}
+  _direction: 0
+  isLocked: 0
+  _lockedMessage:
+    dialogueBoxes: []
 --- !u!1 &1433822566
 GameObject:
   m_ObjectHideFlags: 0

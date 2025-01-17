@@ -69,6 +69,9 @@ public class BottleMailMenu : MonoBehaviour
         {
             _scrollBar.size = 1;
         }
+
+        // Auto selects scrollbar
+        _scrollBar.Select();
     }
 
     #endregion
