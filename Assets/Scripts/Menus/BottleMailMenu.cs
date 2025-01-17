@@ -18,11 +18,12 @@ public class BottleMailMenu : MonoBehaviour
 
     // Objects
     [SerializeField] Button _defaultSelection;
+    [SerializeField] Scrollbar _scrollBar;
     // Message info container, ordered by vertical placement on screen
     [SerializeField] TextMeshProUGUI _subject;
     [SerializeField] TextMeshProUGUI _sender;
     [SerializeField] TextMeshProUGUI _receiver;
-    [SerializeField] TextMeshProUGUI _message;
+    [SerializeField] GameObject _messageText;
 
     #endregion
 
@@ -36,7 +37,7 @@ public class BottleMailMenu : MonoBehaviour
         // Disables regular player input
         PlayerController.playerController.TogglePlayerInput();
 
-        // Ensures button is selected
+        // Sets default menu values
         _defaultSelection.Select();
     }
 
@@ -60,7 +61,14 @@ public class BottleMailMenu : MonoBehaviour
         _subject.text = msg.msgSubject;
         _sender.text = msg.msgSender;
         _receiver.text = msg.msgReceivers;
-        _message.text = msg.msgContents;
+        _messageText.GetComponent<TextMeshProUGUI>().text = msg.msgContents;
+
+        // Sets Scrollbar to proper size
+        _scrollBar.size = _messageText.GetComponent<RectTransform>().rect.height / 330;
+        if (_scrollBar.size > 1)
+        {
+            _scrollBar.size = 1;
+        }
     }
 
     #endregion
