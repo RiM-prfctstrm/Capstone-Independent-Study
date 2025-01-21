@@ -114,6 +114,7 @@ public class SceneTransition
 
         // Sets player's position and direction
         _player.transform.position = startPos;
+        Debug.Log(startDirection);
         _player.GetComponent<PlayerAnimator>().facingDirection = startDirection;
 
         // Cleans player's interaction list so it works in new scene
@@ -133,6 +134,12 @@ public class SceneTransition
         if (!CutsceneManager.inCutscene)
         {
             _player.TogglePlayerInput();
+        }
+        // Makes sure player faces scripted direction
+        else
+        {
+            _player.GetComponent<PlayerAnimator>().PlayScriptedAnimation(
+                _player.GetComponent<PlayerAnimator>().SetAnimState());
         }
 
         // Signals that transition is complete
