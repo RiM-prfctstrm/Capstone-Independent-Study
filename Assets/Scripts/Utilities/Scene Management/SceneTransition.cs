@@ -2,7 +2,7 @@
  * FILE     : SceneTransition
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/29/24
- * UPDATED  : 1/8/25
+ * UPDATED  : 1/21/25
  * 
  * DESC     : Switches scenes and sets variables to initialize that scene's state after transition.
 =================================================================================================*/
@@ -114,7 +114,6 @@ public class SceneTransition
 
         // Sets player's position and direction
         _player.transform.position = startPos;
-        Debug.Log(startDirection);
         _player.GetComponent<PlayerAnimator>().facingDirection = startDirection;
 
         // Cleans player's interaction list so it works in new scene
