@@ -2,7 +2,7 @@
  * FILE     : SceneTransition
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/29/24
- * UPDATED  : 1/21/25
+ * UPDATED  : 1/27/25
  * 
  * DESC     : Switches scenes and sets variables to initialize that scene's state after transition.
 =================================================================================================*/
@@ -58,11 +58,8 @@ public class SceneTransition
         // Changes Scene
         ChangeScene(sceneName, isIndoors, startPos, startDirection);
 
-        // Fades back in
-        ScreenEffects.fadingIn = true;
-
         // Finishes Transition
-        CompleteTransition();
+        _player.StartCoroutine(CompleteTransition());
     }
 
     #endregion
@@ -102,6 +99,7 @@ public class SceneTransition
     static void ChangeScene(string sceneName, bool isIndoors, Vector3 startPos, 
                                    int startDirection)
     {
+
         // Loads new scene and initializes variables
         SceneManager.LoadScene(sceneName);
 
@@ -127,8 +125,12 @@ public class SceneTransition
     /// <summary>
     /// Exits transition state and signals completion
     /// </summary>
-    static void CompleteTransition()
+    static IEnumerator CompleteTransition()
     {
+        // Fades back in
+        ScreenEffects.fadingIn = true;
+        yield return new WaitUntil(() => ScreenEffects.fadingIn == false);
+
         // Reenables Movement
         if (!CutsceneManager.inCutscene)
         {
