@@ -21,8 +21,8 @@ public class SpacePortReceptionistLogic : NPCInteraction
     [SerializeField] Cutscene _repeatGrantAccess;
 
     // Dialogues for repeated interactions
-    [SerializeField] DialogueEvent _directToMailbox;
     [SerializeField] DialogueEvent _directToElevator;
+    [SerializeField] DialogueEvent _directToMailbox;
 
     #endregion
 
