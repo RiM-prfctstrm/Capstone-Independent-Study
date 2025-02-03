@@ -2,7 +2,7 @@
  * FILE     : NPCInteraction.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/11/24
- * UPDATED  : 11/25/24
+ * UPDATED  : 2/3/25
  * 
  * DESC     : Controls how NPCs behave when the player interacts with them.
 =================================================================================================*/
@@ -132,7 +132,7 @@ public class NPCInteraction : InteractableObject
     /// <summary>
     /// Controls cutscenes triggered by talking to the NPC
     /// </summary>
-    void NPCTriggeredEvent()
+    protected virtual void NPCTriggeredEvent()
     {
         if (!_NPCCutscene.hasPlayed)
         {

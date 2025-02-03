@@ -26,9 +26,16 @@ public static class GlobalVariableTracker
 
     #region PERSISTANT FLAGS
 
-    // Cutscene progress variables
+    // Mission Complete Variable
+    public static bool m0Complete = false; // Not used yet, will be when I go back to revise m0
+    public static bool m1Complete = false;
+    public static bool m2Complete = false;
+    public static bool m3Complete = false;
 
-    // Door locking variables
+    // Mission Specific Flags
+    // Mission 3
+    public static bool hasAccessCard = false;
+    public static bool visitedReceptionist = false;
 
     #endregion
 
