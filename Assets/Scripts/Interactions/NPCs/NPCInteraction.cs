@@ -25,8 +25,8 @@ public class NPCInteraction : InteractableObject
     [SerializeField] bool _staticImage = false;
 
     // Interaction results
-    [SerializeField] List<DialogueEvent> _NPCLines = new List<DialogueEvent>();
-    [SerializeField] Cutscene _NPCCutscene;
+    [SerializeField] protected List<DialogueEvent> _NPCLines = new List<DialogueEvent>();
+    [SerializeField] protected Cutscene _NPCCutscene;
 
     // External components
     GameObject _player;
@@ -132,7 +132,7 @@ public class NPCInteraction : InteractableObject
     /// <summary>
     /// Controls cutscenes triggered by talking to the NPC
     /// </summary>
-    protected virtual void NPCTriggeredEvent()
+    void NPCTriggeredEvent()
     {
         if (!_NPCCutscene.hasPlayed)
         {

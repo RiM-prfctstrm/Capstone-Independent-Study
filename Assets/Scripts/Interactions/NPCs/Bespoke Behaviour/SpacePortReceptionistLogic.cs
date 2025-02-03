@@ -13,15 +13,48 @@ using UnityEngine;
 
 public class SpacePortReceptionistLogic : NPCInteraction
 {
-    // Start is called before the first frame update
-    void Start()
+    #region VARIABLES
+
+    // Cutscenes
+    [SerializeField] Cutscene _firstGrantAccess;
+    [SerializeField] Cutscene _firstNoAccess;
+    [SerializeField] Cutscene _repeatGrantAccess;
+
+    // Dialogues for repeated interactions
+    [SerializeField] DialogueEvent _directToMailbox;
+    [SerializeField] DialogueEvent _directToElevator;
+
+    #endregion
+
+    #region INTERACTION FUNCTIONALITY
+
+    /// <summary>
+    /// Determines what to do when the player interacts with the NPC. Handles logic to determine
+    /// which event to play before performing normal NPC functionality
+    /// </summary>
+    public override void OnInteractedWith()
     {
-        
+        // Logic that determines which event and dialogue can play
+        if (GlobalVariableTracker.visitedReceptionist && GlobalVariableTracker.hasAccessCard)
+        {
+            _NPCCutscene = _repeatGrantAccess;
+            _NPCLines[0] = _directToElevator;
+        }
+        else if (GlobalVariableTracker.hasAccessCard)
+        {
+            _NPCCutscene = _firstGrantAccess;
+            _NPCLines[0] = _directToElevator;
+        }
+        else
+        {
+            _NPCCutscene = _firstNoAccess;
+            _NPCLines[0] = _directToMailbox;
+        }
+
+
+        // Normal NPC Functionality
+        base.OnInteractedWith();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    #endregion
 }
