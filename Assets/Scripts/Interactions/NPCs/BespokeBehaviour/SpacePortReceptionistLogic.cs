@@ -2,7 +2,7 @@
  * FILE     : SpacePortReceptionistLogic
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/3/25
- * UPDATED  : 2/3/25
+ * UPDATED  : 2/4/25
  * 
  * DESC     : Controls behaviour of the Spaceport receptionist, based on the current state of
  *            external variables.
@@ -35,12 +35,13 @@ public class SpacePortReceptionistLogic : NPCInteraction
     public override void OnInteractedWith()
     {
         // Logic that determines which event and dialogue can play
-        if (GlobalVariableTracker.visitedReceptionist && GlobalVariableTracker.hasAccessCard)
+        if (GlobalVariableTracker.progressionFlags["visitedReceptionist"] &&
+            GlobalVariableTracker.progressionFlags["hasAccessCard"])
         {
             _NPCCutscene = _repeatGrantAccess;
             _NPCLines[0] = _directToElevator;
         }
-        else if (GlobalVariableTracker.hasAccessCard)
+        else if (GlobalVariableTracker.progressionFlags["hasAccessCard"])
         {
             _NPCCutscene = _firstGrantAccess;
             _NPCLines[0] = _directToElevator;

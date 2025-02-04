@@ -2,7 +2,7 @@
  * FILE     : DebugProgressInjector.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/3/25
- * UPDATED  : 2/3/25
+ * UPDATED  : 2/4/25
  * 
  * DESC     : Debug script to set progression variables by hand in inspector. Used to tell the game
  *            to play at a certain point. Works best before loading scene.
@@ -65,10 +65,10 @@ public class DebugProgressInjector : MonoBehaviour
     {
         // Mission Data
         GlobalVariableTracker.currentMission = _currentMission;
-        GlobalVariableTracker.m0Complete = _m0Complete;
-        GlobalVariableTracker.m1Complete = _m1Complete;
-        GlobalVariableTracker.m2Complete = _m2Complete;
-        GlobalVariableTracker.m3Complete = _m3Complete;
+        GlobalVariableTracker.progressionFlags["m0complete"] = _m0Complete;
+        GlobalVariableTracker.progressionFlags["m1complete"] = _m1Complete;
+        GlobalVariableTracker.progressionFlags["m2complete"] = _m2Complete;
+        GlobalVariableTracker.progressionFlags["m3complete"] = _m3Complete;
 
         // Prevent repeat fires
         _fireInjector = false;

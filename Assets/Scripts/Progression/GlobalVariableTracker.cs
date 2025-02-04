@@ -2,7 +2,7 @@
  * FILE     : GlobalVariableTracker.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/4/24
- * UPDATED  : 2/3/25
+ * UPDATED  : 2/4/25
  * 
  * DESC     : Stores data that is meant to persist throughout the entire game. Variables are kept
  *            in an initialized state to easily create a new save. If a save is loaded, they are
@@ -26,16 +26,20 @@ public static class GlobalVariableTracker
 
     #region PERSISTANT FLAGS
 
-    // Mission Complete Variable
-    public static bool m0Complete = false; // Not used yet, will be when I go back to revise m0
-    public static bool m1Complete = false;
-    public static bool m2Complete = false;
-    public static bool m3Complete = false;
+    // Dictionary of all bools used as flags for progress
+    public static Dictionary<string, bool> progressionFlags = new Dictionary<string, bool>
+    {
+        // Mission Complete Variable
+        { "m0complete", false }, // Not used yet, will be when I go back to revise m0
+        { "m1complete", false },
+        { "m2complete", false },
+        { "m3complete", false },
 
-    // Mission Specific Flags
-    // Mission 3
-    public static bool hasAccessCard = false;
-    public static bool visitedReceptionist = false;
+        // Mission Specific Flags
+        // Mission 3
+        { "hasAccessCard", false },
+        { "visitedReceptionist", false }
+    };
 
     #endregion
 
