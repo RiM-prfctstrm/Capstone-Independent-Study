@@ -37,6 +37,7 @@ public static class GlobalVariableTracker
 
         // Mission Specific Flags
         // Mission 3
+        { "checkedIn", false },
         { "hasAccessCard", false },
         { "visitedReceptionist", false }
     };
