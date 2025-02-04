@@ -23,6 +23,11 @@ public class DebugProgressInjector : MonoBehaviour
     [SerializeField] bool _m2Complete = false;
     [SerializeField] bool _m3Complete = false;
 
+    // Mission-specific flags
+    // mission 3
+    [SerializeField] bool _hasAccessCard = false;
+    [SerializeField] bool _visitedReceptionist = false;
+
 
     // Activation Switch
     [SerializeField] bool _fireInjector = false;
@@ -64,11 +69,15 @@ public class DebugProgressInjector : MonoBehaviour
     void InjectGlobalData()
     {
         // Mission Data
+        // Overall Progression
         GlobalVariableTracker.currentMission = _currentMission;
         GlobalVariableTracker.progressionFlags["m0complete"] = _m0Complete;
         GlobalVariableTracker.progressionFlags["m1complete"] = _m1Complete;
         GlobalVariableTracker.progressionFlags["m2complete"] = _m2Complete;
         GlobalVariableTracker.progressionFlags["m3complete"] = _m3Complete;
+        // Mission 3 Progression
+        GlobalVariableTracker.progressionFlags["hasAccessCard"] = _hasAccessCard;
+        GlobalVariableTracker.progressionFlags["visitedReceptionist"] = _visitedReceptionist;
 
         // Prevent repeat fires
         _fireInjector = false;
