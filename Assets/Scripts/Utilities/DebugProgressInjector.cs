@@ -24,7 +24,8 @@ public class DebugProgressInjector : MonoBehaviour
     [SerializeField] bool _m3Complete = false;
 
     // Mission-specific flags
-    // mission 3
+    // Mission 3
+    [SerializeField] bool _checkedIn = false;
     [SerializeField] bool _hasAccessCard = false;
     [SerializeField] bool _visitedReceptionist = false;
 
@@ -76,6 +77,7 @@ public class DebugProgressInjector : MonoBehaviour
         GlobalVariableTracker.progressionFlags["m2complete"] = _m2Complete;
         GlobalVariableTracker.progressionFlags["m3complete"] = _m3Complete;
         // Mission 3 Progression
+        GlobalVariableTracker.progressionFlags["checkedIn"] = _checkedIn;
         GlobalVariableTracker.progressionFlags["hasAccessCard"] = _hasAccessCard;
         GlobalVariableTracker.progressionFlags["visitedReceptionist"] = _visitedReceptionist;
 
