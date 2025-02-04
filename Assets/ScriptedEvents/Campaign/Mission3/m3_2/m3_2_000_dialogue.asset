@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
+  m_Name: m3_2_000_dialogue
+  m_EditorClassIdentifier: 
+  eventComplete: 0
+  cutsceneDialogue:
+    dialogueBoxes:
+    - dialogueText: Today's bring your daughter to work day, but my Trudy woke up
+        with a fever.
+      nameTag: Engineer Hughes
+      portrait: {fileID: 0}
+    - dialogueText: I was looking forward to introducing her to the wonderful world
+        of artificial gravity sidewalk codes. She was so excited, too.
+      nameTag: Engineer Hughes
+      portrait: {fileID: 0}
+    - dialogueText: Aw, that stinks. I hope she gets well soon.
+      nameTag: Pepper
+      portrait: {fileID: 0}
+    - dialogueText: Thank you.
+      nameTag: Engineer Hughes
+      portrait: {fileID: 0}
+    - dialogueText: Kids your age mostly usually make fun of her for her interest
+        in urban pedestrian bureaucracy.
+      nameTag: Engineer Hughes
+      portrait: {fileID: 0}
+    - dialogueText: A smooth sidewalk can be the difference between life and death.
+        I have massive respect for everyone that works to maintain them.
+      nameTag: Pepper
+      portrait: {fileID: 0}
+    - dialogueText: I like your attitude, kid. You're cheering me up.
+      nameTag: Engineer Hughes
+      portrait: {fileID: 0}
+    - dialogueText: I guess it's not that big a deal anyway. I can always show her
+        once we're living up there.
+      nameTag: Engineer Hughes
+      portrait: {fileID: 0}
+    - dialogueText: Still, wish I'd known before I went through all the trouble to
+        get her a guest pass.
+      nameTag: Engineer Hughes
+      portrait: {fileID: 0}
+    - dialogueText: You have a guest pass?
+      nameTag: Pepper
+      portrait: {fileID: 0}
+    - dialogueText: Yeah, for the Joshua. Lets the holder into the ship's residential
+        area for the day.
+      nameTag: Engineer Hughes
+      portrait: {fileID: 0}
+    - dialogueText: Do you want it or something?
+      nameTag: Engineer Hughes
+      portrait: {fileID: 0}
+    - dialogueText: Yeah! I'm making a delivery to one of the test families, and
+        I'd love to go up there!
+      nameTag: Pepper
+      portrait: {fileID: 0}
+    - dialogueText: Hmmm...
+      nameTag: Engineer Hughes
+      portrait: {fileID: 0}
+    - dialogueText: "It's not like it's tied to Trudy's ID anyway, and nobody who
+        cares about sidewalk safety so much would ever be a terrorist...\r"
+      nameTag: Engineer Hughes
+      portrait: {fileID: 0}
+    - dialogueText: Sure, why not?
+      nameTag: Engineer Hughes
+      portrait: {fileID: 0}
+    - dialogueText: '* Received GLS Joshua Guest Pass!'
+      nameTag: 
+      portrait: {fileID: 0}
+    - dialogueText: Thank you so much!
+      nameTag: Pepper
+      portrait: {fileID: 0}
+    - dialogueText: I'll make sure to appreciate your sidewalks!
+      nameTag: Pepper
+      portrait: {fileID: 0}
+    - dialogueText: No problem.
+      nameTag: Engineer Hughes
+      portrait: {fileID: 0}

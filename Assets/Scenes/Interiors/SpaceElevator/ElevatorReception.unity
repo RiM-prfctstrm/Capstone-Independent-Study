@@ -1187,7 +1187,11 @@ MonoBehaviour:
   _dialogueRange: 5
   _isEventTrigger: 1
   _staticImage: 1
-  _NPCLines: []
+  _NPCLines:
+  - dialogueBoxes:
+    - dialogueText: Dummy
+      nameTag: 
+      portrait: {fileID: 0}
   _NPCCutscene: {fileID: 0}
   _firstGrantAccess: {fileID: 0}
   _firstNoAccess: {fileID: 11400000, guid: 2d91ba17989f40f419e8e4d6194eb6df, type: 2}
@@ -1196,12 +1200,12 @@ MonoBehaviour:
     dialogueBoxes:
     - dialogueText: Please proceed down the hall to your right to access the space
         elebvator.
-      nameTag: Spaceport Receptionist
+      nameTag: Receptionist
       portrait: {fileID: 0}
   _directToMailbox:
     dialogueBoxes:
     - dialogueText: The mailbox is to your left.
-      nameTag: Spaceport Receptionist
+      nameTag: Receptionist
       portrait: {fileID: 0}
 --- !u!1001 &1133033922
 PrefabInstance:
