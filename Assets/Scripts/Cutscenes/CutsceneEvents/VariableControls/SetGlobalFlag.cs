@@ -10,7 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Flag Switch", menuName = "Cutscene/Data management/Set Flad",
+[CreateAssetMenu(fileName = "Flag Switch", menuName = "Cutscene/Data management/Set Flag",
     order = 0)]
 public class SetGlobalFlag : CutsceneEvent
 {
