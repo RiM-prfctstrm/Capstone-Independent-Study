@@ -84,6 +84,7 @@ public class DebugProgressInjector : MonoBehaviour
         // Prevent repeat fires
         _fireInjector = false;
 
+        Debug.Log(GlobalVariableTracker.progressionFlags["checkedIn"]);
     }
 
     #endregion

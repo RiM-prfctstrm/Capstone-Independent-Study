@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 304173634720540029}
   - component: {fileID: -5819487503399453772}
+  - component: {fileID: 5870146151931425295}
   m_Layer: 0
   m_Name: Scene Essentials
   m_TagString: Untagged
@@ -49,6 +50,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cca961f4b15f3c4b96291c74d933ac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5870146151931425295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304173634720540028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74d6ae03195a6ec4ab7fec9919218420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentMission: 0
+  _m0Complete: 0
+  _m1Complete: 0
+  _m2Complete: 0
+  _m3Complete: 0
+  _checkedIn: 0
+  _hasAccessCard: 0
+  _visitedReceptionist: 0
+  _fireInjector: 0
 --- !u!1 &304173635748979479
 GameObject:
   m_ObjectHideFlags: 0
