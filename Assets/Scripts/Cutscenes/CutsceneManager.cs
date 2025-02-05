@@ -68,6 +68,7 @@ public class CutsceneManager : MonoBehaviour
         _skipPos = 0;
 
         // Plays cutscene
+        cutscene.hasPlayed = true;
         StartCoroutine(PlayCutscene(cutscene));
     }
 
