@@ -2,7 +2,7 @@
  * FILE     : ElevatorButton.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/9/25
- * UPDATED  : 1/9/25
+ * UPDATED  : 2/6/25
  * 
  * DESC     : Starts Elevator Movement
 =================================================================================================*/
@@ -20,6 +20,7 @@ public class ElevatorButton : InteractableObject
     [SerializeField] Vector2[] _bgStarts;
     [SerializeField] float[] _bgStops;
     [SerializeField] int _polarity = 1; // 1 upward, -1 downward
+    [SerializeField] int _startingLevel = -1;
 
     // References
     Transform _player;
@@ -55,8 +56,9 @@ public class ElevatorButton : InteractableObject
     /// <returns>Delay for fade</returns>
     IEnumerator StartElevator()
     {
-        // Sets direction
+        // Sets direction and startpoint
         ElevatorProgression.polarity = _polarity;
+        ElevatorProgression.level = _startingLevel;
 
         // Fades out and delays
         ScreenEffects.fadingOut = true;
