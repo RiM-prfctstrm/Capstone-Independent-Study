@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
+  m_Name: m3_4_19_dadChide
+  m_EditorClassIdentifier: 
+  eventComplete: 0
+  cutsceneDialogue:
+    dialogueBoxes:
+    - dialogueText: Now, Pepper, you really gotta stop trying to get into restricted
+        areas all the time. You could get hurt or arrested.
+      nameTag: Dad
+      portrait: {fileID: 0}
+    - dialogueText: But, what else am I supposed to do?
+      nameTag: Pepper
+      portrait: {fileID: 0}
+    - dialogueText: You can pack your things!
+      nameTag: Dad
+      portrait: {fileID: 0}
+    - dialogueText: Boarding's only a week away, and we don't want to miss our spot.
+      nameTag: Dad
+      portrait: {fileID: 0}
+    - dialogueText: You know there's no way I'm letting you, of all people, miss
+        the evacuation.
+      nameTag: Mom
+      portrait: {fileID: 0}
+    - dialogueText: Awww, thanks,  sweetheart.
+      nameTag: Dad
+      portrait: {fileID: 0}

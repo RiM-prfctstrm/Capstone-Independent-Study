@@ -9,14 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced189b58ef3d6a4a8635aaabf73c2c2, type: 3}
-  m_Name: m3_4_011_pepperEnter
+  m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
+  m_Name: m3_4_014_momChidePepper
   m_EditorClassIdentifier: 
-  eventComplete: 1
-  _targetID: 0
-  _speed: 6
-  _movements:
-  - {x: -5, y: 5.5}
-  _overrideMovementAnimation: 0
-  _overrideAnimation: 
-  _referencePos: {x: 13, y: -17.5}
+  eventComplete: 0
+  cutsceneDialogue:
+    dialogueBoxes:
+    - dialogueText: You went up the space elevator, if I'm not mistaken.
+      nameTag: Mom
+      portrait: {fileID: 0}

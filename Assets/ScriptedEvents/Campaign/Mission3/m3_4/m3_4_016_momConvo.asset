@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
+  m_Name: m3_4_016_momConvo
+  m_EditorClassIdentifier: 
+  eventComplete: 0
+  cutsceneDialogue:
+    dialogueBoxes:
+    - dialogueText: What!? How'd you know?
+      nameTag: Pepper
+      portrait: {fileID: 0}
+    - dialogueText: There was a report from the desk that somebody was trying to
+        get in with a guest pass on their own.
+      nameTag: Mom
+      portrait: {fileID: 0}
+    - dialogueText: If I didn't just happen to be there when it came in, they wouldn't
+        have let you through. You're lucky it was bring your daughter to work day.
+      nameTag: Mom
+      portrait: {fileID: 0}
