@@ -17,9 +17,31 @@ public class BranchScene : CutsceneEvent
 {
     #region VARIABLES
 
+    // Choice text
+    [SerializeField] Dialogue _choiceDialogue;
+
+    // Branch Cutscenes
+    [SerializeField] Cutscene _branchA;
+    [SerializeField] Cutscene _branchB;
+
     #endregion
 
     #region EVENT FUNCTIONALITY
+
+    /// <summary>
+    /// Sets up dialogue display and prepares player to make choice.
+    /// </summary>
+    public override void PlayEventFunction()
+    {
+        base.PlayEventFunction();
+
+        // Sets up UI window
+        DialogueManager.dialogueManager.dialogueOutline.SetActive(true);
+        DialogueManager.dialogueManager.choiceMenu.SetActive(true);
+        DialogueManager.dialogueManager.DisplayDialogue(_choiceDialogue);
+        DialogueManager.dialogueManager.choiceDefaultSelection.Select();
+
+    }
 
     #endregion
 }

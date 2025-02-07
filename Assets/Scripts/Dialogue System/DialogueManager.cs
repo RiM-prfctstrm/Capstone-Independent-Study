@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 12/8/24
+ * UPDATED  : 2/7/25
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -22,6 +22,8 @@ public class DialogueManager : MonoBehaviour
 
     // UI Elements
     // Visible elements
+    [SerializeField] GameObject _choiceMenu;
+    [SerializeField] Button _choiceDefaultSelection;
     [SerializeField] TextMeshProUGUI _dialogueText;
     [SerializeField] GameObject _dialogueOutline;
     [SerializeField] TextMeshProUGUI _nametagText;
@@ -32,6 +34,11 @@ public class DialogueManager : MonoBehaviour
     // Other Objects
     [SerializeField] AudioSource _systemSounds;
     public Button previouslySelected = null;
+
+    // Getters
+    public GameObject choiceMenu => _choiceMenu;
+    public Button choiceDefaultSelection => _choiceDefaultSelection;
+    public GameObject dialogueOutline => dialogueOutline;
 
     // Progress signals
     static bool _dialogueInProgress = false;
@@ -95,7 +102,7 @@ public class DialogueManager : MonoBehaviour
     /// Determines which parts of dialogue UI to display and displays them on screen
     /// </summary>
     /// <param name="dialogue">The dialogue to display</param>
-    void DisplayDialogue(Dialogue dialogue)
+    public void DisplayDialogue(Dialogue dialogue)
     {
         // Controls whether and what portrait displays
         if (dialogue.portrait != null)

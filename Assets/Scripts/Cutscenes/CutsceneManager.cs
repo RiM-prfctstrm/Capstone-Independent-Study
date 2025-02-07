@@ -97,7 +97,7 @@ public class CutsceneManager : MonoBehaviour
     /// <summary>
     /// Returns Game to normal gameplay State
     /// </summary>
-    void EndCutscene()
+    public void EndCutscene()
     {
         // Deactivates cutscene mode
         _inCutscene = false;
