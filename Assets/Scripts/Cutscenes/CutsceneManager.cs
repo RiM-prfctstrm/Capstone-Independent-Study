@@ -145,7 +145,8 @@ public class CutsceneManager : MonoBehaviour
                      i.GetType() == typeof(CutsceneSceneTransition) ||
                      i.GetType() == typeof(SetEventMusic) || 
                      i.GetType() == typeof(ToggleVisibility) ||
-                     i.GetType() == typeof(DisplayImage) || i.GetType() == typeof(ClearImage))
+                     i.GetType() == typeof(DisplayImage) || i.GetType() == typeof(ClearImage) ||
+                     i.GetType() == typeof(BranchScene))
             {
                 i.PlayEventFunction();
             }
