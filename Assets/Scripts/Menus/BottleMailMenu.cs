@@ -2,7 +2,7 @@
  * FILE     : BottleMailMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/16/25
- * UPDATED  : 1/16/25
+ * UPDATED  : 2/7/25
  * 
  * DESC     : Controls BottleMail menu behavior to emulate an email program.
 =================================================================================================*/
@@ -41,12 +41,6 @@ public class BottleMailMenu : MonoBehaviour
         _defaultSelection.Select();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     #endregion
 
     #region BUTTON ACTIONS
@@ -72,6 +66,19 @@ public class BottleMailMenu : MonoBehaviour
 
         // Auto selects scrollbar
         _scrollBar.Select();
+    }
+
+    /// <summary>
+    /// Exits the BottleMail Menu and return's to Pepper's room
+    /// </summary>
+    public void CloseMenu()
+    {
+        // Reenables player input
+        PlayerController.playerController.TogglePlayerInput();
+
+        // Sends player back to room
+        StartCoroutine(SceneTransition.TransitionScene(
+            "ShakerHouse", true, new Vector3(5.5f, -37.25f, 0), 3));
     }
 
     #endregion
