@@ -2,7 +2,7 @@
  * FILE     : CutsceneManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1X/X/24
- * UPDATED  : 2/4/25
+ * UPDATED  : 2/7/25
  * 
  * DESC     : Controls the progression of scripted events.
 =================================================================================================*/

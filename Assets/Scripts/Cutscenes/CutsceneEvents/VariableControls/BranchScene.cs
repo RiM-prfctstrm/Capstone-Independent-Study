@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[CreateAssetMenu(fileName = "Branch", menuName = "Cutscene/Data management/Set Flag", order = 1)]
+[CreateAssetMenu(fileName = "Branch", menuName = "Cutscene/Data management/Branch", order = 1)]
 public class BranchScene : CutsceneEvent
 {
     #region VARIABLES
@@ -39,8 +39,28 @@ public class BranchScene : CutsceneEvent
         DialogueManager.dialogueManager.dialogueOutline.SetActive(true);
         DialogueManager.dialogueManager.choiceMenu.SetActive(true);
         DialogueManager.dialogueManager.DisplayDialogue(_choiceDialogue);
-        DialogueManager.dialogueManager.choiceDefaultSelection.Select();
 
+        // Prepares choice menu
+        CutsceneManager.cutsceneManager.StartCoroutine(WaitForEventEnd());
+
+    }
+
+    /// <summary>
+    /// Gives a small delay so that player doesn't automatically hit button.
+    /// </summary>
+    protected override IEnumerator WaitForEventEnd()
+    {
+        // Sets choice outcomes
+        DialogueManager.dialogueManager.choiceYes.GetComponent<ChoiceButton>().resultEvent
+            = _branchA;
+        DialogueManager.dialogueManager.choiceNo.GetComponent<ChoiceButton>().resultEvent
+            = _branchB;
+
+        // Delay
+        yield return new WaitForFixedUpdate();
+
+        // Selects button
+        DialogueManager.dialogueManager.choiceNo.GetComponent<Button>().Select();
     }
 
     #endregion

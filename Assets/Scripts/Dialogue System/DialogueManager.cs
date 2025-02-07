@@ -23,7 +23,8 @@ public class DialogueManager : MonoBehaviour
     // UI Elements
     // Visible elements
     [SerializeField] GameObject _choiceMenu;
-    [SerializeField] Button _choiceDefaultSelection;
+    [SerializeField] GameObject _choiceNo;
+    [SerializeField] GameObject _choiceYes;
     [SerializeField] TextMeshProUGUI _dialogueText;
     [SerializeField] GameObject _dialogueOutline;
     [SerializeField] TextMeshProUGUI _nametagText;
@@ -37,8 +38,9 @@ public class DialogueManager : MonoBehaviour
 
     // Getters
     public GameObject choiceMenu => _choiceMenu;
-    public Button choiceDefaultSelection => _choiceDefaultSelection;
-    public GameObject dialogueOutline => dialogueOutline;
+    public GameObject choiceNo => _choiceNo;
+    public GameObject choiceYes => _choiceYes;
+    public GameObject dialogueOutline => _dialogueOutline;
 
     // Progress signals
     static bool _dialogueInProgress = false;
