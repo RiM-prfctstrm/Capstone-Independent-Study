@@ -2,7 +2,7 @@
  * FILE     : DetectObjects.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 6/5/23
- * UPDATED  : 11/2/24
+ * UPDATED  : 2/8/25
  * 
  * DESC     : Gets props with in the player's interaction space and returns the nearest one
 =================================================================================================*/
@@ -17,6 +17,7 @@ public class DetectObjects : MonoBehaviour
     // GameObjects
     List<GameObject> _interactables = new List<GameObject>();
     GameObject _player;
+    [SerializeField] GameObject _interactionMarker;
     GameObject _targetProp;
     InteractableObject _target;
     public InteractableObject target => _target;
@@ -79,6 +80,9 @@ public class DetectObjects : MonoBehaviour
                 }
             }
         }
+
+        // Displays a marker over the prop the player can interact with
+        _interactionMarker.SetActive(MarkTarget());
     }
 
     #endregion
@@ -156,6 +160,28 @@ public class DetectObjects : MonoBehaviour
                 minDistance = distance;
                 _targetProp = i;
             }
+        }
+    }
+
+    #endregion
+
+    #region TARGET MARKING
+
+    /// <summary>
+    /// Detects whether a target object is currently selected, and displays a marker if true
+    /// </summary>
+    /// <returns>Whether the last selected object is still in range</returns>
+    bool MarkTarget()
+    {
+        if (_interactables.Contains(_targetProp))
+        {
+            _interactionMarker.transform.position = new Vector2(_targetProp.transform.position.x,
+                _targetProp.transform.position.y + 1);
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
