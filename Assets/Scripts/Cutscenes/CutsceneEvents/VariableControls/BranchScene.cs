@@ -2,7 +2,7 @@
  * FILE     : BranchScene.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/7/25
- * UPDATED  : 2/7/25
+ * UPDATED  : 2/8/25
  * 
  * DESC     : Lets the player choose between two branches for the scene to follow, A on yes, B on 
  *            no.
@@ -21,8 +21,8 @@ public class BranchScene : CutsceneEvent
     [SerializeField] Dialogue _choiceDialogue;
 
     // Branch Cutscenes
-    [SerializeField] Cutscene _branchA;
-    [SerializeField] Cutscene _branchB;
+    [SerializeField] Cutscene _branchA = null;
+    [SerializeField] Cutscene _branchB = null;
 
     #endregion
 
