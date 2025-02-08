@@ -33,10 +33,6 @@ public class ChoiceButton : MonoBehaviour
         // Hides UI
         DialogueManager.dialogueManager.dialogueOutline.SetActive(false);
         DialogueManager.dialogueManager.choiceMenu.SetActive(false);
-
-        // Plays a dummy dialogue event to fix glitch that skips the next dialogue after the
-        // choice. There's probably a cleaner way of doing this, but hey, this works
-        //DialogueManager.dialogueManager.StartDialogue(_dummyDialogue);
     }
 
     /// <summary>
@@ -44,15 +40,13 @@ public class ChoiceButton : MonoBehaviour
     /// </summary>
     public void PlayCutsceneEvent()
     {
+        // Resets dialogue to not automatically skip
+        DialogueManager.dialogueManager.advancing = false;
+
         // Stops function if result event is null
         if (resultEvent != null)
         {
             CutsceneManager.cutsceneManager.StartCutscene(resultEvent);
-        }
-        else
-        {
-            Debug.Log("over");
-            CutsceneManager.cutsceneManager.EndCutscene();
         }
     }
 
