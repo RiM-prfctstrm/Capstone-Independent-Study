@@ -25,6 +25,7 @@ public class GlobalVariableTracker
     #endregion
 
     #region PERSISTANT FLAGS
+    // Flags that remain set for the remainder of gameplay.
 
     // Dictionary of all bools used as flags for progress
     public static Dictionary<string, bool> progressionFlags = new Dictionary<string, bool>
