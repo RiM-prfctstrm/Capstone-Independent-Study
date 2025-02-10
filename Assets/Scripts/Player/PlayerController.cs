@@ -66,10 +66,11 @@ public class PlayerController : MonoBehaviour
     InputAction _yInput;
 
     // External reference
-    [SerializeField] GameObject _menu;
     DialogueManager _dialogueManager;
     GameObject _lastTarget;
     public GameObject lastTarget => _lastTarget;
+    [SerializeField] GameObject _menu;
+    Button _mainMenuDefault;
 
     // Sound effects
     [SerializeField] AudioClip _bikeBell;
@@ -96,6 +97,7 @@ public class PlayerController : MonoBehaviour
 
         // Sets external objects
         _dialogueManager = DialogueManager.dialogueManager;
+        _mainMenuDefault = _menu.GetComponent<InGameMainMenu>().defaultSelection;
 
         // Sets inputs
         _brake = _playerInputs.FindAction("Brake");
@@ -109,7 +111,7 @@ public class PlayerController : MonoBehaviour
         _brake.performed += ctx => _isBraking = true;
         _brake.canceled += ctx => _isBraking = false;
         _debugSwitch.performed += ctx => ToggleBike();
-        _openMenu.performed += ctx => OpenMenu();
+        _openMenu.performed += ctx => OpenMenu(_menu, _mainMenuDefault);
         _interact.performed += ctx => PerformInteraction();
 
         // Initializes Accel/Decel Rates
@@ -503,7 +505,7 @@ public class PlayerController : MonoBehaviour
     /// <summary>
     /// Opens the menu
     /// </summary>
-    void OpenMenu()
+    public void OpenMenu(GameObject menu, Button selection)
     {
         // Prevents menu from opening in dialogue
         if (DialogueManager.dialogueInProgress)
@@ -512,11 +514,14 @@ public class PlayerController : MonoBehaviour
         }
 
         // Opens menu
-        _menu.SetActive(true);
-        _menu.GetComponent<InGameMainMenu>().defaultSelection.Select();
+        menu.SetActive(true);
+        selection.Select();
 
         // Disables non-menu inputs
-        TogglePlayerInput();
+        if (!CutsceneManager.inCutscene)
+        {
+            TogglePlayerInput();
+        }
         _interact.Disable();
     }
 

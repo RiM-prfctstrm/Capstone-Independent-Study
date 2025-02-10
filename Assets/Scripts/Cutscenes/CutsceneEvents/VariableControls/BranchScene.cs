@@ -35,11 +35,6 @@ public class BranchScene : CutsceneEvent
     {
         base.PlayEventFunction();
 
-        // Sets up UI window
-        DialogueManager.dialogueManager.dialogueOutline.SetActive(true);
-        DialogueManager.dialogueManager.choiceMenu.SetActive(true);
-        DialogueManager.dialogueManager.DisplayDialogue(_choiceDialogue);
-
         // Prepares choice menu
         CutsceneManager.cutsceneManager.StartCoroutine(WaitForEventEnd());
 
@@ -56,11 +51,16 @@ public class BranchScene : CutsceneEvent
         DialogueManager.dialogueManager.choiceNo.GetComponent<ChoiceButton>().resultEvent
             = _branchB;
 
+        // Sets up explanation text
+        DialogueManager.dialogueManager.dialogueOutline.SetActive(true);
+        DialogueManager.dialogueManager.DisplayDialogue(_choiceDialogue);
+
         // Delay
         yield return new WaitForFixedUpdate();
 
         // Selects button
-        DialogueManager.dialogueManager.choiceNo.GetComponent<Button>().Select();
+        PlayerController.playerController.OpenMenu(DialogueManager.dialogueManager.choiceMenu,
+            DialogueManager.dialogueManager.choiceNo.GetComponent<Button>());
     }
 
     #endregion
