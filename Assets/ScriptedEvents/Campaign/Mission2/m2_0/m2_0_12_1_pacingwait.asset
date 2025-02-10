@@ -9,14 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced189b58ef3d6a4a8635aaabf73c2c2, type: 3}
-  m_Name: m2_0_004_takeJerryAback
+  m_Script: {fileID: 11500000, guid: 7a2e80aa6127fbc49811085b2cd988a2, type: 3}
+  m_Name: m2_0_12_1_pacingwait
   m_EditorClassIdentifier: 
-  eventComplete: 1
-  _targetID: 1
-  _speed: 5
-  _movements:
-  - {x: 0.25, y: 0}
-  _overrideMovementAnimation: 1
-  _overrideAnimation: LeftIdle
-  _referencePos: {x: 29.5, y: -48}
+  eventComplete: 0
+  _waitSeconds: 0.5
