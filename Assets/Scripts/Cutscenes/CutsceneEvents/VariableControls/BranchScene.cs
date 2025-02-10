@@ -2,7 +2,7 @@
  * FILE     : BranchScene.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/7/25
- * UPDATED  : 2/8/25
+ * UPDATED  : 2/10/25
  * 
  * DESC     : Lets the player choose between two branches for the scene to follow, A on yes, B on 
  *            no.

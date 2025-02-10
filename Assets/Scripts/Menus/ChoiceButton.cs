@@ -54,6 +54,7 @@ public class ChoiceButton : MonoBehaviour
         // If there is a branch event to go to, begins that
         if (resultEvent != null)
         {
+            Debug.Log(resultEvent);
             CutsceneManager.cutsceneManager.StartCutscene(resultEvent);
         }
 

@@ -2,7 +2,7 @@
  * FILE     : SetCurrentMission.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/8/25
- * UPDATED  : 2/8/25
+ * UPDATED  : 2/10/25
  * 
  * DESC     : Sets the current mission.
 =================================================================================================*/
@@ -29,7 +29,10 @@ public class SetCurrentMission : CutsceneEvent
     public override void PlayEventFunction()
     {
         base.PlayEventFunction();
+
+        // Sets mission number
         GlobalVariableTracker.currentMission = _missionNo;
+        eventComplete = true;
     }
 
     #endregion
