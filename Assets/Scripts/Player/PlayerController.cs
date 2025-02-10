@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 1/15/25
+ * UPDATED  : 2/10/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -251,6 +251,10 @@ public class PlayerController : MonoBehaviour
             _debugSwitch.Enable();
             _openMenu.Enable();
             _movementDisabled = false;
+
+            // Keeps interaction enabled. Don't know why I have to explicitly spell this out, but
+            // it doesn't work if I don't.
+            _interact.Enable();
         }
     }
 

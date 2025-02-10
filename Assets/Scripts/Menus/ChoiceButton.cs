@@ -10,6 +10,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ChoiceButton : MonoBehaviour
 {
@@ -43,7 +44,6 @@ public class ChoiceButton : MonoBehaviour
     /// </summary>
     public void PlayBranchEvent()
     {
-        Debug.Log("lets go");
         // Hides Dialogue UI
         DialogueManager.dialogueManager.dialogueOutline.SetActive(false);
         DialogueManager.dialogueManager.advancing = false;
