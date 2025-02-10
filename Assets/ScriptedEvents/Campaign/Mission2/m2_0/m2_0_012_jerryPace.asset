@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced189b58ef3d6a4a8635aaabf73c2c2, type: 3}
+  m_Name: m2_0_012_jerryPace
+  m_EditorClassIdentifier: 
+  eventComplete: 0
+  _targetID: 1
+  _speed: 3
+  _movements:
+  - {x: -0.75, y: 0}
+  - {x: 2, y: 0}
+  - {x: -2.5, y: 0}
+  _overrideMovementAnimation: 0
+  _overrideAnimation: 
+  _referencePos: {x: 29.75, y: -48}
