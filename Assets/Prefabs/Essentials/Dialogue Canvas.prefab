@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 1
-    m_SelectOnUp: {fileID: 6190721481297304673}
+    m_SelectOnUp: {fileID: 8351330215346200409}
     m_SelectOnDown: {fileID: 6829079274504898842}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
@@ -1579,7 +1579,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2457048625093509489
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1660,9 +1660,11 @@ MonoBehaviour:
   _mapButton: {fileID: 5718639212593574435}
   _manualButton: {fileID: 6829079274504898842}
   _optionsButton: {fileID: 289402147244854575}
+  _quitButton: {fileID: 8351330215346200409}
   _map: {fileID: 3474525007156748123}
   _manual: {fileID: 4466715769842842822}
   _mapText: {fileID: 517456820143738081}
+  _quitEvent: {fileID: 11400000, guid: 6cff736471d79744d86db919554274c2, type: 2}
   _deliveryInfo:
   - 'Dylan Taylor
 
@@ -1805,8 +1807,8 @@ MonoBehaviour:
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 4876742413244373462}
     m_SelectOnDown: {fileID: 4876742413244373462}
-    m_SelectOnLeft: {fileID: 4876742413244373462}
-    m_SelectOnRight: {fileID: 4876742413244373462}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -2164,8 +2166,8 @@ MonoBehaviour:
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 4631224782640977510}
     m_SelectOnDown: {fileID: 4631224782640977510}
-    m_SelectOnLeft: {fileID: 4631224782640977510}
-    m_SelectOnRight: {fileID: 4631224782640977510}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -3970,8 +3972,8 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 1
-    m_SelectOnUp: {fileID: 8351330215346200409}
-    m_SelectOnDown: {fileID: 5718639212593574435}
+    m_SelectOnUp: {fileID: 289402147244854575}
+    m_SelectOnDown: {fileID: 8351330215346200409}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -4414,9 +4416,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 6
+    m_Mode: 4
     m_WrapAround: 1
-    m_SelectOnUp: {fileID: 7331614529132069234}
+    m_SelectOnUp: {fileID: 6190721481297304673}
     m_SelectOnDown: {fileID: 5718639212593574435}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}

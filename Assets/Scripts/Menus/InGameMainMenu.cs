@@ -18,16 +18,19 @@ public class InGameMainMenu : MonoBehaviour
     #region VARIABLES
 
     // Object Refs
-    // Buttons
+    // Buttons, ordered by vertical appearance in menu
     public Button defaultSelection;
     [SerializeField] Button _mapButton;
     [SerializeField] Button _manualButton;
     [SerializeField] Button _optionsButton;
+    [SerializeField] Button _quitButton;
     // Submenu Buttons
     [SerializeField] Button _map;
     [SerializeField] Button _manual;
     // Other UI
     [SerializeField] TextMeshProUGUI _mapText;
+    // External options
+    [SerializeField] Cutscene _quitEvent;
 
     // Data input
     [TextArea] [SerializeField] string[] _deliveryInfo;
@@ -61,14 +64,12 @@ public class InGameMainMenu : MonoBehaviour
     }
     
     /// <summary>
-    /// Returns the game to the title screen and deletes the scene essentials, which are not meant
-    /// to exist there
+    /// Starts event used to confirm player's decision to quit
     /// </summary>
     public void QuitToTitle()
     {
-        SceneManager.LoadScene(0);
-        Destroy(EssentialPreserver.instance.gameObject);
-        EssentialPreserver.instance = null;
+        defaultSelection = _quitButton;
+        CutsceneManager.cutsceneManager.StartCutscene(_quitEvent);
     }
 
     /// <summary>

@@ -2,7 +2,7 @@
  * FILE     : DetectObjects.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 6/5/23
- * UPDATED  : 2/8/25
+ * UPDATED  : 2/11/25
  * 
  * DESC     : Gets props with in the player's interaction space and returns the nearest one
 =================================================================================================*/
