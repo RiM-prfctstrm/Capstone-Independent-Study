@@ -2,7 +2,7 @@
  * FILE     : EssentialPreserver.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 12/6/24
+ * UPDATED  : 2/11/25
  * 
  * DESC     : Used to keep scene essentials when a new scene is loaded.
 =================================================================================================*/
@@ -16,6 +16,12 @@ public class EssentialPreserver : MonoBehaviour
 
     // Singleton used to create scene essentials
     public static EssentialPreserver instance;
+
+    // List of one-off cutscenes, should only be edited in Start Up Controller Prefab
+    [SerializeField] Cutscene[] _oneOffCutscenes;
+
+    // Failsafe bools to prevent repeat firing of methods
+    bool _cutscenesInitialized = false;
 
     #endregion
 
@@ -35,8 +41,37 @@ public class EssentialPreserver : MonoBehaviour
         CutsceneManager.cutsceneManager = GetComponentInChildren<CutsceneManager>();
         MusicManager.musicManager = GetComponentInChildren<MusicManager>();
 
+        // Performs bespoke initializations for other kinds of objects
+        InitializeCutscenes();
+
         // Keeps object and children around when new scenes are loaded
         DontDestroyOnLoad(gameObject);
+    }
+
+    #endregion
+
+    #region BESPOKE INITIALIZATIONS
+    
+    /// <summary>
+    /// Sets all cutscenes contained specified in the array _oneOffCutscenes to be read as unplayed
+    /// when first booting the game.
+    /// </summary>
+    void InitializeCutscenes()
+    {
+        // Failsafe to prevent reinitialization mid-game
+        if (_cutscenesInitialized)
+        {
+            return;
+        }
+
+        // Initializes cutscenes to unplayed state
+        foreach(Cutscene i in _oneOffCutscenes)
+        {
+            i.hasPlayed = false;
+        }
+
+        // Tells game that cutscenes are initialized
+        _cutscenesInitialized = true;
     }
 
     #endregion
