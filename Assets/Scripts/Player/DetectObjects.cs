@@ -82,7 +82,14 @@ public class DetectObjects : MonoBehaviour
         }
 
         // Displays a marker over the prop the player can interact with
-        _interactionMarker.SetActive(MarkTarget());
+        if (!CutsceneManager.inCutscene && !DialogueManager.dialogueInProgress)
+        {
+            _interactionMarker.SetActive(MarkTarget());
+        }
+        else
+        {
+            _interactionMarker.SetActive(false);
+        }
     }
 
     #endregion
