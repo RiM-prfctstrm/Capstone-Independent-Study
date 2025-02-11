@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
+  m_Name: m2_006_tomPromise
+  m_EditorClassIdentifier: 
+  eventComplete: 0
+  cutsceneDialogue:
+    dialogueBoxes:
+    - dialogueText: I guess it might be nice to play a game or two again. And I'm
+        sure Monica still has hers somewhere.
+      nameTag: Tom
+      portrait: {fileID: 0}
+    - dialogueText: Well, at the very least, I'll think about it.
+      nameTag: Tom
+      portrait: {fileID: 0}
+    - dialogueText: Thank you for telling me.
+      nameTag: Tom
+      portrait: {fileID: 0}
+    - dialogueText: You're welcome.
+      nameTag: Pepper
+      portrait: {fileID: 0}
