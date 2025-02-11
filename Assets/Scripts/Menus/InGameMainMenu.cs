@@ -16,6 +16,9 @@ using UnityEngine.UI;
 public class InGameMainMenu : MonoBehaviour
 {
     #region VARIABLES
+    
+    // Class singleton
+    public static InGameMainMenu inGameMainMenu;
 
     // Object Refs
     // Buttons, ordered by vertical appearance in menu
@@ -68,6 +71,14 @@ public class InGameMainMenu : MonoBehaviour
     /// </summary>
     public void QuitToTitle()
     {
+        // Performs an extra movement toggle to ensure movement doesn't reactivate in confirmation
+        PlayerController.playerController.TogglePlayerInput();
+
+        // Sets class singleton to ensure return event knows where to go. Probably a cleaner way of
+        // doing this.
+        inGameMainMenu = this;
+
+        // Prepares event
         defaultSelection = _quitButton;
         CutsceneManager.cutsceneManager.StartCutscene(_quitEvent);
     }

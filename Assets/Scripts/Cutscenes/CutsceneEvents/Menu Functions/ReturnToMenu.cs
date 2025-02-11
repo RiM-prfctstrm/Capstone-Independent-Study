@@ -15,12 +15,12 @@ using UnityEngine.UI;
     order = 1)]
 public class ReturnToMenu : CutsceneEvent
 {
-    #region VARIABLES
+    /* #region VARIABLES
 
     // Object references
     InGameMainMenu _menu;
 
-    #endregion
+    #endregion */
 
     #region EVENT FUNCTIONALITY
 
@@ -32,11 +32,14 @@ public class ReturnToMenu : CutsceneEvent
         base.PlayEventFunction();
 
         // Sets Vars
-        _menu = DialogueManager.dialogueManager.gameObject.
-            GetComponentInChildren<InGameMainMenu>();
+        /*_menu = DialogueManager.dialogueManager.gameObject.
+            GetComponentInChildren<InGameMainMenu>();*/
+
+        // Performs an extra movement toggle to ensure movement doesn't reactivate in confirmation
+        PlayerController.playerController.TogglePlayerInput();
 
         // Performs selection
-        _menu.defaultSelection.Select();
+        InGameMainMenu.inGameMainMenu.defaultSelection.Select();
 
         // Notifies completion
         eventComplete = true;
