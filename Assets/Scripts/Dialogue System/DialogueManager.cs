@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 2/7/25
+ * UPDATED  : 2/12/25
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -143,6 +143,9 @@ public class DialogueManager : MonoBehaviour
 
         // Ends Active Dialogue sequence
         StopCoroutine(_dialogRoutine);
+
+        // Prevents auto-advancing through next text
+        advancing = false;
 
         // Deactivates UI
         _dialogueOutline.SetActive(false);
