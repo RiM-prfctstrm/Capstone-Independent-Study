@@ -38,7 +38,6 @@ public class CutsceneTrigger : MonoBehaviour
             // Triggers a cutscene under correct conditions
             if (!_hasPlayed || !_oneTimeTrigger)
             {
-                Debug.Log("playing");
                 CutsceneManager.cutsceneManager.StartCutscene(_cutscene);
                 // Temporary check until cutscene saves are implemented.
                 _hasPlayed = true;

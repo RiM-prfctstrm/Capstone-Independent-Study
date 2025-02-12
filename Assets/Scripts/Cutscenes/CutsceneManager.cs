@@ -83,14 +83,13 @@ public class CutsceneManager : MonoBehaviour
         // Plays each event in sequence
         foreach (CutsceneEvent i in cutscene.cutsceneScript)
         {
+            i.eventComplete = false;
             i.PlayEventFunction();
             yield return new WaitUntil(() => i.eventComplete == true);
             _skipPos++;
         }
 
         // Ends cutscene
-        //cutscene.hasPlayed = true; temporarily commented until a system to save and adjust this
-        // data is in place
         EndCutscene();
     }
 
