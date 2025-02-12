@@ -1,24 +1,24 @@
 /*=================================================================================================
- * FILE     : ToggleVisibilty.cs
+ * FILE     : ChangeActiveState.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
- * CREATION : 11/11/24 (Veteran's Day [USA] / Singles' Day [China])
+ * CREATION : 2/12/25
  * UPDATED  : 2/12/25
  * 
- * DESC     : Sets whether a GameObject's sprite is visible.
+ * DESC     : Sets whether a GameObject is active.
 =================================================================================================*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Visibility Toggle",
-    menuName = "Cutscene/Object Manipulation/Visibility Toggle", order = 0)]
-public class ToggleVisibility : CutsceneEvent
+[CreateAssetMenu(fileName = "Active State Toggle",
+    menuName = "Cutscene/Object Manipulation/Active State Toggle", order = 1)]
+public class ChangeActiveState : CutsceneEvent
 {
     #region VARIABLES
 
     // Input
     [SerializeField] int _targetID;
-    [SerializeField] bool _setVisible;
+    [SerializeField] bool _setActive;
 
     // Object Refs
     GameObject _target;
@@ -28,7 +28,7 @@ public class ToggleVisibility : CutsceneEvent
     #region EVENT FUNCTIONALITY
 
     /// <summary>
-    /// Sets target's visibility
+    /// Sets target's active state
     /// </summary>
     public override void PlayEventFunction()
     {
@@ -37,20 +37,12 @@ public class ToggleVisibility : CutsceneEvent
         // Sets the object the script acts on
         _target = CutsceneManager.cutsceneManager.cutsceneObjects[_targetID];
 
-        // Sets visibility
-        if (_setVisible)
-        {
-            _target.GetComponent<SpriteRenderer>().enabled = true;
-        }
-        else
-        {
-            _target.GetComponent<SpriteRenderer>().enabled = false;
-        }
+        // Sets active state
+        _target.SetActive(_setActive);
 
         // Signals completion
         eventComplete = true;
     }
-
 
     #endregion
 }
