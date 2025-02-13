@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
   m_Name: a3_1_012_finishOpening
   m_EditorClassIdentifier: 
-  eventComplete: 0
+  eventComplete: 1
   cutsceneDialogue:
     dialogueBoxes:
     - dialogueText: Does this mean I get to go there early!?
       nameTag: Pepper
       portrait: {fileID: 0}
-    - dialogueText: You're supposed to leave it in a machine at the base, which will
-        bring it up, but I asked them for their room address in case you manage to
-        rustle up an access card.
+    - dialogueText: You're only supposed to leave it in a machine at the base, which
+        will bring it up, but I asked them for their room address in case you manage
+        to rustle up an access card.
       nameTag: Alexandria
       portrait: {fileID: 0}
     - dialogueText: Speaking of, this should get you to the ground part of the spaceport.
