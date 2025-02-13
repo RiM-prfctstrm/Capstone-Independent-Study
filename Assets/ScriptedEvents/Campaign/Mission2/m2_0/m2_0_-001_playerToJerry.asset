@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ced189b58ef3d6a4a8635aaabf73c2c2, type: 3}
-  m_Name: m2_0_012_3_pace3
+  m_Name: m2_0_-001_playerToJerry
   m_EditorClassIdentifier: 
-  eventComplete: 1
-  _targetID: 1
-  _speed: 3
+  eventComplete: 0
+  _targetID: 0
+  _speed: 4
   _movements:
-  - {x: 0, y: 1}
+  - {x: 1, y: 0}
   _overrideMovementAnimation: 0
   _overrideAnimation: 
-  _referencePos: {x: 30.875, y: -49}
+  _referencePos: {x: 0, y: 0}
