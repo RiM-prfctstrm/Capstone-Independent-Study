@@ -663,7 +663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5754257204709089588, guid: 3e6cb41a34ea04b4184b67789d993e01, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5754257204709089588, guid: 3e6cb41a34ea04b4184b67789d993e01, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1815,7 +1815,7 @@ GameObject:
   - component: {fileID: 548900031}
   - component: {fileID: 548900030}
   m_Layer: 0
-  m_Name: Monitorm1 (1)
+  m_Name: Monitorm2
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3045,7 +3045,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2687239468810173135, guid: ca18c35bcf32c244a81dcec7538a6f98, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2687239468810173135, guid: ca18c35bcf32c244a81dcec7538a6f98, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3201,7 +3201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2687239468810173135, guid: ca18c35bcf32c244a81dcec7538a6f98, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2687239468810173135, guid: ca18c35bcf32c244a81dcec7538a6f98, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4731,7 +4731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 178090867737362807, guid: ff197ec3a370c874fb0e87aa37d5d0f3, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 178090867737362807, guid: ff197ec3a370c874fb0e87aa37d5d0f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4996,7 +4996,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5218219804818813074, guid: 9fbcd36513569b5439b3740dcd288153, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5218219804818813074, guid: 9fbcd36513569b5439b3740dcd288153, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5195,7 +5195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5754257204709089588, guid: b4e6d8f849584d945be232e8f741eaaa, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5754257204709089588, guid: b4e6d8f849584d945be232e8f741eaaa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5244,6 +5244,344 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5754257204709089588, guid: b4e6d8f849584d945be232e8f741eaaa, type: 3}
   m_PrefabInstance: {fileID: 1671434208}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1698898720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1698898721}
+  - component: {fileID: 1698898725}
+  - component: {fileID: 1698898724}
+  - component: {fileID: 1698898723}
+  - component: {fileID: 1698898722}
+  m_Layer: 0
+  m_Name: SpaceshipBrochure
+  m_TagString: Interactable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1698898721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698898720}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.375, y: -13.875, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1746552742}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1698898722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698898720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4a7de76fbfa36408880e8bbc908603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _activeMissions: 0200000003000000
+--- !u!114 &1698898723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698898720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f5cdfc18804e04ca0bc3f9b2665cce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogueRange: 5
+  _isEventTrigger: 0
+  _staticImage: 1
+  _NPCLines:
+  - dialogueBoxes:
+    - dialogueText: "Greetings, future citizens of Pearl.\r"
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: For the past century, the peoples of our great planet have banded
+        together and worked tirelessly to build vessels to preserves our lives and
+        hopes beyond the destruction of our mother world.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: 'Through decades of blood, sweat, and tears, our species has
+        created fantastic tools that were previously thought unimaginable: spaceships
+        bigger than cities, towers that reach up to the stars.'
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: We have even seen our own friends, children, brothers, and sisters
+        step foot on another planet, in the hopes that all of us may join them and
+        keep living, bathed in the light of another star.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: 'With only two short months remaining until we leave our homes
+        so that we may begin the journey, and the fruits of our efforts are plain
+        to see.
+
+'
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: On behalf of my crew, and of all who have worked on Project Giant
+        Leap, I would like to humbly welcome you aboard the GLS Joshua.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: The Joshua is a Mahayana-class interstellar cruiser, capable
+        of traveling at 98 percent of the speed of light and traveling for decades
+        without docking on a planet.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: Like its sister ships, it can carry 144 million passengers, divided
+        across 120 habitation modules.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: Each module features not only living space, but also service
+        and commercial areas. They can be thought of as something like an enclosed
+        city.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: All things considered, if the Joshua were to be placed at sea
+        level, it would be visible from space.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: The Joshua's population will be supported by Manna-class cruisers,
+        similarly scaled spaceships dedicated to farming all sorts of crops and livestock.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: Additional support comes from all the ships' 99.99999 percent
+        efficient recycling systems, which keep virtually all resources in continued
+        circulation.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: Aboard the Joshua, you will be assigned a housing unit based
+        on the size of your family.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: Each unit is equipped with a bathroom, a kitchen, a communal
+        living space, and 1-4 bedrooms, depending on family size.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: There are also smaller, one-room dormitory residences with communal
+        facilities for single people, childless couples, and other volunteers.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: You are free to use and decorate your units however you please,
+        and you are guaranteed privacy within them.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: Units are assigned based on data from last year's Global Census
+        Form.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: If you have not received this form, or do not have your assignment
+        details attached to this message, please contact a spaceport office immediately.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: In addition to its features essential for sustaining life and
+        housing areas, the Joshua has many amenities that you may enjoy.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: All modules are equipped with parks, gymnasiums, theaters, and
+        other recreational facilities.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: Monorail transportations run throughout the entire ship on automated
+        lines, making stops every 15 minutes.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: Each habitation module is connected to an observation deck, where
+        you may admire the beauty of outer space.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: Plenty of other amenities are available, but there is not room
+        in this letter to list them all.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: Your safety is our number one priority, so the Joshua is equipped
+        with many technological measures to protect you in case of emergencies.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: Both the Joshua's internal spaces and life support systems are
+        equipped with discreet modular airlocks.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: In the event of a hull breach or depressurization, these will
+        automatically close around the affected areas.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: As a similar measure, there are handholds sprinkled densely throughout
+        the spaceship, so that you may not be sucked away into space or can stabilize
+        yourself if there is ever a loss of gravity.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: These handholds feature SOS buttons that notify lifeguard teams
+        of your position. If you press one, you will be rescued shortly.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: Of course, technological measures are not enough to maintain
+        the safety of a country-sized vessel. There are also strict rules that you
+        must follow.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: You may only enter parts of the ship cleared by your access card.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: You must wear an emergency pressure and atmosphere vest while
+        in open areas of the ship.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: Extra-vehicular activities by civilian passengers are strictly
+        prohibited.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: Boarding of the Joshua begins September 15, XX54, and continues
+        until October 15 of the same year.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: It is recommended you arrive at the Lighthouse City International
+        Spaceport as soon as possible.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: Regardless of you how arrive, you must go to the central arrival
+        depot. You will be given a cart to carry your belongings.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: You will only be able to bring what you can fit on that cart
+        and carry in your hands, so pack accordingly. There are no second trips.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: Once you have arrived, you will be directed to the central departure
+        shuttle, which has a capacity 500,000, and travels every half hour.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: You will ride the shuttle to the central space elevator, which
+        operates under the same parameters.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: At the top of the elevator, you will be split into smaller groups,
+        and wait until your group is given permission to board.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: As you enter the Joshua, you will be given your access card and
+        directions to your housing unit.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: When you have arrived at your housing unit, there will be a terminal
+        on the side of the door, where you will confirm your arrival.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: To ease the boarding of others, it is recommended you make as
+        few trips out of your housing unit as possible.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: Food and toiletries will be provided to your unit until boarding
+        is scheduled to be complete.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: The Joshua departs on October 31, XX54, and is due to arrive
+        on Pearl in the first half of XX60.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: As for me and my crew, we eagerly await your arrival, and it
+        is our great honor to ferry you across the stars.
+      nameTag: Brochure
+      portrait: {fileID: 0}
+    - dialogueText: '-Harriet Aldrin
+
+        Captain, GLS Joshua.'
+      nameTag: Brochure
+      portrait: {fileID: 0}
+  _NPCCutscene: {fileID: 0}
+--- !u!61 &1698898724
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698898720}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!212 &1698898725
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698898720}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: d2056ae2fc229384483c7f1bc3fd8d9f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!4 &1715530248 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5218219804818813074, guid: 9fbcd36513569b5439b3740dcd288153, type: 3}
@@ -5497,6 +5835,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1698898721}
   - {fileID: 2033411063}
   - {fileID: 8730790766291292166}
   - {fileID: 1319312552579809803}
@@ -5848,7 +6187,7 @@ Transform:
   - {fileID: 398912350}
   - {fileID: 548900029}
   m_Father: {fileID: 1746552742}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2065767154
 GameObject:
@@ -6340,7 +6679,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 426791316160281690, guid: 1b9ad883ea20c2347b1c3c9024c8f291, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 426791316160281690, guid: 1b9ad883ea20c2347b1c3c9024c8f291, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6402,7 +6741,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5218219804818813074, guid: 9fbcd36513569b5439b3740dcd288153, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5218219804818813074, guid: 9fbcd36513569b5439b3740dcd288153, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6463,7 +6802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8319728892121808575, guid: c26c3f8a4e5fcee478a3f9d7d6156a05, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8319728892121808575, guid: c26c3f8a4e5fcee478a3f9d7d6156a05, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6549,7 +6888,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 178090867737362807, guid: ff197ec3a370c874fb0e87aa37d5d0f3, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 178090867737362807, guid: ff197ec3a370c874fb0e87aa37d5d0f3, type: 3}
       propertyPath: m_LocalPosition.x
