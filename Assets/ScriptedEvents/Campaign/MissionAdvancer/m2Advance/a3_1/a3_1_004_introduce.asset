@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 545ddcca606e10b409e7838fb290af48, type: 3}
-  m_Name: a3_1_003_startm3
+  m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
+  m_Name: a3_1_004_introduce
   m_EditorClassIdentifier: 
   eventComplete: 0
-  _scene: GameStore
-  _isIndoors: 1
-  _playerPos: {x: 10, y: -2.75, z: 0}
-  _playerDirection: 3
+  cutsceneDialogue:
+    dialogueBoxes:
+    - dialogueText: Hey, Pepper, I got something you're gonna like!
+      nameTag: Alexandria
+      portrait: {fileID: 0}
