@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e7c1be8998881549bcc1fb9d908ed5b, type: 3}
-  m_Name: m2_3B
+  m_Script: {fileID: 11500000, guid: 545ddcca606e10b409e7838fb290af48, type: 3}
+  m_Name: m2_3A_002_warpToHouse
   m_EditorClassIdentifier: 
-  cutsceneScript:
-  - {fileID: 11400000, guid: a251450dbdbdabc44b9063ac0e8358e0, type: 2}
-  hasPlayed: 0
+  _eventComplete: 1
+  _scene: ShakerHouse
+  _isIndoors: 1
+  _playerPos: {x: 13, y: -17.5, z: 0}
+  _playerDirection: 3
