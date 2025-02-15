@@ -2,7 +2,7 @@
  * FILE     : CutsceneTrigger.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/11/24 (Veteran's Day [USA] / Singles' Day [China])
- * UPDATED  : 2/13/25
+ * UPDATED  : 2/15/25
  * 
  * DESC     : Triggers a cutscene when the player enters. Presently this is sometimes used to
  *            continue a cutscene that has already begun due to a bug where dialogue gerts skipped
@@ -39,7 +39,7 @@ public class CutsceneTrigger : MonoBehaviour
             if (!_hasPlayed || !_oneTimeTrigger)
             {
                 // Stops movement
-                collision.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                PlayerController.playerController.CancelMomentum();
 
                 // Plays Cutscene
                 CutsceneManager.cutsceneManager.StartCutscene(_cutscene);

@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 2/10/25
+ * UPDATED  : 2/15/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -496,6 +496,21 @@ public class PlayerController : MonoBehaviour
         {
             rb2d.sharedMaterial = null;
         }
+    }
+
+    /// <summary>
+    /// Stops player in their tracks and zeros movement vars to stay there
+    /// </summary>
+    public void CancelMomentum()
+    {
+        // Zeroes movement vars
+        _moveX = 0;
+        _moveY = 0;
+        _velocityX = 0;
+        _velocityY = 0;
+
+        // Stops rigidbody
+        rb2d.velocity = Vector2.zero;
     }
 
     #endregion

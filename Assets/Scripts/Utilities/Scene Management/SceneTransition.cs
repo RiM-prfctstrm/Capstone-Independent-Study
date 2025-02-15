@@ -79,7 +79,10 @@ public class SceneTransition
         CutsceneManager.cutsceneManager.ResetCharacterList();
 
         // Stops any in-progress dialogue
-        DialogueManager.dialogueManager.CancelDialogue();
+        if (DialogueManager.dialogueInProgress)
+        {
+            DialogueManager.dialogueManager.CancelDialogue();
+        }
 
         // Signals that a scene transition is in effect
         _inTransition = true;
