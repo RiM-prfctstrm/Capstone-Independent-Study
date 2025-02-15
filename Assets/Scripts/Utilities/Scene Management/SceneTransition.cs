@@ -2,7 +2,7 @@
  * FILE     : SceneTransition
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/29/24
- * UPDATED  : 1/27/25
+ * UPDATED  : 2/15/25
  * 
  * DESC     : Switches scenes and sets variables to initialize that scene's state after transition.
 =================================================================================================*/
@@ -77,6 +77,9 @@ public class SceneTransition
 
         // Resets list of Cutscene-controllable objects
         CutsceneManager.cutsceneManager.ResetCharacterList();
+
+        // Stops any in-progress dialogue
+        DialogueManager.dialogueManager.CancelDialogue();
 
         // Signals that a scene transition is in effect
         _inTransition = true;
