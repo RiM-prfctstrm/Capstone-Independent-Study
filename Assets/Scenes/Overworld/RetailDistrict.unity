@@ -1202,8 +1202,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1305991791}
   - {fileID: 991300179}
+  - {fileID: 1961824667}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1875,7 +1875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2145,11 +2145,19 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 843988983}
+    m_TransformParent: {fileID: 1961824667}
     m_Modifications:
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCCutscene
+      value: 
+      objectReference: {fileID: 11400000, guid: deaa5d7c17231fc489c790eda360d7e0, type: 2}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _isEventTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[0]
@@ -2225,11 +2233,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
-      value: Access to the spaceport is for authorized personnel only.
+      value: Sorry for the holdup.
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
-      value: Please move along.
+      value: Please move ahead.
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
@@ -2281,7 +2289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2289,7 +2297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2342,6 +2350,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
   m_PrefabInstance: {fileID: 818124869}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &818124871 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194428, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+  m_PrefabInstance: {fileID: 818124869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &818124872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818124871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4a7de76fbfa36408880e8bbc908603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _activeMissions: 03000000
 --- !u!1 &843988982
 GameObject:
   m_ObjectHideFlags: 0
@@ -2372,7 +2398,6 @@ Transform:
   m_Children:
   - {fileID: 18042008}
   - {fileID: 1862560877}
-  - {fileID: 818124870}
   - {fileID: 1489160109}
   - {fileID: 759083788}
   m_Father: {fileID: 370206413}
@@ -2855,7 +2880,7 @@ Transform:
   - {fileID: 1621300400}
   - {fileID: 1944365179}
   m_Father: {fileID: 435041264}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &991300180
 MonoBehaviour:
@@ -3861,7 +3886,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1305991791}
   - component: {fileID: 1305991792}
-  - component: {fileID: 1305991793}
+  - component: {fileID: 1305991794}
   m_Layer: 0
   m_Name: SpacePortBarrier
   m_TagString: Untagged
@@ -3877,11 +3902,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305991790}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 93.5, y: -6, z: 0}
+  m_LocalPosition: {x: 93.5, y: -6.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 435041264}
+  m_Father: {fileID: 1961824667}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1305991792
@@ -3910,7 +3935,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 17, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1305991793
+--- !u!114 &1305991794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3919,10 +3944,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1305991790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b4a7de76fbfa36408880e8bbc908603, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ba4eefb3a4905542b18c449d4e12c0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _activeMissions: 0000000002000000
+  _keyflag: spaceportBarrierDown
+  _activeState: 0
 --- !u!1001 &1325716614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4427,7 +4453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5223,6 +5249,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
   m_PrefabInstance: {fileID: 2064909016}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1888293872 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3994914261574887201, guid: 93223aa8fb7ea31488b99956b002d37b, type: 3}
+  m_PrefabInstance: {fileID: 498360426}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1888293873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888293872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ba4eefb3a4905542b18c449d4e12c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _keyflag: spaceportBarrierDown
+  _activeState: 0
 --- !u!4 &1923944770 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
@@ -5354,6 +5399,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
   m_PrefabInstance: {fileID: 1944856653}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1961824666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1961824667}
+  m_Layer: 0
+  m_Name: Spaceport Stuff
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1961824667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961824666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1305991791}
+  - {fileID: 818124870}
+  m_Father: {fileID: 435041264}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2022184225
 MonoBehaviour:
   m_ObjectHideFlags: 0
