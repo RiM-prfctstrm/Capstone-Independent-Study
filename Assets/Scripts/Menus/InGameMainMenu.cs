@@ -2,7 +2,7 @@
  * FILE     : InGameMainMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/14/24
- * UPDATED  : 11/18/24
+ * UPDATED  : 2/16/25
  * 
  * DESC     : Performs functions of the main in-game menu
 =================================================================================================*/
@@ -27,9 +27,11 @@ public class InGameMainMenu : MonoBehaviour
     [SerializeField] Button _manualButton;
     [SerializeField] Button _optionsButton;
     [SerializeField] Button _quitButton;
-    // Submenu Buttons
+    // Submenu Buttons, ordered by vertical appearance in menu
     [SerializeField] Button _map;
     [SerializeField] Button _manual;
+    [SerializeField] GameObject _optionsBG;
+    [SerializeField] Button _optionsDefaultSelection ; 
     // Other UI
     [SerializeField] TextMeshProUGUI _mapText;
     // External options
@@ -66,6 +68,15 @@ public class InGameMainMenu : MonoBehaviour
         _manual.Select();
     }
     
+    /// <summary>
+    /// Opens the options menu
+    /// </summary>
+    public void OpenOptions()
+    {
+        _optionsBG.SetActive(true);
+        //_optionsDefaultSelection.Select();
+    }
+
     /// <summary>
     /// Starts event used to confirm player's decision to quit
     /// </summary>

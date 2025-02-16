@@ -2,7 +2,7 @@
  * FILE     : MusicManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 12/6/24
- * UPDATED  : 1/15/25
+ * UPDATED  : 2/16/25
  * 
  * DESC     : Controls which music is currently playing.
 =================================================================================================*/
@@ -59,7 +59,7 @@ public class MusicManager : MonoBehaviour
     {
         // Plays new song and sets it as active
         _activeSong = song;
-        _musicSource.volume = .8f;
+        _musicSource.volume = GlobalVariableTracker.musicVolume;
         _musicSource.clip = song;
         _musicSource.Play();
     }
@@ -99,6 +99,17 @@ public class MusicManager : MonoBehaviour
         BeginSong(song);
     }
 
+    #endregion
+
+    #region VOLUME CONTROLS
+
+    /// <summary>
+    /// Sets the volume of music
+    /// </summary>
+    public void SetVolume()
+    {
+        _musicSource.volume = GlobalVariableTracker.musicVolume;
+    }
 
     #endregion
 }

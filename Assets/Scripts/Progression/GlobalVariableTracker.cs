@@ -17,7 +17,10 @@ public class GlobalVariableTracker
     #region VARIABLES
 
     #region GENERAL REFERENCE
-    // Information that is commonly used in a variety of circumstances
+    // Options parameters
+    public static float musicVolume = .8f;
+    public static float sfxVolume = 1;
+    public static int windowScale = 1;
 
     // General mission information
     public static int currentMission = 0;
