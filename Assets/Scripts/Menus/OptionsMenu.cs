@@ -60,6 +60,22 @@ public class OptionsMenu : MonoBehaviour
     #region BUTTON ACTIONS
 
     /// <summary>
+    /// Resizes the game screen and rescales UI Elements
+    /// </summary>
+    /// <param name="scaleFactor">The scale by which to change the screen</param>
+    public void ResizeScreen(int scaleFactor)
+    {
+        // Sets screen dimension variable
+        int screenSide = 464 * scaleFactor;
+
+        // Sets global scale var
+        GlobalVariableTracker.windowScale = scaleFactor;
+
+        // Resizes Screen
+        Screen.SetResolution(screenSide, screenSide, false);
+    }
+
+    /// <summary>
     /// Sets the volume of music
     /// </summary>
     public void SetMusicVolume()
