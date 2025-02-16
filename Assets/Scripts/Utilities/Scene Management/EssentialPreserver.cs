@@ -2,7 +2,7 @@
  * FILE     : EssentialPreserver.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 2/11/25
+ * UPDATED  : 2/16/25
  * 
  * DESC     : Used to keep scene essentials when a new scene is loaded.
 =================================================================================================*/
@@ -43,6 +43,7 @@ public class EssentialPreserver : MonoBehaviour
 
         // Performs bespoke initializations for other kinds of objects
         InitializeCutscenes();
+        DialogueManager.dialogueManager.SetMenuEffectsVolume();
 
         // Keeps object and children around when new scenes are loaded
         DontDestroyOnLoad(gameObject);

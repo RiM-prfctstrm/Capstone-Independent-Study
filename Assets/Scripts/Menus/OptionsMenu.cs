@@ -27,16 +27,18 @@ public class OptionsMenu : MonoBehaviour
     // Value initializers for when objects are set by menu
     static float _saveMV = .8f;
     static float _saveSV = .25f;
+    public static float saveSV => _saveSV;
 
     #endregion
 
     #region UNIVERSAL EVENTS
 
     /// <summary>
-    /// Initializes volume vars
+    /// Awake is called when the script instance is being loaded
     /// </summary>
     private void Awake()
     {
+        // Initializes volume vars
         _musicVolume.value = _saveMV;
         _soundVolume.value = _saveSV;
     }

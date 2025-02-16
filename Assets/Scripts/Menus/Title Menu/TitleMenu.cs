@@ -19,10 +19,23 @@ public class TitleMenu : MonoBehaviour
     // Object Refs
     [SerializeField] GameObject _credits;
     [SerializeField] GameObject _optionsBG;
+    [SerializeField] DialogueManager _dm;
 
     // Debug
     [SerializeField] DialogueManager _menuDM;
     [SerializeField] DialogueEvent _UnimplementedNotif;
+
+    #endregion
+
+    #region UNIVERSAL EVENTS
+
+    /// <summary>
+    /// Awake is called when the script instance is being loaded
+    /// </summary>
+    private void Awake()
+    {
+        DialogueManager.dialogueManager = _dm;
+    }
 
     #endregion
 
