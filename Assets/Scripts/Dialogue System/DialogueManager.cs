@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 2/12/25
+ * UPDATED  : 2/16/25
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -161,4 +161,18 @@ public class DialogueManager : MonoBehaviour
     }
 
     #endregion
+
+    #region MISC
+
+    /// <summary>
+    /// Changes volume of menu sound effects. I will probably have to rework this once I add other
+    /// sounds.
+    /// </summary>
+    public void SetMenuEffectsVolume()
+    {
+        _systemSounds.volume = GlobalVariableTracker.sfxVolume;
+    }
+
+    #endregion
+
 }

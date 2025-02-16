@@ -59,6 +59,7 @@ public class OptionsMenu : MonoBehaviour
     public void SetSFXVolume()
     {
         GlobalVariableTracker.sfxVolume = _soundVolume.value;
+        DialogueManager.dialogueManager.SetMenuEffectsVolume();
     }
 
     /// <summary>
