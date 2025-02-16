@@ -4919,6 +4919,9 @@ MonoBehaviour:
         Face Button, Start'
       nameTag: DDD Guide
       portrait: {fileID: 0}
+    - dialogueText: Sounds like a pretty boring game, if that's all you can do.
+      nameTag: 
+      portrait: {fileID: 0}
   _NPCCutscene: {fileID: 0}
 --- !u!61 &2040754212
 BoxCollider2D:
@@ -5006,7 +5009,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040754209}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5, y: -4, z: 0}
+  m_LocalPosition: {x: 1.5, y: -2.9375, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
