@@ -21,13 +21,14 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] Button[] _scaleArray = new Button[4];
     [SerializeField] Slider _musicVolume;
     [SerializeField] Slider _soundVolume;
+    [SerializeField] Slider _menuVolume;
     // External UI Objects
     [SerializeField] Button _returnSelection;
 
-    // Value initializers for when objects are set by menu
-    static float _saveMV = .8f;
-    static float _saveSV = .25f;
-    public static float saveSV => _saveSV;
+    // Value initializers for when objects are set by menu, ordered by vertical appearance in menu
+    static float _saveMuV = .8f;
+    static float _saveSV = 1f;
+    static float _saveMeV = .25f;
 
     #endregion
 
@@ -39,8 +40,9 @@ public class OptionsMenu : MonoBehaviour
     private void Awake()
     {
         // Initializes volume vars
-        _musicVolume.value = _saveMV;
+        _musicVolume.value = _saveMuV;
         _soundVolume.value = _saveSV;
+        _menuVolume.value = _saveMeV;
     }
 
     /// <summary>
@@ -53,6 +55,7 @@ public class OptionsMenu : MonoBehaviour
         _defaultScaleButton.Select();
         _musicVolume.value = GlobalVariableTracker.musicVolume;
         _soundVolume.value = GlobalVariableTracker.sfxVolume;
+        _menuVolume.value = GlobalVariableTracker.menuVolume;
     }
 
     #endregion
@@ -82,7 +85,7 @@ public class OptionsMenu : MonoBehaviour
     {
         // Sets volume variabes
         GlobalVariableTracker.musicVolume = _musicVolume.value;
-        _saveMV = _musicVolume.value;
+        _saveMuV = _musicVolume.value;
 
         // Automatically changes volume
         if (MusicManager.musicManager != null)
@@ -92,13 +95,30 @@ public class OptionsMenu : MonoBehaviour
     }
 
     /// <summary>
-    /// Sets the volume of in-game sound effects, including menu sounds
+    /// Sets the volume of in-game sound effects
     /// </summary>
     public void SetSFXVolume()
     {
         // Sets volume variables
         GlobalVariableTracker.sfxVolume = _soundVolume.value;
         _saveSV = _soundVolume.value;
+
+        // Automatically changes volume
+        if (PlayerController.playerController != null)
+        {
+            PlayerController.playerController.SetSoundEffectsVolume();
+        }
+    }
+
+
+    /// <summary>
+    /// Sets the volume of menu sounds
+    /// </summary>
+    public void SetMenuVolume()
+    {
+        // Sets volume variables
+        GlobalVariableTracker.menuVolume = _menuVolume.value;
+        _saveMeV = _menuVolume.value;
 
         // Automatically changes volume
         if (DialogueManager.dialogueManager != null)

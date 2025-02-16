@@ -18,8 +18,9 @@ public class GlobalVariableTracker
 
     #region GENERAL REFERENCE
     // Options parameters
+    public static float menuVolume = .25f;
     public static float musicVolume = .8f;
-    public static float sfxVolume = .25f;
+    public static float sfxVolume = 1;
     public static int windowScale = 1;
 
     // General mission information

@@ -117,6 +117,9 @@ public class PlayerController : MonoBehaviour
         // Initializes Accel/Decel Rates
         SetAccelDecel();
 
+        // Initializes volume
+        SetSoundEffectsVolume();
+
         // DEBUG
         //StartCoroutine(LabTurn2Part());
     }
@@ -575,6 +578,14 @@ public class PlayerController : MonoBehaviour
         _decelClamp = _decelTime;
         _buffer = _decelBuffer;
         _bufferRate = _decelBuffer * Time.fixedDeltaTime;
+    }
+
+    /// <summary>
+    /// Sets the volume of in-game sound effects
+    /// </summary>
+    public void SetSoundEffectsVolume()
+    {
+        _playerAudioSource.volume = GlobalVariableTracker.sfxVolume;
     }
 
     #endregion

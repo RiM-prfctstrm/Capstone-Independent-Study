@@ -50,6 +50,19 @@ public class DialogueManager : MonoBehaviour
 
     #endregion
 
+    #region UNIVERSAL EVENTS
+
+    /// <summary>
+    /// Start is called before the first frame update
+    /// </summary>
+    void Start()
+    {
+        // Initializes volume
+        SetMenuEffectsVolume();
+    }
+
+    #endregion
+
     #region DIALOGUE FUNCTIONS
 
     /// <summary>
@@ -170,7 +183,7 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     public void SetMenuEffectsVolume()
     {
-        _systemSounds.volume = GlobalVariableTracker.sfxVolume;
+        _systemSounds.volume = GlobalVariableTracker.menuVolume;
     }
 
     #endregion
