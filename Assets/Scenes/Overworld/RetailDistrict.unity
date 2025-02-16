@@ -2341,7 +2341,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 9a594f7bff9a4b34694adf1a65364267, type: 2}
     - target: {fileID: 1155657993595194428, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_Name
-      value: GuardN2
+      value: GuardN2 (spaceport mission)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
@@ -5429,9 +5429,238 @@ Transform:
   m_Children:
   - {fileID: 1305991791}
   - {fileID: 818124870}
+  - {fileID: 1964440904}
   m_Father: {fileID: 435041264}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1964440903
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1961824667}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCCutscene
+      value: 
+      objectReference: {fileID: 11400000, guid: deaa5d7c17231fc489c790eda360d7e0, type: 2}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _isEventTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 28f2e8c202c368745b963d28a392155e, type: 2}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: a78d73a0d2cd954428b014ee24760a21, type: 2}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].nameTag
+      value: Spaceport Worker
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].nameTag
+      value: Spaceport Worker
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].nameTag
+      value: Spaceport Worker
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].nameTag
+      value: Spaceport Worker
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[2].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[3].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.data[0].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.data[1].nameTag
+      value: Spaceport Worker
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.data[2].nameTag
+      value: Spaceport Worker
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.data[3].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.data[4].nameTag
+      value: Spaceport Worker
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.data[5].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: Access to the spaceport is for authorized personnel only.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: Please move along.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: Please move along.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].dialogueText
+      value: Can I get in with nepotism?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].dialogueText
+      value: Do you have someone with clearance who can escort you?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[2].dialogueText
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[3].dialogueText
+      value: ...no.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.data[0].dialogueText
+      value: Can I get in with bribery?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.data[1].dialogueText
+      value: Let's be real.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.data[2].dialogueText
+      value: You don't look like you have the kind of money to do that.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.data[3].dialogueText
+      value: Oh yeah? How much?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.data[4].dialogueText
+      value: 3 Dollars.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.data[5].dialogueText
+      value: Darn!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194406, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: facingDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 93.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194424, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1705284106, guid: e3c62ba23485ba749b6032267321f56f, type: 3}
+    - target: {fileID: 1155657993595194426, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9a594f7bff9a4b34694adf1a65364267, type: 2}
+    - target: {fileID: 1155657993595194428, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Name
+      value: GuardN2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+--- !u!4 &1964440904 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+  m_PrefabInstance: {fileID: 1964440903}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1964440905 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194428, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+  m_PrefabInstance: {fileID: 1964440903}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1964440906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964440905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4a7de76fbfa36408880e8bbc908603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _activeMissions: 0000000002000000
 --- !u!114 &2022184225
 MonoBehaviour:
   m_ObjectHideFlags: 0
