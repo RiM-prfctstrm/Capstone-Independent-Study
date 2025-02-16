@@ -2,7 +2,7 @@
  * FILE     : TitleMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/31/24
- * UPDATED  : 11/19/24
+ * UPDATED  : 2/16/25
  * 
  * DESC     : Performs functions of the title screen menu.
 =================================================================================================*/
@@ -18,6 +18,7 @@ public class TitleMenu : MonoBehaviour
 
     // Object Refs
     [SerializeField] GameObject _credits;
+    [SerializeField] GameObject _optionsBG;
 
     // Debug
     [SerializeField] DialogueManager _menuDM;
@@ -42,6 +43,14 @@ public class TitleMenu : MonoBehaviour
     {
         _credits.SetActive(true);
         _credits.GetComponent<Button>().Select();
+    }
+
+    /// <summary>
+    /// Opens the options menu
+    /// </summary>
+    public void OpenOptions()
+    {
+        _optionsBG.SetActive(true);
     }
 
     /// <summary>

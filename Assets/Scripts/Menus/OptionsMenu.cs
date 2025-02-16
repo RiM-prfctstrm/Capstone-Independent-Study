@@ -21,12 +21,25 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] Button[] _scaleArray = new Button[4];
     [SerializeField] Slider _musicVolume;
     [SerializeField] Slider _soundVolume;
-    // External UI Objets
+    // External UI Objects
     [SerializeField] Button _returnSelection;
+
+    // Value initializers for when objects are set by menu
+    static float _saveMV = .8f;
+    static float _saveSV = .25f;
 
     #endregion
 
     #region UNIVERSAL EVENTS
+
+    /// <summary>
+    /// Initializes volume vars
+    /// </summary>
+    private void Awake()
+    {
+        _musicVolume.value = _saveMV;
+        _soundVolume.value = _saveSV;
+    }
 
     /// <summary>
     /// This function is called when the object becomes enabled and active
@@ -49,8 +62,15 @@ public class OptionsMenu : MonoBehaviour
     /// </summary>
     public void SetMusicVolume()
     {
+        // Sets volume variabes
         GlobalVariableTracker.musicVolume = _musicVolume.value;
-        MusicManager.musicManager.SetVolume();
+        _saveMV = _musicVolume.value;
+
+        // Automatically changes volume
+        if (MusicManager.musicManager != null)
+        {
+            MusicManager.musicManager.SetVolume();
+        }
     }
 
     /// <summary>
@@ -58,8 +78,15 @@ public class OptionsMenu : MonoBehaviour
     /// </summary>
     public void SetSFXVolume()
     {
+        // Sets volume variables
         GlobalVariableTracker.sfxVolume = _soundVolume.value;
-        DialogueManager.dialogueManager.SetMenuEffectsVolume();
+        _saveSV = _soundVolume.value;
+
+        // Automatically changes volume
+        if (DialogueManager.dialogueManager != null)
+        {
+            DialogueManager.dialogueManager.SetMenuEffectsVolume();
+        }
     }
 
     /// <summary>

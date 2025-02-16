@@ -31,7 +31,6 @@ public class InGameMainMenu : MonoBehaviour
     [SerializeField] Button _map;
     [SerializeField] Button _manual;
     [SerializeField] GameObject _optionsBG;
-    [SerializeField] Button _optionsDefaultSelection ; 
     // Other UI
     [SerializeField] TextMeshProUGUI _mapText;
     // External options
@@ -74,7 +73,6 @@ public class InGameMainMenu : MonoBehaviour
     public void OpenOptions()
     {
         _optionsBG.SetActive(true);
-        //_optionsDefaultSelection.Select();
     }
 
     /// <summary>
