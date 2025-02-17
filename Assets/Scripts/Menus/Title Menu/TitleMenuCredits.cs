@@ -2,7 +2,7 @@
  * FILE     : TitleMenuMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/15/24
- * UPDATED  : 12/8/24
+ * UPDATED  : 2/17/25
  * 
  * DESC     : Rolls the credits and contains a function to cancel them on the title menu.
 =================================================================================================*/
@@ -43,7 +43,8 @@ public class TitleMenuCredits : MonoBehaviour
         // Raises the credits text
         if (_rectTransform.localPosition.y < 1770)
         {
-            _rectTransform.Translate(Vector2.up * _speed * Time.fixedDeltaTime * 2);
+            _rectTransform.Translate(Vector2.up * _speed * Time.fixedDeltaTime *
+                GlobalVariableTracker.windowScale);
         }
     }
 

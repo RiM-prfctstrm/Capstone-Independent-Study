@@ -2,7 +2,8 @@
  * FILE     : DebugProgressInjector.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/3/25
- * UPDATED  : 2/15/25
+ * UPDATED  : 2/17/25
+ * UPDATED  : 2/17/25
  * 
  * DESC     : Debug script to set progression variables by hand in inspector. Used to tell the game
  *            to play at a certain point. Works best before loading scene.
@@ -67,8 +68,11 @@ public class DebugProgressInjector : MonoBehaviour
 
     /// <summary>
     /// Sets global variables to equal parameters set in script
+    /// Also used to reset progression variables when the player quits the game, because I already
+    /// have code for that here, and there should be no way that these variables are altered from
+    /// initial states in build.
     /// </summary>
-    void InjectGlobalData()
+    public void InjectGlobalData()
     {
         // Mission Data
         // Overall Progression

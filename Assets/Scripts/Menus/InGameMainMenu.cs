@@ -2,7 +2,7 @@
  * FILE     : InGameMainMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/14/24
- * UPDATED  : 2/16/25
+ * UPDATED  : 2/17/25
  * 
  * DESC     : Performs functions of the main in-game menu
 =================================================================================================*/
@@ -76,6 +76,15 @@ public class InGameMainMenu : MonoBehaviour
     }
 
     /// <summary>
+    /// Exits the menu and returns to gameplay
+    /// </summary>
+    public void ExitMenu()
+    {
+        PlayerController.playerController.TogglePlayerInput();
+        gameObject.SetActive(false);
+    }
+
+    /// <summary>
     /// Starts event used to confirm player's decision to quit
     /// </summary>
     public void QuitToTitle()
@@ -87,18 +96,12 @@ public class InGameMainMenu : MonoBehaviour
         // doing this.
         inGameMainMenu = this;
 
+        // Resets all progress
+        GetComponent<DebugProgressInjector>().InjectGlobalData();
+
         // Prepares event
         defaultSelection = _quitButton;
         CutsceneManager.cutsceneManager.StartCutscene(_quitEvent);
-    }
-
-    /// <summary>
-    /// Exits the menu and returns to gameplay
-    /// </summary>
-    public void ExitMenu()
-    {
-        PlayerController.playerController.TogglePlayerInput();
-        gameObject.SetActive(false);
     }
 
     #endregion
