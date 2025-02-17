@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e7c1be8998881549bcc1fb9d908ed5b, type: 3}
-  m_Name: Return Event
+  m_Script: {fileID: 11500000, guid: ba4f394147af7964b934b71856103d08, type: 3}
+  m_Name: QTT_reset
   m_EditorClassIdentifier: 
-  cutsceneScript:
-  - {fileID: 11400000, guid: 11d7e8e691e28eb47b16b747e16034e3, type: 2}
-  - {fileID: 11400000, guid: 23752e2e80c7ecb4c9fd7718abeab07c, type: 2}
-  hasPlayed: 0
+  eventComplete: 0

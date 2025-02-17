@@ -96,9 +96,6 @@ public class InGameMainMenu : MonoBehaviour
         // doing this.
         inGameMainMenu = this;
 
-        // Resets all progress
-        GetComponent<DebugProgressInjector>().InjectGlobalData();
-
         // Prepares event
         defaultSelection = _quitButton;
         CutsceneManager.cutsceneManager.StartCutscene(_quitEvent);
