@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
   m_Name: m3_7_005_commanderMessage
   m_EditorClassIdentifier: 
-  eventComplete: 0
+  eventComplete: 1
   cutsceneDialogue:
     dialogueBoxes:
     - dialogueText: Greetings, people of Cradle. I am Leif Armstrong, commander of
@@ -63,7 +63,10 @@ MonoBehaviour:
       portrait: {fileID: 0}
     - dialogueText: Finally, if between now and your arrival, we do fail, and Pearl
         proves to unhabitable, it is better we learn that when only a few of us are
-        there and the rest of you still have a chance to find a home somewhere else.
+        there and the rest of you still have a chance
+      nameTag: Small Step Commander
+      portrait: {fileID: 0}
+    - dialogueText: to find a home somewhere else.
       nameTag: Small Step Commander
       portrait: {fileID: 0}
     - dialogueText: With that in mind, it is much safer to begin the journey, and
@@ -93,7 +96,10 @@ MonoBehaviour:
       portrait: {fileID: 0}
     - dialogueText: With that out of the way, from the knowledge we have of living
         on this planet, we believe it is the right course of action to proceed as
-        scheduled and have the Giant Leap fleet head to Pearl.
+        scheduled and have the Giant Leap
+      nameTag: Small Step Commander
+      portrait: {fileID: 0}
+    - dialogueText: fleet head to Pearl.
       nameTag: Small Step Commander
       portrait: {fileID: 0}
     - dialogueText: As of now, we have twelve settlements spread across the various
@@ -131,12 +137,18 @@ MonoBehaviour:
       portrait: {fileID: 0}
     - dialogueText: While Cradlean crops do not fare well in the wild because of
         Pearl's shorter seasons, even the air here is rich in nutrients, so we have
-        grown enough in greenhouses to keep everyone well-fed.
+        grown enough in greenhouses to keep
+      nameTag: Small Step Commander
+      portrait: {fileID: 0}
+    - dialogueText: everyone well-fed.
       nameTag: Small Step Commander
       portrait: {fileID: 0}
     - dialogueText: On top of that, our intrepid exploration teams are compiling
         a list of native plants and animals that are edible, and narrowing it down
-        to ones that are good candidates for domestication.
+        to ones that are good candidates for
+      nameTag: Small Step Commander
+      portrait: {fileID: 0}
+    - dialogueText: domestication.
       nameTag: Small Step Commander
       portrait: {fileID: 0}
     - dialogueText: "We expect to begin integrating Pearlan species into our regular

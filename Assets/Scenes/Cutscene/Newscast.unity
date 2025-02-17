@@ -300,7 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _autoCutscenes:
   - {fileID: 11400000, guid: 8e92d17ed610ffe46ada9e1c357c398d, type: 2}
-  _cyclesPerMission: 1
+  _cyclesPerMission: 0
   readyCutscene: 0
 --- !u!114 &886453898
 MonoBehaviour:
@@ -627,7 +627,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &2117602589
 RectTransform:
