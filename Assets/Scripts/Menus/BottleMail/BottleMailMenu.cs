@@ -39,6 +39,9 @@ public class BottleMailMenu : MonoBehaviour
 
         // Sets default menu values
         _defaultSelection.Select();
+
+        // Sets Menu Volune
+        GetComponent<AudioSource>().volume = GlobalVariableTracker.menuVolume;
     }
 
     #endregion
