@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 2/15/25
+ * UPDATED  : 2/18/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour
         // Assigns actions to inputs
         _brake.performed += ctx => _isBraking = true;
         _brake.canceled += ctx => _isBraking = false;
-        _debugSwitch.performed += ctx => ToggleBike();
+        //_debugSwitch.performed += ctx => ToggleBike();
         _openMenu.performed += ctx => OpenMenu(_menu, _mainMenuDefault);
         _interact.performed += ctx => PerformInteraction();
 
