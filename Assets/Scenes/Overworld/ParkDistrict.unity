@@ -530,6 +530,123 @@ PrefabInstance:
       objectReference: {fileID: 1635511154}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e735ec56fc8e5f1478e58431f136038a, type: 3}
+--- !u!1001 &604032041
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1049227112}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].nameTag
+      value: Undercover Lifeguard
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].nameTag
+      value: Undercover Lifeguard
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].nameTag
+      value: Lifeguard
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].nameTag
+      value: Undercover Lifeguard
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: Don't tell anyone, but I'm an undercover lifeguard.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: It's important nobody realizes why I'm here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: Instead, the way it's going and to the side to get out.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].dialogueText
+      value: Why would a lifeguard need to be undercover?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].dialogueText
+      value: You never know who might try to smuggle drugs to fishes.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194406, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: facingDirection
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 72.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -23.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194426, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 97bc77e9fec70504a9bea0ab29e9c210, type: 2}
+    - target: {fileID: 1155657993595194428, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Name
+      value: NPC005
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
 --- !u!1 &664112266
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,6 +989,10 @@ Transform:
   - {fileID: 896414862}
   - {fileID: 1717204332}
   - {fileID: 1460027708}
+  - {fileID: 1464186066}
+  - {fileID: 1406427369}
+  - {fileID: 1784042113}
+  - {fileID: 1819362070}
   m_Father: {fileID: 1727683252}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1220,6 +1341,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
   m_PrefabInstance: {fileID: 1348062304}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1406427369 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+  m_PrefabInstance: {fileID: 2025420414}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1441773880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1492,6 +1618,161 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
   m_PrefabInstance: {fileID: 1460027707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1464186065
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1049227112}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].nameTag
+      value: Curious Child
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].nameTag
+      value: Curious Child
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].nameTag
+      value: Curious Child
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].nameTag
+      value: Curious Child
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[2].nameTag
+      value: Curious Child
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.data[0].nameTag
+      value: Curious Child
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.data[1].nameTag
+      value: Curious Child
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: Why's there a dead guy over there?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: Doesn't he know he'll get pooped on by birds?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].dialogueText
+      value: Maybe we should try to bury him.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].dialogueText
+      value: We can use one of the rocks from the lighthouse as a gravestone!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[2].dialogueText
+      value: We can use one of the rocks from the lighthouse as a gravestone!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.data[0].dialogueText
+      value: Or we could give him a viking burial, and put him in a boat and light
+        in fire!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[2].dialogueBoxes.Array.data[1].dialogueText
+      value: I don't know how to use a bow, though.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194406, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: facingDirection
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 128.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194424, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -303386667, guid: 0069e525a8fb38a44adac1b0a9f0c7df, type: 3}
+    - target: {fileID: 1155657993595194425, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194425, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194426, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 35f815a2292430f44a5f9420844b11c4, type: 2}
+    - target: {fileID: 1155657993595194428, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Name
+      value: NPC003
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+--- !u!4 &1464186066 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+  m_PrefabInstance: {fileID: 1464186065}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1500508566
 PrefabInstance:
@@ -2043,6 +2324,133 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1784042113 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+  m_PrefabInstance: {fileID: 604032041}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1819362069
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1049227112}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].nameTag
+      value: Desperate Woman
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].nameTag
+      value: Desperate Woman
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].nameTag
+      value: Lifeguard
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].nameTag
+      value: Undercover Lifeguard
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: C'monc'monc'monc'monc'monc'monc'mon!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: What's taking you so long?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: Instead, the way it's going and to the side to get out.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].dialogueText
+      value: Why would a lifeguard need to be undercover?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].dialogueText
+      value: You never know who might try to smuggle drugs to fishes.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194406, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: facingDirection
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -43
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194426, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 97bc77e9fec70504a9bea0ab29e9c210, type: 2}
+    - target: {fileID: 1155657993595194428, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Name
+      value: NPC005 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+--- !u!4 &1819362070 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+  m_PrefabInstance: {fileID: 1819362069}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1927788553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2144,6 +2552,121 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
   m_PrefabInstance: {fileID: 1948541297}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2025420414
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1049227112}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].nameTag
+      value: Lifeguard
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].nameTag
+      value: Lifeguard
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].nameTag
+      value: Lifeguard
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].nameTag
+      value: Lifeguard
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].nameTag
+      value: Lifeguard
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: If you get caught in a rip current, don't swim against it. It's stronger
+        than you, and you'll only waste energy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: Instead, swim the way it's going and to the side to get out.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: Instead, the way it's going and to the side to get out.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].dialogueText
+      value: Don't walk on shelf ice. It's a lot more fragile than it appears, and
+        it will be hard to find a way out if you fall in the freezing water.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].dialogueText
+      value: I know there's not any around right now, but I never get to say that.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194406, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: facingDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 81.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -33.675
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Name
+      value: NPC004
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
 --- !u!1 &2110414799
 GameObject:
   m_ObjectHideFlags: 0
