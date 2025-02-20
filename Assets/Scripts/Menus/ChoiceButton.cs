@@ -2,7 +2,7 @@
  * FILE     : ChoiceButton.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/7/25
- * UPDATED  : 2/10/25
+ * UPDATED  : 2/20/25
  * 
  * DESC     : A button used to branch cutscenes, with a variable cutscene assigned by event that
  *            brings up the choice Menu.
@@ -50,6 +50,9 @@ public class ChoiceButton : MonoBehaviour
 
         // Exits prior Cutscene
         CutsceneManager.cutsceneManager.EndCutscene();
+
+        // Removes player cancel ability
+        PlayerController.playerController.cancel.Disable();
 
         // If there is a branch event to go to, begins that
         if (resultEvent != null)

@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 2/18/25
+ * UPDATED  : 2/20/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour
     // Inputs
     [SerializeField] InputActionAsset _playerInputs;
     InputAction _brake;
+    public InputAction cancel;
     InputAction _debugSwitch;
     InputAction _openMenu;
     InputAction _interact;
@@ -101,6 +102,7 @@ public class PlayerController : MonoBehaviour
 
         // Sets inputs
         _brake = _playerInputs.FindAction("Brake");
+        cancel = _playerInputs.FindAction("Cancel");
         _debugSwitch = _playerInputs.FindAction("DebugSwitchState");
         _openMenu = _playerInputs.FindAction("OpenMenu");
         _interact = _playerInputs.FindAction("Interact");
@@ -257,10 +259,16 @@ public class PlayerController : MonoBehaviour
             _openMenu.Enable();
             _movementDisabled = false;
 
+            // Disables menu cancel
+            cancel.Disable();
+            
+
             // Keeps interaction enabled. Don't know why I have to explicitly spell this out, but
             // it doesn't work if I don't.
             _interact.Enable();
         }
+
+        Debug.Log(_brake.enabled);
     }
 
     #endregion
@@ -534,6 +542,14 @@ public class PlayerController : MonoBehaviour
         // Opens menu
         menu.SetActive(true);
         selection.Select();
+
+        // Allows cancelling from menu
+        cancel.Enable();
+        if (menu.GetComponent<InGameMainMenu>() != null)
+        {
+            cancel.performed += ctx => menu.GetComponent<InGameMainMenu>().ExitMenu();
+        }
+
 
         // Disables non-menu inputs
         if (!CutsceneManager.inCutscene)
