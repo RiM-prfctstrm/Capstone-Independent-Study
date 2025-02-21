@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 2/20/25
+ * UPDATED  : 2/21/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -261,14 +261,12 @@ public class PlayerController : MonoBehaviour
 
             // Disables menu cancel
             cancel.Disable();
-            
+            cancel.performed -= _menu.GetComponent<InGameMainMenu>().ExitMenu;
 
             // Keeps interaction enabled. Don't know why I have to explicitly spell this out, but
             // it doesn't work if I don't.
             _interact.Enable();
         }
-
-        Debug.Log(_brake.enabled);
     }
 
     #endregion
@@ -547,9 +545,8 @@ public class PlayerController : MonoBehaviour
         cancel.Enable();
         if (menu.GetComponent<InGameMainMenu>() != null)
         {
-            cancel.performed += ctx => menu.GetComponent<InGameMainMenu>().ExitMenu();
+            cancel.performed += menu.GetComponent<InGameMainMenu>().ExitMenu;
         }
-
 
         // Disables non-menu inputs
         if (!CutsceneManager.inCutscene)

@@ -2,7 +2,7 @@
  * FILE     : OptionsMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/16/25
- * UPDATED  : 2/16/25
+ * UPDATED  : 2/21/25
  * 
  * DESC     : Adjusts variables that affect the game's presentation.
 =================================================================================================*/
@@ -10,6 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class OptionsMenu : MonoBehaviour
 {
@@ -56,6 +57,12 @@ public class OptionsMenu : MonoBehaviour
         _musicVolume.value = GlobalVariableTracker.musicVolume;
         _soundVolume.value = GlobalVariableTracker.sfxVolume;
         _menuVolume.value = GlobalVariableTracker.menuVolume;
+
+        // Sets cancel function
+        if (PlayerController.playerController != null)
+        {
+            PlayerController.playerController.cancel.performed += ReturnToMenu;
+        }
     }
 
     #endregion
@@ -132,8 +139,38 @@ public class OptionsMenu : MonoBehaviour
     /// </summary>
     public void ReturnToMenu()
     {
+        // Returns to menu
         _returnSelection.Select();
         gameObject.SetActive(false);
+
+        // Resets cancel function
+        if (PlayerController.playerController != null)
+        {
+            PlayerController.playerController.cancel.performed -= ReturnToMenu;
+            if (_returnSelection.GetComponentInParent<InGameMainMenu>() != null)
+            {
+                PlayerController.playerController.cancel.performed +=
+                    _returnSelection.GetComponentInParent<InGameMainMenu>().ExitMenu;
+            }
+        }
+    }
+    public void ReturnToMenu(InputAction.CallbackContext ctx)
+    {
+        // Returns to menu
+        _returnSelection.Select();
+        gameObject.SetActive(false);
+        Debug.Log("yes");
+
+        // Resets cancel function
+        if (PlayerController.playerController != null)
+        {
+            PlayerController.playerController.cancel.performed -= ReturnToMenu;
+            if (_returnSelection.GetComponentInParent<InGameMainMenu>() != null)
+            {
+                PlayerController.playerController.cancel.performed +=
+                    _returnSelection.GetComponentInParent<InGameMainMenu>().ExitMenu;
+            }
+        }
     }
 
     #endregion

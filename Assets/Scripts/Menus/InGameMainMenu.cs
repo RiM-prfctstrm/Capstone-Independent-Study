@@ -2,7 +2,7 @@
  * FILE     : InGameMainMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/14/24
- * UPDATED  : 2/17/25
+ * UPDATED  : 2/21/25
  * 
  * DESC     : Performs functions of the main in-game menu
 =================================================================================================*/
@@ -12,6 +12,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class InGameMainMenu : MonoBehaviour
 {
@@ -73,6 +74,9 @@ public class InGameMainMenu : MonoBehaviour
     public void OpenOptions()
     {
         _optionsBG.SetActive(true);
+
+        // Sets cancel button to leave options instead
+        PlayerController.playerController.cancel.performed -= ExitMenu;
     }
 
     /// <summary>
@@ -82,6 +86,17 @@ public class InGameMainMenu : MonoBehaviour
     {
         PlayerController.playerController.TogglePlayerInput();
         gameObject.SetActive(false);
+
+        // Removes cancel function
+        PlayerController.playerController.cancel.performed -= ExitMenu;
+    }
+    public void ExitMenu(InputAction.CallbackContext ctx)
+    {
+        PlayerController.playerController.TogglePlayerInput();
+        gameObject.SetActive(false);
+
+        // Removes cancel function
+        PlayerController.playerController.cancel.performed -= ExitMenu;
     }
 
     /// <summary>
@@ -91,6 +106,9 @@ public class InGameMainMenu : MonoBehaviour
     {
         // Performs an extra movement toggle to ensure movement doesn't reactivate in confirmation
         PlayerController.playerController.TogglePlayerInput();
+
+        // Removes cancel function
+        PlayerController.playerController.cancel.performed -= ExitMenu;
 
         // Sets class singleton to ensure return event knows where to go. Probably a cleaner way of
         // doing this.
