@@ -2,7 +2,7 @@
  * FILE     : PlayerAnimator.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/11/24
- * UPDATED  : 11/8/24
+ * UPDATED  : 2/22/25
  * 
  * DESC     : Controls player character's animation
 =================================================================================================*/
@@ -16,6 +16,9 @@ public class PlayerAnimator : CharacterAnimator
 
     // Components
     PlayerController _playerController;
+
+    // Control Parameters
+    bool _overrideState = false;
 
     #endregion
 
@@ -40,7 +43,7 @@ public class PlayerAnimator : CharacterAnimator
         base.Update();
 
         // Plays animation
-        if (!CutsceneManager.inCutscene)
+        if (!CutsceneManager.inCutscene && !_overrideState)
         {
             _anim.Play("Base Layer." + SetAnimState());
         }
@@ -68,6 +71,25 @@ public class PlayerAnimator : CharacterAnimator
 
         // Returns animation to play
         return animState;
+    }
+
+    /// <summary>
+    /// Puts the player in a spin out animation for a duration based on force of impact
+    /// </summary>
+    /// <returns>Delay while the player must keep spinning</returns>
+    public IEnumerator SpinOut(float intensity)
+    {
+        // Overrides ordinary animation and gameplay
+        _overrideState = true;
+
+        // Sets animation
+        _anim.Play("Base Layer.SpinOut");
+
+        // Tells how long to keep state
+        yield return new WaitForSeconds(intensity);
+
+        // Disables helpless state
+        _overrideState = false;
     }
 
     #endregion

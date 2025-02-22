@@ -172,14 +172,21 @@ public class PlayerController : MonoBehaviour
     /// <param name="collision">The Collision2D data associated with this collision.</param>
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // Collision vars
+        float impactForce = new Vector2(_velocityX, _velocityY).magnitude;
+
         // Bike specific collision logic
         if (!isWalking)
         {
             // Loses Collectibles
             if (rb2d.velocity.magnitude > _lossBuffer)
             {
-                LoseCollectibles(new Vector2(_velocityX, _velocityY).magnitude,
+                // Performs loss
+                LoseCollectibles(impactForce,
                     90 - Vector2.Angle(rb2d.velocity, collision.GetContact(0).normal));
+
+                // Performs visible collision effects
+                StartCoroutine(_playerAnimator.SpinOut(impactForce / _maxBikeSpeed));
             }
 
             // Reset velocity modifiers to compensate for collision DEBUG FIX
@@ -600,7 +607,6 @@ public class PlayerController : MonoBehaviour
         float collisionDirectness = (collisionAngle + 10) / 100;
         Debug.Log("Force: " + collisionForce);
         Debug.Log("Angle: " + collisionDirectness);
-        //Debug.Log(GlobalVariableTracker.collectiblesInPocket * (collisionDirectness * collisionForce));
 
         // Subtracts from total
         GlobalVariableTracker.collectiblesInPocket -= (int)
