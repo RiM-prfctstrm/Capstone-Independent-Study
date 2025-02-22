@@ -2,8 +2,7 @@
  * FILE     : DebugProgressInjector.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/3/25
- * UPDATED  : 2/17/25
- * UPDATED  : 2/17/25
+ * UPDATED  : 2/22/25
  * 
  * DESC     : Debug script to set progression variables by hand in inspector. Used to tell the game
  *            to play at a certain point. Works best before loading scene.
@@ -31,6 +30,9 @@ public class DebugProgressInjector : MonoBehaviour
     [SerializeField] bool _hasAccessCard = false;
     [SerializeField] bool _visitedReceptionist = false;
 
+    // Collectibles
+    [SerializeField] int _collectiblesInBank;
+    [SerializeField] int _collectiblesInPocket;
 
     // Activation Switch
     [SerializeField] bool _fireInjector = false;
@@ -86,6 +88,10 @@ public class DebugProgressInjector : MonoBehaviour
         GlobalVariableTracker.progressionFlags["checkedIn"] = _checkedIn;
         GlobalVariableTracker.progressionFlags["hasAccessCard"] = _hasAccessCard;
         GlobalVariableTracker.progressionFlags["visitedReceptionist"] = _visitedReceptionist;
+
+        // Collectibles
+        GlobalVariableTracker.collectiblesInBank = _collectiblesInBank;
+        GlobalVariableTracker.collectiblesInPocket = _collectiblesInPocket;
 
         // Prevent repeat fires
         _fireInjector = false;

@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 2/21/25
+ * UPDATED  : 2/22/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float _brakeTime;
     [SerializeField] float _decelTime;
     [SerializeField] float _decelBuffer;
+    [SerializeField] float _lossBuffer;
     [SerializeField] float _maxBikeSpeed;
     [SerializeField] float _walkSpeed;
     [SerializeField] int _steeringAngleThreshold;
@@ -112,7 +113,7 @@ public class PlayerController : MonoBehaviour
         // Assigns actions to inputs
         _brake.performed += ctx => _isBraking = true;
         _brake.canceled += ctx => _isBraking = false;
-        //_debugSwitch.performed += ctx => ToggleBike();
+        _debugSwitch.performed += ctx => ToggleBike();
         _openMenu.performed += ctx => OpenMenu(_menu, _mainMenuDefault);
         _interact.performed += ctx => PerformInteraction();
 
@@ -171,13 +172,19 @@ public class PlayerController : MonoBehaviour
     /// <param name="collision">The Collision2D data associated with this collision.</param>
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Debug.Log("Collided");
-
-        // Reset velocity modifiers to compensate for collision DEBUG FIX
+        // Bike specific collision logic
         if (!isWalking)
         {
+            // Loses Collectibles
+            if (rb2d.velocity.magnitude > _lossBuffer)
+            {
+                LoseCollectibles(new Vector2(_velocityX, _velocityY).magnitude,
+                    90 - Vector2.Angle(rb2d.velocity, collision.GetContact(0).normal));
+            }
+
+            // Reset velocity modifiers to compensate for collision DEBUG FIX
             _velocityX = rb2d.velocity.x;
-            _velocityY = rb2d.velocity.y;
+            _velocityY = rb2d.velocity.y;   
         }
     }
 
@@ -578,6 +585,35 @@ public class PlayerController : MonoBehaviour
             if (rb2d.velocity.y >= 0) { return 3; }
             else { return 0; }
         }
+    }
+
+
+    /// <summary>
+    /// Calculates the number of collectibles to be lost when colliding with an obstacle
+    /// </summary>
+    /// <param name="collisionSpeed">Player's speed before collision</param>
+    /// <param name="collisionAngle">Angle between velocity and collider</param>
+    void LoseCollectibles(float collisionSpeed, float collisionAngle)
+    {
+        // Calculates component variables
+        float collisionForce = collisionSpeed / _maxBikeSpeed;
+        float collisionDirectness = (collisionAngle + 10) / 100;
+        Debug.Log("Force: " + collisionForce);
+        Debug.Log("Angle: " + collisionDirectness);
+        //Debug.Log(GlobalVariableTracker.collectiblesInPocket * (collisionDirectness * collisionForce));
+
+        // Subtracts from total
+        GlobalVariableTracker.collectiblesInPocket -= (int)
+            (GlobalVariableTracker.collectiblesInPocket * (collisionDirectness * collisionForce));
+
+        // Prevents negative collectibles
+        if (GlobalVariableTracker.collectiblesInPocket < 0)
+        {
+            GlobalVariableTracker.collectiblesInPocket = 0;
+        }
+
+        // DEBUG Logs total collectibles
+        Debug.Log(GlobalVariableTracker.collectiblesInPocket);
     }
 
     /// <summary>

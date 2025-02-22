@@ -2,7 +2,7 @@
  * FILE     : GlobalVariableTracker.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/4/24
- * UPDATED  : 2/15/25
+ * UPDATED  : 2/22/25
  * 
  * DESC     : Stores data that is meant to persist throughout the entire game. Variables are kept
  *            in an initialized state to easily create a new save. If a save is loaded, they are
@@ -23,7 +23,9 @@ public class GlobalVariableTracker
     public static float sfxVolume = 1;
     public static int windowScale = 1;
 
-    // General mission information
+    // General peogress information
+    public static int collectiblesInBank = 0;
+    public static int collectiblesInPocket = 0;
     public static int currentMission = 0;
 
     #endregion

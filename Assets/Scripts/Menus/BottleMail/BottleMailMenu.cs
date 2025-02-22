@@ -2,7 +2,7 @@
  * FILE     : BottleMailMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/16/25
- * UPDATED  : 2/7/25
+ * UPDATED  : 2/21/25
  * 
  * DESC     : Controls BottleMail menu behavior to emulate an email program.
 =================================================================================================*/
@@ -10,6 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 using TMPro;
 
 public class BottleMailMenu : MonoBehaviour
@@ -34,8 +35,9 @@ public class BottleMailMenu : MonoBehaviour
     /// </summary>
     void Start()
     {
-        // Disables regular player input
+        // Sets Player input capabilitys
         PlayerController.playerController.TogglePlayerInput();
+        PlayerController.playerController.cancel.performed += CloseMenu;
 
         // Sets default menu values
         _defaultSelection.Select();
@@ -78,6 +80,17 @@ public class BottleMailMenu : MonoBehaviour
     {
         // Reenables player input
         PlayerController.playerController.TogglePlayerInput();
+        PlayerController.playerController.cancel.performed -= CloseMenu;
+
+        // Sends player back to room
+        StartCoroutine(SceneTransition.TransitionScene(
+            "ShakerHouse", true, new Vector3(5.5f, -37.25f, 0), 3));
+    }
+    public void CloseMenu(InputAction.CallbackContext ctx)
+    {
+        // Reenables player input
+        PlayerController.playerController.TogglePlayerInput();
+        PlayerController.playerController.cancel.performed -= CloseMenu;
 
         // Sends player back to room
         StartCoroutine(SceneTransition.TransitionScene(
