@@ -40,6 +40,7 @@ public class EssentialPreserver : MonoBehaviour
         DialogueManager.dialogueManager = GetComponentInChildren<DialogueManager>();
         CutsceneManager.cutsceneManager = GetComponentInChildren<CutsceneManager>();
         MusicManager.musicManager = GetComponentInChildren<MusicManager>();
+        CollectibleManager.collectibleManager = GetComponentInChildren<CollectibleManager>();
 
         // Performs bespoke initializations for other kinds of objects
         InitializeCutscenes();

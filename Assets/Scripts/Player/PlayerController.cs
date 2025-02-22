@@ -605,16 +605,11 @@ public class PlayerController : MonoBehaviour
         // Calculates component variables
         float collisionForce = collisionSpeed / _maxBikeSpeed;
         float collisionDirectness = (collisionAngle + 10) / 100;
-
-        // Subtracts from total
-        GlobalVariableTracker.collectiblesInPocket -= (int)
+        int subtractionTotal = -(int)
             (GlobalVariableTracker.collectiblesInPocket * (collisionDirectness * collisionForce));
 
-        // Prevents negative collectibles
-        if (GlobalVariableTracker.collectiblesInPocket < 0)
-        {
-            GlobalVariableTracker.collectiblesInPocket = 0;
-        }
+        // Subtracts from total
+        CollectibleManager.collectibleManager.AdjustCount(subtractionTotal);
     }
 
     /// <summary>
