@@ -179,7 +179,7 @@ public class PlayerController : MonoBehaviour
         if (!isWalking)
         {
             // Loses Collectibles
-            if (rb2d.velocity.magnitude > _lossBuffer)
+            if (impactForce > _lossBuffer)
             {
                 // Performs loss
                 LoseCollectibles(impactForce,
