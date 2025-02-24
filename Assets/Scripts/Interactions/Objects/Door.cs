@@ -2,7 +2,7 @@
  * FILE     : Door.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 1/8/25
+ * UPDATED  : 2/23/25
  * 
  * DESC     : Basically a fancier version of SceneTrigger that activates when the player interacts
  *            with it, plays different animations and sounds, and can be locked until the player
@@ -27,6 +27,21 @@ public class Door : InteractableObject
     [SerializeField] DialogueEvent _lockedMessage;
 
     #endregion
+
+    /// <summary>
+    /// Update is called once per frame
+    /// </summary>
+    void Update()
+    {
+        // Determines whether player is close enough for dialogue
+        if (Vector2.Distance(transform.position, 
+            PlayerController.playerController.transform.position) > 5
+            && PlayerController.playerController.lastTarget == gameObject
+            && DialogueManager.dialogueInProgress)
+        {
+            DialogueManager.dialogueManager.CancelDialogue();
+        }
+    }
 
     #region INTERACTION FUNCTIONALITY
 
