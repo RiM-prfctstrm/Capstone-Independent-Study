@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 2/16/25
+ * UPDATED  : 2/23/25
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -171,6 +171,9 @@ public class DialogueManager : MonoBehaviour
             previouslySelected.Select();
             previouslySelected = null;
         }
+
+        // Deselects any targeted gameobjects
+        PlayerController.playerController.lastTarget = null;
     }
 
     #endregion

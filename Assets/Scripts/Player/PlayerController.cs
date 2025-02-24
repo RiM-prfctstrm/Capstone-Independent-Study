@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 2/22/25
+ * UPDATED  : 2/23/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -69,8 +69,7 @@ public class PlayerController : MonoBehaviour
 
     // External reference
     DialogueManager _dialogueManager;
-    GameObject _lastTarget;
-    public GameObject lastTarget => _lastTarget;
+    public GameObject lastTarget;
     [SerializeField] GameObject _menu;
     Button _mainMenuDefault;
 
@@ -298,7 +297,7 @@ public class PlayerController : MonoBehaviour
             if (_detector.target != null)
             {
                 _detector.target.OnInteractedWith();
-                _lastTarget = _detector.target.gameObject;
+                lastTarget = _detector.target.gameObject;
             }
             else
             {
