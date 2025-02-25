@@ -18,7 +18,8 @@ public class MapSetup : MonoBehaviour
     // Object references
     // Visible UI
     [SerializeField] Image _playerMarker;
-    [SerializeField] Image _targetMarker;
+    [SerializeField] Image _destinationMarker;
+    [SerializeField] Vector2[] _destinationCoords;
     // Backend information
     BootManager _currentSceneRef;
 
@@ -36,6 +37,7 @@ public class MapSetup : MonoBehaviour
 
         // Sets map display
         SetPlayerMarkerPosition();
+        SetDestinationMarkerPosition();
     }
 
     #endregion
@@ -60,6 +62,15 @@ public class MapSetup : MonoBehaviour
             _playerMarker.transform.localPosition += _currentSceneRef.mapOffset;
         }
 
+    }
+
+    /// <summary>
+    /// Sets the destination map marker position
+    /// </summary>
+    void SetDestinationMarkerPosition()
+    {
+        _destinationMarker.rectTransform.localPosition =
+            _destinationCoords[GlobalVariableTracker.currentMission];
     }
 
     #endregion
