@@ -2834,7 +2834,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].dialogueText
-      value: It's just west of here, by the highway. Can't miss it.
+      value: It's just northeast of hear of here, on the road near the elevator entrance.
+        Can't miss it.
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[2].dialogueText
@@ -3756,7 +3757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneName: RetailDistrict
   _isIndoors: 0
-  _position: {x: 237, y: -50, z: 0}
+  _position: {x: 105, y: -201, z: 0}
   _direction: 0
   _setsDirection: 1
 --- !u!61 &1647385493
@@ -4461,7 +4462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[2].dialogueText
-      value: It's by the hospital.
+      value: It's straight up the street right next to the parking lot.
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[3].dialogueText
