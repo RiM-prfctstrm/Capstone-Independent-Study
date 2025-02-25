@@ -2,7 +2,7 @@
  * FILE     : BootManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 1/13/25
+ * UPDATED  : 2/25/25
  * 
  * DESC     : Performs functionality that only occurs when the game is first started.
 =================================================================================================*/
@@ -32,6 +32,10 @@ public class BootManager : MonoBehaviour
     // Level-specific music
     //SerializeField] bool _hasLocalMusic = false;
     [SerializeField] AudioClip _localMusic;
+
+    // Map parameters
+    [SerializeField] Vector2 _mapOffset;
+    public Vector2 mapOffset => _mapOffset;
 
     #endregion
 
