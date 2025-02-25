@@ -34,8 +34,10 @@ public class BootManager : MonoBehaviour
     [SerializeField] AudioClip _localMusic;
 
     // Map parameters
+    [SerializeField] bool _indoorScene = true;
+    public bool indoorScene => _indoorScene;
     [SerializeField] Vector2 _mapOffset;
-    public Vector2 mapOffset => _mapOffset;
+    public Vector3 mapOffset => _mapOffset;
 
     #endregion
 

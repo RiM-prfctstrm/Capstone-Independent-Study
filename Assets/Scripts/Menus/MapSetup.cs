@@ -48,8 +48,18 @@ public class MapSetup : MonoBehaviour
     /// </summary>
     void SetPlayerMarkerPosition()
     {
-        _playerMarker.rectTransform.localPosition =
-            PlayerController.playerController.transform.position;
+        if (_currentSceneRef.indoorScene)
+        {
+            // Sets map marker to position of exterior door in indoor scenes
+            _playerMarker.rectTransform.localPosition = _currentSceneRef.mapOffset;
+        }
+        {
+            // Sets map marker to player's position + map specific offset
+            _playerMarker.rectTransform.localPosition =
+                PlayerController.playerController.transform.position;
+            _playerMarker.transform.localPosition += _currentSceneRef.mapOffset;
+        }
+
     }
 
     #endregion
