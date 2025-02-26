@@ -35,9 +35,21 @@ public class Collectible : MonoBehaviour
     /// <param name="collision">Object that collides with this</param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Collisions with player
         if (collision.gameObject == PlayerController.playerController.gameObject)
         {
-            GlobalVariableTracker.collectiblesInPocket++;
+            // Picks up collectible
+            if (GlobalVariableTracker.collectiblesInPocket < 200)
+            {
+                GlobalVariableTracker.collectiblesInPocket++;
+                GetComponent<Animator>().Play("Collect");
+            }
+            // If any more collectibles would do nothing, plays an effect to show that the item
+            // can't be picked up
+            else
+            {
+                GetComponent<Animator>().Play("Full");
+            }
         }
     }
 
