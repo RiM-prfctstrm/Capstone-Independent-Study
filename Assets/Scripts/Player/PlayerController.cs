@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 2/23/25
+ * UPDATED  : 2/26/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -121,6 +121,9 @@ public class PlayerController : MonoBehaviour
 
         // Initializes volume
         SetSoundEffectsVolume();
+
+        // Initializes menu. Done here instead of EssentialPreserver to prevent nullreference
+        InGameMainMenu.inGameMainMenu = _menu.GetComponent <InGameMainMenu>();
 
         // DEBUG
         //StartCoroutine(LabTurn2Part());
