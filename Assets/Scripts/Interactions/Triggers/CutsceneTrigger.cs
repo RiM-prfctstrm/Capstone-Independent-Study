@@ -42,6 +42,7 @@ public class CutsceneTrigger : MonoBehaviour
                 PlayerController.playerController.CancelMomentum();
                 if (InGameMainMenu.inGameMainMenu.isActiveAndEnabled)
                 {
+                    InGameMainMenu.inGameMainMenu.CloseSubmenus();
                     InGameMainMenu.inGameMainMenu.ExitMenu();
                     PlayerController.playerController.TogglePlayerInput();
                 }

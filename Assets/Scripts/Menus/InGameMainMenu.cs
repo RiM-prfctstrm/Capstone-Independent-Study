@@ -2,7 +2,7 @@
  * FILE     : InGameMainMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/14/24
- * UPDATED  : 2/21/25
+ * UPDATED  : 2/26/25
  * 
  * DESC     : Performs functions of the main in-game menu
 =================================================================================================*/
@@ -142,6 +142,20 @@ public class InGameMainMenu : MonoBehaviour
     }
 
     #endregion
+
+    #endregion
+
+    #region NON-BUTTON FUNCTIONS
+
+    /// <summary>
+    /// Closes submenus
+    /// </summary>
+    public void CloseSubmenus()
+    {
+        CloseMap();
+        CloseManual();
+        _optionsBG.SetActive(false);
+    }
 
     #endregion
 
