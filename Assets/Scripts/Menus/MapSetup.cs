@@ -38,6 +38,7 @@ public class MapSetup : MonoBehaviour
         // Sets map display
         SetPlayerMarkerPosition();
         SetDestinationMarkerPosition();
+        SetMarkerSizes();
     }
 
     #endregion
@@ -71,6 +72,59 @@ public class MapSetup : MonoBehaviour
     {
         _destinationMarker.rectTransform.localPosition =
             _destinationCoords[GlobalVariableTracker.currentMission];
+    }
+
+    /// <summary>
+    /// Sets the size that markers appear, based on the number of collectables the player holds.
+    /// </summary>
+    void SetMarkerSizes()
+    {
+        float scaleFactor;
+
+        // Disable navigation while the player holds nothing.
+        if (GlobalVariableTracker.collectiblesInPocket == 0)
+        {
+            _playerMarker.gameObject.SetActive(false);
+            _destinationMarker.gameObject.SetActive(false);
+        }
+        
+        // Shrinks navigation towards destination
+        if (GlobalVariableTracker.collectiblesInPocket >= 1 &&
+            GlobalVariableTracker.collectiblesInPocket <= 100)
+        {
+            // Set Vars
+            scaleFactor = 400 * (1.01f - (GlobalVariableTracker.collectiblesInPocket / 100));
+
+            // Set object size
+            _playerMarker.gameObject.SetActive(false);
+            _destinationMarker.gameObject.SetActive(true);
+            _destinationMarker.rectTransform.sizeDelta = new Vector2(scaleFactor, scaleFactor);
+        }
+
+        // Shrinks navigation towards player, with destination fully shrunk
+        if (GlobalVariableTracker.collectiblesInPocket >= 101 &&
+            GlobalVariableTracker.collectiblesInPocket <= 200)
+        {
+            // Set Vars
+            scaleFactor =
+                400 * (1.01f - ((GlobalVariableTracker.collectiblesInPocket - 100) / 100));
+
+            // Set object size
+            _playerMarker.gameObject.SetActive(true);
+            _playerMarker.rectTransform.sizeDelta = new Vector2(scaleFactor, scaleFactor);
+            _destinationMarker.gameObject.SetActive(true);
+            _destinationMarker.rectTransform.sizeDelta = new Vector2(4, 4);
+        }
+
+        // Displays both markers fully shrunk to prevent overload
+        if (GlobalVariableTracker.collectiblesInPocket > 200)
+        {
+            // Set object size
+            _playerMarker.gameObject.SetActive(true);
+            _playerMarker.rectTransform.sizeDelta = new Vector2(4, 4);
+            _destinationMarker.gameObject.SetActive(true);
+            _destinationMarker.rectTransform.sizeDelta = new Vector2(4, 4);
+        }
     }
 
     #endregion
