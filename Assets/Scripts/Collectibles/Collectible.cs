@@ -43,6 +43,7 @@ public class Collectible : MonoBehaviour
             {
                 GlobalVariableTracker.collectiblesInPocket++;
                 GetComponent<Animator>().Play("Collect");
+                GetComponent<Collider2D>().enabled = false;
             }
             // If any more collectibles would do nothing, plays an effect to show that the item
             // can't be picked up
@@ -51,6 +52,18 @@ public class Collectible : MonoBehaviour
                 GetComponent<Animator>().Play("Full");
             }
         }
+    }
+
+    #endregion
+
+    #region MISC FUNCTIONS
+
+    /// <summary>
+    /// Removes the collectible from the game space
+    /// </summary>
+    [SerializeField] void RemoveCollectible()
+    {
+        Destroy(gameObject);
     }
 
     #endregion
