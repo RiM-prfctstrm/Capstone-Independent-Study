@@ -122,9 +122,6 @@ public class PlayerController : MonoBehaviour
         // Initializes volume
         SetSoundEffectsVolume();
 
-        // Initializes menu. Done here instead of EssentialPreserver to prevent nullreference
-        InGameMainMenu.inGameMainMenu = _menu.GetComponent <InGameMainMenu>();
-
         // DEBUG
         //StartCoroutine(LabTurn2Part());
     }

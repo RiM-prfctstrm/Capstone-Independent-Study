@@ -10,7 +10,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
@@ -57,6 +56,10 @@ public class InGameMainMenu : MonoBehaviour
         _map.gameObject.SetActive(true);
         _map.Select();
         _mapText.text = _deliveryInfo[GlobalVariableTracker.currentMission];
+
+        // Sets cancel button to leave map instead
+        PlayerController.playerController.cancel.performed -= ExitMenu;
+        PlayerController.playerController.cancel.performed += CloseMap;
     }
 
     /// <summary>
@@ -66,6 +69,10 @@ public class InGameMainMenu : MonoBehaviour
     {
         _manual.gameObject.SetActive(true);
         _manual.Select();
+
+        // Sets cancel button to leave manual instead
+        PlayerController.playerController.cancel.performed -= ExitMenu;
+        PlayerController.playerController.cancel.performed += CloseManual;
     }
     
     /// <summary>
@@ -130,6 +137,19 @@ public class InGameMainMenu : MonoBehaviour
     {
         _mapButton.Select();
         _map.gameObject.SetActive(false);
+
+        // Sets cancel button to leave menu instead
+        PlayerController.playerController.cancel.performed -= CloseMap;
+        PlayerController.playerController.cancel.performed += ExitMenu;
+    }
+    public void CloseMap(InputAction.CallbackContext ctx)
+    {
+        _mapButton.Select();
+        _map.gameObject.SetActive(false);
+
+        // Sets cancel button to leave menu instead
+        PlayerController.playerController.cancel.performed -= CloseMap;
+        PlayerController.playerController.cancel.performed += ExitMenu;
     }
 
     /// <summary>
@@ -139,6 +159,19 @@ public class InGameMainMenu : MonoBehaviour
     {
         _manualButton.Select();
         _manual.gameObject.SetActive(false);
+
+        // Sets cancel button to leave menu instead
+        PlayerController.playerController.cancel.performed -= CloseManual;
+        PlayerController.playerController.cancel.performed += ExitMenu;
+    }
+    public void CloseManual(InputAction.CallbackContext ctx)
+    {
+        _manualButton.Select();
+        _manual.gameObject.SetActive(false);
+
+        // Sets cancel button to leave menu instead
+        PlayerController.playerController.cancel.performed -= CloseManual;
+        PlayerController.playerController.cancel.performed += ExitMenu;
     }
 
     #endregion
