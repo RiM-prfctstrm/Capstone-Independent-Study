@@ -124,6 +124,9 @@ public class PlayerController : MonoBehaviour
 
         // DEBUG
         //StartCoroutine(LabTurn2Part());
+
+        // Initializes main menu singelton. Done here to prevent Nullreferences
+        InGameMainMenu.inGameMainMenu = _menu.GetComponent<InGameMainMenu>();
     }
 
     /// <summary>
