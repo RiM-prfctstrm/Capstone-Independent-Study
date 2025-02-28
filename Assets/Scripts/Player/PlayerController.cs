@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 2/26/25
+ * UPDATED  : 2/27/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -51,8 +51,8 @@ public class PlayerController : MonoBehaviour
     bool _isBraking;
     public bool isWalking;
     bool _movementDisabled = false;
-    int _moveX;
-    int _moveY;
+    float _moveX;
+    float _moveY;
     float _velocityX;
     float _velocityY;
     Vector2 _newVel;
@@ -208,8 +208,8 @@ public class PlayerController : MonoBehaviour
     void ValidateInputs()
     {
         // Converts input into variables used for calculating movement
-        _moveX = (int)_xInput.ReadValue<float>();
-        _moveY = (int)_yInput.ReadValue<float>();
+        _moveX = _xInput.ReadValue<float>();
+        _moveY = _yInput.ReadValue<float>();
 
         // Alters movement vars if they would lead the player in a direction that is invalid for
         // their current direction. Inputs are valid when the player's direction is <= 135 degrees
@@ -217,28 +217,28 @@ public class PlayerController : MonoBehaviour
         if (!isWalking && rb2d.velocity.magnitude > _steeringVelThreshold)
         {
             // Prevents leftward movement while moving right
-            if (_moveX == -1 && Vector2.Angle(Vector2.left, rb2d.velocity)
+            if (_moveX < 0 && Vector2.Angle(Vector2.left, rb2d.velocity)
                 > _steeringAngleThreshold)
             {
                 _moveX = 0;
             }
 
             // Prevents rightward moving while moving left
-            if (_moveX == 1 && Vector2.Angle(Vector2.right, rb2d.velocity)
+            if (_moveX > 0 && Vector2.Angle(Vector2.right, rb2d.velocity)
                 > _steeringAngleThreshold)
             {
                 _moveX = 0;
             }
 
             // Prevents downward movement while moving up
-            if (_moveY == -1 && Vector2.Angle(Vector2.down, rb2d.velocity)
+            if (_moveY < 0 && Vector2.Angle(Vector2.down, rb2d.velocity)
                 > _steeringAngleThreshold)
             {
                 _moveY = 0;
             }
 
             // Prevents upward moving while moving down
-            if (_moveY == 1 && Vector2.Angle(Vector2.up, rb2d.velocity)
+            if (_moveY > 0 && Vector2.Angle(Vector2.up, rb2d.velocity)
                 > _steeringAngleThreshold)
             {
                 _moveY = 0;
@@ -508,18 +508,22 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public void ToggleBike()
     {
-        // Switches mode
-        isWalking = !isWalking;
+        // Prevents player from deactivating bike while moving, as a balance measure
+        if (isWalking || rb2d.velocity == Vector2.zero)
+        {
+            // Switches mode
+            isWalking = !isWalking;
 
-        // Changes material
-        if (!isWalking)
-        {
-            _playerAudioSource.PlayOneShot(_bikeBell);
-            rb2d.sharedMaterial = _bikeMaterial;
-        }
-        else
-        {
-            rb2d.sharedMaterial = null;
+            // Changes material
+            if (!isWalking)
+            {
+                _playerAudioSource.PlayOneShot(_bikeBell);
+                rb2d.sharedMaterial = _bikeMaterial;
+            }
+            else
+            {
+                rb2d.sharedMaterial = null;
+            }
         }
     }
 
