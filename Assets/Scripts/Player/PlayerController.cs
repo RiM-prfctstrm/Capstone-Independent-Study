@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 2/27/25
+ * UPDATED  : 3/4/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -48,14 +48,17 @@ public class PlayerController : MonoBehaviour
     float _decelClamp;
     float _buffer;
     float _bufferRate;
-    bool _isBraking;
-    public bool isWalking;
-    bool _movementDisabled = false;
     float _moveX;
     float _moveY;
     float _velocityX;
     float _velocityY;
     Vector2 _newVel;
+
+    // States
+    bool _isBraking;
+    public bool isWalking;
+    public bool inBikeableArea;
+    bool _movementDisabled = false;
 
     // Inputs
     [SerializeField] InputActionAsset _playerInputs;
@@ -508,8 +511,13 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public void ToggleBike()
     {
+        // Displays message telling player they can't ride in this area
+        if (!inBikeableArea)
+        {
+            Debug.Log("There's a time and a place for everything, but not now!");
+        }
         // Prevents player from deactivating bike while moving, as a balance measure
-        if (isWalking || rb2d.velocity == Vector2.zero)
+        else if (isWalking || rb2d.velocity == Vector2.zero)
         {
             // Switches mode
             isWalking = !isWalking;

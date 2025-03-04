@@ -2,7 +2,7 @@
  * FILE     : BootManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 2/25/25
+ * UPDATED  : 3/4/25
  * 
  * DESC     : Performs functionality that only occurs when the game is first started.
 =================================================================================================*/
@@ -71,6 +71,9 @@ public class BootManager : MonoBehaviour
     {
         // Plays the local music
         MusicManager.musicManager.SwapSong(_localMusic, true);
+
+        // Tells PlayerController whether you can bike indoors
+        PlayerController.playerController.inBikeableArea = !_indoorScene;
     }
 
     #endregion
