@@ -1752,6 +1752,74 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &209349918
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 937143864}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: 'N-S: S Houston Street
+
+        W-E: W Main Street'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 126.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -117
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_Name
+      value: StreetSign (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+--- !u!4 &209349919 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+  m_PrefabInstance: {fileID: 209349918}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &214819489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2467,6 +2535,74 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4266992392333689672, guid: 8a79e8abd45103f47ad98ad344fc987d, type: 3}
   m_PrefabInstance: {fileID: 330734138}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &333214459
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 937143864}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: 'N-S: S Houston Street
+
+        W: Pennsylvania Ave'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 127.3125
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -83.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_Name
+      value: StreetSign (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+--- !u!4 &333214460 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+  m_PrefabInstance: {fileID: 333214459}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &339808209
 PrefabInstance:
@@ -4539,6 +4675,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4266992392333689672, guid: 8a79e8abd45103f47ad98ad344fc987d, type: 3}
   m_PrefabInstance: {fileID: 568875309}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &582843361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 582843362}
+  m_Layer: 0
+  m_Name: Franklin Street
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &582843362
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582843361}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 658625519}
+  - {fileID: 626425069}
+  - {fileID: 2104688957}
+  - {fileID: 1859475443}
+  - {fileID: 1839004396}
+  - {fileID: 1682056463}
+  - {fileID: 718462883}
+  m_Father: {fileID: 642991809}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &592604172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4919,6 +5093,74 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4266992392333689672, guid: 8a79e8abd45103f47ad98ad344fc987d, type: 3}
   m_PrefabInstance: {fileID: 131821299}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &626425068
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 582843362}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: 'N-S: Franklin Street
+
+        E-W: Pennsylvania Street'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 88.9375
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -74
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_Name
+      value: StreetSign (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+--- !u!4 &626425069 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+  m_PrefabInstance: {fileID: 626425068}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &628265344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5008,7 +5250,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 937143864}
+  - {fileID: 582843362}
   m_Father: {fileID: 62396910}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5135,6 +5379,74 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4266992392333689672, guid: 8a79e8abd45103f47ad98ad344fc987d, type: 3}
   m_PrefabInstance: {fileID: 651475482}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &658625518
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 582843362}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: 'E: W Center Street
+
+        S: Franklin Street'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 98
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -35.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_Name
+      value: StreetSign (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+--- !u!4 &658625519 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+  m_PrefabInstance: {fileID: 658625518}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &671007041
 GameObject:
@@ -5549,6 +5861,74 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &718462882
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 582843362}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: 'N-S: Franklin Street
+
+        E-W: Fuego Road'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 89.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -216.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_Name
+      value: StreetSign (12)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+--- !u!4 &718462883 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+  m_PrefabInstance: {fileID: 718462882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &725475230
 GameObject:
   m_ObjectHideFlags: 0
@@ -6899,6 +7279,74 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4266992392333689672, guid: 8a79e8abd45103f47ad98ad344fc987d, type: 3}
   m_PrefabInstance: {fileID: 864544806}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &875002838
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 937143864}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: 'W-E: W Center Street
+
+        S: Dominican Drive'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 209.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -36
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_Name
+      value: StreetSign (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+--- !u!4 &875002839 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+  m_PrefabInstance: {fileID: 875002838}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &882500226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7712,6 +8160,43 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4266992392333689672, guid: 8a79e8abd45103f47ad98ad344fc987d, type: 3}
   m_PrefabInstance: {fileID: 929553828}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &937143863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 937143864}
+  m_Layer: 0
+  m_Name: Houston Street
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &937143864
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937143863}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 875002839}
+  - {fileID: 1639342177}
+  - {fileID: 1448442795}
+  - {fileID: 209349919}
+  - {fileID: 333214460}
+  - {fileID: 1216695809}
+  m_Father: {fileID: 642991809}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &937193358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10242,6 +10727,74 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4266992392333689672, guid: 8a79e8abd45103f47ad98ad344fc987d, type: 3}
   m_PrefabInstance: {fileID: 1207006598}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1216695808
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 937143864}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: 'N-S: S Houston Street
+
+        W: Fuego Road'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 127.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -217
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_Name
+      value: StreetSign (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+--- !u!4 &1216695809 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+  m_PrefabInstance: {fileID: 1216695808}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1221502288
 PrefabInstance:
@@ -12867,6 +13420,74 @@ Transform:
   m_Father: {fileID: 1343006866}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1448442794
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 937143864}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: 'N-S: S Houston Street
+
+        W-E: W Main Street'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 143.9375
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -134.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_Name
+      value: StreetSign
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+--- !u!4 &1448442795 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+  m_PrefabInstance: {fileID: 1448442794}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1452386552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14050,6 +14671,74 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4266992392333689672, guid: 8a79e8abd45103f47ad98ad344fc987d, type: 3}
   m_PrefabInstance: {fileID: 1638846410}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1639342176
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 937143864}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: 'N-S: S Houston Street
+
+        W-E: W Center Street'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 126.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -26.9375
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_Name
+      value: StreetSign (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+--- !u!4 &1639342177 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+  m_PrefabInstance: {fileID: 1639342176}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1640709995
 GameObject:
   m_ObjectHideFlags: 0
@@ -14399,6 +15088,74 @@ Transform:
   m_Father: {fileID: 1640709996}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1682056462
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 582843362}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: 'N-S: Franklin Street
+
+        E: Battuta Plaza'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 98
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -203.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_Name
+      value: StreetSign (11)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+--- !u!4 &1682056463 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+  m_PrefabInstance: {fileID: 1682056462}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1697024326
 GameObject:
   m_ObjectHideFlags: 0
@@ -15761,6 +16518,74 @@ Transform:
   m_Father: {fileID: 1640709996}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1839004395
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 582843362}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: 'N-S: Franklin Street
+
+        E-W: Herring Street'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 89.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -147.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_Name
+      value: StreetSign (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+--- !u!4 &1839004396 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+  m_PrefabInstance: {fileID: 1839004395}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1855708627 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
@@ -15833,6 +16658,74 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
   m_PrefabInstance: {fileID: 1856884024}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1859475442
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 582843362}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: 'N-S: Franklin Street
+
+        E-W: W Main Street'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 89.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -132.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_Name
+      value: StreetSign (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+--- !u!4 &1859475443 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+  m_PrefabInstance: {fileID: 1859475442}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1862560876
 PrefabInstance:
@@ -17663,6 +18556,74 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4266992392333689672, guid: 8a79e8abd45103f47ad98ad344fc987d, type: 3}
   m_PrefabInstance: {fileID: 2090169973}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2104688956
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 582843362}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: 'N-S: Franklin Street
+
+        E-W: W Main Street'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 97.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -116.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_Name
+      value: StreetSign (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+--- !u!4 &2104688957 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+  m_PrefabInstance: {fileID: 2104688956}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2104767784
 PrefabInstance:
