@@ -2,7 +2,7 @@
  * FILE     : Collectible.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/22/25
- * UPDATED  : 2/26/25
+ * UPDATED  : 3/5/25
  * 
  * DESC     : Behaviour for items that can be picked up off the ground.
 =================================================================================================*/
@@ -38,6 +38,9 @@ public class Collectible : MonoBehaviour
         // Collisions with player
         if (collision.gameObject == PlayerController.playerController.gameObject)
         {
+            // Reducs pickup lag
+            gameObject.isStatic = false;
+
             // Picks up collectible
             if (GlobalVariableTracker.collectiblesInPocket < 200)
             {
