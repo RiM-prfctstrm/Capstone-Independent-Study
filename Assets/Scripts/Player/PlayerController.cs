@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 3/4/25
+ * UPDATED  : 3/5/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -414,12 +414,6 @@ public class PlayerController : MonoBehaviour
             _velocityX += _accelRate * _moveX * Time.fixedDeltaTime;
             _velocityX = Mathf.Clamp(_velocityX, -_maxBikeSpeed, _maxBikeSpeed);
 
-            // Debug feedback
-            if (Mathf.Abs(_velocityX) >= _maxBikeSpeed)
-            {
-                Debug.Log("Maxed X!");
-            }
-
             // Resets deceleration buffer
             _decelClamp = _decelTime; 
             _buffer = _decelBuffer * (rb2d.velocity.magnitude / _maxBikeSpeed);
@@ -437,12 +431,6 @@ public class PlayerController : MonoBehaviour
             // Accelerates on axis
             _velocityY += _accelRate * _moveY * Time.fixedDeltaTime;
             _velocityY = Mathf.Clamp(_velocityY, -_maxBikeSpeed, _maxBikeSpeed);
-
-            // Debug feedback
-            if (Mathf.Abs(_velocityY) >= _maxBikeSpeed)
-            {
-                Debug.Log("Maxed Y!");
-            }
 
             // Resets deceleration buffer
             _decelClamp = _decelTime;
