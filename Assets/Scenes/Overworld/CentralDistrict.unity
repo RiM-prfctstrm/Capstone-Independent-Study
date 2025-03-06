@@ -184,6 +184,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetSign (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
 --- !u!4 &14133149 stripped
@@ -782,6 +786,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetSign (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
 --- !u!4 &89307993 stripped
@@ -1142,6 +1150,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
       propertyPath: m_Name
       value: AddressPlate (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
@@ -1903,6 +1915,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
       propertyPath: m_Name
       value: AddressPlate (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
@@ -2727,7 +2743,7 @@ Transform:
   - {fileID: 875714701}
   - {fileID: 1205498624}
   m_Father: {fileID: 652201405}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &234159920
 PrefabInstance:
@@ -2913,6 +2929,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
       propertyPath: m_Name
       value: StreetSign (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
@@ -3265,6 +3285,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4266992392333689672, guid: 8a79e8abd45103f47ad98ad344fc987d, type: 3}
   m_PrefabInstance: {fileID: 254611188}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &254783349
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2143771883}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: 'High Tide Cafe
+
+        112 Spanish Avenue'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -134.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_Name
+      value: AddressPlate (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+--- !u!4 &254783350 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+  m_PrefabInstance: {fileID: 254783349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &261559815
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3519,6 +3611,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
       propertyPath: m_Name
       value: AddressPlate (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
@@ -3836,6 +3932,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetSign (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
 --- !u!4 &307249609 stripped
@@ -3903,6 +4003,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
       propertyPath: m_Name
       value: StreetSign (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
@@ -5310,6 +5414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetSign (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
 --- !u!4 &417210962 stripped
@@ -5501,6 +5609,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
       propertyPath: m_Name
       value: StreetSign (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
@@ -5825,6 +5937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AddressPlate (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
 --- !u!4 &470557254 stripped
@@ -6143,6 +6259,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
       propertyPath: m_Name
       value: StreetSign (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
@@ -6509,6 +6629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AddressPlate (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
 --- !u!4 &508085676 stripped
@@ -6785,6 +6909,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetSign (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
 --- !u!4 &522346055 stripped
@@ -7018,6 +7146,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
       propertyPath: m_Name
       value: AddressPlate (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
@@ -7309,7 +7441,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601896599}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7319,7 +7451,7 @@ Transform:
   - {fileID: 1346088541}
   - {fileID: 1595024729}
   m_Father: {fileID: 652201405}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &605287212
 PrefabInstance:
@@ -8342,9 +8474,11 @@ Transform:
   m_Children:
   - {fileID: 1549014580}
   - {fileID: 1095642540}
-  - {fileID: 228385972}
-  - {fileID: 601896600}
   - {fileID: 1768260399}
+  - {fileID: 2008406005}
+  - {fileID: 2143771883}
+  - {fileID: 601896600}
+  - {fileID: 228385972}
   - {fileID: 1444282641}
   m_Father: {fileID: 1041733123}
   m_RootOrder: 3
@@ -9124,6 +9258,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
       propertyPath: m_Name
       value: StreetSign (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
@@ -10319,6 +10457,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AddressPlate (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
 --- !u!4 &844098932 stripped
@@ -10679,6 +10821,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AddressPlate (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
 --- !u!4 &875714701 stripped
@@ -10914,6 +11060,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
       propertyPath: m_Name
       value: StreetSign (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
@@ -11328,6 +11478,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
       propertyPath: m_Name
       value: AddressPlate (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
@@ -11814,6 +11968,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AddressPlate
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
 --- !u!4 &942108306 stripped
@@ -11881,6 +12039,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
       propertyPath: m_Name
       value: StreetSign (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
@@ -12383,6 +12545,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
       propertyPath: m_Name
       value: StreetSign
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
@@ -13576,6 +13742,7 @@ Transform:
   - {fileID: 1387222768}
   - {fileID: 1365952064}
   - {fileID: 1244542098}
+  - {fileID: 1161515880}
   m_Father: {fileID: 1041733123}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14162,6 +14329,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AddressPlate (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
 --- !u!4 &1097873837 stripped
@@ -14710,6 +14881,78 @@ Transform:
   m_Father: {fileID: 1720623798}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1161515879
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1061415980}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: 'N: Smith Avenue
+
+        W-E: E Main Street'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 68.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -165.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_Name
+      value: StreetSign (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+--- !u!4 &1161515880 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+  m_PrefabInstance: {fileID: 1161515879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1169916523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14895,6 +15138,82 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4266992392333689672, guid: 8a79e8abd45103f47ad98ad344fc987d, type: 3}
   m_PrefabInstance: {fileID: 1193300410}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1194158359
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2008406005}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].nameTag
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: 'Frosty-san''s Fugu Milkshakes
+
+        242 Bread Avenue'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 57.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -112.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_Name
+      value: AddressPlate (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+--- !u!4 &1194158360 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+  m_PrefabInstance: {fileID: 1194158359}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1196234886
 PrefabInstance:
@@ -15212,6 +15531,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
       propertyPath: m_Name
       value: AddressPlate (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
@@ -15590,6 +15913,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
       propertyPath: m_Name
       value: StreetSign (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
@@ -17063,6 +17390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AddressPlate (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
 --- !u!4 &1346088541 stripped
@@ -17317,6 +17648,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetSign (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
 --- !u!4 &1365952064 stripped
@@ -17384,6 +17719,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
       propertyPath: m_Name
       value: StreetSign (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
@@ -17772,6 +18111,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetSign (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
 --- !u!4 &1387222768 stripped
@@ -18088,6 +18431,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetSign (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
 --- !u!4 &1423614527 stripped
@@ -18156,6 +18503,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetSign (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
 --- !u!4 &1432462170 stripped
@@ -18196,7 +18547,7 @@ Transform:
   - {fileID: 470557254}
   - {fileID: 912945018}
   m_Father: {fileID: 652201405}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1448760951
 PrefabInstance:
@@ -19305,6 +19656,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AddressPlate (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
 --- !u!4 &1588915582 stripped
@@ -19372,6 +19727,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
       propertyPath: m_Name
       value: AddressPlate (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
@@ -19448,6 +19807,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
       propertyPath: m_Name
       value: AddressPlate (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
@@ -19587,6 +19950,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AddressPlate (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
 --- !u!4 &1629198903 stripped
@@ -19716,6 +20083,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
       propertyPath: m_Name
       value: StreetSign (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
@@ -19854,6 +20225,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
       propertyPath: m_Name
       value: AddressPlate (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
@@ -20781,6 +21156,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetSign (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
 --- !u!4 &1734509912 stripped
@@ -20918,6 +21297,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
       propertyPath: m_Name
       value: AddressPlate (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
@@ -21057,6 +21440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AddressPlate (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
 --- !u!4 &1744043980 stripped
@@ -21134,7 +21521,7 @@ Transform:
   - {fileID: 1652032966}
   - {fileID: 844098932}
   m_Father: {fileID: 652201405}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1772172691
 GameObject:
@@ -21639,6 +22026,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetSign (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
 --- !u!4 &1817074572 stripped
@@ -21768,6 +22159,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
       propertyPath: m_Name
       value: StreetSign (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
@@ -22981,6 +23376,82 @@ Transform:
   m_Father: {fileID: 1041733123}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1995192111
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2008406005}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].nameTag
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: 'Garwacki Consulting
+
+        110 Bread Avenue'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -112.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_Name
+      value: AddressPlate
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+--- !u!4 &1995192112 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+  m_PrefabInstance: {fileID: 1995192111}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1997581496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23105,6 +23576,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4266992392333689672, guid: 8a79e8abd45103f47ad98ad344fc987d, type: 3}
   m_PrefabInstance: {fileID: 2000530590}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2008406004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2008406005}
+  m_Layer: 0
+  m_Name: Bread Avenue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2008406005
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008406004}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1995192112}
+  - {fileID: 1194158360}
+  m_Father: {fileID: 652201405}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2025409198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23413,6 +23917,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
       propertyPath: m_Name
       value: AddressPlate
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
@@ -24116,6 +24624,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4266992392333689672, guid: 8a79e8abd45103f47ad98ad344fc987d, type: 3}
   m_PrefabInstance: {fileID: 2089029062}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2093060706
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2143771883}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: 'Bank of Persia
+
+        153 Spanish Avenue'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 22.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -134.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_Name
+      value: AddressPlate
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+--- !u!4 &2093060707 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+  m_PrefabInstance: {fileID: 2093060706}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2099603237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24674,3 +25254,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4266992392333689672, guid: 8a79e8abd45103f47ad98ad344fc987d, type: 3}
   m_PrefabInstance: {fileID: 2136257569}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2143771882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2143771883}
+  m_Layer: 0
+  m_Name: Spanish Avenue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2143771883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143771882}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2093060707}
+  - {fileID: 254783350}
+  m_Father: {fileID: 652201405}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
