@@ -2,7 +2,7 @@
  * FILE     : Collectible.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/22/25
- * UPDATED  : 3/5/25
+ * UPDATED  : 3/7/25
  * 
  * DESC     : Behaviour for items that can be picked up off the ground.
 =================================================================================================*/
@@ -12,21 +12,6 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-    #region VARIABLES
-
-    #endregion
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     #region COLLISION LOGIC
 
     /// <summary>
@@ -44,7 +29,7 @@ public class Collectible : MonoBehaviour
             // Picks up collectible
             if (GlobalVariableTracker.collectiblesInPocket < 200)
             {
-                GlobalVariableTracker.collectiblesInPocket++;
+                CollectibleManager.collectibleManager.AdjustCount(1);
                 GetComponent<Animator>().Play("Collect");
                 GetComponent<Collider2D>().enabled = false;
             }

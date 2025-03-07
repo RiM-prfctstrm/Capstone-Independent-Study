@@ -2,7 +2,7 @@
  * FILE     : CollectibleManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/22/25
- * UPDATED  : 2/22/25
+ * UPDATED  : 3/7/25
  * 
  * DESC     : While the actual collectible count is stored in GlobalVariableTracker, this script
  *            modifies that count and controls displays
@@ -20,21 +20,35 @@ public class CollectibleManager : MonoBehaviour
     public static CollectibleManager collectibleManager;
 
     // UI Object reference
-    [SerializeField] TextMeshProUGUI _counter;
+    [SerializeField] TextMeshProUGUI _HUDCounter;
+    [SerializeField] GameObject _HUDObject;
+    [SerializeField] TextMeshProUGUI _mapCounter;
+
+    // Timer var
+    [SerializeField] float _hideDelay;
+    float _timeToHide;
 
     #endregion
 
-    // Start is called before the first frame update
-    void Start()
+    #region UNIVERSAL EVENTS
+
+    /// <summary>
+    ///  FixedUpdate is called every fixed framerate frame
+    /// </summary>
+    void FixedUpdate()
     {
-        
+        // Hides pop-up display after a while
+        if (_timeToHide > 0)
+        {
+            _timeToHide -= Time.fixedDeltaTime;
+        }
+        else if (_HUDObject.activeInHierarchy)
+        {
+            _HUDObject.SetActive(false);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    #endregion
 
     #region VARIABLE MANAGEMENT
 
@@ -51,8 +65,13 @@ public class CollectibleManager : MonoBehaviour
             GlobalVariableTracker.collectiblesInPocket = 0;
         }
 
-        // Changes display on counter
-        _counter.text = GlobalVariableTracker.collectiblesInPocket.ToString();
+        // Shows player current total
+        _HUDObject.SetActive(true);
+        _HUDCounter.text = GlobalVariableTracker.collectiblesInPocket.ToString();
+        _timeToHide = _hideDelay;
+
+        // Changes display on map counter
+        _mapCounter.text = GlobalVariableTracker.collectiblesInPocket.ToString();
     }
 
     #endregion
