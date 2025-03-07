@@ -94,10 +94,10 @@ public class MapSetup : MonoBehaviour
         
         // Shrinks navigation towards destination
         if (GlobalVariableTracker.collectiblesInPocket >= 1 &&
-            GlobalVariableTracker.collectiblesInPocket <= 100)
+            GlobalVariableTracker.collectiblesInPocket <= 50)
         {
             // Set Vars
-            scaleFactor = 400 * (1.01f - (GlobalVariableTracker.collectiblesInPocket / 100));
+            scaleFactor = 400 * (1.01f - (GlobalVariableTracker.collectiblesInPocket / 50));
 
             // Set object size
             _playerMarker.gameObject.SetActive(false);
@@ -107,7 +107,7 @@ public class MapSetup : MonoBehaviour
             // Increases opacity for better visibility at small scale
             if (scaleFactor < 200)
             {
-                colorStrength = GlobalVariableTracker.collectiblesInPocket / 100;
+                colorStrength = GlobalVariableTracker.collectiblesInPocket / 50;
                 _destinationMarker.color = new Color(255, 255, 255, colorStrength);
             }
             else
@@ -117,12 +117,12 @@ public class MapSetup : MonoBehaviour
         }
 
         // Shrinks navigation towards player, with destination fully shrunk
-        if (GlobalVariableTracker.collectiblesInPocket >= 101 &&
-            GlobalVariableTracker.collectiblesInPocket <= 200)
+        if (GlobalVariableTracker.collectiblesInPocket >= 51 &&
+            GlobalVariableTracker.collectiblesInPocket <= 100)
         {
             // Set Vars
             scaleFactor =
-                400 * (1.01f - ((GlobalVariableTracker.collectiblesInPocket - 100) / 100));
+                400 * (1.01f - ((GlobalVariableTracker.collectiblesInPocket - 50) / 50));
 
             // Set object size
             _playerMarker.gameObject.SetActive(true);
@@ -133,7 +133,7 @@ public class MapSetup : MonoBehaviour
             // Increases opacity for better visibility at small scale
             if (scaleFactor < 200)
             {
-                colorStrength = (GlobalVariableTracker.collectiblesInPocket - 100) / 100;
+                colorStrength = (GlobalVariableTracker.collectiblesInPocket - 50) / 50;
                 _playerMarker.color = new Color(255, 255, 255, colorStrength);
             }
             else
@@ -144,7 +144,7 @@ public class MapSetup : MonoBehaviour
         }
 
         // Displays both markers fully shrunk to prevent overload
-        if (GlobalVariableTracker.collectiblesInPocket > 200)
+        if (GlobalVariableTracker.collectiblesInPocket > 100)
         {
             // Set object size
             _playerMarker.gameObject.SetActive(true);

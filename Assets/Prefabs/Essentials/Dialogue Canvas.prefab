@@ -2567,7 +2567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &9073081644200985454
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4456,16 +4456,22 @@ MonoBehaviour:
     Release Pedal to maintain or slowly lose
     speed.
 
-    Brake to stop quickly.
+    Hold Brake to stop quickly.
+
+    Press Mount to get on or off your
+    bike.
+
+    You have to come to a complete stop before you can dismount.
 
 
-    Pedal in a different direction from
-    where you''re going to steer.
+    Pedal
+    in a different direction from where you''re going to steer.
 
-    Move in any direction by coasting after you
-    reach a desired angle.
+    Move in any
+    direction by coasting after you reach a desired angle.
 
-    You cannot go directly backwards.'
+    You cannot go directly
+    backwards.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9bef3afd1bef376448a81a2044d6e62c, type: 2}
   m_sharedMaterial: {fileID: 2316711158950374830, guid: 9bef3afd1bef376448a81a2044d6e62c, type: 2}
@@ -8478,7 +8484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2399513349589120072
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9086,7 +9092,10 @@ MonoBehaviour:
 
 
     Left Ctrl/Numpad Period/East Face
-    Button/Triggers: Brake'
+    Button/Triggers: Brake
+
+
+    Z/West Face Button: Mount/Dismount'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9bef3afd1bef376448a81a2044d6e62c, type: 2}
   m_sharedMaterial: {fileID: 2316711158950374830, guid: 9bef3afd1bef376448a81a2044d6e62c, type: 2}
