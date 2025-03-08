@@ -2,7 +2,7 @@
  * FILE     : ChoiceButton.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/7/25
- * UPDATED  : 2/20/25
+ * UPDATED  : 3/8/25
  * 
  * DESC     : A button used to branch cutscenes, with a variable cutscene assigned by event that
  *            brings up the choice Menu.
@@ -27,26 +27,12 @@ public class ChoiceButton : MonoBehaviour
     #region BUTTON ACTIONS
 
     /// <summary>
-    /// Hides choice UI
-    /// </summary>
-    /*public void HideUI()
-    {
-        // Hides UI
-        DialogueManager.dialogueManager.dialogueOutline.SetActive(false);
-        DialogueManager.dialogueManager.choiceMenu.SetActive(false);
-
-        // Resets dialogue to not automatically skip
-        DialogueManager.dialogueManager.advancing = false;
-    }*/
-
-    /// <summary>
     /// Exits prior cutscene, closes out choice UI, and begins the assigned branch event sequence
     /// </summary>
     public void PlayBranchEvent()
     {
         // Hides Dialogue UI
-        DialogueManager.dialogueManager.dialogueOutline.SetActive(false);
-        DialogueManager.dialogueManager.advancing = false;
+        DialogueManager.dialogueManager.CancelDialogue();
 
         // Exits prior Cutscene
         CutsceneManager.cutsceneManager.EndCutscene();
