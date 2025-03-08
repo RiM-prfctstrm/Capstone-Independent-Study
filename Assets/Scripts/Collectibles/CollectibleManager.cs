@@ -2,7 +2,7 @@
  * FILE     : CollectibleManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/22/25
- * UPDATED  : 3/7/25
+ * UPDATED  : 3/8/25
  * 
  * DESC     : While the actual collectible count is stored in GlobalVariableTracker, this script
  *            modifies that count and controls displays
@@ -69,6 +69,18 @@ public class CollectibleManager : MonoBehaviour
         _HUDObject.SetActive(true);
         _HUDCounter.text = GlobalVariableTracker.collectiblesInPocket.ToString();
         _timeToHide = _hideDelay;
+
+        // Changes display on map counter
+        _mapCounter.text = GlobalVariableTracker.collectiblesInPocket.ToString();
+    }
+
+    /// <summary>
+    /// Resets the number of collectibles the player has
+    /// </summary>
+    public void ResetCount()
+    {
+        // Zeroes collectible count
+        GlobalVariableTracker.collectiblesInPocket = 0;
 
         // Changes display on map counter
         _mapCounter.text = GlobalVariableTracker.collectiblesInPocket.ToString();

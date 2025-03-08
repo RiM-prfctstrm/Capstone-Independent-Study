@@ -2,7 +2,7 @@
  * FILE     : SetCurrentMission.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/8/25
- * UPDATED  : 2/10/25
+ * UPDATED  : 3/8/25
  * 
  * DESC     : Sets the current mission.
 =================================================================================================*/
@@ -32,6 +32,10 @@ public class SetCurrentMission : CutsceneEvent
 
         // Sets mission number
         GlobalVariableTracker.currentMission = _missionNo;
+
+        // Resets collectible count
+        CollectibleManager.collectibleManager.ResetCount();
+
         eventComplete = true;
     }
 
