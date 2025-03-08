@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6573c93f484152c4db73b91a33bca188, type: 3}
-  m_Name: t0_0_005_chooseTutorial
+  m_Name: t0_0A_001_secontTutorialChoice
   m_EditorClassIdentifier: 
   eventComplete: 0
   _choiceDialogue:
-    dialogueText: Want me to give you some pointers on how to have the most fun on
-      your ride?
+    dialogueText: Do you want me to teach you how to navigate too?
     nameTag: Friendly Cyclist
     portrait: {fileID: 0}
-  _branchA: {fileID: 11400000, guid: 485a5f5c25848644eb4fcca553fd1fda, type: 2}
+  _branchA: {fileID: 11400000, guid: b71ab3e2c871a484fa165cd70a36c7ad, type: 2}
   _branchB: {fileID: 11400000, guid: a0bb5ec11291cf246bc76e06940b439d, type: 2}
