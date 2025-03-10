@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 2/23/25
+ * UPDATED  : 3/10/25
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -46,7 +46,7 @@ public class DialogueManager : MonoBehaviour
     static bool _dialogueInProgress = false;
     public static bool dialogueInProgress => _dialogueInProgress;
     public bool advancing = false;
-    IEnumerator _dialogRoutine;
+    public IEnumerator dialogRoutine;
 
     #endregion
 
@@ -72,6 +72,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(DialogueEvent dialogue)
     {
         // Sets up dialogue mode
+        advancing = false;
         _dialogueInProgress = true;
         _dialogueOutline.SetActive(true);
 
@@ -79,15 +80,15 @@ public class DialogueManager : MonoBehaviour
         _dialogueText.text = "";
 
         // Activates Dialogue loop
-        _dialogRoutine = PlayDialogue(dialogue);
-        StartCoroutine(_dialogRoutine);
+        dialogRoutine = PlayDialogue(dialogue);
+        StartCoroutine(dialogRoutine);
     }
 
     /// <summary>
     /// Controls the playback of dialogue
     /// </summary>
     /// <param name="sequence">Sequence of dialogues to play</param>
-    IEnumerator PlayDialogue(DialogueEvent sequence)
+    public IEnumerator PlayDialogue(DialogueEvent sequence)
     {
         // Plays each line of dialogue at correct time
         foreach (Dialogue line in sequence.dialogueBoxes)
@@ -155,7 +156,7 @@ public class DialogueManager : MonoBehaviour
         NPCInteraction.inNPCInteraction = false;
 
         // Ends Active Dialogue sequence
-        StopCoroutine(_dialogRoutine);
+        StopCoroutine(dialogRoutine);
 
         // Prevents auto-advancing through next text
         advancing = false;

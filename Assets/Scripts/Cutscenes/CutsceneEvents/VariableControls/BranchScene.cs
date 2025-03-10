@@ -2,7 +2,7 @@
  * FILE     : BranchScene.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/7/25
- * UPDATED  : 2/21/25
+ * UPDATED  : 3/10/25
  * 
  * DESC     : Lets the player choose between two branches for the scene to follow, A on yes, B on 
  *            no.
@@ -19,6 +19,7 @@ public class BranchScene : CutsceneEvent
 
     // Choice text
     [SerializeField] Dialogue _choiceDialogue;
+    DialogueEvent _event;
 
     // Branch Cutscenes
     [SerializeField] Cutscene _branchA = null;
@@ -36,6 +37,7 @@ public class BranchScene : CutsceneEvent
         base.PlayEventFunction();
 
         // Prepares choice menu
+        _event.dialogueBoxes.Add(_choiceDialogue);
         CutsceneManager.cutsceneManager.StartCoroutine(WaitForEventEnd());
 
     }
@@ -54,6 +56,13 @@ public class BranchScene : CutsceneEvent
         // Sets up explanation text
         DialogueManager.dialogueManager.dialogueOutline.SetActive(true);
         DialogueManager.dialogueManager.DisplayDialogue(_choiceDialogue);
+
+        // Ensures dialogueEvent exists
+        if (DialogueManager.dialogueManager.dialogRoutine == null)
+        {
+            DialogueManager.dialogueManager.dialogRoutine =
+                DialogueManager.dialogueManager.PlayDialogue(_event);
+        }
 
         // Delay
         yield return new WaitForFixedUpdate();
