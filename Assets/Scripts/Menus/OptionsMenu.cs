@@ -2,7 +2,7 @@
  * FILE     : OptionsMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/16/25
- * UPDATED  : 2/21/25
+ * UPDATED  : 3/10/25
  * 
  * DESC     : Adjusts variables that affect the game's presentation.
 =================================================================================================*/
@@ -25,6 +25,7 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] Slider _menuVolume;
     // External UI Objects
     [SerializeField] Button _returnSelection;
+    [SerializeField] TitleMenu _titleMenu;
 
     // Value initializers for when objects are set by menu, ordered by vertical appearance in menu
     static float _saveMuV = .8f;
@@ -153,13 +154,17 @@ public class OptionsMenu : MonoBehaviour
                     _returnSelection.GetComponentInParent<InGameMainMenu>().ExitMenu;
             }
         }
+        else if (_titleMenu != null)
+        {
+            _titleMenu.cancel.performed -= ReturnToMenu;
+            _titleMenu.cancel.Disable();
+        }
     }
     public void ReturnToMenu(InputAction.CallbackContext ctx)
     {
         // Returns to menu
         _returnSelection.Select();
         gameObject.SetActive(false);
-        Debug.Log("yes");
 
         // Resets cancel function
         if (PlayerController.playerController != null)
@@ -169,7 +174,12 @@ public class OptionsMenu : MonoBehaviour
             {
                 PlayerController.playerController.cancel.performed +=
                     _returnSelection.GetComponentInParent<InGameMainMenu>().ExitMenu;
-            }
+            }    
+        }
+        else if (_titleMenu != null)
+        {
+            _titleMenu.cancel.performed -= ReturnToMenu;
+            _titleMenu.cancel.Disable();
         }
     }
 

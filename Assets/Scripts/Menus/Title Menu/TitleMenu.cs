@@ -24,7 +24,7 @@ public class TitleMenu : MonoBehaviour
 
     // Input Controls
     [SerializeField] InputActionAsset _menuInputs;
-    InputAction cancel;
+    public InputAction cancel;
 
     // Debug
     [SerializeField] DialogueManager _menuDM;
@@ -44,8 +44,6 @@ public class TitleMenu : MonoBehaviour
 
         // Sets inputs
         cancel = _menuInputs.FindAction("Cancel");
-        cancel.performed += _optionsBG.GetComponent<OptionsMenu>().ReturnToMenu;
-        cancel.performed += ctx => Debug.Log("amogus");
     }
 
     #endregion
@@ -65,8 +63,13 @@ public class TitleMenu : MonoBehaviour
     /// </summary>
     public void PlayCredits()
     {
+        // Sets up credits
         _credits.SetActive(true);
         _credits.GetComponent<Button>().Select();
+
+        // Sets up cancel function
+        cancel.performed += _credits.GetComponentInChildren<TitleMenuCredits>().StopCredits;
+        cancel.Enable();
     }
 
     /// <summary>
@@ -74,7 +77,12 @@ public class TitleMenu : MonoBehaviour
     /// </summary>
     public void OpenOptions()
     {
+        // Sets up menu
         _optionsBG.SetActive(true);
+
+        // Sets up cancel function
+        cancel.performed += _optionsBG.GetComponent<OptionsMenu>().ReturnToMenu;
+        cancel.Enable();
     }
 
     /// <summary>

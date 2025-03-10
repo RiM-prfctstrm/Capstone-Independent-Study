@@ -225,6 +225,15 @@ MonoBehaviour:
   _optionsBG: {fileID: 77494818}
   _dm: {fileID: 70280378}
   _menuInputs: {fileID: -944628639613478452, guid: c950dc6ac45a77d4a9d65e00fcf3b1a0, type: 3}
+  cancel:
+    m_Name: Cancel
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 1f176393-1735-48fc-9edf-da1b168ae596
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   _menuDM: {fileID: 70280378}
   _UnimplementedNotif:
     dialogueBoxes:
@@ -2218,6 +2227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _titleMenuButton: {fileID: 1389061805}
+  _titleMenu: {fileID: 70280377}
   _speed: 10
 --- !u!1001 &1886452914
 PrefabInstance:
@@ -2362,6 +2372,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4722405976101555970, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+      propertyPath: _titleMenu
+      value: 
+      objectReference: {fileID: 70280377}
     - target: {fileID: 4722405976101555970, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
       propertyPath: _returnSelection
       value: 
