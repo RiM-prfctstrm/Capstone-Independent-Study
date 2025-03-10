@@ -2,7 +2,7 @@
  * FILE     : Collectible.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/22/25
- * UPDATED  : 3/7/25
+ * UPDATED  : 3/10/25
  * 
  * DESC     : Behaviour for items that can be picked up off the ground.
 =================================================================================================*/
@@ -12,6 +12,13 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
+    #region VARIABLES
+
+    // Audio
+    [SerializeField] AudioClip _pickUpSound;
+
+    #endregion
+
     #region COLLISION LOGIC
 
     /// <summary>
@@ -27,18 +34,10 @@ public class Collectible : MonoBehaviour
             gameObject.isStatic = false;
 
             // Picks up collectible
-            if (GlobalVariableTracker.collectiblesInPocket < 200)
-            {
-                CollectibleManager.collectibleManager.AdjustCount(1);
-                GetComponent<Animator>().Play("Collect");
-                GetComponent<Collider2D>().enabled = false;
-            }
-            // If any more collectibles would do nothing, plays an effect to show that the item
-            // can't be picked up
-            else
-            {
-                GetComponent<Animator>().Play("Full");
-            }
+            CollectibleManager.collectibleManager.AdjustCount(1);
+            GetComponent<Animator>().Play("Collect");
+            GetComponent<Collider2D>().enabled = false;
+            PlayerController.playerController.playerAudioSource.PlayOneShot(_pickUpSound);
         }
     }
 

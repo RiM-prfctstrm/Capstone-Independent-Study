@@ -44,6 +44,19 @@ public class InGameMainMenu : MonoBehaviour
 
     #endregion
 
+    #region UNIVERSAL EVENTS
+
+    /// <summary>
+    /// This function is called when the object becomes enabled and active.
+    /// </summary>
+    void OnEnable()
+    {
+        // Plays menu opening sound
+        GetComponent<AudioSource>().volume = GlobalVariableTracker.menuVolume;
+    }
+
+    #endregion
+
     #region BUTTON ACTIONS
 
     #region MAIN MENU BUTTONS

@@ -48,6 +48,9 @@ public class DialogueManager : MonoBehaviour
     public bool advancing = false;
     public IEnumerator dialogRoutine;
 
+    // SFX
+    [SerializeField] AudioClip _advanceSound;
+
     #endregion
 
     #region UNIVERSAL EVENTS
@@ -94,7 +97,7 @@ public class DialogueManager : MonoBehaviour
         foreach (Dialogue line in sequence.dialogueBoxes)
         {
             // Plays selection sound
-            _systemSounds.Play();
+            _systemSounds.PlayOneShot(_advanceSound);
 
             // Displays the line
             DisplayDialogue(line);
