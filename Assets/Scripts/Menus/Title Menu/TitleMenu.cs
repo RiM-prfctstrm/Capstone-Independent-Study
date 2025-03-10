@@ -2,13 +2,14 @@
  * FILE     : TitleMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/31/24
- * UPDATED  : 2/16/25
+ * UPDATED  : 3/10/25
  * 
  * DESC     : Performs functions of the title screen menu.
 =================================================================================================*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -20,6 +21,10 @@ public class TitleMenu : MonoBehaviour
     [SerializeField] GameObject _credits;
     [SerializeField] GameObject _optionsBG;
     [SerializeField] DialogueManager _dm;
+
+    // Input Controls
+    [SerializeField] InputActionAsset _menuInputs;
+    InputAction cancel;
 
     // Debug
     [SerializeField] DialogueManager _menuDM;
@@ -34,7 +39,13 @@ public class TitleMenu : MonoBehaviour
     /// </summary>
     private void Awake()
     {
+        // Inits Vars
         DialogueManager.dialogueManager = _dm;
+
+        // Sets inputs
+        cancel = _menuInputs.FindAction("Cancel");
+        cancel.performed += _optionsBG.GetComponent<OptionsMenu>().ReturnToMenu;
+        cancel.performed += ctx => Debug.Log("amogus");
     }
 
     #endregion

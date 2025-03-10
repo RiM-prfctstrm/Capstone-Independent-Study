@@ -224,6 +224,7 @@ MonoBehaviour:
   _credits: {fileID: 803531103}
   _optionsBG: {fileID: 77494818}
   _dm: {fileID: 70280378}
+  _menuInputs: {fileID: -944628639613478452, guid: c950dc6ac45a77d4a9d65e00fcf3b1a0, type: 3}
   _menuDM: {fileID: 70280378}
   _UnimplementedNotif:
     dialogueBoxes:
@@ -2225,9 +2226,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2457048625093509489, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+    - target: {fileID: 1834862878485756639, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457048625093509489, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4019001566473301948, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
       propertyPath: m_RootOrder

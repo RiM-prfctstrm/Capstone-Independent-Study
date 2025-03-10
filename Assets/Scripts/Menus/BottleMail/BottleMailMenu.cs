@@ -2,7 +2,7 @@
  * FILE     : BottleMailMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/16/25
- * UPDATED  : 2/21/25
+ * UPDATED  : 3/10/25
  * 
  * DESC     : Controls BottleMail menu behavior to emulate an email program.
 =================================================================================================*/
@@ -37,6 +37,8 @@ public class BottleMailMenu : MonoBehaviour
     {
         // Sets Player input capabilitys
         PlayerController.playerController.TogglePlayerInput();
+        PlayerController.playerController.openMenu.Disable();
+        PlayerController.playerController.cancel.Enable();
         PlayerController.playerController.cancel.performed += CloseMenu;
 
         // Sets default menu values

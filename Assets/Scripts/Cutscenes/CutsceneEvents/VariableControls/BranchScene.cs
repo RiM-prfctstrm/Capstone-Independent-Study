@@ -37,7 +37,7 @@ public class BranchScene : CutsceneEvent
         base.PlayEventFunction();
 
         // Prepares choice menu
-        _event.dialogueBoxes.Add(_choiceDialogue);
+        _event = new DialogueEvent(_choiceDialogue);
         CutsceneManager.cutsceneManager.StartCoroutine(WaitForEventEnd());
 
     }

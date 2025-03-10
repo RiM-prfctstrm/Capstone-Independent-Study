@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 3/5/25
+ * UPDATED  : 3/10/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
     InputAction _brake;
     public InputAction cancel;
     InputAction _debugSwitch;
-    InputAction _openMenu;
+    public InputAction openMenu;
     InputAction _interact;
     InputAction _xInput;
     InputAction _yInput;
@@ -107,7 +107,7 @@ public class PlayerController : MonoBehaviour
         _brake = _playerInputs.FindAction("Brake");
         cancel = _playerInputs.FindAction("Cancel");
         _debugSwitch = _playerInputs.FindAction("DebugSwitchState");
-        _openMenu = _playerInputs.FindAction("OpenMenu");
+        openMenu = _playerInputs.FindAction("OpenMenu");
         _interact = _playerInputs.FindAction("Interact");
         _xInput = _playerInputs.FindAction("MoveX");
         _yInput = _playerInputs.FindAction("MoveY");
@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour
         _brake.performed += ctx => _isBraking = true;
         _brake.canceled += ctx => _isBraking = false;
         _debugSwitch.performed += ctx => ToggleBike();
-        _openMenu.performed += ctx => OpenMenu(_menu, _mainMenuDefault);
+        openMenu.performed += ctx => OpenMenu(_menu, _mainMenuDefault);
         _interact.performed += ctx => PerformInteraction();
 
         // Initializes Accel/Decel Rates
@@ -260,7 +260,7 @@ public class PlayerController : MonoBehaviour
         {
             _brake.Disable();
             _debugSwitch.Disable();
-            _openMenu.Disable();
+            openMenu.Disable();
             _movementDisabled = true;
 
             // Keeps interaction enabled. Don't know why I have to explicitly spell this out, but
@@ -275,7 +275,7 @@ public class PlayerController : MonoBehaviour
         {
             _brake.Enable();
             _debugSwitch.Enable();
-            _openMenu.Enable();
+            openMenu.Enable();
             _movementDisabled = false;
 
             // Disables menu cancel
