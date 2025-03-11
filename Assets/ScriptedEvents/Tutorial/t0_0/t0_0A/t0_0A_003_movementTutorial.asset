@@ -10,55 +10,34 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
-  m_Name: t0_0A_000_tutorialDialogue
+  m_Name: t0_0A_003_movementTutorial
   m_EditorClassIdentifier: 
   eventComplete: 0
   cutsceneDialogue:
     dialogueBoxes:
-    - dialogueText: Now that's what I like to hear! Let's start with the basics.
-      nameTag: Friendly Cylist
-      portrait: {fileID: 0}
     - dialogueText: You use the same button to move on the bike as you do to walk,
         but biking works a little differently.
-      nameTag: Friendly Cylist
+      nameTag: Friendly Cyclist
       portrait: {fileID: 0}
     - dialogueText: As long as you hold the button, you'll keep going faster, and
         when you release, you'll start gradually slowing down.
-      nameTag: Friendly Cylist
+      nameTag: Friendly Cyclist
       portrait: {fileID: 0}
     - dialogueText: When you turn, instead of instantly changing directions, you'll
         ease into the one you want from the one you had before.
-      nameTag: Friendly Cylist
+      nameTag: Friendly Cyclist
       portrait: {fileID: 0}
     - dialogueText: You can actually go in any direction if you let go of the buttons
         at the right time.
-      nameTag: Friendly Cylist
+      nameTag: Friendly Cyclist
       portrait: {fileID: 0}
     - dialogueText: Also, you can't go directly backwards, either.
-      nameTag: Friendly Cylist
+      nameTag: Friendly Cyclist
       portrait: {fileID: 0}
     - dialogueText: Instead, you have to turn to the side a ways before you fully
         reverse.
-      nameTag: Friendly Cylist
+      nameTag: Friendly Cyclist
       portrait: {fileID: 0}
     - dialogueText: When you release the move buttons, you'll slowly come to a stop.
-      nameTag: Friendly Cylist
-      portrait: {fileID: 0}
-    - dialogueText: If you want to stop faster, you can use the brake button to slow
-        almost instantly.
-      nameTag: Friendly Cylist
-      portrait: {fileID: 0}
-    - dialogueText: As long as you're outdoors, you can use the Mount button to get
-        on or off your bike anywhere.
-      nameTag: Friendly Cylist
-      portrait: {fileID: 0}
-    - dialogueText: It's dangerous to get off while you're going at high speeds,
-        so you have to wait until you come to a complete stop before dismounting.
-      nameTag: Friendly Cylist
-      portrait: {fileID: 0}
-    - dialogueText: And, that's how you write a bike! Never forget it.
-      nameTag: Friendly Cylist
-      portrait: {fileID: 0}
-    - dialogueText: Of course, part of bike safety is making sure you don't get lost.
-      nameTag: Friendly Cylist
+      nameTag: Friendly Cyclist
       portrait: {fileID: 0}
