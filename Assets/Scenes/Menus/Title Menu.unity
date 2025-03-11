@@ -234,6 +234,7 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  _cancelSound: {fileID: 8300000, guid: 2384037011f0e2a40886d2aa298b78a5, type: 3}
   _menuDM: {fileID: 70280378}
   _UnimplementedNotif:
     dialogueBoxes:
@@ -264,6 +265,7 @@ MonoBehaviour:
   _systemSounds: {fileID: 1886452916}
   previouslySelected: {fileID: 0}
   advancing: 0
+  _advanceSound: {fileID: 0}
 --- !u!1 &77494818 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2204714316427702947, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
@@ -435,11 +437,11 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1886452916}
           m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
-          m_Mode: 1
+          m_MethodName: PlayOneShot
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 8300000, guid: 8436c36be758d1c46a182bdaf8803e57, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1373,11 +1375,11 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1886452916}
           m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
-          m_Mode: 1
+          m_MethodName: PlayOneShot
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 8300000, guid: 8436c36be758d1c46a182bdaf8803e57, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1661,11 +1663,11 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1886452916}
           m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
-          m_Mode: 1
+          m_MethodName: PlayOneShot
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 8300000, guid: 8436c36be758d1c46a182bdaf8803e57, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2637,11 +2639,11 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1886452916}
           m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
-          m_Mode: 1
+          m_MethodName: PlayOneShot
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 8300000, guid: 8436c36be758d1c46a182bdaf8803e57, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2959,11 +2961,11 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1886452916}
           m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
-          m_Mode: 1
+          m_MethodName: PlayOneShot
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 8300000, guid: 8436c36be758d1c46a182bdaf8803e57, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 

@@ -195,9 +195,10 @@ MonoBehaviour:
   _steeringVelThreshold: 0.25
   _bikeMaterial: {fileID: 6200000, guid: 7960f834bfda28d449d9cfc85d53dfd3, type: 2}
   isWalking: 1
+  inBikeableArea: 0
   _playerInputs: {fileID: -944628639613478452, guid: c950dc6ac45a77d4a9d65e00fcf3b1a0, type: 3}
   cancel:
-    m_Name: 
+    m_Name: Cancel
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 492aa5fb-fe6e-4237-8326-a4780b4bc498
@@ -205,9 +206,20 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  openMenu:
+    m_Name: Open Menu
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: bb214edf-56fe-4a59-8b67-ca5de5e6407b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  lastTarget: {fileID: 0}
   _menu: {fileID: 0}
   _bikeBell: {fileID: 8300000, guid: 66466aa8b1de84e4a9f403df40b8be20, type: 3}
   _bumpSound: {fileID: 0}
+  _cancelSound: {fileID: 8300000, guid: 2384037011f0e2a40886d2aa298b78a5, type: 3}
   sceneShift: {fileID: 8300000, guid: 1d22f09368de40a409fda453d179221d, type: 3}
 --- !u!114 &6512634947272463561
 MonoBehaviour:

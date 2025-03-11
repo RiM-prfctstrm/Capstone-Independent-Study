@@ -79,6 +79,7 @@ public class PlayerController : MonoBehaviour
     // Sound effects
     [SerializeField] AudioClip _bikeBell;
     [SerializeField] AudioClip _bumpSound;
+    [SerializeField] AudioClip _cancelSound;
     public AudioClip sceneShift;
 
     // Debug
@@ -115,6 +116,9 @@ public class PlayerController : MonoBehaviour
         // Assigns actions to inputs
         _brake.performed += ctx => _isBraking = true;
         _brake.canceled += ctx => _isBraking = false;
+        cancel.performed += ctx => CollectibleManager.collectibleManager
+            .GetComponent<AudioSource>().PlayOneShot(_cancelSound);
+        cancel.Disable();
         _debugSwitch.performed += ctx => ToggleBike();
         openMenu.performed += ctx => OpenMenu(_menu, _mainMenuDefault);
         _interact.performed += ctx => PerformInteraction();

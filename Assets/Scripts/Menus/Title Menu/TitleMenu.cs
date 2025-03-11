@@ -21,10 +21,14 @@ public class TitleMenu : MonoBehaviour
     [SerializeField] GameObject _credits;
     [SerializeField] GameObject _optionsBG;
     [SerializeField] DialogueManager _dm;
+    [SerializeField] AudioSource _menuAudioSource;
 
     // Input Controls
     [SerializeField] InputActionAsset _menuInputs;
     public InputAction cancel;
+
+    // Sound Effects
+    [SerializeField] AudioClip _cancelSound;
 
     // Debug
     [SerializeField] DialogueManager _menuDM;
@@ -44,6 +48,7 @@ public class TitleMenu : MonoBehaviour
 
         // Sets inputs
         cancel = _menuInputs.FindAction("Cancel");
+        cancel.performed += ctx => _menuAudioSource.PlayOneShot(_cancelSound);
     }
 
     #endregion
