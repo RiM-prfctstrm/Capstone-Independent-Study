@@ -2,7 +2,7 @@
  * FILE     : CollectibleManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/22/25
- * UPDATED  : 3/10/25
+ * UPDATED  : 3/11/25
  * 
  * DESC     : While the actual collectible count is stored in GlobalVariableTracker, this script
  *            modifies that count and controls displays
@@ -27,6 +27,9 @@ public class CollectibleManager : MonoBehaviour
     // Timer vars
     [SerializeField] float _hideDelay;
     float _timeToHide;
+
+    // Sound Effects
+    [SerializeField] AudioClip _countdownSound;
 
     #endregion
 
@@ -134,6 +137,9 @@ public class CollectibleManager : MonoBehaviour
 
             // Keeps display active
             _timeToHide += Time.fixedDeltaTime;
+
+            // Audio Effect
+            PlayerController.playerController.playerAudioSource.PlayOneShot(_countdownSound);
         }
     }
 

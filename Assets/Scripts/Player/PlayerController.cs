@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 3/10/25
+ * UPDATED  : 3/11/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -608,6 +608,9 @@ public class PlayerController : MonoBehaviour
     /// <param name="collisionAngle">Angle between velocity and collider</param>
     void LoseCollectibles(float collisionSpeed, float collisionAngle)
     {
+        // Play Collision Sound Effect
+        _playerAudioSource.PlayOneShot(_bumpSound);
+
         // Calculates component variables
         float collisionForce = collisionSpeed / _maxBikeSpeed;
         float collisionDirectness = (collisionAngle + 10) / 100;
