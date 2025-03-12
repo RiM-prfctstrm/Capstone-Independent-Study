@@ -2,7 +2,7 @@
  * FILE     : ParallaxScroll.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/9/25
- * UPDATED  : 1/9/25
+ * UPDATED  : 3/12/25
  * 
  * DESC     : Moves attached object at a set rate, teleporting it back so it can move continuously.
  *            Currently only rigged for vertical motion
@@ -16,10 +16,17 @@ public class ParallaxScroll : MonoBehaviour
     #region VARIABLES
 
     // Parameters
+    // Basic Movement
     public float maximum;
     public bool movingVertically;
     public float rate; // Negative for downwards or leftwards movement
+    [SerializeField]
+    bool _stopAtMaximum = false;
     public Vector2 tpDest;
+    // Accelerates
+    [SerializeField] bool _accelerates = false;
+    [SerializeField] float _accelRate = 0;
+    [SerializeField] int _maxSpeed;
 
     // Control conditions
     public bool inMotion;
@@ -30,6 +37,14 @@ public class ParallaxScroll : MonoBehaviour
     #endregion
 
     #region UNIVERSAL EVENTS
+
+    /// <summary>
+    /// Start is called before the first frame update
+    /// </summary>
+    void Start()
+    {
+        _newPos.y = transform.position.y;
+    }
 
     /// <summary>
     /// FixedUpdate is called every fixed framerate frame
@@ -48,6 +63,12 @@ public class ParallaxScroll : MonoBehaviour
                 ParallaxHorizontal();
             }
         }
+
+        // Accelerates movement rate
+        if (_accelerates && Mathf.Abs(rate) <= _maxSpeed)
+        {
+            rate +=  _accelRate * Time.fixedDeltaTime * Mathf.Sign(rate);
+        }
     }
 
     #endregion
@@ -55,15 +76,15 @@ public class ParallaxScroll : MonoBehaviour
     #region MOVEMENT CONTROLS
     
     /// <summary>
-    /// Moves the object along X axis to maximum, then teleports to tpDest
+    /// Moves the object along X axis to maximum, then determines whether to continue movement
     /// </summary>
     void ParallaxHorizontal()
     {
-        // Resets Position
+        // Determines what to do at maximum
         if ((rate >= 0 && transform.position.x >= maximum) ||
             (rate < 0 && transform.position.x <= maximum))
         {
-            inMotion = false;
+            DetermineMaximumBehavior();
         }
         // Moves object
         else
@@ -74,15 +95,15 @@ public class ParallaxScroll : MonoBehaviour
     }
 
     /// <summary>
-    /// Moves the object along Y axis to maximum, then teleports to tpDest
+    /// Moves the object along Y axis to maximum, then determines whether to continue movement
     /// </summary>
     void ParallaxVertical()
     {
-        // Resets Position
+        // Determines what to do at maximum
         if (( rate >= 0 && transform.position.y >= maximum) ||
             (rate < 0 && transform.position.y <= maximum))
         {
-            transform.position = tpDest;
+            DetermineMaximumBehavior();
         }
         // Moves object
         else
@@ -92,7 +113,22 @@ public class ParallaxScroll : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Determines whether to stop the object's parallax, or repeat it from the beginning
+    /// </summary>
+    void DetermineMaximumBehavior()
+    {
+        // Stops motion
+        if (_stopAtMaximum)
+        {
+            inMotion = false;
+        }
+        // Repeats Parallax
+        else
+        {
+            transform.position = tpDest;
+        }
+    }
 
     #endregion
 }
