@@ -2,7 +2,7 @@
  * FILE     : ElevatorProgression.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/9/25
- * UPDATED  : 1/9/25
+ * UPDATED  : 3/12/25
  * 
  * DESC     : Controls bespoke visual effects triggered by the space elevator rising. Specifically,
  *            changes backgrounds and warps the player to the destination chamber. Changes are
@@ -74,8 +74,8 @@ public class ElevatorProgression : MonoBehaviour
                 StartCoroutine(ExitElevator());
                 break;
 
-            // Changes background, nothing else. Would love to know how to write this with fewer
-            // Cases
+            // Changes background, and resets position. Would love to know how to write this with
+            //  fewer cases
             case 0:
             case 1:
             case 2:
