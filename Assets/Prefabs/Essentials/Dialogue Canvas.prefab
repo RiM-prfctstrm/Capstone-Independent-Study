@@ -2724,13 +2724,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collectibleCounter: {fileID: 6139394723984018363}
-  _playerMarker: {fileID: 1785178955346914466}
   _destinationMarker: {fileID: 7140580587463486699}
+  _playerMarker: {fileID: 1785178955346914466}
+  _destinationBig: {fileID: 0}
+  _destinationSmall: {fileID: 0}
+  _playerBig: {fileID: 0}
+  _playerSmall: {fileID: 0}
   _destinationCoords:
   - {x: 172.5, y: -243}
   - {x: 172.5, y: -243}
   - {x: 191.5, y: -87}
   - {x: 232, y: 100}
+  - {x: 9001, y: 9001}
 --- !u!1 &2291421236654478375
 GameObject:
   m_ObjectHideFlags: 0
@@ -3868,6 +3873,7 @@ MonoBehaviour:
 
     GLS Joshua Residence
     4-77-202.'
+  - This time, you're the one getting delivered. Enjoy your trip!
   _unimplementedNotif:
     dialogueBoxes:
     - dialogueText: This feature has not yet been implemented.

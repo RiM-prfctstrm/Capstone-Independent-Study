@@ -63,7 +63,7 @@ public class ParallaxScroll : MonoBehaviour
         if ((rate >= 0 && transform.position.x >= maximum) ||
             (rate < 0 && transform.position.x <= maximum))
         {
-            transform.position = tpDest;
+            inMotion = false;
         }
         // Moves object
         else
