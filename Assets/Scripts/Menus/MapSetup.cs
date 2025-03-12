@@ -19,8 +19,13 @@ public class MapSetup : MonoBehaviour
     // Object references
     // Visible UI
     [SerializeField] TextMeshProUGUI _collectibleCounter;
-    [SerializeField] Image _playerMarker;
     [SerializeField] Image _destinationMarker;
+    [SerializeField] Image _playerMarker;
+    // Sprite Settings
+    [SerializeField] Sprite _destinationBig;
+    [SerializeField] Sprite _destinationSmall;
+    [SerializeField] Sprite _playerBig;
+    [SerializeField] Sprite _playerSmall;
     // Backend information
     BootManager _currentSceneRef;
     [SerializeField] Vector2[] _destinationCoords;
@@ -130,7 +135,7 @@ public class MapSetup : MonoBehaviour
             _playerMarker.gameObject.SetActive(true);
             _playerMarker.rectTransform.sizeDelta = new Vector2(scaleFactor, scaleFactor);
             _destinationMarker.gameObject.SetActive(true);
-            _destinationMarker.rectTransform.sizeDelta = new Vector2(4, 4);
+            _destinationMarker.rectTransform.sizeDelta = new Vector2(8, 8);
 
             // Increases opacity for better visibility at small scale
             if (scaleFactor < 200)
@@ -150,9 +155,9 @@ public class MapSetup : MonoBehaviour
         {
             // Set object size
             _playerMarker.gameObject.SetActive(true);
-            _playerMarker.rectTransform.sizeDelta = new Vector2(4, 4);
+            _playerMarker.rectTransform.sizeDelta = new Vector2(8, 8);
             _destinationMarker.gameObject.SetActive(true);
-            _destinationMarker.rectTransform.sizeDelta = new Vector2(4, 4);
+            _destinationMarker.rectTransform.sizeDelta = new Vector2(8, 8);
 
             // Increases opacity for better visibility at small scale
             _destinationMarker.color = Color.white;
