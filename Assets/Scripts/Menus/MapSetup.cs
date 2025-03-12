@@ -2,7 +2,7 @@
  * FILE     : MapSetup.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/25/25
- * UPDATED  : 2/26/25
+ * UPDATED  : 3/12/25
  * 
  * DESC     : Places and sizes map icons when map is first unloade
 =================================================================================================*/
@@ -59,6 +59,7 @@ public class MapSetup : MonoBehaviour
             // Sets map marker to position of exterior door in indoor scenes
             _playerMarker.rectTransform.localPosition = _currentSceneRef.mapOffset;
         }
+        else 
         {
             // Sets map marker to player's position + map specific offset
             _playerMarker.rectTransform.localPosition =
@@ -96,8 +97,9 @@ public class MapSetup : MonoBehaviour
         if (GlobalVariableTracker.collectiblesInPocket >= 1 &&
             GlobalVariableTracker.collectiblesInPocket <= 50)
         {
-            // Set Vars
+            // Set scale var
             scaleFactor = 400 * (1.01f - (GlobalVariableTracker.collectiblesInPocket / 50));
+            scaleFactor += 4;
 
             // Set object size
             _playerMarker.gameObject.SetActive(false);
@@ -120,9 +122,9 @@ public class MapSetup : MonoBehaviour
         if (GlobalVariableTracker.collectiblesInPocket >= 51 &&
             GlobalVariableTracker.collectiblesInPocket <= 100)
         {
-            // Set Vars
-            scaleFactor =
-                400 * (1.01f - ((GlobalVariableTracker.collectiblesInPocket - 50) / 50));
+            // Set scale var
+            scaleFactor = 400 * (1.01f - ((GlobalVariableTracker.collectiblesInPocket - 50) / 50));
+            scaleFactor += 4;
 
             // Set object size
             _playerMarker.gameObject.SetActive(true);
