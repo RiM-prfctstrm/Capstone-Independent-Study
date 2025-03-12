@@ -2,7 +2,7 @@
  * FILE     : MusicManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 12/6/24
- * UPDATED  : 2/16/25
+ * UPDATED  : 3/12/25
  * 
  * DESC     : Controls which music is currently playing.
 =================================================================================================*/
@@ -73,7 +73,7 @@ public class MusicManager : MonoBehaviour
         // Incrementally lowers volume
         while (_musicSource.volume > 0)
         {
-            _musicSource.volume -= 2 * Time.fixedDeltaTime;
+            _musicSource.volume -= .5f * Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
         }
 
