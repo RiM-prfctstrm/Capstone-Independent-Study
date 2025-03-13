@@ -19,7 +19,7 @@ public class TitleMenuCredits : MonoBehaviour
     // Object Refs
     [SerializeField] Button _titleMenuButton;
     [SerializeField] TitleMenu _titleMenu;
-    RectTransform _rectTransform;
+    [SerializeField] RectTransform _rectTransform;
 
     // Parameters
     [SerializeField] Vector2 _resetPos = new Vector2(232, -3500);
@@ -29,14 +29,6 @@ public class TitleMenuCredits : MonoBehaviour
     #endregion
 
     #region UNIVERSAL EVENTS
-
-    /// <summary>
-    /// Start is called before the first frame update
-    /// </summary>
-    void Start()
-    {
-        _rectTransform = GetComponent<RectTransform>();
-    }
 
     /// <summary>
     /// This function is called when the object becomes enabled and active
@@ -72,8 +64,6 @@ public class TitleMenuCredits : MonoBehaviour
         transform.position = _resetPos;
         _titleMenuButton.Select();
         transform.parent.gameObject.SetActive(false);
-        Debug.Log(transform.position);
-        Debug.Log(_rectTransform.position);
 
         // Disables cancel function
         _titleMenu.cancel.performed -= StopCredits;
