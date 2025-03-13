@@ -22,7 +22,7 @@ public class TitleMenuCredits : MonoBehaviour
     RectTransform _rectTransform;
 
     // Parameters
-    [SerializeField] Vector2 _resetPos = new Vector2(0, -3500);
+    [SerializeField] Vector2 _resetPos = new Vector2(232, -3500);
     [SerializeField] int _speed;
     int _trueSpeed;
 
@@ -69,7 +69,7 @@ public class TitleMenuCredits : MonoBehaviour
     public void StopCredits()
     {
         // Returns to menu
-        _rectTransform.position = _resetPos;
+        transform.position = _resetPos;
         _titleMenuButton.Select();
         transform.parent.gameObject.SetActive(false);
 
@@ -80,7 +80,7 @@ public class TitleMenuCredits : MonoBehaviour
     public void StopCredits(InputAction.CallbackContext ctx)
     {
         // Returns to menu
-        _rectTransform.position = _resetPos;
+        transform.position = _resetPos;
         _titleMenuButton.Select();
         transform.parent.gameObject.SetActive(false);
 
