@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 3/11/25
+ * UPDATED  : 3/13/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour
     public bool isWalking;
     public bool inBikeableArea;
     bool _movementDisabled = false;
+    public bool movementDisabled => _movementDisabled;
 
     // Inputs
     [SerializeField] InputActionAsset _playerInputs;

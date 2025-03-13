@@ -2,7 +2,7 @@
  * FILE     : CutsceneManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1X/X/24
- * UPDATED  : 2/17/25
+ * UPDATED  : 3/13/25
  * 
  * DESC     : Controls the progression of scripted events.
 =================================================================================================*/
@@ -44,7 +44,7 @@ public class CutsceneManager : MonoBehaviour
     {
         // DEBUG
         // Skips cutscenes. To be added to main functionality
-        if (Input.GetKeyDown(KeyCode.Tab) && inCutscene)
+        if (PlayerController.playerController.cancel.WasPressedThisFrame() && inCutscene)
         {
             SkipCutscene();
         }
@@ -63,6 +63,7 @@ public class CutsceneManager : MonoBehaviour
         // Sets up cutscene mode
         PlayerController.playerController.rb2d.velocity = Vector2.zero;
         PlayerController.playerController.TogglePlayerInput();
+        PlayerController.playerController.cancel.Enable();
         _inCutscene = true;
         _skipEvent = cutscene;
         _skipPos = 0;
@@ -100,6 +101,7 @@ public class CutsceneManager : MonoBehaviour
     {
         // Deactivates cutscene mode
         _inCutscene = false;
+        PlayerController.playerController.cancel.Disable();
         PlayerController.playerController.TogglePlayerInput();
     }
 

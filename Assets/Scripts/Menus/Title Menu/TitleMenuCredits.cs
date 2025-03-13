@@ -2,7 +2,7 @@
  * FILE     : TitleMenuMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/15/24
- * UPDATED  : 3/12/25
+ * UPDATED  : 3/13/25
  * 
  * DESC     : Rolls the credits and contains a function to cancel them on the title menu.
 =================================================================================================*/
@@ -22,7 +22,7 @@ public class TitleMenuCredits : MonoBehaviour
     RectTransform _rectTransform;
 
     // Parameters
-    [SerializeField] Vector2 _resetPos = new Vector2(0, -2950);
+    [SerializeField] Vector2 _resetPos = new Vector2(0, -3500);
     [SerializeField] int _speed;
     int _trueSpeed;
 

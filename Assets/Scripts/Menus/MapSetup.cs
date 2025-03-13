@@ -2,7 +2,7 @@
  * FILE     : MapSetup.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/25/25
- * UPDATED  : 3/12/25
+ * UPDATED  : 3/13/25
  * 
  * DESC     : Places and sizes map icons when map is first unloade
 =================================================================================================*/
@@ -46,6 +46,7 @@ public class MapSetup : MonoBehaviour
         // Sets map display
         SetPlayerMarkerPosition();
         SetDestinationMarkerPosition();
+        SetMarkerImages();
         SetMarkerSizes();
     }
 
@@ -72,6 +73,32 @@ public class MapSetup : MonoBehaviour
             _playerMarker.transform.localPosition += _currentSceneRef.mapOffset;
         }
 
+    }
+
+    /// <summary>
+    /// Determines which sprite to use for map markers
+    /// </summary>
+    void SetMarkerImages()
+    {
+        // Destination Marker
+        if (GlobalVariableTracker.collectiblesInPocket >= 47)
+        {
+            _destinationMarker.sprite = _destinationSmall;
+        }
+        else
+        {
+            _destinationMarker.sprite = _destinationBig;
+        }
+
+        // Player Marker
+        if (GlobalVariableTracker.collectiblesInPocket >= 97)
+        {
+            _playerMarker.sprite = _playerSmall;
+        }
+        else
+        {
+            _playerMarker.sprite = _playerBig;
+        }
     }
 
     /// <summary>

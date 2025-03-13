@@ -2,7 +2,7 @@
  * FILE     : ChoiceButton.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/7/25
- * UPDATED  : 3/8/25
+ * UPDATED  : 3/13/25
  * 
  * DESC     : A button used to branch cutscenes, with a variable cutscene assigned by event that
  *            brings up the choice Menu.
@@ -43,7 +43,6 @@ public class ChoiceButton : MonoBehaviour
         // If there is a branch event to go to, begins that
         if (resultEvent != null)
         {
-            Debug.Log(resultEvent);
             CutsceneManager.cutsceneManager.StartCutscene(resultEvent);
         }
 
