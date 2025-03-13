@@ -42,6 +42,8 @@ public class GlobalVariableTracker
         { "m3complete", false },
 
         // Mission Specific Flags
+        // Mission 0
+        { "tutorialPlayed", false },
         // Mission 3
         { "spaceportBarrierDown", false},
         { "checkedIn", false },

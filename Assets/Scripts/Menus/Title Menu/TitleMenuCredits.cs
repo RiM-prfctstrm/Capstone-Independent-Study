@@ -55,7 +55,7 @@ public class TitleMenuCredits : MonoBehaviour
         if (_rectTransform.position.y < 0)
         {
             _rectTransform.Translate(Vector2.up * _trueSpeed * Time.fixedDeltaTime *
-                GlobalVariableTracker.windowScale);
+                3);
         }
     }
 
@@ -72,6 +72,8 @@ public class TitleMenuCredits : MonoBehaviour
         transform.position = _resetPos;
         _titleMenuButton.Select();
         transform.parent.gameObject.SetActive(false);
+        Debug.Log(transform.position);
+        Debug.Log(_rectTransform.position);
 
         // Disables cancel function
         _titleMenu.cancel.performed -= StopCredits;

@@ -35,31 +35,62 @@ public class CutsceneTrigger : MonoBehaviour
     {
         if (collision.gameObject == PlayerController.playerController.gameObject)
         {
-            // Triggers a cutscene under correct conditions
-            if (!_hasPlayed || !_oneTimeTrigger)
+            if (SceneTransition.inTransition)
             {
-                // Stops movement and exits any menus
-                PlayerController.playerController.CancelMomentum();
-                if (InGameMainMenu.inGameMainMenu.isActiveAndEnabled)
-                {
-                    InGameMainMenu.inGameMainMenu.CloseSubmenus();
-                    InGameMainMenu.inGameMainMenu.ExitMenu();
-                    PlayerController.playerController.TogglePlayerInput();
-                }
-
-                // Emergency input toggle
-                if (PlayerController.playerController.movementDisabled)
-                {
-                    PlayerController.playerController.TogglePlayerInput();
-                }
-
-                // Plays Cutscene
-                CutsceneManager.cutsceneManager.StartCutscene(_cutscene);
-
-                // Checks that cutscene has played
-                _hasPlayed = true;
+                StartCoroutine(WaitForTransitionComplete());
+            }
+            else
+            {
+                TriggerCutscene();
             }
         }
+            
+    }
+
+    #endregion
+
+    #region CUTSCENE CONTROL LOGIC
+
+    /// <summary>
+    /// Determines whether to start attached cutscene
+    /// </summary>
+    void TriggerCutscene()
+    {
+        // Triggers a cutscene under correct conditions
+        if (!_hasPlayed || !_oneTimeTrigger)
+        {
+            // Stops movement and exits any menus
+            PlayerController.playerController.CancelMomentum();
+            if (InGameMainMenu.inGameMainMenu.isActiveAndEnabled)
+            {
+                InGameMainMenu.inGameMainMenu.CloseSubmenus();
+                InGameMainMenu.inGameMainMenu.ExitMenu();
+                PlayerController.playerController.TogglePlayerInput();
+            }
+
+            // Emergency input toggle
+            if (PlayerController.playerController.movementDisabled)
+            {
+                PlayerController.playerController.TogglePlayerInput();
+            }
+
+            // Plays Cutscene
+            CutsceneManager.cutsceneManager.StartCutscene(_cutscene);
+
+            // Checks that cutscene has played
+            _hasPlayed = true;
+        } 
+    }
+
+    /// <summary>
+    /// Waits until a scene transition is complete.
+    /// </summary>
+    /// <returns>Waits until a scene transition is complete</returns>
+    IEnumerator WaitForTransitionComplete()
+    {
+        yield return new WaitUntil(() => !SceneTransition.inTransition);
+
+        TriggerCutscene();
     }
 
     #endregion
