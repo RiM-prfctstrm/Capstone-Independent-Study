@@ -6646,7 +6646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogueRange: 5
-  _isEventTrigger: 1
+  _isEventTrigger: 0
   _staticImage: 1
   _NPCLines:
   - dialogueBoxes:
@@ -6654,7 +6654,7 @@ MonoBehaviour:
         it, you'll never be able to stop.
       nameTag: 
       portrait: {fileID: 0}
-  _NPCCutscene: {fileID: 11400000, guid: 3f05213c85cb5b944a76d581fee03028, type: 2}
+  _NPCCutscene: {fileID: 0}
 --- !u!61 &1655890344
 BoxCollider2D:
   m_ObjectHideFlags: 0
