@@ -1695,6 +1695,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _activeMissions: 03000000
+--- !u!114 &359779959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359779957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ba4eefb3a4905542b18c449d4e12c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _keyflag: m3complete
+  _activeState: 0
 --- !u!1 &370006345
 GameObject:
   m_ObjectHideFlags: 0
@@ -6605,7 +6619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _keyflag: m3complete
-  _activeState: 1
+  _activeState: 0
 --- !u!114 &1655890342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8809,6 +8823,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _activeMissions: 03000000
+--- !u!114 &2099840896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099840894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ba4eefb3a4905542b18c449d4e12c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _keyflag: m3complete
+  _activeState: 1
 --- !u!1001 &426791315194044057
 PrefabInstance:
   m_ObjectHideFlags: 0
