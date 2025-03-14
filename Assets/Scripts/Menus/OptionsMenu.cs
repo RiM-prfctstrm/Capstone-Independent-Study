@@ -116,6 +116,12 @@ public class OptionsMenu : MonoBehaviour
         {
             MusicManager.musicManager.SetVolume();
         }
+
+        // Controls menu music
+        if (_titleMenu != null)
+        {
+            _titleMenu.gameObject.GetComponent<AudioSource>().volume = _musicVolume.value;
+        }
     }
 
     /// <summary>
@@ -132,6 +138,10 @@ public class OptionsMenu : MonoBehaviour
         {
             PlayerController.playerController.SetSoundEffectsVolume();
         }
+
+        // Plays sample sound
+        GetComponent<AudioSource>().volume = _soundVolume.value;
+        GetComponent<AudioSource>().Play();
     }
 
 

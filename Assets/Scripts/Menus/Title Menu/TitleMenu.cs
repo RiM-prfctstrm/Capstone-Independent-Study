@@ -2,7 +2,7 @@
  * FILE     : TitleMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/31/24
- * UPDATED  : 3/10/25
+ * UPDATED  : 3/14/25
  * 
  * DESC     : Performs functions of the title screen menu.
 =================================================================================================*/
@@ -48,7 +48,10 @@ public class TitleMenu : MonoBehaviour
 
         // Sets inputs
         cancel = _menuInputs.FindAction("Cancel");
-        cancel.performed += ctx => _menuAudioSource.PlayOneShot(_cancelSound);
+        cancel.performed += PlayCancelSound;
+            
+        // Inits volume
+        GetComponent<AudioSource>().volume = GlobalVariableTracker.musicVolume;
     }
 
     #endregion
@@ -60,6 +63,7 @@ public class TitleMenu : MonoBehaviour
     /// </summary>
     public void StartNewGame()
     {
+        cancel.performed -= PlayCancelSound;
         SceneManager.LoadScene("Newscast");
     }
 
@@ -96,6 +100,18 @@ public class TitleMenu : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    #endregion
+
+    #region MISCELLANEOUS
+
+    /// <summary>
+    /// Plays cancel sound effect when hitting the cancel button.
+    /// </summary>
+    void PlayCancelSound(InputAction.CallbackContext ctx)
+    {
+        _menuAudioSource.PlayOneShot(_cancelSound);
     }
 
     #endregion
