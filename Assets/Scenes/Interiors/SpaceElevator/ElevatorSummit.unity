@@ -771,13 +771,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].dialogueText
-      value: I know,but my bosses are going to get on my case for mentioning them,
+      value: I know, but my bosses are going to get on my case for mentioning them,
         but not having them, and they're not gonna take an overlong self-referential
         joke as an excuse.
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[2].dialogueText
-      value: Let's face it, I'm a beta feature designer.
+      value: Let's just hope they're so impressed with everything else I did that
+        they won't mind it too much at this point.
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[3].dialogueText
@@ -1218,6 +1219,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 936189212}
     m_Modifications:
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _staticImage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -1297,6 +1302,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194424, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -979126676, guid: 4a6c3b31b0f22fd4594f297a439f578c, type: 3}
     - target: {fileID: 1155657993595194425, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_Size.x
       value: 5
