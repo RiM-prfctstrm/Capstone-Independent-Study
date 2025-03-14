@@ -2,7 +2,7 @@
  * FILE     : OptionsMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/16/25
- * UPDATED  : 3/10/25
+ * UPDATED  : 3/14/25
  * 
  * DESC     : Adjusts variables that affect the game's presentation.
 =================================================================================================*/
@@ -64,6 +64,22 @@ public class OptionsMenu : MonoBehaviour
         {
             PlayerController.playerController.cancel.performed += ReturnToMenu;
         }
+
+        // Removes size options if the monitor is too small
+        if (Screen.currentResolution.height < 950 || Screen.currentResolution.width < 950)
+        {
+            _scaleArray[1].gameObject.SetActive(false);
+        }
+        if (Screen.currentResolution.height < 1425 || Screen.currentResolution.width < 1425)
+        {
+            _scaleArray[2].gameObject.SetActive(false);
+        }
+        if (Screen.currentResolution.height < 1856 || Screen.currentResolution.width < 1856)
+        {
+            _scaleArray[3].gameObject.SetActive(false);
+        }
+
+
     }
 
     #endregion
