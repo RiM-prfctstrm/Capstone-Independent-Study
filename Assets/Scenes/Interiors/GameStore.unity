@@ -319,6 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueRange: 5
   _isEventTrigger: 0
+  _repeatEvent: 0
   _staticImage: 1
   _NPCLines:
   - dialogueBoxes:
@@ -3512,7 +3513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
-      value: It's a lttle incomplete, but everything that's there is there for a
+      value: It's a little incomplete, but everything that's there is there for a
         purpose.
       objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
@@ -4436,6 +4437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueRange: 5
   _isEventTrigger: 0
+  _repeatEvent: 0
   _staticImage: 1
   _NPCLines:
   - dialogueBoxes:
@@ -5232,6 +5234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueRange: 5
   _isEventTrigger: 0
+  _repeatEvent: 0
   _staticImage: 1
   _NPCLines:
   - dialogueBoxes:
@@ -5405,6 +5408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueRange: 5
   _isEventTrigger: 0
+  _repeatEvent: 0
   _staticImage: 1
   _NPCLines:
   - dialogueBoxes:
