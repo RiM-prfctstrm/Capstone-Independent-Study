@@ -2,7 +2,7 @@
  * FILE     : InGameMainMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/14/24
- * UPDATED  : 2/26/25
+ * UPDATED  : 3/15/25
  * 
  * DESC     : Performs functions of the main in-game menu
 =================================================================================================*/
@@ -51,6 +51,12 @@ public class InGameMainMenu : MonoBehaviour
     /// </summary>
     void OnEnable()
     {
+        // Prevents opening in cutscenes
+        if (CutsceneManager.inCutscene)
+        {
+            gameObject.SetActive(false);
+        }
+
         // Plays menu opening sound
         GetComponent<AudioSource>().volume = GlobalVariableTracker.menuVolume;
     }
