@@ -2,7 +2,7 @@
  * FILE     : NPCInteraction.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/11/24
- * UPDATED  : 2/3/25
+ * UPDATED  : 3/14/25
  * 
  * DESC     : Controls how NPCs behave when the player interacts with them.
 =================================================================================================*/
@@ -22,6 +22,7 @@ public class NPCInteraction : InteractableObject
     //[SerializeField] bool _isMobile = false;
     [SerializeField] float _dialogueRange = 5;
     [SerializeField] bool _isEventTrigger = false;
+    [SerializeField] bool _repeatEvent = false;
     [SerializeField] bool _staticImage = false;
 
     // Interaction results
@@ -94,13 +95,13 @@ public class NPCInteraction : InteractableObject
         }
 
         // Interaction type logic
-        if (!_isEventTrigger)
+        if (_isEventTrigger || _repeatEvent)
         {
-             NPCDialogue();
+            NPCTriggeredEvent(); 
         }
         else
         {
-            NPCTriggeredEvent();
+            NPCDialogue();
         }
     }
 
@@ -134,7 +135,7 @@ public class NPCInteraction : InteractableObject
     /// </summary>
     void NPCTriggeredEvent()
     {
-        if (!_NPCCutscene.hasPlayed)
+        if (_repeatEvent || !_NPCCutscene.hasPlayed)
         {
             CutsceneManager.cutsceneManager.StartCutscene(_NPCCutscene);
             // Temporary trigger to set to standard diaogue. Will be replaced when a system for

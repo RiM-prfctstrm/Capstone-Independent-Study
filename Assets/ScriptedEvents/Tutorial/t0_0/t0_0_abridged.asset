@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0d66d82e2a6ac84398d7e86fccac890, type: 3}
-  m_Name: t0_0_004_0_setCompleteFlag
+  m_Script: {fileID: 11500000, guid: 8e7c1be8998881549bcc1fb9d908ed5b, type: 3}
+  m_Name: t0_0_abridged
   m_EditorClassIdentifier: 
-  eventComplete: 0
-  _flagName: tutorialPlayed
-  _value: 1
+  cutsceneScript:
+  - {fileID: 11400000, guid: 4601cc7262a91fe4a8562a304f87d279, type: 2}
+  hasPlayed: 0

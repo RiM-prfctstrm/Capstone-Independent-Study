@@ -9,14 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced189b58ef3d6a4a8635aaabf73c2c2, type: 3}
-  m_Name: t0_0_003_moveToPlayer
+  m_Script: {fileID: 11500000, guid: b0d66d82e2a6ac84398d7e86fccac890, type: 3}
+  m_Name: t0_0_004_1_setCompleteFlag
   m_EditorClassIdentifier: 
-  eventComplete: 1
-  _targetID: 1
-  _speed: 4
-  _movements:
-  - {x: -3, y: 0}
-  _overrideMovementAnimation: 0
-  _overrideAnimation: 
-  _referencePos: {x: 110, y: -201.5}
+  eventComplete: 0
+  _flagName: tutorialPlayed
+  _value: 1

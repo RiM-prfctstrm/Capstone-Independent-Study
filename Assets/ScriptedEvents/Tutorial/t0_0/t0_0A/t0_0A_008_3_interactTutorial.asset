@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
   m_Name: t0_0A_008_3_interactTutorial
   m_EditorClassIdentifier: 
-  eventComplete: 0
+  eventComplete: 1
   cutsceneDialogue:
     dialogueBoxes:
     - dialogueText: You can interact with things on your bike the same way you can
@@ -20,6 +20,6 @@ MonoBehaviour:
       nameTag: Friendly Cyclist
       portrait: {fileID: 0}
     - dialogueText: You'll know when you can interact with something when a handy
-        arrow shows up over it.
+        arrow like this one shows up over it.
       nameTag: Friendly Cyclist
       portrait: {fileID: 0}
