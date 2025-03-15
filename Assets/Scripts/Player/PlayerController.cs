@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 3/13/25
+ * UPDATED  : 3/14/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -82,6 +82,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] AudioClip _bumpSound;
     [SerializeField] AudioClip _cancelSound;
     public AudioClip sceneShift;
+
+    // Miscellaneous
+    [SerializeField] DialogueEvent _cantRideMessage;
 
     // Debug
     //bool _maxed = false;
@@ -507,7 +510,7 @@ public class PlayerController : MonoBehaviour
         // Displays message telling player they can't ride in this area
         if (!inBikeableArea)
         {
-            Debug.Log("There's a time and a place for everything, but not now!");
+            DialogueManager.dialogueManager.StartDialogue(_cantRideMessage);
         }
         // Prevents player from deactivating bike while moving, as a balance measure
         else if (isWalking || rb2d.velocity == Vector2.zero)

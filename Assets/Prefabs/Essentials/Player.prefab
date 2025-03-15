@@ -221,6 +221,11 @@ MonoBehaviour:
   _bumpSound: {fileID: 8300000, guid: d51d9e9167ae1684eb31ecb22773190e, type: 3}
   _cancelSound: {fileID: 8300000, guid: 2384037011f0e2a40886d2aa298b78a5, type: 3}
   sceneShift: {fileID: 8300000, guid: 1d22f09368de40a409fda453d179221d, type: 3}
+  _cantRideMessage:
+    dialogueBoxes:
+    - dialogueText: There's not enough room to ride your bike indoors.
+      nameTag: 
+      portrait: {fileID: 0}
 --- !u!114 &6512634947272463561
 MonoBehaviour:
   m_ObjectHideFlags: 0
