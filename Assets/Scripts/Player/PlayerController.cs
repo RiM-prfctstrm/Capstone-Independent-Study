@@ -171,7 +171,7 @@ public class PlayerController : MonoBehaviour
         {
             _playerAnimator.facingDirection = GetDirection();
             // Changes direction where the player can interact
-            _detector.SetInteractionDirection(_playerAnimator.facingDirection);
+            UpdateDetection();
         }
     }
 
@@ -644,6 +644,14 @@ public class PlayerController : MonoBehaviour
     public void SetSoundEffectsVolume()
     {
         _playerAudioSource.volume = GlobalVariableTracker.sfxVolume;
+    }
+
+    /// <summary>
+    /// Updates which direction the player's interaction space is facing.
+    /// </summary>
+    public void UpdateDetection()
+    {
+        _detector.SetInteractionDirection(_playerAnimator.facingDirection);
     }
 
     #endregion
