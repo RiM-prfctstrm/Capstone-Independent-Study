@@ -2,7 +2,7 @@
  * FILE     : DetectObjects.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 6/5/23
- * UPDATED  : 2/11/25
+ * UPDATED  : 3/15/25
  * 
  * DESC     : Gets props with in the player's interaction space and returns the nearest one
 =================================================================================================*/
@@ -79,6 +79,12 @@ public class DetectObjects : MonoBehaviour
                     break;
                 }
             }
+        }
+
+        // Prevents interaction in menu
+        if (InGameMainMenu.inMainMenu)
+        {
+            _interactables.Clear();
         }
 
         // Displays a marker over the prop the player can interact with

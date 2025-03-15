@@ -39,6 +39,9 @@ public class InGameMainMenu : MonoBehaviour
     // Data input
     [TextArea] [SerializeField] string[] _deliveryInfo;
 
+    // Underutilized State Controls
+    public static bool inMainMenu;
+
     // Debug
     [SerializeField] DialogueEvent _unimplementedNotif;
 
@@ -52,9 +55,14 @@ public class InGameMainMenu : MonoBehaviour
     void OnEnable()
     {
         // Prevents opening in cutscenes
-        if (CutsceneManager.inCutscene)
+        if (CutsceneManager.inCutscene && !inMainMenu)
         {
             gameObject.SetActive(false);
+        }
+        else
+        {
+            // Tells game the main menu is actibe
+            inMainMenu = true;
         }
 
         // Plays menu opening sound
@@ -112,6 +120,7 @@ public class InGameMainMenu : MonoBehaviour
     {
         PlayerController.playerController.TogglePlayerInput();
         gameObject.SetActive(false);
+        inMainMenu = false;
 
         // Removes cancel function
         PlayerController.playerController.cancel.performed -= ExitMenu;
@@ -120,6 +129,7 @@ public class InGameMainMenu : MonoBehaviour
     {
         PlayerController.playerController.TogglePlayerInput();
         gameObject.SetActive(false);
+        inMainMenu = false;
 
         // Removes cancel function
         PlayerController.playerController.cancel.performed -= ExitMenu;
