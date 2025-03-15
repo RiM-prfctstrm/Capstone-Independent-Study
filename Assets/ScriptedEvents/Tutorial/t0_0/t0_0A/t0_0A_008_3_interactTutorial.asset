@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
-  m_Name: t0_0AA_006_endDialogue
+  m_Name: t0_0A_008_3_interactTutorial
   m_EditorClassIdentifier: 
   eventComplete: 0
   cutsceneDialogue:
     dialogueBoxes:
-    - dialogueText: And that's how nanoblips work. If you ever want a refresher on
-        that or on how cycling works again, just talk to me again.
+    - dialogueText: You can interact with things on your bike the same way you can
+        while you're walking, though it's a little harder to get positioned.
       nameTag: Friendly Cyclist
       portrait: {fileID: 0}
-    - dialogueText: Thanks for listening, safe travels, and have fun!
+    - dialogueText: You'll know when you can interact with something when a handy
+        arrow shows up over it.
       nameTag: Friendly Cyclist
       portrait: {fileID: 0}
