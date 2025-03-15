@@ -2,7 +2,7 @@
  * FILE     : OptionsMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/16/25
- * UPDATED  : 3/14/25
+ * UPDATED  : 3/15/25
  * 
  * DESC     : Adjusts variables that affect the game's presentation.
 =================================================================================================*/
@@ -20,6 +20,7 @@ public class OptionsMenu : MonoBehaviour
     // UI Objects, ordered by vertical appearance in menu
     Button _defaultScaleButton;
     [SerializeField] Button[] _scaleArray = new Button[4];
+    [SerializeField] Slider _masterVolume;
     [SerializeField] Slider _musicVolume;
     [SerializeField] Slider _soundVolume;
     [SerializeField] Slider _menuVolume;
@@ -28,6 +29,7 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] TitleMenu _titleMenu;
 
     // Value initializers for when objects are set by menu, ordered by vertical appearance in menu
+    static float _saveMaV = 1;
     static float _saveMuV = .8f;
     static float _saveSV = 1f;
     static float _saveMeV = .25f;
@@ -42,6 +44,7 @@ public class OptionsMenu : MonoBehaviour
     private void Awake()
     {
         // Initializes volume vars
+        _masterVolume.value = _saveMaV;
         _musicVolume.value = _saveMuV;
         _soundVolume.value = _saveSV;
         _menuVolume.value = _saveMeV;
@@ -100,6 +103,19 @@ public class OptionsMenu : MonoBehaviour
 
         // Resizes Screen
         Screen.SetResolution(screenSide, screenSide, false);
+    }
+
+    /// <summary>
+    /// Sets master volume for all audio
+    /// </summary>
+    public void SetMasterVolume()
+    {
+        // Sets volume variables
+        GlobalVariableTracker.masterVolume = _masterVolume.value;
+        _saveMaV = _masterVolume.value;
+
+        // Sets actual volume
+        AudioListener.volume = _masterVolume.value;
     }
 
     /// <summary>
