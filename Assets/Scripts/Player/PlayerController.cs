@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip sceneShift;
 
     // Miscellaneous
-    [SerializeField] DialogueEvent _cantRideMessage;
+    [SerializeField] Cutscene _cantRideMessage;
 
     // Debug
     //bool _maxed = false;
@@ -510,7 +510,7 @@ public class PlayerController : MonoBehaviour
         // Displays message telling player they can't ride in this area
         if (!inBikeableArea)
         {
-            DialogueManager.dialogueManager.StartDialogue(_cantRideMessage);
+            CutsceneManager.cutsceneManager.StartCutscene(_cantRideMessage);
         }
         // Prevents player from deactivating bike while moving, as a balance measure
         else if (isWalking || rb2d.velocity == Vector2.zero)

@@ -55,9 +55,10 @@ public class InGameMainMenu : MonoBehaviour
     void OnEnable()
     {
         // Prevents opening in cutscenes
-        if (CutsceneManager.inCutscene && !inMainMenu)
+        if ((CutsceneManager.inCutscene || DialogueManager.dialogueInProgress) && !inMainMenu)
         {
             gameObject.SetActive(false);
+            return;
         }
         else
         {
