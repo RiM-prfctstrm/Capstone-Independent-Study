@@ -45,8 +45,10 @@ public class GlobalVariableTracker
         // Mission Specific Flags
         // Mission 0
         { "tutorialPlayed", false },
+        // Mission 2
+        { "m2BonusNotifPlayed", false },
         // Mission 3
-        { "spaceportBarrierDown", false},
+        { "spaceportBarrierDown", false },
         { "checkedIn", false },
         { "hasAccessCard", false },
         { "visitedReceptionist", false }

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e7c1be8998881549bcc1fb9d908ed5b, type: 3}
   m_Name: cr
   m_EditorClassIdentifier: 
-  cutsceneScript: []
-  hasPlayed: 0
+  cutsceneScript:
+  - {fileID: 11400000, guid: 5181c35cadf42ab47927211882decaba, type: 2}
+  hasPlayed: 1
