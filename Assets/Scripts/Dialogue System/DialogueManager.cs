@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 3/10/25
+ * UPDATED  : 3/23/25
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -10,8 +10,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 using TMPro;
-using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -78,6 +78,13 @@ public class DialogueManager : MonoBehaviour
         advancing = false;
         _dialogueInProgress = true;
         _dialogueOutline.SetActive(true);
+
+        // Enables cancelling outside cutscenes
+        if (!CutsceneManager.inCutscene)
+        {
+            PlayerController.playerController.cancel.Enable();
+            PlayerController.playerController.cancel.performed += CancelDialogue;
+        }
 
         // Clears existing dialogue to help skip unwanted first lines
         _dialogueText.text = "";
@@ -174,6 +181,47 @@ public class DialogueManager : MonoBehaviour
         {
             previouslySelected.Select();
             previouslySelected = null;
+        }
+
+        // Disables cancelling functionality
+        if (!CutsceneManager.inCutscene)
+        {
+            PlayerController.playerController.cancel.Disable();
+            PlayerController.playerController.cancel.performed -= CancelDialogue;
+        }
+
+        // Deselects any targeted gameobjects
+        PlayerController.playerController.lastTarget = null;
+    }
+    public void CancelDialogue(InputAction.CallbackContext ctx)
+    {
+        // Lets other scripts know player is out of dialogue
+        _dialogueInProgress = false;
+        NPCInteraction.inNPCInteraction = false;
+
+        // Ends Active Dialogue sequence
+        StopCoroutine(dialogRoutine);
+
+        // Prevents auto-advancing through next text
+        advancing = false;
+
+        // Deactivates UI
+        _dialogueOutline.SetActive(false);
+        _nametagOutline.SetActive(false);
+        _portraitOutline.SetActive(false);
+
+        // Reselects the previously selected button if applicable
+        if (previouslySelected != null)
+        {
+            previouslySelected.Select();
+            previouslySelected = null;
+        }
+
+        // Disables cancelling functionality
+        if (!CutsceneManager.inCutscene)
+        {
+            PlayerController.playerController.cancel.Disable();
+            PlayerController.playerController.cancel.performed -= CancelDialogue;
         }
 
         // Deselects any targeted gameobjects
