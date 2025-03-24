@@ -2,7 +2,7 @@
  * FILE     : CutsceneManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1X/X/24
- * UPDATED  : 3/13/25
+ * UPDATED  : 3/24/25
  * 
  * DESC     : Controls the progression of scripted events.
 =================================================================================================*/
@@ -155,7 +155,7 @@ public class CutsceneManager : MonoBehaviour
                 i.PlayEventFunction();
             }
             // Instantaneously performs character movement
-            else if (i.GetType() == typeof(MoveByVectors))
+            else if (i.GetType() == typeof(MoveByVectors) || i.GetType() == typeof(MoveToPoint))
             {
                 k = (MoveByVectors)i;
                 k.MoveInstantly();

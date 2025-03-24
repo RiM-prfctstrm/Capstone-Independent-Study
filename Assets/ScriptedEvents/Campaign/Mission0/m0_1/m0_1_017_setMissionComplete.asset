@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 468ca57cc94a1a3459faf62eef8634af, type: 3}
-  m_Name: m0_2_006_dylanFacePlayer
+  m_Script: {fileID: 11500000, guid: b0d66d82e2a6ac84398d7e86fccac890, type: 3}
+  m_Name: m0_1_017_setMissionComplete
   m_EditorClassIdentifier: 
-  _eventComplete: 0
-  _targetID: 3
-  _animName: LeftIdle
-  _facingDirection: 1
+  eventComplete: 0
+  _flagName: m0complete
+  _value: 1

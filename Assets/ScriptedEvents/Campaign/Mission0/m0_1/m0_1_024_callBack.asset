@@ -10,11 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
-  m_Name: m0_2_008_confessionPt1
+  m_Name: m0_1_024_callBack
   m_EditorClassIdentifier: 
   eventComplete: 0
   cutsceneDialogue:
     dialogueBoxes:
-    - dialogueText: Well, I don't really know how to put this, but... I...
+    - dialogueText: Wait!
+      nameTag: Dylan
+      portrait: {fileID: 0}
+    - dialogueText: Before you head out, can I tell you something?
       nameTag: Dylan
       portrait: {fileID: 0}
