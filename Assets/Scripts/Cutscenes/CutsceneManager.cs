@@ -136,7 +136,7 @@ public class CutsceneManager : MonoBehaviour
 
             // Skips events that do not alter game state beyond cosmetics within cutscene
             if (i.GetType() == typeof(CutsceneDialogue) || i.GetType() == typeof(ScriptedWait) || 
-                i.GetType() == typeof(FadeForCutscene))
+                i.GetType() == typeof(FadeForCutscene) || i.GetType() == typeof(PlaySound))
             {
                 i.eventComplete = true;
                 continue;
