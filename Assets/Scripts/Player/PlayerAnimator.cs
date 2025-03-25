@@ -2,7 +2,7 @@
  * FILE     : PlayerAnimator.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/11/24
- * UPDATED  : 2/22/25
+ * UPDATED  : 3/25/25
  * 
  * DESC     : Controls player character's animation
 =================================================================================================*/
@@ -90,6 +90,19 @@ public class PlayerAnimator : CharacterAnimator
 
         // Disables helpless state
         _overrideState = false;
+    }
+
+    /// <summary>
+    /// Plays a scripted animation controlled outside normal context, and sets interaction hitbox
+    /// to match it.
+    /// </summary>
+    /// <param name="name">Name of the animation that plays</param>
+    public override void PlayScriptedAnimation(string name)
+    {
+        base.PlayScriptedAnimation(name);
+
+        // Updates detection hitbox
+        _playerController.UpdateDetection();
     }
 
     #endregion

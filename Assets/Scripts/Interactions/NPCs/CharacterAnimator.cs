@@ -2,7 +2,7 @@
  * FILE     : CharacterAnimator.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/10/24
- * UPDATED  : 11/8/24
+ * UPDATED  : 3/25/25
  * 
  * DESC     : Base code to automate NPC animations.
 =================================================================================================*/
@@ -84,7 +84,8 @@ public class CharacterAnimator : MonoBehaviour
     /// <summary>
     /// Plays a scripted animation controlled outside normal context
     /// </summary>
-    public void PlayScriptedAnimation(string name)
+    /// <param name="name">Name of the animation that plays</param>
+    public virtual void PlayScriptedAnimation(string name)
     {
         animState = name;
         _anim.Play(animState);
