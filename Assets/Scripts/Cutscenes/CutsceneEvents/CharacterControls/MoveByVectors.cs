@@ -92,7 +92,8 @@ public class MoveByVectors : CutsceneEvent
         }
 
         // Sets character to a finished animation and completes event
-        _targetAnimator.PlayScriptedAnimation(_targetAnimator.SetAnimState());
+        _targetAnimator.animState += "Idle";
+        _targetAnimator.PlayScriptedAnimation(_targetAnimator.animState);
         eventComplete = true;
     }
 
