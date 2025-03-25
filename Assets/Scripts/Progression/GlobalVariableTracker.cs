@@ -2,7 +2,7 @@
  * FILE     : GlobalVariableTracker.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/4/24
- * UPDATED  : 2/25/25
+ * UPDATED  : 3/25/25
  * 
  * DESC     : Stores data that is meant to persist throughout the entire game. Variables are kept
  *            in an initialized state to easily create a new save. If a save is loaded, they are
@@ -51,7 +51,12 @@ public class GlobalVariableTracker
         { "spaceportBarrierDown", false },
         { "checkedIn", false },
         { "hasAccessCard", false },
-        { "visitedReceptionist", false }
+        { "visitedReceptionist", false },
+
+        // Special Completion Flags
+        { "m0specialComplete", false },
+        { "m2specialComplete", false },
+        { "m3specialComplete", false }
     };
 
     #endregion

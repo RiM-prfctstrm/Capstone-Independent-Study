@@ -2,7 +2,7 @@
  * FILE     : DebugProgressInjector.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/3/25
- * UPDATED  : 3/15/25
+ * UPDATED  : 3/25/25
  * 
  * DESC     : Debug script to set progression variables by hand in inspector. Used to tell the game
  *            to play at a certain point. Works best before loading scene.
@@ -33,6 +33,11 @@ public class DebugProgressInjector : MonoBehaviour
     [SerializeField] bool _checkedIn = false;
     [SerializeField] bool _hasAccessCard = false;
     [SerializeField] bool _visitedReceptionist = false;
+
+    // Special Completion Flags
+    [SerializeField] bool _m0specialComplete = false;
+    [SerializeField] bool _m2specialComplete = false;
+    [SerializeField] bool _m3specialComplete = false;
 
     // Collectibles
     [SerializeField] int _collectiblesInPocket;
@@ -86,6 +91,8 @@ public class DebugProgressInjector : MonoBehaviour
         GlobalVariableTracker.progressionFlags["m1complete"] = _m1Complete;
         GlobalVariableTracker.progressionFlags["m2complete"] = _m2Complete;
         GlobalVariableTracker.progressionFlags["m3complete"] = _m3Complete;
+
+        // Within-mission progression
         // Mission 0 Progression
         GlobalVariableTracker.progressionFlags["tutorialPlayed"] = _tutorialPlayed;
         // Mission 2 Progression
@@ -95,6 +102,11 @@ public class DebugProgressInjector : MonoBehaviour
         GlobalVariableTracker.progressionFlags["checkedIn"] = _checkedIn;
         GlobalVariableTracker.progressionFlags["hasAccessCard"] = _hasAccessCard;
         GlobalVariableTracker.progressionFlags["visitedReceptionist"] = _visitedReceptionist;
+
+        // Special Completion Progression
+        GlobalVariableTracker.progressionFlags["m0specialComplete"] = _m0specialComplete;
+        GlobalVariableTracker.progressionFlags["m2specialComplete"] = _m2specialComplete;
+        GlobalVariableTracker.progressionFlags["m3specialComplete"] = _m3specialComplete;
 
         // Collectibles
         GlobalVariableTracker.collectiblesInPocket = _collectiblesInPocket;
