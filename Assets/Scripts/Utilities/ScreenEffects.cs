@@ -2,7 +2,7 @@
  * FILE     : ScreenEffects
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/8/25
- * UPDATED  : 1/8/25
+ * UPDATED  : 3/25/25
  * 
  * DESC     : Performs visual effects that take up the whole screen.
 =================================================================================================*/
@@ -26,10 +26,20 @@ public class ScreenEffects : MonoBehaviour
     public static bool fadingOut = false;
     // Fading Objects
     [SerializeField] Image _blackFader;
+    public static Image blackFader;
 
     #endregion
 
     #region UNIVERSAL EVENTS
+
+    /// <summary>
+    /// Start is called before the first frame update
+    /// </summary>
+    void Start()
+    {
+        // Initializes Vars
+        blackFader = _blackFader;
+    }
 
     /// <summary>
     /// FixedUpdate is called every fixed framerate frame

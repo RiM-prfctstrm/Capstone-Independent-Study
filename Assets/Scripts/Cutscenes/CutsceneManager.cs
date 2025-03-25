@@ -166,6 +166,9 @@ public class CutsceneManager : MonoBehaviour
             yield return new WaitUntil(() => i.eventComplete == true);
         }
 
+        // Ensures screen is faded in
+        ScreenEffects.blackFader.color = Color.clear;
+
         //Exits Cutscene State
         EndCutscene();
     }
