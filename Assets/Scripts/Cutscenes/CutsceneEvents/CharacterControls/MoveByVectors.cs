@@ -2,7 +2,7 @@
  * FILE     : MoveByVectors.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/8/24
- * UPDATED  : 12/8/24
+ * UPDATED  : 3/25/25
  * 
  * DESC     : Translates a character along a set of vectors.
 =================================================================================================*/
@@ -117,6 +117,8 @@ public class MoveByVectors : CutsceneEvent
         // Sets position and rotation
         _targetCharacter.transform.position = _targetPos;
         UpdateMoveAnimation();
+        _targetAnimator.animState += "Idle";
+        _targetAnimator.PlayScriptedAnimation(_targetAnimator.animState);
 
         // Ends event
         eventComplete = true;

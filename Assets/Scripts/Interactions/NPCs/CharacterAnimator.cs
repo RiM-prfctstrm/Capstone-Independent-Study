@@ -19,7 +19,7 @@ public class CharacterAnimator : MonoBehaviour
 
     // Animation
     [SerializeField] protected Animator _anim;
-    protected string animState;
+    public string animState;
     public int facingDirection; // 0=D, 1=L, 2=R, 3=U
 
     #endregion
