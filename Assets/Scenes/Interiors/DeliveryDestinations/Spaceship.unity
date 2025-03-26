@@ -459,6 +459,702 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -2695619058785784247, guid: 6d05d987627db594f9d14a183439e052, type: 3}
+--- !u!1 &189541126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 189541127}
+  - component: {fileID: 189541128}
+  m_Layer: 0
+  m_Name: Sidewalk Hefter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &189541127
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189541126}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 69, y: -29.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1109902414}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &189541128
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189541126}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -64209544, guid: b404cd38ce535674ea0e13995cc2c779, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1.5}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &410961726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 410961728}
+  - component: {fileID: 410961727}
+  m_Layer: 0
+  m_Name: BigOlSlab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &410961727
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410961726}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1916023399
+  m_SortingLayer: 1
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: c957ba464ca0eba4f9359933f6092907, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.5, y: 2.25}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &410961728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410961726}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 35.05, y: -29.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1109902414}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &622773910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 622773911}
+  - component: {fileID: 622773912}
+  m_Layer: 0
+  m_Name: GlassDoor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &622773911
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622773910}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 93, y: -0.125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1109902414}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &622773912
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622773910}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 0d402045a42ae734eb71a7127f6488dc, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1.75}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1001 &855060513
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1837256920}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _staticImage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].nameTag
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].nameTag
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].nameTag
+      value: Test Resident
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[3].nameTag
+      value: Astronaut
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[4].nameTag
+      value: Spaceship Builder
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[5].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[6].nameTag
+      value: Sculptor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].nameTag
+      value: Test Resident
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].nameTag
+      value: Test Resident
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[2].nameTag
+      value: Astronaut
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[3].nameTag
+      value: Astronaut
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[4].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[5].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[6].nameTag
+      value: Sculptor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: The door is locked with biometric information.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: There is nothing you can do to get in.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: It's a shame not everything can work out so well.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[3].dialogueText
+      value: Heck, we only know it's possible because someone at Small Step had to
+        do it to stop a critical malfunction.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[4].dialogueText
+      value: Heck, we only know it's possible because someone at Small Step had to
+        do it to stop a critical malfunction.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[5].dialogueText
+      value: I bet you could make some really obscure statues if you modeled them
+        off the janitors or something.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[6].dialogueText
+      value: Hmmm... I shall think on it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].dialogueText
+      value: I can't wait until everyone else can come up here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].dialogueText
+      value: It gets lonely when there's only so few people.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[2].dialogueText
+      value: Heck, we only know it's possible because someone at Small Step had to
+        do it to stop a critical malfunction.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[3].dialogueText
+      value: Heck, we only know it's possible because someone at Small Step had to
+        do it to stop a critical malfunction.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[4].dialogueText
+      value: Not individually.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[5].dialogueText
+      value: I bet you could make some really obscure statues if you modeled them
+        off the janitors or something.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[6].dialogueText
+      value: Hmmm... I shall think on it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194406, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: facingDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 78
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194424, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0d402045a42ae734eb71a7127f6488dc, type: 3}
+    - target: {fileID: 1155657993595194426, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 231f8dadd6a15ec459b2198377e20535, type: 2}
+    - target: {fileID: 1155657993595194428, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Name
+      value: Locked Door
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+--- !u!4 &855060514 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+  m_PrefabInstance: {fileID: 855060513}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &916131920
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1837256920}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].nameTag
+      value: Test Resident
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].nameTag
+      value: Test Resident
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].nameTag
+      value: Test Resident
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[3].nameTag
+      value: Astronaut
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[4].nameTag
+      value: Spaceship Builder
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[5].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[6].nameTag
+      value: Sculptor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].nameTag
+      value: Test Resident
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].nameTag
+      value: Test Resident
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[2].nameTag
+      value: Astronaut
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[3].nameTag
+      value: Astronaut
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[4].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[5].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[6].nameTag
+      value: Sculptor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: A lot of us up here used to be homeless, which is why we were selected
+        to test out the ship.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: We needed shelter, they needed testing, so we ended up being able to
+        solve each others' problems at the same time.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: It's a shame not everything can work out so well.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[3].dialogueText
+      value: Heck, we only know it's possible because someone at Small Step had to
+        do it to stop a critical malfunction.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[4].dialogueText
+      value: Heck, we only know it's possible because someone at Small Step had to
+        do it to stop a critical malfunction.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[5].dialogueText
+      value: I bet you could make some really obscure statues if you modeled them
+        off the janitors or something.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[6].dialogueText
+      value: Hmmm... I shall think on it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].dialogueText
+      value: I can't wait until everyone else can come up here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].dialogueText
+      value: It gets lonely when there's only so few people.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[2].dialogueText
+      value: Heck, we only know it's possible because someone at Small Step had to
+        do it to stop a critical malfunction.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[3].dialogueText
+      value: Heck, we only know it's possible because someone at Small Step had to
+        do it to stop a critical malfunction.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[4].dialogueText
+      value: Not individually.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[5].dialogueText
+      value: I bet you could make some really obscure statues if you modeled them
+        off the janitors or something.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[6].dialogueText
+      value: Hmmm... I shall think on it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194406, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: facingDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 26.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -20.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194426, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 231f8dadd6a15ec459b2198377e20535, type: 2}
+    - target: {fileID: 1155657993595194428, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Name
+      value: NPC003
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+--- !u!4 &916131921 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+  m_PrefabInstance: {fileID: 916131920}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1109902413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1109902414}
+  m_Layer: 0
+  m_Name: Decorations
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1109902414
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109902413}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 410961728}
+  - {fileID: 622773911}
+  - {fileID: 189541127}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1149033820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -545,6 +1241,206 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
   m_PrefabInstance: {fileID: 1149033820}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1275161839
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1837256920}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].nameTag
+      value: Spaceship Builder
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].nameTag
+      value: Spaceship Builder
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].nameTag
+      value: Spaceship Builder
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[3].nameTag
+      value: Sculptor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[4].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[5].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[6].nameTag
+      value: Sculptor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].nameTag
+      value: Spaceship Builder
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].nameTag
+      value: Spaceship Builder
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[2].nameTag
+      value: Spaceship Builder
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[3].nameTag
+      value: Sculptor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[4].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[5].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[6].nameTag
+      value: Sculptor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: Stand back, please.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: Beyond this area we're moving sidewalk tiles into some of the ship's
+        wider areas.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[3].dialogueText
+      value: But people have heard of them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[4].dialogueText
+      value: Not individually.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[5].dialogueText
+      value: I bet you could make some really obscure statues if you modeled them
+        off the janitors or something.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[6].dialogueText
+      value: Hmmm... I shall think on it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].dialogueText
+      value: We have to do it like this because the concrete doesn't settle this
+        far up.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].dialogueText
+      value: The nice thingis that up here, it's light that you can carry the tiles
+        by hand.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[2].dialogueText
+      value: Still wouldn't want to get hit with one though, and old Jameson is pretty
+        slap-happy, so that's why we won't let you through.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[3].dialogueText
+      value: But people have heard of them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[4].dialogueText
+      value: Not individually.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[5].dialogueText
+      value: I bet you could make some really obscure statues if you modeled them
+        off the janitors or something.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[6].dialogueText
+      value: Hmmm... I shall think on it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194406, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: facingDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 63.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -29.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194426, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9a594f7bff9a4b34694adf1a65364267, type: 2}
+    - target: {fileID: 1155657993595194428, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Name
+      value: NPC001
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+--- !u!4 &1275161840 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+  m_PrefabInstance: {fileID: 1275161839}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1279864138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -622,6 +1518,209 @@ PrefabInstance:
       objectReference: {fileID: 97717011}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e735ec56fc8e5f1478e58431f136038a, type: 3}
+--- !u!1001 &1801404858
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1837256920}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].nameTag
+      value: Astronaut
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].nameTag
+      value: Astronaut
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].nameTag
+      value: Astronaut
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[3].nameTag
+      value: Astronaut
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[4].nameTag
+      value: Spaceship Builder
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[5].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[6].nameTag
+      value: Sculptor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].nameTag
+      value: Astronaut
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].nameTag
+      value: Astronaut
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[2].nameTag
+      value: Astronaut
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[3].nameTag
+      value: Astronaut
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[4].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[5].nameTag
+      value: Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[6].nameTag
+      value: Sculptor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: I wouldn't get your hopes up if you want to go out in space.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: EVAs are really dangerous, so you need special training if you want
+        to go outside.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: It's not likely that training will be offered to the public once we
+        depart, because doing it so close to lightspeed is even more dangerous.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[3].dialogueText
+      value: Heck, we only know it's possible because someone at Small Step had to
+        do it to stop a critical malfunction.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[4].dialogueText
+      value: Heck, we only know it's possible because someone at Small Step had to
+        do it to stop a critical malfunction.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[5].dialogueText
+      value: I bet you could make some really obscure statues if you modeled them
+        off the janitors or something.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[6].dialogueText
+      value: Hmmm... I shall think on it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].dialogueText
+      value: Don't forget to exercise while you're on the voyage.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[1].dialogueText
+      value: The artificial gravity is pretty good, but it doesn't quite match Cradle's,
+        so you'll need it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[2].dialogueText
+      value: Heck, we only know it's possible because someone at Small Step had to
+        do it to stop a critical malfunction.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[3].dialogueText
+      value: Heck, we only know it's possible because someone at Small Step had to
+        do it to stop a critical malfunction.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[4].dialogueText
+      value: Not individually.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[5].dialogueText
+      value: I bet you could make some really obscure statues if you modeled them
+        off the janitors or something.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[6].dialogueText
+      value: Hmmm... I shall think on it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194406, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: facingDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194426, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b68e0d48d8bf19848b20ef60098fcc67, type: 2}
+    - target: {fileID: 1155657993595194428, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+      propertyPath: m_Name
+      value: NPC002
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+--- !u!4 &1801404859 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+  m_PrefabInstance: {fileID: 1801404858}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1837256919
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,6 +1751,10 @@ Transform:
   m_Children:
   - {fileID: 1149033821}
   - {fileID: 57571275}
+  - {fileID: 1275161840}
+  - {fileID: 1801404859}
+  - {fileID: 916131921}
+  - {fileID: 855060514}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
