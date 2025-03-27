@@ -2,7 +2,7 @@
  * FILE     : InGameMainMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/14/24
- * UPDATED  : 3/15/25
+ * UPDATED  : 3/27/25
  * 
  * DESC     : Performs functions of the main in-game menu
 =================================================================================================*/
@@ -33,6 +33,7 @@ public class InGameMainMenu : MonoBehaviour
     [SerializeField] GameObject _optionsBG;
     // Other UI
     [SerializeField] TextMeshProUGUI _mapText;
+    [SerializeField] TextMeshProUGUI _quickCounter;
     // External options
     [SerializeField] Cutscene _quitEvent;
 
@@ -68,6 +69,9 @@ public class InGameMainMenu : MonoBehaviour
 
         // Plays menu opening sound
         GetComponent<AudioSource>().volume = GlobalVariableTracker.menuVolume;
+
+        // Sets counter for collectibles
+        _quickCounter.text = GlobalVariableTracker.collectiblesInPocket.ToString();
     }
 
     #endregion
