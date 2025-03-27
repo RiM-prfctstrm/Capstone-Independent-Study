@@ -267,6 +267,7 @@ public class PlayerController : MonoBehaviour
         // Disables Input
         if (_brake.enabled)
         {
+            // Disables input functions
             _brake.Disable();
             _debugSwitch.Disable();
             openMenu.Disable();
@@ -282,10 +283,14 @@ public class PlayerController : MonoBehaviour
         // Enables Input
         else
         {
+            // Enables input functions
             _brake.Enable();
             _debugSwitch.Enable();
             openMenu.Enable();
             _movementDisabled = false;
+
+            // Makes sure break is off when leaving menus
+            _isBraking = false;
 
             // Disables menu cancel
             cancel.Disable();
@@ -577,6 +582,7 @@ public class PlayerController : MonoBehaviour
         if (!CutsceneManager.inCutscene)
         {
             TogglePlayerInput();
+            _isBraking = true;
         }
         _interact.Disable();
     }
@@ -623,7 +629,8 @@ public class PlayerController : MonoBehaviour
             (GlobalVariableTracker.collectiblesInPocket * (collisionDirectness * collisionForce));
 
         // Play Collision Particle Effect
-        _lossParticles.emission.SetBurst(0, new ParticleSystem.Burst(0.0f, -subtractionTotal));
+        _lossParticles.emission.SetBurst(0, new ParticleSystem.Burst(0.0f, -
+            Mathf.Clamp(subtractionTotal, -10, 0)));
         _lossParticles.Play();
 
         // Subtracts from total
