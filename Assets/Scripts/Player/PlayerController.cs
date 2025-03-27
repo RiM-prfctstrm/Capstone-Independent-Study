@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 3/15/25
+ * UPDATED  : 3/27/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb2d;
     // External Components
     [SerializeField] DetectObjects _detector;
+    [SerializeField] ParticleSystem _lossParticles;
 
     // Parameters
     [SerializeField] float _accelTime;
@@ -620,6 +621,10 @@ public class PlayerController : MonoBehaviour
         float collisionDirectness = (collisionAngle + 10) / 100;
         int subtractionTotal = -(int)
             (GlobalVariableTracker.collectiblesInPocket * (collisionDirectness * collisionForce));
+
+        // Play Collision Particle Effect
+        _lossParticles.emission.SetBurst(0, new ParticleSystem.Burst(0.0f, -subtractionTotal));
+        _lossParticles.Play();
 
         // Subtracts from total
         CollectibleManager.collectibleManager.AdjustCount(subtractionTotal);
