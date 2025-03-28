@@ -9,14 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced189b58ef3d6a4a8635aaabf73c2c2, type: 3}
-  m_Name: m2_0_012_jerryPace
+  m_Script: {fileID: 11500000, guid: 6b8da15d6e213d94cb985c02980917ce, type: 3}
+  m_Name: m2_0_002_activateConfirmTrigger
   m_EditorClassIdentifier: 
-  eventComplete: 1
-  _targetID: 1
-  _speed: 3
-  _movements:
-  - {x: 0, y: 1}
-  _overrideMovementAnimation: 0
-  _overrideAnimation: 
-  _referencePos: {x: 10.75, y: -5}
+  eventComplete: 0
+  _targetID: 3
+  _setActive: 1

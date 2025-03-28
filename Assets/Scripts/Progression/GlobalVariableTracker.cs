@@ -2,11 +2,12 @@
  * FILE     : GlobalVariableTracker.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/4/24
- * UPDATED  : 3/25/25
+ * UPDATED  : 3/28/25
  * 
  * DESC     : Stores data that is meant to persist throughout the entire game. Variables are kept
  *            in an initialized state to easily create a new save. If a save is loaded, they are
  *            immediately overwritten before loading the game.
+ *            Flags are ordered by when in the game they are used rather than alphabetically.
 =================================================================================================*/
 using System.Collections;
 using System.Collections.Generic;
@@ -46,6 +47,7 @@ public class GlobalVariableTracker
         // Mission 0
         { "tutorialPlayed", false },
         // Mission 2
+        { "m2bonusStarted", false },
         { "m2BonusNotifPlayed", false },
         // Mission 3
         { "spaceportBarrierDown", false },
