@@ -2,7 +2,7 @@
  * FILE     : SceneTransition
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/29/24
- * UPDATED  : 3/15/25
+ * UPDATED  : 3/31/25
  * 
  * DESC     : Switches scenes and sets variables to initialize that scene's state after transition.
 =================================================================================================*/
@@ -105,10 +105,6 @@ public class SceneTransition
     static void ChangeScene(string sceneName, bool isIndoors, Vector3 startPos, 
                                    int startDirection)
     {
-
-        // Loads new scene and initializes variables
-        SceneManager.LoadScene(sceneName);
-
         // Determines whether the player should remain biking
         if (isIndoors)
         {
@@ -123,6 +119,13 @@ public class SceneTransition
 
         // Cleans player's interaction list so it works in new scene
         _player.GetComponentInChildren<DetectObjects>().CleanUpInteractionList();
+
+        // Resets camera position
+        PlayerController.playerCamera.transform.position = 
+            _player.transform.position + (Vector3.back * 10);
+
+        // Loads new scene and initializes variables
+        SceneManager.LoadScene(sceneName);
 
         // Unloads previous Scene
         //SceneManager.UnloadSceneAsync(_currentScene);

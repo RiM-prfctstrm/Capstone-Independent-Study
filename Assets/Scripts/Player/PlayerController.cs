@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     // External Components
     [SerializeField] DetectObjects _detector;
     [SerializeField] ParticleSystem _lossParticles;
-
+    public static GameObject playerCamera;
     // Parameters
     [SerializeField] float _accelTime;
     [SerializeField] float _brakeTime;
@@ -104,6 +104,7 @@ public class PlayerController : MonoBehaviour
         _playerAudioSource = GetComponent<AudioSource>();
         _playerAnimator = GetComponent<PlayerAnimator>();
         _playerRenderer = GetComponent<SpriteRenderer>();
+        playerCamera = GetComponentInChildren<Camera>().gameObject;
         rb2d = GetComponent<Rigidbody2D>();
 
         // Sets external objects
