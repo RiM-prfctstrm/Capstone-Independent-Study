@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 3/27/25
+ * UPDATED  : 3/31/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviour
     Vector2 _newVel;
 
     // States
+    bool _autoBraking;
     bool _isBraking;
     public bool isWalking;
     public bool inBikeableArea;
@@ -165,6 +166,19 @@ public class PlayerController : MonoBehaviour
         else
         {
             BikeMovement();
+        }
+
+        // Automatically brakes
+        if (_autoBraking)
+        {
+            _isBraking = true;
+            
+            // Ends Autobrake
+            if (rb2d.velocity == Vector2.zero)
+            {
+                _isBraking = false;
+                _autoBraking = false;
+            }
         }
 
         // Updates animations
@@ -318,6 +332,9 @@ public class PlayerController : MonoBehaviour
             {
                 _detector.target.OnInteractedWith();
                 lastTarget = _detector.target.gameObject;
+
+                // Brakes for interaction
+                _autoBraking = true;
             }
             else
             {
