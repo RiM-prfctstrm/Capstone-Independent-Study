@@ -258,7 +258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneName: ParkDistrict
   _isIndoors: 0
-  _position: {x: 16.5, y: -21.5, z: 0}
+  _position: {x: 16.5, y: -12.5, z: 0}
   _direction: 0
   _setsDirection: 0
 --- !u!1001 &262379889
@@ -470,6 +470,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e735ec56fc8e5f1478e58431f136038a, type: 3}
+--- !u!1 &372958276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3588125772243419929, guid: e735ec56fc8e5f1478e58431f136038a, type: 3}
+  m_PrefabInstance: {fileID: 372958275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &372958277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372958276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 577b3c4ac65c838439b86c9915bca0d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minX: 0
+  _minY: -10
+  _maxX: 20
+  _maxY: 0
 --- !u!1001 &412690522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1686,7 +1707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneName: ParkDistrict
   _isIndoors: 0
-  _position: {x: 11.5, y: -21.5, z: 0}
+  _position: {x: 11.5, y: -12.5, z: 0}
   _direction: 0
   _setsDirection: 0
 --- !u!1 &1998539618

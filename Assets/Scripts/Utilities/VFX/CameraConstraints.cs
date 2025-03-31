@@ -66,7 +66,6 @@ public class CameraConstraints : MonoBehaviour
             _constrainingVector.y != _unconstrainedPos.y)
         {
             _cameraSynced = false;
-            Debug.Log("doing");
             _constrainingVector.z = -10;
             PlayerController.playerCamera.transform.position = _constrainingVector;
         }
