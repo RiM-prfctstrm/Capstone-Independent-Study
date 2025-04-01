@@ -2,7 +2,7 @@
  * FILE     : ResetProgress.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/17/25
- * UPDATED  : 2/17/25
+ * UPDATED  : 4/1/25
  * 
  * DESC     : Used to reset GlobalVariableTracker to its default state
 =================================================================================================*/
@@ -22,9 +22,9 @@ public class ResetProgress : CutsceneEvent
     public override void PlayEventFunction()
     {
         base.PlayEventFunction();
-        
+
         // Resets variables
-        EssentialPreserver.instance.GetComponent<DebugProgressInjector>().InjectGlobalData();
+        GlobalVariableTracker.ResetAllProgress();
 
         // Marks completion
         eventComplete = true;

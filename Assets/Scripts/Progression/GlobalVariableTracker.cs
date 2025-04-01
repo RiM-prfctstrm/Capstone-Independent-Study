@@ -2,7 +2,7 @@
  * FILE     : GlobalVariableTracker.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/4/24
- * UPDATED  : 3/28/25
+ * UPDATED  : 4/1/25
  * 
  * DESC     : Stores data that is meant to persist throughout the entire game. Variables are kept
  *            in an initialized state to easily create a new save. If a save is loaded, they are
@@ -62,6 +62,26 @@ public class GlobalVariableTracker
     };
 
     #endregion
+
+    #endregion
+
+    #region CONTROL FUNCTIONS
+
+    /// <summary>
+    /// Resets all progress in the game
+    /// </summary>
+    public static void ResetAllProgress()
+    {
+        // Resets numerical values
+        collectiblesInPocket = 0;
+        currentMission = 0;
+
+        // Resets flags
+        foreach (string k in progressionFlags.Keys)
+        {
+            progressionFlags[k] = false;
+        }
+    }
 
     #endregion
 }
