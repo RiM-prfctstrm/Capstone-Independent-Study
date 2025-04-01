@@ -77,10 +77,19 @@ public class GlobalVariableTracker
         currentMission = 0;
 
         // Resets flags
-        foreach (string k in progressionFlags.Keys)
+        // Puts keys into a list so they can be modified
+        List<string> flagResetter = new List<string>();
+        foreach (string s in progressionFlags.Keys)
         {
-            progressionFlags[k] = false;
+            flagResetter.Add(s);
         }
+        // Performs reset
+        foreach (string s in flagResetter)
+        {
+            progressionFlags[s] = false;
+        }
+        // Clears list
+        flagResetter.Clear();
     }
 
     #endregion
