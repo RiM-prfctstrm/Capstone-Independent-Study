@@ -2,7 +2,7 @@
  * FILE     : InGameMainMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/14/24
- * UPDATED  : 3/27/25
+ * UPDATED  : 4/1/25
  * 
  * DESC     : Performs functions of the main in-game menu
 =================================================================================================*/
@@ -150,6 +150,9 @@ public class InGameMainMenu : MonoBehaviour
 
         // Removes cancel function
         PlayerController.playerController.cancel.performed -= ExitMenu;
+
+        // Tells game that it is out of main menu
+        inMainMenu = false;
 
         // Sets class singleton to ensure return event knows where to go. Probably a cleaner way of
         // doing this.

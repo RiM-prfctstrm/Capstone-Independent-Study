@@ -2,7 +2,7 @@
  * FILE     : TitleMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/31/24
- * UPDATED  : 3/14/25
+ * UPDATED  : 4/1/25
  * 
  * DESC     : Performs functions of the title screen menu.
 =================================================================================================*/
@@ -59,10 +59,11 @@ public class TitleMenu : MonoBehaviour
     #region BUTTON ACTIONS
 
     /// <summary>
-    /// Begins a new game on a blank save t save
+    /// Begins a new game on a blank save 
     /// </summary>
     public void StartNewGame()
     {
+        InGameMainMenu.inMainMenu = false;
         cancel.performed -= PlayCancelSound;
         SceneManager.LoadScene("Newscast");
     }

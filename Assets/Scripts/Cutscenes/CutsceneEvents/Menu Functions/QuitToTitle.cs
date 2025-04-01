@@ -26,18 +26,19 @@ public class QuitToTitle : CutsceneEvent
 
         // Resets global variables
         CollectibleManager.collectibleManager.ResetCount();
+        InGameMainMenu.inMainMenu = false;
 
         // Removes player inputs
         PlayerController.playerController.ClearAllInputFunctions();
+
+        // Completes Event
+        CutsceneManager.cutsceneManager.EndCutscene();
 
         // Returns the game to the title screen and deletes the scene essentials, which are not
         // meant to exist there
         SceneManager.LoadScene(0);
         Destroy(EssentialPreserver.instance.gameObject);
         EssentialPreserver.instance = null;
-
-        // Marks completion
-        eventComplete = true;
     }
 
     #endregion
