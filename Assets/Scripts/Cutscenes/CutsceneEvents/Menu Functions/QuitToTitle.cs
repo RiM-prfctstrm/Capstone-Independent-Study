@@ -2,7 +2,7 @@
  * FILE     : QuitToTitleu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/11/25
- * UPDATED  : 3/13/25
+ * UPDATED  : 4/1/25
  * 
  * DESC     : Returns to title screen scene and deletes all player objects. Originally part of
  *            InGameMainMenu.cs, moved to cutscene event for easier integration with choice menu.
@@ -26,6 +26,9 @@ public class QuitToTitle : CutsceneEvent
 
         // Resets global variables
         CollectibleManager.collectibleManager.ResetCount();
+
+        // Removes player inputs
+        PlayerController.playerController.ClearAllInputFunctions();
 
         // Returns the game to the title screen and deletes the scene essentials, which are not
         // meant to exist there

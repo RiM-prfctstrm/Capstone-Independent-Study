@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 3/31/25
+ * UPDATED  : 4/1/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -121,14 +121,13 @@ public class PlayerController : MonoBehaviour
         _yInput = _playerInputs.FindAction("MoveY");
 
         // Assigns actions to inputs
-        _brake.performed += ctx => _isBraking = true;
-        _brake.canceled += ctx => _isBraking = false;
-        cancel.performed += ctx => CollectibleManager.collectibleManager
-            .GetComponent<AudioSource>().PlayOneShot(_cancelSound);
+        _brake.performed += StartBraking;
+        _brake.canceled += StopBraking;
+        cancel.performed += PlayCollectionSound;
         cancel.Disable();
-        _debugSwitch.performed += ctx => ToggleBike();
-        openMenu.performed += ctx => OpenMenu(_menu, _mainMenuDefault);
-        _interact.performed += ctx => PerformInteraction();
+        _debugSwitch.performed += ToggleBike;
+        openMenu.performed += OpenMenu;
+        _interact.performed += PerformInteraction;
 
         // Initializes Accel/Decel Rates
         SetAccelDecel();
@@ -228,6 +227,8 @@ public class PlayerController : MonoBehaviour
 
     #region INPUT MANAGEMENT
 
+    #region INPUT MODE CONTROLS
+
     /// <summary>
     /// Disables certain inputs while biking based on the rigidbody's velocity angle to prevent the
     /// player from directly reverse.
@@ -317,6 +318,52 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Disables function of all inputs in the game
+    /// </summary>
+    public void ClearAllInputFunctions()
+    {
+        _brake.performed -= StartBraking;
+        _brake.canceled -= StopBraking;
+        cancel.performed -= PlayCollectionSound;
+        _debugSwitch.performed -= ToggleBike;
+        openMenu.performed -= OpenMenu;
+        _interact.performed -= PerformInteraction;
+    }
+
+    #endregion
+
+    #region INPUT FUNCTIONS
+    // Functions used by the input system so they can be removed when quitting the game. This
+    // section only includes functions for controls that didn't already play a function
+
+    /// <summary>
+    /// Enters braking state
+    /// </summary>
+    void StartBraking(InputAction.CallbackContext ctx)
+    {
+        _isBraking = true;
+    }
+
+    /// <summary>
+    /// Exits braking state
+    /// </summary>
+    void StopBraking(InputAction.CallbackContext ctx)
+    {
+        _isBraking = false;
+    }
+
+    /// <summary>
+    /// Plays the sound for picking up a collectible
+    /// </summary>
+    void PlayCollectionSound(InputAction.CallbackContext ctx)
+    {
+        CollectibleManager.collectibleManager.GetComponent<AudioSource>()
+            .PlayOneShot(_cancelSound);
+    }
+
+    #endregion'
+
     #endregion
 
     #region INTERACTIONS
@@ -324,7 +371,7 @@ public class PlayerController : MonoBehaviour
     /// <summary>
     /// Controls what the interact button does
     /// </summary>
-    void PerformInteraction()
+    void PerformInteraction(InputAction.CallbackContext ctx)
     {
         if (!CutsceneManager.inCutscene && !DialogueManager.dialogueInProgress)
         {
@@ -554,6 +601,31 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    public void ToggleBike(InputAction.CallbackContext ctx)
+    {
+        // Displays message telling player they can't ride in this area
+        if (!inBikeableArea)
+        {
+            CutsceneManager.cutsceneManager.StartCutscene(_cantRideMessage);
+        }
+        // Prevents player from deactivating bike while moving, as a balance measure
+        else if (isWalking || rb2d.velocity == Vector2.zero)
+        {
+            // Switches mode
+            isWalking = !isWalking;
+
+            // Changes material
+            if (!isWalking)
+            {
+                _playerAudioSource.PlayOneShot(_bikeBell);
+                rb2d.sharedMaterial = _bikeMaterial;
+            }
+            else
+            {
+                rb2d.sharedMaterial = null;
+            }
+        }
+    }
 
     /// <summary>
     /// Stops player in their tracks and zeros movement vars to stay there
@@ -604,6 +676,34 @@ public class PlayerController : MonoBehaviour
         }
         _interact.Disable();
     }
+    public void OpenMenu(InputAction.CallbackContext ctx)
+    {
+        // Prevents menu from opening in dialogue
+        if (DialogueManager.dialogueInProgress)
+        {
+            return;
+        }
+
+        // Opens menu
+        _menu.SetActive(true);
+        _mainMenuDefault.Select();
+
+        // Allows cancelling from menu
+        cancel.Enable();
+        if (_menu.GetComponent<InGameMainMenu>() != null)
+        {
+            cancel.performed += _menu.GetComponent<InGameMainMenu>().ExitMenu;
+        }
+
+        // Disables non-menu inputs
+        if (!CutsceneManager.inCutscene)
+        {
+            TogglePlayerInput();
+            _isBraking = true;
+        }
+        _interact.Disable();
+    }
+
 
     #endregion
 
