@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6573c93f484152c4db73b91a33bca188, type: 3}
+  m_Name: m2_4AAAAA_001_keepReading
+  m_EditorClassIdentifier: 
+  eventComplete: 0
+  _choiceDialogue:
+    dialogueText: Turn the page and keep Reading
+    nameTag: 
+    portrait: {fileID: 0}
+  _branchA: {fileID: 11400000, guid: afb5d002ea1bcc9488cab7fa6010c274, type: 2}
+  _branchB: {fileID: 11400000, guid: bea13a0d2cb7a9849b20c43b46a028d6, type: 2}
