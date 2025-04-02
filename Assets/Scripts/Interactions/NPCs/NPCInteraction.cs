@@ -2,7 +2,7 @@
  * FILE     : NPCInteraction.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/11/24
- * UPDATED  : 3/14/25
+ * UPDATED  : 4/2/25
  * 
  * DESC     : Controls how NPCs behave when the player interacts with them.
 =================================================================================================*/
@@ -123,6 +123,8 @@ public class NPCInteraction : InteractableObject
             _dialogueCycle = 0;
         }
 
+        // Disables movement input
+        PlayerController.playerController.TogglePlayerInput();
         // Plays Dialogue
         _dialogueManager.StartDialogue(_NPCLines[_dialogueCycle]);
 
