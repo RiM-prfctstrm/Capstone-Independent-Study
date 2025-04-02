@@ -2,7 +2,7 @@
  * FILE     : BranchScene.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/7/25
- * UPDATED  : 3/30/25
+ * UPDATED  : 4/2/25
  * 
  * DESC     : Lets the player choose between two branches for the scene to follow, A on yes, B on 
  *            no.
@@ -71,13 +71,6 @@ public class BranchScene : CutsceneEvent
         // Selects button
         PlayerController.playerController.OpenMenu(DialogueManager.dialogueManager.choiceMenu,
             DialogueManager.dialogueManager.choiceNo.GetComponent<Button>());
-
-        // Allows use of cancel button
-        /*PlayerController.playerController.cancel.performed += ctx =>
-            DialogueManager.dialogueManager.choiceNo.GetComponent<Button>().onClick.Invoke();*/
-
-        // Event complete should never equal true, and this type of event should only be used at
-        // the end of a cutscene script.
     }
 
     #endregion

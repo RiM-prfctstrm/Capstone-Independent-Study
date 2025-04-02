@@ -50,7 +50,12 @@ public class CutsceneManager : MonoBehaviour
         if (PlayerController.playerController.cancel.IsPressed() &&
             (_inCutscene || DialogueManager.dialogueInProgress))
         {
-            _skipGauge.value += Time.fixedDeltaTime;
+            // Fills Gauge
+            if (!DialogueManager.dialogueManager.choiceMenu.activeInHierarchy)
+            {
+                _skipGauge.value += Time.fixedDeltaTime;
+            }
+
 
             // Shows background
             if (!_skipHUD.activeInHierarchy)
@@ -69,6 +74,11 @@ public class CutsceneManager : MonoBehaviour
         // merge these systems after capstone)
         if (_skipGauge.value == 1)
         {
+            // Resets UI Vars
+            _skipGauge.value = 0;
+            _skipHUD.SetActive(false);
+
+            // Performs skip
             if (_inCutscene)
             {
                 SkipCutscene();
@@ -77,6 +87,15 @@ public class CutsceneManager : MonoBehaviour
             {
                 DialogueManager.dialogueManager.CancelDialogue();
             }
+        }
+
+        // Ensures skip HUD is hidden when taking finger off button
+        if (!PlayerController.playerController.cancel.IsPressed() &&
+            _skipHUD.activeInHierarchy)
+        {
+            Debug.Log("hiding");
+            _skipGauge.value = 0;
+            _skipHUD.SetActive(false);
         }
     }
 
