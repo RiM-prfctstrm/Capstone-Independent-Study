@@ -32,6 +32,8 @@ public class CutsceneManager : MonoBehaviour
     // Signals
     static bool _inCutscene = false;
     public static bool inCutscene => _inCutscene;
+    static bool _skippingCutscene = false;
+    public static bool skippingCutscene => _skippingCutscene;
 
     // Skip Position Determinants
     Cutscene _skipEvent;
@@ -133,15 +135,27 @@ public class CutsceneManager : MonoBehaviour
         CutsceneEvent i;
         MoveByVectors k;
 
+        // Signals skipping
+        _skippingCutscene = true;
+
+        // Fades out for skip
+        ScreenEffects.fadingOut = true;
+
         // Loops through cutscene events
-        for (int j = _skipPos; j < _skipEvent.cutsceneScript.Count; j++)
+        for (int j = _skipPos - 1; j < _skipEvent.cutsceneScript.Count; j++)
         {
+            if (j < 0)
+            {
+                j = 0;
+            }
+
             // Set event
             i = _skipEvent.cutsceneScript[j];
 
             // Skips events that do not alter game state beyond cosmetics within cutscene
             if (i.GetType() == typeof(CutsceneDialogue) || i.GetType() == typeof(ScriptedWait) ||
-                i.GetType() == typeof(FadeForCutscene) || i.GetType() == typeof(PlaySound))
+                i.GetType() == typeof(FadeForCutscene) || i.GetType() == typeof(PlaySound) ||
+                i.GetType() == typeof(DisplayImage)) 
             {
                 i.eventComplete = true;
                 continue;
@@ -152,12 +166,18 @@ public class CutsceneManager : MonoBehaviour
                      i.GetType() == typeof(CutsceneSceneTransition) ||
                      i.GetType() == typeof(SetEventMusic) ||
                      i.GetType() == typeof(ToggleVisibility) ||
-                     i.GetType() == typeof(ChangeActiveState) ||
-                     i.GetType() == typeof(DisplayImage) || i.GetType() == typeof(ClearImage) ||
+                     i.GetType() == typeof(ChangeActiveState) || 
+                     i.GetType() == typeof(ClearImage) ||
                      i.GetType() == typeof(BranchScene) || i.GetType() == typeof(QuitToTitle) ||
                      i.GetType() == typeof(ReturnToMenu) || i.GetType() == typeof(ResetProgress))
             {
                 i.PlayEventFunction();
+
+                // Fades in for choice
+                if (i.GetType() == typeof(BranchScene))
+                {
+                    ScreenEffects.fadingIn = true;
+                }
             }
             // Instantaneously performs character movement
             else if (i.GetType() == typeof(MoveByVectors) || i.GetType() == typeof(MoveToPoint))
@@ -168,13 +188,15 @@ public class CutsceneManager : MonoBehaviour
 
             // Delays until the next event is ready, primarily used to keep flow during scene
             // changes. Ironic that this exists
-            yield return new WaitUntil(() => i.eventComplete == true);
+            yield return new WaitUntil(() => i.eventComplete == true &&
+                !ScreenEffects.fadingOut);
         }
 
-        // Ensures screen is faded in
-        ScreenEffects.blackFader.color = Color.clear;
+        // Fades screen back in
+        ScreenEffects.fadingIn = true;
 
-        //Exits Cutscene State
+        // Exits Cutscene State
+        _skippingCutscene = false;
         EndCutscene();
     }
 
@@ -189,12 +211,13 @@ public class CutsceneManager : MonoBehaviour
     void ControlSkipUI()
     {
         // Fills gauge to skip event
-        if (PlayerController.playerController.cancel.IsPressed() &&
+        if (PlayerController.playerController.cancel.IsPressed() && !_skippingCutscene &&
             (_inCutscene || NPCInteraction.inNPCInteraction))
         {
             // Fills Gauge
             if (!DialogueManager.dialogueManager.choiceMenu.activeInHierarchy)
             {
+                CollectibleManager.collectibleManager.GetComponent<AudioSource>().mute = true;
                 _skipGauge.value += Time.fixedDeltaTime;
             }
 
@@ -207,6 +230,8 @@ public class CutsceneManager : MonoBehaviour
         // Resets gauge when button removed
         else if (_skipGauge.value != 0)
         {
+            CollectibleManager.collectibleManager.GetComponent<AudioSource>().mute = false;
+            PlayerController.playerController.PlayCancelSound();
             _skipGauge.value = 0;
             _skipHUD.SetActive(false);
         }
@@ -218,6 +243,10 @@ public class CutsceneManager : MonoBehaviour
             // Resets UI Vars
             _skipGauge.value = 0;
             _skipHUD.SetActive(false);
+
+            // Plays skipping soundeffect
+            CollectibleManager.collectibleManager.GetComponent<AudioSource>().mute = false;
+            PlayerController.playerController.PlayCancelSound();
 
             // Performs skip
             if (_inCutscene)
@@ -234,7 +263,8 @@ public class CutsceneManager : MonoBehaviour
         if (!PlayerController.playerController.cancel.IsPressed() &&
             _skipHUD.activeInHierarchy)
         {
-            Debug.Log("hiding");
+            CollectibleManager.collectibleManager.GetComponent<AudioSource>().mute = false;
+            PlayerController.playerController.PlayCancelSound();
             _skipGauge.value = 0;
             _skipHUD.SetActive(false);
         }

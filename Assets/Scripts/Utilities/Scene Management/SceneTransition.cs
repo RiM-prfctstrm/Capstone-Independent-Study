@@ -2,7 +2,7 @@
  * FILE     : SceneTransition
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/29/24
- * UPDATED  : 3/31/25
+ * UPDATED  : 4/2/25
  * 
  * DESC     : Switches scenes and sets variables to initialize that scene's state after transition.
 =================================================================================================*/
@@ -138,7 +138,10 @@ public class SceneTransition
     static IEnumerator CompleteTransition()
     {
         // Fades back in
-        ScreenEffects.fadingIn = true;
+        if (!CutsceneManager.skippingCutscene)
+        {
+            ScreenEffects.fadingIn = true;
+        }
         yield return new WaitUntil(() => ScreenEffects.fadingIn == false);
 
         // Reenables Movement

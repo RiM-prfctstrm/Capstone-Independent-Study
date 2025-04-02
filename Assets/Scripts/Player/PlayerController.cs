@@ -123,7 +123,7 @@ public class PlayerController : MonoBehaviour
         // Assigns actions to inputs
         _brake.performed += StartBraking;
         _brake.canceled += StopBraking;
-        cancel.performed += PlayCollectionSound;
+        cancel.performed += PlayCancelSound;
         cancel.Disable();
         _debugSwitch.performed += ToggleBike;
         openMenu.performed += OpenMenu;
@@ -325,7 +325,7 @@ public class PlayerController : MonoBehaviour
     {
         _brake.performed -= StartBraking;
         _brake.canceled -= StopBraking;
-        cancel.performed -= PlayCollectionSound;
+        cancel.performed -= PlayCancelSound;
         _debugSwitch.performed -= ToggleBike;
         openMenu.performed -= OpenMenu;
         _interact.performed -= PerformInteraction;
@@ -356,7 +356,7 @@ public class PlayerController : MonoBehaviour
     /// <summary>
     /// Plays the sound for picking up a collectible
     /// </summary>
-    void PlayCollectionSound(InputAction.CallbackContext ctx)
+    public void PlayCancelSound(InputAction.CallbackContext ctx)
     {
         CollectibleManager.collectibleManager.GetComponent<AudioSource>()
             .PlayOneShot(_cancelSound);
@@ -704,6 +704,14 @@ public class PlayerController : MonoBehaviour
         _interact.Disable();
     }
 
+    /// <summary>
+    /// Plays the sound for picking up a collectible
+    /// </summary>
+    public void PlayCancelSound()
+    {
+        CollectibleManager.collectibleManager.GetComponent<AudioSource>()
+            .PlayOneShot(_cancelSound);
+    }
 
     #endregion
 

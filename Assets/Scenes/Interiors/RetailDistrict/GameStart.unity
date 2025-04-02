@@ -583,16 +583,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
-      value: 'A poster for Hungry Knight: Milksong'
+      value: A poster for an open world game where you play as a ninja.
       objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
-      value: This game has been meant to release next year since long before you
-        were born,
+      value: There's 600 sidequests where you just do the same 3 things in slightly
+        different plains and coniferous forests.
       objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
@@ -1177,7 +1177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4799836136673350852, guid: e735ec56fc8e5f1478e58431f136038a, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4799836136673350852, guid: e735ec56fc8e5f1478e58431f136038a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1323,12 +1323,20 @@ PrefabInstance:
       value: GameRackSide
       objectReference: {fileID: 0}
     - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
-      value: Project Cubed
+      value: Cubed!
       objectReference: {fileID: 0}
     - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: It's so fun to watch it must be a delight to play.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377580199042526436, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
+      value: Maybe you should go do that when you're done with this!
       objectReference: {fileID: 0}
     - target: {fileID: 8795745378315466013, guid: 718ff7a11fd9fb34982eda8587145787, type: 3}
       propertyPath: m_RootOrder
