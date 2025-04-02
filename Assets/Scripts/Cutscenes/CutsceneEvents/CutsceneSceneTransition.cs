@@ -2,7 +2,7 @@
  * FILE     : CutsceneSceneTransition.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/7/24
- * UPDATED  : 1/21/25
+ * UPDATED  : 4/2/25
  * 
  * DESC     : Controls scene transitions in the middle of a cutscene, allowing a single script to
  *            continue across multiple scenes.
@@ -35,6 +35,9 @@ public class CutsceneSceneTransition : CutsceneEvent
     {
         base.PlayEventFunction();
 
+        // Disables cancelling during transtion
+        PlayerController.playerController.cancel.Disable();
+
         // Loads new scene
         CutsceneManager.cutsceneManager.StartCoroutine(
             SceneTransition.TransitionScene(_scene, _isIndoors, _playerPos, _playerDirection));
@@ -55,12 +58,13 @@ public class CutsceneSceneTransition : CutsceneEvent
     {
         // Load wait is preserved to ensure completion isn't signalled before the transition
         // coroutine signals the transition has begun.
-        //yield return new WaitUntil(() => SceneTransition.inTransition == false);
         while (SceneTransition.inTransition || SceneManager.GetActiveScene().name != _scene)
         {
             yield return new WaitForFixedUpdate();
         }
 
+        // Reenables regular cutscene functions
+        PlayerController.playerController.cancel.Enable();
         eventComplete = true;
     }
 

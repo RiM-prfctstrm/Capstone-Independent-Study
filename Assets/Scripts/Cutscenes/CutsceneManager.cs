@@ -2,13 +2,14 @@
  * FILE     : CutsceneManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1X/X/24
- * UPDATED  : 3/25/25
+ * UPDATED  : 4/2/25
  * 
  * DESC     : Controls the progression of scripted events.
 =================================================================================================*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CutsceneManager : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class CutsceneManager : MonoBehaviour
     // Object References, typically to allow event SOs to refer to objects in the scene
     [SerializeField] GameObject _UISpace;
     public GameObject UISpace => _UISpace;
+    [SerializeField] Slider _skipGauge;
+    [SerializeField] GameObject _skipHUD;
+
     // A list of characters that can be used in cutscenes. This keeps the cutscene functions
     // uncluttered by NPCs that aren't used by them, making the object references easier to keep
     // track of.
@@ -38,15 +42,41 @@ public class CutsceneManager : MonoBehaviour
     #region UNIVERSAL EVENTS
 
     /// <summary>
-    /// Update is called once per frame
+    /// This function is called every fixed framerate frame.
     /// </summary>
-    void Update()
+    void FixedUpdate()
     {
-        // DEBUG
-        // Skips cutscenes. To be added to main functionality
-        if (PlayerController.playerController.cancel.WasPressedThisFrame() && inCutscene)
+        // Fills gauge to skip event
+        if (PlayerController.playerController.cancel.IsPressed() &&
+            (_inCutscene || DialogueManager.dialogueInProgress))
         {
-            SkipCutscene();
+            _skipGauge.value += Time.fixedDeltaTime;
+
+            // Shows background
+            if (!_skipHUD.activeInHierarchy)
+            {
+                _skipHUD.SetActive(true);
+            }
+        }
+        // Resets gauge when button removed
+        else if (_skipGauge.value != 0)
+        {
+            _skipGauge.value = 0;
+            _skipHUD.SetActive(false);
+        }
+
+        // Skips cutscene or dialogue (all done here for simplicity's sake, and because I plan to
+        // merge these systems after capstone)
+        if (_skipGauge.value == 1)
+        {
+            if (_inCutscene)
+            {
+                SkipCutscene();
+            }
+            else if (DialogueManager.dialogueInProgress)
+            {
+                DialogueManager.dialogueManager.CancelDialogue();
+            }
         }
     }
 
@@ -105,6 +135,12 @@ public class CutsceneManager : MonoBehaviour
         PlayerController.playerController.TogglePlayerInput();
     }
 
+    #endregion
+
+    #region CUTSCENE SKIPPING
+
+    #region SKIPPING FUNCTIONS
+
     /// <summary>
     /// Triggers cutscene skipping
     /// </summary>
@@ -135,7 +171,7 @@ public class CutsceneManager : MonoBehaviour
             i = _skipEvent.cutsceneScript[j];
 
             // Skips events that do not alter game state beyond cosmetics within cutscene
-            if (i.GetType() == typeof(CutsceneDialogue) || i.GetType() == typeof(ScriptedWait) || 
+            if (i.GetType() == typeof(CutsceneDialogue) || i.GetType() == typeof(ScriptedWait) ||
                 i.GetType() == typeof(FadeForCutscene) || i.GetType() == typeof(PlaySound))
             {
                 i.eventComplete = true;
@@ -172,6 +208,12 @@ public class CutsceneManager : MonoBehaviour
         //Exits Cutscene State
         EndCutscene();
     }
+
+    #endregion
+
+    #region SKIPPING UI
+
+    #endregion
 
     #endregion
 
