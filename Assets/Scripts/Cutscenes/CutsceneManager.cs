@@ -46,57 +46,7 @@ public class CutsceneManager : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
-        // Fills gauge to skip event
-        if (PlayerController.playerController.cancel.IsPressed() &&
-            (_inCutscene || DialogueManager.dialogueInProgress))
-        {
-            // Fills Gauge
-            if (!DialogueManager.dialogueManager.choiceMenu.activeInHierarchy)
-            {
-                _skipGauge.value += Time.fixedDeltaTime;
-            }
-
-
-            // Shows background
-            if (!_skipHUD.activeInHierarchy)
-            {
-                _skipHUD.SetActive(true);
-            }
-        }
-        // Resets gauge when button removed
-        else if (_skipGauge.value != 0)
-        {
-            _skipGauge.value = 0;
-            _skipHUD.SetActive(false);
-        }
-
-        // Skips cutscene or dialogue (all done here for simplicity's sake, and because I plan to
-        // merge these systems after capstone)
-        if (_skipGauge.value == 1)
-        {
-            // Resets UI Vars
-            _skipGauge.value = 0;
-            _skipHUD.SetActive(false);
-
-            // Performs skip
-            if (_inCutscene)
-            {
-                SkipCutscene();
-            }
-            else if (DialogueManager.dialogueInProgress)
-            {
-                DialogueManager.dialogueManager.CancelDialogue();
-            }
-        }
-
-        // Ensures skip HUD is hidden when taking finger off button
-        if (!PlayerController.playerController.cancel.IsPressed() &&
-            _skipHUD.activeInHierarchy)
-        {
-            Debug.Log("hiding");
-            _skipGauge.value = 0;
-            _skipHUD.SetActive(false);
-        }
+        ControlSkipUI();
     }
 
     #endregion
@@ -231,6 +181,64 @@ public class CutsceneManager : MonoBehaviour
     #endregion
 
     #region SKIPPING UI
+
+    /// <summary>
+    /// Shows, hides, and progresses the gauge to skip cutscenes, as well as displaying
+    /// notifications if the player can't skip at the moment.
+    /// </summary>
+    void ControlSkipUI()
+    {
+        // Fills gauge to skip event
+        if (PlayerController.playerController.cancel.IsPressed() &&
+            (_inCutscene || NPCInteraction.inNPCInteraction))
+        {
+            // Fills Gauge
+            if (!DialogueManager.dialogueManager.choiceMenu.activeInHierarchy)
+            {
+                _skipGauge.value += Time.fixedDeltaTime;
+            }
+
+            // Shows background
+            if (!_skipHUD.activeInHierarchy)
+            {
+                _skipHUD.SetActive(true);
+            }
+        }
+        // Resets gauge when button removed
+        else if (_skipGauge.value != 0)
+        {
+            _skipGauge.value = 0;
+            _skipHUD.SetActive(false);
+        }
+
+        // Skips cutscene or dialogue (all done here for simplicity's sake, and because I plan to
+        // merge these systems after capstone)
+        if (_skipGauge.value == 1)
+        {
+            // Resets UI Vars
+            _skipGauge.value = 0;
+            _skipHUD.SetActive(false);
+
+            // Performs skip
+            if (_inCutscene)
+            {
+                SkipCutscene();
+            }
+            else if (DialogueManager.dialogueInProgress)
+            {
+                DialogueManager.dialogueManager.CancelDialogue();
+            }
+        }
+
+        // Ensures skip HUD is hidden when taking finger off button
+        if (!PlayerController.playerController.cancel.IsPressed() &&
+            _skipHUD.activeInHierarchy)
+        {
+            Debug.Log("hiding");
+            _skipGauge.value = 0;
+            _skipHUD.SetActive(false);
+        }
+    }
 
     #endregion
 

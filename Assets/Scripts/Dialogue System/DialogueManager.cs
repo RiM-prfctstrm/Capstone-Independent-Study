@@ -80,11 +80,11 @@ public class DialogueManager : MonoBehaviour
         _dialogueOutline.SetActive(true);
 
         // Enables cancelling outside cutscenes
-        /*if (!CutsceneManager.inCutscene)
+        if (!CutsceneManager.inCutscene)
         {
             PlayerController.playerController.cancel.Enable();
-            PlayerController.playerController.cancel.performed += CancelDialogue;
-        }*/
+            //PlayerController.playerController.cancel.performed += CancelDialogue;
+        }
 
         // Clears existing dialogue to help skip unwanted first lines
         _dialogueText.text = "";
@@ -186,7 +186,7 @@ public class DialogueManager : MonoBehaviour
         // Disables cancelling functionality
         if (!CutsceneManager.inCutscene)
         {
-            //PlayerController.playerController.cancel.Disable();
+            PlayerController.playerController.cancel.Disable();
             //PlayerController.playerController.cancel.performed -= CancelDialogue;
             PlayerController.playerController.TogglePlayerInput();
         }
