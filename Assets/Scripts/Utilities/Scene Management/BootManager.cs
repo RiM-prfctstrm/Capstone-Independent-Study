@@ -2,7 +2,7 @@
  * FILE     : BootManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 3/12/25
+ * UPDATED  : 4/2/25
  * 
  * DESC     : Performs functionality that only occurs when the game is first started.
 =================================================================================================*/
@@ -32,6 +32,7 @@ public class BootManager : MonoBehaviour
     // Level-specific music
     //SerializeField] bool _hasLocalMusic = false;
     [SerializeField] AudioClip _localMusic;
+    [SerializeField] bool _noLoop = false;
     [SerializeField] bool _noMusic = false;
 
     // Map parameters
@@ -78,6 +79,7 @@ public class BootManager : MonoBehaviour
         else
         {
             MusicManager.musicManager.SwapSong(_localMusic, true);
+            MusicManager.musicManager.SetLooping(!_noLoop);
         }
 
         // Tells PlayerController whether you can bike indoors
