@@ -2,7 +2,7 @@
  * FILE     : BottleMailMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/16/25
- * UPDATED  : 3/10/25
+ * UPDATED  : 4/4/25
  * 
  * DESC     : Controls BottleMail menu behavior to emulate an email program.
 =================================================================================================*/
@@ -80,6 +80,12 @@ public class BottleMailMenu : MonoBehaviour
     /// </summary>
     public void CloseMenu()
     {
+        // Prevents closing while loading is not complete
+        if (ScreenEffects.fadingIn)
+        {
+            return;
+        }
+
         // Reenables player input
         PlayerController.playerController.TogglePlayerInput();
         PlayerController.playerController.cancel.performed -= CloseMenu;
@@ -90,6 +96,12 @@ public class BottleMailMenu : MonoBehaviour
     }
     public void CloseMenu(InputAction.CallbackContext ctx)
     {
+        // Prevents closing while loading is not complete
+        if (ScreenEffects.fadingIn)
+        {
+            return;
+        }
+
         // Reenables player input
         PlayerController.playerController.TogglePlayerInput();
         PlayerController.playerController.cancel.performed -= CloseMenu;
