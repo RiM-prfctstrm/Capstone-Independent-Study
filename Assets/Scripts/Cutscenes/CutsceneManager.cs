@@ -2,7 +2,7 @@
  * FILE     : CutsceneManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1X/X/24
- * UPDATED  : 4/2/25
+ * UPDATED  : 4/4/25
  * 
  * DESC     : Controls the progression of scripted events.
 =================================================================================================*/
@@ -104,6 +104,12 @@ public class CutsceneManager : MonoBehaviour
         _inCutscene = false;
         PlayerController.playerController.cancel.Disable();
         PlayerController.playerController.TogglePlayerInput();
+
+        // Reeneables cancelling if going into menu
+        if (InGameMainMenu.inMainMenu)
+        {
+            PlayerController.playerController.cancel.Enable();
+        }
     }
 
     #endregion

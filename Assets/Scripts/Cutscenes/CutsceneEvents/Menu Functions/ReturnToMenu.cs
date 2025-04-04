@@ -1,8 +1,8 @@
 /*=================================================================================================
- * FILE     : QuitToTitleu.cs
+ * FILE     : ReturnToMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/11/25
- * UPDATED  : 2/11/25
+ * UPDATED  : 4/4/25
  * 
  * DESC     : Exits from a cutscene event into the main in-game menu's default selection.
 =================================================================================================*/
@@ -37,8 +37,11 @@ public class ReturnToMenu : CutsceneEvent
 
         // Performs an extra movement toggle to ensure movement doesn't reactivate in confirmation
         PlayerController.playerController.TogglePlayerInput();
+        PlayerController.playerController.cancel.performed
+            += InGameMainMenu.inGameMainMenu.ExitMenu;
 
         // Performs selection
+        InGameMainMenu.inGameMainMenu.gameObject.SetActive(true);
         InGameMainMenu.inGameMainMenu.defaultSelection.Select();
 
         // Notifies completion
