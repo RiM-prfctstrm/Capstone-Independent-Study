@@ -258,7 +258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneName: ParkDistrict
   _isIndoors: 0
-  _position: {x: 16.5, y: -12.5, z: 0}
+  _position: {x: 16.5, y: -13.5, z: 0}
   _direction: 0
   _setsDirection: 0
 --- !u!1001 &262379889
@@ -442,8 +442,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5760787232082958619, guid: e735ec56fc8e5f1478e58431f136038a, type: 3}
       propertyPath: _noMusic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5760787232082958619, guid: e735ec56fc8e5f1478e58431f136038a, type: 3}
+      propertyPath: _localMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: d6e6293e3d67cc944b67964d4940136e, type: 3}
     - target: {fileID: 5760787232082958619, guid: e735ec56fc8e5f1478e58431f136038a, type: 3}
       propertyPath: _startPos.x
       value: 7.5
@@ -1707,7 +1711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneName: ParkDistrict
   _isIndoors: 0
-  _position: {x: 11.5, y: -12.5, z: 0}
+  _position: {x: 11.5, y: -13.5, z: 0}
   _direction: 0
   _setsDirection: 0
 --- !u!1 &1998539618

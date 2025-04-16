@@ -2,7 +2,7 @@
  * FILE     : CutsceneManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1X/X/24
- * UPDATED  : 4/4/25
+ * UPDATED  : 4/16/25
  * 
  * DESC     : Controls the progression of scripted events.
 =================================================================================================*/
@@ -183,6 +183,9 @@ public class CutsceneManager : MonoBehaviour
                 if (i.GetType() == typeof(BranchScene))
                 {
                     ScreenEffects.fadingIn = true;
+
+                    // Stops skipping coroutine
+                    yield break;
                 }
             }
             // Instantaneously performs character movement

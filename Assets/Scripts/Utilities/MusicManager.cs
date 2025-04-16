@@ -2,7 +2,7 @@
  * FILE     : MusicManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 12/6/24
- * UPDATED  : 4/2/25
+ * UPDATED  : 4/16/25
  * 
  * DESC     : Controls which music is currently playing.
 =================================================================================================*/
@@ -105,7 +105,7 @@ public class MusicManager : MonoBehaviour
     /// <param name="active"></param>
     public void SetLooping(bool active)
     {
-        _musicSource.loop = false;
+        _musicSource.loop = active;
     }
 
     #endregion
