@@ -185,6 +185,7 @@ public class CutsceneManager : MonoBehaviour
                     ScreenEffects.fadingIn = true;
 
                     // Stops skipping coroutine
+                    _skippingCutscene = false;
                     yield break;
                 }
             }
@@ -219,6 +220,7 @@ public class CutsceneManager : MonoBehaviour
     /// </summary>
     void ControlSkipUI()
     {
+
         // Fills gauge to skip event
         if (PlayerController.playerController.cancel.IsPressed() && !_skippingCutscene &&
             (_inCutscene || NPCInteraction.inNPCInteraction))
