@@ -15,7 +15,11 @@ MonoBehaviour:
   eventComplete: 0
   cutsceneDialogue:
     dialogueBoxes:
-    - dialogueText: You can look at your map from your menu, which you can access
-        with these buttons.
+    - dialogueText: You can look at your map from your menu, which you can open with
+        one of these buttons.
+      nameTag: Friendly Cyclist
+      portrait: {fileID: 0}
+    - dialogueText: The more nanoblips you have, the more precisely you can see your
+        location.
       nameTag: Friendly Cyclist
       portrait: {fileID: 0}

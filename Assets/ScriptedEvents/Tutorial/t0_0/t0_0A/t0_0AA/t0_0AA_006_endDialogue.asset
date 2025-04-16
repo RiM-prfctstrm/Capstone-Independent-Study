@@ -12,9 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
   m_Name: t0_0AA_006_endDialogue
   m_EditorClassIdentifier: 
-  eventComplete: 0
+  eventComplete: 1
   cutsceneDialogue:
     dialogueBoxes:
+    - dialogueText: If you have a lot of nanoblips, you can even see where your destination
+        is, as long as you know its address.
+      nameTag: Friendly Cyclist
+      portrait: {fileID: 0}
+    - dialogueText: Just be careful, because if you crash on your bike, you'll lose
+        nanoblips.
+      nameTag: Friendly Cyclist
+      portrait: {fileID: 0}
+    - dialogueText: It's not the end of the world if that happens, though, because
+        they'll eventually find their way back to where they belong.
+      nameTag: Friendly Cyclist
+      portrait: {fileID: 0}
+    - dialogueText: Just go somewhere else for a while, and they'll be waiting for
+        you when you get back.
+      nameTag: Friendly Cyclist
+      portrait: {fileID: 0}
+    - dialogueText: One last thing, they automatically go back to their assigned
+        positions overnight, so you can't keep them after a day.
+      nameTag: Friendly Cyclist
+      portrait: {fileID: 0}
     - dialogueText: And that's how nanoblips work. If you ever want a refresher on
         that or on how cycling works again, just talk to me again.
       nameTag: Friendly Cyclist
