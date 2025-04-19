@@ -2,7 +2,7 @@
  * FILE     : ScreenEffects
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/8/25
- * UPDATED  : 4/17/25
+ * UPDATED  : 4/19/25
  * 
  * DESC     : Performs visual effects that take up the whole screen.
 =================================================================================================*/
@@ -53,13 +53,6 @@ public class ScreenEffects : MonoBehaviour
         }
         if (fadingIn)
         {
-            // Overrides FadeOuts
-            if (fadingOut)
-            {
-                fadingOut = false;
-            }
-
-            // Fades screen
             FadeIn();
         }
     }
