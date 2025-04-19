@@ -2,7 +2,7 @@
  * FILE     : ElevatorProgression.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/9/25
- * UPDATED  : 3/12/25
+ * UPDATED  : 4/19/25
  * 
  * DESC     : Controls bespoke visual effects triggered by the space elevator rising. Specifically,
  *            changes backgrounds and warps the player to the destination chamber. Changes are
@@ -64,7 +64,6 @@ public class ElevatorProgression : MonoBehaviour
     {
         // Sets Current Elevator level
         level += polarity;
-        Debug.Log(level);
 
         // Changes elevator state when the trigger object reaches this point
         switch (level)
