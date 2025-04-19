@@ -158,6 +158,7 @@ public class CutsceneManager : MonoBehaviour
             // Set event
             i = _skipEvent.cutsceneScript[j];
             i.eventComplete = false;
+            Debug.Log(i);
 
             // Skips events that do not alter game state beyond cosmetics within cutscene
             if (i.GetType() == typeof(CutsceneDialogue) || i.GetType() == typeof(ScriptedWait) ||
@@ -177,7 +178,8 @@ public class CutsceneManager : MonoBehaviour
                      i.GetType() == typeof(ClearImage) ||
                      i.GetType() == typeof(BranchScene) || i.GetType() == typeof(QuitToTitle) ||
                      i.GetType() == typeof(ReturnToMenu) || i.GetType() == typeof(ResetProgress) ||
-                     i.GetType() == typeof(PauseTimer) || i.GetType() == typeof(ResumeTimer))
+                     i.GetType() == typeof(PauseTimer) || i.GetType() == typeof(ResumeTimer) ||
+                     i.GetType() == typeof(StopTimer))
             {
                 i.PlayEventFunction();
 
