@@ -29,6 +29,9 @@ public class TimerController : MonoBehaviour
     [SerializeField] TextMeshProUGUI _countdownClock;
     [SerializeField] GameObject _timerBG;
 
+    // Signals
+    public static bool timerInProgress = false;
+
     #endregion
 
     #region UNIVERSAL EVENTS
@@ -66,6 +69,7 @@ public class TimerController : MonoBehaviour
         UpdateHUDClock();
 
         // Starts countdown
+        timerInProgress = true;
         StartCoroutine(_countdownRoutine);
     }
 
@@ -111,6 +115,7 @@ public class TimerController : MonoBehaviour
     public void StopTimer()
     {
         StopCoroutine(_countdownRoutine);
+        timerInProgress = false;
         HideClock();
     }
 
