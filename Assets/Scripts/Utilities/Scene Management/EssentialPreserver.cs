@@ -2,7 +2,7 @@
  * FILE     : EssentialPreserver.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 2/16/25
+ * UPDATED  : 4/19/25
  * 
  * DESC     : Used to keep scene essentials when a new scene is loaded.
 =================================================================================================*/
@@ -41,6 +41,7 @@ public class EssentialPreserver : MonoBehaviour
         CutsceneManager.cutsceneManager = GetComponentInChildren<CutsceneManager>();
         MusicManager.musicManager = GetComponentInChildren<MusicManager>();
         CollectibleManager.collectibleManager = GetComponentInChildren<CollectibleManager>();
+        TimerController.timerController = GetComponentInChildren<TimerController>();
 
         // Performs bespoke initializations for other kinds of objects
         InitializeCutscenes();

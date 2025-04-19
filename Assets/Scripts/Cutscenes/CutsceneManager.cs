@@ -2,7 +2,7 @@
  * FILE     : CutsceneManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1X/X/24
- * UPDATED  : 4/16/25
+ * UPDATED  : 4/19/25
  * 
  * DESC     : Controls the progression of scripted events.
 =================================================================================================*/
@@ -157,11 +157,12 @@ public class CutsceneManager : MonoBehaviour
 
             // Set event
             i = _skipEvent.cutsceneScript[j];
+            i.eventComplete = false;
 
             // Skips events that do not alter game state beyond cosmetics within cutscene
             if (i.GetType() == typeof(CutsceneDialogue) || i.GetType() == typeof(ScriptedWait) ||
                 i.GetType() == typeof(FadeForCutscene) || i.GetType() == typeof(PlaySound) ||
-                i.GetType() == typeof(DisplayImage)) 
+                i.GetType() == typeof(DisplayImage))
             {
                 i.eventComplete = true;
                 continue;
@@ -172,10 +173,11 @@ public class CutsceneManager : MonoBehaviour
                      i.GetType() == typeof(CutsceneSceneTransition) ||
                      i.GetType() == typeof(SetEventMusic) ||
                      i.GetType() == typeof(ToggleVisibility) ||
-                     i.GetType() == typeof(ChangeActiveState) || 
+                     i.GetType() == typeof(ChangeActiveState) ||
                      i.GetType() == typeof(ClearImage) ||
                      i.GetType() == typeof(BranchScene) || i.GetType() == typeof(QuitToTitle) ||
-                     i.GetType() == typeof(ReturnToMenu) || i.GetType() == typeof(ResetProgress))
+                     i.GetType() == typeof(ReturnToMenu) || i.GetType() == typeof(ResetProgress) ||
+                     i.GetType() == typeof(PauseTimer) || i.GetType() == typeof(ResumeTimer))
             {
                 i.PlayEventFunction();
 
