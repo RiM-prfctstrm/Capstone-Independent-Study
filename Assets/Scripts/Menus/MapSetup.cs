@@ -2,7 +2,7 @@
  * FILE     : MapSetup.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/25/25
- * UPDATED  : 3/13/25
+ * UPDATED  : 4/19/25
  * 
  * DESC     : Places and sizes map icons when map is first unloade
 =================================================================================================*/
@@ -81,7 +81,7 @@ public class MapSetup : MonoBehaviour
     void SetMarkerImages()
     {
         // Destination Marker
-        if (GlobalVariableTracker.collectiblesInPocket >= 47)
+        if (GlobalVariableTracker.collectiblesInPocket >= 97)
         {
             _destinationMarker.sprite = _destinationSmall;
         }
@@ -91,7 +91,7 @@ public class MapSetup : MonoBehaviour
         }
 
         // Player Marker
-        if (GlobalVariableTracker.collectiblesInPocket >= 97)
+        if (GlobalVariableTracker.collectiblesInPocket >= 47)
         {
             _playerMarker.sprite = _playerSmall;
         }
@@ -134,19 +134,19 @@ public class MapSetup : MonoBehaviour
             scaleFactor += 4;
 
             // Set object size
-            _playerMarker.gameObject.SetActive(false);
-            _destinationMarker.gameObject.SetActive(true);
-            _destinationMarker.rectTransform.sizeDelta = new Vector2(scaleFactor, scaleFactor);
+            _destinationMarker.gameObject.SetActive(false);
+            _playerMarker.gameObject.SetActive(true);
+            _playerMarker.rectTransform.sizeDelta = new Vector2(scaleFactor, scaleFactor);
 
             // Increases opacity for better visibility at small scale
             if (scaleFactor < 200)
             {
                 colorStrength = GlobalVariableTracker.collectiblesInPocket / 50;
-                _destinationMarker.color = new Color(255, 255, 255, colorStrength);
+                _playerMarker.color = new Color(255, 255, 255, colorStrength);
             }
             else
             {
-                _destinationMarker.color = new Color(255, 255, 255, .5f);
+                _playerMarker.color = new Color(255, 255, 255, .5f);
             }
         }
 
@@ -159,22 +159,22 @@ public class MapSetup : MonoBehaviour
             scaleFactor += 4;
 
             // Set object size
-            _playerMarker.gameObject.SetActive(true);
-            _playerMarker.rectTransform.sizeDelta = new Vector2(scaleFactor, scaleFactor);
             _destinationMarker.gameObject.SetActive(true);
-            _destinationMarker.rectTransform.sizeDelta = new Vector2(8, 8);
+            _destinationMarker.rectTransform.sizeDelta = new Vector2(scaleFactor, scaleFactor);
+            _playerMarker.gameObject.SetActive(true);
+            _playerMarker.rectTransform.sizeDelta = new Vector2(8, 8);
 
             // Increases opacity for better visibility at small scale
             if (scaleFactor < 200)
             {
                 colorStrength = (GlobalVariableTracker.collectiblesInPocket - 50) / 50;
-                _playerMarker.color = new Color(255, 255, 255, colorStrength);
+                _destinationMarker.color = new Color(255, 255, 255, colorStrength);
             }
             else
             {
-                _playerMarker.color = new Color(255, 255, 255, .5f);
+                _destinationMarker.color = new Color(255, 255, 255, .5f);
             }
-            _destinationMarker.color = Color.white;
+            _playerMarker.color = Color.white;
         }
 
         // Displays both markers fully shrunk to prevent overload
