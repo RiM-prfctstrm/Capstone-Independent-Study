@@ -21,13 +21,18 @@ public class TimerController : MonoBehaviour
     // Countdown function
     IEnumerator _countdownRoutine;
 
-    // Countdown holders
+    // Countdown vars
+    int _minuteCounter = 0;
     int _pausedTime;
     int _timeRemaining;
 
     // UI Objects
     [SerializeField] TextMeshProUGUI _countdownClock;
     [SerializeField] GameObject _timerBG;
+
+    // Display numbers
+    int _displayMinutes;
+    int _displaySeconds;
 
     // Signals
     public static bool timerInProgress = false;
@@ -61,10 +66,12 @@ public class TimerController : MonoBehaviour
     /// Prepares timer's initial state and begins countdown
     /// </summary>
     /// <param name="startSeconds">Total time when the timer is first started, in seconds</param>
-    public void BeginTimer(int startSeconds)
+    /// <param name="startMinutes">Total time when the timer is first started, in seconds</param>
+    public void BeginTimer(int startSeconds, int startMinutes)
     {
         // Initializes countdown and UI
         _timeRemaining = startSeconds;
+       _displayMinutes = startMinutes;
         ShowClock();
         UpdateHUDClock();
 
@@ -136,7 +143,20 @@ public class TimerController : MonoBehaviour
     /// </summary>
     void UpdateHUDClock()
     {
-        Debug.Log(_timeRemaining);
+        // Updates minute display
+        _minuteCounter++;
+        if (_minuteCounter == 60)
+        {
+            _displayMinutes--;
+            _minuteCounter = 0;
+        }
+
+        // Updates seconds display
+        _displaySeconds = _timeRemaining % 60;
+
+        // Displays time remaining
+        _countdownClock.text = _displayMinutes.ToString() + ":" + _displaySeconds.ToString();
+        //Debug.Log(_timeRemaining);
     }
 
     /// <summary>
@@ -148,4 +168,5 @@ public class TimerController : MonoBehaviour
     }
 
     #endregion
+
 }

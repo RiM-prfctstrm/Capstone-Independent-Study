@@ -50,7 +50,7 @@ public class TimerStartTrigger : MonoBehaviour
         // If timer is not already running, begins timer
         if(!TimerController.timerInProgress)
         {
-            TimerController.timerController.BeginTimer(_seconds);
+            TimerController.timerController.BeginTimer(_seconds, _minutes);
         }
 
         // Destroys object to prevent repeat collisions
