@@ -158,7 +158,6 @@ public class CutsceneManager : MonoBehaviour
             // Set event
             i = _skipEvent.cutsceneScript[j];
             i.eventComplete = false;
-            Debug.Log(i);
 
             // Skips events that do not alter game state beyond cosmetics within cutscene
             if (i.GetType() == typeof(CutsceneDialogue) || i.GetType() == typeof(ScriptedWait) ||

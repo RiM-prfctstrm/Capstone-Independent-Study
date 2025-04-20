@@ -33,6 +33,7 @@ public class TimerController : MonoBehaviour
     // Display numbers
     int _displayMinutes;
     int _displaySeconds;
+    string _displayText;
 
     // Signals
     public static bool timerInProgress = false;
@@ -71,8 +72,9 @@ public class TimerController : MonoBehaviour
     {
         // Initializes countdown and UI
         _timeRemaining = startSeconds;
-       _displayMinutes = startMinutes;
-        ShowClock();
+        _displayMinutes = startMinutes;
+        _minuteCounter = 58;
+        _timerBG.SetActive(true);
         UpdateHUDClock();
 
         // Starts countdown
@@ -131,18 +133,13 @@ public class TimerController : MonoBehaviour
     #region VISUAL INDICATORS
 
     /// <summary>
-    /// Activates clock display
-    /// </summary>
-    void ShowClock()
-    {
-
-    }
-
-    /// <summary>
     /// Sets the clock display to show current time remaining
     /// </summary>
     void UpdateHUDClock()
     {
+        // Reverts displat text
+        _displayText = "";
+
         // Updates minute display
         _minuteCounter++;
         if (_minuteCounter == 60)
@@ -150,12 +147,22 @@ public class TimerController : MonoBehaviour
             _displayMinutes--;
             _minuteCounter = 0;
         }
+        if (_displayMinutes < 10)
+        {
+            _displayText += 0;
+        }
+        _displayText += _displayMinutes + ":";
 
         // Updates seconds display
         _displaySeconds = _timeRemaining % 60;
+        if(_displaySeconds < 10)
+        {
+            _displayText += 0;
+        }
+        _displayText += _displaySeconds;
 
         // Displays time remaining
-        _countdownClock.text = _displayMinutes.ToString() + ":" + _displaySeconds.ToString();
+        _countdownClock.text = _displayText;
         //Debug.Log(_timeRemaining);
     }
 
@@ -164,7 +171,7 @@ public class TimerController : MonoBehaviour
     /// </summary>
     void HideClock()
     {
-
+        _timerBG.SetActive(false);
     }
 
     #endregion
