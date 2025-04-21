@@ -2,13 +2,14 @@
  * FILE     : TimerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 4/19/25
- * UPDATED  : 4/19/25
+ * UPDATED  : 4/20/25
  * 
  * DESC     : Controls countdown timer that ends the game when it reaches 0.
 =================================================================================================*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class TimerController : MonoBehaviour
@@ -37,6 +38,9 @@ public class TimerController : MonoBehaviour
 
     // Signals
     public static bool timerInProgress = false;
+
+    // Game Over vars
+    [SerializeField] Cutscene _gameOverScene;
 
     #endregion
 
@@ -98,6 +102,9 @@ public class TimerController : MonoBehaviour
             _timeRemaining--;
             UpdateHUDClock();
         }
+
+        // Performs functionality on ending the clock
+        OnTimerReachZero();
     }
 
     /// <summary>
@@ -126,6 +133,18 @@ public class TimerController : MonoBehaviour
         StopCoroutine(_countdownRoutine);
         timerInProgress = false;
         HideClock();
+    }
+
+    /// <summary>
+    /// Triggers the game's end when the countdown concludes
+    /// </summary>
+    void OnTimerReachZero()
+    {
+        // Stops all current events
+        StopAllCoroutines();
+
+        // Exits game
+        GameOver();
     }
 
     #endregion
@@ -176,4 +195,34 @@ public class TimerController : MonoBehaviour
 
     #endregion
 
+
+    #region GAME OVER
+    
+    /// <summary>
+    /// Runs failure state. Basically copied from QuitToTitle.cs with one var changed
+    /// </summary>
+    void GameOver()
+    {
+        // Removes player inputs
+        PlayerController.playerController.ClearAllInputFunctions();
+
+        // Completes Event
+        CutsceneManager.cutsceneManager.EndCutscene();
+
+        // Resets global variables
+        CollectibleManager.collectibleManager.ResetCount();
+        InGameMainMenu.inMainMenu = false;
+
+        // Resets progress
+        DebugProgressInjector resetter = new DebugProgressInjector();
+        resetter.InjectGlobalData();
+
+        // Returns the game to the title screen and deletes the scene essentials, which are not
+        // meant to exist there
+        SceneManager.LoadScene("GameOver");
+        Destroy(EssentialPreserver.instance.gameObject);
+        EssentialPreserver.instance = null;
+    }
+
+    #endregion
 }
