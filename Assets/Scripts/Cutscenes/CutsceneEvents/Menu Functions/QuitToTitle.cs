@@ -2,7 +2,7 @@
  * FILE     : QuitToTitleu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/11/25
- * UPDATED  : 4/20/25
+ * UPDATED  : 4/22/25
  * 
  * DESC     : Returns to title screen scene and deletes all player objects. Originally part of
  *            InGameMainMenu.cs, moved to cutscene event for easier integration with choice menu.
@@ -36,7 +36,8 @@ public class QuitToTitle : CutsceneEvent
         InGameMainMenu.inMainMenu = false;
 
         // Resets progress
-        DebugProgressInjector resetter = new DebugProgressInjector();
+        DebugProgressInjector resetter =
+            CutsceneManager.cutsceneManager.gameObject.AddComponent<DebugProgressInjector>();
         resetter.InjectGlobalData();
 
         // Returns the game to the title screen and deletes the scene essentials, which are not
