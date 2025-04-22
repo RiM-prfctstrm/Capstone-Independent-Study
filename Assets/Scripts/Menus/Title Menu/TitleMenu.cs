@@ -2,7 +2,7 @@
  * FILE     : TitleMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/31/24
- * UPDATED  : 4/1/25
+ * UPDATED  : 4/22/25
  * 
  * DESC     : Performs functions of the title screen menu.
 =================================================================================================*/
@@ -52,6 +52,9 @@ public class TitleMenu : MonoBehaviour
             
         // Inits volume
         GetComponent<AudioSource>().volume = GlobalVariableTracker.musicVolume;
+
+        // Fades in
+        ScreenEffects.fadingIn = true;
     }
 
     #endregion

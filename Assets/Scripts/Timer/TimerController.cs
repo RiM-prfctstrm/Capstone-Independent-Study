@@ -2,7 +2,7 @@
  * FILE     : TimerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 4/19/25
- * UPDATED  : 4/20/25
+ * UPDATED  : 4/22/25
  * 
  * DESC     : Controls countdown timer that ends the game when it reaches 0.
 =================================================================================================*/
@@ -143,8 +143,19 @@ public class TimerController : MonoBehaviour
         // Stops all current events
         StopAllCoroutines();
 
+        // Stops game actions
+        // Removes player inputs
+        PlayerController.playerController.ClearAllInputFunctions();
+        // Completes Event
+        if (CutsceneManager.inCutscene)
+        {
+            CutsceneManager.cutsceneManager.EndCutscene();
+        }
+        // Fade effect
+        ScreenEffects.fadingOut = true;
+
         // Exits game
-        GameOver();
+        StartCoroutine(GameOver());
     }
 
     #endregion
@@ -201,17 +212,15 @@ public class TimerController : MonoBehaviour
     /// <summary>
     /// Runs failure state. Basically copied from QuitToTitle.cs with one var changed
     /// </summary>
-    void GameOver()
+    IEnumerator GameOver()
     {
-        // Removes player inputs
-        PlayerController.playerController.ClearAllInputFunctions();
-
-        // Completes Event
-        CutsceneManager.cutsceneManager.EndCutscene();
+        // Delay for fade
+        yield return new WaitUntil(() => ScreenEffects.fadingOut == false);
 
         // Resets global variables
         CollectibleManager.collectibleManager.ResetCount();
         InGameMainMenu.inMainMenu = false;
+        InGameMainMenu.inGameMainMenu.ExitMenu();
 
         // Resets progress
         DebugProgressInjector resetter = new DebugProgressInjector();

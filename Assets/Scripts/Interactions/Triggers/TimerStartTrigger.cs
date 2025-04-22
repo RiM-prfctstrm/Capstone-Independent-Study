@@ -29,14 +29,6 @@ public class TimerStartTrigger : MonoBehaviour
         _seconds += _minutes * 60;
     }
 
-    /// <summary>
-    /// Update is called once per frame
-    /// </summary>
-    void Update()
-    {
-        
-    }
-
     #endregion
 
     #region COLLISION LOGIC

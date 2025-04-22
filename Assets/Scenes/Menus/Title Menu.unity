@@ -709,6 +709,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &509340116 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1183218041316232423, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+  m_PrefabInstance: {fileID: 1886452914}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &568276071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1965,6 +1976,7 @@ GameObject:
   - component: {fileID: 1496622235}
   - component: {fileID: 1496622234}
   - component: {fileID: 1496622233}
+  - component: {fileID: 1496622238}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2094,6 +2106,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1496622238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496622232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dab1ae2c3980ad4fbcd187af9bd3cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fadeAlpha: 0
+  _fadeSpeed: 1
+  _blackFader: {fileID: 509340116}
 --- !u!1 &1631434503
 GameObject:
   m_ObjectHideFlags: 0
@@ -2437,6 +2464,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1183218041316232423, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4019001566557630225, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
       propertyPath: m_Pivot.x
       value: 0

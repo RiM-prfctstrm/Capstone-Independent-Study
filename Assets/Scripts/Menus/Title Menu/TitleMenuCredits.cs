@@ -2,7 +2,7 @@
  * FILE     : TitleMenuMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/15/24
- * UPDATED  : 3/24/25
+ * UPDATED  : 4/22/25
  * 
  * DESC     : Rolls the credits and contains a function to cancel them on the title menu.
 =================================================================================================*/
@@ -61,7 +61,8 @@ public class TitleMenuCredits : MonoBehaviour
     public void StopCredits()
     {
         // Returns to menu
-        transform.position = _resetPos;
+        transform.position = new Vector2(_resetPos.x * GlobalVariableTracker.windowScale,
+                                         _resetPos.y * GlobalVariableTracker.windowScale);
         _titleMenuButton.Select();
         transform.parent.gameObject.SetActive(false);
 
@@ -72,7 +73,8 @@ public class TitleMenuCredits : MonoBehaviour
     public void StopCredits(InputAction.CallbackContext ctx)
     {
         // Returns to menu
-        transform.position = _resetPos;
+        transform.position = new Vector2(_resetPos.x * GlobalVariableTracker.windowScale,
+                                         _resetPos.y * GlobalVariableTracker.windowScale);
         _titleMenuButton.Select();
         transform.parent.gameObject.SetActive(false);
 

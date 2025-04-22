@@ -2,7 +2,7 @@
  * FILE     : ExitGameOver.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 4/20/25
- * UPDATED  : 4/20/25
+ * UPDATED  : 4/22/25
  * 
  * DESC     : Returns to the title screen when any button is pressed.
 =================================================================================================*/
@@ -14,19 +14,8 @@ using UnityEngine.SceneManagement;
 
 public class ExitGameOver : MonoBehaviour
 {
-    #region VARIABLES
-
-    #endregion
 
     #region UNIVERSAL EVENTS
-
-    /// <summary>
-    /// Start is called before the first frame update
-    /// </summary>
-    void Start()
-    {
-        
-    }
 
     /// <summary>
     /// Update is called once per frame
@@ -36,10 +25,10 @@ public class ExitGameOver : MonoBehaviour
         // Loads title screen on button press
         if (Input.anyKeyDown)
         {
-            ScreenEffects.fadingOut = true;
             SceneManager.LoadScene(0);
         }
     }
 
     #endregion
+
 }

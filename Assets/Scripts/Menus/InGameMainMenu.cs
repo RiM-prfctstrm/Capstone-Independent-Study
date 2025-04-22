@@ -2,7 +2,7 @@
  * FILE     : InGameMainMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/14/24
- * UPDATED  : 4/1/25
+ * UPDATED  : 4/22/25
  * 
  * DESC     : Performs functions of the main in-game menu
 =================================================================================================*/
@@ -153,6 +153,7 @@ public class InGameMainMenu : MonoBehaviour
 
         // Tells game that it is out of main menu
         inMainMenu = false;
+        gameObject.SetActive(false);
 
         // Sets class singleton to ensure return event knows where to go. Probably a cleaner way of
         // doing this.

@@ -2,7 +2,7 @@
  * FILE     : ScreenEffects
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/8/25
- * UPDATED  : 4/19/25
+ * UPDATED  : 4/22/25
  * 
  * DESC     : Performs visual effects that take up the whole screen.
 =================================================================================================*/
@@ -20,7 +20,7 @@ public class ScreenEffects : MonoBehaviour
 
     // Fading Vars
     // Fading controls
-    float _fadeAlpha = 0;
+    [SerializeField] float _fadeAlpha;
     [SerializeField] float _fadeSpeed = 1;
     public static bool fadingIn = false;
     public static bool fadingOut = false;
