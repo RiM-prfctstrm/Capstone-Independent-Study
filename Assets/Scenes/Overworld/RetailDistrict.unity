@@ -11814,9 +11814,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigMonty'sDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 4615596217485030564, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: isLocked
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: _lockedMessage.dialogueBoxes.Array.size
@@ -11830,13 +11838,44 @@ PrefabInstance:
       propertyPath: _lockedMessage.dialogueBoxes.Array.data[1].dialogueText
       value: See you in September!
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
 --- !u!4 &1077784377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4615596217485030563, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
   m_PrefabInstance: {fileID: 1077784376}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1077784378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4615596217485030564, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+  m_PrefabInstance: {fileID: 1077784376}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1077784379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077784378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f5cdfc18804e04ca0bc3f9b2665cce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogueRange: 5
+  _isEventTrigger: 0
+  _repeatEvent: 0
+  _staticImage: 1
+  _NPCLines:
+  - dialogueBoxes:
+    - dialogueText: Closed for renovations.
+      nameTag: 
+      portrait: {fileID: 0}
+    - dialogueText: See you later!
+      nameTag: 
+      portrait: {fileID: 0}
+  _NPCCutscene: {fileID: 0}
 --- !u!1 &1090046143
 GameObject:
   m_ObjectHideFlags: 0
@@ -12357,6 +12396,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 4615596217485030564, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: isLocked
       value: 0
@@ -12627,6 +12670,10 @@ PrefabInstance:
     - target: {fileID: 4615596217485030564, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: m_Name
       value: GameStartDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615596217485030564, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: _position.x
@@ -13055,9 +13102,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: GymDoor (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4615596217485030564, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: isLocked
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: _lockedMessage.dialogueBoxes.Array.size
@@ -13071,7 +13126,8 @@ PrefabInstance:
       propertyPath: _lockedMessage.dialogueBoxes.Array.data[1].dialogueText
       value: Looks like nobody's touched it for many years.
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
 --- !u!4 &1184829655 stripped
 Transform:
@@ -13210,6 +13266,10 @@ PrefabInstance:
     - target: {fileID: 4615596217485030564, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: m_TagString
       value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615596217485030564, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: isLocked
@@ -14362,9 +14422,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: GymDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 4615596217485030564, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: isLocked
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: _lockedMessage.dialogueBoxes.Array.size
@@ -14378,13 +14446,44 @@ PrefabInstance:
       propertyPath: _lockedMessage.dialogueBoxes.Array.data[1].dialogueText
       value: Looks like nobody's touched it for many years.
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
 --- !u!4 &1278938221 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4615596217485030563, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
   m_PrefabInstance: {fileID: 1278938220}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1278938222 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4615596217485030564, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+  m_PrefabInstance: {fileID: 1278938220}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1278938223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278938222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f5cdfc18804e04ca0bc3f9b2665cce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogueRange: 5
+  _isEventTrigger: 0
+  _repeatEvent: 0
+  _staticImage: 1
+  _NPCLines:
+  - dialogueBoxes:
+    - dialogueText: It's locked.
+      nameTag: 
+      portrait: {fileID: 0}
+    - dialogueText: Looks like nobody's touched it for many years.
+      nameTag: 
+      portrait: {fileID: 0}
+  _NPCCutscene: {fileID: 0}
 --- !u!1001 &1285636630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18762,6 +18861,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4266992392333689672, guid: 8a79e8abd45103f47ad98ad344fc987d, type: 3}
   m_PrefabInstance: {fileID: 1674090466}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1679804447 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4615596217485030564, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+  m_PrefabInstance: {fileID: 1184829654}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1679804448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679804447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f5cdfc18804e04ca0bc3f9b2665cce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogueRange: 5
+  _isEventTrigger: 0
+  _repeatEvent: 0
+  _staticImage: 1
+  _NPCLines:
+  - dialogueBoxes:
+    - dialogueText: It's locked.
+      nameTag: 
+      portrait: {fileID: 0}
+    - dialogueText: Looks like nobody's touched it for many years.
+      nameTag: 
+      portrait: {fileID: 0}
+  _NPCCutscene: {fileID: 0}
 --- !u!1 &1681120782
 GameObject:
   m_ObjectHideFlags: 0
@@ -19804,6 +19933,10 @@ PrefabInstance:
     - target: {fileID: 4615596217485030564, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: m_TagString
       value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615596217485030564, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: isLocked
@@ -23368,6 +23501,10 @@ PrefabInstance:
     - target: {fileID: 4615596217485030564, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: m_TagString
       value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615596217485030564, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: isLocked

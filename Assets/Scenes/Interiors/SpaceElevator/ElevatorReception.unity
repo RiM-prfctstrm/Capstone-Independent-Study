@@ -1766,13 +1766,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228800036}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 10, y: -6.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1421703110}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1228800041
 Animator:
@@ -1939,6 +1939,7 @@ Transform:
   - {fileID: 560371874}
   - {fileID: 576182312}
   - {fileID: 2096901760}
+  - {fileID: 1228800040}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2873,14 +2874,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: _lockedMessage.dialogueBoxes.Array.data[0].dialogueText
-      value: This door leads to the administration building where your mom works.
+      value: This door leads to the administration building.
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: _lockedMessage.dialogueBoxes.Array.data[1].dialogueText
       value: Probably shouldn't enter without permission.
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+--- !u!1 &1756037455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4615596217485030564, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+  m_PrefabInstance: {fileID: 1756037454}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1882418433
 GameObject:
   m_ObjectHideFlags: 0
@@ -3199,6 +3206,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4615596217485030563, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
   m_PrefabInstance: {fileID: 1756037454}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2096901761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756037455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f5cdfc18804e04ca0bc3f9b2665cce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogueRange: 5
+  _isEventTrigger: 0
+  _repeatEvent: 0
+  _staticImage: 1
+  _NPCLines:
+  - dialogueBoxes:
+    - dialogueText: This door leads to the administration building.
+      nameTag: 
+      portrait: {fileID: 0}
+    - dialogueText: Probably shouldn't enter without permission.
+      nameTag: 
+      portrait: {fileID: 0}
+  _NPCCutscene: {fileID: 0}
 --- !u!1001 &2101225590
 PrefabInstance:
   m_ObjectHideFlags: 0

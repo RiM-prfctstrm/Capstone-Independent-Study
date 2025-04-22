@@ -896,6 +896,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: _direction
       value: 2
       objectReference: {fileID: 0}
@@ -915,8 +919,36 @@ PrefabInstance:
       propertyPath: _lockedMessage.dialogueBoxes.Array.data[0].dialogueText
       value: You probably shouldn't go around this place without permission.
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+--- !u!1 &562803558 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4615596217485030564, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+  m_PrefabInstance: {fileID: 562803557}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &562803559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562803558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f5cdfc18804e04ca0bc3f9b2665cce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogueRange: 5
+  _isEventTrigger: 0
+  _repeatEvent: 0
+  _staticImage: 1
+  _NPCLines:
+  - dialogueBoxes:
+    - dialogueText: You probably shouldn't go around this place without permission.
+      nameTag: 
+      portrait: {fileID: 0}
+  _NPCCutscene: {fileID: 0}
 --- !u!1 &618040088
 GameObject:
   m_ObjectHideFlags: 0

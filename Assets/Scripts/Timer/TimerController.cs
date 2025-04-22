@@ -141,6 +141,7 @@ public class TimerController : MonoBehaviour
     void OnTimerReachZero()
     {
         // Stops all current events
+        StopTimer();
         StopAllCoroutines();
 
         // Stops game actions
@@ -223,7 +224,7 @@ public class TimerController : MonoBehaviour
         InGameMainMenu.inGameMainMenu.ExitMenu();
 
         // Resets progress
-        DebugProgressInjector resetter = new DebugProgressInjector();
+        DebugProgressInjector resetter = gameObject.AddComponent<DebugProgressInjector>();
         resetter.InjectGlobalData();
 
         // Returns the game to the title screen and deletes the scene essentials, which are not
