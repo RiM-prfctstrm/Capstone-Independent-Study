@@ -31,6 +31,7 @@ public class QuitToTitle : CutsceneEvent
         CutsceneManager.cutsceneManager.EndCutscene();
 
         // Resets global variables
+        TimerController.timerController.StopTimer();
         CollectibleManager.collectibleManager.ResetCount();
         InGameMainMenu.inMainMenu = false;
 
