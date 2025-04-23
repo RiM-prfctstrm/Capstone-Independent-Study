@@ -2,7 +2,7 @@
  * FILE     : CutsceneManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1X/X/24
- * UPDATED  : 4/19/25
+ * UPDATED  : 4/22/25
  * 
  * DESC     : Controls the progression of scripted events.
 =================================================================================================*/
@@ -127,7 +127,26 @@ public class CutsceneManager : MonoBehaviour
         DialogueManager.dialogueManager.CancelDialogue();
         StopAllCoroutines();
 
+        // Signals skipping
+        _skippingCutscene = true;
+
         // Initiate skip loop
+        StartCoroutine(FadeOutDelay());
+    }
+
+    /// <summary>
+    /// Delays the skip until the screen has faded out
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator FadeOutDelay()
+    {
+        // Fades out for skip
+        ScreenEffects.fadingOut = true;
+
+        // Delays
+        yield return new WaitUntil(() => !ScreenEffects.fadingOut);
+
+        // Starts skip
         StartCoroutine(SkipLoop());
     }
 
@@ -140,12 +159,6 @@ public class CutsceneManager : MonoBehaviour
         // Vars
         CutsceneEvent i;
         MoveByVectors k;
-
-        // Signals skipping
-        _skippingCutscene = true;
-
-        // Fades out for skip
-        ScreenEffects.fadingOut = true;
 
         // Loops through cutscene events
         for (int j = _skipPos - 1; j < _skipEvent.cutsceneScript.Count; j++)
@@ -201,8 +214,7 @@ public class CutsceneManager : MonoBehaviour
 
             // Delays until the next event is ready, primarily used to keep flow during scene
             // changes. Ironic that this exists
-            yield return new WaitUntil(() => i.eventComplete == true &&
-                !ScreenEffects.fadingOut);
+            yield return new WaitUntil(() => i.eventComplete);
         }
 
         // Fades screen back in
