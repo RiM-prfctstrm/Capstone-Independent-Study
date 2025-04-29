@@ -38,7 +38,7 @@ public class CollectibleGate : MonoBehaviour
     /// OnTriggerEnter2D is called when the Collider2d other enters the trigger
     /// </summary>
     /// <param name="collision">Object that collides with this</param>
-    void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         // Makes sure variables are properly set
         _hasBeenTriggered = GlobalVariableTracker.progressionFlags[_initialMarkerVar];
