@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 4/1/25
+ * UPDATED  : 4/29/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -749,7 +749,7 @@ public class PlayerController : MonoBehaviour
         _playerAudioSource.PlayOneShot(_bumpSound);
 
         // Calculates component variables
-        float collisionForce = collisionSpeed / _maxBikeSpeed;
+        float collisionForce = Mathf.Pow(collisionSpeed / _maxBikeSpeed, 2);
         float collisionDirectness = (collisionAngle + 10) / 100;
         int subtractionTotal = -(int)
             (GlobalVariableTracker.collectiblesInPocket * (collisionDirectness * collisionForce));
