@@ -17,29 +17,46 @@ public class CollectibleGate : MonoBehaviour
 {
     #region VARIABLES
 
-    #endregion
+    // Collectible threshold
+    [SerializeField] int _threshold;
 
-    #region UNIVERSAL EVENTS
+    // Events activated by trigger
+    [SerializeField] Cutscene _blockEvent;
+    [SerializeField] Cutscene _firstTriggerEvent; // Make sure to write dialogue that can work
+    // either if it ends with this or immediately goes to _passEvent;
+    [SerializeField] Cutscene _passEvent;
 
-    /// <summary>
-    /// Start is called before the first frame update
-    /// </summary>
-    void Start()
-    {
-        
-    }
-
-    /// <summary>
-    /// Update is called once per frame
-    /// </summary>
-    void Update()
-    {
-        
-    }
+    // Control bools
+    bool _hasBeenTriggered;
+    [SerializeField] string _initialMarkerVar;
 
     #endregion
 
     #region COLLISION CONTROLS
+
+    /// <summary>
+    /// OnTriggerEnter2D is called when the Collider2d other enters the trigger
+    /// </summary>
+    /// <param name="collision">Object that collides with this</param>
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Makes sure variables are properly set
+        _hasBeenTriggered = GlobalVariableTracker.progressionFlags[_initialMarkerVar];
+
+        // Scene control logic
+        if (!_hasBeenTriggered)
+        {
+            CutsceneManager.cutsceneManager.StartCutscene(_firstTriggerEvent);
+        }
+        else if (GlobalVariableTracker.collectiblesInPocket > _threshold)
+        {
+            CutsceneManager.cutsceneManager.StartCutscene(_passEvent);
+        }
+        else
+        {
+            CutsceneManager.cutsceneManager.StartCutscene(_blockEvent);
+        }
+    }
 
     #endregion
 }
