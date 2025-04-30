@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dea9bbbd825e304e9d8036094fdfbe7, type: 3}
-  m_Name: m0g_f_000_pauseTimer
+  m_Script: {fileID: 11500000, guid: b0d66d82e2a6ac84398d7e86fccac890, type: 3}
+  m_Name: m0g_p_002_removeBarrier
   m_EditorClassIdentifier: 
   eventComplete: 0
+  _flagName: m0blipGateCleared
+  _value: 1

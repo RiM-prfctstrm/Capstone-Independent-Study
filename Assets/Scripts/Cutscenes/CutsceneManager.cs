@@ -191,7 +191,8 @@ public class CutsceneManager : MonoBehaviour
                      i.GetType() == typeof(BranchScene) || i.GetType() == typeof(QuitToTitle) ||
                      i.GetType() == typeof(ReturnToMenu) || i.GetType() == typeof(ResetProgress) ||
                      i.GetType() == typeof(PauseTimer) || i.GetType() == typeof(ResumeTimer) ||
-                     i.GetType() == typeof(StopTimer))
+                     i.GetType() == typeof(StopTimer) ||
+                     i.GetType() == typeof(AlterCollectibleCount))
             {
                 i.PlayEventFunction();
 

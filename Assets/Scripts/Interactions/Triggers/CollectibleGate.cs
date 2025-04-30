@@ -33,7 +33,7 @@ public class CollectibleGate : MonoBehaviour
 
     #endregion
 
-    #region COLLISION CONTROLS
+    #region COLLISION lOGIC
 
     /// <summary>
     /// OnTriggerEnter2D is called when the Collider2d other enters the trigger
@@ -41,24 +41,48 @@ public class CollectibleGate : MonoBehaviour
     /// <param name="collision">Object that collides with this</param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Makes sure variables are properly set
-        _hasBeenTriggered = GlobalVariableTracker.progressionFlags[_initialMarkerVar];
+        if (collision.gameObject == PlayerController.playerController.gameObject)
+        {
+            // Makes sure variables are properly set
+            _hasBeenTriggered = GlobalVariableTracker.progressionFlags[_initialMarkerVar];
 
-        // Scene control logic
-        if (!_hasBeenTriggered)
-        {
-            CutsceneManager.cutsceneManager.StartCutscene(_firstTriggerEvent);
-            StartCoroutine(FirstTriggerEnding());
+            // Pauses timer
+            TimerController.timerController.PauseTimer();
+
+            // Gets player in cutscene state (copied from CutsceneTrigger.cs cause I'm too tired to
+            // be elegant.
+            // Stops movement and exits any menus
+            PlayerController.playerController.CancelMomentum();
+            if (InGameMainMenu.inGameMainMenu.isActiveAndEnabled)
+            {
+                InGameMainMenu.inGameMainMenu.CloseSubmenus();
+                InGameMainMenu.inGameMainMenu.ExitMenu();
+                PlayerController.playerController.TogglePlayerInput();
+            }
+
+            // Emergency input toggle
+            if (PlayerController.playerController.movementDisabled)
+            {
+                PlayerController.playerController.TogglePlayerInput();
+            }
+
+            // Scene control logic
+            if (!_hasBeenTriggered)
+            {
+                CutsceneManager.cutsceneManager.StartCutscene(_firstTriggerEvent);
+                StartCoroutine(FirstTriggerEnding());
+            }
+            else if (GlobalVariableTracker.collectiblesInPocket >= _threshold)
+            {
+                CutsceneManager.cutsceneManager.StartCutscene(_passEvent);
+            }
+            else
+            {
+                CutsceneManager.cutsceneManager.StartCutscene(_blockEvent);
+                StartCoroutine(FirstTriggerEnding());
+            }
         }
-        else if (GlobalVariableTracker.collectiblesInPocket > _threshold)
-        {
-            CutsceneManager.cutsceneManager.StartCutscene(_passEvent);
-        }
-        else
-        {
-            CutsceneManager.cutsceneManager.StartCutscene(_blockEvent);
-            StartCoroutine(FirstTriggerEnding());
-        }
+            
     }
 
     #endregion
@@ -74,7 +98,7 @@ public class CollectibleGate : MonoBehaviour
         yield return new WaitUntil(() => !CutsceneManager.inCutscene);
 
         // Allows player through
-        if (GlobalVariableTracker.collectiblesInPocket > _threshold)
+        if (GlobalVariableTracker.collectiblesInPocket >= _threshold)
         {
             CutsceneManager.cutsceneManager.StartCutscene(_passEvent);
         }

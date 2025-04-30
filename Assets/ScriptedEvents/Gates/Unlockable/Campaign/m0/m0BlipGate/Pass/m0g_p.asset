@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e7c1be8998881549bcc1fb9d908ed5b, type: 3}
   m_Name: m0g_p
   m_EditorClassIdentifier: 
-  cutsceneScript: []
-  hasPlayed: 0
+  cutsceneScript:
+  - {fileID: 11400000, guid: 41afaf362a01e5847b585bd3d958a60e, type: 2}
+  - {fileID: 11400000, guid: 98f38fece87a851418cf80f2bc1673e7, type: 2}
+  - {fileID: 11400000, guid: c5b530c0371ce174dbcc495fd6480f4a, type: 2}
+  - {fileID: 11400000, guid: 86700f00d6dbaa142bbc8c659f548838, type: 2}
+  - {fileID: 11400000, guid: 290c91895834e2347818140d316818ac, type: 2}
+  hasPlayed: 1
