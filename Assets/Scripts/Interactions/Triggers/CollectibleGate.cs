@@ -2,7 +2,7 @@
  * FILE     : CollectibleGate.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 4/29/25
- * UPDATED  : 4/29/25
+ * UPDATED  : 4/30/25
  * 
  * DESC     : A special trigger that plays different events depending on whether the number of
  *            collectibles the player holds passes a certain threshold. It has commands for the
@@ -22,6 +22,7 @@ public class CollectibleGate : MonoBehaviour
 
     // Events activated by trigger
     [SerializeField] Cutscene _blockEvent;
+    [SerializeField] Cutscene _moveBackEvent;
     [SerializeField] Cutscene _firstTriggerEvent; // Make sure to write dialogue that can work
     // either if it ends with this or immediately goes to _passEvent;
     [SerializeField] Cutscene _passEvent;
@@ -47,6 +48,7 @@ public class CollectibleGate : MonoBehaviour
         if (!_hasBeenTriggered)
         {
             CutsceneManager.cutsceneManager.StartCutscene(_firstTriggerEvent);
+            StartCoroutine(FirstTriggerEnding());
         }
         else if (GlobalVariableTracker.collectiblesInPocket > _threshold)
         {
@@ -55,6 +57,29 @@ public class CollectibleGate : MonoBehaviour
         else
         {
             CutsceneManager.cutsceneManager.StartCutscene(_blockEvent);
+        }
+    }
+
+    #endregion
+
+    #region POST-EVENT FUNCTIONS
+
+    /// <summary>
+    /// Controls whether to play the pass event or push player back after the first trigger
+    /// </summary>
+    IEnumerator FirstTriggerEnding()
+    {
+        // Delays until initial event is over
+        yield return new WaitUntil(() => !CutsceneManager.inCutscene);
+
+        // Allows player through
+        if (GlobalVariableTracker.collectiblesInPocket > _threshold)
+        {
+            CutsceneManager.cutsceneManager.StartCutscene(_passEvent);
+        }
+        else
+        {
+            CutsceneManager.cutsceneManager.StartCutscene(_moveBackEvent);
         }
     }
 
