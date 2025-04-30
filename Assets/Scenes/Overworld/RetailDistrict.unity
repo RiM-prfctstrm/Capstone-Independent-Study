@@ -1706,8 +1706,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _threshold: 50
-  _blockEvent: {fileID: 0}
-  _firstTriggerEvent: {fileID: 0}
+  _blockEvent: {fileID: 11400000, guid: c5c6a27e8326f3744a2116b88f47dff7, type: 2}
+  _moveBackEvent: {fileID: 11400000, guid: 35eba9eb96af27147b8b79ec1d2126b7, type: 2}
+  _firstTriggerEvent: {fileID: 11400000, guid: 231e58ef77b762845a6fab5340249fac, type: 2}
   _passEvent: {fileID: 0}
   _initialMarkerVar: m0blipGateTriggered
 --- !u!61 &131642497

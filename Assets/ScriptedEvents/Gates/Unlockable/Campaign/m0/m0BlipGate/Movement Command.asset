@@ -9,7 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dea9bbbd825e304e9d8036094fdfbe7, type: 3}
-  m_Name: m0g_f_000_stopTimer
+  m_Script: {fileID: 11500000, guid: ced189b58ef3d6a4a8635aaabf73c2c2, type: 3}
+  m_Name: Movement Command
   m_EditorClassIdentifier: 
   eventComplete: 0
+  _targetID: 0
+  _speed: 4
+  _movements:
+  - {x: -2, y: 0}
+  _overrideMovementAnimation: 0
+  _overrideAnimation: 
+  _referencePos: {x: 146.5, y: -32.5}

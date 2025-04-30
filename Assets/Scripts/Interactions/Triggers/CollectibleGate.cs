@@ -57,6 +57,7 @@ public class CollectibleGate : MonoBehaviour
         else
         {
             CutsceneManager.cutsceneManager.StartCutscene(_blockEvent);
+            StartCoroutine(FirstTriggerEnding());
         }
     }
 
