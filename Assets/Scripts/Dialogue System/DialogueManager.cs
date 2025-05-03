@@ -34,7 +34,6 @@ public class DialogueManager : MonoBehaviour
 
     // Other Objects
     [SerializeField] AudioSource _systemSounds;
-    public AudioSource systemSounds => _systemSounds;
     public Button previouslySelected = null;
 
     // Getters

@@ -2,7 +2,7 @@
  * FILE     : TimerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 4/19/25
- * UPDATED  : 5/3/25
+ * UPDATED  : 4/22/25
  * 
  * DESC     : Controls countdown timer that ends the game when it reaches 0.
 =================================================================================================*/
@@ -25,7 +25,6 @@ public class TimerController : MonoBehaviour
     // Countdown vars
     int _minuteCounter = 0;
     int _pausedTime;
-    int _startingSeconds;
     int _timeRemaining;
 
     // UI Objects
@@ -38,8 +37,10 @@ public class TimerController : MonoBehaviour
     string _displayText;
 
     // Signals
-    [SerializeField] AudioClip _stopwatch;
     public static bool timerInProgress = false;
+
+    // Game Over vars
+    [SerializeField] Cutscene _gameOverScene;
 
     #endregion
 
@@ -52,7 +53,15 @@ public class TimerController : MonoBehaviour
     {
         // Inits vars
         _countdownRoutine = Countdown();
-    }  
+    }
+
+    /// <summary>
+    /// Update is called once per frame
+    /// </summary>
+    void Update()
+    {
+        
+    }
 
     #endregion
 
@@ -66,7 +75,6 @@ public class TimerController : MonoBehaviour
     public void BeginTimer(int startSeconds, int startMinutes)
     {
         // Initializes countdown and UI
-        _startingSeconds = startSeconds;
         _timeRemaining = startSeconds;
         _displayMinutes = startMinutes;
         _minuteCounter = 58;
@@ -93,12 +101,6 @@ public class TimerController : MonoBehaviour
             // Clock update
             _timeRemaining--;
             UpdateHUDClock();
-
-            // Plays a warning sound at specific intervals
-            if (_timeRemaining == _startingSeconds / 2 || _timeRemaining == 60)
-            {
-                DialogueManager.dialogueManager.systemSounds.PlayOneShot(_stopwatch);
-            }
         }
 
         // Performs functionality on ending the clock
