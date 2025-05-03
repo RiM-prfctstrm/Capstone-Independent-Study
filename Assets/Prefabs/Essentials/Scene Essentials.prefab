@@ -95,6 +95,12 @@ MonoBehaviour:
   _m0specialComplete: 0
   _m2specialComplete: 0
   _m3specialComplete: 0
+  _m0blipGateTriggered: 0
+  _m0blipGateCleared: 0
+  _m2blipGateTriggered: 0
+  _m2blipGateCleared: 0
+  _m3blipGateTriggered: 0
+  _m3blipGateCleared: 0
   _collectiblesInPocket: 0
   _fireInjector: 0
 --- !u!1 &304173636179101748
@@ -298,6 +304,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3057126789234804534, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+      propertyPath: _stopwatch
+      value: 
+      objectReference: {fileID: 8300000, guid: 80aebc160e4f24948ae69ce33ec48e5d, type: 3}
     - target: {fileID: 3238241705343418404, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
       propertyPath: _bumpSound
       value: 
