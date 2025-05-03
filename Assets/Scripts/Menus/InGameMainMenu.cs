@@ -2,7 +2,7 @@
  * FILE     : InGameMainMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/14/24
- * UPDATED  : 4/22/25
+ * UPDATED  : 5/3/25
  * 
  * DESC     : Performs functions of the main in-game menu
 =================================================================================================*/
@@ -67,6 +67,12 @@ public class InGameMainMenu : MonoBehaviour
             inMainMenu = true;
         }
 
+        // Pauses Timer
+        if (TimerController.timerInProgress)
+        {
+            TimerController.timerController.PauseTimer();
+        }
+
         // Plays menu opening sound
         GetComponent<AudioSource>().volume = GlobalVariableTracker.menuVolume;
 
@@ -123,21 +129,35 @@ public class InGameMainMenu : MonoBehaviour
     /// </summary>
     public void ExitMenu()
     {
+        // Sets normal gameplay state
         PlayerController.playerController.TogglePlayerInput();
         gameObject.SetActive(false);
         inMainMenu = false;
 
         // Removes cancel function
         PlayerController.playerController.cancel.performed -= ExitMenu;
+
+        // Resumes Timer
+        if (TimerController.timerInProgress)
+        {
+            TimerController.timerController.ResumeTimer();
+        }
     }
     public void ExitMenu(InputAction.CallbackContext ctx)
     {
+        // Sets normal gameplay state
         PlayerController.playerController.TogglePlayerInput();
         gameObject.SetActive(false);
         inMainMenu = false;
 
         // Removes cancel function
         PlayerController.playerController.cancel.performed -= ExitMenu;
+
+        // Resumes Timer
+        if (TimerController.timerInProgress)
+        {
+            TimerController.timerController.ResumeTimer();
+        }
     }
 
     /// <summary>

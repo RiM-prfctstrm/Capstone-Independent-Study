@@ -2,7 +2,7 @@
  * FILE     : ReturnToMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/11/25
- * UPDATED  : 4/22/25
+ * UPDATED  : 5/3/25
  * 
  * DESC     : Exits from a cutscene event into the main in-game menu's default selection.
 =================================================================================================*/
@@ -15,13 +15,6 @@ using UnityEngine.UI;
     order = 1)]
 public class ReturnToMenu : CutsceneEvent
 {
-    /* #region VARIABLES
-
-    // Object references
-    InGameMainMenu _menu;
-
-    #endregion */
-
     #region EVENT FUNCTIONALITY
 
     /// <summary>
@@ -31,22 +24,14 @@ public class ReturnToMenu : CutsceneEvent
     {
         base.PlayEventFunction();
 
+        // Resumes Timer
+        if (TimerController.timerInProgress)
+        {
+            TimerController.timerController.ResumeTimer();
+        }
+
         // Notifies completion
         eventComplete = true;
-
-        // Sets Vars
-        /*_menu = DialogueManager.dialogueManager.gameObject.
-            GetComponentInChildren<InGameMainMenu>();*/
-
-        // Performs an extra movement toggle to ensure movement doesn't reactivate in confirmation
-        /*PlayerController.playerController.TogglePlayerInput();
-        PlayerController.playerController.cancel.performed
-            += InGameMainMenu.inGameMainMenu.ExitMenu;
-
-        // Performs selection
-        PlayerController.playerController.OpenMenu(
-            PlayerController.playerController.menuExternalreference,
-            InGameMainMenu.inGameMainMenu.defaultSelection);*/
     }
 
     #endregion
