@@ -2,7 +2,7 @@
  * FILE     : ElevatorButton.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/9/25
- * UPDATED  : 2/6/25
+ * UPDATED  : 5/3/25
  * 
  * DESC     : Starts Elevator Movement
 =================================================================================================*/
@@ -23,7 +23,9 @@ public class ElevatorButton : InteractableObject
     [SerializeField] int _startingLevel = -1;
 
     // References
+    [SerializeField] AudioClip _ambience;
     Transform _player;
+
 
     #endregion
 
@@ -63,6 +65,9 @@ public class ElevatorButton : InteractableObject
         // Fades out and delays
         ScreenEffects.fadingOut = true;
         yield return new WaitUntil(() => ScreenEffects.fadingOut == false);
+
+        // Starts ambience
+        MusicManager.musicManager.SwapSong(_ambience, false);
 
         // Moves Player
         _player.position = new Vector2(_player.position.x + (50 * _polarity), _player.position.y);

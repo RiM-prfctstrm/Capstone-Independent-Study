@@ -7843,6 +7843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dab1ae2c3980ad4fbcd187af9bd3cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fadeAlpha: 0
   _fadeSpeed: 4
   _blackFader: {fileID: 1183218041316232423}
 --- !u!114 &3238241705343418404
@@ -7876,6 +7877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _countdownClock: {fileID: 7516617188498045865}
   _timerBG: {fileID: 1006413030712814165}
+  _gameOverScene: {fileID: 0}
 --- !u!1 &4019001566823838490
 GameObject:
   m_ObjectHideFlags: 0

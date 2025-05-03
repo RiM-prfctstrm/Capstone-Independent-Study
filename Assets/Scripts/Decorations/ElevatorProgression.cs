@@ -2,7 +2,7 @@
  * FILE     : ElevatorProgression.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/9/25
- * UPDATED  : 4/19/25
+ * UPDATED  : 5/3/25
  * 
  * DESC     : Controls bespoke visual effects triggered by the space elevator rising. Specifically,
  *            changes backgrounds and warps the player to the destination chamber. Changes are
@@ -99,6 +99,9 @@ public class ElevatorProgression : MonoBehaviour
     /// <returns>Delay for fade</returns>
     IEnumerator ExitElevator()
     {
+        // Fades out ambience
+        StartCoroutine(MusicManager.musicManager.FadeOutSong());
+
         // Fades out and delays
         ScreenEffects.fadingOut = true;
         yield return new WaitUntil(() => ScreenEffects.fadingOut == false);
