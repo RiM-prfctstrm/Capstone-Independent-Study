@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e7c1be8998881549bcc1fb9d908ed5b, type: 3}
-  m_Name: m3_5B
+  m_Script: {fileID: 11500000, guid: 4dea9bbbd825e304e9d8036094fdfbe7, type: 3}
+  m_Name: m3_5_-001_pauseTimer
   m_EditorClassIdentifier: 
-  cutsceneScript:
-  - {fileID: 11400000, guid: 877ec7da794662f4685d9b12b82d6a4c, type: 2}
-  - {fileID: 11400000, guid: 9603157f6f054e3418cb741537185e82, type: 2}
-  hasPlayed: 0
+  eventComplete: 0
