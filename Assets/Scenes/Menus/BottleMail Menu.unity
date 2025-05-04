@@ -966,6 +966,7 @@ GameObject:
   - component: {fileID: 337549267}
   - component: {fileID: 337549269}
   - component: {fileID: 337549268}
+  - component: {fileID: 337549270}
   m_Layer: 5
   m_Name: Date/Times
   m_TagString: Untagged
@@ -1090,6 +1091,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337549266}
   m_CullTransparentMesh: 1
+--- !u!114 &337549270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337549266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b021765946e654ca228b5e25f31e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _variableText:
+  - 9:13 PM 4/21/54
+  - 
+  - 8:04 7/19/54
+  - 9:49 10/1
 --- !u!1 &338011273
 GameObject:
   m_ObjectHideFlags: 0
