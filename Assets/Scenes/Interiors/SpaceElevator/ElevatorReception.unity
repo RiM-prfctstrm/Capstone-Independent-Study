@@ -694,7 +694,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 43a0a64562c85924fb99f55a66813d3a, type: 3}
     - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
       propertyPath: m_Name
-      value: AddressPlate
+      value: MessageBoard
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
@@ -1125,6 +1125,112 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &803284639
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1421703110}
+    m_Modifications:
+    - target: {fileID: 1155657993595194405, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
+      value: You have the card to go up in the space elevator! Why on Cradle would
+        you miss that?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194405, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
+      value: Hey, the event is today!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194424, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -199129395, guid: 8349f94283c54bf4494938ab1443192e, type: 3}
+    - target: {fileID: 1155657993595194425, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194425, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+      propertyPath: m_Name
+      value: Inactive Mail
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+--- !u!4 &803284640 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194407, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+  m_PrefabInstance: {fileID: 803284639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &803284641 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1155657993595194428, guid: 4866478d1222bd54496dbcdc9dbeea82, type: 3}
+  m_PrefabInstance: {fileID: 803284639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &803284642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803284641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ba4eefb3a4905542b18c449d4e12c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _keyflag: hasAccessCard
+  _activeState: 1
 --- !u!1 &964411905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1661,6 +1767,7 @@ GameObject:
   - component: {fileID: 1228800038}
   - component: {fileID: 1228800037}
   - component: {fileID: 1228800041}
+  - component: {fileID: 1228800042}
   m_Layer: 0
   m_Name: Mail system
   m_TagString: Interactable
@@ -1794,6 +1901,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1228800042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228800036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ba4eefb3a4905542b18c449d4e12c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _keyflag: hasAccessCard
+  _activeState: 0
 --- !u!1001 &1279998190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1940,6 +2061,7 @@ Transform:
   - {fileID: 576182312}
   - {fileID: 2096901760}
   - {fileID: 1228800040}
+  - {fileID: 803284640}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

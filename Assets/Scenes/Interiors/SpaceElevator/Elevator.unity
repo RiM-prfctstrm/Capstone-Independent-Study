@@ -1449,7 +1449,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4615596217485030564, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
   m_PrefabInstance: {fileID: 1155327004}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1155327007
+--- !u!114 &1155327008
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1458,28 +1458,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1155327006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 685f7f39ff78e914a95c21ecb57479a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 99f5cdfc18804e04ca0bc3f9b2665cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bgScrollers:
-  - {fileID: 1167195452}
-  - {fileID: 836713194}
-  - {fileID: 1630577057}
-  _bgSpeeds:
-  - 100
-  - 25
-  - 0.25
-  _bgStarts:
-  - {x: 0, y: 0}
-  - {x: 0, y: -100}
-  - {x: 0, y: 10}
-  _bgStops:
-  - 14.5
-  - 100
-  - 20
-  _polarity: -1
-  _startingLevel: 2
-  _ambience: {fileID: 8300000, guid: f82ecbde49bf8364db44285b71ff795a, type: 3}
+  _dialogueRange: 5
+  _isEventTrigger: 0
+  _repeatEvent: 0
+  _staticImage: 1
+  _NPCLines:
+  - dialogueBoxes:
+    - dialogueText: No way you're going back down the elevator now that you're up
+        here.
+      nameTag: 
+      portrait: {fileID: 0}
+  _NPCCutscene: {fileID: 0}
 --- !u!1 &1167195449
 GameObject:
   m_ObjectHideFlags: 0
