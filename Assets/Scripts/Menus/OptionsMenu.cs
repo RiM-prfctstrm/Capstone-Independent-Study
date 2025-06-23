@@ -155,6 +155,12 @@ public class OptionsMenu : MonoBehaviour
             PlayerController.playerController.SetSoundEffectsVolume();
         }
 
+        // Automatically changes volume
+        if (MusicManager.musicManager != null)
+        {
+            MusicManager.musicManager.SetVolume();
+        }
+
         // Plays sample sound
         GetComponent<AudioSource>().volume = _soundVolume.value;
         GetComponent<AudioSource>().Play();

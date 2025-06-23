@@ -2,7 +2,7 @@
  * FILE     : MusicManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 12/6/24
- * UPDATED  : 4/16/25
+ * UPDATED  : 6/23/25
  * 
  * DESC     : Controls which music is currently playing.
 =================================================================================================*/
@@ -22,6 +22,9 @@ public class MusicManager : MonoBehaviour
     // Object References
     [SerializeField] AudioSource _musicSource;
 
+    // Misc
+    bool _usesSEVolume;
+
     #endregion
 
     #region PLAYBACK CONTROLS
@@ -32,13 +35,17 @@ public class MusicManager : MonoBehaviour
     /// </summary>
     /// <param name="song">The desired song to set</param>
     /// <param name="fadeout">Whether or not to fade out the original song</param>
-    public void SwapSong(AudioClip song, bool fadeout)
+    public void SwapSong(AudioClip song, bool fadeout, bool useSEVolume)
     {
         // Cancels if the song would restart the one currently playing
         if (song == null || song == _activeSong)
         {
+            SetVolume();
             return;
         }
+
+        // Ensures music tracks use correct volume
+        _usesSEVolume = useSEVolume;
 
         // Fades out old song before playing new one
         if (fadeout)
@@ -51,6 +58,7 @@ public class MusicManager : MonoBehaviour
         BeginSong(song);
     }
 
+
     /// <summary>
     /// Begins a new song and informs the game which song is playing
     /// </summary>
@@ -59,7 +67,7 @@ public class MusicManager : MonoBehaviour
     {
         // Plays new song and sets it as active
         _activeSong = song;
-        _musicSource.volume = GlobalVariableTracker.musicVolume;
+        SetVolume();
         _musicSource.clip = song;
         _musicSource.Play();
     }
@@ -79,6 +87,7 @@ public class MusicManager : MonoBehaviour
 
         // Tells game that no song is playing
         _activeSong = null;
+        _musicSource.clip = _activeSong;
     }
 
     /// <summary>
@@ -117,7 +126,14 @@ public class MusicManager : MonoBehaviour
     /// </summary>
     public void SetVolume()
     {
-        _musicSource.volume = GlobalVariableTracker.musicVolume;
+        if (!_usesSEVolume)
+        {
+            _musicSource.volume = GlobalVariableTracker.musicVolume;
+        }
+        else
+        {
+            _musicSource.volume = GlobalVariableTracker.sfxVolume;
+        }
     }
 
     #endregion

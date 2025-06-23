@@ -2,7 +2,7 @@
  * FILE     : SetEventMusic.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 12/6/24
- * UPDATED  : 1/15/25
+ * UPDATED  : 6/23/25
  * 
  * DESC     : Plays music for a cutscene
 =================================================================================================*/
@@ -33,7 +33,7 @@ public class SetEventMusic : CutsceneEvent
         if (_song != null)
         {
             // Swaps new song in
-            MusicManager.musicManager.SwapSong(_song, _useFadeOut);
+            MusicManager.musicManager.SwapSong(_song, _useFadeOut, false);
         }
         else
         {
