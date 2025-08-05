@@ -71,39 +71,6 @@
             ],
             "bindings": [
                 {
-                    "name": "WASD",
-                    "id": "856a7db4-496b-4fde-83c6-7bac27f3f70c",
-                    "path": "1DAxis(whichSideWins=2)",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveY",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "23cd1182-1999-420e-9a82-cc96d817d3b4",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveY",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "7730fa1e-b4d5-46ff-ae1d-3b303f8609dc",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveY",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "Arrows",
                     "id": "1b27698e-278b-4db6-818d-d838c602b980",
                     "path": "1DAxis(whichSideWins=2)",
@@ -204,30 +171,8 @@
                 },
                 {
                     "name": "",
-                    "id": "f6c34260-7443-4fb7-8ef9-938a69caf396",
-                    "path": "<Keyboard>/leftCtrl",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Brake",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "06212d9a-970b-4ea8-9776-db548353eba0",
-                    "path": "<Keyboard>/leftShift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Brake",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9ce50186-e7fd-479d-95a1-15b5c98651b4",
-                    "path": "<Keyboard>/numpadPeriod",
+                    "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -270,39 +215,6 @@
                 },
                 {
                     "name": "",
-                    "id": "57d77932-4e9d-405d-affd-ece4db42097d",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Brake",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b41b88c6-70d3-4bc8-bd3d-48be6e5b5c95",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Interact",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f0e87325-5053-4c33-b673-f177b4829d13",
-                    "path": "<Keyboard>/enter",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Interact",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "3acd3d88-880f-4e57-bd57-746129df8550",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
@@ -314,8 +226,8 @@
                 },
                 {
                     "name": "",
-                    "id": "05f16619-4afb-4e33-92b8-996a9846abc7",
-                    "path": "<Mouse>/leftButton",
+                    "id": "551e2d78-2714-4644-be01-16fc1e62a767",
+                    "path": "<Keyboard>/z",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -326,7 +238,7 @@
                 {
                     "name": "",
                     "id": "d3793728-68e1-4e20-b350-65916f6487b3",
-                    "path": "<Keyboard>/z",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -347,30 +259,8 @@
                 },
                 {
                     "name": "",
-                    "id": "df853c3c-4ba6-416d-a315-7586ad1c7686",
-                    "path": "<Keyboard>/numpad0",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "DebugSwitchState",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f0844529-529b-407c-af95-154a994cbcd6",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "DebugSwitchState",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "dde1f63f-ef4e-42fa-9e26-c6e379fe3e74",
-                    "path": "<Keyboard>/leftShift",
+                    "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -388,61 +278,6 @@
                     "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0187483e-deb8-49d8-aafe-3a6725229e89",
-                    "path": "<Keyboard>/leftCtrl",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Cancel",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c2897095-08dc-4125-981b-c87acae7b3f1",
-                    "path": "<Keyboard>/numpadPeriod",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Cancel",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "WASD",
-                    "id": "a45f3189-1644-4c6f-b9b9-a42c2f3c0e80",
-                    "path": "1DAxis(whichSideWins=1)",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveX",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "ae0a3146-7238-4af8-b3ad-2e41652b327d",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveX",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "cf44d842-6ea5-4500-8b08-b30acafd5de1",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveX",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 },
                 {
                     "name": "Arrows",
@@ -567,17 +402,6 @@
                 },
                 {
                     "name": "",
-                    "id": "d7fc85fc-5c7f-4510-8fbc-8b46fa0f3929",
-                    "path": "<Keyboard>/numpadEnter",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "OpenMenu",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "5ff94e86-8e03-4626-a7e4-e66c5b90a517",
                     "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
@@ -591,6 +415,17 @@
                     "name": "",
                     "id": "21ac3f61-d271-4da1-8a17-53e863282835",
                     "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "949f785e-d2f7-4951-95a7-d31ab5e1001c",
+                    "path": "<Keyboard>/c",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -644,17 +479,6 @@
                 },
                 {
                     "name": "",
-                    "id": "0ced8487-f92c-4d03-8657-41cc9bd17bb1",
-                    "path": "<Keyboard>/numpadEnter",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Cancel",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "0983903a-f329-48c0-a483-054f1ac9f1ac",
                     "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
@@ -679,6 +503,17 @@
                     "name": "",
                     "id": "3dd25ead-6e86-424e-a0bf-3b21b07526d9",
                     "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b0eeeef7-68ce-4a3f-acea-b39d7d6d219c",
+                    "path": "<Keyboard>/c",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
