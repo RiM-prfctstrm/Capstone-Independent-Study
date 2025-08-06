@@ -2,13 +2,14 @@
  * FILE     : MusicManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 12/6/24
- * UPDATED  : 6/23/25
+ * UPDATED  : 8/6/25
  * 
  * DESC     : Controls which music is currently playing.
 =================================================================================================*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class MusicManager : MonoBehaviour
 {
