@@ -21,6 +21,7 @@ public class MusicManager : MonoBehaviour
     AudioClip _activeSong;
 
     // Object References
+    [SerializeField] AudioMixer _musicMixer;
     [SerializeField] AudioSource _musicSource;
 
     // Misc
@@ -133,7 +134,7 @@ public class MusicManager : MonoBehaviour
         }
         else
         {
-            _musicSource.volume = GlobalVariableTracker.sfxVolume;
+            _musicMixer.SetFloat("Volume", GlobalVariableTracker.sfxVolume);
         }
     }
 
