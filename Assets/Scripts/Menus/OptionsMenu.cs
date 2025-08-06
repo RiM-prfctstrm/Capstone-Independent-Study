@@ -2,7 +2,7 @@
  * FILE     : OptionsMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/16/25
- * UPDATED  : 3/15/25
+ * UPDATED  : 8/6/25
  * 
  * DESC     : Adjusts variables that affect the game's presentation.
 =================================================================================================*/

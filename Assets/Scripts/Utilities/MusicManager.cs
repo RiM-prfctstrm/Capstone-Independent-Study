@@ -128,14 +128,7 @@ public class MusicManager : MonoBehaviour
     /// </summary>
     public void SetVolume()
     {
-        if (!_usesSEVolume)
-        {
-            _musicSource.volume = GlobalVariableTracker.musicVolume;
-        }
-        else
-        {
-            _musicMixer.SetFloat("Volume", GlobalVariableTracker.sfxVolume);
-        }
+        _musicMixer.SetFloat("musVol", GlobalVariableTracker.musicVolume);
     }
 
     #endregion

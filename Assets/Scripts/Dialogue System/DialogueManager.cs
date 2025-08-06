@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 4/2/25
+ * UPDATED  : 8/6/25
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -10,6 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 using TMPro;
 
@@ -33,6 +34,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] GameObject _portraitOutline;
 
     // Other Objects
+    [SerializeField] AudioMixer _mixer;
     [SerializeField] AudioSource _systemSounds;
     public Button previouslySelected = null;
 
@@ -239,7 +241,7 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     public void SetMenuEffectsVolume()
     {
-        _systemSounds.volume = GlobalVariableTracker.menuVolume;
+        _mixer.SetFloat("menVol", GlobalVariableTracker.menuVolume);
     }
 
     #endregion

@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 4/29/25
+ * UPDATED  : 8/6/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -10,8 +10,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] DetectObjects _detector;
     [SerializeField] ParticleSystem _lossParticles;
     public static GameObject playerCamera;
+
     // Parameters
     [SerializeField] float _accelTime;
     [SerializeField] float _brakeTime;
@@ -74,9 +75,10 @@ public class PlayerController : MonoBehaviour
     InputAction _yInput;
 
     // External reference
-    DialogueManager _dialogueManager;
-    public GameObject lastTarget;
+    [SerializeField] AudioMixer _mixer;
     [SerializeField] GameObject _menu;
+    public GameObject lastTarget;
+    DialogueManager _dialogueManager;
     Button _mainMenuDefault;
 
     // Sound effects
@@ -87,9 +89,6 @@ public class PlayerController : MonoBehaviour
 
     // Miscellaneous
     [SerializeField] Cutscene _cantRideMessage;
-
-    // Debug
-    //bool _maxed = false;
 
     #endregion
 
@@ -781,7 +780,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public void SetSoundEffectsVolume()
     {
-        _playerAudioSource.volume = GlobalVariableTracker.sfxVolume;
+        _mixer.SetFloat("sfxVol", GlobalVariableTracker.sfxVolume);
     }
 
     /// <summary>

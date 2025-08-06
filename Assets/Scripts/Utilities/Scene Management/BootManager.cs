@@ -2,7 +2,7 @@
  * FILE     : BootManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 6/23/25
+ * UPDATED  : 8/6/25
  * 
  * DESC     : Performs functionality that only occurs when the game is first started.
 =================================================================================================*/
