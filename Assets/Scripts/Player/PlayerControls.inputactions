@@ -42,6 +42,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Submit",
+                    "type": "Button",
+                    "id": "3984af7b-c464-4395-9d7f-2b16c3786af6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "DebugSwitchState",
                     "type": "Button",
                     "id": "befff601-28c7-42ef-bb4e-024f25625a93",
@@ -584,6 +593,28 @@
                     "action": "MenuScroll",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "9250d68d-99af-4068-bbc9-368aa0f8a3ea",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7022a52f-b0d8-4aca-9197-9757cb50ce9f",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
