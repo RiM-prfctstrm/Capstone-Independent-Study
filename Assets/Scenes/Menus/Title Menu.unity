@@ -264,6 +264,7 @@ MonoBehaviour:
   _nametagOutline: {fileID: 1162941492}
   _portraitImage: {fileID: 402869888}
   _portraitOutline: {fileID: 1306349081}
+  _mixer: {fileID: 24100000, guid: 48d19e40f0ca5fe4db5fc1df02d38d0b, type: 2}
   _systemSounds: {fileID: 1886452916}
   previouslySelected: {fileID: 0}
   advancing: 0
@@ -277,7 +278,7 @@ AudioSource:
   m_GameObject: {fileID: 70280374}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8669530200094470697, guid: 48d19e40f0ca5fe4db5fc1df02d38d0b, type: 2}
   m_audioClip: {fileID: 8300000, guid: 95e9b2a3e166ebe4f8827c41e86a372c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -1590,7 +1591,7 @@ MonoBehaviour:
   m_ActionsAsset: {fileID: -944628639613478452, guid: c950dc6ac45a77d4a9d65e00fcf3b1a0, type: 3}
   m_PointAction: {fileID: 0}
   m_MoveAction: {fileID: 1244116235496844863, guid: c950dc6ac45a77d4a9d65e00fcf3b1a0, type: 3}
-  m_SubmitAction: {fileID: 8100664413790226872, guid: c950dc6ac45a77d4a9d65e00fcf3b1a0, type: 3}
+  m_SubmitAction: {fileID: -5163314749205001711, guid: c950dc6ac45a77d4a9d65e00fcf3b1a0, type: 3}
   m_CancelAction: {fileID: -8002216852447902386, guid: c950dc6ac45a77d4a9d65e00fcf3b1a0, type: 3}
   m_LeftClickAction: {fileID: 0}
   m_MiddleClickAction: {fileID: 0}

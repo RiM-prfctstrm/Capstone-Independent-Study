@@ -137,7 +137,7 @@ public class MusicManager : MonoBehaviour
     /// </summary>
     public void SetVolume()
     {
-        _musicMixer.SetFloat("musVol", GlobalVariableTracker.musicVolume);
+        _musicMixer.SetFloat("musVol", Mathf.Log10(GlobalVariableTracker.musicVolume) * 20);
     }
 
     #endregion

@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 8/6/25
+ * UPDATED  : 8/7/25
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -241,7 +241,7 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     public void SetMenuEffectsVolume()
     {
-        _mixer.SetFloat("menVol", GlobalVariableTracker.menuVolume);
+        _mixer.SetFloat("menVol", Mathf.Log10(GlobalVariableTracker.menuVolume) * 20);
     }
 
     #endregion

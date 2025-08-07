@@ -10,6 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 
 public class OptionsMenu : MonoBehaviour
@@ -27,6 +28,8 @@ public class OptionsMenu : MonoBehaviour
     // External UI Objects
     [SerializeField] Button _returnSelection;
     [SerializeField] TitleMenu _titleMenu;
+    // Other objects
+    [SerializeField] AudioMixer _mixer;
 
     // Value initializers for when objects are set by menu, ordered by vertical appearance in menu
     static float _saveMaV = 1;
@@ -124,20 +127,14 @@ public class OptionsMenu : MonoBehaviour
     public void SetMusicVolume()
     {
         // Sets volume variabes
-        GlobalVariableTracker.musicVolume = Mathf.Log10(_musicVolume.value) * 20;
-        _saveMuV = Mathf.Log10(_musicVolume.value) * 20;
+        GlobalVariableTracker.musicVolume = _musicVolume.value;
+        _saveMuV = _musicVolume.value;
+        _mixer.SetFloat("musVol", Mathf.Log10(GlobalVariableTracker.musicVolume) * 20);
 
         // Automatically changes volume
         if (MusicManager.musicManager != null)
         {
             MusicManager.musicManager.SetVolume();
-        }
-
-        // Controls menu music
-        if (_titleMenu != null)
-        {
-            _titleMenu.gameObject.GetComponent<AudioSource>().volume =
-                Mathf.Log10(_musicVolume.value) * 20;
         }
     }
 
@@ -147,7 +144,7 @@ public class OptionsMenu : MonoBehaviour
     public void SetSFXVolume()
     {
         // Sets volume variables
-        GlobalVariableTracker.sfxVolume = Mathf.Log10(_soundVolume.value) * 20;
+        GlobalVariableTracker.sfxVolume = _soundVolume.value;
         _saveSV = Mathf.Log10(_soundVolume.value) * 20;
 
         // Automatically changes volume
@@ -157,7 +154,6 @@ public class OptionsMenu : MonoBehaviour
         }
 
         // Plays sample sound
-        GetComponent<AudioSource>().volume = Mathf.Log10(_soundVolume.value) * 20;
         GetComponent<AudioSource>().Play();
     }
 
@@ -168,7 +164,7 @@ public class OptionsMenu : MonoBehaviour
     public void SetMenuVolume()
     {
         // Sets volume variables
-        GlobalVariableTracker.menuVolume = Mathf.Log10(_menuVolume.value) * 20;
+        GlobalVariableTracker.menuVolume = _menuVolume.value;
         _saveMeV = Mathf.Log10(_menuVolume.value) * 20;
 
         // Automatically changes volume
