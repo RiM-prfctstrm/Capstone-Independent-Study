@@ -126,6 +126,10 @@ public class MusicManager : MonoBehaviour
 
     #endregion
 
+    #region BACKGROUND SOUNDSCAPE CONTROLS
+
+    #endregion
+
     #region VOLUME CONTROLS
 
     /// <summary>

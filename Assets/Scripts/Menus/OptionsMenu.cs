@@ -2,7 +2,7 @@
  * FILE     : OptionsMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/16/25
- * UPDATED  : 8/6/25
+ * UPDATED  : 8/7/25
  * 
  * DESC     : Adjusts variables that affect the game's presentation.
 =================================================================================================*/
@@ -124,8 +124,8 @@ public class OptionsMenu : MonoBehaviour
     public void SetMusicVolume()
     {
         // Sets volume variabes
-        GlobalVariableTracker.musicVolume = _musicVolume.value;
-        _saveMuV = _musicVolume.value;
+        GlobalVariableTracker.musicVolume = Mathf.Log10(_musicVolume.value) * 20;
+        _saveMuV = Mathf.Log10(_musicVolume.value) * 20;
 
         // Automatically changes volume
         if (MusicManager.musicManager != null)
@@ -136,7 +136,8 @@ public class OptionsMenu : MonoBehaviour
         // Controls menu music
         if (_titleMenu != null)
         {
-            _titleMenu.gameObject.GetComponent<AudioSource>().volume = _musicVolume.value;
+            _titleMenu.gameObject.GetComponent<AudioSource>().volume =
+                Mathf.Log10(_musicVolume.value) * 20;
         }
     }
 
@@ -146,8 +147,8 @@ public class OptionsMenu : MonoBehaviour
     public void SetSFXVolume()
     {
         // Sets volume variables
-        GlobalVariableTracker.sfxVolume = _soundVolume.value;
-        _saveSV = _soundVolume.value;
+        GlobalVariableTracker.sfxVolume = Mathf.Log10(_soundVolume.value) * 20;
+        _saveSV = Mathf.Log10(_soundVolume.value) * 20;
 
         // Automatically changes volume
         if (PlayerController.playerController != null)
@@ -155,14 +156,8 @@ public class OptionsMenu : MonoBehaviour
             PlayerController.playerController.SetSoundEffectsVolume();
         }
 
-        // Automatically changes volume
-        if (MusicManager.musicManager != null)
-        {
-            MusicManager.musicManager.SetVolume();
-        }
-
         // Plays sample sound
-        GetComponent<AudioSource>().volume = _soundVolume.value;
+        GetComponent<AudioSource>().volume = Mathf.Log10(_soundVolume.value) * 20;
         GetComponent<AudioSource>().Play();
     }
 
@@ -173,8 +168,8 @@ public class OptionsMenu : MonoBehaviour
     public void SetMenuVolume()
     {
         // Sets volume variables
-        GlobalVariableTracker.menuVolume = _menuVolume.value;
-        _saveMeV = _menuVolume.value;
+        GlobalVariableTracker.menuVolume = Mathf.Log10(_menuVolume.value) * 20;
+        _saveMeV = Mathf.Log10(_menuVolume.value) * 20;
 
         // Automatically changes volume
         if (DialogueManager.dialogueManager != null)
