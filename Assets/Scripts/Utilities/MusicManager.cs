@@ -2,7 +2,7 @@
  * FILE     : MusicManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 12/6/24
- * UPDATED  : 8/6/25
+ * UPDATED  : 8/7/25
  * 
  * DESC     : Controls which music is currently playing.
 =================================================================================================*/
@@ -23,6 +23,9 @@ public class MusicManager : MonoBehaviour
     // Object References
     [SerializeField] AudioMixer _musicMixer;
     [SerializeField] AudioSource _musicSource;
+
+    // Volume outputs
+    float _volume;
 
     // Misc
     bool _usesSEVolume;
@@ -80,10 +83,11 @@ public class MusicManager : MonoBehaviour
     /// <returns>Framerate delay for fading</returns>
     public IEnumerator FadeOutSong()
     {
+        _musicMixer.GetFloat("musVol", out _volume);
         // Incrementally lowers volume
-        while (_musicSource.volume > 0)
+        while (_volume > 0)
         {
-            _musicSource.volume -= .5f * Time.fixedDeltaTime;
+            _musicMixer.SetFloat("musVol", _volume - .5f * Time.fixedDeltaTime);
             yield return new WaitForFixedUpdate();
         }
 
@@ -99,10 +103,11 @@ public class MusicManager : MonoBehaviour
     /// <returns>Framerate delay for fading</returns>
     IEnumerator FadeOutSong(AudioClip song)
     {
+        _musicMixer.GetFloat("musVol", out _volume);
         // Incrementally lowers volume
-        while (_musicSource.volume > 0)
+        while (_volume > 0)
         {
-            _musicSource.volume -= 2 * Time.fixedDeltaTime;
+            _musicMixer.SetFloat("musVol", _volume - 2 * Time.fixedDeltaTime);
             yield return new WaitForFixedUpdate();
         }
 
