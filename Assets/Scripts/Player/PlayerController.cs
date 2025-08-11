@@ -187,6 +187,12 @@ public class PlayerController : MonoBehaviour
             // Changes direction where the player can interact
             UpdateDetection();
         }
+
+        // Prevents cancelling in normal gameplay
+        if (cancel.enabled && _brake.enabled)
+        {
+            cancel.Disable();
+        }
     }
 
     #endregion
