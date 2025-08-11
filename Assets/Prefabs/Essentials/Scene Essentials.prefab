@@ -887,7 +887,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f793157f3066fc84fadfb4eedb890461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _musicMixer: {fileID: 24100000, guid: 48d19e40f0ca5fe4db5fc1df02d38d0b, type: 2}
+  _missionThemes:
+  - {fileID: 8300000, guid: 9e3a8ce0b0bf1b8439bc551e15101292, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 95e9b2a3e166ebe4f8827c41e86a372c, type: 3}
+  - {fileID: 0}
   _musicSource: {fileID: 8932894999154157477}
 --- !u!114 &304173635431567241 stripped
 MonoBehaviour:
