@@ -22,6 +22,10 @@ public class BackgroundSoundFade : MonoBehaviour
     // Control Switches
     bool _inFade = false;
 
+    // Parameters
+    float _maxVolume;
+    float _timingCoefficient;
+
     #endregion
 
     #region UNIVERSAL EVENTS
@@ -34,9 +38,15 @@ public class BackgroundSoundFade : MonoBehaviour
         // Inits vars
         _attachedAS = GetComponent<AudioSource>();
         _initialSceneName = SceneManager.GetActiveScene().name;
+        _maxVolume = _attachedAS.volume;
+        _timingCoefficient = 1 / _maxVolume;
+        _attachedAS.volume = 0;
 
         // Stops automatic object destruction when scene is loaded
         DontDestroyOnLoad(gameObject);
+
+        // Fades in sound
+        StartCoroutine(FadeSoundIn());
     }
 
     /// <summary>
@@ -48,7 +58,7 @@ public class BackgroundSoundFade : MonoBehaviour
         if (_initialSceneName != SceneManager.GetActiveScene().name && !_inFade)
         {
             _inFade = true;
-            StartCoroutine(FadeSound());
+            StartCoroutine(FadeSoundOut());
         }
     }
 
@@ -57,15 +67,35 @@ public class BackgroundSoundFade : MonoBehaviour
     #region FADE CONTROLS
 
     /// <summary>
+    /// Fades in the sound's volume
+    /// </summary>
+    /// <returns>Framerate delay for fading</returns>
+    IEnumerator FadeSoundIn()
+    {
+        // keeps script from fading both ways at the same time
+        _inFade = true;
+
+        // Incrementally lowers volume
+        while (_attachedAS.volume < _maxVolume)
+        {
+            _attachedAS.volume += (.5f * Time.fixedDeltaTime) / _timingCoefficient;
+            yield return new WaitForFixedUpdate();
+        }
+        
+        // enable fading out
+        _inFade = false;
+    }
+
+    /// <summary>
     /// Fades out the sound's volume
     /// </summary>
     /// <returns>Framerate delay for fading</returns>
-    IEnumerator FadeSound()
+    IEnumerator FadeSoundOut()
     {
         // Incrementally lowers volume
         while (_attachedAS.volume > 0)
         {
-            _attachedAS.volume -= .5f * Time.fixedDeltaTime;
+            _attachedAS.volume -= (.5f * Time.fixedDeltaTime) / _timingCoefficient;
             yield return new WaitForFixedUpdate();
         }
 
