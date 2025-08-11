@@ -145,7 +145,8 @@ public class OptionsMenu : MonoBehaviour
     {
         // Sets volume variables
         GlobalVariableTracker.sfxVolume = _soundVolume.value;
-        _saveSV = Mathf.Log10(_soundVolume.value) * 20;
+        _saveSV = _soundVolume.value;
+        _mixer.SetFloat("sfxVol", Mathf.Log10(GlobalVariableTracker.sfxVolume) * 20);
 
         // Automatically changes volume
         if (PlayerController.playerController != null)
@@ -165,7 +166,8 @@ public class OptionsMenu : MonoBehaviour
     {
         // Sets volume variables
         GlobalVariableTracker.menuVolume = _menuVolume.value;
-        _saveMeV = Mathf.Log10(_menuVolume.value) * 20;
+        _saveMeV = _menuVolume.value;
+        _mixer.SetFloat("menVol", Mathf.Log10(GlobalVariableTracker.menuVolume) * 20);
 
         // Automatically changes volume
         if (DialogueManager.dialogueManager != null)

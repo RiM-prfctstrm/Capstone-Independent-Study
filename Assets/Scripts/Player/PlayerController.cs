@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 8/6/25
+ * UPDATED  : 8/11/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -780,7 +780,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public void SetSoundEffectsVolume()
     {
-        _mixer.SetFloat("sfxVol", GlobalVariableTracker.sfxVolume);
+        _mixer.SetFloat("sfxVol", Mathf.Log10(GlobalVariableTracker.sfxVolume) * 20);
     }
 
     /// <summary>
