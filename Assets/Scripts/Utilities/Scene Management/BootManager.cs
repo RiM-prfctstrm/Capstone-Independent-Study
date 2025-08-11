@@ -2,7 +2,7 @@
  * FILE     : BootManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 8/6/25
+ * UPDATED  : 8/11/25
  * 
  * DESC     : Performs functionality that only occurs when the game is first started.
 =================================================================================================*/
@@ -32,7 +32,7 @@ public class BootManager : MonoBehaviour
     // Level-specific music
     //SerializeField] bool _hasLocalMusic = false;
     [SerializeField] AudioClip _localMusic;
-    [SerializeField] bool _musicSEVolume = false;
+    [SerializeField] bool _missionBGM = false;
     [SerializeField] bool _noLoop = false;
     [SerializeField] bool _noMusic = false;
 
@@ -79,7 +79,7 @@ public class BootManager : MonoBehaviour
         }
         else
         {
-            MusicManager.musicManager.SwapSong(_localMusic, true, _musicSEVolume);
+            MusicManager.musicManager.SwapSong(_localMusic, true, _missionBGM);
             MusicManager.musicManager.SetLooping(!_noLoop);
         }
 

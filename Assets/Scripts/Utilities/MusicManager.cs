@@ -18,12 +18,10 @@ public class MusicManager : MonoBehaviour
 
     // Music
     AudioClip _activeSong;
+    [SerializeField] AudioClip[] _missionThemes = new AudioClip[4];
 
     // Object References
     [SerializeField] AudioSource _musicSource;
-
-    // Misc
-    bool _usesSEVolume;
 
     #endregion
 
@@ -35,16 +33,21 @@ public class MusicManager : MonoBehaviour
     /// </summary>
     /// <param name="song">The desired song to set</param>
     /// <param name="fadeout">Whether or not to fade out the original song</param>
-    public void SwapSong(AudioClip song, bool fadeout, bool useSEVolume)
+    /// <param name="useMissionTheme">Whether the specific song played varies based on the current
+    /// mission</param>
+    public void SwapSong(AudioClip song, bool fadeout, bool useMissionTheme)
     {
+        // Sets overworld music to match current mission
+        if (useMissionTheme)
+        {
+            song = _missionThemes[GlobalVariableTracker.currentMission];
+        }
+
         // Cancels if the song would restart the one currently playing
-        if (song == null || song == _activeSong)
+        if ((song == null || song == _activeSong))
         {
             return;
         }
-
-        // Ensures music tracks use correct volume
-        _usesSEVolume = useSEVolume;
 
         // Fades out old song before playing new one
         if (fadeout)
@@ -120,10 +123,6 @@ public class MusicManager : MonoBehaviour
     {
         _musicSource.loop = active;
     }
-
-    #endregion
-
-    #region BACKGROUND SOUNDSCAPE CONTROLS
 
     #endregion
 }
