@@ -2,14 +2,13 @@
  * FILE     : MusicManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 12/6/24
- * UPDATED  : 8/7/25
+ * UPDATED  : 8/11/25
  * 
  * DESC     : Controls which music is currently playing.
 =================================================================================================*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 
 public class MusicManager : MonoBehaviour
 {
@@ -21,11 +20,7 @@ public class MusicManager : MonoBehaviour
     AudioClip _activeSong;
 
     // Object References
-    [SerializeField] AudioMixer _musicMixer;
     [SerializeField] AudioSource _musicSource;
-
-    // Volume outputs
-    float _volume;
 
     // Misc
     bool _usesSEVolume;
@@ -45,7 +40,6 @@ public class MusicManager : MonoBehaviour
         // Cancels if the song would restart the one currently playing
         if (song == null || song == _activeSong)
         {
-            SetVolume();
             return;
         }
 
@@ -70,9 +64,14 @@ public class MusicManager : MonoBehaviour
     /// <param name="song">The song to play</param>
     void BeginSong(AudioClip song)
     {
+        // Ensures volume is at correct level
+        if (_musicSource.volume != 1)
+        {
+            _musicSource.volume = 1;
+        }
+
         // Plays new song and sets it as active
         _activeSong = song;
-        SetVolume();
         _musicSource.clip = song;
         _musicSource.Play();
     }
@@ -83,11 +82,10 @@ public class MusicManager : MonoBehaviour
     /// <returns>Framerate delay for fading</returns>
     public IEnumerator FadeOutSong()
     {
-        _musicMixer.GetFloat("musVol", out _volume);
         // Incrementally lowers volume
-        while (_volume > 0)
+        while (_musicSource.volume > 0)
         {
-            _musicMixer.SetFloat("musVol", _volume - .5f * Time.fixedDeltaTime);
+            _musicSource.volume -= .5f * Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
         }
 
@@ -103,11 +101,10 @@ public class MusicManager : MonoBehaviour
     /// <returns>Framerate delay for fading</returns>
     IEnumerator FadeOutSong(AudioClip song)
     {
-        _musicMixer.GetFloat("musVol", out _volume);
         // Incrementally lowers volume
-        while (_volume > 0)
+        while (_musicSource.volume > 0)
         {
-            _musicMixer.SetFloat("musVol", _volume - 2 * Time.fixedDeltaTime);
+            _musicSource.volume -= 2 * Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
         }
 
@@ -127,18 +124,6 @@ public class MusicManager : MonoBehaviour
     #endregion
 
     #region BACKGROUND SOUNDSCAPE CONTROLS
-
-    #endregion
-
-    #region VOLUME CONTROLS
-
-    /// <summary>
-    /// Sets the volume of music
-    /// </summary>
-    public void SetVolume()
-    {
-        _musicMixer.SetFloat("musVol", Mathf.Log10(GlobalVariableTracker.musicVolume) * 20);
-    }
 
     #endregion
 }

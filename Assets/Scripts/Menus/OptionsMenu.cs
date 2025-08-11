@@ -2,7 +2,7 @@
  * FILE     : OptionsMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/16/25
- * UPDATED  : 8/7/25
+ * UPDATED  : 8/11/25
  * 
  * DESC     : Adjusts variables that affect the game's presentation.
 =================================================================================================*/
@@ -130,12 +130,6 @@ public class OptionsMenu : MonoBehaviour
         GlobalVariableTracker.musicVolume = _musicVolume.value;
         _saveMuV = _musicVolume.value;
         _mixer.SetFloat("musVol", Mathf.Log10(GlobalVariableTracker.musicVolume) * 20);
-
-        // Automatically changes volume
-        if (MusicManager.musicManager != null)
-        {
-            MusicManager.musicManager.SetVolume();
-        }
     }
 
     /// <summary>
