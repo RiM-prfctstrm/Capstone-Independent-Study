@@ -60,6 +60,11 @@ public class ExitGameOver : MonoBehaviour
     /// </summary>
     public void QuitToTitle()
     {
+        // Resets data
+        DebugProgressInjector resetter = gameObject.AddComponent<DebugProgressInjector>();
+        resetter.InjectGlobalData();
+
+        // Loads menu
         SceneManager.LoadScene(0);
     }
 

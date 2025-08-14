@@ -2,7 +2,7 @@
  * FILE     : TimerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 4/19/25
- * UPDATED  : 4/22/25
+ * UPDATED  : 8/14/25
  * 
  * DESC     : Controls countdown timer that ends the game when it reaches 0.
 =================================================================================================*/
@@ -53,14 +53,6 @@ public class TimerController : MonoBehaviour
     {
         // Inits vars
         _countdownRoutine = Countdown();
-    }
-
-    /// <summary>
-    /// Update is called once per frame
-    /// </summary>
-    void Update()
-    {
-        
     }
 
     #endregion
@@ -222,10 +214,6 @@ public class TimerController : MonoBehaviour
         CollectibleManager.collectibleManager.ResetCount();
         InGameMainMenu.inMainMenu = false;
         InGameMainMenu.inGameMainMenu.ExitMenu();
-
-        // Resets progress
-        DebugProgressInjector resetter = gameObject.AddComponent<DebugProgressInjector>();
-        resetter.InjectGlobalData();
 
         // Returns the game to the title screen and deletes the scene essentials, which are not
         // meant to exist there
