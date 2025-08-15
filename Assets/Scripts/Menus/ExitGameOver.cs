@@ -19,6 +19,9 @@ public class ExitGameOver : MonoBehaviour
     #region VARS
 
     // Object Refs
+    [SerializeField] Button _dummyButton;
+    [SerializeField] GameObject _evSysObj;
+    [SerializeField] ScreenEffects _effects;
     [SerializeField] Button _firstOption;
     CanvasGroup _menuBack;
     [SerializeField] Graphic _movingText;
@@ -38,14 +41,6 @@ public class ExitGameOver : MonoBehaviour
         // Starts effects
         
         StartCoroutine(EntryEffectsRunner());
-    }
-
-    /// <summary>
-    /// Update is called once per frame
-    /// </summary>
-    void Update()
-    {
-
     }
 
     #endregion
@@ -86,7 +81,7 @@ public class ExitGameOver : MonoBehaviour
             }
 
             // Fades in menu
-            if (tick > 250)
+            if (tick > 220)
             {
                 _menuBack.alpha += 1f * Time.deltaTime;
                 
@@ -94,7 +89,11 @@ public class ExitGameOver : MonoBehaviour
                 if (_menuBack.alpha == 1)
                 {
                     // Selects menu button
+                    _evSysObj.SetActive(true);
                     _firstOption.Select();
+
+                    // Sets speed to fade out faster
+                    _effects.fadeSpeed = 2;
 
                     break;
                 }
@@ -103,6 +102,29 @@ public class ExitGameOver : MonoBehaviour
             // Delays loop execution and updates tick
             yield return new WaitForEndOfFrame();
             tick++;
+        }
+    }
+
+    /// <summary>
+    /// Choreographs effects when closing the menu before changing scene
+    /// </summary>
+    /// <returns>Delay before scene ends</returns>
+    IEnumerator ExitEffectRunner(bool retry)
+    {
+        // Deselects button
+        _dummyButton.Select();
+
+        // Delays
+        yield return new WaitUntil(() => !ScreenEffects.fadingOut);
+
+        // Sends to next scene
+        if (retry)
+        {
+            SceneManager.LoadScene("GameStore");
+        }
+        else
+        {
+            SceneManager.LoadScene(0);
         }
     }
 
@@ -115,7 +137,8 @@ public class ExitGameOver : MonoBehaviour
     /// </summary>
     public void RetryDelivery()
     {
-        SceneManager.LoadScene("GameStore");
+        ScreenEffects.fadingOut = true;
+        StartCoroutine(ExitEffectRunner(true));
     }
 
     /// <summary>
@@ -128,7 +151,8 @@ public class ExitGameOver : MonoBehaviour
         resetter.InjectGlobalData();
 
         // Loads menu
-        SceneManager.LoadScene(0);
+        ScreenEffects.fadingOut = true;
+        StartCoroutine(ExitEffectRunner(false));
     }
 
     #endregion
