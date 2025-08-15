@@ -2,7 +2,7 @@
  * FILE     : ExitGameOver.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 4/20/25
- * UPDATED  : 8/14/25
+ * UPDATED  : 8/15/25
  * 
  * DESC     : Lets the player choose whether to return to the title screen or retry the last
  *            delivery after they fail it.
@@ -12,12 +12,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ExitGameOver : MonoBehaviour
 {
     #region VARS
 
+    // Object Refs
     [SerializeField] Button _firstOption;
+    CanvasGroup _menuBack;
+    [SerializeField] Graphic _movingText;
 
     #endregion
 
@@ -28,11 +32,15 @@ public class ExitGameOver : MonoBehaviour
     /// </summary>
     void Start()
     {
+        // Inits Vars
+        _menuBack = GetComponent<CanvasGroup>();
+
         // Selects menu button
         _firstOption.Select();
 
-        // Fades in screen
-        ScreenEffects.fadingIn = true;
+        // Starts effects
+        
+        StartCoroutine(EntryEffectsRunner());
     }
 
     /// <summary>
@@ -41,6 +49,51 @@ public class ExitGameOver : MonoBehaviour
     void Update()
     {
 
+    }
+
+    #endregion
+
+    #region VFX SCRIPTS
+
+    /// <summary>
+    /// Coroutine that choreographs the audio and visual effects when the scene is booted
+    /// </summary>
+    /// <returns>length of tick update</returns>
+    IEnumerator EntryEffectsRunner()
+    {
+        // Vars
+        // Counts ticks since function starts to coordinate all effects in a single coroutine
+        int tick = 0;
+
+        // Effect Params
+        Color textColor = new Color(255, 0, 0, 0);
+
+        // Effects that start instantly
+        ScreenEffects.fadingIn = true;
+
+        // Update loop
+        while (true)
+        {
+            // Fades and positions main text
+            if (tick >= 30 && tick < 80)
+            {
+                // Updates params
+                textColor.a += .04f;
+
+                // Updates object
+                _movingText.rectTransform.localPosition += Vector3.down;
+                if (_movingText.GetComponent<TextMeshProUGUI>().color.a < 1)
+                {
+                    _movingText.GetComponent<TextMeshProUGUI>().color = textColor;
+                }
+            }
+
+            // Fades in menu
+
+            // Delays loop execution and updates tick
+            yield return new WaitForEndOfFrame();
+            tick++;
+        }
     }
 
     #endregion
