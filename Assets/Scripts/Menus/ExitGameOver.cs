@@ -35,9 +35,6 @@ public class ExitGameOver : MonoBehaviour
         // Inits Vars
         _menuBack = GetComponent<CanvasGroup>();
 
-        // Selects menu button
-        _firstOption.Select();
-
         // Starts effects
         
         StartCoroutine(EntryEffectsRunner());
@@ -75,13 +72,13 @@ public class ExitGameOver : MonoBehaviour
         while (true)
         {
             // Fades and positions main text
-            if (tick >= 30 && tick < 80)
+            if (tick >= 90 && tick < 190)
             {
                 // Updates params
-                textColor.a += .04f;
+                textColor.a += .02f;
 
                 // Updates object
-                _movingText.rectTransform.localPosition += Vector3.down;
+                _movingText.rectTransform.localPosition += Vector3.down * .5f;
                 if (_movingText.GetComponent<TextMeshProUGUI>().color.a < 1)
                 {
                     _movingText.GetComponent<TextMeshProUGUI>().color = textColor;
@@ -89,6 +86,19 @@ public class ExitGameOver : MonoBehaviour
             }
 
             // Fades in menu
+            if (tick > 250)
+            {
+                _menuBack.alpha += 1f * Time.deltaTime;
+                
+                // Exits sequence once menu finishes fading
+                if (_menuBack.alpha == 1)
+                {
+                    // Selects menu button
+                    _firstOption.Select();
+
+                    break;
+                }
+            }
 
             // Delays loop execution and updates tick
             yield return new WaitForEndOfFrame();
