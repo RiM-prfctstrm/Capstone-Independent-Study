@@ -2,7 +2,7 @@
  * FILE     : TimerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 4/19/25
- * UPDATED  : 8/14/25
+ * UPDATED  : 8/19/25
  * 
  * DESC     : Controls countdown timer that ends the game when it reaches 0.
 =================================================================================================*/
@@ -84,15 +84,29 @@ public class TimerController : MonoBehaviour
     /// <returns>1 Second intervals between timer updates</returns>
     IEnumerator Countdown()
     {
+        // Vars
+        float updateLength = 1;
+
         // Counts down clock
         while (_timeRemaining > 0)
         {
             // Clock interval
-            yield return new WaitForSecondsRealtime(1);
+            yield return new WaitForSecondsRealtime(updateLength);
 
             // Clock update
             _timeRemaining--;
             UpdateHUDClock();
+
+            // Changes amount of time between updates
+            switch (_timeRemaining)
+            {
+                case 30:
+                    updateLength = 1.25f;
+                    break;
+                case 10:
+                    updateLength = 1.5f;
+                    break;
+            }
         }
 
         // Performs functionality on ending the clock
