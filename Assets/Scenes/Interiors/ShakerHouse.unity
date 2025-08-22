@@ -3376,6 +3376,10 @@ PrefabInstance:
       value: ShakerHouse
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+      propertyPath: _permanentOverride
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: _lockedMessage.dialogueBoxes.Array.data[0].dialogueText
       value: Salt's room. Still uner construction.
       objectReference: {fileID: 0}
@@ -5148,6 +5152,10 @@ PrefabInstance:
       propertyPath: _targetScene
       value: ShakerHouse
       objectReference: {fileID: 0}
+    - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
+      propertyPath: _permanentOverride
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
 --- !u!1 &1112890484
@@ -6751,6 +6759,10 @@ MonoBehaviour:
   isLocked: 0
   _lockedMessage:
     dialogueBoxes: []
+  _midDeliMsg:
+    dialogueBoxes: []
+  _overrideMissions: 
+  _permanentOverride: 0
 --- !u!1 &1433822566
 GameObject:
   m_ObjectHideFlags: 0
