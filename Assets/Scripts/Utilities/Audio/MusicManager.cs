@@ -162,7 +162,7 @@ public class MusicManager : MonoBehaviour
         }
 
         // Vars
-        float secondsPerBeat = 60 / trackData.bpm;
+        float secondsPerBeat = 60f / trackData.bpm;
         _startTime = secondsPerBeat * trackData.loopBeat;
     }
 
