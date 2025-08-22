@@ -95,12 +95,7 @@ MonoBehaviour:
   _m0specialComplete: 0
   _m2specialComplete: 0
   _m3specialComplete: 0
-  _m0blipGateTriggered: 0
-  _m0blipGateCleared: 0
-  _m2blipGateTriggered: 0
-  _m2blipGateCleared: 0
-  _m3blipGateTriggered: 0
-  _m3blipGateCleared: 0
+  _inDelivery: 1
   _collectiblesInPocket: 0
   _fireInjector: 0
 --- !u!1 &304173636179101748
@@ -892,9 +887,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _missionThemes:
-  - {fileID: 8300000, guid: 9e3a8ce0b0bf1b8439bc551e15101292, type: 3}
+  - {fileID: 11400000, guid: 94a280aaec0ff704ea77d443d9635e02, type: 2}
   - {fileID: 0}
-  - {fileID: 8300000, guid: 95e9b2a3e166ebe4f8827c41e86a372c, type: 3}
+  - {fileID: 0}
   - {fileID: 0}
   _musicSource: {fileID: 8932894999154157477}
 --- !u!114 &304173635431567241 stripped
@@ -997,7 +992,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

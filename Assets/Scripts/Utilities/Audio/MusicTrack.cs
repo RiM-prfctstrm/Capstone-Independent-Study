@@ -25,7 +25,7 @@ public class MusicTrack : ScriptableObject
     public int loopBeat => _loopBeat;
 
     // Information used to calculate precise timing
-    [SerializeField] int _bpm;
+    [SerializeField] int _bpm; // can be left at 0 if _loopBeat is also 0
     public int bpm => _bpm;
 
     #endregion

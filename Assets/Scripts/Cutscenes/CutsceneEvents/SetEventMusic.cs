@@ -2,7 +2,7 @@
  * FILE     : SetEventMusic.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 12/6/24
- * UPDATED  : 6/23/25
+ * UPDATED  : 8/22/25
  * 
  * DESC     : Plays music for a cutscene
 =================================================================================================*/
@@ -16,7 +16,7 @@ public class SetEventMusic : CutsceneEvent
     #region VARIABLES
 
     // Music Parameters
-    [SerializeField] AudioClip _song;
+    [SerializeField] MusicTrack _song;
     [SerializeField] bool _useFadeOut = false;
 
     #endregion

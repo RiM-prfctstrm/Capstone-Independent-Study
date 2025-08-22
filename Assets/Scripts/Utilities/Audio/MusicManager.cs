@@ -2,7 +2,7 @@
  * FILE     : MusicManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 12/6/24
- * UPDATED  : 8/11/25
+ * UPDATED  : 8/22/25
  * 
  * DESC     : Controls which music is currently playing.
 =================================================================================================*/
@@ -18,10 +18,31 @@ public class MusicManager : MonoBehaviour
 
     // Music
     AudioClip _activeSong;
-    [SerializeField] AudioClip[] _missionThemes = new AudioClip[4];
+    [SerializeField] MusicTrack[] _missionThemes = new MusicTrack[4];
 
     // Object References
     [SerializeField] AudioSource _musicSource;
+
+    // Playback Data
+    bool _isLoop;
+    float _startTime;
+
+    #endregion
+
+    #region UNIVERSAL EVENTS
+
+    /// <summary>
+    /// Update is called once every frame
+    /// </summary>
+    private void Update()
+    {
+        // loops song
+        if (!_musicSource.isPlaying)
+        {
+            _musicSource.time = _startTime;
+            _musicSource.Play();
+        }
+    }
 
     #endregion
 
@@ -35,7 +56,7 @@ public class MusicManager : MonoBehaviour
     /// <param name="fadeout">Whether or not to fade out the original song</param>
     /// <param name="useMissionTheme">Whether the specific song played varies based on the current
     /// mission</param>
-    public void SwapSong(AudioClip song, bool fadeout, bool useMissionTheme)
+    public void SwapSong(MusicTrack song, bool fadeout, bool useMissionTheme)
     {
         // Sets overworld music to match current mission
         if (useMissionTheme)
@@ -44,7 +65,7 @@ public class MusicManager : MonoBehaviour
         }
 
         // Cancels if the song would restart the one currently playing
-        if ((song == null || song == _activeSong))
+        if ((song == null || song.song == _activeSong))
         {
             return;
         }
@@ -52,12 +73,13 @@ public class MusicManager : MonoBehaviour
         // Fades out old song before playing new one
         if (fadeout)
         {
-            StartCoroutine(FadeOutSong(song));
+            StartCoroutine(FadeOutSong(song.song));
             return;
         }
 
         // Starts new song
-        BeginSong(song);
+        BeginSong(song.song);
+        SetLoopPoint(song);
     }
 
 
@@ -115,14 +137,36 @@ public class MusicManager : MonoBehaviour
         BeginSong(song);
     }
 
+    #region LOOPING CONTROLS
+
     /// <summary>
     /// Sets whether the song
     /// </summary>
     /// <param name="active"></param>
     public void SetLooping(bool active)
     {
-        _musicSource.loop = active;
+        _isLoop = active;
     }
+
+    /// <summary>
+    /// Tells the audio source where it should start a track's loop.
+    /// </summary>
+    /// <param name="trackData">container for bpm and loop point data</param>
+    void SetLoopPoint(MusicTrack trackData)
+    {
+        // Resets to full loop when there is no intro
+        if (trackData.bpm == 0)
+        {
+            _musicSource.time = 0;
+            return;
+        }
+
+        // Vars
+        float secondsPerBeat = 60 / trackData.bpm;
+        _startTime = secondsPerBeat * trackData.loopBeat;
+    }
+
+    #endregion
 
     #endregion
 }
