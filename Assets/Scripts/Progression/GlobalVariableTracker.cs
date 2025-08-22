@@ -2,7 +2,7 @@
  * FILE     : GlobalVariableTracker.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/4/24
- * UPDATED  : 4/29/25
+ * UPDATED  : 8/22/25
  * 
  * DESC     : Stores data that is meant to persist throughout the entire game. Variables are kept
  *            in an initialized state to easily create a new save. If a save is loaded, they are
@@ -60,13 +60,9 @@ public class GlobalVariableTracker
         { "m2specialComplete", false },
         { "m3specialComplete", false },
 
-        // Collectible gate controls
-        { "m0blipGateTriggered", false },
-        { "m0blipGateCleared", false },
-        { "m2blipGateTriggered", false },
-        { "m2blipGateCleared", false },
-        { "m3blipGateTriggered", false },
-        { "m3blipGateCleared", false }
+        /// State control. Technically not strictly progression, but it's easier to wire these into
+        /// the existing system.
+        { "inDelivery", false }
     };
 
     #endregion

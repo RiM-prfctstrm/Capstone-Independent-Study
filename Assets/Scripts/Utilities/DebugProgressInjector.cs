@@ -2,7 +2,7 @@
  * FILE     : DebugProgressInjector.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/3/25
- * UPDATED  : 4/29/25
+ * UPDATED  : 8/22/25
  * 
  * DESC     : Debug script to set progression variables by hand in inspector. Used to tell the game
  *            to play at a certain point. Works best before loading scene.
@@ -41,13 +41,8 @@ public class DebugProgressInjector : MonoBehaviour
     [SerializeField] bool _m2specialComplete = false;
     [SerializeField] bool _m3specialComplete = false;
 
-    // Collectible Gates (ordered by gameplay progression)
-    [SerializeField] bool _m0blipGateTriggered = false;
-    [SerializeField] bool _m0blipGateCleared = false;
-    [SerializeField] bool _m2blipGateTriggered = false;
-    [SerializeField] bool _m2blipGateCleared = false;
-    [SerializeField] bool _m3blipGateTriggered = false;
-    [SerializeField] bool _m3blipGateCleared = false;
+    // Game States
+    [SerializeField] bool _inDelivery = true;
 
     // Collectibles
     [SerializeField] int _collectiblesInPocket;
@@ -119,13 +114,8 @@ public class DebugProgressInjector : MonoBehaviour
         GlobalVariableTracker.progressionFlags["m2specialComplete"] = _m2specialComplete;
         GlobalVariableTracker.progressionFlags["m3specialComplete"] = _m3specialComplete;
 
-        // Collectible Gates
-        GlobalVariableTracker.progressionFlags["m0blipGateTriggered"] = _m0blipGateTriggered;
-        GlobalVariableTracker.progressionFlags["m0blipGateCleared"] = _m0blipGateCleared;
-        GlobalVariableTracker.progressionFlags["m2blipGateTriggered"] = _m2blipGateTriggered;
-        GlobalVariableTracker.progressionFlags["m2blipGateCleared"] = _m2blipGateCleared;
-        GlobalVariableTracker.progressionFlags["m3blipGateTriggered"] = _m3blipGateTriggered;
-        GlobalVariableTracker.progressionFlags["m3blipGateCleared"] = _m3blipGateCleared;
+        // Game States
+        GlobalVariableTracker.progressionFlags["inDelivery"] = _inDelivery;
 
         // Collectibles
         GlobalVariableTracker.collectiblesInPocket = _collectiblesInPocket;

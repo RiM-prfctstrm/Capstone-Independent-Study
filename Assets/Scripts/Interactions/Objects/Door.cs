@@ -2,7 +2,7 @@
  * FILE     : Door.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 4/22/25
+ * UPDATED  : 8/22/25
  * 
  * DESC     : Basically a fancier version of SceneTrigger that activates when the player interacts
  *            with it, plays different animations and sounds, and can be locked until the player
@@ -25,6 +25,9 @@ public class Door : InteractableObject
     // Locking info
     public bool isLocked = false;
     [SerializeField] DialogueEvent _lockedMessage;
+    [SerializeField] DialogueEvent _midDeliMsg;
+    [SerializeField] List<int> _overrideMissions;
+    [SerializeField] bool _permanentOverride = false;
 
     #endregion
 
@@ -50,14 +53,22 @@ public class Door : InteractableObject
     /// </summary>
     public override void OnInteractedWith()
     {
-        if (!isLocked)
+        // Locks during delivery
+        if (GlobalVariableTracker.progressionFlags["inDelivery"] && !_permanentOverride &&
+            !_overrideMissions.Contains(GlobalVariableTracker.currentMission))
+        {
+            // Informs player the door is locked
+            PlayerController.playerController.TogglePlayerInput();
+            DialogueManager.dialogueManager.StartDialogue(_midDeliMsg);
+        }
+        else if (!isLocked)
         {
             // Loads new scene and positions player in it
             StartCoroutine(SceneTransition.TransitionScene(
                 _targetScene, _leadsIndoors, _position, _direction));
         }
         else
-        {
+        {  
             // Informs player the door is locked
             PlayerController.playerController.TogglePlayerInput();
             DialogueManager.dialogueManager.StartDialogue(_lockedMessage);
