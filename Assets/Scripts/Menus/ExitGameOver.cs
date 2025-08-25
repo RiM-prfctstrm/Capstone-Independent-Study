@@ -2,10 +2,9 @@
  * FILE     : ExitGameOver.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 4/20/25
- * UPDATED  : 8/15/25
+ * UPDATED  : 8/25/25
  * 
- * DESC     : Lets the player choose whether to return to the title screen or retry the last
- *            delivery after they fail it.
+ * DESC     : Controls entire game over screen
 =================================================================================================*/
 using System.Collections;
 using System.Collections.Generic;
@@ -67,13 +66,13 @@ public class ExitGameOver : MonoBehaviour
         while (true)
         {
             // Fades and positions main text
-            if (tick >= 90 && tick < 190)
+            if (tick >= 180 && tick < 380)
             {
                 // Updates params
                 textColor.a += .02f;
 
                 // Updates object
-                _movingText.rectTransform.localPosition += Vector3.down * .5f;
+                _movingText.rectTransform.localPosition += Vector3.down * .25f;
                 if (_movingText.GetComponent<TextMeshProUGUI>().color.a < 1)
                 {
                     _movingText.GetComponent<TextMeshProUGUI>().color = textColor;
@@ -81,7 +80,7 @@ public class ExitGameOver : MonoBehaviour
             }
 
             // Fades in menu
-            if (tick > 220)
+            if (tick > 440)
             {
                 _menuBack.alpha += 1f * Time.deltaTime;
                 
