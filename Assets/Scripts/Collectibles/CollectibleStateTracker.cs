@@ -8,15 +8,21 @@
 =================================================================================================*/
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollectibleStateTracker : MonoBehaviour
 {
     #region VARS
 
-    // Data Storage
+    // Data Containers
     Dictionary<int, bool> _collectibleStatus = new Dictionary<int, bool>();
     List<Collectible> _collectibleObjects = new List<Collectible>();
+
+    // Save containers
+    // File Names
+    string _saveFileName;
 
     #endregion
 
@@ -27,6 +33,10 @@ public class CollectibleStateTracker : MonoBehaviour
     /// </summary>
     void Awake()
     {
+        // Inits vars
+        _saveFileName = Application.dataPath + "/SaveData/Collectibles/" +
+            SceneManager.GetActiveScene().name + ".txt";
+
         // Compiles collectibles in scene
         foreach (Collectible i in GetComponentsInChildren<Collectible>())
         {
@@ -67,6 +77,9 @@ public class CollectibleStateTracker : MonoBehaviour
             _collectibleStatus.Add(IDNo, false);
             IDNo++;
         }
+
+        // Saves status (DEBUG???)
+        SavePickupState();
     }
 
     /// <summary>
@@ -75,10 +88,51 @@ public class CollectibleStateTracker : MonoBehaviour
     public void UpdateDict(int IDKey)
     {
         _collectibleStatus[IDKey] = true;
-        Debug.Log(IDKey);
+    }
+
+    /// <summary>
+    /// Destroys all collectibles that have already been picked up
+    /// </summary>
+    void RemoveCollectedObjs()
+    {
+        foreach(KeyValuePair<int, bool> i in _collectibleStatus)
+        {
+            if (i.Value == true)
+            {
+                Destroy(_collectibleObjects[i.Key].gameObject);
+            }
+        }
     }
 
     #region SAVE MANAGEMENT
+
+    /// <summary>
+    /// Writes a save file with pickup status in a unique folder
+    /// </summary>
+    void SavePickupState()
+    {
+        // Logic to control whether to make a new file
+        if (!File.Exists(_saveFileName))
+        {
+            File.Create(_saveFileName);
+            File.WriteAllText(_saveFileName, _collectibleStatus.ToString());
+        }
+        else
+        {
+            using (var writer = new StreamWriter(_saveFileName, false))
+            {
+                writer.WriteLine(_collectibleStatus.ToString());
+            }
+        }
+    }
+
+    /// <summary>
+    /// Presets the status dictionary with saved data.
+    /// </summary>
+    void LoadPickupState()
+    {
+
+    }
 
     #endregion
 
