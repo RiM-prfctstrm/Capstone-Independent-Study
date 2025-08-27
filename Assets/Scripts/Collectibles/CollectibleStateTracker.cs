@@ -19,10 +19,10 @@ public class CollectibleStateTracker : MonoBehaviour
     // Data Containers
     Dictionary<int, bool> _collectibleStatus = new Dictionary<int, bool>();
     List<Collectible> _collectibleObjects = new List<Collectible>();
-
-    // Save containers
-    // File Names
     string _saveFileName;
+
+    // Controls
+    int _initScene;
 
     #endregion
 
@@ -36,15 +36,20 @@ public class CollectibleStateTracker : MonoBehaviour
         // Inits vars
         _saveFileName = Application.dataPath + "/SaveData/Collectibles/" +
             SceneManager.GetActiveScene().name + ".txt";
+        _initScene = SceneManager.GetActiveScene().buildIndex;
 
         // Compiles collectibles in scene
         foreach (Collectible i in GetComponentsInChildren<Collectible>())
         {
             _collectibleObjects.Add(i);
+            i.localTracker = this;
         }
 
         // Loads state data
         LoadPickupState();
+
+        Debug.Log(_collectibleObjects.Count);
+        Debug.Log(_collectibleStatus.Count);
 
         // DEBUG Recompiles list after scene changed in editor
         // Determines whether to create a new collectible dictionary
@@ -56,6 +61,21 @@ public class CollectibleStateTracker : MonoBehaviour
         else
         {
             RemoveCollectedObjs();
+        }
+
+        DontDestroyOnLoad(gameObject);
+    }
+
+    /// <summary>
+    /// Update iscalled once per frame
+    /// </summary>
+    void Update()
+    {
+        // Saves and removes object when new scene is loadded
+        if (SceneManager.GetActiveScene().buildIndex != _initScene)
+        {
+            SavePickupState();
+            Destroy(gameObject);
         }
     }
 
@@ -79,7 +99,6 @@ public class CollectibleStateTracker : MonoBehaviour
         {
             // Assigns unique ID number to each object
             i.collectibleID = IDNo;
-            i.localTracker = this;
             _collectibleStatus.Add(IDNo, false);
             IDNo++;
         }
@@ -139,6 +158,9 @@ public class CollectibleStateTracker : MonoBehaviour
     /// </summary>
     void LoadPickupState()
     {
+        // Clears dictionRary
+        _collectibleStatus.Clear();
+
         // Reads save file
         using (var reader = new StreamReader(_saveFileName))
         {
@@ -148,7 +170,6 @@ public class CollectibleStateTracker : MonoBehaviour
                 _collectibleStatus.Add(int.Parse(reader.ReadLine()),
                     bool.Parse(reader.ReadLine()));
             }
-
         }
     }
 
