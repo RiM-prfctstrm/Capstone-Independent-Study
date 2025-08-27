@@ -63,9 +63,19 @@ public class CollectibleStateTracker : MonoBehaviour
         {
             // Assigns unique ID number to each object
             i.collectibleID = IDNo;
+            i.localTracker = this;
             _collectibleStatus.Add(IDNo, false);
             IDNo++;
         }
+    }
+
+    /// <summary>
+    /// Changes collected status for individual collectibles
+    /// </summary>
+    public void UpdateDict(int IDKey)
+    {
+        _collectibleStatus[IDKey] = true;
+        Debug.Log(IDKey);
     }
 
     #region SAVE MANAGEMENT

@@ -16,7 +16,7 @@ public class Collectible : MonoBehaviour
 
     // State trackers
     public int collectibleID = -1;
-    public bool hasBeenPickedUp = false;
+    public CollectibleStateTracker localTracker;
 
     // Audio
     [SerializeField] AudioClip _pickUpSound;
@@ -42,6 +42,9 @@ public class Collectible : MonoBehaviour
             GetComponent<Animator>().Play("Collect");
             GetComponent<Collider2D>().enabled = false;
             PlayerController.playerController.playerAudioSource.PlayOneShot(_pickUpSound);
+
+            // Updates Tracker
+            localTracker.UpdateDict(collectibleID);
         }
     }
 
