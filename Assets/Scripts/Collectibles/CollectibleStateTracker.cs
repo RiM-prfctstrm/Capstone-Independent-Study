@@ -15,8 +15,8 @@ public class CollectibleStateTracker : MonoBehaviour
     #region VARS
 
     // Data Storage
-    Dictionary<int, bool> _collectibleStatus;
-    List<Collectible> _collectibleObjects;
+    Dictionary<int, bool> _collectibleStatus = new Dictionary<int, bool>();
+    List<Collectible> _collectibleObjects = new List<Collectible>();
 
     #endregion
 
@@ -28,7 +28,7 @@ public class CollectibleStateTracker : MonoBehaviour
     void Awake()
     {
         // Compiles collectibles in scene
-        foreach (Collectible i in FindObjectsOfType<Collectible>())
+        foreach (Collectible i in GetComponentsInChildren<Collectible>())
         {
             _collectibleObjects.Add(i);
         }
@@ -58,7 +58,14 @@ public class CollectibleStateTracker : MonoBehaviour
         // Destroys old dict
         _collectibleStatus.Clear();
 
-        // 
+        // Loop to gather and set IDs for each collectible
+        foreach (Collectible i in _collectibleObjects)
+        {
+            // Assigns unique ID number to each object
+            i.collectibleID = IDNo;
+            _collectibleStatus.Add(IDNo, false);
+            IDNo++;
+        }
     }
 
     #region SAVE MANAGEMENT

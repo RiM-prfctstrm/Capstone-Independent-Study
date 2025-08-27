@@ -15,8 +15,8 @@ public class Collectible : MonoBehaviour
     #region VARIABLES
 
     // State trackers
-    public int _collectibleID = -1;
-    public bool _hasBeenPickedUp = false;
+    public int collectibleID = -1;
+    public bool hasBeenPickedUp = false;
 
     // Audio
     [SerializeField] AudioClip _pickUpSound;
