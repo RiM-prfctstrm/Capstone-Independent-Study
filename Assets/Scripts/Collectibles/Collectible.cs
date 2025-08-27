@@ -2,7 +2,7 @@
  * FILE     : Collectible.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/22/25
- * UPDATED  : 3/10/25
+ * UPDATED  : 8/27/25
  * 
  * DESC     : Behaviour for items that can be picked up off the ground.
 =================================================================================================*/
@@ -13,6 +13,10 @@ using UnityEngine;
 public class Collectible : MonoBehaviour
 {
     #region VARIABLES
+
+    // State trackers
+    public int _collectibleID = -1;
+    public bool _hasBeenPickedUp = false;
 
     // Audio
     [SerializeField] AudioClip _pickUpSound;
