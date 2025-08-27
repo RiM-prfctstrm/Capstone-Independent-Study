@@ -43,13 +43,19 @@ public class CollectibleStateTracker : MonoBehaviour
             _collectibleObjects.Add(i);
         }
 
-        // Loads dict data
+        // Loads state data
+        LoadPickupState();
 
         // DEBUG Recompiles list after scene changed in editor
         // Determines whether to create a new collectible dictionary
         if (_collectibleObjects.Count != _collectibleStatus.Count)
         {
             CreateNewStatusDict();
+        }
+        // Removes picked up collectibles
+        else
+        {
+            RemoveCollectedObjs();
         }
     }
 
@@ -111,17 +117,19 @@ public class CollectibleStateTracker : MonoBehaviour
     /// </summary>
     void SavePickupState()
     {
-        // Logic to control whether to make a new file
+        // Creates save file if none exists
         if (!File.Exists(_saveFileName))
         {
             File.Create(_saveFileName);
-            File.WriteAllText(_saveFileName, _collectibleStatus.ToString());
         }
-        else
+
+        // Writes saves
+        using (var writer = new StreamWriter(_saveFileName, false))
         {
-            using (var writer = new StreamWriter(_saveFileName, false))
+            foreach (KeyValuePair<int, bool> i in _collectibleStatus)
             {
-                writer.WriteLine(_collectibleStatus.ToString());
+                writer.WriteLine(i.Key);
+                writer.WriteLine(i.Value);
             }
         }
     }
@@ -131,8 +139,19 @@ public class CollectibleStateTracker : MonoBehaviour
     /// </summary>
     void LoadPickupState()
     {
+        // Reads save file
+        using (var reader = new StreamReader(_saveFileName))
+        {
+            // Loops through each line and updates dict with data
+            while(reader.Peek() != -1)
+            {
+                _collectibleStatus.Add(int.Parse(reader.ReadLine()),
+                    bool.Parse(reader.ReadLine()));
+            }
 
+        }
     }
+
 
     #endregion
 
