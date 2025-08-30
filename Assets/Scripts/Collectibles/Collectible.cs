@@ -2,7 +2,7 @@
  * FILE     : Collectible.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/22/25
- * UPDATED  : 8/27/25
+ * UPDATED  : 8/29/25
  * 
  * DESC     : Behaviour for items that can be picked up off the ground.
 =================================================================================================*/

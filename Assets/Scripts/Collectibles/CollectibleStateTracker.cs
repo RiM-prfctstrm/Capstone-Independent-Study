@@ -2,7 +2,7 @@
  * FILE     : CollectibleStateTracker.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/25
- * UPDATED  : 8/27/25
+ * UPDATED  : 8/30/25
  * 
  * DESC     : Tracks whether collectibles in the current scene have been picked up or not.
 =================================================================================================*/
@@ -24,6 +24,9 @@ public class CollectibleStateTracker : MonoBehaviour
     // Controls
     int _initScene;
 
+    // Incrementers
+    int _IDNo = 0;
+
     #endregion
 
     #region UNIVERSAL EVENTS
@@ -43,13 +46,12 @@ public class CollectibleStateTracker : MonoBehaviour
         {
             _collectibleObjects.Add(i);
             i.localTracker = this;
+            i.collectibleID = _IDNo;
+            _IDNo++;
         }
 
         // Loads state data
         LoadPickupState();
-
-        Debug.Log(_collectibleObjects.Count);
-        Debug.Log(_collectibleStatus.Count);
 
         // DEBUG Recompiles list after scene changed in editor
         // Determines whether to create a new collectible dictionary
@@ -98,13 +100,26 @@ public class CollectibleStateTracker : MonoBehaviour
         foreach (Collectible i in _collectibleObjects)
         {
             // Assigns unique ID number to each object
-            i.collectibleID = IDNo;
             _collectibleStatus.Add(IDNo, false);
             IDNo++;
         }
 
         // Saves status (DEBUG???)
-        SavePickupState();
+        //SavePickupState();
+    }
+
+    /// <summary>
+    /// Destroys all collectibles that have already been picked up
+    /// </summary>
+    void RemoveCollectedObjs()
+    {
+        foreach (KeyValuePair<int, bool> i in _collectibleStatus)
+        {
+            if (i.Value == true)
+            {
+                Destroy(_collectibleObjects[i.Key].gameObject);
+            }
+        }
     }
 
     /// <summary>
@@ -113,20 +128,7 @@ public class CollectibleStateTracker : MonoBehaviour
     public void UpdateDict(int IDKey)
     {
         _collectibleStatus[IDKey] = true;
-    }
-
-    /// <summary>
-    /// Destroys all collectibles that have already been picked up
-    /// </summary>
-    void RemoveCollectedObjs()
-    {
-        foreach(KeyValuePair<int, bool> i in _collectibleStatus)
-        {
-            if (i.Value == true)
-            {
-                Destroy(_collectibleObjects[i.Key].gameObject);
-            }
-        }
+        Debug.Log(_collectibleStatus[IDKey]);
     }
 
     #region SAVE MANAGEMENT
@@ -145,6 +147,7 @@ public class CollectibleStateTracker : MonoBehaviour
         // Writes saves
         using (var writer = new StreamWriter(_saveFileName, false))
         {
+            // Writes new data
             foreach (KeyValuePair<int, bool> i in _collectibleStatus)
             {
                 writer.WriteLine(i.Key);
@@ -158,9 +161,6 @@ public class CollectibleStateTracker : MonoBehaviour
     /// </summary>
     void LoadPickupState()
     {
-        // Clears dictionRary
-        _collectibleStatus.Clear();
-
         // Reads save file
         using (var reader = new StreamReader(_saveFileName))
         {
@@ -171,8 +171,13 @@ public class CollectibleStateTracker : MonoBehaviour
                     bool.Parse(reader.ReadLine()));
             }
         }
-    }
 
+        // Delates trailing kv pair
+        if (_collectibleStatus.ContainsKey(-1))
+        {
+            _collectibleStatus.Remove(-1);
+        }
+    }
 
     #endregion
 

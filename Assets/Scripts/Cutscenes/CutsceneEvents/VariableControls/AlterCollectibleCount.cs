@@ -2,9 +2,9 @@
  * FILE     : AlterCollectibleCount.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/3/25
- * UPDATED  : 2/4/25
+ * UPDATED  : 8/28/25
  * 
- * DESC     : Script that sets a specified global flag.
+ * DESC     : Script that changes the amount of collectibles the player carries
 =================================================================================================*/
 using System.Collections;
 using System.Collections.Generic;
