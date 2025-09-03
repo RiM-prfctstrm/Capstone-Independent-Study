@@ -36,14 +36,16 @@ public class ResetCollectibles : CutsceneEvent
         base.PlayEventFunction();
 
         // Compiles list of files in the collectible directory
-        _directoryPath = Application.dataPath + "/SaveData/Collectibles";
+        _directoryPath = Application.dataPath + "/SaveData/Collectibles/";
         _directory = new DirectoryInfo(_directoryPath);
 
         // Erases each file
-        foreach(FileInfo i in _directory.GetFiles(".txt"))
+        foreach(FileInfo i in _directory.GetFiles("*.txt"))
         {
-            _eraser = new StreamWriter(i.OpenWrite());
-            _eraser.Write("");
+            using(_eraser = new StreamWriter(i.FullName, false))
+            {
+                _eraser.Write("");
+            }
         }
 
         // Signals completion
