@@ -2,7 +2,7 @@
  * FILE     : MusicManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 12/6/24
- * UPDATED  : 8/22/25
+ * UPDATED  : 9/3/25
  * 
  * DESC     : Controls which music is currently playing.
 =================================================================================================*/
@@ -73,11 +73,12 @@ public class MusicManager : MonoBehaviour
         // Fades out old song before playing new one
         if (fadeout)
         {
-            StartCoroutine(FadeOutSong(song.song));
+            StartCoroutine(FadeOutSong(song));
             return;
         }
 
         // Starts new song
+        _startTime = 0;
         BeginSong(song.song);
         SetLoopPoint(song);
     }
@@ -124,7 +125,7 @@ public class MusicManager : MonoBehaviour
     /// </summary>
     /// <param name="song">Song to start once fade is complete</param>
     /// <returns>Framerate delay for fading</returns>
-    IEnumerator FadeOutSong(AudioClip song)
+    IEnumerator FadeOutSong(MusicTrack song)
     {
         // Incrementally lowers volume
         while (_musicSource.volume > 0)
@@ -134,7 +135,9 @@ public class MusicManager : MonoBehaviour
         }
 
         // Starts new song
-        BeginSong(song);
+        _startTime = 0;
+        BeginSong(song.song);
+        SetLoopPoint(song);
     }
 
     #region LOOPING CONTROLS
