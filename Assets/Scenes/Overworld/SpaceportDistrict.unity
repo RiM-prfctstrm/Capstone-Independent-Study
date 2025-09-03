@@ -307,6 +307,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 43988049}
+  - component: {fileID: 43988050}
   m_Layer: 0
   m_Name: Collectibles
   m_TagString: Untagged
@@ -331,6 +332,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &43988050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43988048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bc47507eacd5df45b3c2668167e230c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &60876753
 PrefabInstance:
   m_ObjectHideFlags: 0
