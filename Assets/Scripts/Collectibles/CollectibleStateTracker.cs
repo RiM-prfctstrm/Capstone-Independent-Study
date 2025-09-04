@@ -2,7 +2,7 @@
  * FILE     : CollectibleStateTracker.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/25
- * UPDATED  : 9/3/25
+ * UPDATED  : 9/4/25
  * 
  * DESC     : Tracks whether collectibles in the current scene have been picked up or not.
 =================================================================================================*/
