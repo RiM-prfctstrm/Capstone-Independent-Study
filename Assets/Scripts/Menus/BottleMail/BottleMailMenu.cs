@@ -2,7 +2,7 @@
  * FILE     : BottleMailMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/16/25
- * UPDATED  : 4/4/25
+ * UPDATED  : 9/8/25
  * 
  * DESC     : Controls BottleMail menu behavior to emulate an email program.
 =================================================================================================*/
@@ -53,6 +53,19 @@ public class BottleMailMenu : MonoBehaviour
     #region BUTTON ACTIONS
 
     /// <summary>
+    /// Sets which button the scrollbar navigates left to
+    /// </summary>
+    public void SetReturnButton(Button currentMsgBtn)
+    {
+        // Vaars
+        Navigation scrollNav = _scrollBar.navigation;
+
+        // Setter
+        scrollNav.selectOnLeft = currentMsgBtn;
+        _scrollBar.navigation = scrollNav;
+    }
+
+    /// <summary>
     /// Opens a BottleMail message and enables scrolling
     /// </summary>
     /// <param name="msg">Container for data that makes up desired message</param>
@@ -64,7 +77,7 @@ public class BottleMailMenu : MonoBehaviour
         _receiver.text = msg.msgReceivers;
         _messageText.GetComponent<TextMeshProUGUI>().text = msg.msgContents;
 
-        // Sets Scrollbar to proper size
+        // Sets Scrollbar size and return button
         _scrollBar.size = _messageText.GetComponent<RectTransform>().rect.height / 330;
         if (_scrollBar.size > 1)
         {

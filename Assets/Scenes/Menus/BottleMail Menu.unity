@@ -744,6 +744,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 428103667}
         m_TargetAssemblyTypeName: BottleMailMenu, Assembly-CSharp
+        m_MethodName: SetReturnButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 212066358}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 428103667}
+        m_TargetAssemblyTypeName: BottleMailMenu, Assembly-CSharp
         m_MethodName: OpenMessage
         m_Mode: 2
         m_Arguments:
@@ -763,6 +775,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 205469779}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Scrollbar, UnityEngine.UI
+        m_MethodName: set_value
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -1921,10 +1945,22 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 428103667}
         m_TargetAssemblyTypeName: BottleMailMenu, Assembly-CSharp
+        m_MethodName: SetReturnButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 772565680}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 428103667}
+        m_TargetAssemblyTypeName: BottleMailMenu, Assembly-CSharp
         m_MethodName: OpenMessage
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: abf76f419ea0b3643be4beb75d497540, type: 2}
+          m_ObjectArgument: {fileID: 11400000, guid: cc2e0c103c84f9242ac4a06955c953a9, type: 2}
           m_ObjectArgumentAssemblyTypeName: BottleMailMessage, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1940,6 +1976,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 205469779}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Scrollbar, UnityEngine.UI
+        m_MethodName: set_value
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -2771,10 +2819,22 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 428103667}
         m_TargetAssemblyTypeName: BottleMailMenu, Assembly-CSharp
+        m_MethodName: SetReturnButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1093381314}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 428103667}
+        m_TargetAssemblyTypeName: BottleMailMenu, Assembly-CSharp
         m_MethodName: OpenMessage
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 3cb7ddfad5d41cf4ab513faedced7f51, type: 2}
+          m_ObjectArgument: {fileID: 11400000, guid: cc2e0c103c84f9242ac4a06955c953a9, type: 2}
           m_ObjectArgumentAssemblyTypeName: BottleMailMessage, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2790,6 +2850,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 205469779}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Scrollbar, UnityEngine.UI
+        m_MethodName: set_value
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -3138,10 +3210,22 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 428103667}
         m_TargetAssemblyTypeName: BottleMailMenu, Assembly-CSharp
+        m_MethodName: SetReturnButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1223200955}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 428103667}
+        m_TargetAssemblyTypeName: BottleMailMenu, Assembly-CSharp
         m_MethodName: OpenMessage
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 7545339b31731594aa06d00ad6c2943d, type: 2}
+          m_ObjectArgument: {fileID: 11400000, guid: cc2e0c103c84f9242ac4a06955c953a9, type: 2}
           m_ObjectArgumentAssemblyTypeName: BottleMailMessage, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3157,6 +3241,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 205469779}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Scrollbar, UnityEngine.UI
+        m_MethodName: set_value
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
