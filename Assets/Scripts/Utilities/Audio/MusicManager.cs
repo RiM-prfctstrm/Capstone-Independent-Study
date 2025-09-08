@@ -2,7 +2,7 @@
  * FILE     : MusicManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 12/6/24
- * UPDATED  : 9/3/25
+ * UPDATED  : 9/8/25
  * 
  * DESC     : Controls which music is currently playing.
 =================================================================================================*/
@@ -24,7 +24,7 @@ public class MusicManager : MonoBehaviour
     [SerializeField] AudioSource _musicSource;
 
     // Playback Data
-    bool _isLoop;
+    bool _isLoop = true;
     float _startTime;
 
     #endregion
@@ -37,7 +37,7 @@ public class MusicManager : MonoBehaviour
     private void Update()
     {
         // loops song
-        if (!_musicSource.isPlaying)
+        if (!_musicSource.isPlaying && _isLoop)
         {
             _musicSource.time = _startTime;
             _musicSource.Play();

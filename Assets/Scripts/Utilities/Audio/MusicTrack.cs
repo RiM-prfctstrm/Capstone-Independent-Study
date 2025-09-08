@@ -2,7 +2,7 @@
  * FILE     : MusicTrack.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/22/25
- * UPDATED  : 8/22/25
+ * UPDATED  : 9/8/25
  * 
  * DESC     : Stores data for music to control playback by the song
 =================================================================================================*/
@@ -20,7 +20,8 @@ public class MusicTrack : ScriptableObject
     public AudioClip song => _song;
 
     // Control parameters
-    //[SerializeField] bool _loops = true;
+    [SerializeField] bool _loops = true;
+    public bool loops => _loops;
     [SerializeField] int _loopBeat = 0;
     public int loopBeat => _loopBeat;
 
