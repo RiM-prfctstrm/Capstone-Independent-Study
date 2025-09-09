@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 8/11/25
+ * UPDATED  : 9/9/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -69,6 +69,7 @@ public class PlayerController : MonoBehaviour
     InputAction _brake;
     public InputAction cancel;
     InputAction _debugSwitch;
+    InputAction _changeGear;
     public InputAction openMenu;
     InputAction _interact;
     InputAction _xInput;
@@ -114,6 +115,7 @@ public class PlayerController : MonoBehaviour
         _brake = _playerInputs.FindAction("Brake");
         cancel = _playerInputs.FindAction("Cancel");
         _debugSwitch = _playerInputs.FindAction("DebugSwitchState");
+        _changeGear = _playerInputs.FindAction("ChangeGear");
         openMenu = _playerInputs.FindAction("OpenMenu");
         _interact = _playerInputs.FindAction("Interact");
         _xInput = _playerInputs.FindAction("MoveX");
@@ -291,6 +293,7 @@ public class PlayerController : MonoBehaviour
             // Disables input functions
             _brake.Disable();
             _debugSwitch.Disable();
+            _changeGear.Disable();
             openMenu.Disable();
             _movementDisabled = true;
 
@@ -307,6 +310,7 @@ public class PlayerController : MonoBehaviour
             // Enables input functions
             _brake.Enable();
             _debugSwitch.Enable();
+            _changeGear.Enable();
             openMenu.Enable();
             _movementDisabled = false;
 
