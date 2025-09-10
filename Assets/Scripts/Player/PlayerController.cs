@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 9/9/25
+ * UPDATED  : 9/10/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float _decelBuffer;
     [SerializeField] float _lossBuffer;
     [SerializeField] float _maxBikeSpeed;
+    [SerializeField] float[] _gearSpeeds = new float[3];
     [SerializeField] float _walkSpeed;
     [SerializeField] int _steeringAngleThreshold;
     [SerializeField] float _steeringVelThreshold;
@@ -58,6 +59,7 @@ public class PlayerController : MonoBehaviour
 
     // States
     bool _autoBraking;
+    int _currentGear = 1;
     bool _isBraking;
     public bool isWalking;
     public bool inBikeableArea;
@@ -114,8 +116,8 @@ public class PlayerController : MonoBehaviour
         // Sets inputs
         _brake = _playerInputs.FindAction("Brake");
         cancel = _playerInputs.FindAction("Cancel");
-        _debugSwitch = _playerInputs.FindAction("DebugSwitchState");
         _changeGear = _playerInputs.FindAction("ChangeGear");
+        _debugSwitch = _playerInputs.FindAction("DebugSwitchState");
         openMenu = _playerInputs.FindAction("OpenMenu");
         _interact = _playerInputs.FindAction("Interact");
         _xInput = _playerInputs.FindAction("MoveX");
@@ -126,6 +128,7 @@ public class PlayerController : MonoBehaviour
         _brake.canceled += StopBraking;
         cancel.performed += PlayCancelSound;
         cancel.Disable();
+        _changeGear.performed += ChangeGear;
         _debugSwitch.performed += ToggleBike;
         openMenu.performed += OpenMenu;
         _interact.performed += PerformInteraction;
@@ -335,6 +338,7 @@ public class PlayerController : MonoBehaviour
         _brake.performed -= StartBraking;
         _brake.canceled -= StopBraking;
         cancel.performed -= PlayCancelSound;
+        _changeGear.performed -= ChangeGear;
         _debugSwitch.performed -= ToggleBike;
         openMenu.performed -= OpenMenu;
         _interact.performed -= PerformInteraction;
@@ -371,7 +375,21 @@ public class PlayerController : MonoBehaviour
             .PlayOneShot(_cancelSound);
     }
 
-    #endregion'
+    /// <summary>
+    /// Changes the gear level and maximum speed for the bike
+    /// </summary>
+    void ChangeGear(InputAction.CallbackContext ctx)
+    {
+        // Sets gear state
+        _currentGear += (int)_changeGear.ReadValue<float>();
+        _currentGear = Mathf.Clamp(_currentGear, 0, 2);
+
+        // Alters Maximum Speed
+        _maxBikeSpeed = _gearSpeeds[_currentGear];
+        SetAccelDecel();
+    }
+
+    #endregion
 
     #endregion
 
@@ -462,7 +480,7 @@ public class PlayerController : MonoBehaviour
             {
                 DecelerateBike(_brakeRate);
             }
-            else if (_moveX == 0 && _moveY == 0)
+            else if ((_moveX == 0 && _moveY == 0) || rb2d.velocity.magnitude > _maxBikeSpeed)
             {
                 if (_buffer > 0)
                 {

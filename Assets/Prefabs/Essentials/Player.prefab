@@ -5081,6 +5081,10 @@ MonoBehaviour:
   _decelBuffer: 0.25
   _lossBuffer: 2.1
   _maxBikeSpeed: 21
+  _gearSpeeds:
+  - 10.5
+  - 21
+  - 42
   _walkSpeed: 275
   _steeringAngleThreshold: 135
   _steeringVelThreshold: 0.25
