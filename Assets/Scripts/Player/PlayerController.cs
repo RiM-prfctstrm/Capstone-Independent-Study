@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
     float _moveY;
     float _velocityX;
     float _velocityY;
+    float _gearCoefficient = 1;
     Vector2 _newVel;
 
     // States
@@ -380,13 +381,33 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void ChangeGear(InputAction.CallbackContext ctx)
     {
+        // Keeps state from being altered off bike
+        if (isWalking)
+        {
+            return;
+        }
+
         // Sets gear state
         _currentGear += (int)_changeGear.ReadValue<float>();
         _currentGear = Mathf.Clamp(_currentGear, 0, 2);
 
+        // Changes rate coefficient
+        switch (_currentGear)
+        {
+            case 0:
+                _gearCoefficient = 2;
+                break;
+            case 1:
+                _gearCoefficient = 1;
+                break;
+            case 2:
+                _gearCoefficient = .25f;
+                break;
+        }
+
         // Alters Maximum Speed
         _maxBikeSpeed = _gearSpeeds[_currentGear];
-        SetAccelDecel();
+        //SetAccelDecel();
     }
 
     #endregion
