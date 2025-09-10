@@ -401,7 +401,7 @@ public class PlayerController : MonoBehaviour
                 _gearCoefficient = 1;
                 break;
             case 2:
-                _gearCoefficient = .25f;
+                _gearCoefficient = .5f;
                 break;
         }
 
@@ -499,6 +499,8 @@ public class PlayerController : MonoBehaviour
             // Removes buffer while breaking
             if (_isBraking)
             {
+                _decelClamp = rb2d.velocity.magnitude;
+                //_brakeRate = (_gearSpeeds[1] / _brakeTime) * _gearCoefficient;
                 DecelerateBike(_brakeRate);
             }
             else if ((_moveX == 0 && _moveY == 0) || rb2d.velocity.magnitude > _maxBikeSpeed)
