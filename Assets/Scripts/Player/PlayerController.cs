@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 9/10/25
+ * UPDATED  : 9/11/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -38,7 +38,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float _decelBuffer;
     [SerializeField] float _lossBuffer;
     [SerializeField] float _maxBikeSpeed;
-    [SerializeField] float[] _gearSpeeds = new float[3];
     [SerializeField] float _walkSpeed;
     [SerializeField] int _steeringAngleThreshold;
     [SerializeField] float _steeringVelThreshold;
@@ -55,12 +54,11 @@ public class PlayerController : MonoBehaviour
     float _moveY;
     float _velocityX;
     float _velocityY;
-    float _gearCoefficient = 1;
     Vector2 _newVel;
 
     // States
     bool _autoBraking;
-    int _currentGear = 1;
+    bool _inHiGear = false;
     bool _isBraking;
     public bool isWalking;
     public bool inBikeableArea;
@@ -388,26 +386,17 @@ public class PlayerController : MonoBehaviour
         }
 
         // Sets gear state
-        _currentGear += (int)_changeGear.ReadValue<float>();
-        _currentGear = Mathf.Clamp(_currentGear, 0, 2);
+        _inHiGear = !_inHiGear;
 
-        // Changes rate coefficient
-        switch (_currentGear)
+        // Alters Movement Parameters
+        if (_inHiGear)
         {
-            case 0:
-                _gearCoefficient = 2;
-                break;
-            case 1:
-                _gearCoefficient = 1;
-                break;
-            case 2:
-                _gearCoefficient = .5f;
-                break;
+            _maxBikeSpeed *= 2;
         }
-
-        // Alters Maximum Speed
-        _maxBikeSpeed = _gearSpeeds[_currentGear];
-        //SetAccelDecel();
+        else
+        {
+            _maxBikeSpeed /= 2;
+        }
     }
 
     #endregion
@@ -500,7 +489,6 @@ public class PlayerController : MonoBehaviour
             if (_isBraking)
             {
                 _decelClamp = rb2d.velocity.magnitude;
-                //_brakeRate = (_gearSpeeds[1] / _brakeTime) * _gearCoefficient;
                 DecelerateBike(_brakeRate);
             }
             else if ((_moveX == 0 && _moveY == 0) || rb2d.velocity.magnitude > _maxBikeSpeed)
@@ -819,7 +807,7 @@ public class PlayerController : MonoBehaviour
     void SetAccelDecel()
     {
         _accelRate = _maxBikeSpeed / _accelTime;
-        _brakeRate = _maxBikeSpeed / _brakeTime;
+        _brakeRate =(_maxBikeSpeed / _brakeTime) * 2;
         _decelRate = _maxBikeSpeed / _decelTime;
         _decelClamp = _decelTime;
         _buffer = _decelBuffer;

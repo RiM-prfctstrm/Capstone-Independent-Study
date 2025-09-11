@@ -780,70 +780,26 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "Bumpers",
-                    "id": "23c2fdfc-ec6a-48a4-9cc4-4590f7e7a4ee",
-                    "path": "1DAxis(whichSideWins=2)",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChangeGear",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "7b48a563-25e1-4ce2-ac16-be9034bf361a",
-                    "path": "<Gamepad>/leftShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChangeGear",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "ed6c73e7-a65b-4d4e-843c-2c671bdd666b",
+                    "name": "",
+                    "id": "8216c8c3-9c32-436a-a677-b6c21e0a8750",
                     "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "ChangeGear",
                     "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "Keyboard",
-                    "id": "0771363e-b190-42d9-8dfd-dcaee375f105",
-                    "path": "1DAxis(whichSideWins=2)",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChangeGear",
-                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
-                    "id": "efe48453-b25c-4025-b80f-6bbfc3a50fa6",
+                    "name": "",
+                    "id": "06eec60c-da09-4b16-ac54-dedaecb1991d",
                     "path": "<Keyboard>/v",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "ChangeGear",
                     "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "585dbfed-4780-4937-9023-2f3992bc6c18",
-                    "path": "<Keyboard>/f",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChangeGear",
-                    "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 }
             ]
         },
