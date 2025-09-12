@@ -459,21 +459,15 @@ public class PlayerController : MonoBehaviour
     void BikeMovement()
     {
         // Computes velocity
-        if (!_isBraking)
+        if (!_isBraking && rb2d.velocity.magnitude <= _maxBikeSpeed)
         {
             AccelerateX();
             AccelerateY();
 
             // Steers bike
             if (((_moveX != 0 && _moveY == 0) || (_moveY != 0 && _moveX == 0)) && (
-                rb2d.velocity.x != 0 && rb2d.velocity.y != 0))
-            {
-                BikeSteering();
-                AccelerateX();
-                AccelerateY();
-                BikeSteering();
-            }
-            else if (UtilityFormulas.FindHypotenuse(_velocityX, _velocityY) > _maxBikeSpeed)
+                rb2d.velocity.x != 0 && rb2d.velocity.y != 0) ||
+                UtilityFormulas.FindHypotenuse(_velocityX, _velocityY) > _maxBikeSpeed)
             {
                 BikeSteering();
                 AccelerateX();
@@ -491,7 +485,12 @@ public class PlayerController : MonoBehaviour
                 _decelClamp = rb2d.velocity.magnitude;
                 DecelerateBike(_brakeRate);
             }
-            else if ((_moveX == 0 && _moveY == 0) || rb2d.velocity.magnitude > _maxBikeSpeed)
+            else if (!_inHiGear && rb2d.velocity.magnitude > _maxBikeSpeed)
+            {
+                _decelClamp = rb2d.velocity.magnitude;
+                DecelerateBike(_decelRate);
+            }
+            else if ((_moveX == 0 && _moveY == 0))
             {
                 if (_buffer > 0)
                 {
