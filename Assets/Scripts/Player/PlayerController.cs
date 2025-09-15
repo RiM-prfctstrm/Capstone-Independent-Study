@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 9/11/25
+ * UPDATED  : 9/15/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -58,7 +58,6 @@ public class PlayerController : MonoBehaviour
 
     // States
     bool _autoBraking;
-    bool _inHiGear = false;
     bool _isBraking;
     public bool isWalking;
     public bool inBikeableArea;
@@ -70,7 +69,6 @@ public class PlayerController : MonoBehaviour
     InputAction _brake;
     public InputAction cancel;
     InputAction _debugSwitch;
-    InputAction _changeGear;
     public InputAction openMenu;
     InputAction _interact;
     InputAction _xInput;
@@ -115,7 +113,6 @@ public class PlayerController : MonoBehaviour
         // Sets inputs
         _brake = _playerInputs.FindAction("Brake");
         cancel = _playerInputs.FindAction("Cancel");
-        _changeGear = _playerInputs.FindAction("ChangeGear");
         _debugSwitch = _playerInputs.FindAction("DebugSwitchState");
         openMenu = _playerInputs.FindAction("OpenMenu");
         _interact = _playerInputs.FindAction("Interact");
@@ -127,7 +124,6 @@ public class PlayerController : MonoBehaviour
         _brake.canceled += StopBraking;
         cancel.performed += PlayCancelSound;
         cancel.Disable();
-        _changeGear.performed += ChangeGear;
         _debugSwitch.performed += ToggleBike;
         openMenu.performed += OpenMenu;
         _interact.performed += PerformInteraction;
@@ -295,7 +291,6 @@ public class PlayerController : MonoBehaviour
             // Disables input functions
             _brake.Disable();
             _debugSwitch.Disable();
-            _changeGear.Disable();
             openMenu.Disable();
             _movementDisabled = true;
 
@@ -312,7 +307,6 @@ public class PlayerController : MonoBehaviour
             // Enables input functions
             _brake.Enable();
             _debugSwitch.Enable();
-            _changeGear.Enable();
             openMenu.Enable();
             _movementDisabled = false;
 
@@ -337,7 +331,6 @@ public class PlayerController : MonoBehaviour
         _brake.performed -= StartBraking;
         _brake.canceled -= StopBraking;
         cancel.performed -= PlayCancelSound;
-        _changeGear.performed -= ChangeGear;
         _debugSwitch.performed -= ToggleBike;
         openMenu.performed -= OpenMenu;
         _interact.performed -= PerformInteraction;
@@ -372,31 +365,6 @@ public class PlayerController : MonoBehaviour
     {
         CollectibleManager.collectibleManager.GetComponent<AudioSource>()
             .PlayOneShot(_cancelSound);
-    }
-
-    /// <summary>
-    /// Changes the gear level and maximum speed for the bike
-    /// </summary>
-    void ChangeGear(InputAction.CallbackContext ctx)
-    {
-        // Keeps state from being altered off bike
-        if (isWalking)
-        {
-            return;
-        }
-
-        // Sets gear state
-        _inHiGear = !_inHiGear;
-
-        // Alters Movement Parameters
-        if (_inHiGear)
-        {
-            _maxBikeSpeed *= 2;
-        }
-        else
-        {
-            _maxBikeSpeed /= 2;
-        }
     }
 
     #endregion
@@ -482,15 +450,9 @@ public class PlayerController : MonoBehaviour
             // Removes buffer while breaking
             if (_isBraking)
             {
-                _decelClamp = rb2d.velocity.magnitude;
                 DecelerateBike(_brakeRate);
             }
-            else if (!_inHiGear && rb2d.velocity.magnitude > _maxBikeSpeed)
-            {
-                _decelClamp = rb2d.velocity.magnitude;
-                DecelerateBike(_decelRate);
-            }
-            else if ((_moveX == 0 && _moveY == 0))
+            else if (_moveX == 0 && _moveY == 0)
             {
                 if (_buffer > 0)
                 {
