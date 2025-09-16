@@ -2,7 +2,7 @@
  * FILE     : Collectible.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/22/25
- * UPDATED  : 8/29/25
+ * UPDATED  : 9/16/25
  * 
  * DESC     : Behaviour for items that can be picked up off the ground.
 =================================================================================================*/
@@ -34,18 +34,29 @@ public class Collectible : MonoBehaviour
         // Collisions with player
         if (collision.gameObject == PlayerController.playerController.gameObject)
         {
-            // Reducs pickup lag
-            gameObject.isStatic = false;
-
             // Picks up collectible
-            CollectibleManager.collectibleManager.AdjustCount(1);
-            GetComponent<Animator>().Play("Collect");
-            GetComponent<Collider2D>().enabled = false;
-            PlayerController.playerController.playerAudioSource.PlayOneShot(_pickUpSound);
-
-            // Updates Tracker
-            localTracker.UpdateDict(collectibleID);
+            OnPickUp();
         }
+    }
+
+    #endregion
+
+
+    #region BASE COLLECTIBLE FUNCTIONALITY
+
+    /// <summary>
+    /// Functionality that occurs when the collectible is picked up. Base code plays feedback
+    /// effects. Functionality of specific types of collectibles is delegated to child classes.
+    /// </summary>
+    protected virtual void OnPickUp()
+    {
+        // Reducs pickup lag
+        gameObject.isStatic = false;
+
+        // Picks up collectible
+        GetComponent<Animator>().Play("Collect");
+        GetComponent<Collider2D>().enabled = false;
+        PlayerController.playerController.playerAudioSource.PlayOneShot(_pickUpSound);
     }
 
     #endregion

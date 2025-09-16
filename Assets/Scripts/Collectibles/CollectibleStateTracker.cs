@@ -2,7 +2,7 @@
  * FILE     : CollectibleStateTracker.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/25
- * UPDATED  : 9/4/25
+ * UPDATED  : 9/29/25
  * 
  * DESC     : Tracks whether collectibles in the current scene have been picked up or not.
 =================================================================================================*/
@@ -97,7 +97,7 @@ public class CollectibleStateTracker : MonoBehaviour
         _collectibleStatus.Clear();
 
         // Loop to gather and set IDs for each collectible
-        foreach (Collectible i in _collectibleObjects)
+        foreach (Nanoblip i in _collectibleObjects)
         {
             // Assigns unique ID number to each object
             _collectibleStatus.Add(IDNo, false);
