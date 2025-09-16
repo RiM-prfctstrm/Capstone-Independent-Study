@@ -2,7 +2,7 @@
  * FILE     : CollectibleStateTracker.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/25
- * UPDATED  : 9/29/25
+ * UPDATED  : 9/16/25
  * 
  * DESC     : Tracks whether collectibles in the current scene have been picked up or not.
 =================================================================================================*/
@@ -18,7 +18,7 @@ public class CollectibleStateTracker : MonoBehaviour
 
     // Data Containers
     Dictionary<int, bool> _collectibleStatus = new Dictionary<int, bool>();
-    List<Collectible> _collectibleObjects = new List<Collectible>();
+    List<Nanoblip> _collectibleObjects = new List<Nanoblip>();
     string _saveFileName;
 
     // Controls
@@ -42,7 +42,7 @@ public class CollectibleStateTracker : MonoBehaviour
         _initScene = SceneManager.GetActiveScene().buildIndex;
 
         // Compiles collectibles in scene
-        foreach (Collectible i in GetComponentsInChildren<Collectible>())
+        foreach (Nanoblip i in GetComponentsInChildren<Nanoblip>())
         {
             _collectibleObjects.Add(i);
             i.localTracker = this;
