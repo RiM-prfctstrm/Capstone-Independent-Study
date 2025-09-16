@@ -12,30 +12,6 @@ using UnityEngine;
 
 public class Nanoblip : Collectible
 {
-    #region VARS
-
-    #endregion
-
-    #region UNIVERSAL EVENTS
-
-    /// <summary>
-    /// Start is called before the first frame update
-    /// </summary>
-    void Start()
-    {
-
-    }
-
-    /// <summary>
-    /// Update is called once per frame
-    /// </summary>
-    void Update()
-    {
-
-    }
-
-    #endregion
-
     #region COLLECTION FUNCTIONALITY 
 
     /// <summary>

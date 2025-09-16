@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4266992392333689679}
   - component: {fileID: 4266992392333689678}
   - component: {fileID: 4266992392333689673}
-  - component: {fileID: 4266992392333689674}
+  - component: {fileID: 8081084716808406418}
   m_Layer: 0
   m_Name: Nanoblip
   m_TagString: Untagged
@@ -123,7 +123,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.5, y: 2}
   m_Direction: 0
---- !u!114 &4266992392333689674
+--- !u!114 &8081084716808406418
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,7 +132,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4266992392333689677}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5115e9357b650242b70f81e2ba46585, type: 3}
+  m_Script: {fileID: 11500000, guid: bb19cd6755ad2c34f926ab0c6ce2223c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectibleID: -1
+  localTracker: {fileID: 0}
   _pickUpSound: {fileID: 8300000, guid: 1b8ee7aa4f8543647897338423c33974, type: 3}
