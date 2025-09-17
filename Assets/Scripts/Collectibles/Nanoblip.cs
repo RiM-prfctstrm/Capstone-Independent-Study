@@ -1,10 +1,10 @@
 /*=================================================================================================
  * FILE     : Nanoblip.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
- * CREATION : 8/22/25
- * UPDATED  : 9/16/25
+ * CREATION : 9/XX/25
+ * UPDATED  : 9/17/25
  * 
- * DESC     : Behaviour for items that can be picked up off the ground.
+ * DESC     : Controls how nanoblips are saved and inventoried when picked up.
 =================================================================================================*/
 using System.Collections;
 using System.Collections.Generic;
