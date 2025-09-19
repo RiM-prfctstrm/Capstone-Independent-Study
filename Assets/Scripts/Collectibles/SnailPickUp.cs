@@ -2,7 +2,7 @@
  * FILE     : SnailPickUp.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/17/25
- * UPDATED  : 9/17/25
+ * UPDATED  : 9/19/25
  * 
  * DESC     : Controls how Snails are saved and inventoried when picked up, as well as snail
  *            movement
@@ -15,11 +15,20 @@ public class SnailPickUp : Collectible
 {
     #region VARS
 
+    // State management
+    [SerializeField] int _ID;
+    string _savePerm;
+    string _saveTemp = Application.dataPath + "/SaveData/Collectibles/SnailsTemp";
+
+    // Movement
+
     #endregion
 
     #region UNIVERSAL EVENTS
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Start is called before the first frame update
+    /// </summary>
     void Start()
     {
         
@@ -41,6 +50,9 @@ public class SnailPickUp : Collectible
     protected override void OnPickUp()
     {
         base.OnPickUp();
+
+        // Adds to total
+        GlobalVariableTracker.snailTotal++;
     }
 
     #endregion
