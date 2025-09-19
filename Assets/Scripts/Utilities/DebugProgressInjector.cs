@@ -2,7 +2,7 @@
  * FILE     : DebugProgressInjector.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/3/25
- * UPDATED  : 8/22/25
+ * UPDATED  : 9/19/25
  * 
  * DESC     : Debug script to set progression variables by hand in inspector. Used to tell the game
  *            to play at a certain point. Works best before loading scene.
@@ -46,6 +46,7 @@ public class DebugProgressInjector : MonoBehaviour
 
     // Collectibles
     [SerializeField] int _collectiblesInPocket;
+    [SerializeField] int _snailTotal;
 
     // Activation Switch
     [SerializeField] bool _fireInjector = false;
@@ -53,17 +54,6 @@ public class DebugProgressInjector : MonoBehaviour
     #endregion
 
     #region UNIVERSAL EVENTs
-    /*/// <summary>
-    /// Awake is called when the script instance is first loaded
-    /// </summary>
-    void Awake()
-    {
-        // Allows continued debugging across scenes
-        DontDestroyOnLoad(gameObject);
-
-        // Fires injector
-        InjectGlobalData();
-    }*/
 
     /// <summary>
     /// Update is called once per frame
@@ -119,6 +109,7 @@ public class DebugProgressInjector : MonoBehaviour
 
         // Collectibles
         GlobalVariableTracker.collectiblesInPocket = _collectiblesInPocket;
+        GlobalVariableTracker.snailTotal = _snailTotal;
 
         // Prevent repeat fires
         _fireInjector = false;
