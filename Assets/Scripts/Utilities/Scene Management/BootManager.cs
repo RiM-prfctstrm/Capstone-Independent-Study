@@ -2,7 +2,7 @@
  * FILE     : BootManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 8/2/25
+ * UPDATED  : 9/22/25
  * 
  * DESC     : Performs functionality that only occurs when the game is first started.
 =================================================================================================*/
@@ -65,6 +65,12 @@ public class BootManager : MonoBehaviour
 
         // Adds Cutscene-capable NPCs to the list of potential actors
         CutsceneManager.cutsceneManager.cutsceneObjects.AddRange(_cutsceneObjs);
+
+        // Initializes snail list
+        if(SnailSaveManager.collectedSnails.Count == 0)
+        {
+            SnailSaveManager.InitializeComparisonList();
+        }
     }
 
     /// <summary>
