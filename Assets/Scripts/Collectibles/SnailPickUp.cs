@@ -16,9 +16,6 @@ public class SnailPickUp : Collectible
 {
     #region VARIABLES
 
-    // State management
-    [SerializeField] int _ID;
-
     // Movement
 
     #endregion
@@ -31,7 +28,7 @@ public class SnailPickUp : Collectible
     private void Awake()
     {
         // Checks whether snail has already been collected and destroys if so
-        if (SnailSaveManager.collectedSnails.Contains(_ID))
+        if (SnailSaveManager.collectedSnails.Contains(collectibleID))
         {
             Destroy(gameObject);
         }
@@ -62,13 +59,16 @@ public class SnailPickUp : Collectible
     /// </summary>
     protected override void OnPickUp()
     {
-        base.OnPickUp();
+        //base.OnPickUp();
 
         // Adds to total
         GlobalVariableTracker.snailTotal++;
 
         // Updates Save Data
-        SnailSaveManager.UpdateTempSave(_ID);
+        SnailSaveManager.UpdateTempSave(collectibleID);
+
+        // removes from scene
+        Destroy(gameObject);
     }
 
     #endregion
