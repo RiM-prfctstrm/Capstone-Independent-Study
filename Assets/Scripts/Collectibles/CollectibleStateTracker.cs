@@ -2,7 +2,7 @@
  * FILE     : CollectibleStateTracker.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/25
- * UPDATED  : 9/16/25
+ * UPDATED  : 9/22/25
  * 
  * DESC     : Tracks whether collectibles in the current scene have been picked up or not.
 =================================================================================================*/
@@ -14,7 +14,7 @@ using UnityEngine.SceneManagement;
 
 public class CollectibleStateTracker : MonoBehaviour
 {
-    #region VARS
+    #region VARIABLES
 
     // Data Containers
     Dictionary<int, bool> _collectibleStatus = new Dictionary<int, bool>();
