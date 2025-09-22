@@ -109,8 +109,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 16
+        y: 16
+        width: 20
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -121,6 +121,27 @@ TextureImporter:
       bones: []
       spriteID: a8cb075022ad0164687d65365448bc19
       internalID: -563706709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snail_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba2ea61468dc8ac4a9d2d717e9a6d496
+      internalID: -1055485859
       vertices: []
       indices: 
       edges: []
@@ -137,6 +158,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Snail_0: -563706709
+      Snail_1: -1055485859
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
