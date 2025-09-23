@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 8/7/25
+ * UPDATED  : 9/23/25
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -155,7 +155,22 @@ public class DialogueManager : MonoBehaviour
         }
 
         // Displays Dialogue
+        _dialogueText.maxVisibleCharacters = 0;
         _dialogueText.text = dialogue.dialogueText;
+        StartCoroutine(ScrollHorizontal());
+    }
+
+    /// <summary>
+    /// Makes text appear one character at a time
+    /// </summary>
+    /// <returns>Delay between character appearance</returns>
+    IEnumerator ScrollHorizontal()
+    {
+        while(_dialogueText.maxVisibleCharacters < _dialogueText.text.Length)
+        {
+            _dialogueText.maxVisibleCharacters++;
+            yield return new WaitForSeconds(.025f);
+        }
     }
 
     /// <summary>
