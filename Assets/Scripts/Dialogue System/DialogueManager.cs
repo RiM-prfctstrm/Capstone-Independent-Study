@@ -7,12 +7,11 @@
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
 using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Audio;
 using UnityEngine.InputSystem;
-using TMPro;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -48,6 +47,7 @@ public class DialogueManager : MonoBehaviour
     static bool _dialogueInProgress = false;
     public static bool dialogueInProgress => _dialogueInProgress;
     public bool advancing = false;
+    bool _inScroll = false;
     public IEnumerator dialogRoutine;
 
     // SFX
@@ -103,20 +103,33 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator PlayDialogue(DialogueEvent sequence)
     {
         // Plays each line of dialogue at correct time
-        foreach (Dialogue line in sequence.dialogueBoxes)
+        for (int i = 0; i < sequence.dialogueBoxes.Count;)
         {
+            Dialogue line = sequence.dialogueBoxes[i];
+
             // Plays selection sound
             _systemSounds.PlayOneShot(_advanceSound);
 
-            // Displays the line
-            DisplayDialogue(line);
-
-            // Skips a wait if there is an unintended line by default
-            if (_dialogueText.text == "")
+            // Displays new dialogue
+            if (!_inScroll)
             {
-                continue;
-            }
+                // Displays the line
+                DisplayDialogue(line);
+                i++;
 
+                // Skips a wait if there is an unintended line by default
+                if (_dialogueText.text == "")
+                {
+                    continue;
+                }
+            }
+            // Finishes text scroll
+            else
+            {
+                _dialogueText.maxVisibleCharacters = _dialogueText.text.Length;
+                _inScroll = false;
+            }
+            
             // Waits for input to continue the loop
             yield return new WaitUntil(() => advancing == true);
             advancing = false;
@@ -166,11 +179,21 @@ public class DialogueManager : MonoBehaviour
     /// <returns>Delay between character appearance</returns>
     IEnumerator ScrollHorizontal()
     {
+        _inScroll = true;
+
         while(_dialogueText.maxVisibleCharacters < _dialogueText.text.Length)
         {
+            // Stops scrolling when skipped
+            if (!_inScroll)
+            {
+                break;
+            }
+
             _dialogueText.maxVisibleCharacters++;
             yield return new WaitForSeconds(.025f);
         }
+
+        _inScroll = false;
     }
 
     /// <summary>
