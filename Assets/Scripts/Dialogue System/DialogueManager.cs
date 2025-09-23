@@ -49,6 +49,7 @@ public class DialogueManager : MonoBehaviour
     public bool advancing = false;
     bool _inScroll = false;
     public IEnumerator dialogRoutine;
+    IEnumerator _scrollRoutine;
 
     // SFX
     [SerializeField] AudioClip _advanceSound;
@@ -116,20 +117,21 @@ public class DialogueManager : MonoBehaviour
                 // Displays the line
                 DisplayDialogue(line);
                 i++;
-
-                // Skips a wait if there is an unintended line by default
-                if (_dialogueText.text == "")
-                {
-                    continue;
-                }
             }
             // Finishes text scroll
             else
             {
                 _dialogueText.maxVisibleCharacters = _dialogueText.text.Length;
+                StopCoroutine(_scrollRoutine);
                 _inScroll = false;
             }
-            
+
+            // Skips a wait if there is an unintended line by default
+            if (_dialogueText.text == "")
+            {
+                continue;
+            }
+
             // Waits for input to continue the loop
             yield return new WaitUntil(() => advancing == true);
             advancing = false;
@@ -170,7 +172,8 @@ public class DialogueManager : MonoBehaviour
         // Displays Dialogue
         _dialogueText.maxVisibleCharacters = 0;
         _dialogueText.text = dialogue.dialogueText;
-        StartCoroutine(ScrollHorizontal());
+        _scrollRoutine = ScrollHorizontal();
+        StartCoroutine(_scrollRoutine);
     }
 
     /// <summary>
@@ -183,12 +186,6 @@ public class DialogueManager : MonoBehaviour
 
         while(_dialogueText.maxVisibleCharacters < _dialogueText.text.Length)
         {
-            // Stops scrolling when skipped
-            if (!_inScroll)
-            {
-                break;
-            }
-
             _dialogueText.maxVisibleCharacters++;
             yield return new WaitForSeconds(.025f);
         }

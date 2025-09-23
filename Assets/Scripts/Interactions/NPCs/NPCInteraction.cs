@@ -44,7 +44,7 @@ public class NPCInteraction : InteractableObject
     /// <summary>
     /// Start is called before the first frame update
     /// </summary>
-    void Start()
+    protected virtual void Start()
     {
         // Initialize Vars
         _dialogueManager = DialogueManager.dialogueManager;

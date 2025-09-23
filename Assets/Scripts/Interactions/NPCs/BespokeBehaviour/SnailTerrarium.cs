@@ -41,7 +41,7 @@ public class SnailTerrarium : NPCInteraction
 
     // Messages
     Dialogue _noSnailMsg = new Dialogue("It's a terratium with nothing living inside. It looks " +
-        "like it would make a good habitat for snails");
+        "like it would make a good habitat for snails.");
     Dialogue _oneSnailMsg = new Dialogue("Your snail creeps around the terrarium. " +
         "She's called Amelia Snailhart. Snail for short.");
     Dialogue _oneSnailMsgPt2 = new Dialogue("She looks lonely.");
@@ -58,14 +58,27 @@ public class SnailTerrarium : NPCInteraction
     /// <summary>
     /// Start is called before the first frame update
     /// </summary>
-    void Start()
+    protected override void Start()
     {
+        base.Start();
+
+        //Initialize vars
         _nameFile = Application.dataPath + "/SaveData/Collectibles/SnailNames.txt";
     }
 
     #endregion
 
     #region INTERACTION FUNCTIONALITY
+
+    /// <summary>
+    /// Arranges display before creating event
+    /// </summary>
+    public override void OnInteractedWith()
+    {
+        NameSpider();
+
+        base.OnInteractedWith();
+    }
 
     #endregion
 
