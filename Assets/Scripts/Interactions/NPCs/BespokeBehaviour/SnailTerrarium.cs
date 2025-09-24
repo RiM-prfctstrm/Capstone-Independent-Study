@@ -139,6 +139,8 @@ public class SnailTerrarium : NPCInteraction
         // Loops through name file to create dialogue stings
         using (var reader = new StreamReader(_nameFile))
         {
+            // Defaults name list
+            _nameDialogues.Clear();
             _testBox.text = "Their names are ";
             for (int i = 1; i <= GlobalVariableTracker.snailTotal; i++)
             {
@@ -200,7 +202,7 @@ public class SnailTerrarium : NPCInteraction
         _testBox.ForceMeshUpdate();
 
         // Performs check
-        if (_testBox.textInfo.lineCount <= 3)
+        if (!_testBox.isTextOverflowing)
         {
             _testBox.text += " ";
             return true;

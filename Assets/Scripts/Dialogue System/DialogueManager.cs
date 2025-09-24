@@ -103,6 +103,9 @@ public class DialogueManager : MonoBehaviour
     /// <param name="sequence">Sequence of dialogues to play</param>
     public IEnumerator PlayDialogue(DialogueEvent sequence)
     {
+        // vars
+        bool skippedLastLine = false;
+
         // Plays each line of dialogue at correct time
         for (int i = 0; i < sequence.dialogueBoxes.Count;)
         {
@@ -127,8 +130,9 @@ public class DialogueManager : MonoBehaviour
                 _inScroll = false;
 
                 // Keeps final line from infinitely looping
-                if (i == sequence.dialogueBoxes.Count - 1)
+                if (i == sequence.dialogueBoxes.Count - 1 && skippedLastLine)
                 {
+                    skippedLastLine = false;
                     i++;
                 }
             }
@@ -146,6 +150,7 @@ public class DialogueManager : MonoBehaviour
             // Makes sure skipping final scroll doesnt skip final text
             if (i == sequence.dialogueBoxes.Count && _inScroll)
             {
+                skippedLastLine = true;
                 i--;
             }
         }
