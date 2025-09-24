@@ -202,7 +202,7 @@ public class SnailTerrarium : NPCInteraction
         _testBox.ForceMeshUpdate();
 
         // Performs check
-        if (!_testBox.isTextOverflowing)
+        if (_testBox.textInfo.lineCount <= 3)
         {
             _testBox.text += " ";
             return true;
