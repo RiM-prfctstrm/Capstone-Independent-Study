@@ -2,7 +2,7 @@
  * FILE     : SnailTerrarium.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/23/25
- * UPDATED  : 9/23/25
+ * UPDATED  : 9/24/25
  * 
  * DESC     : Tells the player how many snails they have and creates a list of snail names.
 =================================================================================================*/
@@ -10,6 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using TMPro;
 
 public class SnailTerrarium : NPCInteraction
 {
@@ -40,6 +41,8 @@ public class SnailTerrarium : NPCInteraction
     string _nameFile;
 
     // Messages
+    Dialogue _maxSnailMsg = new Dialogue("There's 101 snails in your terrarium. Any more, and " +
+        "they'd collapse under the force of their own gravity and form a black hole.");
     Dialogue _noSnailMsg = new Dialogue("It's a terratium with nothing living inside. It looks " +
         "like it would make a good habitat for snails.");
     Dialogue _oneSnailMsg = new Dialogue("Your snail creeps around the terrarium. " +
@@ -49,7 +52,12 @@ public class SnailTerrarium : NPCInteraction
 
     // Components of text string
     string _introText;
-    Dialogue _nameList;
+    string _latestName;
+    string _nameChunk;
+    List<Dialogue> _nameDialogues = new List<Dialogue>();
+
+    // Object refs
+    [SerializeField] TextMeshProUGUI _testBox;
 
     #endregion
 
@@ -92,7 +100,7 @@ public class SnailTerrarium : NPCInteraction
         // Resets dialogue
         _NPCLines[0].dialogueBoxes.Clear();
 
-        // Unique messages for low snail counts
+        // Unique messages for specific snail counts
         switch (GlobalVariableTracker.snailTotal)
         {
             case 0:
@@ -102,6 +110,10 @@ public class SnailTerrarium : NPCInteraction
                 _NPCLines[0].dialogueBoxes.Add(_oneSnailMsg);
                 _NPCLines[0].dialogueBoxes.Add(_oneSnailMsgPt2);
                 return;
+            case 101:
+                _NPCLines[0].dialogueBoxes.Add(_maxSnailMsg);
+                break;
+
         }
 
         // Sets introductory message
@@ -111,8 +123,92 @@ public class SnailTerrarium : NPCInteraction
                 " snails.";
             _NPCLines[0].dialogueBoxes.Add(new Dialogue(_introText));
         }
+        else if (GlobalVariableTracker.snailTotal >= 25 && GlobalVariableTracker.snailTotal <= 49)
+        {
+            _introText = "Your terrarium is stuffed with " + GlobalVariableTracker.snailTotal +
+                " snails.";
+            _NPCLines[0].dialogueBoxes.Add(new Dialogue(_introText));
+        }
+        else if (GlobalVariableTracker.snailTotal >= 50 && GlobalVariableTracker.snailTotal <= 100)
+        {
+            _introText = "Your terrarium is overflowing with " + GlobalVariableTracker.snailTotal +
+                " snails.";
+            _NPCLines[0].dialogueBoxes.Add(new Dialogue(_introText));
+        }
 
-        // Loops through name file
+        // Loops through name file to create dialogue stings
+        using (var reader = new StreamReader(_nameFile))
+        {
+            _testBox.text = "Their names are ";
+            for (int i = 1; i <= GlobalVariableTracker.snailTotal; i++)
+            {
+                // Determines how to write latest name
+                if (i == GlobalVariableTracker.snailTotal)
+                {
+                    _latestName = "and " + reader.ReadLine() + ".";
+                }
+                else
+                {
+                    _latestName = reader.ReadLine();
+                }
+
+                // Tests whether text fits in dialogue
+                if (TestStringFit())
+                {
+                    // Adds to current name chunk
+                    _nameChunk = _testBox.text;
+                }
+                else
+                {
+                    // Adds name chunk to dialogue list
+                    _nameDialogues.Add(new Dialogue(_nameChunk));
+
+                    // Resets text info to create next chunk
+                    _testBox.text = _latestName + ", ";
+                }
+
+                // Finishes name list
+                if (i == GlobalVariableTracker.snailTotal)
+                {
+                    _nameDialogues.Add(new Dialogue(_nameChunk));
+                }
+            }
+        }
+
+        // Adds messages with names
+        foreach(Dialogue j in _nameDialogues)
+        {
+            _NPCLines[0].dialogueBoxes.Add(j);
+        }
+
+        // Adds final message
+        _NPCLines[0].dialogueBoxes.Add(new Dialogue("All of them are called snail for short."));
+        if (GlobalVariableTracker.snailTotal == 101)
+        {
+            _NPCLines[0].dialogueBoxes.Add(new Dialogue("Yes, even Tadd."));
+        }
+    }
+
+    /// <summary>
+    /// Tests whether adding a new snail name would fit inside dialogue box
+    /// </summary>
+    /// <returns>True if can fit, otherwise false</returns>
+    bool TestStringFit()
+    {
+        // updates test box
+        _testBox.text += _latestName + ",";
+        _testBox.ForceMeshUpdate();
+
+        // Performs check
+        if (_testBox.textInfo.lineCount <= 3)
+        {
+            _testBox.text += " ";
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     #endregion
