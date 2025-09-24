@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 9/23/25
+ * UPDATED  : 9/24/25
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -106,6 +106,7 @@ public class DialogueManager : MonoBehaviour
         // Plays each line of dialogue at correct time
         for (int i = 0; i < sequence.dialogueBoxes.Count;)
         {
+            // Vars
             Dialogue line = sequence.dialogueBoxes[i];
 
             // Plays selection sound
@@ -124,6 +125,12 @@ public class DialogueManager : MonoBehaviour
                 _dialogueText.maxVisibleCharacters = _dialogueText.text.Length;
                 StopCoroutine(_scrollRoutine);
                 _inScroll = false;
+
+                // Keeps final line from infinitely looping
+                if (i == sequence.dialogueBoxes.Count - 1)
+                {
+                    i++;
+                }
             }
 
             // Skips a wait if there is an unintended line by default
@@ -135,6 +142,12 @@ public class DialogueManager : MonoBehaviour
             // Waits for input to continue the loop
             yield return new WaitUntil(() => advancing == true);
             advancing = false;
+
+            // Makes sure skipping final scroll doesnt skip final text
+            if (i == sequence.dialogueBoxes.Count && _inScroll)
+            {
+                i--;
+            }
         }
 
         // Ends Dialogue

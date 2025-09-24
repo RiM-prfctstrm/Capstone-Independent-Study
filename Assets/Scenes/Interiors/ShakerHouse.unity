@@ -7492,7 +7492,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 178090867737362805, guid: ff197ec3a370c874fb0e87aa37d5d0f3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ff197ec3a370c874fb0e87aa37d5d0f3, type: 3}
 --- !u!114 &1721999833
 MonoBehaviour:
@@ -7509,9 +7510,12 @@ MonoBehaviour:
   _dialogueRange: 5
   _isEventTrigger: 0
   _repeatEvent: 0
-  _staticImage: 0
+  _staticImage: 1
   _NPCLines:
-  - dialogueBoxes: []
+  - dialogueBoxes:
+    - dialogueText: 
+      nameTag: 
+      portrait: {fileID: 0}
   _NPCCutscene: {fileID: 0}
 --- !u!1 &1737671622
 GameObject:
