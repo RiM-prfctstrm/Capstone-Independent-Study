@@ -56,6 +56,10 @@ public class SnailTerrarium : NPCInteraction
     string _nameChunk;
     List<Dialogue> _nameDialogues = new List<Dialogue>();
 
+    // Graphics
+    SpriteRenderer _renderer;
+    [SerializeField] Sprite[] _sprites = new Sprite[6];
+
     // Object refs
     [SerializeField] TextMeshProUGUI _testBox;
 
@@ -72,6 +76,34 @@ public class SnailTerrarium : NPCInteraction
 
         //Initialize vars
         _nameFile = Application.dataPath + "/SaveData/Collectibles/SnailNames.txt";
+        _renderer = GetComponent<SpriteRenderer>();
+
+        // Set sprites
+        switch (GlobalVariableTracker.snailTotal)
+        {
+            case 0:
+                _renderer.sprite = _sprites[0];
+                break;
+            case 1:
+                _renderer.sprite = _sprites[1];
+                break;
+            case 101:
+                _renderer.sprite = _sprites[5];
+                break;
+
+        }
+        if (GlobalVariableTracker.snailTotal >= 2 && GlobalVariableTracker.snailTotal <= 24)
+        {
+            _renderer.sprite = _sprites[2];
+        }
+        else if (GlobalVariableTracker.snailTotal >= 25 && GlobalVariableTracker.snailTotal <= 49)
+        {
+            _renderer.sprite = _sprites[3];
+        }
+        else if (GlobalVariableTracker.snailTotal >= 50 && GlobalVariableTracker.snailTotal <= 100)
+        {
+            _renderer.sprite = _sprites[4];
+        }
     }
 
     #endregion
