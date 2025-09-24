@@ -148,6 +148,21 @@ public class SnailTerrarium : NPCInteraction
                 if (i == GlobalVariableTracker.snailTotal)
                 {
                     _latestName = "and " + reader.ReadLine() + ".";
+
+                    // Writes final name in list
+                    if(TestStringFit())
+                    {
+                        _nameChunk += _latestName;
+                        _nameDialogues.Add(new Dialogue(_nameChunk));
+                    }
+                    else
+                    {
+                        _nameDialogues.Add(new Dialogue(_nameChunk));
+                        _nameDialogues.Add(new Dialogue(_latestName));
+                    }
+
+                    // Exits loop
+                    break;
                 }
                 else
                 {
@@ -167,12 +182,6 @@ public class SnailTerrarium : NPCInteraction
 
                     // Resets text info to create next chunk
                     _testBox.text = _latestName + ", ";
-                }
-
-                // Finishes name list
-                if (i == GlobalVariableTracker.snailTotal)
-                {
-                    _nameDialogues.Add(new Dialogue(_nameChunk));
                 }
             }
         }
@@ -198,13 +207,13 @@ public class SnailTerrarium : NPCInteraction
     bool TestStringFit()
     {
         // updates test box
-        _testBox.text += _latestName + ",";
+        _testBox.text += _latestName;
         _testBox.ForceMeshUpdate();
 
         // Performs check
         if (_testBox.textInfo.lineCount <= 3)
         {
-            _testBox.text += " ";
+            _testBox.text += ", ";
             return true;
         }
         else
