@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 9/24/25
+ * UPDATED  : 9/25/25
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -48,6 +48,7 @@ public class DialogueManager : MonoBehaviour
     public static bool dialogueInProgress => _dialogueInProgress;
     public bool advancing = false;
     bool _inScroll = false;
+    public bool inScroll => _inScroll;
     public IEnumerator dialogRoutine;
     IEnumerator _scrollRoutine;
 

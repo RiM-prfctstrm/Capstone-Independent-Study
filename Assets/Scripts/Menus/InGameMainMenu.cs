@@ -112,6 +112,14 @@ public class InGameMainMenu : MonoBehaviour
         PlayerController.playerController.cancel.performed -= ExitMenu;
         PlayerController.playerController.cancel.performed += CloseManual;
     }
+
+    /// <summary>
+    /// TEMPORARY writes global progress to save
+    /// </summary>
+    public void SaveData()
+    {
+        SaveLoadFunctions.SaveFile(1);
+    }
     
     /// <summary>
     /// Opens the options menu

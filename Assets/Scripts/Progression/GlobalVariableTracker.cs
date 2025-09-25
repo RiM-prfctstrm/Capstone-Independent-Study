@@ -17,9 +17,6 @@ public class GlobalVariableTracker
 {
     #region VARIABLES
 
-    // Class Singleton
-    public static GlobalVariableTracker globalVariableTracker = new GlobalVariableTracker();
-
     #region GENERAL REFERENCE
     // Options parameters
     public static float masterVolume = 1;
