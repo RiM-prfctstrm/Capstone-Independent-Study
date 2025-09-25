@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 70280378}
   - component: {fileID: 70280377}
   - component: {fileID: 70280379}
+  - component: {fileID: 70280380}
   m_Layer: 0
   m_Name: SceneBG
   m_TagString: Untagged
@@ -226,6 +227,7 @@ MonoBehaviour:
   _optionsBG: {fileID: 77494818}
   _dm: {fileID: 70280378}
   _menuAudioSource: {fileID: 1886452916}
+  _loadInjector: {fileID: 70280380}
   _menuInputs: {fileID: -944628639613478452, guid: c950dc6ac45a77d4a9d65e00fcf3b1a0, type: 3}
   cancel:
     m_Name: Cancel
@@ -365,6 +367,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &70280380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70280374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74d6ae03195a6ec4ab7fec9919218420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentMission: 0
+  _m0Complete: 0
+  _m1Complete: 0
+  _m2Complete: 0
+  _m3Complete: 0
+  _tutorialPlayed: 0
+  _m2bonusStarted: 0
+  _m2BonusNotifPlayed: 0
+  _spaceportBarrierDown: 0
+  _checkedIn: 0
+  _hasAccessCard: 0
+  _visitedReceptionist: 0
+  _m0specialComplete: 0
+  _m2specialComplete: 0
+  _m3specialComplete: 0
+  _inDelivery: 1
+  _collectiblesInPocket: 0
+  _snailTotal: 0
+  _fireInjector: 0
 --- !u!1 &77494818 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2204714316427702947, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
@@ -1434,11 +1467,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 70280377}
         m_TargetAssemblyTypeName: TitleMenu, Assembly-CSharp
-        m_MethodName: UnimplementedMessage
-        m_Mode: 2
+        m_MethodName: ContinueGame
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1318994933}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

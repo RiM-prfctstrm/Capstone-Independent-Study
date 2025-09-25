@@ -12,6 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class DebugProgressInjector : MonoBehaviour
 {
 
@@ -56,11 +57,10 @@ public class DebugProgressInjector : MonoBehaviour
     #region CLASS CONSTRUCTORS
 
     /// <summary>
-    /// Creates a reverse injector that matches the status of GlobalVariableTracker. Used to save
-    /// otherwise static data to JSON.
+    /// Matches injector values to GlobalVariableTracker. Used to save otherwise static data to
+    /// JSON.
     /// </summary>
-    /// <param name="tracker"></param>
-    public DebugProgressInjector()
+    public void ReverseInjection()
     {
         // Mission Data
         // Overall Progression
@@ -86,6 +86,8 @@ public class DebugProgressInjector : MonoBehaviour
         _m0specialComplete = GlobalVariableTracker.progressionFlags["m0specialComplete"];
         _m2specialComplete = GlobalVariableTracker.progressionFlags["m2specialComplete"];
         _m3specialComplete = GlobalVariableTracker.progressionFlags["m3specialComplete"];
+
+        _inDelivery = GlobalVariableTracker.progressionFlags["inDelivery"];
 
         // Collectibles
         _collectiblesInPocket = (int)GlobalVariableTracker.collectiblesInPocket;

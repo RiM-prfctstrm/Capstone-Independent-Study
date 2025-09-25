@@ -37,14 +37,20 @@ public class SaveLoadFunctions
     /// <param name="slot">The slot to save to</param>
     public static void SaveFile(int slot)
     {
+        // Prepares data
+        DebugProgressInjector _saveInjector =
+            EssentialPreserver.instance.GetComponent<DebugProgressInjector>();
+        _saveInjector.ReverseInjection();
+
         // Sets data to save
-        _progressToSave = JsonUtility.ToJson(new DebugProgressInjector());
+        _progressToSave = JsonUtility.ToJson(_saveInjector);
         _level = JsonUtility.ToJson(SceneManager.GetActiveScene());
 
         // Saves game progression
         using(_saveWriter = new StreamWriter(_basePath + slot + "/Progress.json"))
         {
             _saveWriter.Write(_progressToSave);
+            _saveWriter.Dispose();
         }
 
         // Saves Snails
@@ -57,12 +63,14 @@ public class SaveLoadFunctions
         using (_saveWriter = new StreamWriter(_basePath + slot + "/Snails.txt"))
         {
             _saveWriter.Write(_snailsToSave);
+            _saveWriter.Dispose();
         }
 
         // Saves current level
         using (_saveWriter = new StreamWriter(_basePath + slot + "/Level.json"))
         {
             _saveWriter.Write(_level);
+            _saveWriter.Dispose();
         }
     }
 
@@ -74,11 +82,10 @@ public class SaveLoadFunctions
     /// Reads save data, sets global variables, and warps player to the previous map
     /// </summary>
     /// <param name="slot">Save slot to read</param>
-    public static void LoadFile(int slot)
+    public static void LoadFile(int slot, DebugProgressInjector saveInjector)
     {
         // Loads progress vars
-        DebugProgressInjector saveInjector =
-            JsonUtility.FromJson<DebugProgressInjector>(_basePath + slot + "/Progress.json");
+        JsonUtility.FromJsonOverwrite(_basePath + slot + "/Progress.json", saveInjector);
         saveInjector.InjectGlobalData();
 
         // Loads Snails
@@ -91,6 +98,7 @@ public class SaveLoadFunctions
         using (_saveWriter = new StreamWriter(_snailTempPath))
         {
             _saveWriter.Write(_snailsToSave);
+            _saveWriter.Dispose();
         }
 
         // Loads Scene

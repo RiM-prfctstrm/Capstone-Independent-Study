@@ -2,7 +2,7 @@
  * FILE     : TitleMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/31/24
- * UPDATED  : 4/22/25
+ * UPDATED  : 4/25/25
  * 
  * DESC     : Performs functions of the title screen menu.
 =================================================================================================*/
@@ -22,6 +22,7 @@ public class TitleMenu : MonoBehaviour
     [SerializeField] GameObject _optionsBG;
     [SerializeField] DialogueManager _dm;
     [SerializeField] AudioSource _menuAudioSource;
+    [SerializeField] DebugProgressInjector _loadInjector;
 
     // Input Controls
     [SerializeField] InputActionAsset _menuInputs;
@@ -69,6 +70,15 @@ public class TitleMenu : MonoBehaviour
         InGameMainMenu.inMainMenu = false;
         cancel.performed -= PlayCancelSound;
         SceneManager.LoadScene("Newscast");
+    }
+
+
+    /// <summary>
+    /// Loads the last made save file
+    /// </summary>
+    public void ContinueGame()
+    {
+        SaveLoadFunctions.LoadFile(1, _loadInjector);
     }
 
     /// <summary>
