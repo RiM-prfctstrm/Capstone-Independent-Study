@@ -17,9 +17,11 @@ public class SaveLoadFunctions
 
     // IO Data
     static string _progressToSave;
+    static string _snailsToSave;
 
     // IO Operators
     static string _basePath = Application.dataPath + "/SaveData/ProgressFiles/Slot";
+    static string _snailTempPath = Application.dataPath + "/SaveData/Collectibles/SnailsTemp.txt";
     static StreamWriter _saveWriter;
     static StreamReader _saveReader;
 
@@ -41,6 +43,18 @@ public class SaveLoadFunctions
         using(_saveWriter = new StreamWriter(_basePath + slot + "/Progress.json"))
         {
             _saveWriter.Write(_progressToSave);
+        }
+
+        // Saves Snails
+        // Gathers data from temp file
+        using(_saveReader = new StreamReader(_snailTempPath))
+        {
+            _snailsToSave = _saveReader.ReadToEnd();
+        }
+        // Moves data to permanent file
+        using (_saveWriter = new StreamWriter(_basePath + slot + "/Snails.txt"))
+        {
+            _saveWriter.Write(_snailsToSave);
         }
     }
 
