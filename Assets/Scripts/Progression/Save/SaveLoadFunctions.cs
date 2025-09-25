@@ -10,12 +10,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SaveLoadFunctions
 {
     #region VARIABLES
 
     // IO Data
+    static string _level;
     static string _progressToSave;
     static string _snailsToSave;
 
@@ -37,7 +39,7 @@ public class SaveLoadFunctions
     {
         // Sets data to save
         _progressToSave = JsonUtility.ToJson(new DebugProgressInjector());
-        Debug.Log(_progressToSave);
+        _level = JsonUtility.ToJson(SceneManager.GetActiveScene());
 
         // Saves game progression
         using(_saveWriter = new StreamWriter(_basePath + slot + "/Progress.json"))
@@ -56,11 +58,44 @@ public class SaveLoadFunctions
         {
             _saveWriter.Write(_snailsToSave);
         }
+
+        // Saves current level
+        using (_saveWriter = new StreamWriter(_basePath + slot + "/Level.json"))
+        {
+            _saveWriter.Write(_level);
+        }
     }
 
     #endregion
 
     #region LOADING
+
+    /// <summary>
+    /// Reads save data, sets global variables, and warps player to the previous map
+    /// </summary>
+    /// <param name="slot">Save slot to read</param>
+    public static void LoadFile(int slot)
+    {
+        // Loads progress vars
+        DebugProgressInjector saveInjector =
+            JsonUtility.FromJson<DebugProgressInjector>(_basePath + slot + "/Progress.json");
+        saveInjector.InjectGlobalData();
+
+        // Loads Snails
+        // Gathers data from permanent file
+        using (_saveReader = new StreamReader(_basePath + slot + "/Snails.txt"))
+        {
+            _snailsToSave = _saveReader.ReadToEnd();
+        }
+        // Moves data to temp file
+        using (_saveWriter = new StreamWriter(_snailTempPath))
+        {
+            _saveWriter.Write(_snailsToSave);
+        }
+
+        // Loads Scene
+        SceneManager.LoadScene(JsonUtility.FromJson<Scene>(_basePath + slot + "/Level.json").name);
+    }
 
     #endregion
 }
