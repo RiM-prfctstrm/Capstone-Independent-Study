@@ -34,7 +34,7 @@ public class SaveLoadFunctions
     public static void SaveFile(int slot)
     {
         // Sets data to save
-        _progressToSave = JsonUtility.ToJson(new GlobalVariableTracker());
+        _progressToSave = JsonUtility.ToJson(new DebugProgressInjector());
         Debug.Log(_progressToSave);
 
         // Saves game progression

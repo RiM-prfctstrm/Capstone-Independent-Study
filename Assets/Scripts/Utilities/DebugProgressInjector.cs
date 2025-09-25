@@ -2,7 +2,7 @@
  * FILE     : DebugProgressInjector.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/3/25
- * UPDATED  : 9/19/25
+ * UPDATED  : 9/25/25
  * 
  * DESC     : Debug script to set progression variables by hand in inspector. Used to tell the game
  *            to play at a certain point. Works best before loading scene.
@@ -50,6 +50,47 @@ public class DebugProgressInjector : MonoBehaviour
 
     // Activation Switch
     [SerializeField] bool _fireInjector = false;
+
+    #endregion
+
+    #region CLASS CONSTRUCTORS
+
+    /// <summary>
+    /// Creates a reverse injector that matches the status of GlobalVariableTracker. Used to save
+    /// otherwise static data to JSON.
+    /// </summary>
+    /// <param name="tracker"></param>
+    public DebugProgressInjector()
+    {
+        // Mission Data
+        // Overall Progression
+        _currentMission = GlobalVariableTracker.currentMission;
+        _m0Complete = GlobalVariableTracker.progressionFlags["m0complete"];
+        _m1Complete = GlobalVariableTracker.progressionFlags["m1complete"];
+        _m2Complete = GlobalVariableTracker.progressionFlags["m2complete"];
+        _m3Complete = GlobalVariableTracker.progressionFlags["m3complete"];
+
+        // Within-mission progression
+        // Mission 0 Progression
+        _tutorialPlayed = GlobalVariableTracker.progressionFlags["tutorialPlayed"];
+        // Mission 2 Progression
+        _m2bonusStarted = GlobalVariableTracker.progressionFlags["m2bonusStarted"];
+        _m2BonusNotifPlayed = GlobalVariableTracker.progressionFlags["m2BonusNotifPlayed"];
+        // Mission 3 Progression
+        _spaceportBarrierDown = GlobalVariableTracker.progressionFlags["spaceportBarrierDown"];
+        _checkedIn = GlobalVariableTracker.progressionFlags["checkedIn"];
+        _hasAccessCard = GlobalVariableTracker.progressionFlags["hasAccessCard"];
+        _visitedReceptionist = GlobalVariableTracker.progressionFlags["visitedReceptionist"];
+
+        // Special Completion Progression
+        _m0specialComplete = GlobalVariableTracker.progressionFlags["m0specialComplete"];
+        _m2specialComplete = GlobalVariableTracker.progressionFlags["m2specialComplete"];
+        _m3specialComplete = GlobalVariableTracker.progressionFlags["m3specialComplete"];
+
+        // Collectibles
+        _collectiblesInPocket = (int)GlobalVariableTracker.collectiblesInPocket;
+        _snailTotal = GlobalVariableTracker.snailTotal;
+    }
 
     #endregion
 
