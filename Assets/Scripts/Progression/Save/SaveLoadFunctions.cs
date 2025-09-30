@@ -2,7 +2,7 @@
  * FILE     : SaveLoadFunctions.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/25/25
- * UPDATED  : 9/25/25
+ * UPDATED  : 9/30/25
  * 
  * DESC     : Writes and reads permanent save data.
 =================================================================================================*/
@@ -43,8 +43,8 @@ public class SaveLoadFunctions
         _saveInjector.ReverseInjection();
 
         // Sets data to save
-        _progressToSave = JsonUtility.ToJson(_saveInjector);
-        _level = JsonUtility.ToJson(SceneManager.GetActiveScene());
+        _progressToSave = JsonUtility.ToJson(_saveInjector, true);
+        _level = SceneManager.GetActiveScene().name;
 
         // Saves game progression
         using(_saveWriter = new StreamWriter(_basePath + slot + "/Progress.json"))
@@ -67,7 +67,7 @@ public class SaveLoadFunctions
         }
 
         // Saves current level
-        using (_saveWriter = new StreamWriter(_basePath + slot + "/Level.json"))
+        using (_saveWriter = new StreamWriter(_basePath + slot + "/Level.txt"))
         {
             _saveWriter.Write(_level);
             _saveWriter.Dispose();
@@ -84,8 +84,17 @@ public class SaveLoadFunctions
     /// <param name="slot">Save slot to read</param>
     public static void LoadFile(int slot, DebugProgressInjector saveInjector)
     {
+        // Vars
+        string jsonData;
+
         // Loads progress vars
-        JsonUtility.FromJsonOverwrite(_basePath + slot + "/Progress.json", saveInjector);
+        // Loads Snails
+        // Gathers data from permanent file
+        using (_saveReader = new StreamReader(_basePath + slot + "/Progress.json"))
+        {
+            jsonData = _saveReader.ReadToEnd();
+        }
+        JsonUtility.FromJsonOverwrite(jsonData, saveInjector);
         saveInjector.InjectGlobalData();
 
         // Loads Snails
@@ -102,7 +111,10 @@ public class SaveLoadFunctions
         }
 
         // Loads Scene
-        SceneManager.LoadScene(JsonUtility.FromJson<Scene>(_basePath + slot + "/Level.json").name);
+        using (_saveReader = new StreamReader(_basePath + slot + "/Level.txt"))
+        {
+            SceneManager.LoadScene(_saveReader.ReadToEnd());
+        }
     }
 
     #endregion
