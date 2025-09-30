@@ -1,8 +1,8 @@
 /*=================================================================================================
  * FILE     : SplashScreen.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
- * CREATION : 8/13/24
- * UPDATED  : 8/13/25
+ * CREATION : 8/13/25
+ * UPDATED  : 9/30/25
  * 
  * DESC     : Fades in and out a splash screen.
 =================================================================================================*/
@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class SplashScreen : MonoBehaviour
 {
@@ -30,11 +31,19 @@ public class SplashScreen : MonoBehaviour
     {
         StartCoroutine(FadeSplashIn());
     }
+    
+    /// <summary>
+    /// Update is called once per frame
+    /// </summary>
+    void Update()
+    {
+
+    }
 
     #endregion
 
     #region AUTOMATION ROUTINES
-    
+
     /// <summary>
     /// Fades in the screen
     /// </summary>
