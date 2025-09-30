@@ -2,7 +2,7 @@
  * FILE     : TitleMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/31/24
- * UPDATED  : 4/25/25
+ * UPDATED  : 9/30/25
  * 
  * DESC     : Performs functions of the title screen menu.
 =================================================================================================*/
@@ -78,6 +78,8 @@ public class TitleMenu : MonoBehaviour
     /// </summary>
     public void ContinueGame()
     {
+        InGameMainMenu.inMainMenu = false;
+        cancel.performed -= PlayCancelSound;
         SaveLoadFunctions.LoadFile(1, _loadInjector);
     }
 
