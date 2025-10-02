@@ -2,7 +2,7 @@
  * FILE     : SplashScreen.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/13/25
- * UPDATED  : 9/30/25
+ * UPDATED  : 10/2/25
  * 
  * DESC     : Fades in and out a splash screen.
 =================================================================================================*/
@@ -12,6 +12,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
 
 public class SplashScreen : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class SplashScreen : MonoBehaviour
 
     [SerializeField] Image _splash;
     Color _fadeColor = new Color(255, 255, 255, 0);
+    bool _hasSkipped = false;
 
     #endregion
 
@@ -37,7 +39,12 @@ public class SplashScreen : MonoBehaviour
     /// </summary>
     void Update()
     {
-
+        // Skips splash Screen
+        if (!_hasSkipped)
+        {
+            InputSystem.onAnyButtonPress.CallOnce(ctrl => SkipSplash());
+            _hasSkipped = true;
+        }
     }
 
     #endregion
@@ -87,6 +94,19 @@ public class SplashScreen : MonoBehaviour
         }
 
         // Loads main menu
+        SceneManager.LoadScene(1);
+    }
+
+    #endregion
+
+    #region SKIP FUNCTIONALITY
+
+    /// <summary>
+    /// Skips splash screen
+    /// </summary>
+    void SkipSplash()
+    {
+        StopAllCoroutines();
         SceneManager.LoadScene(1);
     }
 
