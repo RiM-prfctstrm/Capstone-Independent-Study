@@ -2,7 +2,7 @@
  * FILE     : ResetCollectibles.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/28/25
- * UPDATED  : 9/3/25
+ * UPDATED  : 10/2/25
  * 
  * DESC     : Erases save files that store which collectibles have been picked up.
 =================================================================================================*/
@@ -16,6 +16,9 @@ using UnityEngine;
 public class ResetCollectibles : CutsceneEvent
 {
     #region VARS
+
+    // Parameters
+    [SerializeField] bool _eraseSnails = false;
 
     // File list
     string _directoryPath;
@@ -42,6 +45,13 @@ public class ResetCollectibles : CutsceneEvent
         // Erases each file
         foreach(FileInfo i in _directory.GetFiles("*.txt"))
         {
+            // Skips snail data
+            if (!_eraseSnails && i.FullName == _directoryPath + "/SnailsTemp.txt")
+            {
+                continue;
+            }
+
+            // Erases file
             using(_eraser = new StreamWriter(i.FullName, false))
             {
                 _eraser.Write("");

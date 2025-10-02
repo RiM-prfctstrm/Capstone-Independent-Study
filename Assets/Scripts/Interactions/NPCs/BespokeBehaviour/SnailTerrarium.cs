@@ -2,7 +2,7 @@
  * FILE     : SnailTerrarium.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/23/25
- * UPDATED  : 9/24/25
+ * UPDATED  : 10/2/25
  * 
  * DESC     : Tells the player how many snails they have and creates a list of snail names.
 =================================================================================================*/
@@ -75,7 +75,7 @@ public class SnailTerrarium : NPCInteraction
         base.Start();
 
         //Initialize vars
-        _nameFile = Application.dataPath + "/SaveData/Collectibles/SnailNames.txt";
+        _nameFile = Application.dataPath + "/SaveData/SnailNames.txt";
         _renderer = GetComponent<SpriteRenderer>();
 
         // Set sprites
