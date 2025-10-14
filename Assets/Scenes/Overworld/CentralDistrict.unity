@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -24901,7 +24900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectibleID: -1
   localTracker: {fileID: 0}
-  _pickUpSound: {fileID: 0}
+  _pickUpSound: {fileID: 8300000, guid: 00304359142e487469ffc4235a105ad8, type: 3}
   _speed: 0.125
   _vertical: 0
 --- !u!1 &1991267578
@@ -27093,7 +27092,7 @@ Rigidbody2D:
   m_Constraints: 4
 --- !u!95 &4266992393204732138
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -27110,4 +27109,5 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
