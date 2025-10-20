@@ -2,7 +2,7 @@
  * FILE     : MusicManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 12/6/24
- * UPDATED  : 9/8/25
+ * UPDATED  : 10/20/25
  * 
  * DESC     : Controls which music is currently playing.
 =================================================================================================*/
@@ -22,9 +22,11 @@ public class MusicManager : MonoBehaviour
 
     // Object References
     [SerializeField] AudioSource _musicSource;
+    [SerializeField] AudioSource _jingleSource;
 
     // Playback Data
     bool _isLoop = true;
+    bool _playingJingle = false;
     float _startTime;
 
     #endregion
@@ -36,11 +38,18 @@ public class MusicManager : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        // loops song
+        // Loops song
         if (!_musicSource.isPlaying && _isLoop)
         {
             _musicSource.time = _startTime;
             _musicSource.Play();
+        }
+
+        // Triggers exit for jingle
+        if (!_jingleSource.isPlaying && _playingJingle)
+        {
+            _playingJingle = false;
+            StartCoroutine(FadeFromJingle());
         }
     }
 
@@ -102,6 +111,8 @@ public class MusicManager : MonoBehaviour
         _musicSource.Play();
     }
 
+    #region FADING CONTROLS
+
     /// <summary>
     /// Fades out song by gradually incrementally lowering volume
     /// </summary>
@@ -139,6 +150,42 @@ public class MusicManager : MonoBehaviour
         BeginSong(song.song);
         SetLoopPoint(song);
     }
+
+    /// <summary>
+    /// Fades bgm without removing it, so that it can be resumed once the jingle is complete.
+    /// </summary>
+    /// <param name="jingle">Jingle to play</param>
+    /// <returns>Framerate delay for fading</returns>
+    public IEnumerator FadeToJingle(MusicTrack jingle)
+    {
+        // Incrementally lowers volume
+        while (_musicSource.volume > 0)
+        {
+            _musicSource.volume -= 2 * Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate();
+        }
+
+        // Starts jingle
+        _jingleSource.clip = jingle.song;
+        _jingleSource.Play();
+        _playingJingle = true;
+    }
+
+    /// <summary>
+    /// Resumes music after jingle
+    /// </summary>
+    /// <returns>Framerate delay for fading</returns>
+    IEnumerator FadeFromJingle()
+    {
+        // Incrementally Raises volume
+        while (_musicSource.volume < 1)
+        {
+            _musicSource.volume += 2 * Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate();
+        }
+    }
+
+    #endregion
 
     #region LOOPING CONTROLS
 

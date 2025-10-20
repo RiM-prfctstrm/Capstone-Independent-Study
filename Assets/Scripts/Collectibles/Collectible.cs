@@ -2,7 +2,7 @@
  * FILE     : Collectible.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/22/25
- * UPDATED  : 9/16/25
+ * UPDATED  : 10/20/25
  * 
  * DESC     : Behaviour for items that can be picked up off the ground.
 =================================================================================================*/
@@ -59,16 +59,45 @@ public class Collectible : MonoBehaviour
         PlayerController.playerController.playerAudioSource.PlayOneShot(_pickUpSound);
     }
 
-    #endregion
-
-    #region MISC FUNCTIONS
-
     /// <summary>
     /// Removes the collectible from the game space
     /// </summary>
-    [SerializeField] void RemoveCollectible()
+    [SerializeField]
+    void RemoveCollectible()
     {
         Destroy(gameObject);
+    }
+
+    #endregion
+
+    #region EFFECTS
+
+    /// <summary>
+    /// Plays the visual and sound effects for picking up an important collectible
+    /// </summary>
+    /// <param name="prize">Sprite the player holds in hand</param>
+    public IEnumerator PickUpEffects(Sprite prize)
+    {
+        // Vars
+        PlayerAnimator animator = PlayerController.playerController.GetComponent<PlayerAnimator>();
+
+        // Puts player in event state
+        PlayerController.playerController.TogglePlayerInput();
+        PlayerController.playerController.EnableAutoBraking();
+
+        // Fades out music and plays jingle
+
+        // Performs initial effects
+        animator.PlayScriptedAnimation("ItemPickUp");
+
+        // Delay for animation complete
+        yield return new WaitUntil(() =>
+        PlayerController.playerController.GetComponent<SpriteRenderer>().sprite.name 
+        == "Pepper_35");
+
+        // Displays collectible image
+        
+        // Starts wait to resume music
     }
 
     #endregion

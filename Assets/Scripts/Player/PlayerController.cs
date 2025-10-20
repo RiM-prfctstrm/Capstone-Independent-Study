@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 9/15/25
+ * UPDATED  : 10/20/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -279,6 +279,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void EnableAutoBraking()
+    {
+        _autoBraking = true;
+    }
+
     /// <summary>
     /// Deactivates input recognition, mostly used so the game can take over the player object
     /// during cutscenes.
@@ -387,7 +392,7 @@ public class PlayerController : MonoBehaviour
                 lastTarget = _detector.target.gameObject;
 
                 // Brakes for interaction
-                _autoBraking = true;
+                EnableAutoBraking();
             }
             else
             {
