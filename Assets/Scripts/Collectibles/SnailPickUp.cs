@@ -2,7 +2,7 @@
  * FILE     : SnailPickUp.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/17/25
- * UPDATED  : 10/14/25
+ * UPDATED  : 10/20/25
  * 
  * DESC     : Controls how Snails are saved and inventoried when picked up, as well as snail
  *            movement
@@ -21,6 +21,10 @@ public class SnailPickUp : Collectible
     float _moveRate;
     [SerializeField] float _speed;
     [SerializeField] bool _vertical;
+
+    // Collection Effects
+    [SerializeField] MusicTrack _pickUpJingle;
+    [SerializeField] DialogueEvent _pickUpText;
 
     #endregion
 
@@ -113,6 +117,10 @@ public class SnailPickUp : Collectible
 
         // removes from scene
         Destroy(gameObject);
+
+        // Plays effects
+        StartCoroutine(PickUpEffects(GetComponent<SpriteRenderer>().sprite, _pickUpJingle,
+            _pickUpText));
     }
 
     #endregion

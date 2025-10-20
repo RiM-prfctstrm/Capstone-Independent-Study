@@ -54,7 +54,7 @@ public class Collectible : MonoBehaviour
         gameObject.isStatic = false;
 
         // Picks up collectible
-        //GetComponent<Animator>().Play("Collect");
+        GetComponent<Animator>().Play("Collect");
         GetComponent<Collider2D>().enabled = false;
         PlayerController.playerController.playerAudioSource.PlayOneShot(_pickUpSound);
     }
@@ -76,7 +76,9 @@ public class Collectible : MonoBehaviour
     /// Plays the visual and sound effects for picking up an important collectible
     /// </summary>
     /// <param name="prize">Sprite the player holds in hand</param>
-    public IEnumerator PickUpEffects(Sprite prize)
+    /// <param name="jingle">Fanfare to play for getting item</param>
+    /// <param name="pickUpText">Dialogue notification for grabbing the item</param>
+    public IEnumerator PickUpEffects(Sprite prize, MusicTrack jingle, DialogueEvent pickUptext)
     {
         // Vars
         PlayerAnimator animator = PlayerController.playerController.GetComponent<PlayerAnimator>();
@@ -86,6 +88,7 @@ public class Collectible : MonoBehaviour
         PlayerController.playerController.EnableAutoBraking();
 
         // Fades out music and plays jingle
+        MusicManager.musicManager.FadeToJingle(jingle);
 
         // Performs initial effects
         animator.PlayScriptedAnimation("ItemPickUp");
@@ -96,8 +99,9 @@ public class Collectible : MonoBehaviour
         == "Pepper_35");
 
         // Displays collectible image
-        
-        // Starts wait to resume music
+
+        // Shows pickup dialogue
+        DialogueManager.dialogueManager.PlayDialogue(pickUptext);
     }
 
     #endregion
