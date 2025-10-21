@@ -54,7 +54,7 @@ public class Collectible : MonoBehaviour
         gameObject.isStatic = false;
 
         // Picks up collectible
-        //GetComponent<Animator>().Play("Collect");
+        GetComponent<Animator>().Play("Collect");
         GetComponent<Collider2D>().enabled = false;
         PlayerController.playerController.playerAudioSource.PlayOneShot(_pickUpSound);
     }
@@ -97,7 +97,7 @@ public class Collectible : MonoBehaviour
         yield return new WaitUntil(() =>
         PlayerController.playerController.GetComponent<SpriteRenderer>().sprite.name 
         == "Pepper_35");
-
+        Debug.Log("amogus");
         // Displays collectible image
 
         // Shows pickup dialogue

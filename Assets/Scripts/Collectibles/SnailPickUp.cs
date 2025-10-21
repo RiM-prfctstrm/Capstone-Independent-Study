@@ -115,9 +115,6 @@ public class SnailPickUp : Collectible
         // Updates Save Data
         SnailSaveManager.UpdateTempSave(collectibleID);
 
-        // removes from scene
-        Destroy(gameObject);
-
         // Plays effects
         StartCoroutine(PickUpEffects(GetComponent<SpriteRenderer>().sprite, _pickUpJingle,
             _pickUpText));
