@@ -94,10 +94,9 @@ public class Collectible : MonoBehaviour
         animator.PlayScriptedAnimation("ItemPickUp");
 
         // Delay for animation complete
-        yield return new WaitUntil(() =>
-        PlayerController.playerController.GetComponent<SpriteRenderer>().sprite.name 
-        == "Pepper_35");
-        Debug.Log("amogus");
+        yield return new WaitUntil(() => animator.animComplete);
+        animator.animComplete = false;
+        
         // Displays collectible image
 
         // Shows pickup dialogue

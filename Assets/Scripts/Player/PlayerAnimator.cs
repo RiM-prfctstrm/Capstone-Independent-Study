@@ -20,6 +20,9 @@ public class PlayerAnimator : CharacterAnimator
     // Control Parameters
     bool _overrideState = false;
 
+    // Signals
+    public bool animComplete = false;
+
     #endregion
 
     #region UNIVERSAL EVENTS
@@ -109,6 +112,20 @@ public class PlayerAnimator : CharacterAnimator
 
         // Updates detection hitbox
         _playerController.UpdateDetection();
+    }
+
+    #endregion
+
+    #region SIGNALLING
+
+    /// <summary>
+    /// Signals that an animation is complete
+    /// </summary>
+    [SerializeField]
+    void SignalAnimationCompletion()
+    {
+        animComplete = true;
+        Debug.Log("woot");
     }
 
     #endregion
