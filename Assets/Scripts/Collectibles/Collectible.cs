@@ -19,7 +19,7 @@ public class Collectible : MonoBehaviour
     public CollectibleStateTracker localTracker;
 
     // Audio
-    [SerializeField] AudioClip _pickUpSound;
+    [SerializeField] protected AudioClip _pickUpSound;
 
     #endregion
 
@@ -56,7 +56,6 @@ public class Collectible : MonoBehaviour
         // Picks up collectible
         GetComponent<Animator>().Play("Collect");
         GetComponent<Collider2D>().enabled = false;
-        PlayerController.playerController.playerAudioSource.PlayOneShot(_pickUpSound);
     }
 
     /// <summary>
@@ -94,13 +93,12 @@ public class Collectible : MonoBehaviour
         animator.PlayScriptedAnimation("ItemPickUp");
 
         // Delay for animation complete
-        yield return new WaitUntil(() => animator.animComplete);
-        animator.animComplete = false;
+
         
         // Displays collectible image
 
         // Shows pickup dialogue
-        DialogueManager.dialogueManager.PlayDialogue(pickUptext);
+        DialogueManager.dialogueManager.StartDialogue(pickUptext);
     }
 
     #endregion

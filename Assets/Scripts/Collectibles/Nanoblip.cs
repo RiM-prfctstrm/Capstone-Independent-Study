@@ -2,7 +2,7 @@
  * FILE     : Nanoblip.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/XX/25
- * UPDATED  : 9/17/25
+ * UPDATED  : 10/21/25
  * 
  * DESC     : Controls how nanoblips are saved and inventoried when picked up.
 =================================================================================================*/
@@ -20,6 +20,9 @@ public class Nanoblip : Collectible
     protected override void OnPickUp()
     {
         base.OnPickUp();
+
+        // Collection Effects
+        PlayerController.playerController.playerAudioSource.PlayOneShot(_pickUpSound);
 
         // Updates Nanoblip Managers
         CollectibleManager.collectibleManager.AdjustCount(1);

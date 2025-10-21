@@ -2,7 +2,7 @@
  * FILE     : SnailPickUp.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/17/25
- * UPDATED  : 10/20/25
+ * UPDATED  : 10/21/25
  * 
  * DESC     : Controls how Snails are saved and inventoried when picked up, as well as snail
  *            movement
@@ -120,9 +120,13 @@ public class SnailPickUp : Collectible
             _pickUpText));
     }
 
-    #endregion
-
-    #region STATE TRACKER
+    /// <summary>
+    /// Plays pickup sound
+    /// </summary>
+    void PlayPickUpSound()
+    {
+        PlayerController.playerController.playerAudioSource.PlayOneShot(_pickUpSound);
+    }
 
     #endregion
 }
