@@ -2,7 +2,7 @@
  * FILE     : PlayerAnimator.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/11/24
- * UPDATED  : 3/25/25
+ * UPDATED  : 10/21/25
  * 
  * DESC     : Controls player character's animation
 =================================================================================================*/
@@ -100,6 +100,12 @@ public class PlayerAnimator : CharacterAnimator
     public override void PlayScriptedAnimation(string name)
     {
         base.PlayScriptedAnimation(name);
+
+        // Ensures animation overrides movement
+        if (!_overrideState)
+        {
+            _overrideState = true;
+        }
 
         // Updates detection hitbox
         _playerController.UpdateDetection();

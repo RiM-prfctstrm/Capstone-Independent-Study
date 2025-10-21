@@ -2,7 +2,7 @@
  * FILE     : Collectible.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/22/25
- * UPDATED  : 10/20/25
+ * UPDATED  : 10/21/25
  * 
  * DESC     : Behaviour for items that can be picked up off the ground.
 =================================================================================================*/
@@ -54,7 +54,7 @@ public class Collectible : MonoBehaviour
         gameObject.isStatic = false;
 
         // Picks up collectible
-        GetComponent<Animator>().Play("Collect");
+        //GetComponent<Animator>().Play("Collect");
         GetComponent<Collider2D>().enabled = false;
         PlayerController.playerController.playerAudioSource.PlayOneShot(_pickUpSound);
     }
@@ -88,7 +88,7 @@ public class Collectible : MonoBehaviour
         PlayerController.playerController.EnableAutoBraking();
 
         // Fades out music and plays jingle
-        MusicManager.musicManager.FadeToJingle(jingle);
+        StartCoroutine(MusicManager.musicManager.FadeToJingle(jingle));        
 
         // Performs initial effects
         animator.PlayScriptedAnimation("ItemPickUp");
