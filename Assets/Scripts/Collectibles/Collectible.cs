@@ -87,9 +87,10 @@ public class Collectible : MonoBehaviour
         PlayerController.playerController.EnableAutoBraking();
 
         // Fades out music and plays jingle
-        StartCoroutine(MusicManager.musicManager.FadeToJingle(jingle));        
+        StartCoroutine(MusicManager.musicManager.FadeToJingle(jingle));
 
         // Performs initial effects
+        animator.itemSprite = prize;
         animator.PlayScriptedAnimation("ItemPickUp");
 
         // Delay for animation complete

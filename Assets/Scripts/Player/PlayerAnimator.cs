@@ -2,7 +2,7 @@
  * FILE     : PlayerAnimator.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/11/24
- * UPDATED  : 10/21/25
+ * UPDATED  : 10/22/25
  * 
  * DESC     : Controls player character's animation
 =================================================================================================*/
@@ -16,6 +16,9 @@ public class PlayerAnimator : CharacterAnimator
 
     // Components
     PlayerController _playerController;
+    // External Objs
+    [SerializeField] GameObject _itemDisplay;
+    public Sprite itemSprite;
 
     // Control Parameters
     bool _overrideState = false;
@@ -110,6 +113,19 @@ public class PlayerAnimator : CharacterAnimator
         // Updates detection hitbox
         _playerController.UpdateDetection();
     }
+
+    #region INTERACTION ANIMATIONS
+
+    /// <summary>
+    /// Shows a pick up item over the player's hand
+    /// </summary>
+    public void ShowPickUp()
+    {
+        _itemDisplay.GetComponent<SpriteRenderer>().sprite = itemSprite;
+        _itemDisplay.SetActive(true);
+    }
+
+    #endregion
 
     #endregion
 }
