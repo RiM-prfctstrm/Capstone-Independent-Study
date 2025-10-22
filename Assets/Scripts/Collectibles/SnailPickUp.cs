@@ -2,7 +2,7 @@
  * FILE     : SnailPickUp.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/17/25
- * UPDATED  : 10/21/25
+ * UPDATED  : 10/22/25
  * 
  * DESC     : Controls how Snails are saved and inventoried when picked up, as well as snail
  *            movement
@@ -116,8 +116,8 @@ public class SnailPickUp : Collectible
         SnailSaveManager.UpdateTempSave(collectibleID);
 
         // Plays effects
-        StartCoroutine(PickUpEffects(GetComponent<SpriteRenderer>().sprite, _pickUpJingle,
-            _pickUpText));
+        PlayerController.playerController.StartCoroutine(
+            PickUpEffects(GetComponent<SpriteRenderer>().sprite, _pickUpJingle, _pickUpText));
     }
 
     /// <summary>

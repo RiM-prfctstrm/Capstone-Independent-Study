@@ -93,7 +93,7 @@ public class Collectible : MonoBehaviour
         animator.PlayScriptedAnimation("ItemPickUp");
 
         // Delay for animation complete
-
+        yield return new WaitForSeconds(1);
         
         // Displays collectible image
 
