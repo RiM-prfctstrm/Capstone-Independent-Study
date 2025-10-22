@@ -21,6 +21,8 @@ public class PlayerAnimator : CharacterAnimator
     public Sprite itemSprite;
 
     // Control Parameters
+    bool _inPickUp = false;
+    public bool inPickUp => _inPickUp;
     bool _overrideState = false;
 
     #endregion
@@ -121,8 +123,19 @@ public class PlayerAnimator : CharacterAnimator
     /// </summary>
     public void ShowPickUp()
     {
+        _inPickUp = true;
         _itemDisplay.GetComponent<SpriteRenderer>().sprite = itemSprite;
         _itemDisplay.SetActive(true);
+    }
+
+    /// <summary>
+    /// Returns to normal state from pickup
+    /// </summary>
+    public void EndPickUp()
+    {
+        _inPickUp = false;
+        _itemDisplay.SetActive(false);
+        _overrideState = false;
     }
 
     #endregion

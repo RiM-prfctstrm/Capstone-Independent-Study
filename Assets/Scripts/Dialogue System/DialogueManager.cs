@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 9/25/25
+ * UPDATED  : 1021/25
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -249,6 +249,9 @@ public class DialogueManager : MonoBehaviour
 
         // Deselects any targeted gameobjects
         PlayerController.playerController.lastTarget = null;
+
+        // Returns animation state to normal for pickup notifs
+        PlayerController.playerController.GetComponent<PlayerAnimator>().EndPickUp();
     }
     public void CancelDialogue(InputAction.CallbackContext ctx)
     {
@@ -283,6 +286,9 @@ public class DialogueManager : MonoBehaviour
 
         // Deselects any targeted gameobjects
         PlayerController.playerController.lastTarget = null;
+
+        // Returns animation state to normal for pickup notifs
+        PlayerController.playerController.GetComponent<PlayerAnimator>().EndPickUp();
     }
 
     #endregion

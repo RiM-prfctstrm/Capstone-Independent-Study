@@ -2,7 +2,7 @@
  * FILE     : CutsceneManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1X/X/24
- * UPDATED  : 9/3/25
+ * UPDATED  : 10/22/25
  * 
  * DESC     : Controls the progression of scripted events.
 =================================================================================================*/
@@ -240,7 +240,8 @@ public class CutsceneManager : MonoBehaviour
 
         // Fills gauge to skip event
         if (PlayerController.playerController.cancel.IsPressed() && !_skippingCutscene &&
-            (_inCutscene || NPCInteraction.inNPCInteraction))
+            (_inCutscene || NPCInteraction.inNPCInteraction ||
+            PlayerController.playerController.GetComponent<PlayerAnimator>().inPickUp))
         {
             // Fills Gauge
             if (!DialogueManager.dialogueManager.choiceMenu.activeInHierarchy)
