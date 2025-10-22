@@ -2,7 +2,7 @@
  * FILE     : Collectible.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/22/25
- * UPDATED  : 10/21/25
+ * UPDATED  : 10/22/25
  * 
  * DESC     : Behaviour for items that can be picked up off the ground.
 =================================================================================================*/
@@ -87,7 +87,7 @@ public class Collectible : MonoBehaviour
         PlayerController.playerController.EnableAutoBraking();
 
         // Fades out music and plays jingle
-        StartCoroutine(MusicManager.musicManager.FadeToJingle(jingle));
+        animator.StartCoroutine(MusicManager.musicManager.FadeToJingle(jingle));
 
         // Performs initial effects
         animator.itemSprite = prize;
@@ -95,8 +95,6 @@ public class Collectible : MonoBehaviour
 
         // Delay for animation complete
         yield return new WaitForSeconds(1);
-        
-        // Displays collectible image
 
         // Shows pickup dialogue
         DialogueManager.dialogueManager.StartDialogue(pickUptext);
