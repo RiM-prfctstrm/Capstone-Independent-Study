@@ -549,6 +549,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 304173635067697766, guid: 651d9070f678e344986d968ab2c6c646, type: 3}
+      propertyPath: m_CameraType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 304173635067697766, guid: 651d9070f678e344986d968ab2c6c646, type: 3}
       propertyPath: m_Cameras.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -556,6 +560,10 @@ PrefabInstance:
       propertyPath: m_Cameras.Array.data[0]
       value: 
       objectReference: {fileID: 2134877005}
+    - target: {fileID: 304173635067697767, guid: 651d9070f678e344986d968ab2c6c646, type: 3}
+      propertyPath: m_HDR
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 304173635067697767, guid: 651d9070f678e344986d968ab2c6c646, type: 3}
       propertyPath: orthographic size
       value: 14.5
@@ -565,20 +573,24 @@ PrefabInstance:
       value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 304173635067697767, guid: 651d9070f678e344986d968ab2c6c646, type: 3}
+      propertyPath: m_AllowDynamicResolution
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 304173635067697767, guid: 651d9070f678e344986d968ab2c6c646, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.25833336
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 304173635067697767, guid: 651d9070f678e344986d968ab2c6c646, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.07037037
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 304173635067697767, guid: 651d9070f678e344986d968ab2c6c646, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.48333335
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 304173635067697767, guid: 651d9070f678e344986d968ab2c6c646, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.85925925
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 304173635067697817, guid: 651d9070f678e344986d968ab2c6c646, type: 3}
       propertyPath: m_CropFrame
@@ -654,6 +666,7 @@ GameObject:
   - component: {fileID: 2134877002}
   - component: {fileID: 2134877005}
   - component: {fileID: 2134877003}
+  - component: {fileID: 2134877006}
   m_Layer: 0
   m_Name: BGCAM
   m_TagString: Untagged
@@ -693,7 +706,8 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
-  m_Cameras: []
+  m_Cameras:
+  - {fileID: 428905661}
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
@@ -746,10 +760,24 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
+  m_HDR: 0
   m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &2134877006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134877001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e1fd772f5b98c64c8a78265ce6c6717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _frameCamera: {fileID: 2134877005}
+  _gameCamera: {fileID: 428905661}
