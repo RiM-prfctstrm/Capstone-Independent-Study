@@ -107,7 +107,10 @@ public class OptionsMenu : MonoBehaviour
 
         // Resizes Screen and game window
         _screenCanvas.transform.localScale = new Vector3(screenSide, screenSide, 1);
-        //Screen.SetResolution(screenSide, screenSide, false);
+        if (GlobalVariableTracker.windowedMode)
+        {
+            Screen.SetResolution(screenSide, screenSide, false);
+        }
     }
 
     /// <summary>
