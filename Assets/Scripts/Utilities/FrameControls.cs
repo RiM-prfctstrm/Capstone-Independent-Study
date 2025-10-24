@@ -34,9 +34,6 @@ public class FrameControls : MonoBehaviour
     {
         // Inits vars
         frameControls = this;
-
-        // Determines initial screen size on boot
-        EnableFullscreen();
     }
 
     #endregion
