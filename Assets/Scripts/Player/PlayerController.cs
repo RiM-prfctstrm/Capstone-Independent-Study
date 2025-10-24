@@ -326,6 +326,8 @@ public class PlayerController : MonoBehaviour
             // it doesn't work if I don't.
             _interact.Enable();
         }
+
+        Debug.Log("amogus");
     }
 
     /// <summary>

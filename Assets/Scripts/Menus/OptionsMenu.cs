@@ -2,7 +2,7 @@
  * FILE     : OptionsMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/16/25
- * UPDATED  : 8/11/25
+ * UPDATED  : 10/24/25
  * 
  * DESC     : Adjusts variables that affect the game's presentation.
 =================================================================================================*/
@@ -30,6 +30,7 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] TitleMenu _titleMenu;
     // Other objects
     [SerializeField] AudioMixer _mixer;
+    [SerializeField] GameObject _screenCanvas;
 
     // Value initializers for when objects are set by menu, ordered by vertical appearance in menu
     static float _saveMaV = 1;
@@ -104,8 +105,9 @@ public class OptionsMenu : MonoBehaviour
         // Sets global scale var
         GlobalVariableTracker.windowScale = scaleFactor;
 
-        // Resizes Screen
-        Screen.SetResolution(screenSide, screenSide, false);
+        // Resizes Screen and game window
+        _screenCanvas.transform.localScale = new Vector3(screenSide, screenSide, 1);
+        //Screen.SetResolution(screenSide, screenSide, false);
     }
 
     /// <summary>

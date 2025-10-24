@@ -39,14 +39,25 @@ public class FrameControls : MonoBehaviour
     /// <summary>
     /// Sets the application to fullscreen and ensures the regular camera is functioning properly
     /// </summary>
-    void EnableFullscreen()
+    public void EnableFullscreen()
     {
         // Full screens game
         Screen.SetResolution(Display.main.systemWidth, Display.main.systemHeight, true);
 
         // Aligns and centers gamewindow
         _gameCamera.ViewportToScreenPoint(new Vector2(.5f, .5f));
+        _frameCamera.ViewportToScreenPoint(new Vector2(.5f, .5f));
     }
+
+    /// <summary>
+    ///  Disables fullscreen and reverts to displaying just the game window
+    /// </summary>
+    /// <param name="dimension"></param>
+    public static void DisableFullScreen(int dimension)
+    {
+        Screen.SetResolution(dimension, dimension, true);
+    }
+
 
     #endregion
 }
