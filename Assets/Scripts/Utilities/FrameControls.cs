@@ -16,6 +16,9 @@ public class FrameControls : MonoBehaviour
 {
     #region VARIABLES
 
+    // Class Singleton
+    public static FrameControls frameControls;
+
     // Cameras
     [SerializeField] Camera _frameCamera;
     [SerializeField] Camera _gameCamera;
@@ -29,6 +32,10 @@ public class FrameControls : MonoBehaviour
     /// </summary>
     void Awake()
     {
+        // Inits vars
+        frameControls = this;
+
+        // Determines initial screen size on boot
         EnableFullscreen();
     }
 

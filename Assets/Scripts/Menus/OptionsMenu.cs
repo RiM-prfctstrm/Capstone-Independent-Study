@@ -114,6 +114,26 @@ public class OptionsMenu : MonoBehaviour
     }
 
     /// <summary>
+    /// Sets whether the game is displayed in windowed or fullscreen mode
+    /// </summary>
+    /// <param name="mode">The mode to set. True=Windowed, False=Fullscreen</param>
+    public void SetDisplayMode(bool mode)
+    {
+        // Sets mode control
+        GlobalVariableTracker.windowedMode = mode;
+
+        // Switches display
+        if (!mode)
+        {
+            FrameControls.frameControls.EnableFullscreen();
+        }
+        else
+        {
+            ResizeScreen(GlobalVariableTracker.windowScale);
+        }
+    }
+
+    /// <summary>
     /// Sets master volume for all audio
     /// </summary>
     public void SetMasterVolume()
