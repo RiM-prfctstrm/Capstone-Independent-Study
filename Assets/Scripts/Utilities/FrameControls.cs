@@ -23,6 +23,9 @@ public class FrameControls : MonoBehaviour
     [SerializeField] Camera _frameCamera;
     [SerializeField] Camera _gameCamera;
 
+    // Misc objects
+    [SerializeField] OptionsMenu _options;
+
     #endregion
 
     #region UNIVERSAL EVENTS
@@ -34,6 +37,10 @@ public class FrameControls : MonoBehaviour
     {
         // Inits vars
         frameControls = this;
+        GlobalVariableTracker.windowedMode = !Screen.fullScreen;
+
+        // Inits screen size
+        _options.ResizeScreen(GlobalVariableTracker.windowScale);
     }
 
     #endregion
