@@ -2,7 +2,7 @@
  * FILE     : PlayerAnimator.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/11/24
- * UPDATED  : 10/22/25
+ * UPDATED  : 10/24/25
  * 
  * DESC     : Controls player character's animation
 =================================================================================================*/
@@ -114,6 +114,14 @@ public class PlayerAnimator : CharacterAnimator
 
         // Updates detection hitbox
         _playerController.UpdateDetection();
+    }
+
+    /// <summary>
+    /// Exits animation override state
+    /// </summary>
+    public void DisableOverride()
+    {
+        _overrideState = false;
     }
 
     #region INTERACTION ANIMATIONS

@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 10/20/25
+ * UPDATED  : 10/24/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -325,9 +325,10 @@ public class PlayerController : MonoBehaviour
             // Keeps interaction enabled. Don't know why I have to explicitly spell this out, but
             // it doesn't work if I don't.
             _interact.Enable();
-        }
 
-        Debug.Log("amogus");
+            // Reenables regular animations
+            _playerAnimator.DisableOverride();
+        }
     }
 
     /// <summary>
