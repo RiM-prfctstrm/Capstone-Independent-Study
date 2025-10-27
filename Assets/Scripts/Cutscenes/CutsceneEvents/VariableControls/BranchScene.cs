@@ -39,6 +39,8 @@ public class BranchScene : CutsceneEvent
 
         // Prepares choice menu
         _event = new DialogueEvent(_choiceDialogue);
+        DialogueManager.dialogueManager.dialogRoutine =
+                DialogueManager.dialogueManager.PlayDialogue(_event);
         CutsceneManager.cutsceneManager.StartCoroutine(WaitForEventEnd());
 
     }

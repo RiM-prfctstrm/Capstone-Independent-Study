@@ -2,7 +2,7 @@
  * FILE     : ChoiceButton.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/7/25
- * UPDATED  : 3/13/25
+ * UPDATED  : 10/27/25
  * 
  * DESC     : A button used to branch cutscenes, with a variable cutscene assigned by event that
  *            brings up the choice Menu.
@@ -10,6 +10,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class ChoiceButton : MonoBehaviour
@@ -19,7 +20,8 @@ public class ChoiceButton : MonoBehaviour
     // Event that plays when button is pressed
     public Cutscene resultEvent;
 
-    // Dummy dialogue
+    // Dummies
+    [SerializeField] Button _dummyButton;
     DialogueEvent _dummyDialogue = new DialogueEvent(new Dialogue(""));
 
     #endregion
@@ -46,7 +48,8 @@ public class ChoiceButton : MonoBehaviour
             CutsceneManager.cutsceneManager.StartCutscene(resultEvent);
         }
 
-        // Disables choice UI (Done last so as not to break this function
+        // Disables choice UI (Done last so as not to break this function)
+        _dummyButton.Select();
         DialogueManager.dialogueManager.choiceMenu.SetActive(false);
     }
 
