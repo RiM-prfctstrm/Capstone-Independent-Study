@@ -2,7 +2,7 @@
  * FILE     : BranchScene.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/7/25
- * UPDATED  : 9/30/25
+ * UPDATED  : 10/27/25
  * 
  * DESC     : Lets the player choose between two branches for the scene to follow, A on yes, B on 
  *            no.
@@ -66,12 +66,12 @@ public class BranchScene : CutsceneEvent
         }
 
         // Delay
-        DialogueManager.dialogueManager.choiceMenu.transform.position = Vector3.back;
+        //DialogueManager.dialogueManager.choiceMenu.transform.position = Vector3.back;
         DialogueManager.dialogueManager.choiceMenu.SetActive(true);
         yield return new WaitUntil(() => !DialogueManager.dialogueManager.inScroll);
 
         // Selects button
-        DialogueManager.dialogueManager.choiceMenu.transform.position = new Vector3(395, 68, 0);
+        //DialogueManager.dialogueManager.choiceMenu.transform.position = new Vector3(395, 68, 0);
         PlayerController.playerController.OpenMenu(DialogueManager.dialogueManager.choiceMenu,
             DialogueManager.dialogueManager.choiceNo.GetComponent<Button>());
     }

@@ -888,6 +888,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4019001566557630224, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+      propertyPath: m_PixelPerfect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019001566557630224, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
       propertyPath: m_SortingLayerID
       value: 1885047851
       objectReference: {fileID: 0}
@@ -975,9 +979,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4019001566557630227, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4019001566557630237, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019001568286862656, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4033416774192000211, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1191,6 +1203,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5790970398125145389, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5793567537159627109, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
@@ -1222,6 +1238,14 @@ PrefabInstance:
     - target: {fileID: 8511564361218477727, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685764906089195996, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 113
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685764906089195996, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 68
       objectReference: {fileID: 0}
     - target: {fileID: 8815465780255704245, guid: dec50cb3238335f4eb069d7d2d6abe77, type: 3}
       propertyPath: m_AnchorMax.x
