@@ -2,7 +2,7 @@
  * FILE     : OptionsMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/16/25
- * UPDATED  : 10/24/25
+ * UPDATED  : 10/28/25
  * 
  * DESC     : Adjusts variables that affect the game's presentation.
 =================================================================================================*/
@@ -200,6 +200,9 @@ public class OptionsMenu : MonoBehaviour
     /// </summary>
     public void ReturnToMenu()
     {
+        // Saves settings
+        SaveOptions.SaveSettings();
+
         // Returns to menu
         _returnSelection.Select();
         gameObject.SetActive(false);
@@ -222,6 +225,9 @@ public class OptionsMenu : MonoBehaviour
     }
     public void ReturnToMenu(InputAction.CallbackContext ctx)
     {
+        // Saves settings
+        SaveOptions.SaveSettings();
+
         // Returns to menu
         _returnSelection.Select();
         gameObject.SetActive(false);

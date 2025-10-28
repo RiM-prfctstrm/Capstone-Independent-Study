@@ -2,7 +2,7 @@
  * FILE     : SplashScreen.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/13/25
- * UPDATED  : 10/2/25
+ * UPDATED  : 10/28/25
  * 
  * DESC     : Fades in and out a splash screen.
 =================================================================================================*/
@@ -13,18 +13,38 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
+using UnityEngine.Audio;
 
 public class SplashScreen : MonoBehaviour
 {
     #region VARIABLES
 
+    // Sequence control
     [SerializeField] Image _splash;
     Color _fadeColor = new Color(255, 255, 255, 0);
     bool _hasSkipped = false;
 
+    // Settings adjsters
+    [SerializeField] AudioMixer _mixer;
+    [SerializeField] OptionsMenu _options;
+
     #endregion
 
     #region UNIVERSAL EVENTS
+
+    /// <summary>
+    /// Awake is called when the script instance is being loaded
+    /// </summary>
+    private void Awake()
+    {
+        // Loads settings
+        SaveOptions.LoadSettings();
+        _mixer.SetFloat("musVol", Mathf.Log10(GlobalVariableTracker.musicVolume) * 20);
+        _mixer.SetFloat("sfxVol", Mathf.Log10(GlobalVariableTracker.sfxVolume) * 20);
+        _mixer.SetFloat("menVol", Mathf.Log10(GlobalVariableTracker.menuVolume) * 20);
+        _options.SetDisplayMode(GlobalVariableTracker.windowedMode);
+        _options.ResizeScreen(GlobalVariableTracker.windowScale);
+    }
 
     /// <summary>
     /// Start is called before the first frame update

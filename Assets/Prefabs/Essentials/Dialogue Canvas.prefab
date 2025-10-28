@@ -822,8 +822,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 208, y: 0}
-  m_SizeDelta: {x: 128, y: 24}
+  m_AnchoredPosition: {x: 176, y: 0}
+  m_SizeDelta: {x: 64, y: 24}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &8359894539120907302
 CanvasRenderer:
@@ -1880,7 +1880,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit Menu
+  m_text: Save and Exit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9bef3afd1bef376448a81a2044d6e62c, type: 2}
   m_sharedMaterial: {fileID: 2316711158950374830, guid: 9bef3afd1bef376448a81a2044d6e62c, type: 2}
@@ -5815,7 +5815,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 100, y: 0}
-  m_SizeDelta: {x: 96, y: 24}
+  m_SizeDelta: {x: 64, y: 24}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &5760771289683091802
 CanvasRenderer:
@@ -7780,7 +7780,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Window Only
+  m_text: Windowed
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9bef3afd1bef376448a81a2044d6e62c, type: 2}
   m_sharedMaterial: {fileID: 2316711158950374830, guid: 9bef3afd1bef376448a81a2044d6e62c, type: 2}
@@ -9373,7 +9373,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fullscreen with Frame
+  m_text: Fullscreen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9bef3afd1bef376448a81a2044d6e62c, type: 2}
   m_sharedMaterial: {fileID: 2316711158950374830, guid: 9bef3afd1bef376448a81a2044d6e62c, type: 2}
