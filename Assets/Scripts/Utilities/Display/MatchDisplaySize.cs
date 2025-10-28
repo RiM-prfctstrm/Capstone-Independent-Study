@@ -18,6 +18,6 @@ public class MatchDisplaySize : MonoBehaviour
     void Start()
     {
         GetComponent<RectTransform>().sizeDelta =
-            new Vector2(Display.main.renderingWidth, Display.main.renderingHeight);
+            new Vector2(Screen.currentResolution.width, Screen.currentResolution.height);
     }
 }

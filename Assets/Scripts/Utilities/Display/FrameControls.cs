@@ -2,7 +2,7 @@
  * FILE     : FrameControls.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/23/25
- * UPDATED  : 10/24/25
+ * UPDATED  : 10/28/25
  * 
  * DESC     : Changes the game window from just showing the game to surrounding it with a
               fullscreen border, and vice versa.
@@ -53,7 +53,8 @@ public class FrameControls : MonoBehaviour
     public void EnableFullscreen()
     {
         // Full screens game
-        Screen.SetResolution(Display.main.systemWidth, Display.main.systemHeight, true);
+        Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height,
+            true);
 
         // Aligns and centers gamewindow
         _gameCamera.ViewportToScreenPoint(new Vector2(.5f, .5f));
