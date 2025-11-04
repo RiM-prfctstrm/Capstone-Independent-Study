@@ -2,7 +2,7 @@
  * FILE     : OptionsMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/16/25
- * UPDATED  : 10/28/25
+ * UPDATED  : 11/4/25
  * 
  * DESC     : Adjusts variables that affect the game's presentation.
 =================================================================================================*/
@@ -19,7 +19,7 @@ public class OptionsMenu : MonoBehaviour
 
     // Object Refs
     // UI Objects, ordered by vertical appearance in menu
-    Button _defaultScaleButton;
+    [SerializeField] Button _defaultScaleButton;
     [SerializeField] Button[] _scaleArray = new Button[4];
     [SerializeField] Slider _masterVolume;
     [SerializeField] Slider _musicVolume;
@@ -60,7 +60,10 @@ public class OptionsMenu : MonoBehaviour
     private void OnEnable()
     {
         // Initializes UI Positions
-        _defaultScaleButton = _scaleArray[GlobalVariableTracker.windowScale - 1];
+        if (_defaultScaleButton == null)
+        {
+            _defaultScaleButton = _scaleArray[GlobalVariableTracker.windowScale - 1];
+        }
         _defaultScaleButton.Select();
         _musicVolume.value = GlobalVariableTracker.musicVolume;
         _soundVolume.value = GlobalVariableTracker.sfxVolume;
