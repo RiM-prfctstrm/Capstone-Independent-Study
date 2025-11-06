@@ -2,7 +2,7 @@
  * FILE     : OptionsMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/16/25
- * UPDATED  : 11/4/25
+ * UPDATED  : 11/6/25
  * 
  * DESC     : Adjusts variables that affect the game's presentation.
 =================================================================================================*/
@@ -250,6 +250,28 @@ public class OptionsMenu : MonoBehaviour
             _titleMenu.cancel.performed -= ReturnToMenu;
             _titleMenu.cancel.Disable();
         }
+    }
+
+    #endregion
+
+    #region SUBMENU CONTROLS
+
+    /// <summary>
+    /// Sets cancelling for a submenu
+    /// </summary>
+    /// <param name="target">Button to return to after cancelling</param>
+    public void EnterSubmenu(Button target)
+    {
+
+    }
+
+    /// <summary>
+    /// Returns from a submenu to the main options menu
+    /// </summary>
+    /// <param name="target">Button to select after cancelling</param>
+    public void ExitSubGraphics(Button target)
+    {
+
     }
 
     #endregion
