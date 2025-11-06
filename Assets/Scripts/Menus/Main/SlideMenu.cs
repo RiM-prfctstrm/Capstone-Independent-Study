@@ -2,7 +2,7 @@
  * FILE     : SlideMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/3/25
- * UPDATED  : 11/3/25
+ * UPDATED  : 11/6/25
  * 
  * DESC     : Slides menu canvas to a specified point.
 =================================================================================================*/
@@ -25,9 +25,25 @@ public class SlideMenu : MonoBehaviour
     float _duration = .1f;
     float _elapsed;
 
+    // Automatic setting vars
+    [SerializeField] bool _autoStart = false;
+    [SerializeField] int _autoStartTarget;
+
     #endregion
 
     #region UNIVERSAL EVENTS
+
+    /// <summary>
+    /// This function is called when the object becomes enabled and active
+    /// </summary>
+    void OnEnable()
+    {
+        // Automatically moves to certain point
+        if (_autoStart)
+        {
+            SlideToPos(_autoStartTarget);
+        }
+    }
 
     /// <summary>
     /// Update is called once per frame
