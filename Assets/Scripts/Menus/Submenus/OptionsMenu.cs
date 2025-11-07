@@ -2,7 +2,7 @@
  * FILE     : OptionsMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/16/25
- * UPDATED  : 11/6/25
+ * UPDATED  : 11/7/25
  * 
  * DESC     : Adjusts variables that affect the game's presentation.
 =================================================================================================*/
@@ -28,6 +28,7 @@ public class OptionsMenu : MonoBehaviour
     // External UI Objects
     [SerializeField] Button _returnSelection;
     [SerializeField] TitleMenu _titleMenu;
+    Button _returnFromSubmenu;
     // Other objects
     [SerializeField] AudioMixer _mixer;
     [SerializeField] GameObject _screenCanvas;
@@ -262,16 +263,28 @@ public class OptionsMenu : MonoBehaviour
     /// <param name="target">Button to return to after cancelling</param>
     public void EnterSubmenu(Button target)
     {
+        // Sets cancel button
+        _returnFromSubmenu = target;
 
+        // Chagnes which cancel function is active
+        PlayerController.playerController.cancel.performed -= ReturnToMenu;
+        PlayerController.playerController.cancel.performed += ExitSubmenu;
     }
 
     /// <summary>
     /// Returns from a submenu to the main options menu
     /// </summary>
     /// <param name="target">Button to select after cancelling</param>
-    public void ExitSubGraphics(Button target)
+    public void ExitSubmenu()
     {
-
+        // Returns cancel function to normal
+        PlayerController.playerController.cancel.performed -= ExitSubmenu;
+        PlayerController.playerController.cancel.performed += ReturnToMenu;
+    }
+    public void ExitSubmenu(InputAction.CallbackContext ctx)
+    {
+        // Performs functions of target button
+        _returnFromSubmenu.onClick.Invoke();
     }
 
     #endregion
