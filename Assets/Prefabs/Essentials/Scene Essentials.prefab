@@ -3489,7 +3489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1290220108613762595
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3573,9 +3573,10 @@ MonoBehaviour:
   _map: {fileID: 272756928742465545}
   _manual: {fileID: 1009385472460096404}
   _optionsBG: {fileID: 3271389125920853489}
+  _quitMenu: {fileID: 2922215992690525335}
   _mapText: {fileID: 3805709716969485235}
   _quickCounter: {fileID: 8386859258630355158}
-  _quitEvent: {fileID: 11400000, guid: 6cff736471d79744d86db919554274c2, type: 2}
+  _quitEvent: {fileID: 11400000, guid: 85ba1094f119b2c41a72a599835dc794, type: 2}
   _deliveryInfo:
   - 'Dylan Taylor
 
@@ -6136,7 +6137,19 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3545469384005438262}
         m_TargetAssemblyTypeName: InGameMainMenu, Assembly-CSharp
-        m_MethodName: QuitToTitle
+        m_MethodName: CloseQuitMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4619314962387492875}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: Select
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7558,7 +7571,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2963123795303175059
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17362,7 +17375,19 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3545469384005438262}
         m_TargetAssemblyTypeName: InGameMainMenu, Assembly-CSharp
-        m_MethodName: QuitToTitle
+        m_MethodName: OpenQuitMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7601943845064203030}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: Select
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

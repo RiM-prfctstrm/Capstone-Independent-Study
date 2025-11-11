@@ -2,7 +2,7 @@
  * FILE     : InGameMainMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/14/24
- * UPDATED  : 5/3/25
+ * UPDATED  : 11/11/25
  * 
  * DESC     : Performs functions of the main in-game menu
 =================================================================================================*/
@@ -31,6 +31,7 @@ public class InGameMainMenu : MonoBehaviour
     [SerializeField] Button _map;
     [SerializeField] Button _manual;
     [SerializeField] GameObject _optionsBG;
+    [SerializeField] GameObject _quitMenu;
     // Other UI
     [SerializeField] TextMeshProUGUI _mapText;
     [SerializeField] TextMeshProUGUI _quickCounter;
@@ -169,27 +170,13 @@ public class InGameMainMenu : MonoBehaviour
     }
 
     /// <summary>
-    /// Starts event used to confirm player's decision to quit
+    /// Opens the menu used to confirm whether to quit the game
     /// </summary>
-    public void QuitToTitle()
+    public void OpenQuitMenu()
     {
-        // Performs an extra movement toggle to ensure movement doesn't reactivate in confirmation
-        PlayerController.playerController.TogglePlayerInput();
-
-        // Removes cancel function
+        _quitMenu.SetActive(true);
         PlayerController.playerController.cancel.performed -= ExitMenu;
-
-        // Tells game that it is out of main menu
-        inMainMenu = false;
-        gameObject.SetActive(false);
-
-        // Sets class singleton to ensure return event knows where to go. Probably a cleaner way of
-        // doing this.
-        inGameMainMenu = this;
-
-        // Prepares event
-        defaultSelection = _quitButton;
-        CutsceneManager.cutsceneManager.StartCutscene(_quitEvent);
+        PlayerController.playerController.cancel.performed += CloseQuitMenu;
     }
 
     #endregion
@@ -238,6 +225,48 @@ public class InGameMainMenu : MonoBehaviour
         // Sets cancel button to leave menu instead
         PlayerController.playerController.cancel.performed -= CloseManual;
         PlayerController.playerController.cancel.performed += ExitMenu;
+    }
+
+    /// <summary>
+    /// Starts event used to confirm player's decision to quit
+    /// </summary>
+    public void QuitToTitle()
+    {
+        // Performs an extra movement toggle to ensure movement doesn't reactivate in confirmation
+        PlayerController.playerController.TogglePlayerInput();
+
+        // Removes cancel function
+        PlayerController.playerController.cancel.performed -= ExitMenu;
+
+        // Tells game that it is out of main menu
+        inMainMenu = false;
+        gameObject.SetActive(false);
+
+        // Sets class singleton to ensure return event knows where to go. Probably a cleaner way of
+        // doing this.
+        inGameMainMenu = this;
+
+        // Prepares event
+        defaultSelection = _quitButton;
+        CutsceneManager.cutsceneManager.StartCutscene(_quitEvent);
+    }
+
+    /// <summary>
+    /// Returns from quitting confirmation to main menu
+    /// </summary>
+    public void CloseQuitMenu()
+    {
+        _quitMenu.SetActive(false);
+        PlayerController.playerController.cancel.performed -= CloseQuitMenu;
+        PlayerController.playerController.cancel.performed += ExitMenu;
+    }
+    public void CloseQuitMenu(InputAction.CallbackContext ctx)
+    {
+        Debug.Log("breh");
+        _quitMenu.SetActive(false);
+        PlayerController.playerController.cancel.performed -= CloseQuitMenu;
+        PlayerController.playerController.cancel.performed += ExitMenu;
+        _quitButton.Select();
     }
 
     #endregion
