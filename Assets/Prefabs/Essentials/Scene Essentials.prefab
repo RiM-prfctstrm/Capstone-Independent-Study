@@ -4191,6 +4191,7 @@ GameObject:
   - component: {fileID: 2315251096857949185}
   - component: {fileID: 8444177657754200596}
   - component: {fileID: 420065034938011499}
+  - component: {fileID: 4908681702323730846}
   m_Layer: 5
   m_Name: Frame
   m_TagString: Untagged
@@ -4257,6 +4258,32 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4908681702323730846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562569107305088178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f3accb56df7ed4997a938f84f16dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputs: {fileID: -944628639613478452, guid: c950dc6ac45a77d4a9d65e00fcf3b1a0, type: 3}
+  _backButton: {fileID: 0}
+  _dPad: {fileID: 4536750781570811845}
+  _powerButton: {fileID: 0}
+  _buttonSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  _dPadSprites:
+  - {fileID: -534299427, guid: e8f42364c7a5c7d4aa5b5b84b66b6a1d, type: 3}
+  - {fileID: -578746772, guid: e8f42364c7a5c7d4aa5b5b84b66b6a1d, type: 3}
+  - {fileID: 1542469296, guid: e8f42364c7a5c7d4aa5b5b84b66b6a1d, type: 3}
+  - {fileID: -2059658494, guid: e8f42364c7a5c7d4aa5b5b84b66b6a1d, type: 3}
+  - {fileID: 2106101774, guid: e8f42364c7a5c7d4aa5b5b84b66b6a1d, type: 3}
+  - {fileID: 954513130, guid: e8f42364c7a5c7d4aa5b5b84b66b6a1d, type: 3}
 --- !u!1 &1617222306374715261
 GameObject:
   m_ObjectHideFlags: 0
