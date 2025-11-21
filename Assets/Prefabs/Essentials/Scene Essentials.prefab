@@ -3604,7 +3604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1290220108613762595
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4277,8 +4277,8 @@ MonoBehaviour:
   _dPad: {fileID: 4536750781570811845}
   _powerButton: {fileID: 1046467359199615726}
   _buttonSprites:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: -270433348, guid: d7b7a334215f62e4f87e910ae308f9c3, type: 3}
+  - {fileID: 1212574077, guid: d7b7a334215f62e4f87e910ae308f9c3, type: 3}
   _dPadSprites:
   - {fileID: -534299427, guid: e8f42364c7a5c7d4aa5b5b84b66b6a1d, type: 3}
   - {fileID: -578746772, guid: e8f42364c7a5c7d4aa5b5b84b66b6a1d, type: 3}

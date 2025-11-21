@@ -18,6 +18,7 @@ public class TickTokenButtonAnimator : MonoBehaviour
 
     // Input controls
     [SerializeField] InputActionAsset _inputs;
+    InputAction _cancel;
     InputAction _confirm;
     InputAction _selectX;
     InputAction _selectY;
@@ -41,11 +42,13 @@ public class TickTokenButtonAnimator : MonoBehaviour
     void Awake()
     {
         // Inits inputs
+        _cancel = _inputs.FindAction("Cancel");
         _confirm = _inputs.FindAction("Submit");
         _selectX = _inputs.FindAction("MoveX");
         _selectY = _inputs.FindAction("MoveY");
 
         // Adds function to unpressing buttons
+        _cancel.canceled += ReleaseCancel;
         _confirm.canceled += ReleaseDPad;
         _selectX.canceled += ReleaseDPad;
         _selectY.canceled += ReleaseDPad;
@@ -96,6 +99,12 @@ public class TickTokenButtonAnimator : MonoBehaviour
         {
             _dPad.sprite = _dPadSprites[5];
         }
+
+        // Cancel Button
+        if (_cancel.triggered)
+        {
+            _backButton.sprite = _buttonSprites[1];
+        }
     }
 
 
@@ -105,6 +114,14 @@ public class TickTokenButtonAnimator : MonoBehaviour
     void ReleaseDPad(InputAction.CallbackContext ctx)
     {
         _dPad.sprite = _dPadSprites[4];
+    }
+
+    /// <summary>
+    /// Sets the cancel button to its unpressed sprite
+    /// </summary>
+    void ReleaseCancel(InputAction.CallbackContext ctx)
+    {
+        _backButton.sprite = _buttonSprites[0];
     }
 
     #endregion

@@ -2,7 +2,7 @@
  * FILE     : InGameMainMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/14/24
- * UPDATED  : 11/11/25
+ * UPDATED  : 11/21/25
  * 
  * DESC     : Performs functions of the main in-game menu
 =================================================================================================*/
@@ -236,6 +236,7 @@ public class InGameMainMenu : MonoBehaviour
         PlayerController.playerController.TogglePlayerInput();
 
         // Removes cancel function
+        PlayerController.playerController.cancel.performed -= CloseQuitMenu;
         PlayerController.playerController.cancel.performed -= ExitMenu;
 
         // Tells game that it is out of main menu
@@ -262,7 +263,6 @@ public class InGameMainMenu : MonoBehaviour
     }
     public void CloseQuitMenu(InputAction.CallbackContext ctx)
     {
-        Debug.Log("breh");
         _quitMenu.SetActive(false);
         PlayerController.playerController.cancel.performed -= CloseQuitMenu;
         PlayerController.playerController.cancel.performed += ExitMenu;
