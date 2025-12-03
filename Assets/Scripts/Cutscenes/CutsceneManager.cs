@@ -2,7 +2,7 @@
  * FILE     : CutsceneManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1X/X/24
- * UPDATED  : 10/22/25
+ * UPDATED  : 12/3/25
  * 
  * DESC     : Controls the progression of scripted events.
 =================================================================================================*/
@@ -191,7 +191,7 @@ public class CutsceneManager : MonoBehaviour
                      i.GetType() == typeof(BranchScene) || i.GetType() == typeof(QuitToTitle) ||
                      i.GetType() == typeof(ReturnToMenu) || i.GetType() == typeof(ResetProgress) ||
                      i.GetType() == typeof(PauseTimer) || i.GetType() == typeof(ResumeTimer) ||
-                     i.GetType() == typeof(StopTimer) ||
+                     i.GetType() == typeof(StopTimer) || i.GetType() == typeof(SaveEvent) ||
                      i.GetType() == typeof(ResetCollectibles) ||
                      i.GetType() == typeof(AlterCollectibleCount))
             {
