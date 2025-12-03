@@ -2,7 +2,7 @@
  * FILE     : MapSetup.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/25/25
- * UPDATED  : 4/19/25
+ * UPDATED  : 12/3/25
  * 
  * DESC     : Places and sizes map icons when map is first unloade
 =================================================================================================*/
@@ -29,6 +29,7 @@ public class MapSetup : MonoBehaviour
     // Backend information
     BootManager _currentSceneRef;
     [SerializeField] Vector2[] _destinationCoords;
+    Vector3 offsetVector;
 
     #endregion
 
@@ -73,6 +74,21 @@ public class MapSetup : MonoBehaviour
             _playerMarker.transform.localPosition += _currentSceneRef.mapOffset;
         }
 
+        offsetVector = PrecisionOffset(false);
+        _playerMarker.rectTransform.localPosition += offsetVector;
+
+    }
+
+    /// <summary>
+    /// Sets the destination map marker position
+    /// </summary>
+    void SetDestinationMarkerPosition()
+    {
+        _destinationMarker.rectTransform.localPosition =
+            _destinationCoords[GlobalVariableTracker.currentMission];
+
+        offsetVector = PrecisionOffset(true);
+        _destinationMarker.rectTransform.localPosition += offsetVector;
     }
 
     /// <summary>
@@ -102,19 +118,11 @@ public class MapSetup : MonoBehaviour
     }
 
     /// <summary>
-    /// Sets the destination map marker position
-    /// </summary>
-    void SetDestinationMarkerPosition()
-    {
-        _destinationMarker.rectTransform.localPosition =
-            _destinationCoords[GlobalVariableTracker.currentMission];
-    }
-
-    /// <summary>
     /// Sets the size that markers appear, based on the number of collectables the player holds.
     /// </summary>
     void SetMarkerSizes()
     {
+        // Vars
         float scaleFactor;
         float colorStrength;
 
@@ -189,6 +197,33 @@ public class MapSetup : MonoBehaviour
             // Increases opacity for better visibility at small scale
             _destinationMarker.color = Color.white;
             _playerMarker.color = Color.white;
+        }
+    }
+
+    /// <summary>
+    /// Creates a random offset in which the target position is somewhere in the visible marker
+    /// </summary>
+    /// <param name="secondStage">Used to adjust counting for each stage of collection.
+    /// True subtracts from collectibles in pocket, false leaves it</param>
+    /// <returns>Vector to adjust marker position by</returns>
+    Vector2 PrecisionOffset(bool secondStage)
+    {
+        // Vars
+        float precisionFactor = GlobalVariableTracker.collectiblesInPocket;
+        if (secondStage)
+        {
+            precisionFactor -= 50;
+        }
+
+        // Keeps position if fully zoomed in
+        if (precisionFactor >= 50)
+        {
+            return Vector2.zero;
+        }
+        // Creates vector to adjust marker position
+        else
+        {
+            return Random.insideUnitCircle * 200 * (1.01f - (precisionFactor / 50));
         }
     }
 
