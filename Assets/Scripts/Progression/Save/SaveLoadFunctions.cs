@@ -35,6 +35,7 @@ public class SaveLoadFunctions
     /// Saves data to a specified save slot
     /// </summary>
     /// <param name="slot">The slot to save to</param>
+    /// /// <param name="returnPoint">Position to set the player on load</param>
     public static void SaveFile(int slot)
     {
         // Prepares data
@@ -70,6 +71,45 @@ public class SaveLoadFunctions
         using (_saveWriter = new StreamWriter(_basePath + slot + "/Level.txt"))
         {
             _saveWriter.Write(_level);
+            _saveWriter.Dispose();
+        }
+    }
+    public static void SaveFile(int slot, Vector3 returnPoint)
+    {
+        // Prepares data
+        DebugProgressInjector _saveInjector =
+            EssentialPreserver.instance.GetComponent<DebugProgressInjector>();
+        _saveInjector.ReverseInjection();
+
+        // Sets data to save
+        _progressToSave = JsonUtility.ToJson(_saveInjector, true);
+        _level = SceneManager.GetActiveScene().name;
+
+        // Saves game progression
+        using (_saveWriter = new StreamWriter(_basePath + slot + "/Progress.json"))
+        {
+            _saveWriter.Write(_progressToSave);
+            _saveWriter.Dispose();
+        }
+
+        // Saves Snails
+        // Gathers data from temp file
+        using (_saveReader = new StreamReader(_snailTempPath))
+        {
+            _snailsToSave = _saveReader.ReadToEnd();
+        }
+        // Moves data to permanent file
+        using (_saveWriter = new StreamWriter(_basePath + slot + "/Snails.txt"))
+        {
+            _saveWriter.Write(_snailsToSave);
+            _saveWriter.Dispose();
+        }
+
+        // Saves current level
+        using (_saveWriter = new StreamWriter(_basePath + slot + "/Level.txt"))
+        {
+            _saveWriter.Write(_level);
+            _saveWriter.Write(returnPoint);
             _saveWriter.Dispose();
         }
     }
@@ -113,7 +153,12 @@ public class SaveLoadFunctions
         // Loads Scene
         using (_saveReader = new StreamReader(_basePath + slot + "/Level.txt"))
         {
-            SceneManager.LoadScene(_saveReader.ReadToEnd());
+            SceneManager.LoadScene(_saveReader.ReadLine());
+            if (_saveReader.Peek() != -1)
+            {
+                Vector3 spawnPoint = JsonUtility.FromJson<Vector3>(_saveReader.ReadLine());
+                PlayerController.playerController.transform.position = spawnPoint;
+            }
         }
     }
 
