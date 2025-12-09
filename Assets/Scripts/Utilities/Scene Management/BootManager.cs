@@ -2,7 +2,7 @@
  * FILE     : BootManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 9/22/25
+ * UPDATED  : 12/9/25
  * 
  * DESC     : Performs functionality that only occurs when the game is first started.
 =================================================================================================*/
@@ -58,9 +58,18 @@ public class BootManager : MonoBehaviour
 
             // Initializes Player
             _player = PlayerController.playerController.gameObject;
-            _player.transform.position = _startPos;
             _player.GetComponent<PlayerAnimator>().facingDirection = _startDirection;
             CutsceneManager.cutsceneManager.cutsceneObjects.Add(_player);
+
+            // Sets player's position
+            if (GlobalVariableTracker.returnPoint == Vector3.zero)
+            {
+                _player.transform.position = _startPos;
+            }
+            else
+            {
+                _player.transform.position = GlobalVariableTracker.returnPoint;
+            }
         }
 
         // Adds Cutscene-capable NPCs to the list of potential actors

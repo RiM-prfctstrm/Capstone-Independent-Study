@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 10/24/25
+ * UPDATED  : 12/9/25
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/

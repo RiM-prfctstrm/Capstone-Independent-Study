@@ -2,7 +2,7 @@
  * FILE     : SaveLoadFunctions.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/25/25
- * UPDATED  : 9/30/25
+ * UPDATED  : 12/9/25
  * 
  * DESC     : Writes and reads permanent save data.
 =================================================================================================*/
@@ -108,8 +108,8 @@ public class SaveLoadFunctions
         // Saves current level
         using (_saveWriter = new StreamWriter(_basePath + slot + "/Level.txt"))
         {
-            _saveWriter.Write(_level);
-            _saveWriter.Write(returnPoint);
+            _saveWriter.WriteLine(_level);
+            _saveWriter.WriteLine(JsonUtility.ToJson(returnPoint));
             _saveWriter.Dispose();
         }
     }
@@ -156,8 +156,8 @@ public class SaveLoadFunctions
             SceneManager.LoadScene(_saveReader.ReadLine());
             if (_saveReader.Peek() != -1)
             {
-                Vector3 spawnPoint = JsonUtility.FromJson<Vector3>(_saveReader.ReadLine());
-                PlayerController.playerController.transform.position = spawnPoint;
+                GlobalVariableTracker.returnPoint = 
+                    JsonUtility.FromJson<Vector3>(_saveReader.ReadLine());
             }
         }
     }

@@ -2,7 +2,7 @@
  * FILE     : GlobalVariableTracker.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/4/24
- * UPDATED  : 10/24/25
+ * UPDATED  : 12/8/25
  * 
  * DESC     : Stores data that is meant to persist throughout the entire game. Variables are kept
  *            in an initialized state to easily create a new save. If a save is loaded, they are
@@ -31,6 +31,9 @@ public class GlobalVariableTracker
     // Collectibles
     public static float collectiblesInPocket = 0; // Specifically measures nanoblips
     public static int snailTotal = 0;
+
+    // Player Status
+    public static Vector3 returnPoint;
 
     #endregion
 
