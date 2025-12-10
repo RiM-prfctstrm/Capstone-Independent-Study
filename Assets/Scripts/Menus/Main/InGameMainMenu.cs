@@ -2,7 +2,7 @@
  * FILE     : InGameMainMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/14/24
- * UPDATED  : 11/21/25
+ * UPDATED  : 12/10/25
  * 
  * DESC     : Performs functions of the main in-game menu
 =================================================================================================*/
@@ -94,7 +94,6 @@ public class InGameMainMenu : MonoBehaviour
     {
         _map.gameObject.SetActive(true);
         _map.Select();
-        _mapText.text = _deliveryInfo[GlobalVariableTracker.currentMission];
 
         // Sets cancel button to leave map instead
         PlayerController.playerController.cancel.performed -= ExitMenu;
@@ -106,6 +105,7 @@ public class InGameMainMenu : MonoBehaviour
     /// </summary>
     public void OpenManual()
     {
+        _mapText.text = _deliveryInfo[GlobalVariableTracker.currentMission];
         _manual.gameObject.SetActive(true);
         _manual.Select();
 
