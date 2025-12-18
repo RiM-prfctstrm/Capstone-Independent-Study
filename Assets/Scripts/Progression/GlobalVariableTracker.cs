@@ -2,7 +2,7 @@
  * FILE     : GlobalVariableTracker.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/4/24
- * UPDATED  : 12/8/25
+ * UPDATED  : 12/18/25
  * 
  * DESC     : Stores data that is meant to persist throughout the entire game. Variables are kept
  *            in an initialized state to easily create a new save. If a save is loaded, they are
@@ -20,7 +20,7 @@ public class GlobalVariableTracker
     #region GENERAL REFERENCE
     // Options parameters
     public static float masterVolume = 1;
-    public static float menuVolume = .25f;
+    public static float menuVolume = .8f;
     public static float musicVolume = .8f;
     public static float sfxVolume = 1;
     public static bool windowedMode = true;
