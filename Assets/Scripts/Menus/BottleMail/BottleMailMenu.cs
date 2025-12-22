@@ -2,7 +2,7 @@
  * FILE     : BottleMailMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/16/25
- * UPDATED  : 10/27/25
+ * UPDATED  : 12/22/25
  * 
  * DESC     : Controls BottleMail menu behavior to emulate an email program.
 =================================================================================================*/
@@ -52,6 +52,20 @@ public class BottleMailMenu : MonoBehaviour
         GetComponent<AudioSource>().volume = GlobalVariableTracker.menuVolume;
     }
 
+    /// <summary>
+    /// Update is called once per frame
+    /// </summary>
+    void Update()
+    {
+        // Ensures cancelling is enabled
+        {
+            if (!PlayerController.playerController.cancel.enabled)
+            {
+                PlayerController.playerController.cancel.Enable();
+            }
+        }
+    }
+
     #endregion
 
     #region BUTTON ACTIONS
@@ -89,6 +103,7 @@ public class BottleMailMenu : MonoBehaviour
         }
 
         // Auto selects scrollbar
+        _scrollBar.interactable = true;
         _scrollBar.Select();
     }
 
