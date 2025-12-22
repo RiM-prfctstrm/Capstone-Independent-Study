@@ -2,16 +2,19 @@
  * FILE     : TitleMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/31/24
- * UPDATED  : 9/30/25
+ * UPDATED  : 12/22/25
  * 
  * DESC     : Performs functions of the title screen menu.
 =================================================================================================*/
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class TitleMenu : MonoBehaviour
 {
@@ -20,16 +23,22 @@ public class TitleMenu : MonoBehaviour
     // Object Refs
     [SerializeField] GameObject _credits;
     [SerializeField] GameObject _optionsBG;
+    [SerializeField] Button _dummyButton;
+    [SerializeField] Button _returnButton;
     [SerializeField] DialogueManager _dm;
     [SerializeField] AudioSource _menuAudioSource;
     [SerializeField] DebugProgressInjector _loadInjector;
 
     // Input Controls
     [SerializeField] InputActionAsset _menuInputs;
+    public InputAction advance;
     public InputAction cancel;
 
     // Sound Effects
     [SerializeField] AudioClip _cancelSound;
+
+    // Data checking
+    StreamReader _reader;
 
     // Debug
     [SerializeField] DialogueManager _menuDM;
@@ -46,9 +55,16 @@ public class TitleMenu : MonoBehaviour
     {
         // Inits Vars
         DialogueManager.dialogueManager = _dm;
+        _reader = new StreamReader(Application.dataPath + "/SaveData/ProgressFiles/Slot" + 1 +
+            "/Progress.json");
 
         // Sets inputs
+        advance = _menuInputs.FindAction("Submit");
         cancel = _menuInputs.FindAction("Cancel");
+
+        // Sets input functions
+        advance.performed += StartAdvance;
+        advance.canceled += EndAdvance;
         cancel.performed += PlayCancelSound;
             
         // Inits volume
@@ -56,6 +72,21 @@ public class TitleMenu : MonoBehaviour
 
         // Fades in
         ScreenEffects.fadingIn = true;
+    }
+
+    /// <summary>
+    /// Update is called once per frame
+    /// </summary>
+    void Update()
+    {
+        // Reverts button selection after message
+        if (EventSystem.current.currentSelectedGameObject == _dummyButton.gameObject &&
+            !DialogueManager.dialogueInProgress)
+        {
+            _returnButton.Select();
+        }
+
+
     }
 
     #endregion
@@ -68,6 +99,8 @@ public class TitleMenu : MonoBehaviour
     public void StartNewGame()
     {
         InGameMainMenu.inMainMenu = false;
+        advance.performed -= StartAdvance;
+        advance.canceled -= EndAdvance;
         cancel.performed -= PlayCancelSound;
         SceneManager.LoadScene("Newscast");
     }
@@ -78,9 +111,22 @@ public class TitleMenu : MonoBehaviour
     /// </summary>
     public void ContinueGame()
     {
-        InGameMainMenu.inMainMenu = false;
-        cancel.performed -= PlayCancelSound;
-        SaveLoadFunctions.LoadFile(1, _loadInjector);
+        // Checks if save data exits
+        if (_reader.Peek() == -1)
+        {
+            // Notifies that there is no save
+            _dummyButton.Select();
+            _dm.StartDialogue(_UnimplementedNotif);
+        }
+        else
+        {
+            // Loads save
+            InGameMainMenu.inMainMenu = false;
+            advance.performed -= StartAdvance;
+            advance.canceled -= EndAdvance;
+            cancel.performed -= PlayCancelSound;
+            SaveLoadFunctions.LoadFile(1, _loadInjector);
+        }
     }
 
     /// <summary>
@@ -120,7 +166,7 @@ public class TitleMenu : MonoBehaviour
 
     #endregion
 
-    #region MISCELLANEOUS
+    #region INPUT FUNCTIONS
 
     /// <summary>
     /// Plays cancel sound effect when hitting the cancel button.
@@ -128,6 +174,22 @@ public class TitleMenu : MonoBehaviour
     void PlayCancelSound(InputAction.CallbackContext ctx)
     {
         _menuAudioSource.PlayOneShot(_cancelSound);
+    }
+
+    /// <summary>
+    /// Used to advance dialogue
+    /// </summary>
+    void StartAdvance(InputAction.CallbackContext ctx)
+    {
+        DialogueManager.dialogueManager.advancing = true;
+    }
+
+    /// <summary>
+    /// Tells Dialogue Manager not advance if button is not held.
+    /// </summary>
+    void EndAdvance(InputAction.CallbackContext ctx)
+    {
+        DialogueManager.dialogueManager.advancing = false;
     }
 
     #endregion
@@ -143,7 +205,7 @@ public class TitleMenu : MonoBehaviour
         {
             // Sends a message telling the player nothing happens yet
             _menuDM.previouslySelected = returnButton;
-            _menuDM.StartDialogue(_UnimplementedNotif);
+            returnButton.Select();
         }
     }
 

@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 1021/25
+ * UPDATED  : 12/22/25
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -84,7 +84,7 @@ public class DialogueManager : MonoBehaviour
         _dialogueOutline.SetActive(true);
 
         // Enables cancelling outside cutscenes
-        if (!CutsceneManager.inCutscene)
+        if (!CutsceneManager.inCutscene && PlayerController.playerCamera != null)
         {
             PlayerController.playerController.cancel.Enable();
             //PlayerController.playerController.cancel.performed += CancelDialogue;
@@ -240,18 +240,21 @@ public class DialogueManager : MonoBehaviour
         }
 
         // Disables cancelling functionality
-        if (!CutsceneManager.inCutscene)
+        if (PlayerController.playerController != null)
         {
-            PlayerController.playerController.cancel.Disable();
-            //PlayerController.playerController.cancel.performed -= CancelDialogue;
-            PlayerController.playerController.TogglePlayerInput();
+            if (!CutsceneManager.inCutscene)
+            {
+                PlayerController.playerController.cancel.Disable();
+                //PlayerController.playerController.cancel.performed -= CancelDialogue;
+                PlayerController.playerController.TogglePlayerInput();
+            }
+
+            // Deselects any targeted gameobjects
+            PlayerController.playerController.lastTarget = null;
+
+            // Returns animation state to normal for pickup notifs
+            PlayerController.playerController.GetComponent<PlayerAnimator>().EndPickUp();
         }
-
-        // Deselects any targeted gameobjects
-        PlayerController.playerController.lastTarget = null;
-
-        // Returns animation state to normal for pickup notifs
-        PlayerController.playerController.GetComponent<PlayerAnimator>().EndPickUp();
     }
     public void CancelDialogue(InputAction.CallbackContext ctx)
     {
