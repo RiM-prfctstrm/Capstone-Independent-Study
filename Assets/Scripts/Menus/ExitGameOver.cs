@@ -2,7 +2,7 @@
  * FILE     : ExitGameOver.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 4/20/25
- * UPDATED  : 8/25/25
+ * UPDATED  : 12/23/25
  * 
  * DESC     : Controls entire game over screen
 =================================================================================================*/
@@ -119,6 +119,7 @@ public class ExitGameOver : MonoBehaviour
         // Sends to next scene
         if (retry)
         {
+            CollectibleManager.collectibleManager.ResetObjectStatus(false);
             SceneManager.LoadScene("GameStore");
         }
         else
