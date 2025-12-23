@@ -128,7 +128,6 @@ public class SaveLoadFunctions
         string jsonData;
 
         // Loads progress vars
-        // Loads Snails
         // Gathers data from permanent file
         using (_saveReader = new StreamReader(_basePath + slot + "/Progress.json"))
         {
@@ -149,6 +148,9 @@ public class SaveLoadFunctions
             _saveWriter.Write(_snailsToSave);
             _saveWriter.Dispose();
         }
+
+        // Resets nanoblips
+        CollectibleManager.collectibleManager.ResetObjectStatus(false);
 
         // Loads Scene
         using (_saveReader = new StreamReader(_basePath + slot + "/Level.txt"))

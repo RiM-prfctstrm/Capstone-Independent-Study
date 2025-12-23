@@ -2,13 +2,14 @@
  * FILE     : CollectibleManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/22/25
- * UPDATED  : 3/11/25
+ * UPDATED  : 12/23/25
  * 
  * DESC     : While the actual collectible count is stored in GlobalVariableTracker, this script
  *            modifies that count and controls displays
 =================================================================================================*/
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using TMPro;
 
@@ -27,6 +28,11 @@ public class CollectibleManager : MonoBehaviour
     // Timer vars
     [SerializeField] float _hideDelay;
     float _timeToHide;
+
+    // Save Data
+    DirectoryInfo _directory;
+    string _directoryPath;
+    StreamWriter _eraser;
 
     // Sound Effects
     [SerializeField] AudioClip _countdownSound;
@@ -93,6 +99,37 @@ public class CollectibleManager : MonoBehaviour
 
         // Changes display on map counter
         _mapCounter.text = GlobalVariableTracker.collectiblesInPocket.ToString();
+    }
+
+    #endregion
+
+    #region OBJECT CONTROLS
+
+    /// <summary>
+    /// Resets the state of collectible objects in game world
+    /// </summary>
+    /// <param name="includeSnails">whether to reset snail appearance</param>
+    public void ResetObjectStatus(bool includeSnails)
+    {
+        // Compiles list of files in the collectible directory
+        _directoryPath = Application.dataPath + "/SaveData/Collectibles/";
+        _directory = new DirectoryInfo(_directoryPath);
+
+        // Erases each file
+        foreach (FileInfo i in _directory.GetFiles("*.txt"))
+        {
+            // Skips snail data
+            if (!includeSnails && i.FullName == _directoryPath + "/SnailsTemp.txt")
+            {
+                continue;
+            }
+
+            // Erases file
+            using (_eraser = new StreamWriter(i.FullName, false))
+            {
+                _eraser.Write("");
+            }
+        }
     }
 
     #endregion
