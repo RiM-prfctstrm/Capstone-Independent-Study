@@ -52,8 +52,8 @@ public class MapMovement : MonoBehaviour
         _xInput = _moveInputs.FindAction("MoveX");
         _yInput = _moveInputs.FindAction("MoveY");
         // Sets maximum constraints for movements
-        _maxX = -(int)(_rectTransform.rect.width - 384);
-        _maxY = 32 + (int)(_rectTransform.rect.height - 216);
+        _maxX = -(int)(_rectTransform.rect.width - 220);
+        _maxY = 32 + (int)(_rectTransform.rect.height + 48);
     }
 
     /// <summary>
