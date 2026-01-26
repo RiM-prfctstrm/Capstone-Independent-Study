@@ -2,7 +2,7 @@
  * FILE     : MapSetup.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/25/25
- * UPDATED  : 12/3/25
+ * UPDATED  : 1/26/26
  * 
  * DESC     : Places and sizes map icons when map is first unloade
 =================================================================================================*/
@@ -124,7 +124,6 @@ public class MapSetup : MonoBehaviour
     {
         // Vars
         float scaleFactor;
-        float colorStrength;
 
         // Disable navigation while the player holds nothing.
         if (GlobalVariableTracker.collectiblesInPocket == 0)
@@ -145,17 +144,6 @@ public class MapSetup : MonoBehaviour
             _destinationMarker.gameObject.SetActive(false);
             _playerMarker.gameObject.SetActive(true);
             _playerMarker.rectTransform.sizeDelta = new Vector2(scaleFactor, scaleFactor);
-
-            // Increases opacity for better visibility at small scale
-            if (scaleFactor < 200)
-            {
-                colorStrength = GlobalVariableTracker.collectiblesInPocket / 50;
-                _playerMarker.color = new Color(255, 255, 255, colorStrength);
-            }
-            else
-            {
-                _playerMarker.color = new Color(255, 255, 255, .5f);
-            }
         }
 
         // Shrinks navigation towards player, with destination fully shrunk
@@ -171,18 +159,6 @@ public class MapSetup : MonoBehaviour
             _destinationMarker.rectTransform.sizeDelta = new Vector2(scaleFactor, scaleFactor);
             _playerMarker.gameObject.SetActive(true);
             _playerMarker.rectTransform.sizeDelta = new Vector2(8, 8);
-
-            // Increases opacity for better visibility at small scale
-            if (scaleFactor < 200)
-            {
-                colorStrength = (GlobalVariableTracker.collectiblesInPocket - 50) / 50;
-                _destinationMarker.color = new Color(255, 255, 255, colorStrength);
-            }
-            else
-            {
-                _destinationMarker.color = new Color(255, 255, 255, .5f);
-            }
-            _playerMarker.color = Color.white;
         }
 
         // Displays both markers fully shrunk to prevent overload
