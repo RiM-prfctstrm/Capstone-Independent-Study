@@ -20,7 +20,9 @@ public class MapSetup : MonoBehaviour
     // Visible UI
     [SerializeField] TextMeshProUGUI _collectibleCounter;
     [SerializeField] Image _destinationMarker;
+    [SerializeField] Image _dmOutline;
     [SerializeField] Image _playerMarker;
+    [SerializeField] Image _pmOutline;
     // Sprite Settings
     [SerializeField] Sprite _destinationBig;
     [SerializeField] Sprite _destinationSmall;
@@ -97,23 +99,27 @@ public class MapSetup : MonoBehaviour
     void SetMarkerImages()
     {
         // Destination Marker
-        if (GlobalVariableTracker.collectiblesInPocket >= 97)
+        if (GlobalVariableTracker.collectiblesInPocket >= 100)
         {
             _destinationMarker.sprite = _destinationSmall;
+            _dmOutline.sprite = _destinationSmall;
         }
         else
         {
             _destinationMarker.sprite = _destinationBig;
+            _dmOutline.sprite = _destinationBig;
         }
 
         // Player Marker
-        if (GlobalVariableTracker.collectiblesInPocket >= 47)
+        if (GlobalVariableTracker.collectiblesInPocket >= 50)
         {
             _playerMarker.sprite = _playerSmall;
+            _pmOutline.sprite = _playerSmall;
         }
         else
         {
             _playerMarker.sprite = _playerBig;
+            _pmOutline.sprite = _playerBig;
         }
     }
 
