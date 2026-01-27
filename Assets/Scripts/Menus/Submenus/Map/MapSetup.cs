@@ -2,7 +2,7 @@
  * FILE     : MapSetup.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/25/25
- * UPDATED  : 1/26/26
+ * UPDATED  : 1/27/26
  * 
  * DESC     : Places and sizes map icons when map is first unloade
 =================================================================================================*/
@@ -44,7 +44,8 @@ public class MapSetup : MonoBehaviour
     {
         // Sets vars
         _currentSceneRef = FindObjectOfType<BootManager>();
-        _collectibleCounter.text = GlobalVariableTracker.collectiblesInPocket.ToString();
+        _collectibleCounter.text = "Acc. = " + 
+            Mathf.Clamp(GlobalVariableTracker.collectiblesInPocket, 0, 100).ToString();
 
         // Sets map display
         SetPlayerMarkerPosition();
