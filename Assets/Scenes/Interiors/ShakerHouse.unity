@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3452,11 +3451,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030563, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41
+      value: 41.5
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030563, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.125
+      value: -13.125
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030563, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3504,7 +3503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: _position.y
-      value: -41.5
+      value: -40.5
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030565, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: _targetScene
@@ -4760,7 +4759,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981005755}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29, y: -42.75, z: 0}
+  m_LocalPosition: {x: 29, y: -41.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4781,7 +4780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneName: ShakerHouse
   _isIndoors: 1
-  _position: {x: 41, y: -16, z: 0}
+  _position: {x: 41.5, y: -14, z: 0}
   _direction: 0
   _setsDirection: 0
 --- !u!61 &981005758
@@ -4831,7 +4830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2687239468810173135, guid: ca18c35bcf32c244a81dcec7538a6f98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.75
+      value: -14.75
       objectReference: {fileID: 0}
     - target: {fileID: 2687239468810173135, guid: ca18c35bcf32c244a81dcec7538a6f98, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4987,7 +4986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2687239468810173135, guid: ca18c35bcf32c244a81dcec7538a6f98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.75
+      value: -14.75
       objectReference: {fileID: 0}
     - target: {fileID: 2687239468810173135, guid: ca18c35bcf32c244a81dcec7538a6f98, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6131,7 +6130,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314779903}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 62, y: -6.5, z: 0}
+  m_LocalPosition: {x: 59, y: -7.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6152,7 +6151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneName: ShakerHouse
   _isIndoors: 1
-  _position: {x: 20, y: -6, z: 0}
+  _position: {x: 20, y: -7, z: 0}
   _direction: 0
   _setsDirection: 0
 --- !u!61 &1314779906
@@ -6923,7 +6922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433822566}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20, y: -4.5, z: 0}
+  m_LocalPosition: {x: 20, y: -5.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6944,7 +6943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneName: ShakerHouse
   _isIndoors: 1
-  _position: {x: 62, y: -5, z: 0}
+  _position: {x: 59, y: -6, z: 0}
   _direction: 0
   _setsDirection: 0
 --- !u!61 &1433822569
@@ -8077,11 +8076,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030563, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 57
+      value: 54.5
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030563, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.125
+      value: -13.125
       objectReference: {fileID: 0}
     - target: {fileID: 4615596217485030563, guid: 1da55f7947278a846a1455aa7dd6590c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9250,6 +9249,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -9466,7 +9466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5218219804818813074, guid: 9fbcd36513569b5439b3740dcd288153, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.5
+      value: -14.5
       objectReference: {fileID: 0}
     - target: {fileID: 5218219804818813074, guid: 9fbcd36513569b5439b3740dcd288153, type: 3}
       propertyPath: m_LocalPosition.z
