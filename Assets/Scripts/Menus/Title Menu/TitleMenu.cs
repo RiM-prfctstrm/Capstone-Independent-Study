@@ -2,7 +2,7 @@
  * FILE     : TitleMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/31/24
- * UPDATED  : 12/22/25
+ * UPDATED  : 1/28/26
  * 
  * DESC     : Performs functions of the title screen menu.
 =================================================================================================*/
@@ -102,7 +102,7 @@ public class TitleMenu : MonoBehaviour
         advance.performed -= StartAdvance;
         advance.canceled -= EndAdvance;
         cancel.performed -= PlayCancelSound;
-        SceneManager.LoadScene("Newscast");
+        SceneManager.LoadScene("MissionTransition");
     }
 
 
