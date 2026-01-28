@@ -27,7 +27,7 @@ public class GlobalVariableTracker
     public static int windowScale = 1;
 
     // General peogress information
-    public static int currentMission = -1;
+    public static int currentMission = 0;
     // Collectibles
     public static float collectiblesInPocket = 0; // Specifically measures nanoblips
     public static int snailTotal = 0;
