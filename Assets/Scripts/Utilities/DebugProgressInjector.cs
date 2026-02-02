@@ -2,7 +2,7 @@
  * FILE     : DebugProgressInjector.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/3/25
- * UPDATED  : 9/25/25
+ * UPDATED  : 2/2/26
  * 
  * DESC     : Debug script to set progression variables by hand in inspector. Used to tell the game
  *            to play at a certain point. Works best before loading scene.
@@ -27,7 +27,7 @@ public class DebugProgressInjector : MonoBehaviour
 
     // Mission-specific flags
     // Mission 0
-    [SerializeField] bool _tutorialPlayed = false;
+    [SerializeField] bool _introPlayed = false;
     // Mission 2
     [SerializeField] bool _m2bonusStarted = false;
     [SerializeField] bool _m2BonusNotifPlayed = false;
@@ -72,7 +72,7 @@ public class DebugProgressInjector : MonoBehaviour
 
         // Within-mission progression
         // Mission 0 Progression
-        _tutorialPlayed = GlobalVariableTracker.progressionFlags["tutorialPlayed"];
+        _introPlayed = GlobalVariableTracker.progressionFlags["introPlayed"];
         // Mission 2 Progression
         _m2bonusStarted = GlobalVariableTracker.progressionFlags["m2bonusStarted"];
         _m2BonusNotifPlayed = GlobalVariableTracker.progressionFlags["m2BonusNotifPlayed"];
@@ -132,7 +132,7 @@ public class DebugProgressInjector : MonoBehaviour
 
         // Within-mission progression
         // Mission 0 Progression
-        GlobalVariableTracker.progressionFlags["tutorialPlayed"] = _tutorialPlayed;
+        GlobalVariableTracker.progressionFlags["introPlayed"] = _introPlayed;
         // Mission 2 Progression
         GlobalVariableTracker.progressionFlags["m2bonusStarted"] = _m2bonusStarted;
         GlobalVariableTracker.progressionFlags["m2BonusNotifPlayed"] = _m2BonusNotifPlayed;
