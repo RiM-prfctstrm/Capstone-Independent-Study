@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ced189b58ef3d6a4a8635aaabf73c2c2, type: 3}
-  m_Name: m0_0_038_SaltAroundDesk
+  m_Name: m0_0_042_SaltToPepper
   m_EditorClassIdentifier: 
   eventComplete: 1
   _targetID: 8
   _speed: 4
   _movements:
-  - {x: 0, y: 1.375}
-  - {x: 1.25, y: 0}
-  - {x: 0, y: -0.125}
+  - {x: 2, y: 0}
+  - {x: 0.25, y: -0.5}
   _overrideMovementAnimation: 0
   _overrideAnimation: 
-  _referencePos: {x: 30, y: -38.75}
+  _referencePos: {x: 31.25, y: -37.5}

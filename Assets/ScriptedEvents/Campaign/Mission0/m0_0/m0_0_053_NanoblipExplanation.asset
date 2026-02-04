@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
+  m_Name: m0_0_053_NanoblipExplanation
+  m_EditorClassIdentifier: 
+  eventComplete: 0
+  cutsceneDialogue:
+    dialogueBoxes:
+    - dialogueText: What are you gonna do with it?
+      nameTag: Pepper
+      portrait: {fileID: 0}
+    - dialogueText: I'm gonna try and rig it to interface with nanoblips.
+      nameTag: Salt
+      portrait: {fileID: 0}
+    - dialogueText: You're gonna do what with what?
+      nameTag: Pepper
+      portrait: {fileID: 0}
+    - dialogueText: You've seen those little drones hovering in the roads and stuff?
+      nameTag: Salt
+      portrait: {fileID: 0}
+    - dialogueText: The ones that look like little pins?
+      nameTag: Pepper
+      portrait: {fileID: 0}
+    - dialogueText: Yeah, those ones.
+      nameTag: Salt
+      portrait: {fileID: 0}
+    - dialogueText: Well, they're there because the GPS satellites aren't.
+      nameTag: Salt
+      portrait: {fileID: 0}
+    - dialogueText: They record location data and output it to nearby devices.
+      nameTag: Salt
+      portrait: {fileID: 0}
+    - dialogueText: I'm gonna make it so your Tick Token can understand that data.
+      nameTag: Salt
+      portrait: {fileID: 0}
+    - dialogueText: I still don't understand how that works.
+      nameTag: Pepper
+      portrait: {fileID: 0}
+    - dialogueText: Don't worry, I'll show you when I'm done.
+      nameTag: Salt
+      portrait: {fileID: 0}
