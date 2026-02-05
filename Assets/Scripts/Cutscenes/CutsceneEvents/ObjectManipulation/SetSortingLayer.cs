@@ -18,7 +18,7 @@ public class SetSortingLayer : CutsceneEvent
 
     // Input
     [SerializeField] int _targetID;
-    [SerializeField] int _layerID;
+    [SerializeField] string _layerID;
     [SerializeField] int _layerOrder;
 
     // Object Refs
@@ -40,7 +40,7 @@ public class SetSortingLayer : CutsceneEvent
             .GetComponent<SpriteRenderer>();
 
         // Sets Render Layer
-        _target.sortingLayerID = _layerID;
+        _target.sortingLayerName = _layerID;
         _target.sortingOrder = _layerOrder;
 
         // Signals completion
