@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
+  m_Name: m0_1_007_Concern
+  m_EditorClassIdentifier: 
+  eventComplete: 0
+  cutsceneDialogue:
+    dialogueBoxes:
+    - dialogueText: Wait, something went wrong!?
+      nameTag: Salt
+      portrait: {fileID: 0}
+    - dialogueText: Well, I didn't say that, either.
+      nameTag: Pepper
+      portrait: {fileID: 0}
+    - dialogueText: I was just fine.
+      nameTag: Pepper
+      portrait: {fileID: 0}
+    - dialogueText: Don't fool me like that!
+      nameTag: Salt
+      portrait: {fileID: 0}
+    - dialogueText: If you'd gotten lost trying to find me, I'd never forgive myself.
+      nameTag: Salt
+      portrait: {fileID: 0}
+    - dialogueText: Salt, I'm not gonna get lost here.
+      nameTag: Pepper
+      portrait: {fileID: 0}
+    - dialogueText: I know this part of town like the back of my head.
+      nameTag: Pepper
+      portrait: {fileID: 0}
