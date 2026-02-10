@@ -6477,11 +6477,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5760787232082958619, guid: e735ec56fc8e5f1478e58431f136038a, type: 3}
       propertyPath: _mapOffset.x
-      value: 382
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 5760787232082958619, guid: e735ec56fc8e5f1478e58431f136038a, type: 3}
       propertyPath: _mapOffset.y
-      value: -282
+      value: -98
       objectReference: {fileID: 0}
     - target: {fileID: 5760787232082958619, guid: e735ec56fc8e5f1478e58431f136038a, type: 3}
       propertyPath: _startDirection
@@ -9494,7 +9494,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823819251}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13, y: -19, z: 0}
+  m_LocalPosition: {x: 13, y: -17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9513,9 +9513,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30540939a8fba3249b9ec41858797ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: CentralDistrict
+  _sceneName: ForestDistrict
   _isIndoors: 0
-  _position: {x: 155.5, y: -144.5, z: 0}
+  _position: {x: 130, y: -100, z: 0}
   _direction: 0
   _setsDirection: 1
 --- !u!61 &1823819254
