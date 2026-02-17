@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 12/22/25
+ * UPDATED  : 2/17/26
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -296,6 +296,9 @@ public class PlayerController : MonoBehaviour
         // Disables Input
         if (_brake.enabled)
         {
+            // Stops momentum
+            rb2d.velocity = Vector2.zero;
+
             // Disables input functions
             _brake.Disable();
             _debugSwitch.Disable();
