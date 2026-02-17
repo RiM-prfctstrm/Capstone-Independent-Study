@@ -2,10 +2,9 @@
  * FILE     : ParallaxScroll.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/9/25
- * UPDATED  : 3/12/25
+ * UPDATED  : 2/17/26
  * 
  * DESC     : Moves attached object at a set rate, teleporting it back so it can move continuously.
- *            Currently only rigged for vertical motion
 =================================================================================================*/
 using System.Collections;
 using System.Collections.Generic;
