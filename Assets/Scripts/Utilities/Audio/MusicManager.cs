@@ -2,7 +2,7 @@
  * FILE     : MusicManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 12/6/24
- * UPDATED  : 10/20/25
+ * UPDATED  : 2/17/26
  * 
  * DESC     : Controls which music is currently playing.
 =================================================================================================*/
@@ -41,8 +41,8 @@ public class MusicManager : MonoBehaviour
         // Loops song
         if (!_musicSource.isPlaying && _isLoop)
         {
-            _musicSource.time = _startTime;
             _musicSource.Play();
+            _musicSource.time = _startTime;
         }
 
         // Triggers exit for jingle
