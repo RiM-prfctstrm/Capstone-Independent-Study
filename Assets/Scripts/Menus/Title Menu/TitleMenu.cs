@@ -2,7 +2,7 @@
  * FILE     : TitleMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/31/24
- * UPDATED  : 1/28/26
+ * UPDATED  : 2/18/26
  * 
  * DESC     : Performs functions of the title screen menu.
 =================================================================================================*/
@@ -56,7 +56,7 @@ public class TitleMenu : MonoBehaviour
         // Inits Vars
         DialogueManager.dialogueManager = _dm;
         _reader = new StreamReader(Application.dataPath + "/SaveData/ProgressFiles/Slot" + 1 +
-            "/Progress.json");
+            "/Level.txt");
 
         // Sets inputs
         advance = _menuInputs.FindAction("Submit");
