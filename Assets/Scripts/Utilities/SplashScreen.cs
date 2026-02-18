@@ -2,7 +2,7 @@
  * FILE     : SplashScreen.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/13/25
- * UPDATED  : 10/28/25
+ * UPDATED  : 2/18/25
  * 
  * DESC     : Fades in and out a splash screen.
 =================================================================================================*/
@@ -43,6 +43,7 @@ public class SplashScreen : MonoBehaviour
         _mixer.SetFloat("sfxVol", Mathf.Log10(GlobalVariableTracker.sfxVolume) * 20);
         _mixer.SetFloat("menVol", Mathf.Log10(GlobalVariableTracker.menuVolume) * 20);
         _options.SetDisplayMode(GlobalVariableTracker.windowedMode);
+        _options.ResizeScreen(GlobalVariableTracker.windowScale);
     }
 
     /// <summary>
