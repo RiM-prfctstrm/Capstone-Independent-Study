@@ -2,7 +2,7 @@
  * FILE     : BottleMailMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/16/25
- * UPDATED  : 12/22/25
+ * UPDATED  : 2/19/25
  * 
  * DESC     : Controls BottleMail menu behavior to emulate an email program.
 =================================================================================================*/
@@ -105,6 +105,10 @@ public class BottleMailMenu : MonoBehaviour
         // Auto selects scrollbar
         _scrollBar.interactable = true;
         _scrollBar.Select();
+
+        // Sets cancel action to return to message select
+        PlayerController.playerController.cancel.performed -= CloseMenu;
+        PlayerController.playerController.cancel.performed += ReturnToMsgSelect;
     }
 
     /// <summary>
@@ -141,6 +145,29 @@ public class BottleMailMenu : MonoBehaviour
         // Sends player back to room
         StartCoroutine(SceneTransition.TransitionScene(
             "ShakerHouse", true, new Vector3(5.5f, -37.25f, 0), 3));
+    }
+
+    #endregion
+
+    #region CANCEL FUNCTIONS
+
+    /// <summary>
+    /// Returns to selected message in the message menu
+    /// </summary>
+    public void ReturnToMsgSelect()
+    {
+        // Resets cancel function
+        PlayerController.playerController.cancel.performed -= ReturnToMsgSelect;
+        PlayerController.playerController.cancel.performed += CloseMenu;
+    }
+    public void ReturnToMsgSelect(InputAction.CallbackContext ctx)
+    {
+        // Sets button
+        _scrollBar.navigation.selectOnLeft.Select();
+
+        // Resets cancel function
+        PlayerController.playerController.cancel.performed -= ReturnToMsgSelect;
+        PlayerController.playerController.cancel.performed += CloseMenu;
     }
 
     #endregion
