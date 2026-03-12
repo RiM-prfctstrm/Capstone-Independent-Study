@@ -129,6 +129,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -141,6 +149,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: Most of these are only read for high school.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf16LitFic
@@ -151,7 +163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.5
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
@@ -203,6 +215,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 1
@@ -215,6 +235,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: Looking at the covers takes you back.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf18YA
@@ -225,7 +249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.5
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
@@ -277,6 +301,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -290,6 +322,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: In a few years, a lot of these will be really valuable.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf08Travel
@@ -300,11 +336,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.5
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.375
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -352,6 +388,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -364,6 +408,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: Looking at the covers takes you back.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf17Kids
@@ -374,7 +422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.5
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
@@ -426,6 +474,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -438,6 +494,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: They never let you keep them for long enough.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf11Gaming (1)
@@ -500,6 +560,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -512,6 +580,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: If only school didn't make them seem more boring.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf07Science (1)
@@ -522,11 +594,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.375
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -574,6 +646,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -586,6 +666,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: They will never beat Dad's cooking.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf13Cookbooks
@@ -596,11 +680,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.5
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.625
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -648,6 +732,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -660,6 +752,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: At this rate, it's going to be just the manga section soon.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf10Comics
@@ -722,6 +818,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -734,6 +838,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: Nothing you've reserved is in.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf04Holds (1)
@@ -801,6 +909,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -813,6 +929,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: Mere slop for the nation's illiterate swine.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf12AudioBooks (1)
@@ -823,11 +943,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.375
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -875,6 +995,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -887,6 +1015,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: Just looking at them makes you sleepy.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf03BoringNonfic
@@ -897,11 +1029,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.375
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -949,6 +1081,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 1
@@ -961,6 +1101,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: You've always wondered why it's separate from nonfiction.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf02ArtBooks
@@ -971,11 +1115,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.5
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.375
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1023,6 +1167,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -1035,6 +1187,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: Most of these are only read for high school.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf16LitFic
@@ -1045,7 +1201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.5
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1097,6 +1253,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -1109,6 +1273,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: At this rate, it's going to be just the manga section soon.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf10Comics (1)
@@ -1334,6 +1502,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
       value: The biography section.
@@ -1342,6 +1518,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: You've always wondered why it's separate from nonfiction.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf01Biography
@@ -1352,11 +1532,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.635
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1485,6 +1665,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -1497,6 +1685,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: They never let you keep them for long enough.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf11Gaming
@@ -1559,6 +1751,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -1571,6 +1771,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: If only school didn't make them seem more boring.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf07Science
@@ -1581,11 +1785,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.375
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1633,6 +1837,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -1645,6 +1857,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: Mere slop for the nation's illiterate swine.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf12AudioBooks
@@ -1655,11 +1871,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.375
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1707,6 +1923,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -1720,6 +1944,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: What a rip-off!
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf09Religion
@@ -1730,11 +1958,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.5
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.375
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1782,6 +2010,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -1794,6 +2030,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: It looks like they subscribe to every single one on the planet.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf06Magazines
@@ -1804,11 +2044,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.5
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.625
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1913,6 +2153,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -1926,6 +2174,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: In a few years, a lot of these will be really valuable.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf08Travel (1)
@@ -1936,11 +2188,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.375
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1988,6 +2240,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -2000,6 +2260,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: It looks like they subscribe to every single one on the planet.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf06Magazines (1)
@@ -2010,11 +2274,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.5
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.625
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2062,6 +2326,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -2074,6 +2346,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: You can feel the dreams oozing out of them.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf15Sff
@@ -2084,7 +2360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.5
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2136,6 +2412,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -2148,6 +2432,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: You can feel the dreams oozing out of them.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf15Sff
@@ -2158,7 +2446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.5
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2210,6 +2498,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -2220,8 +2516,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
-      value: Most of the things here only your parents have heard of.
+      value: Surprisingly, most of them aren't scratched to oblivion.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf05DVD (1)
@@ -2284,6 +2584,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -2294,8 +2602,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
-      value: Most of the things here only your parents have heard of.
+      value: Surprisingly, most of them aren't scratched to oblivion.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf05DVD
@@ -2358,6 +2670,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 1
@@ -2370,6 +2690,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: You've always wondered why it's separate from nonfiction.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf02ArtBooks (1)
@@ -2380,11 +2704,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.375
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2432,6 +2756,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -2444,6 +2776,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: Just looking at them makes you sleepy.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf03BoringNonfic (1)
@@ -2454,11 +2790,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.375
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2668,6 +3004,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 1
@@ -2680,6 +3024,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: Looking at the covers takes you back.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf18YA
@@ -2690,7 +3038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.5
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2742,6 +3090,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -2754,6 +3110,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: They will never beat Dad's cooking.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf13Cookbooks (1)
@@ -2764,11 +3124,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.625
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2809,6 +3169,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
   m_PrefabInstance: {fileID: 1468379028}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1623361162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1623361163}
+  m_Layer: 0
+  m_Name: Decorations
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1623361163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623361162}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1644913246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2816,6 +3207,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -2828,6 +3227,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: Looking at the covers takes you back.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf17Kids
@@ -2838,7 +3241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.5
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2976,7 +3379,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5
+      value: -5.25
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3016,7 +3419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194425, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_Offset.y
-      value: -1.5
+      value: -1.25
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194426, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_Controller
@@ -3040,6 +3443,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -3053,6 +3464,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: What a rip-off!
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf09Religion (1)
@@ -3063,11 +3478,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.375
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3182,6 +3597,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 1
@@ -3194,6 +3617,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: They will never beat Dad's cooking.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf14Used
@@ -3204,7 +3631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.5
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3256,6 +3683,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 2
@@ -3268,6 +3703,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: Nothing you've reserved is in.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf04Holds
@@ -3330,6 +3769,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
       value: 1
@@ -3342,6 +3789,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: They will never beat Dad's cooking.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf14Used (1)
@@ -3352,7 +3803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.5
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3404,6 +3855,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804614944}
     m_Modifications:
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632549719348818471, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4994457009800014339, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].dialogueText
       value: The biography section.
@@ -3412,6 +3871,10 @@ PrefabInstance:
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[1].dialogueText
       value: You've always wondered why it's separate from nonfiction.
       objectReference: {fileID: 0}
+    - target: {fileID: 5476305334076779983, guid: 06517478582634849b094281ededda19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c1c1b2c861e8c41ac49ae0727e9b71, type: 3}
     - target: {fileID: 6470912214416795855, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_Name
       value: BookShelf01Biography (1)
@@ -3422,11 +3885,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.635
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8630235509108746824, guid: 06517478582634849b094281ededda19, type: 3}
       propertyPath: m_LocalPosition.z
