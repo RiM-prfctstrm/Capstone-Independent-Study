@@ -1,15 +1,15 @@
 {
-    "activeFile": "Graphics/Maps/Template/StoreTemplate.tmx",
+    "activeFile": "Graphics/Maps/Forest/DecalStore.tmx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
         "Graphics/Maps/Forest/DecalStore.tmx": {
             "scale": 6.156730769230769,
-            "selectedLayer": 3,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 72.03498360143682,
-                "y": 103.95127284085584
+                "x": 72.52225519287833,
+                "y": 7.471497735436515
             }
         },
         "Graphics/Maps/Forest/HSGym.tmx": {
@@ -39,7 +39,18 @@
             "selectedLayer": 4,
             "viewCenter": {
                 "x": 528.0337341870998,
-                "y": 391.81633609245665
+                "y": 28.161799156645316
+            }
+        },
+        "Graphics/Maps/Template/NPCHouseTemplate.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 5.3358333333333325,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 159.95627049820402,
+                "y": 119.94377635483369
             }
         },
         "Graphics/Maps/Template/StoreTemplate.tmx": {
@@ -50,31 +61,43 @@
                 "y": 120.03080872913993
             }
         },
+        "Graphics/Maps/Template/TownHouseTemplate.tmx": {
+            "scale": 5.3358333333333325,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 159.95627049820402,
+                "y": 119.94377635483369
+            }
+        },
         "Graphics/Placeholder/tileset/Debug.tsx": {
             "scaleInDock": 1
         },
         "Graphics/Tilesets/Indoor/Furniture.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 2,
             "scaleInEditor": 1
         },
         "Graphics/Tilesets/Indoor/Gym.tsx": {
-            "scaleInDock": 2
+            "scaleInDock": 2,
+            "scaleInEditor": 1
         },
         "Graphics/Tilesets/Indoor/Office.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 2,
             "scaleInEditor": 1
         }
     },
     "openFiles": [
         "Graphics/Tilesets/Indoor/Furniture.tsx",
         "Graphics/Tilesets/Indoor/Office.tsx",
-        "Graphics/Maps/Template/StoreTemplate.tmx"
+        "Graphics/Maps/Forest/DecalStore.tmx",
+        "Graphics/Tilesets/Indoor/Gym.tsx"
     ],
     "project": "DreamDiscDelivery.tiled-project",
     "recentFiles": [
-        "Graphics/Maps/Template/StoreTemplate.tmx",
-        "Graphics/Maps/Forest/Library.tmx",
         "Graphics/Tilesets/Indoor/Furniture.tsx",
-        "Graphics/Tilesets/Indoor/Office.tsx"
+        "Graphics/Tilesets/Indoor/Office.tsx",
+        "Graphics/Tilesets/Indoor/Gym.tsx",
+        "Graphics/Maps/Forest/DecalStore.tmx",
+        "Graphics/Maps/Template/StoreTemplate.tmx",
+        "Graphics/Maps/Forest/Library.tmx"
     ]
 }
