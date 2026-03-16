@@ -1,5 +1,5 @@
 {
-    "activeFile": "Graphics/Maps/Forest/DecalStore.tmx",
+    "activeFile": "Graphics/Maps/Template/TownHouseTemplate.tmx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -62,6 +62,9 @@
             }
         },
         "Graphics/Maps/Template/TownHouseTemplate.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
             "scale": 5.3358333333333325,
             "selectedLayer": 4,
             "viewCenter": {
@@ -83,20 +86,29 @@
         "Graphics/Tilesets/Indoor/Office.tsx": {
             "scaleInDock": 2,
             "scaleInEditor": 1
+        },
+        "Graphics/Tilesets/Indoor/Stairs.tsx": {
+            "scaleInDock": 1
         }
     },
     "openFiles": [
         "Graphics/Tilesets/Indoor/Furniture.tsx",
         "Graphics/Tilesets/Indoor/Office.tsx",
         "Graphics/Maps/Forest/DecalStore.tmx",
-        "Graphics/Tilesets/Indoor/Gym.tsx"
+        "Graphics/Tilesets/Indoor/Gym.tsx",
+        "Graphics/Maps/Template/NPCHouseTemplate.tmx",
+        "Graphics/Maps/Gray Box/ShakerHouseGrayBox.tmx",
+        "Graphics/Maps/Template/TownHouseTemplate.tmx"
     ],
     "project": "DreamDiscDelivery.tiled-project",
     "recentFiles": [
         "Graphics/Tilesets/Indoor/Furniture.tsx",
         "Graphics/Tilesets/Indoor/Office.tsx",
-        "Graphics/Tilesets/Indoor/Gym.tsx",
         "Graphics/Maps/Forest/DecalStore.tmx",
+        "Graphics/Tilesets/Indoor/Gym.tsx",
+        "Graphics/Maps/Template/NPCHouseTemplate.tmx",
+        "Graphics/Maps/Gray Box/ShakerHouseGrayBox.tmx",
+        "Graphics/Maps/Template/TownHouseTemplate.tmx",
         "Graphics/Maps/Template/StoreTemplate.tmx",
         "Graphics/Maps/Forest/Library.tmx"
     ]
