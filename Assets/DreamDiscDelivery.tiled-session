@@ -8,8 +8,8 @@
             "scale": 6.156730769230769,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 71.9537716695299,
-                "y": 103.95127284085585
+                "x": 71.87255973762298,
+                "y": 103.95127284085584
             }
         },
         "Graphics/Maps/Forest/ForestDistrict.tmx": {
@@ -22,10 +22,10 @@
                 2
             ],
             "scale": 2,
-            "selectedLayer": 9,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 386.25,
-                "y": 807.5
+                "x": 211.75,
+                "y": 114.5
             }
         },
         "Graphics/Maps/Forest/HSGym.tmx": {
@@ -54,8 +54,8 @@
             "scale": 1.6334183673469387,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 503.85131969389346,
-                "y": 391.8163360924567
+                "x": 503.5452131813213,
+                "y": 391.81633609245665
             }
         },
         "Graphics/Maps/Park/Park.tmx": {
@@ -116,8 +116,12 @@
         },
         "Graphics/Tilesets/Indoor/Stairs.tsx": {
             "scaleInDock": 1
+        },
+        "Graphics/Tilesets/Outdoor/Railroad.tsx": {
+            "scaleInEditor": 1
         }
     },
+    "last.imagePath": "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Capstone-Independent-Study/Assets/Graphics/Tilesets/Outdoor",
     "openFiles": [
         "Graphics/Tilesets/Indoor/Furniture.tsx",
         "Graphics/Tilesets/Indoor/Office.tsx",
@@ -129,14 +133,21 @@
     ],
     "project": "DreamDiscDelivery.tiled-project",
     "recentFiles": [
-        "Graphics/Tilesets/Indoor/Furniture.tsx",
-        "Graphics/Tilesets/Indoor/Office.tsx",
-        "Graphics/Maps/Forest/DecalStore.tmx",
-        "Graphics/Tilesets/Indoor/Gym.tsx",
-        "Graphics/Maps/Template/NPCHouseTemplate.tmx",
-        "Graphics/Maps/Gray Box/ShakerHouseGrayBox.tmx",
+        "Graphics/Tilesets/Outdoor/Railroad.tsx",
         "Graphics/Maps/Template/TownHouseTemplate.tmx",
+        "Graphics/Maps/Gray Box/ShakerHouseGrayBox.tmx",
+        "Graphics/Maps/Template/NPCHouseTemplate.tmx",
+        "Graphics/Tilesets/Indoor/Gym.tsx",
+        "Graphics/Maps/Forest/DecalStore.tmx",
+        "Graphics/Tilesets/Indoor/Office.tsx",
+        "Graphics/Tilesets/Indoor/Furniture.tsx",
         "Graphics/Maps/Template/StoreTemplate.tmx",
         "Graphics/Maps/Forest/Library.tmx"
-    ]
+    ],
+    "resizeMap.removeObjects": false,
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
 }
