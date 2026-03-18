@@ -1,5 +1,5 @@
 {
-    "activeFile": "Graphics/Maps/Template/TownHouseTemplate.tmx",
+    "activeFile": "Graphics/Maps/Forest/ForestDistrict.tmx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -22,10 +22,10 @@
                 2
             ],
             "scale": 2,
-            "selectedLayer": 1,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 211.75,
-                "y": 114.5
+                "x": 4053.75,
+                "y": 715
             }
         },
         "Graphics/Maps/Forest/HSGym.tmx": {
@@ -100,7 +100,7 @@
             }
         },
         "Graphics/Placeholder/tileset/Debug.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 2
         },
         "Graphics/Tilesets/Indoor/Furniture.tsx": {
             "scaleInDock": 2,
@@ -117,22 +117,33 @@
         "Graphics/Tilesets/Indoor/Stairs.tsx": {
             "scaleInDock": 1
         },
+        "Graphics/Tilesets/Outdoor/Forest.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        },
         "Graphics/Tilesets/Outdoor/Railroad.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        },
+        "Graphics/Tilesets/Outdoor/RoadSidewalk.tsx": {
+            "scaleInDock": 2
+        },
+        "Graphics/Tilesets/Outdoor/UrbanGreenspace.tsx": {
+            "scaleInDock": 2,
             "scaleInEditor": 1
         }
     },
     "last.imagePath": "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Capstone-Independent-Study/Assets/Graphics/Tilesets/Outdoor",
     "openFiles": [
-        "Graphics/Tilesets/Indoor/Furniture.tsx",
-        "Graphics/Tilesets/Indoor/Office.tsx",
-        "Graphics/Maps/Forest/DecalStore.tmx",
-        "Graphics/Tilesets/Indoor/Gym.tsx",
-        "Graphics/Maps/Template/NPCHouseTemplate.tmx",
-        "Graphics/Maps/Gray Box/ShakerHouseGrayBox.tmx",
-        "Graphics/Maps/Template/TownHouseTemplate.tmx"
+        "Graphics/Maps/Forest/ForestDistrict.tmx",
+        "Graphics/Tilesets/Outdoor/UrbanGreenspace.tsx",
+        "Graphics/Tilesets/Outdoor/Forest.tsx"
     ],
     "project": "DreamDiscDelivery.tiled-project",
     "recentFiles": [
+        "Graphics/Tilesets/Outdoor/Forest.tsx",
+        "Graphics/Tilesets/Outdoor/UrbanGreenspace.tsx",
+        "Graphics/Maps/Forest/ForestDistrict.tmx",
         "Graphics/Tilesets/Outdoor/Railroad.tsx",
         "Graphics/Maps/Template/TownHouseTemplate.tmx",
         "Graphics/Maps/Gray Box/ShakerHouseGrayBox.tmx",
@@ -141,8 +152,7 @@
         "Graphics/Maps/Forest/DecalStore.tmx",
         "Graphics/Tilesets/Indoor/Office.tsx",
         "Graphics/Tilesets/Indoor/Furniture.tsx",
-        "Graphics/Maps/Template/StoreTemplate.tmx",
-        "Graphics/Maps/Forest/Library.tmx"
+        "Graphics/Maps/Template/StoreTemplate.tmx"
     ],
     "resizeMap.removeObjects": false,
     "tileset.lastUsedFormat": "tsx",
