@@ -14,18 +14,19 @@
         },
         "Graphics/Maps/Forest/ForestDistrict.tmx": {
             "expandedGroupLayers": [
+                12,
+                10,
                 3,
-                5,
-                10
+                5
             ],
             "expandedObjectLayers": [
                 2
             ],
             "scale": 2,
-            "selectedLayer": 2,
+            "selectedLayer": 12,
             "viewCenter": {
-                "x": 4053.75,
-                "y": 715
+                "x": 4522.75,
+                "y": 1903
             }
         },
         "Graphics/Maps/Forest/HSGym.tmx": {
@@ -122,6 +123,7 @@
             "scaleInEditor": 1
         },
         "Graphics/Tilesets/Outdoor/Houses.tsx": {
+            "scaleInDock": 2,
             "scaleInEditor": 1
         },
         "Graphics/Tilesets/Outdoor/Railroad.tsx": {
@@ -129,10 +131,12 @@
             "scaleInEditor": 1
         },
         "Graphics/Tilesets/Outdoor/RetailBuildings.tsx": {
+            "scaleInDock": 2,
             "scaleInEditor": 1
         },
         "Graphics/Tilesets/Outdoor/RoadSidewalk.tsx": {
-            "scaleInDock": 2
+            "scaleInDock": 2,
+            "scaleInEditor": 1
         },
         "Graphics/Tilesets/Outdoor/UrbanGreenspace.tsx": {
             "scaleInDock": 2,
@@ -143,12 +147,16 @@
     "openFiles": [
         "Graphics/Maps/Forest/ForestDistrict.tmx",
         "Graphics/Tilesets/Outdoor/UrbanGreenspace.tsx",
-        "Graphics/Tilesets/Outdoor/Forest.tsx"
+        "Graphics/Tilesets/Outdoor/Forest.tsx",
+        "Graphics/Tilesets/Outdoor/RoadSidewalk.tsx",
+        "Graphics/Tilesets/Outdoor/RetailBuildings.tsx",
+        "Graphics/Tilesets/Outdoor/Houses.tsx"
     ],
     "project": "DreamDiscDelivery.tiled-project",
     "recentFiles": [
         "Graphics/Tilesets/Outdoor/Houses.tsx",
         "Graphics/Tilesets/Outdoor/RetailBuildings.tsx",
+        "Graphics/Tilesets/Outdoor/RoadSidewalk.tsx",
         "Graphics/Tilesets/Outdoor/Forest.tsx",
         "Graphics/Tilesets/Outdoor/UrbanGreenspace.tsx",
         "Graphics/Maps/Forest/ForestDistrict.tmx",
@@ -157,8 +165,7 @@
         "Graphics/Maps/Gray Box/ShakerHouseGrayBox.tmx",
         "Graphics/Maps/Template/NPCHouseTemplate.tmx",
         "Graphics/Tilesets/Indoor/Gym.tsx",
-        "Graphics/Maps/Forest/DecalStore.tmx",
-        "Graphics/Tilesets/Indoor/Office.tsx"
+        "Graphics/Maps/Forest/DecalStore.tmx"
     ],
     "resizeMap.removeObjects": false,
     "tileset.lastUsedFormat": "tsx",
