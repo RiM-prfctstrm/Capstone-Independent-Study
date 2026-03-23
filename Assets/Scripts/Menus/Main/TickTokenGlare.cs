@@ -2,7 +2,7 @@
  * FILE     : TickTokenGlare.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/19/25
- * UPDATED  : 11/24/25
+ * UPDATED  : 3/23/26
  * 
  * DESC     : Controls visibility of glare effect over Tick Token Screen
 =================================================================================================*/
@@ -20,8 +20,8 @@ public class TickTokenGlare : MonoBehaviour
     Image _glareImage;
 
     // Colors
-    Color _fullGlare = new Color(250, 249, 255, .67f);
-    Color _partialGlare = new Color(250, 249, 255, .33f);
+    Color _fullGlare = new Color(250, 249, 255, .9f);
+    Color _partialGlare = new Color(250, 249, 255, .75f);
 
     #endregion
 
