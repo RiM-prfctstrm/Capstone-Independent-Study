@@ -2,7 +2,7 @@
  * FILE     : SceneTransition
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/29/24
- * UPDATED  : 4/2/25
+ * UPDATED  : 3/24/26
  * 
  * DESC     : Switches scenes and sets variables to initialize that scene's state after transition.
 =================================================================================================*/
@@ -138,7 +138,7 @@ public class SceneTransition
     static IEnumerator CompleteTransition()
     {
         // Fades back in
-        if (!CutsceneManager.skippingCutscene)
+        if (!CutsceneManager.skippingCutscene && !CutsceneManager.inCutscene)
         {
             ScreenEffects.fadingIn = true;
         }
@@ -154,6 +154,7 @@ public class SceneTransition
         {
             _player.GetComponent<PlayerAnimator>().PlayScriptedAnimation(
                 _player.GetComponent<PlayerAnimator>().SetAnimState());
+            ScreenEffects.fadingIn = true;
         }
 
         // Signals that transition is complete
