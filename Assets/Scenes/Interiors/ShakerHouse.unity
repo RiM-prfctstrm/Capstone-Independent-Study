@@ -4629,6 +4629,7 @@ GameObject:
   - component: {fileID: 747105025}
   - component: {fileID: 747105026}
   - component: {fileID: 747105027}
+  - component: {fileID: 747105028}
   m_Layer: 0
   m_Name: TickTokenSalt
   m_TagString: Untagged
@@ -4717,6 +4718,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _keyflag: introPlayed
   _activeState: 0
+--- !u!50 &747105028
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747105024}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &791556883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5886,6 +5908,7 @@ GameObject:
   - component: {fileID: 947315810}
   - component: {fileID: 947315809}
   - component: {fileID: 947315808}
+  - component: {fileID: 947315811}
   m_Layer: 0
   m_Name: TickTokenPepper
   m_TagString: Untagged
@@ -6028,6 +6051,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &947315811
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947315804}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &951494360
 GameObject:
   m_ObjectHideFlags: 0
@@ -6909,7 +6953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5760787232082958619, guid: e735ec56fc8e5f1478e58431f136038a, type: 3}
       propertyPath: _cutsceneObjs.Array.size
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5760787232082958619, guid: e735ec56fc8e5f1478e58431f136038a, type: 3}
       propertyPath: _cutsceneObjs.Array.data[0]
@@ -6947,6 +6991,10 @@ PrefabInstance:
       propertyPath: _cutsceneObjs.Array.data[8]
       value: 
       objectReference: {fileID: 947315804}
+    - target: {fileID: 5760787232082958619, guid: e735ec56fc8e5f1478e58431f136038a, type: 3}
+      propertyPath: _cutsceneObjs.Array.data[9]
+      value: 
+      objectReference: {fileID: 747105024}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e735ec56fc8e5f1478e58431f136038a, type: 3}
 --- !u!1001 &1067612554

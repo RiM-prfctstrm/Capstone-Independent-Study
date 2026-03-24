@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
   m_Name: m0_0_063_AlmostForgot
   m_EditorClassIdentifier: 
-  eventComplete: 0
+  eventComplete: 1
   cutsceneDialogue:
     dialogueBoxes:
     - dialogueText: Oh, I almost forgot!
@@ -26,10 +26,14 @@ MonoBehaviour:
         If you jostle it too hard, they'll fall out.
       nameTag: Salt
       portrait: {fileID: 0}
-    - dialogueText: And, the thing gets really bad glare outdoors.
+    - dialogueText: And, the thing gets really bad glare outdoors. If you can't read
+        it, uh...
       nameTag: Salt
       portrait: {fileID: 0}
-    - dialogueText: Gotcha.
+    - dialogueText: I dunno, go barge into someone's house or something.
+      nameTag: Salt
+      portrait: {fileID: 0}
+    - dialogueText: Gotcha. Will do!
       nameTag: Pepper
       portrait: {fileID: 0}
     - dialogueText: All right, then I'll see ya!

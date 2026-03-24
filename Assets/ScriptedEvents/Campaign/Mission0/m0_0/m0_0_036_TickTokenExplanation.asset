@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be391ce5ba198741a38dcaf9fd5b28d, type: 3}
   m_Name: m0_0_036_TickTokenExplanation
   m_EditorClassIdentifier: 
-  eventComplete: 0
+  eventComplete: 1
   cutsceneDialogue:
     dialogueBoxes:
     - dialogueText: So, Salt...
@@ -21,8 +21,8 @@ MonoBehaviour:
     - dialogueText: Yeah, Peps?
       nameTag: Salt
       portrait: {fileID: 0}
-    - dialogueText: What's the point of getting a new watch if you're not going to
-        have days anymore?
+    - dialogueText: What's the point of getting a new watch if there aren't exactly
+        days in space?
       nameTag: Pepper
       portrait: {fileID: 0}
     - dialogueText: Well, we're keeping to mission control's time zone for easy communication
