@@ -9,14 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced189b58ef3d6a4a8635aaabf73c2c2, type: 3}
-  m_Name: m0_0_30_MoveSaltBehindCouch
+  m_Script: {fileID: 11500000, guid: 35c0049aff9b2424ea0bbe58bc24f187, type: 3}
+  m_Name: m0_0_002_0_FadeOutTimeCard
   m_EditorClassIdentifier: 
   eventComplete: 0
-  _targetID: 5
-  _speed: 4
-  _movements:
-  - {x: 2, y: 0.25}
-  _overrideMovementAnimation: 0
-  _overrideAnimation: 
-  _referencePos: {x: 13, y: -15.25}
+  _fadingOut: 1

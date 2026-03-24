@@ -2,7 +2,7 @@
  * FILE     : CutsceneManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1X/X/24
- * UPDATED  : 2/5/26
+ * UPDATED  : 3/24/26
  * 
  * DESC     : Controls the progression of scripted events.
 =================================================================================================*/
@@ -34,6 +34,7 @@ public class CutsceneManager : MonoBehaviour
     public static bool inCutscene => _inCutscene;
     static bool _skippingCutscene = false;
     public static bool skippingCutscene => _skippingCutscene;
+    public static bool overideSceneMusic = false;
 
     // Skip Position Determinants
     Cutscene _skipEvent;

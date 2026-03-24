@@ -2,7 +2,7 @@
  * FILE     : BootManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 12/9/25
+ * UPDATED  : 3/24/26
  * 
  * DESC     : Performs functionality that only occurs when the game is first started.
 =================================================================================================*/
@@ -92,7 +92,7 @@ public class BootManager : MonoBehaviour
         {
             StartCoroutine(MusicManager.musicManager.FadeOutSong());
         }
-        else
+        else if (!CutsceneManager.overideSceneMusic)
         {
             MusicManager.musicManager.SwapSong(_localMusic, true, _missionBGM);
             MusicManager.musicManager.SetLooping(!_noLoop);

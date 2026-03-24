@@ -2,7 +2,7 @@
  * FILE     : CutsceneSceneTransition.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/7/24
- * UPDATED  : 4/2/25
+ * UPDATED  : 3/24/26
  * 
  * DESC     : Controls scene transitions in the middle of a cutscene, allowing a single script to
  *            continue across multiple scenes.
@@ -23,6 +23,9 @@ public class CutsceneSceneTransition : CutsceneEvent
     [SerializeField] bool _isIndoors = true;
     [SerializeField] Vector3 _playerPos;
     [SerializeField] int _playerDirection;
+    [SerializeField] bool _overrideSceneBGM = false;
+
+    // Parent Ref
 
     #endregion
 
@@ -37,6 +40,9 @@ public class CutsceneSceneTransition : CutsceneEvent
 
         // Disables cancelling during transtion
         PlayerController.playerController.cancel.Disable();
+
+        // Determines whether to override normal scene bgm
+        CutsceneManager.overideSceneMusic = _overrideSceneBGM;
 
         // Loads new scene
         CutsceneManager.cutsceneManager.StartCoroutine(
@@ -65,6 +71,7 @@ public class CutsceneSceneTransition : CutsceneEvent
 
         // Reenables regular cutscene functions
         PlayerController.playerController.cancel.Enable();
+        CutsceneManager.overideSceneMusic = false;
         eventComplete = true;
     }
 
