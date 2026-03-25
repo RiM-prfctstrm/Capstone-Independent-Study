@@ -161,7 +161,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: -9, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &100314279
 MonoBehaviour:
@@ -4564,7 +4564,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0009703947}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1933545423
@@ -5031,12 +5031,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Bottlemail: Carrying your hopes across the stars.
+  m_text: 'Bottlemail: Carrying your hopes and dreams across the stars.
 
-    Welcome, pepper479!
+    Welcome,
+    pepper479!
 
-    Please
-    select a message.'
+    Please select a message.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9bef3afd1bef376448a81a2044d6e62c, type: 2}
   m_sharedMaterial: {fileID: 2316711158950374830, guid: 9bef3afd1bef376448a81a2044d6e62c, type: 2}

@@ -2,7 +2,7 @@
  * FILE     : BottleMailMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/16/25
- * UPDATED  : 2/19/25
+ * UPDATED  : 3/25/26
  * 
  * DESC     : Controls BottleMail menu behavior to emulate an email program.
 =================================================================================================*/
@@ -96,15 +96,12 @@ public class BottleMailMenu : MonoBehaviour
         _messageText.GetComponent<TextMeshProUGUI>().text = msg.msgContents;
 
         // Sets Scrollbar size and return button
-        _scrollBar.size = _messageText.GetComponent<RectTransform>().rect.height / 330;
-        if (_scrollBar.size > 1)
+        if (_scrollBar.enabled)
         {
-            _scrollBar.size = 1;
+            _scrollBar.interactable = true;
+            _scrollBar.Select();
+            Debug.Log("chonky");
         }
-
-        // Auto selects scrollbar
-        _scrollBar.interactable = true;
-        _scrollBar.Select();
 
         // Sets cancel action to return to message select
         PlayerController.playerController.cancel.performed -= CloseMenu;

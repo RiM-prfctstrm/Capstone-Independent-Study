@@ -2,7 +2,7 @@
  * FILE     : Door.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 8/22/25
+ * UPDATED  : 3/25/26
  * 
  * DESC     : Basically a fancier version of SceneTrigger that activates when the player interacts
  *            with it, plays different animations and sounds, and can be locked until the player
@@ -58,6 +58,7 @@ public class Door : InteractableObject
             !_overrideMissions.Contains(GlobalVariableTracker.currentMission))
         {
             // Informs player the door is locked
+            NPCInteraction.inNPCInteraction = true;
             PlayerController.playerController.TogglePlayerInput();
             DialogueManager.dialogueManager.StartDialogue(_midDeliMsg);
         }
@@ -68,8 +69,9 @@ public class Door : InteractableObject
                 _targetScene, _leadsIndoors, _position, _direction));
         }
         else
-        {  
+        {
             // Informs player the door is locked
+            NPCInteraction.inNPCInteraction = true;
             PlayerController.playerController.TogglePlayerInput();
             DialogueManager.dialogueManager.StartDialogue(_lockedMessage);
         }

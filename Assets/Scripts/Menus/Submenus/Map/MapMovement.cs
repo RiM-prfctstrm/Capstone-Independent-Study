@@ -2,7 +2,7 @@
  * FILE     : MapMovement.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 12/1/25
- * UPDATED  : 12/4/25
+ * UPDATED  : 3/25/26
  * 
  * DESC     : Allows the player to move the map within specified constraints
 =================================================================================================*/
@@ -52,8 +52,10 @@ public class MapMovement : MonoBehaviour
         _xInput = _moveInputs.FindAction("MoveX");
         _yInput = _moveInputs.FindAction("MoveY");
         // Sets maximum constraints for movements
-        _maxX = -(int)(_rectTransform.rect.width - 220);
-        _maxY = 32 + (int)(_rectTransform.rect.height + 48);
+        _maxX = -(int)_rectTransform.rect.width / 2;
+        _maxY = (int)_rectTransform.rect.height / 2;
+        Debug.Log(_maxX);
+        Debug.Log(_maxY);
     }
 
     /// <summary>

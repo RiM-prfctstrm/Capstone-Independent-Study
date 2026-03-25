@@ -4441,6 +4441,10 @@ PrefabInstance:
       value: -0.375
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194425, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194425, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
@@ -9603,6 +9607,10 @@ PrefabInstance:
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194425, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194425, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
@@ -10300,7 +10308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.size
@@ -10324,7 +10332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].nameTag
-      value: Cyclist
+      value: Friendly Cyclist
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].nameTag
@@ -10420,7 +10428,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[2].dialogueText
-      value: You better not be thinking of stealing them, lady!
+      value: Just press (Z) on your keyboard or the left face button of your controller
+        (X/Y/Square)!
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[1].dialogueBoxes.Array.data[0].dialogueText
@@ -10522,11 +10531,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.25
+      value: 140.25
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -55
+      value: -98.875
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20311,7 +20320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.size
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[0].nameTag
@@ -20369,12 +20378,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[5].dialogueText
-      value: You can open and close the Tick Token with the [TAB] or [ESC] button.
+      value: You can open and close the Tick Token with your keyboard's (C) button
+        or your controller's (Start) button.
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[6].dialogueText
-      value: You can navigate with the the arrow keys, hit buttons with [Z], and
-        cancel submenus with [X].
+      value: It's very easy. Why don't you give it a try?
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194405, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: _NPCLines.Array.data[0].dialogueBoxes.Array.data[7].dialogueText
@@ -25518,6 +25527,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4971755747138881401, guid: d9553a399c3fc854396412755bcd2c6c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5321792343577419517, guid: d9553a399c3fc854396412755bcd2c6c, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.5
@@ -28157,6 +28170,10 @@ PrefabInstance:
     - target: {fileID: 1155657993595194425, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
       propertyPath: m_Size.y
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155657993595194425, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194425, guid: d065a920f86b37e4695450364dcf8ef1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x

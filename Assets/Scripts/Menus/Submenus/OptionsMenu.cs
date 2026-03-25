@@ -2,7 +2,7 @@
  * FILE     : OptionsMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/16/25
- * UPDATED  : 11/7/25
+ * UPDATED  : 3/25/26
  * 
  * DESC     : Adjusts variables that affect the game's presentation.
 =================================================================================================*/
@@ -29,6 +29,7 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] Button _returnSelection;
     [SerializeField] TitleMenu _titleMenu;
     Button _returnFromSubmenu;
+    GameObject _currentSubmenu;
     // Other objects
     [SerializeField] AudioMixer _mixer;
     [SerializeField] GameObject _screenCanvas;
@@ -263,12 +264,21 @@ public class OptionsMenu : MonoBehaviour
     /// <param name="target">Button to return to after cancelling</param>
     public void EnterSubmenu(Button target)
     {
-        // Sets cancel button
+        // Sets cancel buttons
         _returnFromSubmenu = target;
 
         // Chagnes which cancel function is active
         PlayerController.playerController.cancel.performed -= ReturnToMenu;
         PlayerController.playerController.cancel.performed += ExitSubmenu;
+    }
+
+    /// <summary>
+    /// Tells cancel function how to get rid of submenus when returning to options route
+    /// </summary>
+    /// <param name="trg"></param>
+    public void SetTargetSubmenu(GameObject trg)
+    {
+        _currentSubmenu = trg;
     }
 
     /// <summary>
@@ -283,8 +293,13 @@ public class OptionsMenu : MonoBehaviour
     }
     public void ExitSubmenu(InputAction.CallbackContext ctx)
     {
+        // Switches active menus
+        _returnFromSubmenu.Select();
+        _currentSubmenu.SetActive(false);
+
         // Performs functions of target button
-        _returnFromSubmenu.onClick.Invoke();
+        PlayerController.playerController.cancel.performed -= ExitSubmenu;
+        PlayerController.playerController.cancel.performed += ReturnToMenu;
     }
 
     #endregion

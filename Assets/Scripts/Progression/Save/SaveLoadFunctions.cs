@@ -2,7 +2,7 @@
  * FILE     : SaveLoadFunctions.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/25/25
- * UPDATED  : 12/9/25
+ * UPDATED  : 13/25/26
  * 
  * DESC     : Writes and reads permanent save data.
 =================================================================================================*/
@@ -151,6 +151,7 @@ public class SaveLoadFunctions
 
         // Resets nanoblips
         CollectibleManager.collectibleManager.ResetObjectStatus(false);
+        GlobalVariableTracker.collectiblesInPocket = 0;
 
         // Loads Scene
         using (_saveReader = new StreamReader(_basePath + slot + "/Level.txt"))
