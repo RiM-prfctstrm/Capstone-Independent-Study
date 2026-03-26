@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 2/17/26
+ * UPDATED  : 3/26/26
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -68,6 +68,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] InputActionAsset _playerInputs;
     InputAction _brake;
     public InputAction cancel;
+    InputAction _debugScreenCap;
     InputAction _debugSwitch;
     public InputAction openMenu;
     InputAction _interact;
@@ -89,6 +90,9 @@ public class PlayerController : MonoBehaviour
 
     // Miscellaneous
     [SerializeField] Cutscene _cantRideMessage;
+
+    // Debug
+    int _screenShotNo = 0;
 
     #endregion
 
@@ -114,6 +118,7 @@ public class PlayerController : MonoBehaviour
         _brake = _playerInputs.FindAction("Brake");
         cancel = _playerInputs.FindAction("Cancel");
         _debugSwitch = _playerInputs.FindAction("DebugSwitchState");
+        _debugScreenCap = _playerInputs.FindAction("DEBUGScreenCap");
         openMenu = _playerInputs.FindAction("OpenMenu");
         _interact = _playerInputs.FindAction("Interact");
         _xInput = _playerInputs.FindAction("MoveX");
@@ -125,6 +130,7 @@ public class PlayerController : MonoBehaviour
         cancel.performed += PlayCancelSound;
         cancel.Disable();
         _debugSwitch.performed += ToggleBike;
+        _debugScreenCap.performed += ScreenCap;
         openMenu.performed += OpenMenu;
         _interact.performed += PerformInteraction;
 
@@ -813,6 +819,16 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region DEBUG
+
+    /// <summary>
+    /// Takes a screenshot
+    /// </summary>
+    public void ScreenCap(InputAction.CallbackContext ctx)
+    {
+        ScreenCapture.CaptureScreenshot("screenshot" + _screenShotNo + ".png");
+        Debug.Log("A screenshot was taken!");
+        _screenShotNo++;
+    }
 
     /// <summary>
     /// Used to determine the space needed to turn 90 degrees, with the turn performed in 45deg
