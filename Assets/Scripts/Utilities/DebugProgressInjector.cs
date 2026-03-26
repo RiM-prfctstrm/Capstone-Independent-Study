@@ -43,7 +43,7 @@ public class DebugProgressInjector : MonoBehaviour
     [SerializeField] bool _m3specialComplete = false;
 
     // Game States
-    [SerializeField] bool _inDelivery = true;
+    [SerializeField] bool _inDelivery = false;
 
     // Collectibles
     [SerializeField] int _collectiblesInPocket;
