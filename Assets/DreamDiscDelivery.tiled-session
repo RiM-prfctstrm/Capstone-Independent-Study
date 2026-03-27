@@ -1,5 +1,5 @@
 {
-    "activeFile": "Graphics/Maps/Forest/ForestDistrict.tmx",
+    "activeFile": "Graphics/Maps/Gray Box/HospitalGraybox.tmx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -57,6 +57,17 @@
             "viewCenter": {
                 "x": 336.0479246897733,
                 "y": 251.8921694480103
+            }
+        },
+        "Graphics/Maps/Gray Box/HospitalGraybox.tmx": {
+            "expandedGroupLayers": [
+                3
+            ],
+            "scale": 2.60953125,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 319.9808394706904,
+                "y": 111.89749116819351
             }
         },
         "Graphics/Maps/Gray Box/ShakerHouseGrayBox.tmx": {
@@ -144,6 +155,9 @@
         "Graphics/Tilesets/Object/BikeRack.tsx": {
             "scaleInDock": 2
         },
+        "Graphics/Tilesets/Outdoor/Barricades.tsx": {
+            "scaleInDock": 1
+        },
         "Graphics/Tilesets/Outdoor/Beach.tsx": {
             "scaleInDock": 1
         },
@@ -186,22 +200,25 @@
         "Graphics/Tilesets/Outdoor/RoadSidewalk.tsx",
         "Graphics/Tilesets/Outdoor/RetailBuildings.tsx",
         "Graphics/Tilesets/Outdoor/Houses.tsx",
-        "Graphics/Maps/Park/Park.tmx"
+        "Graphics/Maps/Park/Park.tmx",
+        "Graphics/Maps/Central/CentralDistrict.tmx",
+        "Graphics/Maps/Retail/RetailDistrict.tmx",
+        "Graphics/Maps/Gray Box/HospitalGraybox.tmx"
     ],
     "project": "DreamDiscDelivery.tiled-project",
     "recentFiles": [
-        "Graphics/Maps/Park/Park.tmx",
-        "Graphics/Tilesets/Outdoor/Houses.tsx",
-        "Graphics/Tilesets/Outdoor/RetailBuildings.tsx",
-        "Graphics/Tilesets/Outdoor/RoadSidewalk.tsx",
-        "Graphics/Tilesets/Outdoor/Forest.tsx",
-        "Graphics/Tilesets/Outdoor/UrbanGreenspace.tsx",
         "Graphics/Maps/Forest/ForestDistrict.tmx",
+        "Graphics/Tilesets/Outdoor/UrbanGreenspace.tsx",
+        "Graphics/Tilesets/Outdoor/Forest.tsx",
+        "Graphics/Tilesets/Outdoor/RoadSidewalk.tsx",
+        "Graphics/Tilesets/Outdoor/RetailBuildings.tsx",
+        "Graphics/Tilesets/Outdoor/Houses.tsx",
+        "Graphics/Maps/Park/Park.tmx",
+        "Graphics/Maps/Central/CentralDistrict.tmx",
+        "Graphics/Maps/Retail/RetailDistrict.tmx",
+        "Graphics/Maps/Gray Box/HospitalGraybox.tmx",
         "Graphics/Tilesets/Outdoor/Railroad.tsx",
-        "Graphics/Maps/Template/TownHouseTemplate.tmx",
-        "Graphics/Maps/Gray Box/ShakerHouseGrayBox.tmx",
-        "Graphics/Maps/Template/NPCHouseTemplate.tmx",
-        "Graphics/Tilesets/Indoor/Gym.tsx"
+        "Graphics/Maps/Template/TownHouseTemplate.tmx"
     ],
     "resizeMap.removeObjects": false,
     "tileset.lastUsedFormat": "tsx",
