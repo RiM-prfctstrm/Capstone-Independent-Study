@@ -2,7 +2,7 @@
  * FILE     : PlayerController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/27/24
- * UPDATED  : 3/26/26
+ * UPDATED  : 3/27/26
  * 
  * DESC     : Controls the player character's movement and world interactions.
 =================================================================================================*/
@@ -90,9 +90,6 @@ public class PlayerController : MonoBehaviour
 
     // Miscellaneous
     [SerializeField] Cutscene _cantRideMessage;
-
-    // Debug
-    int _screenShotNo = 0;
 
     #endregion
 
@@ -825,9 +822,9 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public void ScreenCap(InputAction.CallbackContext ctx)
     {
-        ScreenCapture.CaptureScreenshot("screenshot" + _screenShotNo + ".png");
+        ScreenCapture.CaptureScreenshot(
+            "screenshot" + System.DateTime.Now.ToString("MM-dd-yy (HH-mm-ss)") + ".png");
         Debug.Log("A screenshot was taken!");
-        _screenShotNo++;
     }
 
     /// <summary>
