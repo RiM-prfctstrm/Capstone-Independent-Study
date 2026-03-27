@@ -2,7 +2,7 @@
  * FILE     : SnailPickUp.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/17/25
- * UPDATED  : 10/22/25
+ * UPDATED  : 3/27/26
  * 
  * DESC     : Controls how Snails are saved and inventoried when picked up, as well as snail
  *            movement
@@ -118,6 +118,12 @@ public class SnailPickUp : Collectible
         // Plays effects
         PlayerController.playerController.StartCoroutine(
             PickUpEffects(GetComponent<SpriteRenderer>().sprite, _pickUpJingle, _pickUpText));
+
+        // Gives Steam Achievement
+        if (GlobalVariableTracker.snailTotal == 1)
+        {
+            SteamManager.steamManager.UnlockAchievement("ACH_FIRST_SNAIL");
+        }
     }
 
     /// <summary>

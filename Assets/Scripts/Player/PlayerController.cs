@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
         _brake = _playerInputs.FindAction("Brake");
         cancel = _playerInputs.FindAction("Cancel");
         _debugSwitch = _playerInputs.FindAction("DebugSwitchState");
-        _debugScreenCap = _playerInputs.FindAction("DEBUGScreenCap");
+        //_debugScreenCap = _playerInputs.FindAction("DEBUGScreenCap");
         openMenu = _playerInputs.FindAction("OpenMenu");
         _interact = _playerInputs.FindAction("Interact");
         _xInput = _playerInputs.FindAction("MoveX");
@@ -127,7 +127,7 @@ public class PlayerController : MonoBehaviour
         cancel.performed += PlayCancelSound;
         cancel.Disable();
         _debugSwitch.performed += ToggleBike;
-        _debugScreenCap.performed += ScreenCap;
+        //_debugScreenCap.performed += ScreenCap;
         openMenu.performed += OpenMenu;
         _interact.performed += PerformInteraction;
 

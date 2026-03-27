@@ -52,6 +52,11 @@ public class SteamManager : MonoBehaviour
             SteamClient.Init(appId);
             _connectedToSteam = true;
             Debug.Log("Mmmm... Steamed Hams");
+
+            foreach (var a in SteamUserStats.Achievements)
+            {
+                Debug.Log("{a.Name} ({a.State})");
+            }
         }
         catch (System.Exception e)
         {
@@ -96,17 +101,17 @@ public class SteamManager : MonoBehaviour
         if (_connectedToSteam)
         {
             // Sets achievement
-            var ach = new Steamworks.Data.Achievement(achName);
+            Steamworks.Data.Achievement ach = new Steamworks.Data.Achievement(achName);
             
             // Awards achievement
-            if (!ach.State)
+            if (ach.State)
             {
-                Debug.Log("alreadyObtained");
+                Debug.Log(ach.Name + " already Obtained");
             }
             else
             {
                 ach.Trigger();
-                Debug.Log(achName + " Achieved!");
+                Debug.Log(ach.Name + " Achieved!");
             }
         }
 
