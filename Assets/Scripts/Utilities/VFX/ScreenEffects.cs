@@ -2,7 +2,7 @@
  * FILE     : ScreenEffects
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/8/25
- * UPDATED  : 8/15/25
+ * UPDATED  : 4/1/26
  * 
  * DESC     : Performs visual effects that take up the whole screen.
 =================================================================================================*/
@@ -67,6 +67,12 @@ public class ScreenEffects : MonoBehaviour
     /// </summary>
     void FadeToBlack()
     {
+        // Lets dialogue and images appear over fade during cutscenes
+        if (CutsceneManager.inCutscene)
+        {
+            _blackFader.transform.SetAsFirstSibling();
+        }
+
         // Performs fade by increasing object opacity
         if (_fadeAlpha < 1)
         {
@@ -86,6 +92,12 @@ public class ScreenEffects : MonoBehaviour
     /// </summary>
     void FadeIn()
     {
+        // Restores normal render order
+        if (CutsceneManager.inCutscene)
+        {
+            _blackFader.transform.SetAsLastSibling();
+        }
+
         // Performs fade by decreasing object opacity
         if (_fadeAlpha > 0)
         {
