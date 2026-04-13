@@ -9,14 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced189b58ef3d6a4a8635aaabf73c2c2, type: 3}
-  m_Name: m0_1_001_ChaChaSlide
+  m_Script: {fileID: 11500000, guid: 545ddcca606e10b409e7838fb290af48, type: 3}
+  m_Name: m0_1_015_ToParty
   m_EditorClassIdentifier: 
   eventComplete: 1
-  _targetID: 4
-  _speed: 4
-  _movements:
-  - {x: 0, y: -2}
-  _overrideMovementAnimation: 1
-  _overrideAnimation: DownIdle
-  _referencePos: {x: 62.25, y: -31.625}
+  _scene: GrilleVenue
+  _isIndoors: 1
+  _playerPos: {x: 13, y: -10, z: 0}
+  _playerDirection: 3
+  _overrideSceneBGM: 0

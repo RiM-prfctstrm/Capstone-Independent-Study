@@ -9,14 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced189b58ef3d6a4a8635aaabf73c2c2, type: 3}
-  m_Name: m0_1_001_ChaChaSlide
+  m_Script: {fileID: 11500000, guid: 7a2e80aa6127fbc49811085b2cd988a2, type: 3}
+  m_Name: m0_1_013_titleCardWait
   m_EditorClassIdentifier: 
-  eventComplete: 1
-  _targetID: 4
-  _speed: 4
-  _movements:
-  - {x: 0, y: -2}
-  _overrideMovementAnimation: 1
-  _overrideAnimation: DownIdle
-  _referencePos: {x: 62.25, y: -31.625}
+  eventComplete: 0
+  _waitSeconds: 3
