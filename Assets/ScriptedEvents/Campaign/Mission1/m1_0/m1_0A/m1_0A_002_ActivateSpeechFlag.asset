@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e7c1be8998881549bcc1fb9d908ed5b, type: 3}
-  m_Name: m1_0
+  m_Script: {fileID: 11500000, guid: b0d66d82e2a6ac84398d7e86fccac890, type: 3}
+  m_Name: m1_0A_002_ActivateSpeechFlag
   m_EditorClassIdentifier: 
-  cutsceneScript:
-  - {fileID: 11400000, guid: 6729f901464ac844b8e3f897108128c5, type: 2}
-  - {fileID: 11400000, guid: ad3b7288bad92e545bcfe4cfaf37cca4, type: 2}
-  hasPlayed: 0
+  eventComplete: 0
+  _flagName: SaltSpoken
+  _value: 1

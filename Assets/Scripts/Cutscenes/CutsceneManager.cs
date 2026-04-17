@@ -2,7 +2,7 @@
  * FILE     : CutsceneManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1X/X/24
- * UPDATED  : 3/24/26
+ * UPDATED  : 4/17/26
  * 
  * DESC     : Controls the progression of scripted events.
 =================================================================================================*/
@@ -183,6 +183,7 @@ public class CutsceneManager : MonoBehaviour
             }
             // Performs state-changing events that happen instantaneously by default
             else if (i.GetType() == typeof(SetGlobalFlag) ||
+                     i.GetType() == typeof(SetCurrentMission) ||
                      i.GetType() == typeof(AnimateCharacter) ||
                      i.GetType() == typeof(CutsceneSceneTransition) ||
                      i.GetType() == typeof(SetEventMusic) ||
