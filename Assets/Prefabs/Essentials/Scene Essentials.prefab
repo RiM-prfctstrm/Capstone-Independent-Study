@@ -1444,6 +1444,7 @@ MonoBehaviour:
   _m2Complete: 0
   _m3Complete: 0
   _introPlayed: 0
+  _saltSpoken: 0
   _m2bonusStarted: 0
   _m2BonusNotifPlayed: 0
   _spaceportBarrierDown: 0
@@ -19410,7 +19411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _missionThemes:
   - {fileID: 11400000, guid: 177f899e637e697489e589ae61c1409b, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 4a4572e1b2156ba49a1b2637ece39e46, type: 2}
   - {fileID: 11400000, guid: 94a280aaec0ff704ea77d443d9635e02, type: 2}
   - {fileID: 0}
   _musicSource: {fileID: 8932894999154157477}
