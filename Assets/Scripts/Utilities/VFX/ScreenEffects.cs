@@ -2,7 +2,7 @@
  * FILE     : ScreenEffects
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1/8/25
- * UPDATED  : 4/1/26
+ * UPDATED  : 4/23/26
  * 
  * DESC     : Performs visual effects that take up the whole screen.
 =================================================================================================*/
@@ -28,6 +28,8 @@ public class ScreenEffects : MonoBehaviour
     // Fading Objects
     [SerializeField] Image _blackFader;
     public static Image blackFader;
+    // Signals
+    public static bool isScreenBlack = false;
 
     #endregion
 
@@ -84,6 +86,7 @@ public class ScreenEffects : MonoBehaviour
         {
             _fadeAlpha = 1;
             fadingOut = false;
+            isScreenBlack = true;
         }
     }
 
@@ -109,6 +112,7 @@ public class ScreenEffects : MonoBehaviour
         {
             _fadeAlpha = 0;
             fadingIn = false;
+            isScreenBlack = false;
         }
     }
 

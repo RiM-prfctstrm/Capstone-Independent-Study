@@ -2,7 +2,7 @@
  * FILE     : DisplayImage.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/6/24
- * UPDATED  : 3/10/25
+ * UPDATED  : 4/23/25
  * 
  * DESC     : Displays an image at a specified point on the screen. Used in cutscenes.
 =================================================================================================*/
@@ -22,6 +22,7 @@ public class DisplayImage : CutsceneEvent
     [SerializeField] Vector2 _coords; // The position of the bottom left corner of the image
 
     // Objects used to render image in scene
+    int _imageOrder;
     GameObject _ImageSpace;
     GameObject _renderObject;
     RectTransform _imageTransform;
@@ -37,8 +38,18 @@ public class DisplayImage : CutsceneEvent
     {
         base.PlayEventFunction();
 
+        if (ScreenEffects.isScreenBlack)
+        {
+            _imageOrder = 2;
+        }
+        else
+        {
+            _imageOrder = 1;
+        }
+
         // Searches for available slot
-        _ImageSpace = CutsceneManager.cutsceneManager.UISpace.transform.GetChild(1).gameObject;
+        _ImageSpace =
+            CutsceneManager.cutsceneManager.UISpace.transform.GetChild(_imageOrder).gameObject;
         for (int i = 0; i <= _ImageSpace.transform.childCount; i++)
         {
             // Skips slots currently in use
@@ -46,7 +57,6 @@ public class DisplayImage : CutsceneEvent
             {
                 continue;
             }
-            Debug.Log("amogus");
             // Sets which object the image displays in
             _renderObject = _ImageSpace.transform.GetChild(i).gameObject;
             _imageTransform = _renderObject.GetComponent < RectTransform>();
