@@ -2,7 +2,7 @@
  * FILE     : GlobalVariableTracker.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/4/24
- * UPDATED  : 4/17/26
+ * UPDATED  : 4/23/26
  * 
  * DESC     : Stores data that is meant to persist throughout the entire game. Variables are kept
  *            in an initialized state to easily create a new save. If a save is loaded, they are
@@ -52,7 +52,9 @@ public class GlobalVariableTracker
         // Mission Specific Flags
         // Mission 0
         { "introPlayed", false },
+        // Mission 1
         { "SaltSpoken", false},
+        { "metTamago", false },
         // Mission 2
         { "m2bonusStarted", false },
         { "m2BonusNotifPlayed", false },
