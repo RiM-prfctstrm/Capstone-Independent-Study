@@ -94,13 +94,7 @@ public class ScreenEffects : MonoBehaviour
     /// Fades in from a color by lowering its alpha
     /// </summary>
     void FadeIn()
-    {
-        // Restores normal render order
-        if (CutsceneManager.inCutscene)
-        {
-            _blackFader.transform.SetAsLastSibling();
-        }
-
+    {  
         // Performs fade by decreasing object opacity
         if (_fadeAlpha > 0)
         {
@@ -113,6 +107,12 @@ public class ScreenEffects : MonoBehaviour
             _fadeAlpha = 0;
             fadingIn = false;
             isScreenBlack = false;
+
+            // Restores normal render order
+            if (CutsceneManager.inCutscene)
+            {
+                _blackFader.transform.SetAsLastSibling();
+            }
         }
     }
 
