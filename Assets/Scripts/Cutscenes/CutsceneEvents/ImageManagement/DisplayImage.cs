@@ -46,7 +46,7 @@ public class DisplayImage : CutsceneEvent
             {
                 continue;
             }
-
+            Debug.Log("amogus");
             // Sets which object the image displays in
             _renderObject = _ImageSpace.transform.GetChild(i).gameObject;
             _imageTransform = _renderObject.GetComponent < RectTransform>();
