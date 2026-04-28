@@ -3,9 +3,10 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Graphics/Maps/Park/Venue.tmx",
+    "activeFile": "Graphics/Maps/Park/Park.tmx",
     "expandedProjectPaths": [
     ],
+    "exportAsImage.useCurrentScale": false,
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
         "Graphics/Maps/Central/CentralDistrict.tmx": {
@@ -29,10 +30,10 @@
         },
         "Graphics/Maps/Forest/ForestDistrict.tmx": {
             "expandedGroupLayers": [
-                5,
-                12,
                 10,
-                3
+                12,
+                3,
+                5
             ],
             "expandedObjectLayers": [
                 2
@@ -40,8 +41,8 @@
             "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1600,
-                "y": 1309
+                "x": 2528,
+                "y": 1680
             }
         },
         "Graphics/Maps/Forest/HSGym.tmx": {
@@ -76,14 +77,14 @@
         },
         "Graphics/Maps/Park/Park.tmx": {
             "expandedGroupLayers": [
-                7,
-                3
+                3,
+                7
             ],
-            "scale": 3,
+            "scale": 0.06,
             "selectedLayer": 8,
             "viewCenter": {
-                "x": 2874.333333333333,
-                "y": 446
+                "x": 2866.666666666666,
+                "y": -2516.666666666666
             }
         },
         "Graphics/Maps/Park/Venue.tmx": {
@@ -93,8 +94,8 @@
             "scale": 3,
             "selectedLayer": 6,
             "viewCenter": {
-                "x": 242.66666666666663,
-                "y": 110.66666666666666
+                "x": 240,
+                "y": 144
             }
         },
         "Graphics/Maps/Retail/RetailDistrict.tmx": {
@@ -160,7 +161,8 @@
             "scaleInDock": 2
         },
         "Graphics/Tilesets/Outdoor/Beach.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "Graphics/Tilesets/Outdoor/Forest.tsx": {
             "scaleInDock": 2,
@@ -205,7 +207,9 @@
         "Graphics/Tilesets/Outdoor/RetailBuildings.tsx",
         "Graphics/Tilesets/Outdoor/Houses.tsx",
         "Graphics/Maps/Park/Park.tmx",
-        "Graphics/Maps/Park/Venue.tmx"
+        "Graphics/Maps/Park/Venue.tmx",
+        "Graphics/Tilesets/Outdoor/Beach.tsx",
+        "Graphics/Maps/Forest/ForestDistrict.tmx"
     ],
     "project": "DreamDiscDelivery.tiled-project",
     "recentFiles": [
@@ -214,13 +218,13 @@
         "Graphics/Tilesets/Outdoor/RoadSidewalk.tsx",
         "Graphics/Tilesets/Outdoor/RetailBuildings.tsx",
         "Graphics/Tilesets/Outdoor/Houses.tsx",
-        "Graphics/Maps/Park/Park.tmx",
-        "Graphics/Maps/Park/Venue.tmx",
         "Graphics/Maps/Forest/ForestDistrict.tmx",
+        "Graphics/Tilesets/Outdoor/Beach.tsx",
+        "Graphics/Maps/Park/Venue.tmx",
+        "Graphics/Maps/Park/Park.tmx",
         "Graphics/Tilesets/Outdoor/Railroad.tsx",
         "Graphics/Maps/Template/TownHouseTemplate.tmx",
-        "Graphics/Maps/Gray Box/ShakerHouseGrayBox.tmx",
-        "Graphics/Maps/Template/NPCHouseTemplate.tmx"
+        "Graphics/Maps/Gray Box/ShakerHouseGrayBox.tmx"
     ],
     "resizeMap.removeObjects": false,
     "tileset.lastUsedFormat": "tsx",
