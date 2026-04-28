@@ -8092,6 +8092,7 @@ GameObject:
   - component: {fileID: 2272269506488604975}
   - component: {fileID: 6956112047748774549}
   - component: {fileID: 4430160341713951802}
+  - component: {fileID: 7620641040660867948}
   m_Layer: 5
   m_Name: Time
   m_TagString: Untagged
@@ -8216,6 +8217,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7620641040660867948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2783461702912119427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b021765946e654ca228b5e25f31e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _variableText:
+  - 4:19
+  - 7:12
+  - 7:44
 --- !u!1 &2797800408207631666
 GameObject:
   m_ObjectHideFlags: 0
@@ -9335,6 +9352,8 @@ MonoBehaviour:
   _playerSmall: {fileID: 21300000, guid: cb5f6fb7137bb854a90497475ef49da7, type: 3}
   _destinationCoords:
   - {x: 62, y: -32}
+  - {x: 156, y: -39}
+  - {x: 56, y: -26}
   - {x: 172.5, y: -243}
   - {x: 191.5, y: -87}
   - {x: 122, y: -120}
