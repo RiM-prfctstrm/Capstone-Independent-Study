@@ -44,6 +44,7 @@ public class SplashScreen : MonoBehaviour
         _mixer.SetFloat("menVol", Mathf.Log10(GlobalVariableTracker.menuVolume) * 20);
         _options.SetDisplayMode(GlobalVariableTracker.windowedMode);
         _options.ResizeScreen(GlobalVariableTracker.windowScale);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     /// <summary>
