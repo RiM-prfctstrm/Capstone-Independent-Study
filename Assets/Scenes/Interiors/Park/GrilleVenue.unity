@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4a7de76fbfa36408880e8bbc908603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _activeMissions: 01000000
+  _activeMissions: 0100000002000000
 --- !u!1 &1071152893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1757,6 +1757,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1652061828}
   - component: {fileID: 1652061829}
+  - component: {fileID: 1652061830}
   m_Layer: 0
   m_Name: Horsdoeuvres
   m_TagString: Untagged
@@ -1831,6 +1832,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1652061830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652061827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4a7de76fbfa36408880e8bbc908603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _activeMissions: 0100000002000000
 --- !u!1001 &1705253148
 PrefabInstance:
   m_ObjectHideFlags: 0
