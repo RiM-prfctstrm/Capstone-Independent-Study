@@ -2,7 +2,7 @@
  * FILE     : ClearImage.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/6/24
- * UPDATED  : 3/10/24
+ * UPDATED  : 5/21/26
  * 
  * DESC     : Removes an image from the screen.
 =================================================================================================*/
@@ -18,6 +18,7 @@ public class ClearImage : CutsceneEvent
 
     // The image slot to disable
     [SerializeField] int _clearSlot;
+    int _imageOrder;
 
     #endregion
 
@@ -30,7 +31,18 @@ public class ClearImage : CutsceneEvent
     {
         base.PlayEventFunction();
 
-        CutsceneManager.cutsceneManager.UISpace.transform.GetChild(1).GetChild(_clearSlot).
+        // Finds imagelocation
+        if (ScreenEffects.isScreenBlack)
+        {
+            _imageOrder = 2;
+        }
+        else
+        {
+            _imageOrder = 1;
+        }
+
+        // Clears image
+        CutsceneManager.cutsceneManager.UISpace.transform.GetChild(_imageOrder).GetChild(_clearSlot).
             gameObject.SetActive(false);
         eventComplete = true;
     }
