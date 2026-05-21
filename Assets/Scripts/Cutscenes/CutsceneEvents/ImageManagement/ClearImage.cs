@@ -32,17 +32,17 @@ public class ClearImage : CutsceneEvent
         base.PlayEventFunction();
 
         // Finds imagelocation
-        if (ScreenEffects.isScreenBlack)
+        /*if (ScreenEffects.isScreenBlack)
         {
             _imageOrder = 2;
         }
         else
         {
             _imageOrder = 1;
-        }
+        }*/
 
         // Clears image
-        CutsceneManager.cutsceneManager.UISpace.transform.GetChild(_imageOrder).GetChild(_clearSlot).
+        CutsceneManager.cutsceneManager.UISpace.transform.GetChild(1).GetChild(_clearSlot).
             gameObject.SetActive(false);
         eventComplete = true;
     }
