@@ -2,7 +2,7 @@
  * FILE     : AutomaticEventController.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/5/24
- * UPDATED  : 5/20/2025
+ * UPDATED  : 5/22/2026
  * 
  * DESC     : Decides whether cutscenes that start automatically when a scene is loaded should
  *            play, and if multiple such scenes exist, which one to activate.
@@ -39,7 +39,6 @@ public class AutomaticEventController : MonoBehaviour
 
         // Plays a cutscene if it hasn't already played
         if (!_autoCutscenes[readyCutscene].hasPlayed)
-            Debug.Log("amogus");
         {
             CutsceneManager.cutsceneManager.StartCutscene(_autoCutscenes[readyCutscene]);
         }

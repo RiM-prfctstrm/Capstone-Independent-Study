@@ -2,7 +2,7 @@
  * FILE     : DialogueManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/12/24
- * UPDATED  : 12/22/25
+ * UPDATED  : 5/21/26
  * 
  * DESC     : Controls which dialogue is currently displayed.
 =================================================================================================*/
@@ -222,7 +222,10 @@ public class DialogueManager : MonoBehaviour
         NPCInteraction.inNPCInteraction = false;
 
         // Ends Active Dialogue sequence
-        StopCoroutine(dialogRoutine);
+        if (dialogRoutine != null)
+        {
+            StopCoroutine(dialogRoutine);
+        }
 
         // Prevents auto-advancing through next text
         advancing = false;

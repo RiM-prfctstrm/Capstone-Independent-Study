@@ -2,7 +2,7 @@
  * FILE     : SceneTransition
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/29/24
- * UPDATED  : 3/24/26
+ * UPDATED  : 5/22/26
  * 
  * DESC     : Switches scenes and sets variables to initialize that scene's state after transition.
 =================================================================================================*/
@@ -46,8 +46,16 @@ public class SceneTransition
         _player.playerAudioSource.PlayOneShot(_player.sceneShift);
 
         // Fades out
-        ScreenEffects.fadingOut = true;
-        yield return new WaitUntil(() => ScreenEffects.fadingOut == false);
+        if (!CutsceneManager.skippingCutscene)
+        {
+            ScreenEffects.fadingOut = true;
+            yield return new WaitUntil(() => ScreenEffects.fadingOut == false);
+        }
+        else
+        {
+            yield return new WaitForFixedUpdate();
+        }
+
 
         // Used when the player is meant to keep current direction
         if (startDirection >= 4)
@@ -85,6 +93,12 @@ public class SceneTransition
         }
 
         // Signals that a scene transition is in effect
+        // Logs Error for transition doubling up
+        if (_inTransition)
+        {
+            Debug.LogError("WARNING: Attempting to load a scene while a different scene is still" +
+                "loading! Imminent crash!");
+        }
         _inTransition = true;
 
         // Stops player from moving
@@ -141,8 +155,13 @@ public class SceneTransition
         if (!CutsceneManager.skippingCutscene && !CutsceneManager.inCutscene)
         {
             ScreenEffects.fadingIn = true;
+            yield return new WaitUntil(() => ScreenEffects.fadingIn == false);
         }
-        yield return new WaitUntil(() => ScreenEffects.fadingIn == false);
+        else
+        {
+            yield return new WaitForFixedUpdate();
+        }
+        
 
         // Reenables Movement
         if (!CutsceneManager.inCutscene)
