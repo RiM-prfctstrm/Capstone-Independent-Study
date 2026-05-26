@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a2e80aa6127fbc49811085b2cd988a2, type: 3}
-  m_Name: m2_0_005_FlusterWait
+  m_Script: {fileID: 11500000, guid: b0e19dc9de3c50243913ca4452155e2e, type: 3}
+  m_Name: m2_0_009_0ShowTama
   m_EditorClassIdentifier: 
-  eventComplete: 1
-  _waitSeconds: 1.24
+  eventComplete: 0
+  _targetID: 3
+  _setVisible: 1
