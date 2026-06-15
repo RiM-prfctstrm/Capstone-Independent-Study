@@ -2,7 +2,7 @@
  * FILE     : MapMovement.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 12/1/25
- * UPDATED  : 3/25/26
+ * UPDATED  : 6/15/26
  * 
  * DESC     : Allows the player to move the map within specified constraints
 =================================================================================================*/
@@ -52,8 +52,8 @@ public class MapMovement : MonoBehaviour
         _xInput = _moveInputs.FindAction("MoveX");
         _yInput = _moveInputs.FindAction("MoveY");
         // Sets maximum constraints for movements
-        _maxX = -(int)_rectTransform.rect.width / 2;
-        _maxY = (int)_rectTransform.rect.height / 2;
+        _maxX = -(int)_rectTransform.rect.width + 384 - 4;
+        _maxY = (int)_rectTransform.rect.height - 216 + 56;
         Debug.Log(_maxX);
         Debug.Log(_maxY);
     }
@@ -74,7 +74,7 @@ public class MapMovement : MonoBehaviour
         _rectTransform.anchoredPosition = new Vector2
             (
             Mathf.Clamp(_rectTransform.anchoredPosition.x, _maxX, 0),
-            Mathf.Clamp(_rectTransform.anchoredPosition.y, 0, _maxY));
+            Mathf.Clamp(_rectTransform.anchoredPosition.y, -4, _maxY));
 
         // Determines which arrows should be visible
         // Down
@@ -114,7 +114,7 @@ public class MapMovement : MonoBehaviour
             _arrowArray[2].CrossFadeAlpha(1, 0, true);
         }
         // Up
-        if (_rectTransform.anchoredPosition.y == 0)
+        if (_rectTransform.anchoredPosition.y == -4)
         {
             if (_arrowArray[3].color.a != 0)
             {
