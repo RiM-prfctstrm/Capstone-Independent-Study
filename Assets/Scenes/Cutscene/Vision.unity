@@ -530,8 +530,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _autoCutscenes:
-  - {fileID: 11400000, guid: e277a3c86aecb4e4aaec870839829fc7, type: 2}
   - {fileID: 0}
+  - {fileID: 11400000, guid: b232d12b68cc82a43ab1f232345a2276, type: 2}
   - {fileID: 11400000, guid: e277a3c86aecb4e4aaec870839829fc7, type: 2}
   _cyclesPerMission: 1
   readyCutscene: 0
@@ -547,7 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4a7de76fbfa36408880e8bbc908603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _activeMissions: 0000000002000000
+  _activeMissions: 0100000002000000
 --- !u!4 &886453899
 Transform:
   m_ObjectHideFlags: 0

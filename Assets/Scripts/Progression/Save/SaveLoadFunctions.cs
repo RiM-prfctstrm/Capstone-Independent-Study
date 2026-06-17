@@ -2,7 +2,7 @@
  * FILE     : SaveLoadFunctions.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/25/25
- * UPDATED  : 13/25/26
+ * UPDATED  : 6/17/26
  * 
  * DESC     : Writes and reads permanent save data.
 =================================================================================================*/
@@ -147,6 +147,13 @@ public class SaveLoadFunctions
         {
             _saveWriter.Write(_snailsToSave);
             _saveWriter.Dispose();
+        }
+
+        // Ensures CollectibleManager exists
+        if (CollectibleManager.collectibleManager == null)
+        {
+            CollectibleManager.collectibleManager =
+                GameObject.FindFirstObjectByType<CollectibleManager>();
         }
 
         // Resets nanoblips
