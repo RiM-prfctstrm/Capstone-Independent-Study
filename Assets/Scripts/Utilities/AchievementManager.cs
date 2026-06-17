@@ -2,7 +2,7 @@
  * FILE     : AchievementManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 3/27/26
- * UPDATED  : 3/26/26
+ * UPDATED  : 6/17/26
  * 
  * DESC     : Tracks and awards Steam Achievements
 =================================================================================================*/
@@ -27,7 +27,6 @@ public class AchievementManager : MonoBehaviour
     void Start()
     {
         SteamUserStats.StoreStats();
-        Debug.Log("Achievement: " + SteamUserStats.GetAchievement("ACH_FIRST_SNAIL", out Check_It));
     }
 
     // Update is called once per frame
@@ -43,7 +42,8 @@ public class AchievementManager : MonoBehaviour
     /// <summary>
     /// Checks whether a steam achievement has been awarded, and if not unlocks it
     /// </summary>
-    /// <param name="achName">Name of the achievement to award</param>
+    /// <param name="achName">Name of the achievement to award. Shoul use the API Name listed in
+    /// Steamworks</param>
     public static void AwardAchievement(string achName)
     {
         bool _achieved;
@@ -64,10 +64,6 @@ public class AchievementManager : MonoBehaviour
 
         SteamUserStats.StoreStats();
     }
-
-    #endregion
-
-    #region DEBUG
 
     #endregion
 }
