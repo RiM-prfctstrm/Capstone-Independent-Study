@@ -2,7 +2,7 @@
  * FILE     : SplashScreen.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 8/13/25
- * UPDATED  : 2/18/25
+ * UPDATED  : 6/23/26
  * 
  * DESC     : Fades in and out a splash screen.
 =================================================================================================*/
@@ -45,6 +45,7 @@ public class SplashScreen : MonoBehaviour
         _options.SetDisplayMode(GlobalVariableTracker.windowedMode);
         _options.ResizeScreen(GlobalVariableTracker.windowScale);
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     /// <summary>
