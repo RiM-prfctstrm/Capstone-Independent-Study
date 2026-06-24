@@ -2,7 +2,7 @@
  * FILE     : EssentialPreserver.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/30/24
- * UPDATED  : 4/19/25
+ * UPDATED  : 6/24/26
  * 
  * DESC     : Used to keep scene essentials when a new scene is loaded.
 =================================================================================================*/
@@ -19,6 +19,9 @@ public class EssentialPreserver : MonoBehaviour
 
     // List of one-off cutscenes, should only be edited in Start Up Controller Prefab
     [SerializeField] Cutscene[] _oneOffCutscenes;
+
+    // List of fish loot tables
+    [SerializeField] FishLootTable[] _fishTables;
 
     // Failsafe bools to prevent repeat firing of methods
     bool _cutscenesInitialized = false;
@@ -45,7 +48,9 @@ public class EssentialPreserver : MonoBehaviour
 
         // Performs bespoke initializations for other kinds of objects
         InitializeCutscenes();
+        LoadFishTable();
         DialogueManager.dialogueManager.SetMenuEffectsVolume();
+
 
         // Keeps object and children around when new scenes are loaded
         DontDestroyOnLoad(gameObject);
@@ -75,6 +80,15 @@ public class EssentialPreserver : MonoBehaviour
 
         // Tells game that cutscenes are initialized
         _cutscenesInitialized = true;
+    }
+
+    /// <summary>
+    /// Generates loot table for couchfishing
+    /// </summary>
+    void LoadFishTable()
+    {
+        FishSaveManager.gachaTable = 
+            FishSaveManager.LoadCurrentTable(_fishTables[GlobalVariableTracker.currentMission]);
     }
 
     #endregion

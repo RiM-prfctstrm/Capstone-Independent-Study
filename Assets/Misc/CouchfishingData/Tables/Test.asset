@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c873aee5239f8a34b8ded2e2e60450e5, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  tableFish:
+  - {fileID: 11400000, guid: e1ff0036c4e6f184493fcc69fb051cbe, type: 2}
+  - {fileID: 11400000, guid: 2a266650d293f7d459b24a882294d87b, type: 2}
+  - {fileID: 11400000, guid: 62e3b3bec48a9774d80b941e021f0509, type: 2}
+  dropRates: 050000000300000002000000

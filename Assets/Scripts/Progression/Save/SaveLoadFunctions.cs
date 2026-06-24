@@ -2,7 +2,7 @@
  * FILE     : SaveLoadFunctions.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/25/25
- * UPDATED  : 6/17/26
+ * UPDATED  : 6/24/26
  * 
  * DESC     : Writes and reads permanent save data.
 =================================================================================================*/
@@ -24,8 +24,8 @@ public class SaveLoadFunctions
     // IO Operators
     static string _basePath = Application.dataPath + "/SaveData/ProgressFiles/Slot";
     static string _snailTempPath = Application.dataPath + "/SaveData/Collectibles/SnailsTemp.txt";
-    static StreamWriter _saveWriter;
     static StreamReader _saveReader;
+    static StreamWriter _saveWriter;
 
     #endregion
 
