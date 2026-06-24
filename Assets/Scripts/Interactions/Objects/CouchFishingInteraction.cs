@@ -24,6 +24,7 @@ public class CouchFishingInteraction : InteractableObject
     public override void OnInteractedWith()
     {
         FishSaveManager.LogFishName();
+        FishSaveManager.SavePermanentData();
     }
 
     #endregion

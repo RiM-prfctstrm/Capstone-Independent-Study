@@ -32,6 +32,49 @@ public class FishSaveManager
     #region SAVING
 
     /// <summary>
+    /// Saves order in gacha and currently collected fish.
+    /// </summary>
+    public static void SavePermanentData()
+    {
+        // Vars
+        bool redundant = false;
+
+        // Save writer
+        using(_writer = new StreamWriter(_basePath + 1 + "/Fish.txt"))
+        {
+            // Saves position in gacha
+            _writer.WriteLine(gachaOrder);
+            _writer.Dispose();
+        }
+
+        //Prevents redundancy
+        using (_reader = new StreamReader(_basePath + 1 + "/Fish.txt"))
+        {
+            while (_reader.Peek() != -1)
+            {
+                if (_reader.ReadLine() == gachaTable[gachaOrder - 1].fishName)
+                {
+                    redundant = true;
+                }
+            }
+
+            _reader.Dispose();
+        }
+
+        // Saves latest fish
+        if (!redundant)
+        {
+            using (_writer = File.AppendText(_basePath + 1 + "/Fish.txt"))
+            {
+                _writer.WriteLine(gachaTable[gachaOrder - 1].fishName);
+
+                _writer.Dispose();
+            }
+        }
+
+    }
+
+    /// <summary>
     /// Saves the current fish order by referencing the fish objects' positions in the daily loot
     /// table.
     /// </summary>
@@ -74,8 +117,23 @@ public class FishSaveManager
             _reader.Dispose();
         }
 
+        // Loads order in table
+        LoadGachaOrder();
+
         // Sets loot table
         return tableConstructor;
+    }
+
+    /// <summary>
+    /// Remembers the position in the gacha list
+    /// </summary>
+    public static void LoadGachaOrder()
+    {
+        using (_reader = new StreamReader(_basePath + 1 + "/Fish.txt"))
+        {
+            gachaOrder = int.Parse(_reader.ReadLine());
+            _reader.Dispose();
+        }
     }
 
     #endregion
