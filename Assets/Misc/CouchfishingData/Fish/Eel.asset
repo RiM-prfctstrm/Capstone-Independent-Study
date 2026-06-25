@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: Eel
   m_EditorClassIdentifier: 
   fishName: Electric Eel
-  sprite: {fileID: 0}
+  sprite: {fileID: 136375515, guid: 43c41498ac2f0384bbef11ca56ef4d1c, type: 3}
   pickUpJingle: {fileID: 0}
   pickUpText:
-    dialogueBoxes: []
+    dialogueBoxes:
+    - dialogueText: You got an electric eel!
+      nameTag: 
+      portrait: {fileID: 0}
+    - dialogueText: Now, you'll never run out of battery again!
+      nameTag: 
+      portrait: {fileID: 0}
   pickUpOffset: {x: 0, y: 0}

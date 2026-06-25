@@ -12520,6 +12520,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21b60db9a74e9f418755fe276aa2da9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _objectEvent: {fileID: 11400000, guid: e719fc5364c833a439126dac758719de, type: 2}
+  _outOfFishEvent: {fileID: 11400000, guid: 8684bce6f215b174e8c16cc30113a61b, type: 2}
+  _flavorText: {fileID: 11400000, guid: 074356d5c8496fe44b3e96edb8bc0fc2, type: 2}
+  _displayEvent: {fileID: 11400000, guid: 00c165fc7cc75ba43b155d020684a111, type: 2}
+  _animator: {fileID: 0}
 --- !u!1 &1729144187
 GameObject:
   m_ObjectHideFlags: 0

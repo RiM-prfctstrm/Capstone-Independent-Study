@@ -2,7 +2,7 @@
  * FILE     : FishData.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 6/24/26
- * UPDATED  : 6/24/26
+ * UPDATED  : 6/25/26
  * 
  * DESC     : Reads and Writes data for which fish have been collected. Also produces and stores
  *            randomized loot tables.
@@ -39,10 +39,9 @@ public class FishSaveManager
         // Vars
         bool redundant = false;
 
-        // Save writer
-        using(_writer = new StreamWriter(_basePath + 1 + "/Fish.txt"))
-        {
-            // Saves position in gacha
+        // Saves position in gacha
+        using (_writer = new StreamWriter(_basePath + 1 + "/Fish.txt"))
+        {           
             _writer.WriteLine(gachaOrder);
             _writer.Dispose();
         }
@@ -81,7 +80,7 @@ public class FishSaveManager
     /// <param name="refList">Daily loot table</param>
     public static void SaveCurrentTable(FishLootTable refList)
     {
-        using(_writer = new StreamWriter(_tempTablePath))
+        using (_writer = new StreamWriter(_tempTablePath))
         {
             // Translates fish objs into ints that can be used to reference their positions in a
             // list
@@ -108,7 +107,7 @@ public class FishSaveManager
         List<FishData> tableConstructor = new List<FishData>();
 
         // Translates saved ints into fish objects
-        using(_reader = new StreamReader(_tempTablePath))
+        using (_reader = new StreamReader(_tempTablePath))
         {
             while(_reader.Peek() != -1)
             {
@@ -166,11 +165,11 @@ public class FishSaveManager
         int randomSlot;
 
         // Creates empty list
-        foreach(int i in SeedData.dropRates)
+        foreach (int i in SeedData.dropRates)
         {
             tableSize += i;
         }
-        for(int i = 0; i < tableSize; i++)
+        for (int i = 0; i < tableSize; i++)
         {
             tableConstructor.Add(null);
         }
@@ -179,7 +178,7 @@ public class FishSaveManager
         /// IMPORTANT: Since more common fish are supposed to be seeded first, but its more
         /// efficient to cycle through SeedData linearly than to sort first, ENTER S.O. DATA WITH
         /// MOST COMMON ENTRIES FIRST
-        foreach(FishData fish in SeedData.tableFish)
+        foreach (FishData fish in SeedData.tableFish)
         {
             // Loop spawns fish in random points in tableConstructor an amount of times equal to
             // fish's corresponding dropRate
@@ -209,6 +208,9 @@ public class FishSaveManager
 
     #region DEBUG
 
+    /// <summary>
+    /// Tests cycling through gacha table
+    /// </summary>
     public static void LogFishName()
     {
         if (gachaOrder >= gachaTable.Count)

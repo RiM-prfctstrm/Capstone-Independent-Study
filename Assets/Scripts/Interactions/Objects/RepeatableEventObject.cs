@@ -2,7 +2,7 @@
  * FILE     : RepeatableEventObject.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/7/25
- * UPDATED  : 2/7/25
+ * UPDATED  : 6/25/26
  * 
  * DESC     : Objects with this attached will play a cutscene whenever the player interacts with
  *            them. Currently only supports a single event.
@@ -16,7 +16,7 @@ public class RepeatableEventObject : InteractableObject
     #region VARIABLES
 
     // Cutscene to play
-    [SerializeField] Cutscene _objectEvent;
+    [SerializeField] protected Cutscene _objectEvent;
 
     #endregion
 

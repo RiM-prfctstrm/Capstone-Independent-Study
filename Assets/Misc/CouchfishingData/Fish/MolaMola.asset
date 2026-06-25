@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: MolaMola
   m_EditorClassIdentifier: 
   fishName: Mola Mola
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: ff7f67808a70ce3478da9d3da3c77ab5, type: 3}
   pickUpJingle: {fileID: 0}
   pickUpText:
-    dialogueBoxes: []
+    dialogueBoxes:
+    - dialogueText: You got an ocean sunfish!
+      nameTag: 
+      portrait: {fileID: 0}
+    - dialogueText: He's stupid! You love him!
+      nameTag: 
+      portrait: {fileID: 0}
   pickUpOffset: {x: 0, y: 0}

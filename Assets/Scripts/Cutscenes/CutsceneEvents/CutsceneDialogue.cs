@@ -2,7 +2,7 @@
  * FILE     : CutsceneDialogue.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/5/24
- * UPDATED  : 11/25/24
+ * UPDATED  : 6/25/26
  * 
  * DESC     : A modified version of DialogueEvent.cs for use in cutscenes
 =================================================================================================*/
@@ -14,9 +14,11 @@ using UnityEngine;
 public class CutsceneDialogue : CutsceneEvent
 {
     #region VARIABLES
-    
+
     // The Dialogue that plays
-    [SerializeField] DialogueEvent cutsceneDialogue;
+    // These still use the old private var conventions because I don't want to mess up existing
+    // references
+    [SerializeField] public DialogueEvent cutsceneDialogue;
 
     #endregion
 

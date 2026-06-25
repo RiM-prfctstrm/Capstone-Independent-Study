@@ -2,7 +2,7 @@
  * FILE     : GetDummyItem.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 3/24/26
- * UPDATED  : 3/24/26
+ * UPDATED  : 6/25/26
  * 
  * DESC     : Mimics the effects of getting items.
 =================================================================================================*/
@@ -15,8 +15,10 @@ public class GetDummyItem : CutsceneEvent
 {
     #region VARIABLES
 
-    [SerializeField] Sprite _prize;
-    [SerializeField] MusicTrack _jingle;
+    // These still use the old private var conventions because I don't want to mess up existing
+    // references
+    [SerializeField] public Sprite _prize;
+    [SerializeField] public MusicTrack _jingle;
 
     #endregion
 

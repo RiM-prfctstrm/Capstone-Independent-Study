@@ -13,8 +13,17 @@ MonoBehaviour:
   m_Name: GreatWhite
   m_EditorClassIdentifier: 
   fishName: Great White Shark
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: e2d51fd8b94898f4ab68dae4ec01eafe, type: 3}
   pickUpJingle: {fileID: 0}
   pickUpText:
-    dialogueBoxes: []
+    dialogueBoxes:
+    - dialogueText: You got a great white shark do do do-do do-do!
+      nameTag: 
+      portrait: {fileID: 0}
+    - dialogueText: Oh no, it's a 4/4 ostinato in C Major!
+      nameTag: 
+      portrait: {fileID: 0}
+    - dialogueText: Every sailor knows that means toddlers!
+      nameTag: 
+      portrait: {fileID: 0}
   pickUpOffset: {x: 0, y: 0}
