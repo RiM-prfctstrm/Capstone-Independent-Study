@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-public class FishSaveManager
+public static class FishSaveManager
 {
     #region VARIABLES
 
@@ -40,20 +40,19 @@ public class FishSaveManager
         bool redundant = false;
 
         // Saves position in gacha
-        using (_writer = new StreamWriter(_basePath + 1 + "/Fish.txt"))
-        {           
-            _writer.WriteLine(gachaOrder);
-            _writer.Dispose();
-        }
+        SaveOrder();
 
         //Prevents redundancy
-        using (_reader = new StreamReader(_basePath + 1 + "/Fish.txt"))
+        using(_reader = new StreamReader(_basePath + 1 + "/Fish.txt"))
         {
             while (_reader.Peek() != -1)
             {
-                if (_reader.ReadLine() == gachaTable[gachaOrder - 1].fishName)
+                if (gachaTable[gachaOrder - 1] != null)
                 {
-                    redundant = true;
+                    if (_reader.ReadLine() == gachaTable[gachaOrder - 1].fishName)
+                    {
+                        redundant = true;
+                    }
                 }
             }
 
@@ -63,9 +62,12 @@ public class FishSaveManager
         // Saves latest fish
         if (!redundant)
         {
-            using (_writer = File.AppendText(_basePath + 1 + "/Fish.txt"))
+            using(_writer = File.AppendText(_basePath + 1 + "/Fish.txt"))
             {
-                _writer.WriteLine(gachaTable[gachaOrder - 1].fishName);
+                if (gachaTable[gachaOrder - 1] != null)
+                {
+                    _writer.WriteLine(gachaTable[gachaOrder - 1].fishName);
+                }
 
                 _writer.Dispose();
             }
@@ -80,14 +82,28 @@ public class FishSaveManager
     /// <param name="refList">Daily loot table</param>
     public static void SaveCurrentTable(FishLootTable refList)
     {
-        using (_writer = new StreamWriter(_tempTablePath))
+        using(_writer = new StreamWriter(_tempTablePath))
         {
             // Translates fish objs into ints that can be used to reference their positions in a
             // list
-            foreach(FishData fish in gachaTable)
+            foreach (FishData fish in gachaTable)
             {
                 _writer.WriteLine(refList.tableFish.IndexOf(fish));
             }
+
+            _writer.Dispose();
+        }
+    }
+
+    /// <summary>
+    /// Saves the current order in the gacha table
+    /// </summary>
+    public static void SaveOrder()
+    {
+        // Saves position in gacha
+        using(_writer = new StreamWriter(_basePath + 1 + "/Fish.txt"))
+        {
+            _writer.WriteLine(gachaOrder);
             _writer.Dispose();
         }
     }
@@ -105,13 +121,22 @@ public class FishSaveManager
     {
         // Vars
         List<FishData> tableConstructor = new List<FishData>();
+        int listID;
 
         // Translates saved ints into fish objects
-        using (_reader = new StreamReader(_tempTablePath))
+        using(_reader = new StreamReader(_tempTablePath))
         {
-            while(_reader.Peek() != -1)
+            while (_reader.Peek() != -1)
             {
-                tableConstructor.Add(refList.tableFish[int.Parse(_reader.ReadLine())]);
+                listID = int.Parse(_reader.ReadLine());
+
+                // Creates blank table if referenced fish cannot be found
+                if (refList.tableFish[listID] == null)
+                {
+                    return new List<FishData>();
+                }
+
+                tableConstructor.Add(refList.tableFish[listID]);
             }
             _reader.Dispose();
         }
@@ -128,7 +153,7 @@ public class FishSaveManager
     /// </summary>
     public static void LoadGachaOrder()
     {
-        using (_reader = new StreamReader(_basePath + 1 + "/Fish.txt"))
+        using(_reader = new StreamReader(_basePath + 1 + "/Fish.txt"))
         {
             gachaOrder = int.Parse(_reader.ReadLine());
             _reader.Dispose();
