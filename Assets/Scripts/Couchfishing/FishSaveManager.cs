@@ -2,7 +2,7 @@
  * FILE     : FishData.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 6/24/26
- * UPDATED  : 6/25/26
+ * UPDATED  : 6/26/26
  * 
  * DESC     : Reads and Writes data for which fish have been collected. Also produces and stores
  *            randomized loot tables.
@@ -153,7 +153,7 @@ public static class FishSaveManager
     /// </summary>
     public static void LoadGachaOrder()
     {
-        using(_reader = new StreamReader(_basePath + 1 + "/Fish.txt"))
+        using (_reader = new StreamReader(_basePath + 1 + "/Fish.txt"))
         {
             gachaOrder = int.Parse(_reader.ReadLine());
             _reader.Dispose();

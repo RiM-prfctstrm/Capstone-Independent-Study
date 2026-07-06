@@ -2,9 +2,10 @@
  * FILE     : ResetFishTable.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 6/25/26
- * UPDATED  : 6/25/26
+ * UPDATED  : 6/26/26
  * 
- * DESC     : Generates and sets new table for couchfishing, while also resetting order for table
+ * DESC     : Generates and sets new table for couchfishing, while also resetting order for table.
+ *            Must go after collectibles getting reset, since that event erases the file.
 =================================================================================================*/
 using System.Collections;
 using System.Collections.Generic;
@@ -15,7 +16,9 @@ using UnityEngine;
 public class ResetFishTable : CutsceneEvent
 {
     #region VARIABLES
-
+    
+    // Data to generate table from. Make sure to have it match the current mission's table
+    // in SceneEssentials
     [SerializeField] FishLootTable _newTable;
 
     #endregion
