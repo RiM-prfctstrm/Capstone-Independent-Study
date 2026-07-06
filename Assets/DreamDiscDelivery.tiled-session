@@ -13,8 +13,8 @@
             "scale": 0.12,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 3600.000000000001,
-                "y": 1850.0000000000005
+                "x": 9900,
+                "y": 5150.000000000001
             }
         },
         "Graphics/Maps/Central/CentralDistrict.tmx": {
@@ -38,10 +38,10 @@
         },
         "Graphics/Maps/Forest/ForestDistrict.tmx": {
             "expandedGroupLayers": [
-                3,
-                12,
                 5,
-                10
+                10,
+                3,
+                12
             ],
             "expandedObjectLayers": [
                 2
@@ -88,8 +88,8 @@
         },
         "Graphics/Maps/Park/Park.tmx": {
             "expandedGroupLayers": [
-                3,
-                7
+                7,
+                3
             ],
             "scale": 0.03,
             "selectedLayer": 8,
@@ -113,19 +113,31 @@
             "scale": 2,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 1536.25,
+                "x": 1536.5,
                 "y": 880
             }
         },
         "Graphics/Maps/Retail/RetailDistrict.tmx": {
             "expandedGroupLayers": [
-                4
+                4,
+                10
             ],
             "scale": 1,
-            "selectedLayer": 1,
+            "selectedLayer": 9,
             "viewCenter": {
-                "x": 1990.5,
-                "y": 2448
+                "x": 425,
+                "y": 3240
+            }
+        },
+        "Graphics/Maps/Retail/RetailNew.tmx": {
+            "expandedGroupLayers": [
+                4
+            ],
+            "scale": 0.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1070,
+                "y": 1292
             }
         },
         "Graphics/Maps/Template/NPCHouseTemplate.tmx": {
@@ -221,11 +233,11 @@
         }
     },
     "last.imagePath": "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Capstone-Independent-Study/Assets/Graphics/Tilesets/Outdoor",
-    "map.height": 625,
+    "map.height": 300,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
     "map.tileWidth": 16,
-    "map.width": 1350,
+    "map.width": 300,
     "openFiles": [
         "Graphics/Tilesets/Outdoor/UrbanGreenspace.tsx",
         "Graphics/Tilesets/Outdoor/Forest.tsx",
@@ -240,6 +252,7 @@
     ],
     "project": "DreamDiscDelivery.tiled-project",
     "recentFiles": [
+        "Graphics/Maps/Residential/ResidentialDistrict.tmx",
         "Graphics/Tilesets/Outdoor/UrbanGreenspace.tsx",
         "Graphics/Tilesets/Outdoor/Forest.tsx",
         "Graphics/Tilesets/Outdoor/RoadSidewalk.tsx",
@@ -248,7 +261,6 @@
         "Graphics/Maps/Forest/ForestDistrict.tmx",
         "Graphics/Maps/Retail/RetailDistrict.tmx",
         "Graphics/Maps/Park/Park.tmx",
-        "Graphics/Maps/Residential/ResidentialDistrict.tmx",
         "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Artwork/Placeholder/GrayBoxBase.tmx",
         "Graphics/Tilesets/Outdoor/Beach.tsx",
         "Graphics/Maps/Park/Venue.tmx"
