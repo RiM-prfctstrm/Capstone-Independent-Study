@@ -10,11 +10,11 @@
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
         "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Artwork/Placeholder/GrayBoxBase.tmx": {
-            "scale": 0.5,
+            "scale": 0.25,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 10468,
-                "y": 3172
+                "x": 10176,
+                "y": 2580
             }
         },
         "Graphics/Maps/Central/CentralDistrict.tmx": {
@@ -28,6 +28,17 @@
                 "y": 817
             }
         },
+        "Graphics/Maps/Central/NewCentral.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 0.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 5270,
+                "y": 1622
+            }
+        },
         "Graphics/Maps/Forest/DecalStore.tmx": {
             "scale": 6.156730769230769,
             "selectedLayer": 1,
@@ -38,10 +49,10 @@
         },
         "Graphics/Maps/Forest/ForestDistrict.tmx": {
             "expandedGroupLayers": [
-                5,
-                10,
                 3,
-                12
+                12,
+                5,
+                10
             ],
             "expandedObjectLayers": [
                 2
@@ -49,7 +60,7 @@
             "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1049,
+                "x": 845,
                 "y": 591
             }
         },
@@ -88,14 +99,14 @@
         },
         "Graphics/Maps/Park/Park.tmx": {
             "expandedGroupLayers": [
-                7,
-                3
+                3,
+                7
             ],
             "scale": 0.03,
             "selectedLayer": 8,
             "viewCenter": {
-                "x": -6833.333333333332,
-                "y": 1033.3333333333358
+                "x": -6816.666666666667,
+                "y": 1033.3333333333321
             }
         },
         "Graphics/Maps/Park/Venue.tmx": {
@@ -110,11 +121,14 @@
             }
         },
         "Graphics/Maps/Residential/ResidentialDistrict.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
             "scale": 1,
-            "selectedLayer": 0,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 2442,
-                "y": 1044
+                "x": 2387,
+                "y": 648
             }
         },
         "Graphics/Maps/Retail/RetailDistrict.tmx": {
@@ -125,8 +139,8 @@
             "scale": 1,
             "selectedLayer": 9,
             "viewCenter": {
-                "x": 425,
-                "y": 3240
+                "x": 1990.5,
+                "y": 2448
             }
         },
         "Graphics/Maps/Retail/RetailNew.tmx": {
@@ -139,8 +153,8 @@
             "scale": 0.5,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 1070,
-                "y": 1292
+                "x": 922,
+                "y": 2480
             }
         },
         "Graphics/Maps/Template/NPCHouseTemplate.tmx": {
@@ -236,11 +250,11 @@
         }
     },
     "last.imagePath": "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Capstone-Independent-Study/Assets/Graphics/Tilesets/Outdoor",
-    "map.height": 300,
+    "map.height": 400,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
     "map.tileWidth": 16,
-    "map.width": 300,
+    "map.width": 400,
     "openFiles": [
         "Graphics/Tilesets/Outdoor/UrbanGreenspace.tsx",
         "Graphics/Tilesets/Outdoor/Forest.tsx",
@@ -255,14 +269,14 @@
     ],
     "project": "DreamDiscDelivery.tiled-project",
     "recentFiles": [
-        "Graphics/Maps/Residential/ResidentialDistrict.tmx",
-        "Graphics/Tilesets/Outdoor/UrbanGreenspace.tsx",
-        "Graphics/Tilesets/Outdoor/Forest.tsx",
-        "Graphics/Tilesets/Outdoor/RoadSidewalk.tsx",
-        "Graphics/Tilesets/Outdoor/RetailBuildings.tsx",
         "Graphics/Tilesets/Outdoor/Houses.tsx",
-        "Graphics/Maps/Forest/ForestDistrict.tmx",
+        "Graphics/Tilesets/Outdoor/RetailBuildings.tsx",
+        "Graphics/Tilesets/Outdoor/RoadSidewalk.tsx",
+        "Graphics/Tilesets/Outdoor/Forest.tsx",
+        "Graphics/Tilesets/Outdoor/UrbanGreenspace.tsx",
+        "Graphics/Maps/Residential/ResidentialDistrict.tmx",
         "Graphics/Maps/Retail/RetailDistrict.tmx",
+        "Graphics/Maps/Forest/ForestDistrict.tmx",
         "Graphics/Maps/Park/Park.tmx",
         "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Artwork/Placeholder/GrayBoxBase.tmx",
         "Graphics/Tilesets/Outdoor/Beach.tsx",
