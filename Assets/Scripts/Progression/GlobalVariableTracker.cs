@@ -2,7 +2,7 @@
  * FILE     : GlobalVariableTracker.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/4/24
- * UPDATED  : 4/23/26
+ * UPDATED  : 7/14/26
  * 
  * DESC     : Stores data that is meant to persist throughout the entire game. Variables are kept
  *            in an initialized state to easily create a new save. If a save is loaded, they are
@@ -72,6 +72,7 @@ public class GlobalVariableTracker
         /// State control. Technically not strictly progression, but it's easier to wire these into
         /// the existing system.
         { "inDelivery", false }
+        { "eveningFilter", false }
     };
 
     #endregion

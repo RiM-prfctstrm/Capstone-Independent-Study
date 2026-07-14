@@ -2,7 +2,7 @@
  * FILE     : DebugProgressInjector.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 2/3/25
- * UPDATED  : 4/23/26
+ * UPDATED  : 7/14/26
  * 
  * DESC     : Debug script to set progression variables by hand in inspector. Used to tell the game
  *            to play at a certain point. Works best before loading scene.
@@ -47,6 +47,7 @@ public class DebugProgressInjector : MonoBehaviour
 
     // Game States
     [SerializeField] bool _inDelivery = false;
+    [SerializeField] bool _nightFilter = false;
 
     // Collectibles
     [SerializeField] int _collectiblesInPocket;
@@ -93,6 +94,7 @@ public class DebugProgressInjector : MonoBehaviour
         _m3specialComplete = GlobalVariableTracker.progressionFlags["m3specialComplete"];
 
         _inDelivery = GlobalVariableTracker.progressionFlags["inDelivery"];
+        _nightFilter = GlobalVariableTracker.progressionFlags["nightFilter"];
 
         // Collectibles
         _collectiblesInPocket = (int)GlobalVariableTracker.collectiblesInPocket;
@@ -157,6 +159,7 @@ public class DebugProgressInjector : MonoBehaviour
 
         // Game States
         GlobalVariableTracker.progressionFlags["inDelivery"] = _inDelivery;
+        GlobalVariableTracker.progressionFlags["nightFilter"] = _nightFilter;
 
         // Collectibles
         GlobalVariableTracker.collectiblesInPocket = _collectiblesInPocket;
