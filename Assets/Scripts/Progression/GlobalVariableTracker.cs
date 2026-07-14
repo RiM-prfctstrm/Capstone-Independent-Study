@@ -71,8 +71,8 @@ public class GlobalVariableTracker
 
         /// State control. Technically not strictly progression, but it's easier to wire these into
         /// the existing system.
-        { "inDelivery", false }
-        { "eveningFilter", false }
+        { "inDelivery", false },
+        { "nightFilter", false }
     };
 
     #endregion

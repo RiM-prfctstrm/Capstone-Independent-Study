@@ -1464,6 +1464,7 @@ MonoBehaviour:
   _m2specialComplete: 0
   _m3specialComplete: 0
   _inDelivery: 1
+  _nightFilter: 0
   _collectiblesInPocket: 0
   _snailTotal: 0
   _fireInjector: 0
@@ -12121,7 +12122,7 @@ GameObject:
   - component: {fileID: 3681252747481224663}
   - component: {fileID: 8290749967414910458}
   - component: {fileID: 5273754267370431820}
-  - component: {fileID: 7527697922977590363}
+  - component: {fileID: 5418347409085850976}
   m_Layer: 5
   m_Name: NightFilter
   m_TagString: Untagged
@@ -12187,7 +12188,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7527697922977590363
+--- !u!114 &5418347409085850976
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12196,11 +12197,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4480359534960653878}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ba4eefb3a4905542b18c449d4e12c0e, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d3b0592220e7034fb4ea6ff8d58fd4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _keyflag: 
-  _activeState: 0
+  _filterImg: {fileID: 5273754267370431820}
 --- !u!1 &4495178479664079535
 GameObject:
   m_ObjectHideFlags: 0
