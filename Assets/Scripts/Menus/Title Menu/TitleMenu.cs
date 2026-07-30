@@ -2,7 +2,7 @@
  * FILE     : TitleMenu.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/31/24
- * UPDATED  : 2/18/26
+ * UPDATED  : 7/30/26
  * 
  * DESC     : Performs functions of the title screen menu.
 =================================================================================================*/
@@ -33,6 +33,7 @@ public class TitleMenu : MonoBehaviour
     [SerializeField] InputActionAsset _menuInputs;
     public InputAction advance;
     public InputAction cancel;
+    InputAction _debugScreenCap;
 
     // Sound Effects
     [SerializeField] AudioClip _cancelSound;
@@ -69,6 +70,10 @@ public class TitleMenu : MonoBehaviour
             
         // Inits volume
         GetComponent<AudioSource>().volume = GlobalVariableTracker.musicVolume;
+
+        // DEBUG Enables screenshots
+        _debugScreenCap = _menuInputs.FindAction("DEBUGScreenCap");
+        _debugScreenCap.performed += ScreenCap;
 
         // Fades in
         ScreenEffects.fadingIn = true;
@@ -207,6 +212,22 @@ public class TitleMenu : MonoBehaviour
             _menuDM.previouslySelected = returnButton;
             returnButton.Select();
         }
+    }
+
+    /// <summary>
+    /// Takes a screenshot
+    /// </summary>
+    public void ScreenCap()
+    {
+        ScreenCapture.CaptureScreenshot(
+            "screenshot" + System.DateTime.Now.ToString("MM-dd-yy (HH-mm-ss)") + ".png");
+        Debug.Log("A screenshot was taken!");
+    }
+    public void ScreenCap(InputAction.CallbackContext ctx)
+    {
+        ScreenCapture.CaptureScreenshot(
+            "screenshot" + System.DateTime.Now.ToString("MM-dd-yy (HH-mm-ss)") + ".png");
+        Debug.Log("A screenshot was taken!");
     }
 
     #endregion
