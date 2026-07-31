@@ -2,7 +2,7 @@
  * FILE     : NightFilterVisibility.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 7/14/26
- * UPDATED  : 7/14/26
+ * UPDATED  : 7/31/26
  * 
  * DESC     : Checks whether the night filter is active when a scene loads, and if so, shows image.
 =================================================================================================*/
@@ -52,7 +52,8 @@ public class NightFilterVisibility : MonoBehaviour
     /// <param name="mode"></param>
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (GlobalVariableTracker.progressionFlags["nightFilter"])
+        if (GlobalVariableTracker.progressionFlags["nightFilter"]
+            && !FindObjectOfType<BootManager>().indoorScene)
         {
             _imgColor.a = .25f;
             _filterImg.color = _imgColor;
