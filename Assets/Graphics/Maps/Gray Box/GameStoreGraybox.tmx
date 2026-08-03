@@ -40,7 +40,7 @@
 40,40,40,40,45,45,40,40,40,40,40,40,40,40,40,40,40,40,40,40
 </data>
   </layer>
-  <layer id="6" name="Shelf" width="20" height="13">
+  <layer id="6" name="Shelf" width="20" height="13" visible="0">
    <properties>
     <property name="unity:SortingLayer" value="Background"/>
    </properties>
@@ -60,7 +60,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
   </layer>
-  <layer id="7" name="Desktop" width="20" height="13">
+  <layer id="7" name="Desktop" width="20" height="13" visible="0">
    <properties>
     <property name="unity:SortingLayer" value="Foreground"/>
    </properties>
@@ -83,7 +83,7 @@
  </group>
  <objectgroup id="2" name="Collisions">
   <object id="1" x="64" y="192">
-   <polygon points="0,0 0,16 -64,16 -64,-192 256,-192 256,16 32,16 32,0 240,0 240,-160 -48,-160 -48,-144 32,-144 32,-128 -48,-128 -48,0"/>
+   <polygon points="0,0 0,16 -64,16 -64,-192 256,-192 256,16 32,16 32,0 240,0 240,-160 -48,-160 -48,0"/>
   </object>
  </objectgroup>
 </map>
