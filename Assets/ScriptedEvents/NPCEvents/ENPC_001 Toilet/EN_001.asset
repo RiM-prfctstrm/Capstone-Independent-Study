@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e7c1be8998881549bcc1fb9d908ed5b, type: 3}
+  m_Name: EN_001
+  m_EditorClassIdentifier: 
+  cutsceneScript:
+  - {fileID: 11400000, guid: fd4078889ffbd364caffe4784e245a5c, type: 2}
+  - {fileID: 11400000, guid: b1bdef58690aa63459951ecf441fe613, type: 2}
+  - {fileID: 11400000, guid: 564af6d873779004abdaff3ef35aae90, type: 2}
+  hasPlayed: 0

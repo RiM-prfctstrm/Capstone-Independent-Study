@@ -1926,11 +1926,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5754257204709089588, guid: 3e6cb41a34ea04b4184b67789d993e01, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.75
+      value: 13.25
       objectReference: {fileID: 0}
     - target: {fileID: 5754257204709089588, guid: 3e6cb41a34ea04b4184b67789d993e01, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.75
+      value: -12.25
       objectReference: {fileID: 0}
     - target: {fileID: 5754257204709089588, guid: 3e6cb41a34ea04b4184b67789d993e01, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13769,11 +13769,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5754257204709089588, guid: b4e6d8f849584d945be232e8f741eaaa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18
+      value: 18.5
       objectReference: {fileID: 0}
     - target: {fileID: 5754257204709089588, guid: b4e6d8f849584d945be232e8f741eaaa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.75
+      value: -12.25
       objectReference: {fileID: 0}
     - target: {fileID: 5754257204709089588, guid: b4e6d8f849584d945be232e8f741eaaa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17623,6 +17623,14 @@ PrefabInstance:
       value: Toilet
       objectReference: {fileID: 0}
     - target: {fileID: 178090867737362805, guid: ff197ec3a370c874fb0e87aa37d5d0f3, type: 3}
+      propertyPath: _NPCCutscene
+      value: 
+      objectReference: {fileID: 11400000, guid: 22717517c099b8c4db2a0d734c591faa, type: 2}
+    - target: {fileID: 178090867737362805, guid: ff197ec3a370c874fb0e87aa37d5d0f3, type: 3}
+      propertyPath: _repeatEvent
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 178090867737362805, guid: ff197ec3a370c874fb0e87aa37d5d0f3, type: 3}
       propertyPath: _isEventTrigger
       value: 0
       objectReference: {fileID: 0}
@@ -18244,11 +18252,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8319728892121808575, guid: c26c3f8a4e5fcee478a3f9d7d6156a05, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.25
+      value: 16.75
       objectReference: {fileID: 0}
     - target: {fileID: 8319728892121808575, guid: c26c3f8a4e5fcee478a3f9d7d6156a05, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14
+      value: -13.5
       objectReference: {fileID: 0}
     - target: {fileID: 8319728892121808575, guid: c26c3f8a4e5fcee478a3f9d7d6156a05, type: 3}
       propertyPath: m_LocalPosition.z
