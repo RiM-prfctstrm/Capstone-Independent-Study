@@ -2,7 +2,7 @@
  * FILE     : MoveToPoints.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 12/8/24
- * UPDATED  : 12/8/24
+ * UPDATED  : 9/1/26
  * 
  * DESC     : Moves a character to a specified point.
 =================================================================================================*/
@@ -32,9 +32,6 @@ public class MoveToPoint : MoveByVectors
         // Skips event if target object is already close enough to point
         if (Vector2.Distance(_targetCharacter.transform.position, _endPoint) > _threshold)
         {
-            // Sets variables to determine movement
-            _movementVector = (_endPoint - (Vector2)_targetCharacter.transform.position).normalized;
-
             // Determines how to animate during movement
             if (_overrideMovementAnimation)
             {
@@ -49,6 +46,10 @@ public class MoveToPoint : MoveByVectors
             while (Mathf.Abs(Vector2.Distance(_targetCharacter.transform.position, _endPoint))
                 >= .05f)
             {
+                // Sets variables to determine movement
+                _movementVector =
+                    (_endPoint - (Vector2)_targetCharacter.transform.position).normalized;
+
                 // Performs Movement
                 _targetCharacter.transform.Translate(
                     _movementVector * _speed * Time.fixedDeltaTime);
