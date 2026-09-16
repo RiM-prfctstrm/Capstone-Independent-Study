@@ -270,6 +270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 44395989}
+  - component: {fileID: 44395990}
   m_Layer: 0
   m_Name: m3
   m_TagString: Untagged
@@ -295,6 +296,19 @@ Transform:
   m_Father: {fileID: 762889979}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &44395990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44395988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4a7de76fbfa36408880e8bbc908603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _activeMissions: 03000000
 --- !u!1 &121673300
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,7 +538,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: LobbyElevator (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1155657993595194406, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+    - {fileID: 1155657993595194426, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
 --- !u!4 &492861606 stripped
 Transform:
@@ -893,7 +909,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: LobbyElevator (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1155657993595194406, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+    - {fileID: 1155657993595194426, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
 --- !u!4 &618855598 stripped
 Transform:
@@ -1249,7 +1267,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: LobbyElevator
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1155657993595194406, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+    - {fileID: 1155657993595194426, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
 --- !u!4 &792470507 stripped
 Transform:
@@ -1636,7 +1656,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: LobbyElevator (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1155657993595194406, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+    - {fileID: 1155657993595194426, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
 --- !u!4 &1258106779 stripped
 Transform:
@@ -1918,7 +1940,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: LobbyElevator (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1155657993595194406, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+    - {fileID: 1155657993595194426, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
 --- !u!4 &1501732428 stripped
 Transform:
@@ -2254,7 +2278,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: LobbyElevator
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1155657993595194406, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
+    - {fileID: 1155657993595194426, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
 --- !u!4 &1767851788 stripped
 Transform:
@@ -2527,7 +2553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194406, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: facingDirection
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1155657993595194407, guid: efd95256c89a0e549b3a64a469c98391, type: 3}
       propertyPath: m_RootOrder

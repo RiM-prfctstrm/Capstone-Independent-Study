@@ -13,8 +13,8 @@
             "scale": 0.06,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 10808.333333333336,
-                "y": 6400.000000000001
+                "x": 10808.333333333334,
+                "y": 6391.666666666668
             }
         },
         "Graphics/Maps/Central/CentralDistrict.tmx": {
@@ -36,7 +36,7 @@
             "selectedLayer": 0,
             "viewCenter": {
                 "x": 3280.25,
-                "y": 2400
+                "y": 2400.25
             }
         },
         "Graphics/Maps/Forest/DecalStore.tmx": {
@@ -49,10 +49,10 @@
         },
         "Graphics/Maps/Forest/ForestDistrict.tmx": {
             "expandedGroupLayers": [
-                5,
                 10,
-                3,
-                12
+                12,
+                5,
+                3
             ],
             "expandedObjectLayers": [
                 2
@@ -61,7 +61,7 @@
             "selectedLayer": 1,
             "viewCenter": {
                 "x": 2528.25,
-                "y": 1680
+                "y": 1680.25
             }
         },
         "Graphics/Maps/Forest/HSGym.tmx": {
@@ -139,7 +139,7 @@
             "selectedLayer": 1,
             "viewCenter": {
                 "x": 2138.5,
-                "y": 1040
+                "y": 1103
             }
         },
         "Graphics/Maps/Park/Venue.tmx": {
@@ -161,7 +161,7 @@
             "selectedLayer": 0,
             "viewCenter": {
                 "x": 1600.5,
-                "y": 1200
+                "y": 1200.5
             }
         },
         "Graphics/Maps/Retail/Hotel.tmx": {
@@ -174,14 +174,14 @@
         },
         "Graphics/Maps/Retail/RetailDistrict.tmx": {
             "expandedGroupLayers": [
-                4,
-                10
+                10,
+                4
             ],
             "scale": 1,
             "selectedLayer": 9,
             "viewCenter": {
                 "x": 1990.5,
-                "y": 2448
+                "y": 2448.5
             }
         },
         "Graphics/Maps/Retail/RetailNew.tmx": {
@@ -195,7 +195,7 @@
             "selectedLayer": 6,
             "viewCenter": {
                 "x": 1398,
-                "y": 2992
+                "y": 2994
             }
         },
         "Graphics/Maps/SpacePort/SpaceElevatorBase.tmx": {
@@ -203,8 +203,8 @@
                 3
             ],
             "expandedObjectLayers": [
-                15,
-                2
+                2,
+                15
             ],
             "scale": 2,
             "selectedLayer": 0,
@@ -308,7 +308,8 @@
             "scaleInDock": 1
         }
     },
-    "last.imagePath": "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Capstone-Independent-Study/Assets/Graphics/Tilesets/Outdoor",
+    "frame.defaultDuration": 250,
+    "last.imagePath": "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Capstone-Independent-Study/Assets/Graphics/Tilesets/Indoor",
     "map.height": 50,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
@@ -329,6 +330,9 @@
     ],
     "project": "DreamDiscDelivery.tiled-project",
     "recentFiles": [
+        "Graphics/Maps/Industrial/IndustrialDistrict.tmx",
+        "Graphics/Maps/Lakefront/LakefrontDistrict.tmx",
+        "Graphics/Maps/SpacePort/SpaceElevatorBase.tmx",
         "Graphics/Maps/Retail/RetailDistrict.tmx",
         "Graphics/Maps/Forest/ForestDistrict.tmx",
         "Graphics/Maps/Park/Park.tmx",
@@ -336,9 +340,6 @@
         "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Artwork/Placeholder/GrayBoxBase.tmx",
         "Graphics/Maps/Central/NewCentral.tmx",
         "Graphics/Maps/Gray Box/ShakerHouseGrayBox.tmx",
-        "Graphics/Maps/Industrial/IndustrialDistrict.tmx",
-        "Graphics/Maps/Lakefront/LakefrontDistrict.tmx",
-        "Graphics/Maps/SpacePort/SpaceElevatorBase.tmx",
         "Graphics/Maps/Retail/RetailNew.tmx",
         "Graphics/Tilesets/Indoor/Furniture.tsx"
     ],
