@@ -54,7 +54,7 @@ public class Door : InteractableObject
     public override void OnInteractedWith()
     {
         // Locks during delivery
-        if (GlobalVariableTracker.progressionFlags["inDelivery"] && !_permanentOverride &&
+        /*if (GlobalVariableTracker.progressionFlags["inDelivery"] && !_permanentOverride &&
             !_overrideMissions.Contains(GlobalVariableTracker.currentMission))
         {
             // Informs player the door is locked
@@ -62,7 +62,8 @@ public class Door : InteractableObject
             PlayerController.playerController.TogglePlayerInput();
             DialogueManager.dialogueManager.StartDialogue(_midDeliMsg);
         }
-        else if (!isLocked)
+        else*/
+        if (!isLocked)
         {
             // Loads new scene and positions player in it
             StartCoroutine(SceneTransition.TransitionScene(
