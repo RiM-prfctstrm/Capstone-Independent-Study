@@ -3,29 +3,38 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Graphics/Maps/Retail/RetailNew.tmx",
+    "activeFile": "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Artwork/BG/Streetplan.tmx",
     "expandedProjectPaths": [
     ],
     "exportAsImage.useCurrentScale": false,
-    "file.lastUsedOpenFilter": "All Files (*)",
+    "file.lastUsedOpenFilter": "Tiled map files (*.tmx *.xml)",
     "fileStates": {
+        "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Artwork/BG/Streetplan.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 2974.5,
+                "y": 6633
+            }
+        },
         "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Artwork/Placeholder/GrayBoxBase.tmx": {
             "scale": 0.06,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 10808.333333333334,
-                "y": 6400.000000000002
+                "x": 10808.333333333336,
+                "y": 6400.000000000001
             }
         },
         "Graphics/Maps/Central/CentralDistrict.tmx": {
             "expandedGroupLayers": [
+                9,
                 6
             ],
             "scale": 1,
-            "selectedLayer": 2,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 3215,
-                "y": 817
+                "x": 2210.5,
+                "y": 6163
             }
         },
         "Graphics/Maps/Central/NewCentral.tmx": {
@@ -49,16 +58,16 @@
         },
         "Graphics/Maps/Forest/ForestDistrict.tmx": {
             "expandedGroupLayers": [
-                10,
                 12,
-                3,
-                5
+                5,
+                10,
+                3
             ],
             "expandedObjectLayers": [
                 2
             ],
             "scale": 2,
-            "selectedLayer": 1,
+            "selectedLayer": 0,
             "viewCenter": {
                 "x": 2528.25,
                 "y": 1680
@@ -136,10 +145,10 @@
                 3
             ],
             "scale": 1,
-            "selectedLayer": 1,
+            "selectedLayer": 15,
             "viewCenter": {
-                "x": 1173.5,
-                "y": 539
+                "x": 1311.5,
+                "y": 1331
             }
         },
         "Graphics/Maps/Park/Venue.tmx": {
@@ -176,10 +185,10 @@
                 2
             ],
             "scale": 2,
-            "selectedLayer": 5,
+            "selectedLayer": 2,
             "viewCenter": {
                 "x": 400.25,
-                "y": 880
+                "y": 583
             }
         },
         "Graphics/Maps/Retail/RetailDistrict.tmx": {
@@ -188,10 +197,10 @@
                 10
             ],
             "scale": 1,
-            "selectedLayer": 9,
+            "selectedLayer": 0,
             "viewCenter": {
                 "x": 1990.5,
-                "y": 2448
+                "y": 3636
             }
         },
         "Graphics/Maps/Retail/RetailNew.tmx": {
@@ -207,7 +216,7 @@
             "selectedLayer": 1,
             "viewCenter": {
                 "x": 3194.5,
-                "y": 1686.5
+                "y": 1687
             }
         },
         "Graphics/Maps/SpacePort/SpaceElevatorBase.tmx": {
@@ -257,6 +266,14 @@
         },
         "Graphics/Placeholder/tileset/Debug.tsx": {
             "scaleInDock": 2
+        },
+        "Graphics/Placeholder/tileset/Map.tmx": {
+            "scale": 0.800375,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 800.2498828674059,
+                "y": 799.6251756988912
+            }
         },
         "Graphics/Tilesets/Indoor/FancyFloors.tsx": {
             "scaleInDock": 2,
@@ -348,30 +365,24 @@
         "Graphics/Maps/Forest/ForestDistrict.tmx",
         "Graphics/Maps/Retail/RetailDistrict.tmx",
         "Graphics/Maps/Park/Park.tmx",
-        "Graphics/Maps/Residential/ResidentialDistrict.tmx",
-        "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Artwork/Placeholder/GrayBoxBase.tmx",
-        "Graphics/Maps/Central/NewCentral.tmx",
-        "Graphics/Maps/Retail/RetailNew.tmx",
         "Graphics/Maps/Gray Box/ShakerHouseGrayBox.tmx",
-        "Graphics/Tilesets/Indoor/PoolWater.tsx",
-        "Graphics/Tilesets/Indoor/PoolSide.tsx",
-        "Graphics/Tilesets/Indoor/FancyInterior.tsx",
-        "Graphics/Maps/Retail/Hotel.tmx"
+        "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Artwork/BG/Streetplan.tmx",
+        "Graphics/Maps/Central/CentralDistrict.tmx"
     ],
     "project": "DreamDiscDelivery.tiled-project",
     "recentFiles": [
         "Graphics/Maps/Forest/ForestDistrict.tmx",
         "Graphics/Maps/Retail/RetailDistrict.tmx",
         "Graphics/Maps/Park/Park.tmx",
-        "Graphics/Maps/Residential/ResidentialDistrict.tmx",
-        "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Artwork/Placeholder/GrayBoxBase.tmx",
-        "Graphics/Maps/Central/NewCentral.tmx",
-        "Graphics/Maps/Retail/Hotel.tmx",
-        "Graphics/Tilesets/Indoor/FancyInterior.tsx",
-        "Graphics/Tilesets/Indoor/PoolSide.tsx",
-        "Graphics/Tilesets/Indoor/PoolWater.tsx",
         "Graphics/Maps/Gray Box/ShakerHouseGrayBox.tmx",
-        "Graphics/Maps/Retail/RetailNew.tmx"
+        "Graphics/Maps/Central/CentralDistrict.tmx",
+        "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Artwork/BG/Streetplan.tmx",
+        "Graphics/Placeholder/tileset/Map.tmx",
+        "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Artwork/Placeholder/GrayBoxBase.tmx",
+        "Graphics/Maps/Residential/ResidentialDistrict.tmx",
+        "Graphics/Maps/Central/NewCentral.tmx",
+        "Graphics/Maps/Retail/RetailNew.tmx",
+        "Graphics/Tilesets/Indoor/PoolWater.tsx"
     ],
     "resizeMap.removeObjects": false,
     "tileset.lastUsedFormat": "tsx",

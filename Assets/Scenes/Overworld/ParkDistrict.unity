@@ -4498,7 +4498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5760787232082958619, guid: e735ec56fc8e5f1478e58431f136038a, type: 3}
       propertyPath: _startPos.x
-      value: 101.5
+      value: 97.5
       objectReference: {fileID: 0}
     - target: {fileID: 5760787232082958619, guid: e735ec56fc8e5f1478e58431f136038a, type: 3}
       propertyPath: _startPos.y
@@ -18222,7 +18222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2110414799}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 101.5, y: -100, z: 0}
+  m_LocalPosition: {x: 97.5, y: -100, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18253,7 +18253,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11, y: 1}
+  m_Size: {x: 19, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &2110414802
 MonoBehaviour:
@@ -18269,7 +18269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneName: CentralDistrict
   _isIndoors: 0
-  _position: {x: 43.5, y: -1.5, z: 0}
+  _position: {x: 76.5, y: -1.5, z: 0}
   _direction: 0
   _setsDirection: 0
 --- !u!1001 &2114954007
