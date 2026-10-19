@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Graphics/Maps/Central/CentralDistrict.tmx",
+    "activeFile": "Graphics/Maps/Template/ApartmentTemplate.tmx",
     "expandedProjectPaths": [
     ],
     "exportAsImage.useCurrentScale": false,
@@ -61,10 +61,10 @@
         },
         "Graphics/Maps/Forest/ForestDistrict.tmx": {
             "expandedGroupLayers": [
-                12,
                 3,
-                10,
-                5
+                5,
+                12,
+                10
             ],
             "expandedObjectLayers": [
                 2
@@ -117,7 +117,7 @@
             "selectedLayer": 5,
             "viewCenter": {
                 "x": 528.0337341870998,
-                "y": 599.9687646415742
+                "y": 842.4051225987819
             }
         },
         "Graphics/Maps/Industrial/IndustrialDistrict.tmx": {
@@ -144,8 +144,8 @@
         },
         "Graphics/Maps/Park/Park.tmx": {
             "expandedGroupLayers": [
-                7,
-                3
+                3,
+                7
             ],
             "expandedObjectLayers": [
                 2
@@ -199,8 +199,8 @@
         },
         "Graphics/Maps/Retail/RetailDistrict.tmx": {
             "expandedGroupLayers": [
-                4,
-                10
+                10,
+                4
             ],
             "scale": 1,
             "selectedLayer": 0,
@@ -240,6 +240,17 @@
                 "y": 960
             }
         },
+        "Graphics/Maps/Template/ApartmentTemplate.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 2,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 159.75,
+                "y": 120
+            }
+        },
         "Graphics/Maps/Template/NPCHouseTemplate.tmx": {
             "expandedObjectLayers": [
                 2
@@ -264,7 +275,7 @@
                 3
             ],
             "scale": 5.3358333333333325,
-            "selectedLayer": 3,
+            "selectedLayer": 4,
             "viewCenter": {
                 "x": 159.95627049820402,
                 "y": 119.94377635483369
@@ -311,6 +322,9 @@
         },
         "Graphics/Tilesets/Indoor/Stairs.tsx": {
             "scaleInDock": 2
+        },
+        "Graphics/Tilesets/Indoor/StairsMetal.tsx": {
+            "scaleInDock": 1
         },
         "Graphics/Tilesets/Object/BikeRack.tsx": {
             "scaleInDock": 2
@@ -373,7 +387,9 @@
         "Graphics/Maps/Park/Park.tmx",
         "Graphics/Maps/Gray Box/ShakerHouseGrayBox.tmx",
         "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Artwork/BG/Streetplan.tmx",
-        "Graphics/Maps/Central/CentralDistrict.tmx"
+        "Graphics/Maps/Central/CentralDistrict.tmx",
+        "Graphics/Maps/Template/ApartmentTemplate.tmx",
+        "Graphics/Maps/Template/TownHouseTemplate.tmx"
     ],
     "project": "DreamDiscDelivery.tiled-project",
     "recentFiles": [
@@ -383,12 +399,12 @@
         "Graphics/Maps/Gray Box/ShakerHouseGrayBox.tmx",
         "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Artwork/BG/Streetplan.tmx",
         "Graphics/Maps/Central/CentralDistrict.tmx",
+        "Graphics/Maps/Template/TownHouseTemplate.tmx",
+        "Graphics/Maps/Template/ApartmentTemplate.tmx",
         "Graphics/Placeholder/tileset/Map.tmx",
         "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Artwork/Placeholder/GrayBoxBase.tmx",
         "Graphics/Maps/Residential/ResidentialDistrict.tmx",
-        "Graphics/Maps/Central/NewCentral.tmx",
-        "Graphics/Maps/Retail/RetailNew.tmx",
-        "Graphics/Tilesets/Indoor/PoolWater.tsx"
+        "Graphics/Maps/Central/NewCentral.tmx"
     ],
     "resizeMap.removeObjects": false,
     "tileset.lastUsedFormat": "tsx",
