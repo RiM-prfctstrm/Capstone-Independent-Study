@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e7c1be8998881549bcc1fb9d908ed5b, type: 3}
   m_Name: m2_a
   m_EditorClassIdentifier: 
-  cutsceneScript: []
+  cutsceneScript:
+  - {fileID: 11400000, guid: caf1b9a9cb7952c44807ae3e79eee32b, type: 2}
+  - {fileID: 11400000, guid: 03c8087c1df12b043b1f1b8ec909bf30, type: 2}
   hasPlayed: 0
