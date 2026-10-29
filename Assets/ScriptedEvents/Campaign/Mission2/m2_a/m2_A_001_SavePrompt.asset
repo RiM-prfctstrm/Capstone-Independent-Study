@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6573c93f484152c4db73b91a33bca188, type: 3}
+  m_Name: m2_A_001_SavePrompt
+  m_EditorClassIdentifier: 
+  eventComplete: 0
+  _choiceDialogue:
+    dialogueText: Would you like to save the game?
+    nameTag: 
+    portrait: {fileID: 0}
+  _branchA: {fileID: 11400000, guid: 31452d2708dc6f74088d42cd5ca63deb, type: 2}
+  _branchB: {fileID: 11400000, guid: a1e4d76b718d7dd469d0ebcd668d470d, type: 2}
