@@ -2,7 +2,7 @@
  * FILE     : SceneTransition
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 10/29/24
- * UPDATED  : 5/22/26
+ * UPDATED  : 11/2/26
  * 
  * DESC     : Switches scenes and sets variables to initialize that scene's state after transition.
 =================================================================================================*/
@@ -56,12 +56,16 @@ public class SceneTransition
             yield return new WaitForFixedUpdate();
         }
 
-
-        // Used when the player is meant to keep current direction
+        // Sets player's direction
         if (startDirection >= 4)
         {
             startDirection = _player.GetComponent<PlayerAnimator>().facingDirection;
         }
+        else
+        {
+            _player.GetComponent<PlayerAnimator>().facingDirection = startDirection;
+            _player.GetComponent<PlayerAnimator>().SetAnimState();
+        }        
 
         // Changes Scene
         ChangeScene(sceneName, isIndoors, startPos, startDirection);

@@ -2,7 +2,7 @@
  * FILE     : PlayerAnimator.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 9/11/24
- * UPDATED  : 10/24/25
+ * UPDATED  : 11/2/26
  * 
  * DESC     : Controls player character's animation
 =================================================================================================*/
@@ -73,6 +73,11 @@ public class PlayerAnimator : CharacterAnimator
             animState = "Bike" + animState;
         }
 
+        // Animates during scene transition
+        if (SceneTransition.inTransition)
+        {
+            _anim.Play(animState);
+        }
 
         // Returns animation to play
         return animState;
