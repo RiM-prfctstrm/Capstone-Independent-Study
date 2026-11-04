@@ -2,7 +2,7 @@
  * FILE     : CutsceneManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1X/X/24
- * UPDATED  : 6/26/26
+ * UPDATED  : 11/4/26
  * 
  * DESC     : Controls the progression of scripted events.
 =================================================================================================*/
@@ -198,11 +198,13 @@ public class CutsceneManager : MonoBehaviour
                      i.GetType() == typeof(ResetCollectibles) ||
                      i.GetType() == typeof(AlterCollectibleCount) ||
                      i.GetType() == typeof(ResetFishTable) ||
-                     i.GetType() == typeof(AwardEventAchievement))
+                     i.GetType() == typeof(AwardEventAchievement) ||
+                     i.GetType() == typeof(CycleNewCutscene) /*might be safer in same branch as BranchScene*/
+                     )
             {
                 i.PlayEventFunction();
 
-                // Fades in for choice
+                // Fades in for choice or new scene
                 if (i.GetType() == typeof(BranchScene))
                 {
                     ScreenEffects.fadingIn = true;
