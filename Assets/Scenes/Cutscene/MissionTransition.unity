@@ -295,7 +295,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1196283983}
-  - component: {fileID: 1196283982}
   - component: {fileID: 1196283981}
   m_Layer: 0
   m_Name: Autostarter
@@ -319,23 +318,11 @@ MonoBehaviour:
   _autoCutscenes:
   - {fileID: 11400000, guid: 0874b1ff83dab3c4892a1d541381b89b, type: 2}
   - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 11400000, guid: a1e4d76b718d7dd469d0ebcd668d470d, type: 2}
+  - {fileID: 11400000, guid: a1e4d76b718d7dd469d0ebcd668d470d, type: 2}
+  - {fileID: 0}
   _cyclesPerMission: 1
   readyCutscene: 0
---- !u!114 &1196283982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196283980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b4a7de76fbfa36408880e8bbc908603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _activeMissions: 00000000
 --- !u!4 &1196283983
 Transform:
   m_ObjectHideFlags: 0

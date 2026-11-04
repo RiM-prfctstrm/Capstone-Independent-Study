@@ -87,8 +87,8 @@ public class EssentialPreserver : MonoBehaviour
     /// </summary>
     void LoadFishTable()
     {
-        FishSaveManager.gachaTable = 
-            FishSaveManager.LoadCurrentTable(_fishTables[GlobalVariableTracker.currentMission]);
+        /*FishSaveManager.gachaTable = 
+            FishSaveManager.LoadCurrentTable(_fishTables[GlobalVariableTracker.currentMission]);*/
     }
 
     #endregion

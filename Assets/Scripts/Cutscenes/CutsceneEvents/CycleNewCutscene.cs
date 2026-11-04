@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewEvent", menuName = "Switch Cutscene", order = 11)]
+[CreateAssetMenu(fileName = "NewEvent", menuName = "Cutscene/Switch Cutscene", order = 11)]
 public class CycleNewCutscene : CutsceneEvent
 {
     #region VARIABLES

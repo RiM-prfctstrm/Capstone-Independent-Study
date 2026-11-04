@@ -31,10 +31,12 @@ public class AutomaticEventController : MonoBehaviour
     /// </summary>
     void Start()
     {
+        Debug.Log("amogus");
         // For mission based selection, chooses which cutscene to try
         if (_cyclesPerMission)
         {
             readyCutscene = GlobalVariableTracker.currentMission;
+            Debug.Log(readyCutscene);
         }
 
         // Plays a cutscene if it hasn't already played

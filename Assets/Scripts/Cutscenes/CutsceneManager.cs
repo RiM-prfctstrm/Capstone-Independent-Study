@@ -191,21 +191,21 @@ public class CutsceneManager : MonoBehaviour
                      i.GetType() == typeof(ChangeActiveState) ||
                      i.GetType() == typeof(SetSortingLayer) ||
                      i.GetType() == typeof(ClearImage) ||
-                     i.GetType() == typeof(BranchScene) || i.GetType() == typeof(QuitToTitle) ||
+                     i.GetType() == typeof(BranchScene) ||
+                     i.GetType() == typeof(CycleNewCutscene) ||
+                     i.GetType() == typeof(QuitToTitle) ||
                      i.GetType() == typeof(ReturnToMenu) || i.GetType() == typeof(ResetProgress) ||
                      i.GetType() == typeof(PauseTimer) || i.GetType() == typeof(ResumeTimer) ||
                      i.GetType() == typeof(StopTimer) || i.GetType() == typeof(SaveEvent) ||
                      i.GetType() == typeof(ResetCollectibles) ||
                      i.GetType() == typeof(AlterCollectibleCount) ||
                      i.GetType() == typeof(ResetFishTable) ||
-                     i.GetType() == typeof(AwardEventAchievement) ||
-                     i.GetType() == typeof(CycleNewCutscene) /*might be safer in same branch as BranchScene*/
-                     )
+                     i.GetType() == typeof(AwardEventAchievement))
             {
                 i.PlayEventFunction();
 
                 // Fades in for choice or new scene
-                if (i.GetType() == typeof(BranchScene))
+                if (i.GetType() == typeof(BranchScene) || i.GetType() == typeof(CycleNewCutscene))
                 {
                     ScreenEffects.fadingIn = true;
 
