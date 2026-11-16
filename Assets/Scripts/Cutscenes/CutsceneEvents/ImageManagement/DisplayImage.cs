@@ -2,7 +2,7 @@
  * FILE     : DisplayImage.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/6/24
- * UPDATED  : 5/21/26
+ * UPDATED  : 11/16/26
  * 
  * DESC     : Displays an image at a specified point on the screen. Used in cutscenes.
 =================================================================================================*/
@@ -49,7 +49,7 @@ public class DisplayImage : CutsceneEvent
 
         // Searches for available slot
         _ImageSpace =
-            CutsceneManager.cutsceneManager.UISpace.transform.GetChild(1).gameObject;
+            CutsceneManager.cutsceneManager.imgParent;
         for (int i = 0; i <= _ImageSpace.transform.childCount; i++)
         {
             // Skips slots currently in use

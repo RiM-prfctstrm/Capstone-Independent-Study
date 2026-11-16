@@ -2,7 +2,7 @@
  * FILE     : ClearImage.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/6/24
- * UPDATED  : 5/21/26
+ * UPDATED  : 11/16/26
  * 
  * DESC     : Removes an image from the screen.
 =================================================================================================*/
@@ -42,7 +42,7 @@ public class ClearImage : CutsceneEvent
         }*/
 
         // Clears image
-        CutsceneManager.cutsceneManager.UISpace.transform.GetChild(1).GetChild(_clearSlot).
+        CutsceneManager.cutsceneManager.imgParent.transform.GetChild(_clearSlot).
             gameObject.SetActive(false);
         eventComplete = true;
     }

@@ -2,7 +2,7 @@
  * FILE     : CutsceneManager.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 1X/X/24
- * UPDATED  : 11/4/26
+ * UPDATED  : 11/16/26
  * 
  * DESC     : Controls the progression of scripted events.
 =================================================================================================*/
@@ -21,6 +21,8 @@ public class CutsceneManager : MonoBehaviour
     // Object References, typically to allow event SOs to refer to objects in the scene
     [SerializeField] GameObject _UISpace;
     public GameObject UISpace => _UISpace;
+    [SerializeField] GameObject _imgParent;
+    public GameObject imgParent => _imgParent;
     [SerializeField] Slider _skipGauge;
     [SerializeField] GameObject _skipHUD;
 
