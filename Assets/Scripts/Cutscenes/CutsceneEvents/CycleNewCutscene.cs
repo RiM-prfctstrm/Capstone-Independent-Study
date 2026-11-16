@@ -2,7 +2,7 @@
  * FILE     : CycleNewCutscene.cs
  * AUTHOR   : Peter "prfctstrm479" Campbell
  * CREATION : 11/4/26
- * UPDATED  : 11/4/26
+ * UPDATED  : 11/16/26
  * 
  * DESC     : Ends the current cutscene and immediately plays a new one. Used during transitions
  *            between levels so that loading a save from a mission transition plays the proper
@@ -30,6 +30,18 @@ public class CycleNewCutscene : CutsceneEvent
 
         // Ends previous Cutscene (rest should be handled in CutsceneManager)
         eventComplete = true;
+
+        CutsceneManager.cutsceneManager.StartCoroutine(WaitForEventEnd());
+    }
+
+    /// <summary>
+    /// Delays execution until previous cutscene completes to ensure new cutscene works correctly
+    /// </summary>
+    /// <returns>Delay controlled by CutsceneManager.inCutscene</returns>
+    protected override IEnumerator WaitForEventEnd()
+    {
+        // Delay
+        yield return new WaitWhile(() => CutsceneManager.inCutscene);
 
         // Starts new Cutscene
         CutsceneManager.cutsceneManager.StartCutscene(_nextEvent);
