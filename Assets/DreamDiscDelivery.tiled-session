@@ -27,8 +27,8 @@
         },
         "Graphics/Maps/Central/CentralDistrict.tmx": {
             "expandedGroupLayers": [
-                9,
-                6
+                6,
+                9
             ],
             "expandedObjectLayers": [
                 3
@@ -73,8 +73,8 @@
         "Graphics/Maps/Forest/ForestDistrict.tmx": {
             "expandedGroupLayers": [
                 10,
-                12,
                 3,
+                12,
                 5
             ],
             "expandedObjectLayers": [
@@ -117,6 +117,14 @@
                 "y": 100.63180765602219
             }
         },
+        "Graphics/Maps/Gray Box/HospitalGraybox.tmx": {
+            "scale": 2.652578125,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 319.8774776897476,
+                "y": 111.96654198450801
+            }
+        },
         "Graphics/Maps/Gray Box/ShakerHouseGrayBox.tmx": {
             "expandedGroupLayers": [
                 3
@@ -128,7 +136,7 @@
             "selectedLayer": 8,
             "viewCenter": {
                 "x": 528.0337341870998,
-                "y": 478.7505856629704
+                "y": 599.9687646415742
             }
         },
         "Graphics/Maps/Industrial/IndustrialDistrict.tmx": {
@@ -168,6 +176,17 @@
                 "y": 1040
             }
         },
+        "Graphics/Maps/Park/SpaceMuseum.tmx": {
+            "expandedObjectLayers": [
+                4
+            ],
+            "scale": 3.536770833333333,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 239.90810826731072,
+                "y": 160.03298677583717
+            }
+        },
         "Graphics/Maps/Park/Venue.tmx": {
             "expandedGroupLayers": [
                 7
@@ -204,14 +223,14 @@
             "scale": 2,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 400.25,
-                "y": 880
+                "x": 554.75,
+                "y": 88
             }
         },
         "Graphics/Maps/Retail/RetailDistrict.tmx": {
             "expandedGroupLayers": [
-                4,
-                10
+                10,
+                4
             ],
             "scale": 1,
             "selectedLayer": 0,
@@ -258,8 +277,8 @@
             "scale": 2,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 160.25,
-                "y": -786
+                "x": 311.25,
+                "y": 699
             }
         },
         "Graphics/Maps/Template/NPCHouseTemplate.tmx": {
@@ -388,11 +407,11 @@
     "frame.defaultDuration": 250,
     "last.externalTilesetPath": "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Capstone-Independent-Study/Assets/Graphics/Tilesets/Indoor",
     "last.imagePath": "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Capstone-Independent-Study/Assets/Graphics/Tilesets/Indoor",
-    "map.height": 50,
+    "map.height": 20,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
     "map.tileWidth": 16,
-    "map.width": 50,
+    "map.width": 30,
     "openFiles": [
         "Graphics/Maps/Forest/ForestDistrict.tmx",
         "Graphics/Maps/Retail/RetailDistrict.tmx",
@@ -406,6 +425,7 @@
     ],
     "project": "DreamDiscDelivery.tiled-project",
     "recentFiles": [
+        "Graphics/Maps/Gray Box/HospitalGraybox.tmx",
         "Graphics/Tilesets/Outdoor/Houses.tsx",
         "Graphics/Maps/Forest/ForestDistrict.tmx",
         "Graphics/Maps/Retail/RetailDistrict.tmx",
@@ -416,8 +436,7 @@
         "Graphics/Maps/Template/ApartmentTemplate.tmx",
         "Graphics/Tilesets/Indoor/StairsMetal.tsx",
         "Graphics/Maps/Central/CentralDistrict.tmx",
-        "Graphics/Placeholder/tileset/Map.tmx",
-        "C:/Users/pjcii/Documents/Bradley/IndependentStudy/Artwork/Placeholder/GrayBoxBase.tmx"
+        "Graphics/Placeholder/tileset/Map.tmx"
     ],
     "resizeMap.removeObjects": false,
     "tileset.lastUsedFormat": "tsx",
